@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -p EM
 #SBATCH -t 20:00:00
-#SBATCH --ntasks-per-node=72
+#SBATCH --ntasks-per-node=48
 
 #echo commands to stdout
 #set -x
@@ -13,7 +13,4 @@ module load openmpi/5.0.3-gcc13.2.1
 
 conda activate 21cmFASTv4
 cd /jet/home/breitman/EOSv4
-
-21cmfast run ics --param-file EOS25.toml --seed 1234 --cachedir "/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2100_HIIDIM1400_DIM4200" --min-evolved-redshift 5.0 --zprime-step-factor 1.02
-cd /jet/home/breitman/
-bash submit_PF_jobs.sh
+python run_ICs_PFs.py 2>&1 | tee output.txt
