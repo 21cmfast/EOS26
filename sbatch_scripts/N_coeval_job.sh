@@ -18,9 +18,10 @@ N="${1:-10}"
 mkdir -p logs
 LOG_OUT="logs/coeval_${SLURM_JOB_ID}_N${N}.out"
 LOG_ERR="logs/coeval_${SLURM_JOB_ID}_N${N}.err"
+LOG_LOG="logs/coeval_${SLURM_JOB_ID}_N${N}.log"
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 uv sync --frozen
 
 printf "N is: $N\n"
-uv run run_scripts/run_N_coevals.py --N "$N"
+uv run run_scripts/run_N_coevals.py --N "$N" --log-file "$LOG_LOG"

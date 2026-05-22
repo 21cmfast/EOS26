@@ -5,10 +5,22 @@ from template2input import create_params_from_template
 from py21cmfast import generate_coeval
 import gc
 import argparse
+import logging
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--N", type=int, default=10)
-N = parser.parse_args().N
+parser.add_argument("--log-file", type=str, required=True)
+args = parser.parse_args()
+N = args.N
+
+logger = logging.getLogger("21cmFAST")
+logger.setLevel(logging.DEBUG)
+logger.handlers.clear()
+logger.propagate = False
+file_handler = logging.FileHandler(args.log_file)
+file_handler.setLevel(logging.DEBUG)
+file_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+logger.addHandler(file_handler)
 
 #p21c.config['HALO_CATALOG_MEM_FACTOR'] = 2.
 

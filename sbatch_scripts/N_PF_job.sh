@@ -3,8 +3,8 @@
 #SBATCH -t 12:00:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=128
-#SBATCH -o log/PF_%j.bootstrap.out
-#SBATCH -e log/PF_%j.bootstrap.err
+#SBATCH -o logs/PF_%j.bootstrap.out
+#SBATCH -e logs/PF_%j.bootstrap.err
 
 
 #echo commands to stdout
@@ -17,13 +17,14 @@ module load openmpi/5.0.3-gcc13.2.1
 IDX="$1"
 N="${2:-10}"
 
-mkdir -p log
-LOG_OUT="log/PF_${SLURM_JOB_ID}_zidx${IDX}_N${N}.out"
-LOG_ERR="log/PF_${SLURM_JOB_ID}_zidx${IDX}_N${N}.err"
+mkdir -p logs
+LOG_OUT="logs/PF_${SLURM_JOB_ID}_zidx${IDX}_N${N}.out"
+LOG_ERR="logs/PF_${SLURM_JOB_ID}_zidx${IDX}_N${N}.err"
+LOG_LOG="logs/PF_${SLURM_JOB_ID}_zidx${IDX}_N${N}.log"
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 uv sync --frozen
 
 printf "IDX is: $IDX, N is: $N\n"
-uv run run_scripts/run_N_PFs.py --z_idx_start "$IDX" --N "$N"
+uv run run_scripts/run_N_PFs.py --z_idx_start "$IDX" --N "$N" --log-file "$LOG_LOG"
 wait

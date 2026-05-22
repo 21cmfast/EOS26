@@ -3,8 +3,8 @@
 #SBATCH -t 2:00:00
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=128
-#SBATCH -o log/PF_%j.bootstrap.out
-#SBATCH -e log/PF_%j.bootstrap.err
+#SBATCH -o logs/PF_%j.bootstrap.out
+#SBATCH -e logs/PF_%j.bootstrap.err
 
 #echo commands to stdout
 #set -x
@@ -17,10 +17,12 @@ uv sync --frozen
 
 IDX="$1"
 
-LOG_OUT="log/PF_${SLURM_JOB_ID}_zidx${IDX}.out"
-LOG_ERR="log/PF_${SLURM_JOB_ID}_zidx${IDX}.err"
+mkdir -p logs
+LOG_OUT="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.out"
+LOG_ERR="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.err"
+LOG_LOG="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.log"
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
-printf "IDX is: $IDX \n"&
-uv run run_PFs.py  --z_idx $IDX
+printf "IDX is: $IDX\n"
+uv run run_scripts/run_PFs.py --z_idx "$IDX" --log-file "$LOG_LOG"
 wait
