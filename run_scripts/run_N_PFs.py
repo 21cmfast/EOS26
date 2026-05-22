@@ -2,6 +2,10 @@ import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
 import numpy as np
 import argparse
+import logging 
+
+logger = logging.getLogger("21cmFAST")
+logger.setLevel(logging.DEBUG)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--z_idx_start", type = int)

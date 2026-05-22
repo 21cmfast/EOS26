@@ -15,12 +15,12 @@ inputs = p21c.InputParameters.from_template("EOS25.toml",
 print("DONE, Inputs:", inputs)
 
 initial_conditions = p21c.compute_initial_conditions(
-    inputs=inputs, cache=cache, write=True
+    inputs=inputs, cache=cache, write=True, regenerate=False,
 )
 
 for z in inputs.node_redshifts:
     p21c.perturb_field(
     redshift=z, 
     initial_conditions=initial_conditions,
-    write=True,cache=cache,
+    write=True,cache=cache,regenerate=False,
     )

@@ -3,7 +3,9 @@
 #PBS -q q02hal
 #PBS -m bea
 #PBS -M daniela.breitman@sns.it
-#PBS -N EOS25-PFs
+#SBATCH -o log/PF_%j.out
+#SBATCH -e log/PF_%j.err
+
 conda activate 21cmFASTv4
 module load gcc/9.3.0
 cd /home/dbreitman/EOS25/EOS25

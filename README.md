@@ -1,5 +1,19 @@
-# EOS25
-All scipts required to reproduce the EOS25 simulation
+# EOS26
+## Description
+All scripts to run the EOS26 simulation with 21cmFASTv4.2.
+
+## How to run
+Steps with order in which to run, describes each script / file in the repo.
+1. Run initial conditions (ICs):
+  - Use `sbatch sbatch_scripts/ICs_job.sh` to submit a job that runs `run_scripts/run_ICs.py`
+2. Run perturbed fields (PFs):
+  - Use `sbatch sbatch_scripts/submit_PF_jobs.sh` to submit one job per PF.
+  - Use `sbatch sbatch_scripts/N_PFs_job.sh` to submit one job that calculates a batch of N PFs, N=10 by default.
+3. Run perturbed halo fields (PHFs):
+  - Use `sbatch sbatch_scripts/PHFs_job.sh` to submit a job that calculates all PHFs using `run_scripts/run_PHFs.py`.
+4. Run coevals:
+  - Use `sbatch sbatch_scripts/N_coeval_job.sh` to submit a job that runs a batch of N coeval with `run_scripts/run_N_coevals.py`. Default is N=10.
+## Table
 
 <table><thead>
   <tr>
