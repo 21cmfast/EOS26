@@ -15,4 +15,6 @@ module load openmpi/5.0.3-gcc13.2.1
 
 uv sync --frozen
 
-uv run run_scripts/run_coeval.py
+N="${1:-10}"
+printf "N is: $N\n"
+uv run run_scripts/run_N_coevals.py --N "$N"

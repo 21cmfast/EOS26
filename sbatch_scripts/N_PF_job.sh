@@ -17,7 +17,8 @@ module load openmpi/5.0.3-gcc13.2.1
 uv sync --frozen
 
 IDX="$1"
+N="${2:-10}"
 
-printf "IDX is: $IDX \n"&
-uv run run_N_PFs.py  --z_idx_start $IDX --N 10
+printf "IDX is: $IDX, N is: $N\n"&
+uv run run_scripts/run_N_PFs.py --z_idx_start "$IDX" --N "$N"
 wait

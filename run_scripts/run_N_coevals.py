@@ -4,6 +4,11 @@ import numpy as np
 from template2input import create_params_from_template
 from py21cmfast import generate_coeval
 import gc
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--N", type=int, default=10)
+N = parser.parse_args().N
 
 #p21c.config['HALO_CATALOG_MEM_FACTOR'] = 2.
 
@@ -29,7 +34,7 @@ for coeval, _ in p21c.generate_coeval(
 ):
     print("One coeval done")
     count += 1
-    if count == 9:
+    if count >= N:
         break
 
     
