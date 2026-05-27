@@ -15,14 +15,25 @@ module load openmpi/5.0.3-gcc13.2.1
 
 uv sync --frozen
 
+POSITIONAL=()
+TEST_FLAG=""
+TEST_SUFFIX=""
+for arg in "$@"; do
+    case "$arg" in
+        --test) TEST_FLAG="--test"; TEST_SUFFIX="_test" ;;
+        *)      POSITIONAL+=("$arg") ;;
+    esac
+done
+set -- "${POSITIONAL[@]}"
+
 IDX="$1"
 
 mkdir -p logs
-LOG_OUT="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.out"
-LOG_ERR="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.err"
-LOG_LOG="logs/PF_${SLURM_JOB_ID}_zidx${IDX}.log"
+LOG_OUT="logs/PF_${SLURM_JOB_ID}_zidx${IDX}${TEST_SUFFIX}.out"
+LOG_ERR="logs/PF_${SLURM_JOB_ID}_zidx${IDX}${TEST_SUFFIX}.err"
+LOG_LOG="logs/PF_${SLURM_JOB_ID}_zidx${IDX}${TEST_SUFFIX}.log"
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 printf "IDX is: $IDX\n"
-uv run run_scripts/run_PFs.py --z_idx "$IDX" --log-file "$LOG_LOG"
+uv run run_scripts/run_PFs.py --z_idx "$IDX" --log-file "$LOG_LOG" $TEST_FLAG
 wait

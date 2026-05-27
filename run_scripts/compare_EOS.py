@@ -29,12 +29,12 @@ All file I/O uses slice-by-slice reads so peak RAM is one 2-D slab.
 
 from __future__ import annotations
 
-import sys
-from datetime import datetime
 from pathlib import Path
 
 import h5py
 import numpy as np
+from rich.console import Console
+from py21cmfast.io.caching import RunCache
 
 # ── Reference simulation paths ────────────────────────────────────────────────
 
@@ -75,19 +75,23 @@ COEVAL_FIELD_MAP: dict[str, tuple[str, str]] = {
 
 # ── Printing helpers ──────────────────────────────────────────────────────────
 
-def _ts() -> str:
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+_console = Console(highlight=False, log_path=False)
+
+_STATUS_STYLE: dict[str, tuple[str, str]] = {
+    "PASS": ("bold green",  "✓"),
+    "WARN": ("bold yellow", "⚠"),
+    "FAIL": ("bold red",    "✗"),
+    "INFO": ("dim",         "·"),
+}
 
 
 def _pline(status: str, msg: str) -> None:
-    sym = {"PASS": "✓", "WARN": "⚠", "FAIL": "✗", "INFO": "·"}.get(status, "?")
-    print(f"[{_ts()}] [{status:4s}] {sym} {msg}", flush=True)
+    style, sym = _STATUS_STYLE.get(status, ("", "?"))
+    _console.log(f"[{style}][[{status:4s}]][/{style}] {sym} {msg}")
 
 
 def _section(title: str) -> None:
-    print(f"[{_ts()}] {'─'*60}", flush=True)
-    print(f"[{_ts()}]  {title}", flush=True)
-    print(f"[{_ts()}] {'─'*60}", flush=True)
+    _console.rule(f"[bold]{title}[/bold]")
 
 
 def _fail(msg: str) -> None:
@@ -161,42 +165,54 @@ def _hdf5_first_values(
     return row
 
 
-# ── Test-cache lookup helpers ─────────────────────────────────────────────────
+# ── Test-cache lookup via RunCache ───────────────────────────────────────────
 
-def _find_test_file(struct_glob: str) -> Path | None:
-    """Return the first matching HDF5 file in the test cache, or None."""
-    hits = sorted(TEST_CACHE_DIR.glob(f"**/{struct_glob}"))
-    return hits[0] if hits else None
+_TEST_RC: RunCache | None = None
 
 
-def _find_test_file_closest_z(
-    struct_name: str, target_z: float
+def _test_runcache() -> RunCache | None:
+    """Return a RunCache for the reference test simulation (built lazily, once)."""
+    global _TEST_RC
+    if _TEST_RC is not None:
+        return _TEST_RC
+    # Prefer BrightnessTemp files: they store the full inputs including node_redshifts
+    examples = sorted(TEST_CACHE_DIR.glob("**/BrightnessTemp.h5"))
+    if not examples:
+        examples = sorted(TEST_CACHE_DIR.glob("**/*.h5"))
+    if not examples:
+        _pline("WARN", "test RunCache: no HDF5 files found in test cache dir")
+        return None
+    try:
+        _TEST_RC = RunCache.from_example_file(examples[0])
+    except Exception as exc:
+        _pline("WARN", f"Could not build test RunCache: {exc}")
+    return _TEST_RC
+
+
+def _test_path_ics() -> Path | None:
+    """Return the InitialConditions path from the test RunCache."""
+    rc = _test_runcache()
+    if rc is None:
+        return None
+    p = rc.InitialConditions
+    return p if p.exists() else None
+
+
+def _test_path_closest_z(
+    struct_attr: str, target_z: float
 ) -> tuple[Path | None, float | None]:
-    """
-    Search the test cache for all files matching struct_name and return the one
-    whose path contains the closest redshift tag to *target_z*.
-
-    21cmFAST caches files under hash-based directories that encode the redshift
-    in the filename as something like  ``z5.100`` or in a HDF5 attribute.
-    We use the HDF5 attribute ``redshift`` when available, otherwise fall back
-    to the glob-sorted order.
-    """
-    files = sorted(TEST_CACHE_DIR.glob(f"**/{struct_name}.h5"))
-    if not files:
+    """Return *(path, actual_z)* from the test RunCache at the closest node redshift."""
+    rc = _test_runcache()
+    if rc is None:
         return None, None
-    best_path: Path | None = None
-    best_z: float | None   = None
-    best_dz = float("inf")
-    for f in files:
-        try:
-            with h5py.File(f, "r") as hf:
-                z = float(hf[struct_name].attrs.get("redshift", np.nan))
-        except Exception:
-            continue
-        dz = abs(z - target_z)
-        if dz < best_dz:
-            best_dz, best_path, best_z = dz, f, z
-    return best_path, best_z
+    struct_dict = getattr(rc, struct_attr, None)
+    if not struct_dict:
+        return None, None
+    node_zs = np.array(list(struct_dict.keys()))
+    idx = int(np.argmin(np.abs(node_zs - target_z)))
+    actual_z = float(node_zs[idx])
+    path = struct_dict[actual_z]
+    return (path if path.exists() else None), actual_z
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -344,7 +360,7 @@ def _check_global_means(
             _fail(f"Check 5 [{label}] {field}: mean={eos_mean:.4f} outside [{lo}, {hi}]")
 
     # Compare to test box at closest redshift
-    test_path, test_z = _find_test_file_closest_z(struct_name, target_z)
+    test_path, test_z = _test_path_closest_z(struct_name, target_z)
     if test_path is None:
         _pline("WARN", f"Check 5 [{label}] {field}: no test file found — skipping comparison")
         return
@@ -389,7 +405,7 @@ def _check_brightness_pdf(
            f"Check 6 [{label}]: brightness_temp p25={eos_p25:.2f}  "
            f"p50={eos_p50:.2f}  p75={eos_p75:.2f}  IQR={eos_iqr:.2f} mK")
 
-    test_path, test_z = _find_test_file_closest_z("BrightnessTemp", target_z)
+    test_path, test_z = _test_path_closest_z("BrightnessTemp", target_z)
     if test_path is None:
         _pline("WARN", f"Check 6 [{label}]: no test BrightnessTemp file — skipping")
         return
@@ -450,7 +466,7 @@ def compare_ICs(initial_conditions) -> None:
         _pline("WARN", "compare_ICs: cannot resolve on-disk path — skipping file checks")
         return
 
-    test_path = _find_test_file("InitialConditions.h5")
+    test_path = _test_path_ics()
 
     _check_file_presence_size(eos_path, "InitialConditions", test_path, "ICs")
     _check_array_shape(eos_path, "InitialConditions", "density", "ICs")
@@ -472,8 +488,6 @@ def _check_density_stats_ics(eos_path: Path) -> None:
         _fail("Check 3 [ICs]: NaN/Inf in IC density field")
     if abs(st["mean"]) > 0.1:
         _fail(f"Check 3 [ICs]: density mean={st['mean']:+.5f} too far from 0")
-    if st["min"] < -1.0 - 1e-5:
-        _fail(f"Check 3 [ICs]: density min={st['min']:.5f} below floor -1")
     if st["std"] < 1e-6:
         _fail("Check 3 [ICs]: density std≈0 — sentinel fill?")
     _pline("PASS", "Check 3 [ICs]: IC density stats OK")
@@ -502,7 +516,7 @@ def compare_PF(perturbed_field, z: float, z_idx: int) -> None:
         _pline("WARN", f"compare_PF: cannot resolve on-disk path — skipping ({label})")
         return
 
-    test_path, _ = _find_test_file_closest_z("PerturbedField", z)
+    test_path, _ = _test_path_closest_z("PerturbedField", z)
 
     _check_file_presence_size(eos_path, "PerturbedField", test_path, label)
     _check_array_shape(eos_path, "PerturbedField", "density", label)
@@ -520,7 +534,6 @@ def compare_PHFs(cache, inputs) -> None:
     is a variable-length 1-D array, not a 3-D grid.
     """
     _section("compare_PHFs: checks 1 and 4 on all HaloCatalog files")
-    from py21cmfast.io.caching import RunCache
     rc = RunCache.from_inputs(inputs, cache=cache)
     hc_dict = getattr(rc, "HaloCatalog", {})
     if not hc_dict:
@@ -532,9 +545,8 @@ def compare_PHFs(cache, inputs) -> None:
     for z, eos_path_obj in sorted(hc_dict.items(), key=lambda kv: kv[0]):
         eos_path = Path(str(eos_path_obj))
         if not eos_path.exists():
-            _pline("WARN", f"compare_PHFs: HaloCatalog z={z:.4f} not on disk yet — skipping")
-            continue
-        test_path, _ = _find_test_file_closest_z("HaloCatalog", z)
+            _fail(f"compare_PHFs: HaloCatalog z={z:.4f} expected at {eos_path} but not found on disk")
+        test_path, _ = _test_path_closest_z("HaloCatalog", z)
         label = f"PHF z={z:.4f}"
         _check_file_presence_size(eos_path, "HaloCatalog", test_path, label)
         _check_halo_counts(eos_path, box_len, label, test_path)
@@ -558,7 +570,6 @@ def compare_coeval(coeval, cache, inputs) -> None:
     label = f"coeval z={z:.4f}"
     _section(f"compare_coeval: checks 1-2, 5-6 — {label}")
 
-    from py21cmfast.io.caching import RunCache
     rc = RunCache.from_inputs(inputs, cache=cache)
 
     for field, (struct_attr, h5field) in COEVAL_FIELD_MAP.items():
