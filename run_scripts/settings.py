@@ -8,7 +8,7 @@ from datetime import datetime
 
 # ── template ───────────────────────────────────────────────────────────────
 
-TEMPLATE_NAME = "EOS25.toml"
+TEMPLATE_NAME = "EOS26.toml"
 
 # ── cache directories ──────────────────────────────────────────────────────
 
@@ -23,18 +23,8 @@ CACHE_TEST  = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_test_HIIDIM200/'
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
-RANDOM_SEED     = 42    # used by run_ICs, run_N_PFs, run_PHFs
-RANDOM_SEED_ALT = 1234  # used by run_PFs, run_N_coevals
+RANDOM_SEED_ALT = 1234  # used by run_PFs, run_N_coevals (different from template seed 42)
 TEST_HII_DIM    = 200
-
-# Clear DIM / BOX_LEN from the TOML and derive them from the ratio / cell-size
-# instead, so --test only needs to override HII_DIM.
-TEMPLATE_BOX_KWARGS = dict(
-    DIM=None,
-    BOX_LEN=None,
-    HIRES_TO_LOWRES_FACTOR=3,
-    LOWRES_CELL_SIZE_MPC=1.666666,
-)
 
 # ── memory tracking ────────────────────────────────────────────────────────
 

@@ -1,9 +1,14 @@
 [project]
-name = "eos25"
+name = "eos26"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
 	"psutil",
+	"matplotlib",
+	"21cmfast",
 ]
+
+[tool.uv.sources]
+21cmfast = { git = "https://github.com/21cmfast/21cmFAST", rev = "release-v4.2" }

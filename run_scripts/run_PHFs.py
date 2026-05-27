@@ -21,7 +21,7 @@ job_start = time.perf_counter()
 print(f"[{now_str()}] Starting PHFs run")
 print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
-p21c.config['HALO_CATALOG_MEM_FACTOR'] = 1.6
+#p21c.config['HALO_CATALOG_MEM_FACTOR'] = 1.6
 
 if args.test:
     print(f"[{now_str()}] TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
@@ -30,9 +30,6 @@ cache = p21c.OutputCache(cache_dir)
 
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-        node_redshifts=p21c.get_logspaced_redshifts(min_redshift=5.0, z_step_factor=1.02, max_redshift=35.0),
-        random_seed=settings.RANDOM_SEED,
-        **settings.TEMPLATE_BOX_KWARGS,
         **_box_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
 initial_conditions = runcache.get_ics()

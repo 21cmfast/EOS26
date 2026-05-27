@@ -31,8 +31,6 @@ cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACH
 cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-                                            random_seed=settings.RANDOM_SEED,
-                                            **settings.TEMPLATE_BOX_KWARGS,
                                             **_box_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
 initial_conditions = runcache.get_ics()

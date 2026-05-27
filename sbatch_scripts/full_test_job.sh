@@ -39,9 +39,10 @@ uv run 21cmfast template create \
     --param-file EOS26.toml \
     --mode minimal \
     --hii-dim 200 \
-    --hires-to-lowres-factor 3 \
-    --lowres-cell-size-mpc 1.666666 \
-    --out "test_${JID}_template.toml"
+    --nodez.min 5.0 \
+    --nodez.step 1.02 \
+    --random-seed 42 \
+    --out "test_template.toml"
 
 # ── Step 1: Initial conditions + perturbed fields ─────────────────────────────
 echo ""

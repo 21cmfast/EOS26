@@ -26,15 +26,8 @@ cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACH
 cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-        node_redshifts=p21c.wrapper.inputs.get_logspaced_redshifts(
-            min_redshift=5.0,
-            z_step_factor=1.02,
-            max_redshift=35.0,
-        ),
-        random_seed=settings.RANDOM_SEED,
-        **settings.TEMPLATE_BOX_KWARGS,
         **_box_overrides,
-    ) 
+    )
 
 print(f"[{now_str()}] Inputs prepared with {len(inputs.node_redshifts)} redshifts")
 
