@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -p EM
+#SBATCH -p RM-shared
 #SBATCH -t 2:00:00
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=24
 #SBATCH -o logs/full_test_%j.bootstrap.out
 #SBATCH -e logs/full_test_%j.bootstrap.err
 
