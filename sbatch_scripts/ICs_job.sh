@@ -31,7 +31,7 @@ exec >"$LOG_OUT" 2>"$LOG_ERR"
 uv sync --frozen
 
 # Write EOS26.toml with node_redshifts and random_seed embedded
-uv run 21cmfast template create \
+uv run --no-sync 21cmfast template create \
     --param-file EOS26.toml \
     --mode full \
     --nodez.min 5.0 \
@@ -40,7 +40,7 @@ uv run 21cmfast template create \
     --out EOS26.toml
 
 # Write minimal template (reads node_redshifts from EOS26.toml already written above)
-uv run 21cmfast template create \
+uv run --no-sync 21cmfast template create \
     --param-file EOS26.toml \
     --mode minimal \
     --out EOS26_minimal.toml
