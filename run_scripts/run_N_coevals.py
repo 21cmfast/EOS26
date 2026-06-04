@@ -5,15 +5,13 @@ gc.disable()
 import time
 import argparse
 import settings
-from settings import now_str
-
-logger = settings.setup_logging(args.log_file)
 
 parser = argparse.ArgumentParser()
 settings.add_common_args(parser)
 parser.add_argument("--N", type=int, default=10)
 args = parser.parse_args()
 N = args.N
+logger = settings.setup_logging(args.log_file)
 
 import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
