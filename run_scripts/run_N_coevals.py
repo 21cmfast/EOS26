@@ -29,19 +29,14 @@ print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     print(f"[{now_str()}] TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACHE_ALT)
+    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
+else:
+    _box_overrides = {}
+    cache_dir = settings.CACHE_FULL
 cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-                                            random_seed=settings.RANDOM_SEED_ALT,
                                             **_box_overrides)
-runcache = RunCache.from_inputs(inputs, cache=cache)
-initial_conditions = runcache.get_ics()
-# use the real inputs, with correct node_redshifts
-inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-                                            random_seed=settings.RANDOM_SEED_ALT,
-                                            **_box_overrides)
-
 
 count = 0
 prev_tick = time.perf_counter()
@@ -50,7 +45,6 @@ for coeval, _ in p21c.generate_coeval(
     regenerate = False,
     write = True,
     cache = cache,
-    initial_conditions = initial_conditions,
     progressbar = True,
 ):
     now_tick = time.perf_counter()

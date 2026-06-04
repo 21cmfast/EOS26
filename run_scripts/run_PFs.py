@@ -25,20 +25,18 @@ print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     print(f"[{now_str()}] TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACHE_ALT)
+    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
+else:
+    _box_overrides = {}
+    cache_dir = settings.CACHE_FULL
 cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-                                            random_seed=settings.RANDOM_SEED_ALT,
                                             **_box_overrides)
-runcache = RunCache.from_inputs(inputs, cache=cache)
-initial_conditions = runcache.get_ics()
-inputs = initial_conditions.inputs  # use the real inputs, with correct node_redshifts
 z = inputs.node_redshifts[z_idx]
 print(f"[{now_str()}] Running PF at z_idx={z_idx}, z={z:.6f}")
 
 pf = p21c.perturb_field(redshift=z,
-                   initial_conditions=initial_conditions,
                    write=True,
                    cache=cache,
                    regenerate=False,

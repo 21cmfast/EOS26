@@ -22,7 +22,10 @@ print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     print(f"[{now_str()}] TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACHE_FULL)
+    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
+else:
+    _box_overrides = {}
+    cache_dir = settings.CACHE_FULL
 cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,

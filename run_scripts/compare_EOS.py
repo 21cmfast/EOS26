@@ -134,7 +134,7 @@ def _hdf5_histogram(
     bins   = np.linspace(vrange[0], vrange[1], n_bins + 1)
     counts = np.zeros(n_bins, dtype=np.float64)
     with h5py.File(path, "r") as f:
-        ds = f[struct_name]["OutputFields"][field]
+        ds = f[struct_name]["OutputFields"][field][:200,:200,:200]
         for i in range(ds.shape[0]):
             slab = ds[i].astype(np.float32).ravel()
             h, _ = np.histogram(slab, bins=bins)

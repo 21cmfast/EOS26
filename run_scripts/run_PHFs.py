@@ -25,19 +25,18 @@ print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     print(f"[{now_str()}] TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _box_overrides = settings.resolve_run_config(args.test, settings.CACHE_FULL)
+    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
+else:
+    _box_overrides = {}
+    cache_dir = settings.CACHE_FULL
 cache = p21c.OutputCache(cache_dir)
 
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
         **_box_overrides)
-runcache = RunCache.from_inputs(inputs, cache=cache)
-initial_conditions = runcache.get_ics()
-inputs = initial_conditions.inputs  # use the real inputs, with correct node_redshifts
-print(f"[{now_str()}] Got ICs, evolving halos for {len(inputs.node_redshifts)} redshifts")
+
 halo_start = time.perf_counter()
 p21c.drivers.coeval.evolve_halos(inputs=inputs,
-                    initial_conditions=initial_conditions,
                     regenerate=False,
                     all_redshifts=inputs.node_redshifts,
                     write=CacheConfig(),

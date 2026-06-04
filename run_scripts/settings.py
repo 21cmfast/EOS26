@@ -14,16 +14,11 @@ TEMPLATE_NAME = "EOS26.toml"
 
 # Main EOS25 cache (used by run_ICs and run_PHFs)
 CACHE_FULL  = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2000_HIIDIM1200_DIM3600/'
-# N_PFs cache (separate path/location)
-CACHE_NPFS  = 'ocean/projects/phy210034p/breitman/messy/EOS25/EOS25_L2000_HIIDIM1200_DIM3600'
-# Alternative cache (used by run_PFs and run_N_coevals)
-CACHE_ALT   = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2100_HIIDIM1400_DIM4200'
 # Small test cache
 CACHE_TEST  = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_test_HIIDIM200/'
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
-RANDOM_SEED_ALT = 1234  # used by run_PFs, run_N_coevals (different from template seed 42)
 TEST_HII_DIM    = 200
 
 # ── memory tracking ────────────────────────────────────────────────────────
@@ -86,11 +81,3 @@ def add_common_args(parser: argparse.ArgumentParser) -> None:
         help=f"Run a small test box (HII_DIM={TEST_HII_DIM}) instead of the full EOS",
     )
 
-
-# ── run configuration ──────────────────────────────────────────────────────
-
-def resolve_run_config(test: bool, full_cache_dir: str) -> tuple[str, dict]:
-    """Return *(cache_dir, box_overrides)* for the given --test flag."""
-    if test:
-        return CACHE_TEST, dict(HII_DIM=TEST_HII_DIM)
-    return full_cache_dir, {}

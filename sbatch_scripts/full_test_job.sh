@@ -35,6 +35,7 @@ echo "=========================================="
 # (matching settings.TEST_HII_DIM=200, HIRES_TO_LOWRES_FACTOR=3, LOWRES_CELL_SIZE_MPC=1.666666)
 echo ""
 echo "=== Writing test parameter template ==="
+rm "test_template.toml"
 uv run --no-sync 21cmfast template create \
     --param-file EOS26.toml \
     --mode minimal \

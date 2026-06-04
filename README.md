@@ -13,7 +13,7 @@ All scripts accept an optional `--test` flag to run a small test box (HII_DIM=20
    - `sbatch sbatch_scripts/ICs_job.sh [--test]`
    - Writes `EOS26.toml` (full template with embedded node redshifts and random seed) and `EOS26_minimal.toml`, then runs `run_scripts/run_ICs.py`.
 2. **Perturbed fields (PFs):**
-   - `bash sbatch_scripts/submit_PF_jobs.sh [--test]` — submits one job per PF (indices 0–91).
+   - `bash sbatch_scripts/submit_PF_jobs.sh [--test]` — submits one job per PF (indices 0–91) (not used for production).
    - `sbatch sbatch_scripts/N_PF_job.sh <z_idx> [N] [--test]` — runs a batch of N PFs (default N=10) starting from redshift index `z_idx`.
 3. **Perturbed halo fields (PHFs):**
    - `sbatch sbatch_scripts/PHFs_job.sh [--test]` — runs `run_scripts/run_PHFs.py`.
