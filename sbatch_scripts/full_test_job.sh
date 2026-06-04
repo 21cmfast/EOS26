@@ -62,7 +62,7 @@ uv run run_scripts/run_N_PFs.py \
     --test
 
 uv run run_scripts/run_N_PFs.py \
-    --z_idx_start 0 \
+    --z_idx_start 50 \
     --N "-1" \
     --log-file "logs/full_test_${JID}_PFs.log" \
     --test
