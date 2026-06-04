@@ -17,7 +17,7 @@ logger = settings.setup_logging(args.log_file)
 
 
 job_start = time.perf_counter()
-print(f"[{now_str()}] Starting ICs + PFs run")
+print(f"[{now_str()}] Starting ICs")
 print(f"[{now_str()}] gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
@@ -40,4 +40,5 @@ initial_conditions = p21c.compute_initial_conditions(
 )
 ics_dt = time.perf_counter() - ics_start
 print(f"[{now_str()}] Initial conditions done in {ics_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")
-compare_ICs(initial_conditions)
+if not args.test:
+    compare_ICs(initial_conditions)

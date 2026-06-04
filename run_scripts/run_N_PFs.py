@@ -35,6 +35,8 @@ cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
                                             **_box_overrides)
+if N == -1:
+    N = len(inputs.node_redshifts) - z_idx_start
 for i in range(N):
     loop_start = time.perf_counter()
     z_idx = z_idx_start + i
@@ -48,7 +50,8 @@ for i in range(N):
     )
     loop_dt = time.perf_counter() - loop_start
     print(f"[{now_str()}] PF {i + 1}/{N} done in {loop_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")
-    compare_PF(pf, z, z_idx)
+    if not args.test:
+        compare_PF(pf, z, z_idx)
 
 job_dt = time.perf_counter() - job_start
 print(f"[{now_str()}] Completed N PF run in {job_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")

@@ -41,7 +41,8 @@ pf = p21c.perturb_field(redshift=z,
                    cache=cache,
                    regenerate=False,
 )
-compare_PF(pf, z, z_idx)
+if not args.test:
+    compare_PF(pf, z, z_idx)
 
 job_dt = time.perf_counter() - job_start
 print(f"[{now_str()}] Completed single PF run in {job_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")

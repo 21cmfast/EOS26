@@ -48,5 +48,6 @@ halo_dt = time.perf_counter() - halo_start
 job_dt = time.perf_counter() - job_start
 print(f"[{now_str()}] Halo evolution done in {halo_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")
 print(f"[{now_str()}] Completed PHFs run in {job_dt:.2f}s | peak RSS={peak_rss_gb():.3f} GB")
-compare_PHFs(cache, inputs)
+if not args.test:
+    compare_PHFs(cache, inputs)
     

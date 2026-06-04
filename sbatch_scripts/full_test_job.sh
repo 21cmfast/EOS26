@@ -47,21 +47,36 @@ uv run --no-sync 21cmfast template create \
 
 # ── Step 1: Initial conditions + perturbed fields ─────────────────────────────
 echo ""
-echo "=== Step 1/3: ICs + PFs ==="
+echo "=== Step 1/4: ICs ==="
 uv run run_scripts/run_ICs.py \
     --log-file "logs/full_test_${JID}_ICs.log" \
     --test
 
-# ── Step 2: Primordial halo fields ────────────────────────────────────────────
+# ── Step 2: Perturbed fields ─────────────────────────────
 echo ""
-echo "=== Step 2/3: PHFs ==="
+echo "=== Step 2/4: PFs ==="
+uv run run_scripts/run_N_PFs.py \
+    --z_idx_start 0 \
+    --N "50" \
+    --log-file "logs/full_test_${JID}_PFs.log" \
+    --test
+
+uv run run_scripts/run_N_PFs.py \
+    --z_idx_start 0 \
+    --N "-1" \
+    --log-file "logs/full_test_${JID}_PFs.log" \
+    --test
+
+# ── Step 3: Perturbed halo fields ────────────────────────────────────────────
+echo ""
+echo "=== Step 3/4: PHFs ==="
 uv run run_scripts/run_PHFs.py \
     --log-file "logs/full_test_${JID}_PHFs.log" \
     --test
 
-# ── Step 3: Coevals ───────────────────────────────────────────────────────────
+# ── Step 4: Coevals ───────────────────────────────────────────────────────────
 echo ""
-echo "=== Step 3/3: Coevals ==="
+echo "=== Step 4/4: Coevals ==="
 uv run run_scripts/run_N_coevals.py \
     --log-file "logs/full_test_${JID}_coevals.log" \
     --test
