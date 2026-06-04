@@ -12,12 +12,10 @@ test=False
 zoom=False
 if test:
     path = "/home/dbreitman/EOS25/TEST_JAMES_L600_HIIDIM400_DIM1200_NO_PERTURN_ON_HIGH_RES"
-    L=600*un.Mpc
     toml = path+"/config-448e84.toml"
     out = "/home/dbreitman/EOS25/PF"
 else:
     path = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2100_HIIDIM1400_DIM4200'
-    L=2100*un.Mpc
     toml = "/jet/home/breitman/EOSv4/EOS25.toml"
     out = "/jet/home/breitman/EOSv4/Results/PF"
 
@@ -29,7 +27,8 @@ perturbed_field = runcache.get_output_struct_at_z("PerturbedField", z=33.9596, m
 
 
 box = perturbed_field.get("density")*un.dimensionless_unscaled
-HII_DIM = box.shape[0]
+HII_DIM = inputs.simulation_options.HII_DIM
+L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
 if zoom:
     box = box[:100,:100,:100]
     out+="_zoom"
