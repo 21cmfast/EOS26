@@ -90,9 +90,6 @@ uv run run_scripts/run_N_coevals.py \
 
 echo ""
 echo "=== Full test simulation complete ==="
-
-echo ""
-echo "=== Full test simulation complete ==="
 echo ""
 echo "=== Postprocessing: Lightcone ==="
 uv run postprocess/make_lightcone.py \
