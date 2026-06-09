@@ -29,11 +29,11 @@ gc.isenabled() = False (expected: False)
 === Step 2/4: PFs ===
 
 === Step 3/4: PHFs ===
-          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 92/92 redshifts • 0:00:50 • 0:00:00 remaining
+          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 92/92 redshifts • 0:00:47 • 0:00:00 remaining
 
 === Step 4/4: Coevals ===
-Perturbing Matter Fields ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 50/50 redshifts • 0:00:00 • 0:00:00 remaining
-          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 50/50 redshifts • 0:00:00 • 0:00:00 remaining
+Perturbing Matter Fields ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 92/92 redshifts • 0:00:00 • 0:00:00 remaining
+          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 92/92 redshifts • 0:00:00 • 0:00:00 remaining
 
 === Full test simulation complete ===
 

@@ -1,8 +1,10 @@
-Checked 43 packages in 5ms
+Checked 43 packages in 0.87ms
 error: Failed to get PID of child process
   Caused by: ESRCH: No such process
+error: Failed to spawn: `run_scripts/make_lightcone.py`
+  Caused by: No such file or directory (os error 2)
 Traceback (most recent call last):
-  File "/Users/dani/UTokyo/2026/EOS26/run_scripts/run_N_coevals.py", line 18, in <module>
+  File "/Users/dani/UTokyo/2026/EOS26/postprocess/plot_lightcone.py", line 18, in <module>
     import py21cmfast as p21c
   File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/py21cmfast/__init__.py", line 74, in <module>
     from . import lightconers, plotting, wrapper
@@ -16,89 +18,25 @@ Traceback (most recent call last):
     )
   File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/_src/io/connect.py", line 16, in <module>
     from astropy.table import Row, Table
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/table/__init__.py", line 118, in <module>
-    import astropy.io.ascii.connect
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/io/ascii/__init__.py", line 7, in <module>
-    from .basic import (
-    ...<8 lines>...
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/table/__init__.py", line 119, in <module>
+    import astropy.io.fits.connect
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/io/fits/__init__.py", line 22, in <module>
+    class Conf(_config.ConfigNamespace):
+    ...<42 lines>...
+        )
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/io/fits/__init__.py", line 27, in Conf
+    enable_record_valued_keyword_cards = _config.ConfigItem(
+        True,
+    ...<3 lines>...
+        aliases=["astropy.io.fits.enabled_record_valued_keyword_cards"],
     )
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/io/ascii/basic.py", line 14, in <module>
-    from . import core
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/io/ascii/core.py", line 31, in <module>
-    from astropy.utils.data import get_readable_fileobj
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/utils/data.py", line 11, in <module>
-    import hashlib
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/hashlib.py", line 170, in <module>
-    import _hashlib
-KeyboardInterrupt
-Traceback (most recent call last):
-  File "/Users/dani/UTokyo/2026/EOS26/run_scripts/make_lightcone.py", line 15, in <module>
-    import py21cmfast as p21c
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/py21cmfast/__init__.py", line 74, in <module>
-    from . import lightconers, plotting, wrapper
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/py21cmfast/lightconers.py", line 13, in <module>
-    from astropy.cosmology import FLRW, z_at_value
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/__init__.py", line 10, in <module>
-    from . import io, realizations, traits, units
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/traits.py", line 18, in <module>
-    from ._src.traits import (
-    ...<11 lines>...
-    )
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/_src/traits/__init__.py", line 23, in <module>
-    from .darkenergy import DarkEnergyComponent
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/_src/traits/darkenergy.py", line 7, in <module>
-    from astropy.cosmology._src.scipy_compat import quad
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/cosmology/_src/scipy_compat.py", line 10, in <module>
-    from scipy.integrate import quad
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/integrate/__init__.py", line 103, in <module>
-    from ._quadrature import *
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/integrate/_quadrature.py", line 7, in <module>
-    from scipy.special import roots_legendre
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/special/__init__.py", line 793, in <module>
-    from ._support_alternative_backends import *
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/special/_support_alternative_backends.py", line 8, in <module>
-    from scipy._lib._array_api import (
-    ...<2 lines>...
-    )
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/_lib/_array_api.py", line 24, in <module>
-    from scipy._lib.array_api_compat import (
-    ...<16 lines>...
-    )
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/_lib/array_api_compat/numpy/__init__.py", line 9, in <module>
-    __all__ = clone_module("numpy", globals())
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/scipy/_lib/array_api_compat/_internal.py", line 64, in clone_module
-    exec(f"from {mod.__name__} import *", objs)
-    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<string>", line 1, in <module>
-  File "<frozen importlib._bootstrap>", line 1418, in _handle_fromlist
-  File "<frozen importlib._bootstrap>", line 1420, in _handle_fromlist
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/numpy/__init__.py", line 739, in __getattr__
-    import numpy.f2py as f2py
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/numpy/f2py/__init__.py", line 19, in <module>
-    from . import diagnose, f2py2e
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/numpy/f2py/f2py2e.py", line 21, in <module>
-    from . import (
-    ...<8 lines>...
-    )
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/numpy/f2py/capi_maps.py", line 24, in <module>
-    from .crackfortran import markoutercomma
-  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/numpy/f2py/crackfortran.py", line 1605, in <module>
-    lenarraypattern = re.compile(
-        r'\s*(@\(@\s*(?!/)\s*(?P<array>.*?)\s*@\)@\s*\*\s*(?P<len>.*?)|(\*\s*(?P<len2>.*?)|)\s*(@\(@\s*(?!/)\s*(?P<array2>.*?)\s*@\)@|))\s*(=\s*(?P<init>.*?)|(@\(@|)/\s*(?P<init2>.*?)\s*/(@\)@|)|)\s*\Z', re.I)
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/__init__.py", line 289, in compile
-    return _compile(pattern, flags)
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/__init__.py", line 350, in _compile
-    p = _compiler.compile(pattern, flags)
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/_compiler.py", line 748, in compile
-    p = _parser.parse(p, flags)
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/_parser.py", line 980, in parse
-    p = _parse_sub(source, state, flags & SRE_FLAG_VERBOSE, 0)
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/_parser.py", line 459, in _parse_sub
-    itemsappend(_parse(source, state, verbose, nested + 1,
-                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                       not nested and not items))
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/re/_parser.py", line 522, in _parse
-    while True:
-          ^^^^
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/config/configuration.py", line 296, in __init__
+    module = find_current_module(2)
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/utils/introspection.py", line 254, in find_current_module
+    return _get_module_from_frame(frm)
+  File "/Users/dani/UTokyo/2026/EOS26/.venv/lib/python3.13/site-packages/astropy/utils/introspection.py", line 266, in _get_module_from_frame
+    mod = inspect.getmodule(frm)
+  File "/Users/dani/.local/share/uv/python/cpython-3.13.13-macos-aarch64-none/lib/python3.13/inspect.py", line 1026, in getmodule
+    if f == _filesbymodname.get(modname, None):
+            ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
 KeyboardInterrupt
