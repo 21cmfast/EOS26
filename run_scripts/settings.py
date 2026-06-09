@@ -12,9 +12,9 @@ TEMPLATE_NAME = "EOS26.toml"
 # ── cache directories ──────────────────────────────────────────────────────
 
 # Main EOS25 cache (used by run_ICs and run_PHFs)
-CACHE_FULL  = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2000_HIIDIM1200_DIM3600/'
+CACHE_FULL  = '../EOS26_L2000_HIIDIM1200/'
 # Small test cache
-CACHE_TEST  = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_test_HIIDIM200/'
+CACHE_TEST  = '../EOS26_test_HIIDIM200/'
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
