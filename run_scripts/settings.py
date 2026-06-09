@@ -11,10 +11,10 @@ TEMPLATE_NAME = "EOS26.toml"
 
 # ── cache directories ──────────────────────────────────────────────────────
 
-# Main EOS25 cache (used by run_ICs and run_PHFs)
-CACHE_FULL  = '../EOS26_L2000_HIIDIM1200/'
+# Main EOS26 cache (used by run_ICs and run_PHFs)
+CACHE_FULL  = 'EOS26_L2000_HIIDIM1200/'
 # Small test cache
-CACHE_TEST  = '../EOS26_test_HIIDIM200/'
+CACHE_TEST  = 'EOS26_test_HIIDIM200/'
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
