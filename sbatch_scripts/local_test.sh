@@ -60,14 +60,8 @@ echo ""
 echo "=== Step 4/4: Coevals ==="
 uv run run_scripts/run_N_coevals.py \
     --log-file "logs/full_test_${JID}_coevals.log" \
-    --N "50" \
-    --test
-
-uv run run_scripts/run_N_coevals.py \
-    --log-file "logs/full_test_${JID}_coevals.log" \
     --N "-1" \
     --test
-
 
 echo ""
 echo "=== Full test simulation complete ==="
@@ -77,5 +71,9 @@ echo "=== Full test simulation complete ==="
 echo ""
 echo "=== Postprocessing: Lightcone ==="
 uv run run_scripts/make_lightcone.py \
+    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --test
+
+uv run postprocess/plot_lightcone.py \
     --log-file "logs/full_test_${JID}_lightcone.log" \
     --test

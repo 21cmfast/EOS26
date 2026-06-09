@@ -1,0 +1,14 @@
+00:00:00 INFO     00.166 GB Starting lightcone plotting                                                                                                         
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB Starting lightcone plotting                                                                                                         
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.166 GB Starting lightcone plotting                                                                                                         
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.166 GB Starting lightcone plotting                                                                                                         
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.166 GB Starting lightcone plotting                                                                                                         
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              

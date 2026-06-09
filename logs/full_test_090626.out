@@ -1,0 +1,42 @@
+==========================================
+ Full test simulation  (job 090626)
+==========================================
+
+=== Writing test parameter template ===
+╭─────────────────────────────────────────────────────────────────────── Custom Template ───────────────────────────────────────────────────────────────────────╮
+│ The minimal set of non-default parameters of your custom model                                                                                                │
+│                                                                                                                                                               │
+│ ─────────────────────────────────────────────────────────────────────── MatterOptions ─────────────────────────────────────────────────────────────────────── │
+│ USE_RELATIVE_VELOCITIES: True POWER_SPECTRUM: CLASS MINIMIZE_MEMORY: True KEEP_3D_VELOCITIES: True                                                            │
+│                                                                                                                                                               │
+│ ───────────────────────────────────────────────────────────────────── SimulationOptions ───────────────────────────────────────────────────────────────────── │
+│ HII_DIM: 200 N_THREADS: 16 SAMPLER_MIN_MASS: 5011872336.272715                                                                                                │
+│                                                                                                                                                               │
+│ ─────────────────────────────────────────────────────────────────────── AstroOptions ──────────────────────────────────────────────────────────────────────── │
+│ USE_MINI_HALOS: True USE_TS_FLUCT: True HALO_SCALING_RELATIONS_MEDIAN: True RECOMB_MODEL: inhomogeneous                                                       │
+│                                                                                                                                                               │
+│ ──────────────────────────────────────────────────────────────────────── AstroParams ──────────────────────────────────────────────────────────────────────── │
+│ F_STAR10:     -2.0 ALPHA_STAR: 0.47  F_STAR7_MINI: -3.4 ALPHA_STAR_MINI: 0.47  F_ESC10:         -0.6    ALPHA_ESC: -0.16   F_ESC7_MINI: -0.6 M_TURN: 5.0      │
+│ R_BUBBLE_MAX: 50.0 t_STAR:     0.168 SIGMA_STAR:   0.24 SIGMA_SFR_LIM:   0.093 SIGMA_SFR_INDEX: -0.0188 POP2_ION:  16000.0                                    │
+│                                                                                                                                                               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+🦆 Wrote new template file at test_template.toml
+
+=== Step 1/4: ICs ===
+Starting ICs
+gc.isenabled() = False (expected: False)
+
+=== Step 2/4: PFs ===
+
+=== Step 3/4: PHFs ===
+          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 92/92 redshifts • 0:00:50 • 0:00:00 remaining
+
+=== Step 4/4: Coevals ===
+Perturbing Matter Fields ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 50/50 redshifts • 0:00:00 • 0:00:00 remaining
+          Evolving Halos ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 50/50 redshifts • 0:00:00 • 0:00:00 remaining
+
+=== Full test simulation complete ===
+
+=== Full test simulation complete ===
+
+=== Postprocessing: Lightcone ===

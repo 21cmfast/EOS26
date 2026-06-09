@@ -95,6 +95,10 @@ echo ""
 echo "=== Full test simulation complete ==="
 echo ""
 echo "=== Postprocessing: Lightcone ==="
-uv run run_scripts/make_lightcone.py \
+uv run postprocess/make_lightcone.py \
+    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --test
+
+uv run postprocess/plot_lightcone.py \
     --log-file "logs/full_test_${JID}_lightcone.log" \
     --test

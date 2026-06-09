@@ -4,6 +4,8 @@ gc.disable()
 
 import time
 import argparse
+import sys
+sys.path.insert(1, 'run_scripts/')
 import settings
 
 parser = argparse.ArgumentParser()

@@ -55,7 +55,8 @@ else:
 
 cache = p21c.OutputCache(cache_dir)
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **_box_overrides)
-print(inputs)
+HII_DIM = inputs.simulation_options.HII_DIM
+BOX_LEN = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM
 
 plotspath = 'plots/'
 lightcone = p21c.LightCone.from_file(cache_dir+"lc")
@@ -65,7 +66,7 @@ key_names = [r"$\delta$", r"$\delta T_{21}$ [mK]", "cumul recombs", "xHI", r"$T_
 cmaps = ["viridis", "EoR", "Reds", "hot","inferno","YlGnBu", "Blues"]
 fig, axs = plt.subplots(nrows=1, ncols = 7, sharey=True, figsize = (24,17))
 for i,k,k_name, c in zip(range(len(keys)), keys, key_names, cmaps):
-    im = axs[i].pcolormesh(np.linspace(0, inputs.BOX_LEN, inputs.HII_DIM),
+    im = axs[i].pcolormesh(np.linspace(0, BOX_LEN, HII_DIM),
                      lightcone.lightcone_redshifts,
                      lightcone.lightcones[k][0,...].T,
                      vmin = np.nanpercentile(lightcone.lightcones[k][0,...],5) if c != "EoR" else -150,
