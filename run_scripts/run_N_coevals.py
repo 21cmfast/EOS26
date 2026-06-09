@@ -4,6 +4,8 @@ gc.disable()
 
 import time
 import argparse
+from glob import glob
+import numpy as np
 import settings
 
 parser = argparse.ArgumentParser()
@@ -34,10 +36,19 @@ cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
                                             **_box_overrides)
-
+coevals_done = glob(cache_dir + "*/*/*/*/*/BrightnessTemp.h5")
+n_coevals_done = len(coevals_done)
+redshifts_done = sorted([float(cpath.split("/")[-3]) for cpath in coevals_done])
+logger.info(f"Already have {n_coevals_done} coevals done, at redshifts: {redshifts_done}")
+not_done = np.array([np.round(z,4) not in redshifts_done for z in inputs.node_redshifts])
+if args.N == -1:
+    N = np.sum(not_done)
+this_batch_redshifts = sorted(np.array(inputs.node_redshifts)[not_done][:N])[::-1]
+logger.info(f"Redshifts for this batch: {this_batch_redshifts[0]:.2f} to {this_batch_redshifts[-1]:.2f}")
 count = 0
 prev_tick = time.perf_counter()
 for coeval, _ in p21c.generate_coeval(
+    out_redshifts = this_batch_redshifts,
     inputs = inputs,
     regenerate = False,
     write = True,
