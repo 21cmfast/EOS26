@@ -19,13 +19,13 @@ from py21cmfast.io.caching import RunCache
 from py21cmfast import run_lightcone
 
 job_start = time.perf_counter()
-print(f"Starting make lightcone:")
-print(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
+logger.info(f"Starting make lightcone:")
+logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 #p21c.config['HALO_CATALOG_MEM_FACTOR'] = 2.
 
 if args.test:
-    print(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
+    logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
     cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
 else:
     _box_overrides = {}
@@ -66,6 +66,4 @@ lc = p21c.run_lightcone(
 lc.save(lc_path)
 
 job_dt = time.perf_counter() - job_start
-print(f"Completed lightcone run in {job_dt:.2f}s")
-
-    
+logger.info(f"Completed lightcone run in {job_dt:.2f}s")

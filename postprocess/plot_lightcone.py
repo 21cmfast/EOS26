@@ -81,3 +81,4 @@ for i,k,k_name, c in zip(range(len(keys)), keys, key_names, cmaps):
     axs[i].set_yscale("log")
 axs[0].set_ylabel("Redshifts")
 plt.savefig(plotspath+"lightcones_EOS25.png", bbox_inches='tight')
+logger.info(f"Saved lightcone plot to {plotspath+'lightcones_EOS25.png'}")
