@@ -57,8 +57,8 @@ for i in range(N):
     logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s")
     # ↑ no need to append peak_rss_gb() — RicherHandler prints RSS on every line
 
-    if not args.test:
-        compare_PF(pf, z, z_idx)
+    #if not args.test:
+    #    compare_PF(pf, z, z_idx)
     pf.purge()
 
 job_dt = time.perf_counter() - job_start

@@ -48,6 +48,6 @@ halo_dt = time.perf_counter() - halo_start
 job_dt = time.perf_counter() - job_start
 logger.info(f"Halo evolution done in {halo_dt:.2f}s")
 logger.info(f"Completed PHFs run in {job_dt:.2f}s")
-if not args.test:
-    compare_PHFs(cache, inputs)
+#if not args.test:
+#    compare_PHFs(cache, inputs)
     

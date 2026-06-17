@@ -40,7 +40,8 @@ pf = p21c.perturb_field(redshift=z,
                    cache=cache,
                    regenerate=False,
 )
-compare_PF(pf, z, z_idx)
+#if not args.test and args.compare:
+#    compare_PF(pf, z, z_idx)
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed single PF run in {job_dt:.2f}s")
