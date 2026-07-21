@@ -1,8 +1,11 @@
 #!/bin/bash
 
+set -euo pipefail
+
 JID="090626"
 LOG_OUT="logs/full_test_${JID}.out"
 LOG_ERR="logs/full_test_${JID}.err"
+mkdir -p logs
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 uv sync --frozen
@@ -12,8 +15,7 @@ echo " Full test simulation  (job ${JID})"
 echo "=========================================="
 
 # ── Write test parameter template to disk ─────────────────────────────────────
-# Overrides HII_DIM/DIM/BOX_LEN from EOS26.toml with test-box values
-# (matching settings.TEST_HII_DIM=200, HIRES_TO_LOWRES_FACTOR=3, LOWRES_CELL_SIZE_MPC=1.666666)
+# Uses the active EOS26.toml template with HII_DIM=200 and seed 42.
 echo ""
 echo "=== Writing test parameter template ==="
 rm "test_template.toml"
@@ -77,3 +79,37 @@ uv run postprocess/make_lightcone.py \
 uv run postprocess/plot_lightcone.py \
     --log-file "logs/full_test_${JID}_lightcone.log" \
     --test
+
+# ── Candidate comparison run ─────────────────────────────────────────────────
+# --test --compare uses EOS26_test_HIIDIM200_compare/, leaving the reference
+# cache above untouched. Lightcones are not included because no lightcone
+# comparison check exists yet.
+echo ""
+echo "=== Comparing a new test simulation against the reference ==="
+
+uv run run_scripts/run_ICs.py \
+    --log-file "logs/full_test_${JID}_compare_ICs.log" \
+    --test --compare
+
+uv run run_scripts/run_N_PFs.py \
+    --z_idx_start 0 \
+    --N "50" \
+    --log-file "logs/full_test_${JID}_compare_PFs.log" \
+    --test --compare
+
+uv run run_scripts/run_N_PFs.py \
+    --z_idx_start 50 \
+    --N "-1" \
+    --log-file "logs/full_test_${JID}_compare_PFs.log" \
+    --test --compare
+
+uv run run_scripts/run_PHFs.py \
+    --log-file "logs/full_test_${JID}_compare_PHFs.log" \
+    --test --compare
+
+uv run run_scripts/run_N_coevals.py \
+    --log-file "logs/full_test_${JID}_compare_coevals.log" \
+    --N "-1" \
+    --test --compare
+
+echo "=== Candidate comparison completed ==="

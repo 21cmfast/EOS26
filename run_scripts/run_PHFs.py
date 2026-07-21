@@ -24,15 +24,12 @@ logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
-else:
-    _box_overrides = {}
-    cache_dir = settings.CACHE_FULL
+cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
 cache = p21c.OutputCache(cache_dir)
 
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-        **_box_overrides)
+    **_input_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
 halo_start = time.perf_counter()
 p21c.drivers.coeval.evolve_halos(inputs=inputs,
@@ -48,6 +45,6 @@ halo_dt = time.perf_counter() - halo_start
 job_dt = time.perf_counter() - job_start
 logger.info(f"Halo evolution done in {halo_dt:.2f}s")
 logger.info(f"Completed PHFs run in {job_dt:.2f}s")
-#if not args.test:
-#    compare_PHFs(cache, inputs)
+if args.compare:
+    compare_PHFs(cache, inputs)
     

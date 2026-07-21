@@ -48,13 +48,10 @@ logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-    cache_dir, _box_overrides = settings.CACHE_TEST, {"HII_DIM": settings.TEST_HII_DIM}
-else:
-    _box_overrides = {}
-    cache_dir = settings.CACHE_FULL
+cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
 
 cache = p21c.OutputCache(cache_dir)
-inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **_box_overrides)
+inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **_input_overrides)
 HII_DIM = inputs.simulation_options.HII_DIM
 BOX_LEN = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM
 

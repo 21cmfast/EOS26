@@ -8,17 +8,28 @@ import psutil
 # ── template ───────────────────────────────────────────────────────────────
 
 TEMPLATE_NAME = "EOS26.toml"
+TEST_RANDOM_SEED = 42
 
 # ── cache directories ──────────────────────────────────────────────────────
 
-# Main EOS26 cache (used by run_ICs and run_PHFs)
-CACHE_FULL  = 'EOS26_L2000_HIIDIM1200/'
-# Small test cache
-CACHE_TEST  = 'EOS26_test_HIIDIM200/'
+# Main EOS26 cache (used by production runs)
+CACHE_FULL = "EOS26_L2000_HIIDIM1200/"
+# Small reference simulation generated with --test and without --compare.
+CACHE_TEST_REFERENCE = "EOS26_test_HIIDIM200/"
+# Separate local candidate cache for --test --compare.
+CACHE_TEST_COMPARE = "EOS26_test_HIIDIM200_compare/"
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
-TEST_HII_DIM    = 200
+TEST_HII_DIM = 200
+
+
+def inputs_for_run(test: bool, compare: bool) -> tuple[str, dict[str, int]]:
+    """Return the output cache and template overrides for this invocation."""
+    if test:
+        cache_dir = CACHE_TEST_COMPARE if compare else CACHE_TEST_REFERENCE
+        return cache_dir, {"HII_DIM": TEST_HII_DIM, "random_seed": TEST_RANDOM_SEED}
+    return CACHE_FULL, {}
 
 # ── memory tracking ────────────────────────────────────────────────────────
 
@@ -482,5 +493,9 @@ def add_common_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--test", action="store_true", default=False,
         help=f"Run a small test box (HII_DIM={TEST_HII_DIM}) instead of the full EOS",
+    )
+    parser.add_argument(
+        "--compare", action="store_true", default=False,
+        help="Compare the results to the EOS26 reference outputs",
     )
 

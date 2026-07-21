@@ -16,7 +16,8 @@ Check taxonomy (mirrors check_EOS.py numbering)
   1  file_presence_size  — HDF5 file exists and size scales as (N_eos/N_test)^3
   2  array_shape         — array shape is (HII_DIM,)^3; no NaN / Inf in a slab
   3  density_stats       — PerturbedField density: mean≈0, min≥-1, no NaN/Inf
-  4  halo_counts         — HaloCatalog: non-empty, number density in test range
+    4  halo_catalog        — HaloCatalog integrity, populated number density, and
+                                                     mass PDF within Poisson error bars
   5  global_means        — BrightnessTemp / IonizedBox / TsBox global means
                            within 15 % of the test box at the closest redshift
   6  brightness_pdf      — brightness_temp median and IQR within 20 % of test
@@ -38,17 +39,11 @@ from py21cmfast.io.caching import RunCache
 
 # ── Reference simulation paths ────────────────────────────────────────────────
 
-TEST_CACHE_DIR = Path(
-    "/ocean/projects/phy210034p/breitman/scaling_test/box2_L400_HII240"
-)
-TEST_LC_PATH = TEST_CACHE_DIR / "lc"
+TEST_CACHE_DIR = Path(__file__).resolve().parents[1] / "EOS26_test_HIIDIM200"
 
-# Grid dimensions
-EOS_HII_DIM  = 1200
-TEST_HII_DIM = 240
-
-# Size-scaling exponent: files scale as (N_eos / N_test)^3 for most structs
-EXPECTED_SIZE_RATIO = (EOS_HII_DIM / TEST_HII_DIM) ** 3
+# Each check reads a bounded number of 2-D slabs, never a full 3-D field.
+MAX_SLAB_SAMPLES = 16
+MAX_HIST_SIDE = 200
 
 # Global-mean tolerance: 15 % relative (or absolute fallback for near-zero)
 MEAN_RTOL    = 0.15
@@ -57,6 +52,11 @@ MEAN_ATOL_BT = 5.0   # mK fallback for brightness_temp
 # PDF tolerances
 PDF_MEDIAN_ATOL_BT = 10.0   # mK
 PDF_IQR_RTOL       = 0.25   # 25 %
+
+# Halo mass-function comparison uses logarithmic solar-mass bins and combined
+# Poisson uncertainties, which shrink for bins well populated in both boxes.
+HALO_LOG_MASS_BINS = np.linspace(8.0, 16.0, 33)
+HALO_PDF_SIGMA = 3.0
 
 # Physical sanity ranges
 PHYSICAL_RANGES: dict[str, tuple[float, float]] = {
@@ -101,8 +101,12 @@ def _fail(msg: str) -> None:
 
 # ── Slice-by-slice HDF5 statistics ───────────────────────────────────────────
 
+def _sample_indices(length: int, limit: int = MAX_SLAB_SAMPLES) -> np.ndarray:
+    """Return evenly distributed slab indices, including both endpoints."""
+    return np.unique(np.linspace(0, length - 1, min(length, limit), dtype=int))
+
 def _hdf5_stats(path: Path, struct_name: str, field: str) -> dict:
-    """Return {mean, std, min, max, n_nan, n_inf} without loading full array."""
+    """Return sampled field statistics without loading a full 3-D array."""
     with h5py.File(path, "r") as f:
         ds = f[struct_name]["OutputFields"][field]
         n = 0
@@ -110,7 +114,7 @@ def _hdf5_stats(path: Path, struct_name: str, field: str) -> dict:
         sq    = np.float64(0.0)
         vmin, vmax = np.inf, -np.inf
         n_nan = n_inf = 0
-        for i in range(ds.shape[0]):
+        for i in _sample_indices(ds.shape[0]):
             slab  = ds[i].astype(np.float64)
             n    += slab.size
             total += slab.sum()
@@ -134,9 +138,11 @@ def _hdf5_histogram(
     bins   = np.linspace(vrange[0], vrange[1], n_bins + 1)
     counts = np.zeros(n_bins, dtype=np.float64)
     with h5py.File(path, "r") as f:
-        ds = f[struct_name]["OutputFields"][field][:200,:200,:200]
-        for i in range(ds.shape[0]):
-            slab = ds[i].astype(np.float32).ravel()
+        ds = f[struct_name]["OutputFields"][field]
+        step_y = max(ds.shape[1] // MAX_HIST_SIDE, 1)
+        step_x = max(ds.shape[2] // MAX_HIST_SIDE, 1)
+        for i in _sample_indices(ds.shape[0]):
+            slab = ds[i, ::step_y, ::step_x].astype(np.float32).ravel()
             h, _ = np.histogram(slab, bins=bins)
             counts += h
     return counts, bins
@@ -163,6 +169,65 @@ def _hdf5_first_values(
         ds = f[struct_name]["OutputFields"][field]
         row = ds[0, 0, :n].astype(np.float64)
     return row
+
+
+def _grid_cells(path: Path, struct_name: str) -> int | None:
+    """Return the cell count of the first 3-D output field, if present."""
+    with h5py.File(path, "r") as f:
+        fields = f[struct_name].get("OutputFields")
+        if fields is None:
+            return None
+        for ds in fields.values():
+            if ds.ndim == 3:
+                return int(np.prod(ds.shape))
+    return None
+
+
+def _test_box_len() -> float | None:
+    """Return the reference box length, if the reference cache is available."""
+    rc = _test_runcache()
+    if rc is None:
+        return None
+    return float(rc.inputs.simulation_options.BOX_LEN)
+
+
+def _halo_mass_summary(masses: h5py.Dataset) -> tuple[int, bool, np.ndarray]:
+    """Return populated count, validity, and a chunked log-mass histogram."""
+    n_halos = 0
+    valid = True
+    counts = np.zeros(len(HALO_LOG_MASS_BINS) - 1, dtype=np.int64)
+    for start in range(0, masses.shape[0], 65536):
+        sample = masses[start:start + 65536]
+        valid &= bool(np.isfinite(sample).all() and np.all(sample >= 0))
+        populated = sample[sample > 0]
+        n_halos += populated.size
+        if populated.size:
+            hist, _ = np.histogram(np.log10(populated), bins=HALO_LOG_MASS_BINS)
+            counts += hist
+    valid &= int(counts.sum()) == n_halos
+    return n_halos, valid, counts
+
+
+def _check_halo_mass_pdf(
+    eos_counts: np.ndarray, eos_n: int, test_counts: np.ndarray, test_n: int,
+    label: str,
+) -> None:
+    """Check normalized halo mass functions with combined Poisson errors."""
+    eos_pdf = eos_counts / eos_n
+    test_pdf = test_counts / test_n
+    eos_error = np.sqrt(eos_counts) / eos_n
+    test_error = np.sqrt(test_counts) / test_n
+    tolerance = HALO_PDF_SIGMA * np.hypot(eos_error, test_error)
+    deviation = np.abs(eos_pdf - test_pdf)
+    worst = int(np.argmax(deviation - tolerance))
+    if deviation[worst] > tolerance[worst]:
+        lo, hi = HALO_LOG_MASS_BINS[worst:worst + 2]
+        _fail(
+            f"Check 4 [{label}]: halo mass PDF differs in log10(M/M_sun) "
+            f"[{lo:.2f}, {hi:.2f}): diff={deviation[worst]:.1%} "
+            f"> errorbar={tolerance[worst]:.1%}"
+        )
+    _pline("PASS", f"Check 4 [{label}]: halo mass PDF within Poisson error bars")
 
 
 # ── Test-cache lookup via RunCache ───────────────────────────────────────────
@@ -232,12 +297,15 @@ def _check_file_presence_size(
     if test_path is not None and test_path.exists():
         test_size = test_path.stat().st_size
         ratio = eos_size / test_size if test_size else None
-        if ratio is not None:
-            ok = abs(ratio / EXPECTED_SIZE_RATIO - 1) < 0.35
+        eos_cells = _grid_cells(eos_path, struct_name)
+        test_cells = _grid_cells(test_path, struct_name)
+        if ratio is not None and eos_cells and test_cells:
+            expected_ratio = eos_cells / test_cells
+            ok = abs(ratio / expected_ratio - 1) < 0.35
             status = "PASS" if ok else "WARN"
             _pline(status,
                    f"Check 1 [{label}]: size ratio={ratio:.0f} "
-                   f"(expected≈{EXPECTED_SIZE_RATIO:.0f}) {'OK' if ok else 'OFF by >35%'}")
+                   f"(expected≈{expected_ratio:.0f}) {'OK' if ok else 'OFF by >35%'}")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -247,17 +315,16 @@ def _check_file_presence_size(
 def _check_array_shape(
     eos_path: Path, struct_name: str, field: str, label: str
 ) -> None:
-    """Check 2: shape is (EOS_HII_DIM,)^3; sample every 50th slab for NaN/Inf."""
+    """Check 2: shape is a non-empty cube; sampled slabs contain finite values."""
     shape = _hdf5_shape(eos_path, struct_name, field)
-    expected = (EOS_HII_DIM,) * 3
-    if shape != expected:
-        _fail(f"Check 2 [{label}]: shape {shape} != expected {expected}")
-    _pline("PASS", f"Check 2 [{label}]: shape {shape} OK")
+    if len(shape) != 3 or len(set(shape)) != 1 or shape[0] == 0:
+        _fail(f"Check 2 [{label}]: expected non-empty cubic 3-D shape, got {shape}")
+    _pline("PASS", f"Check 2 [{label}]: cubic shape {shape} OK")
 
     n_nan = n_inf = 0
     with h5py.File(eos_path, "r") as f:
         ds = f[struct_name]["OutputFields"][field]
-        for i in range(0, ds.shape[0], 50):
+        for i in _sample_indices(ds.shape[0]):
             slab  = ds[i].astype(np.float32)
             n_nan += int(np.isnan(slab).sum())
             n_inf += int(np.isinf(slab).sum())
@@ -299,30 +366,30 @@ def _check_halo_counts(
     eos_path: Path, eos_box_len: float, label: str,
     test_path: Path | None,
 ) -> None:
-    """Check 4: HaloCatalog non-empty; number density within 3× of test."""
+    """Check 4: catalog integrity, density, and mass PDF against the test."""
     with h5py.File(eos_path, "r") as f:
-        n_halos = int(f["HaloCatalog"].attrs.get("n_halos", 0))
+        group = f["HaloCatalog"]
+        fields = group["OutputFields"]
+        masses = fields["halo_masses"]
+        n_halos, masses_valid, eos_mass_counts = _halo_mass_summary(masses)
+        catalog_length = masses.shape[0]
 
     eos_vol   = eos_box_len ** 3
     eos_nd    = n_halos / eos_vol
     _pline("INFO", f"Check 4 [{label}]: n_halos={n_halos:,d}  "
                    f"n_density={eos_nd:.4e} Mpc⁻³")
 
-    if n_halos == 0:
-        _fail(f"Check 4 [{label}]: HaloCatalog is empty")
-
     if test_path is not None and test_path.exists():
         with h5py.File(test_path, "r") as f:
-            n_test = int(f["HaloCatalog"].attrs.get("n_halos", 0))
-        test_vol = None
-        try:
-            with h5py.File(test_path, "r") as f:
-                test_box_len = float(f["HaloCatalog"].attrs.get("box_len", 0.0))
-            if test_box_len > 0:
-                test_vol = test_box_len ** 3
-        except Exception:
-            pass
-        if test_vol and n_test:
+            test_masses = f["HaloCatalog"]["OutputFields"]["halo_masses"]
+            n_test, test_masses_valid, test_mass_counts = _halo_mass_summary(test_masses)
+        if not test_masses_valid:
+            _fail(f"Check 4 [{label}]: reference halo masses are invalid")
+        test_box_len = _test_box_len()
+        if n_test and not n_halos:
+            _fail(f"Check 4 [{label}]: candidate has no halos but reference has {n_test:,d}")
+        if test_box_len and n_test and n_halos:
+            test_vol = test_box_len ** 3
             test_nd  = n_test / test_vol
             ratio    = eos_nd / test_nd
             ok = 0.1 < ratio < 10.0
@@ -330,8 +397,22 @@ def _check_halo_counts(
             _pline(status,
                    f"Check 4 [{label}]: n_density ratio EOS/test={ratio:.2f} "
                    f"({'OK' if ok else 'outside 0.1–10×'})")
+            _check_halo_mass_pdf(eos_mass_counts, n_halos, test_mass_counts, n_test, label)
+        elif not n_test:
+            _pline("INFO", f"Check 4 [{label}]: reference catalog has no populated halos; mass PDF skipped")
 
-    _pline("PASS", f"Check 4 [{label}]: halo catalog non-empty")
+    with h5py.File(eos_path, "r") as f:
+        fields = f["HaloCatalog"]["OutputFields"]
+        coords = fields["halo_coords"]
+        if coords.shape != (catalog_length, 3):
+            _fail(f"Check 4 [{label}]: halo_coords shape {coords.shape} != ({catalog_length}, 3)")
+        inconsistent = [name for name, ds in fields.items() if ds.shape[0] != catalog_length]
+        if inconsistent:
+            _fail(f"Check 4 [{label}]: inconsistent catalog lengths: {inconsistent}")
+        if not masses_valid:
+            _fail(f"Check 4 [{label}]: halo masses are negative, non-finite, or outside PDF bins")
+
+    _pline("PASS", f"Check 4 [{label}]: halo catalog counts and fields OK")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -356,8 +437,8 @@ def _check_global_means(
     prange = PHYSICAL_RANGES.get(field)
     if prange:
         lo, hi = prange
-        if eos_mean < lo or eos_mean > hi:
-            _fail(f"Check 5 [{label}] {field}: mean={eos_mean:.4f} outside [{lo}, {hi}]")
+        if eos_mean < lo or eos_mean > hi or st["min"] < lo or st["max"] > hi:
+            _fail(f"Check 5 [{label}] {field}: sampled values outside [{lo}, {hi}]")
 
     # Compare to test box at closest redshift
     test_path, test_z = _test_path_closest_z(struct_name, target_z)
@@ -418,6 +499,10 @@ def _check_brightness_pdf(
     common   = (min(vrange[0], tv[0]), max(vrange[1], tv[1]))
     tc, tb   = _hdf5_histogram(test_path, "BrightnessTemp", "brightness_temp", common)
     ec, eb   = _hdf5_histogram(eos_path,  "BrightnessTemp", "brightness_temp", common)
+    eos_p50 = _percentile_from_hist(ec, eb, 50.0)
+    eos_p25 = _percentile_from_hist(ec, eb, 25.0)
+    eos_p75 = _percentile_from_hist(ec, eb, 75.0)
+    eos_iqr = eos_p75 - eos_p25
     test_p50 = _percentile_from_hist(tc, tb, 50.0)
     test_p25 = _percentile_from_hist(tc, tb, 25.0)
     test_p75 = _percentile_from_hist(tc, tb, 75.0)
@@ -469,20 +554,20 @@ def compare_ICs(initial_conditions) -> None:
     test_path = _test_path_ics()
 
     _check_file_presence_size(eos_path, "InitialConditions", test_path, "ICs")
-    _check_array_shape(eos_path, "InitialConditions", "density", "ICs")
+    _check_array_shape(eos_path, "InitialConditions", "lowres_density", "ICs")
     _check_density_stats_ics(eos_path)
 
     _pline("PASS", "compare_ICs: all checks passed ✓")
 
 
 def _check_density_stats_ics(eos_path: Path) -> None:
-    """Check 3 variant for InitialConditions/density."""
-    st = _hdf5_stats(eos_path, "InitialConditions", "density")
+    """Check 3 variant for InitialConditions/lowres_density."""
+    st = _hdf5_stats(eos_path, "InitialConditions", "lowres_density")
     _pline("INFO",
            f"Check 3 [ICs]: density mean={st['mean']:+.5f}  "
            f"std={st['std']:.5f}  min={st['min']:.5f}  max={st['max']:.5f}  "
            f"NaN={st['n_nan']}  Inf={st['n_inf']}")
-    vals = _hdf5_first_values(eos_path, "InitialConditions", "density")
+    vals = _hdf5_first_values(eos_path, "InitialConditions", "lowres_density")
     _pline("INFO", f"Check 3 [ICs]: density[0,0,:6] = {vals}")
     if st["n_nan"] or st["n_inf"]:
         _fail("Check 3 [ICs]: NaN/Inf in IC density field")
@@ -529,9 +614,9 @@ def compare_PHFs(cache, inputs) -> None:
     """
     Checks 1 and 4 for the full set of HaloCatalog files just written.
 
-    For each node redshift: file presence/size (check 1) and halo counts
-    (check 4).  Structural checks (shape/NaN) are skipped because HaloCatalog
-    is a variable-length 1-D array, not a 3-D grid.
+    For each node redshift: file presence/size (check 1), catalog integrity,
+    populated number density, and a mass-PDF comparison (check 4). Empty
+    reference catalogs are valid at early times and skip the PDF comparison.
     """
     _section("compare_PHFs: checks 1 and 4 on all HaloCatalog files")
     rc = RunCache.from_inputs(inputs, cache=cache)
@@ -585,7 +670,7 @@ def compare_coeval(coeval, cache, inputs) -> None:
             _pline("WARN", f"compare_coeval: {struct_attr} z={z:.4f} not on disk — skipping")
             continue
 
-        test_path, _ = _find_test_file_closest_z(struct_attr, z)
+        test_path, _ = _test_path_closest_z(struct_attr, z)
         field_label  = f"{label} / {field}"
 
         _check_file_presence_size(eos_path, struct_attr, test_path, field_label)
