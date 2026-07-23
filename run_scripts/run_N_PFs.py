@@ -18,6 +18,7 @@ logger = settings.setup_logging(args.log_file)
 
 import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
+import sim_steps
 from compare_EOS import compare_PF
 
 job_start = time.perf_counter()
@@ -41,14 +42,7 @@ for i in range(N):
     z = inputs.node_redshifts[z_idx]
     logger.info(f"PF {i + 1}/{N}: z_idx={z_idx}, z={z:.6f}")
 
-    pf = p21c.perturb_field(
-        redshift=z,
-        write=True,
-        cache=cache,
-        regenerate=False,
-        inputs=inputs,
-        initial_conditions=runcache.get_ics(),
-    )
+    pf = sim_steps.compute_perturbed_field(z, inputs, cache, runcache.get_ics())
 
     loop_dt = time.perf_counter() - loop_start
     logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s")

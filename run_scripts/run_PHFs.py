@@ -13,14 +13,13 @@ args = parser.parse_args()
 logger = settings.setup_logging(args.log_file)
 
 import py21cmfast as p21c
-from py21cmfast.io.caching import RunCache, CacheConfig
+from py21cmfast.io.caching import RunCache
+import sim_steps
 from compare_EOS import compare_PHFs
 
 job_start = time.perf_counter()
 logger.info(f"Starting PHFs run")
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
-
-#p21c.config['HALO_CATALOG_MEM_FACTOR'] = 1.6
 
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
@@ -32,14 +31,12 @@ inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
     **_input_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
 halo_start = time.perf_counter()
-p21c.drivers.coeval.evolve_halos(inputs=inputs,
-                    regenerate=False,
-                    all_redshifts=inputs.node_redshifts,
-                    write=CacheConfig(),
-                    cache=cache,
-                    progressbar=True,
-                    free_cosmo_tables=False,
-                    initial_conditions=runcache.get_ics()
+sim_steps.evolve_halos(
+    inputs=inputs,
+    all_redshifts=inputs.node_redshifts,
+    cache=cache,
+    initial_conditions=runcache.get_ics(),
+    progressbar=True,
 )
 halo_dt = time.perf_counter() - halo_start
 job_dt = time.perf_counter() - job_start

@@ -11,6 +11,7 @@ import argparse
 import gc
 import json
 import os
+import subprocess
 import sys
 import threading
 import time
@@ -24,11 +25,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "run_scripts"))
 
 import py21cmfast as p21c
-from py21cmfast.io.caching import CacheConfig, RunCache
+from py21cmfast.io.caching import RunCache
+import sim_steps
 
 
 PHASES = ("ics", "pf", "phf", "coeval")
-COEVAL_STRUCTS = ("BrightnessTemp", "IonizedBox", "TsBox", "XraySourceBox", "HaloBox")
+SCRIPT_PATH = Path(__file__).resolve()
+COEVAL_STRUCTS = ("BrightnessTemp", "IonizedBox", "TsBox", "HaloBox")
 
 
 @dataclass
@@ -102,7 +105,7 @@ def parse_args() -> argparse.Namespace:
         "--coeval-redshift",
         type=float,
         default=None,
-        help="Node redshift for the single coeval measurement (default: lowest z)",
+        help="Final redshift of the amortized coeval-history measurement (default: lowest z)",
     )
     parser.add_argument(
         "--reuse-cache",
@@ -168,8 +171,47 @@ def measure_phase(
     }
 
 
+def run_phases_isolated(args: argparse.Namespace) -> None:
+    """Run each requested phase in its own subprocess.
+
+    Production runs each phase (ICs, PFs, PHFs, coevals) as a fully separate
+    process (see sbatch_scripts/*_job.sh), each starting with a fresh,
+    near-empty baseline RSS. Measuring multiple phases back-to-back in one
+    process (the previous behaviour here) leaves earlier phases' allocations
+    resident -- CPython's allocator does not reliably return freed arena
+    memory to the OS, especially for large numpy arrays -- so a later
+    phase's "peak_rss_bytes" ends up dominated by carryover from whichever
+    phases ran before it in the same process, rather than that phase's own
+    memory need. This carryover was also confirmed to vary sharply with
+    HII_DIM (much more of it is retained at large HII_DIM than small), which
+    is what made the fitted memory curves visibly worse than the time/
+    storage curves: those two metrics are computed per-phase regardless of
+    ambient RSS and are unaffected by this issue. Running one phase per
+    subprocess makes every measurement match production's isolation exactly.
+    """
+    common = [
+        sys.executable,
+        str(SCRIPT_PATH),
+        "--hii-dim", str(args.hii_dim),
+        "--template", str(args.template),
+        "--seed", str(args.seed),
+        "--cache-root", str(args.cache_root),
+        "--results-dir", str(args.results_dir),
+        "--rss-interval", str(args.rss_interval),
+    ]
+    if args.coeval_redshift is not None:
+        common += ["--coeval-redshift", str(args.coeval_redshift)]
+    if args.reuse_cache:
+        common.append("--reuse-cache")
+    for phase in args.phases:
+        subprocess.run(common + ["--phases", phase], check=True)
+
+
 def main() -> None:
     args = parse_args()
+    if len(args.phases) > 1:
+        run_phases_isolated(args)
+        return
     gc.collect()
     gc.disable()
     if gc.isenabled():
@@ -190,24 +232,18 @@ def main() -> None:
     results: dict[str, dict[str, object]] = {}
 
     def initial_conditions() -> None:
-        p21c.compute_initial_conditions(
-            inputs=inputs,
-            cache=cache,
-            write=True,
-            regenerate=regenerate,
-        )
+        sim_steps.compute_initial_conditions(inputs, cache, regenerate=regenerate)
 
     if "ics" in args.phases:
         results["ics"] = measure_phase("ics", initial_conditions, runcache, redshift, args.rss_interval)
 
     if "pf" in args.phases:
         def perturb_field() -> None:
-            p21c.perturb_field(
-                redshift=redshift,
-                inputs=inputs,
-                cache=cache,
-                initial_conditions=runcache.get_ics(),
-                write=True,
+            sim_steps.compute_perturbed_field(
+                redshift,
+                inputs,
+                cache,
+                runcache.get_ics(),
                 regenerate=regenerate,
             )
 
@@ -215,32 +251,38 @@ def main() -> None:
 
     if "phf" in args.phases:
         def evolve_halos() -> None:
-            p21c.drivers.coeval.evolve_halos(
+            sim_steps.evolve_halos(
                 inputs=inputs,
                 all_redshifts=inputs.node_redshifts,
                 cache=cache,
                 initial_conditions=runcache.get_ics(),
-                write=CacheConfig(),
                 regenerate=regenerate,
                 progressbar=True,
-                free_cosmo_tables=False,
             )
 
         results["phf"] = measure_phase("phf", evolve_halos, runcache, redshift, args.rss_interval)
 
     if "coeval" in args.phases:
         def coeval() -> None:
-            for _, _ in p21c.generate_coeval(
-                out_redshifts=[redshift],
-                inputs=inputs,
-                cache=cache,
-                write=True,
-                regenerate=regenerate,
+            for _, _ in sim_steps.generate_coevals(
+                [redshift],
+                inputs,
+                cache,
+                # Reuse the IC, PF, and PHF products measured in earlier phases.
+                regenerate=False,
                 progressbar=True,
             ):
                 pass
 
         results["coeval"] = measure_phase("coeval", coeval, runcache, redshift, args.rss_interval)
+        results["coeval"]["elapsed_seconds"] /= len(inputs.node_redshifts)
+
+    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}.json"
+    existing_phases: dict[str, dict[str, object]] = {}
+    if output.exists():
+        with output.open() as handle:
+            existing_phases = json.load(handle).get("phases", {})
+    existing_phases.update(results)
 
     payload = {
         "hii_dim": args.hii_dim,
@@ -248,19 +290,19 @@ def main() -> None:
         "lowres_cell_size_mpc": float(inputs.simulation_options._LOWRES_CELL_SIZE_MPC),
         "random_seed": args.seed,
         "coeval_redshift": float(redshift),
+        "coevals_averaged": len(inputs.node_redshifts),
         "gc_enabled": gc.isenabled(),
         "pid": os.getpid(),
-        "phases": results,
+        "phases": existing_phases,
         "max_peak_rss_bytes": max(
-            (phase["peak_rss_bytes"] for phase in results.values()),
+            (phase["peak_rss_bytes"] for phase in existing_phases.values()),
             default=0,
         ),
         "max_rss_above_baseline_bytes": max(
-            (phase["rss_above_baseline_bytes"] for phase in results.values()),
+            (phase["rss_above_baseline_bytes"] for phase in existing_phases.values()),
             default=0,
         ),
     }
-    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}.json"
     output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     print(f"Wrote {output}")
 

@@ -5,6 +5,7 @@ gc.disable()
 import time
 import argparse
 from glob import glob
+from pathlib import Path
 import numpy as np
 import settings
 
@@ -17,14 +18,12 @@ logger = settings.setup_logging(args.log_file)
 
 import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
-from py21cmfast import generate_coeval
+import sim_steps
 from compare_EOS import compare_coeval
 
 job_start = time.perf_counter()
 logger.info(f"Starting N coeval run: N={N}")
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
-
-#p21c.config['HALO_CATALOG_MEM_FACTOR'] = 2.
 
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
@@ -44,13 +43,11 @@ this_batch_redshifts = sorted(np.array(inputs.node_redshifts)[not_done][:N])[::-
 logger.info(f"Redshifts for this batch: {this_batch_redshifts[0]:.2f} to {this_batch_redshifts[-1]:.2f}")
 count = 0
 prev_tick = time.perf_counter()
-for coeval, _ in p21c.generate_coeval(
-    out_redshifts = this_batch_redshifts,
-    inputs = inputs,
-    regenerate = False,
-    write = True,
-    cache = cache,
-    progressbar = True,
+for coeval, _ in sim_steps.generate_coevals(
+    this_batch_redshifts,
+    inputs,
+    cache,
+    progressbar=True,
 ):
     now_tick = time.perf_counter()
     loop_dt = now_tick - prev_tick
@@ -64,6 +61,11 @@ for coeval, _ in p21c.generate_coeval(
     logger.info(f"coeval {count}/{N} done in {loop_dt:.2f}s")
     if args.compare:
         compare_coeval(coeval, cache, inputs)
+        xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
+        for xray_path in xray_paths:
+            xray_path.unlink()
+        if xray_paths:
+            logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
     prev_tick = now_tick
     if count >= N:
         break

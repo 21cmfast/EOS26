@@ -13,6 +13,7 @@ args = parser.parse_args()
 logger = settings.setup_logging(args.log_file)
 
 import py21cmfast as p21c
+import sim_steps
 from compare_EOS import compare_ICs
 
 job_start = time.perf_counter()
@@ -31,9 +32,7 @@ inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
 logger.info(f"Inputs prepared with {len(inputs.node_redshifts)} redshifts")
 
 ics_start = time.perf_counter()
-initial_conditions = p21c.compute_initial_conditions(
-    inputs=inputs, cache=cache, write=True, regenerate=False,
-)
+initial_conditions = sim_steps.compute_initial_conditions(inputs, cache)
 ics_dt = time.perf_counter() - ics_start
 logger.info(f"Initial conditions done in {ics_dt:.2f}s")
 if args.compare:

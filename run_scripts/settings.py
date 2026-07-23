@@ -3,7 +3,6 @@
 from __future__ import annotations
 import os
 import argparse
-import psutil
 
 # ── template ───────────────────────────────────────────────────────────────
 
@@ -30,11 +29,6 @@ def inputs_for_run(test: bool, compare: bool) -> tuple[str, dict[str, int]]:
         cache_dir = CACHE_TEST_COMPARE if compare else CACHE_TEST_REFERENCE
         return cache_dir, {"HII_DIM": TEST_HII_DIM, "random_seed": TEST_RANDOM_SEED}
     return CACHE_FULL, {}
-
-# ── memory tracking ────────────────────────────────────────────────────────
-
-PROCESS = psutil.Process(os.getpid())
-_PEAK_RSS_BYTES: int = PROCESS.memory_info().rss
 
 """Module for adding a nicer logger and ability to turn it on in a CLI."""
 
@@ -163,6 +157,7 @@ class LogRender:
             import psutil
 
             self._pr = psutil.Process
+            self._psutil_peak_bytes = 0
         else:
             raise ValueError(f"Invalid memory backend: {mem_backend}")
 
@@ -286,11 +281,17 @@ class LogRender:
         return log_time_display
 
     def render_mem_usage(self) -> str:
-        """Render the current memory usage."""
+        """Render the current memory usage and the peak seen so far (current | peak)."""
         if self.mem_backend == "psutil":
+            # RSS as reported by the OS: unlike tracemalloc, this also captures
+            # memory allocated by C extensions (e.g. 21cmFAST's FFT/grid buffers),
+            # which is most of what these scripts actually use.
             m = self._pr().memory_info().rss
-            return fmt_bytes(m)
+            self._psutil_peak_bytes = max(self._psutil_peak_bytes, m)
+            return f"{fmt_bytes(m)} | {fmt_bytes(self._psutil_peak_bytes)}"
         elif self.mem_backend == "tracemalloc":
+            # tracemalloc only tracks Python-level allocations, not native/C
+            # buffers, so it substantially undercounts RSS for this workload.
             m, p = tr.get_traced_memory()
             return f"{fmt_bytes(m)} | {fmt_bytes(p)}"
 

@@ -8,7 +8,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 if [[ $# -eq 0 ]]; then
-    dimensions=(200 300)
+    dimensions=(100 200)
 else
     dimensions=("$@")
 fi
