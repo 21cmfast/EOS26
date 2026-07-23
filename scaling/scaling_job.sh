@@ -33,7 +33,7 @@ cd "$PBS_JOBFS"
 pwd
 ls
 if [[ $# -eq 0 ]]; then
-    dimensions=(200)
+    dimensions=(100 200 300)
 else
     dimensions=("$@")
 fi

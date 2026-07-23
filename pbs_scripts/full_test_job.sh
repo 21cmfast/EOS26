@@ -1,7 +1,7 @@
 #!/bin/bash
 #PBS -N EOS26_full_test
-#PBS -q RM-shared
-#PBS -l select=1:ncpus=24:mpiprocs=24
+#PBS -q normal
+#PBS -l select=1:ncpus=1:mem=20gb
 #PBS -l walltime=2:00:00
 #PBS -o logs/full_test.bootstrap.out
 #PBS -e logs/full_test.bootstrap.err
