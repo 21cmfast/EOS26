@@ -64,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target-dims",
-        default="120,240,1200,1400",
+        default="1200,1400",
         help="Comma-separated HII_DIM values to include in extrapolated tables",
     )
     parser.add_argument(

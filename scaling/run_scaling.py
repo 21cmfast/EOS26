@@ -85,6 +85,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--template", type=Path, default=ROOT / "EOS26.toml")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
+        "--n-threads",
+        type=int,
+        default=None,
+        help="Override N_THREADS from the parameter template (default: template value)",
+    )
+    parser.add_argument(
         "--cache-root",
         type=Path,
         default=ROOT / "scaling" / "cache",
@@ -117,8 +123,8 @@ def parse_args() -> argparse.Namespace:
     invalid = set(args.phases) - set(PHASES)
     if invalid:
         parser.error(f"Unknown phases: {', '.join(sorted(invalid))}")
-    if args.hii_dim <= 0 or args.rss_interval <= 0:
-        parser.error("--hii-dim and --rss-interval must be positive")
+    if args.hii_dim <= 0 or args.rss_interval <= 0 or (args.n_threads is not None and args.n_threads <= 0):
+        parser.error("--hii-dim, --rss-interval, and --n-threads must be positive")
     return args
 
 
@@ -156,14 +162,32 @@ def measure_phase(
     redshift: float,
     interval_seconds: float,
 ) -> dict[str, object]:
-    started = time.perf_counter()
+    wall_started = time.perf_counter()
+    cpu_started = time.process_time()
+
     with RssSampler(interval_seconds) as sampler:
         action()
-    elapsed = time.perf_counter() - started
+
+    elapsed = time.perf_counter() - wall_started
+    cpu_seconds = time.process_time() - cpu_started
+
     memory = sampler.measurement()
     files = phase_files(runcache, name, redshift)
+
+    average_cores = cpu_seconds / elapsed if elapsed else 0.0
+
+    print(
+        f"[{name}] "
+        f"wall={elapsed:.2f}s "
+        f"cpu={cpu_seconds:.2f}s "
+        f"average_cores={average_cores:.2f}",
+        flush=True,
+    )
+
     return {
         "elapsed_seconds": elapsed,
+        "cpu_seconds": cpu_seconds,
+        "average_cpu_cores": average_cores,
         "peak_rss_bytes": memory.peak_rss_bytes,
         "rss_above_baseline_bytes": memory.added_rss_bytes,
         "files": files,
@@ -199,6 +223,8 @@ def run_phases_isolated(args: argparse.Namespace) -> None:
         "--results-dir", str(args.results_dir),
         "--rss-interval", str(args.rss_interval),
     ]
+    if args.n_threads is not None:
+        common += ["--n-threads", str(args.n_threads)]
     if args.coeval_redshift is not None:
         common += ["--coeval-redshift", str(args.coeval_redshift)]
     if args.reuse_cache:
@@ -220,11 +246,13 @@ def main() -> None:
     cache_dir = args.cache_root / f"HII_DIM_{args.hii_dim}"
     cache_dir.mkdir(parents=True, exist_ok=True)
     args.results_dir.mkdir(parents=True, exist_ok=True)
-    inputs = p21c.InputParameters.from_template(
-        args.template,
-        HII_DIM=args.hii_dim,
-        random_seed=args.seed,
-    )
+    input_overrides = {
+        "HII_DIM": args.hii_dim,
+        "random_seed": args.seed,
+    }
+    if args.n_threads is not None:
+        input_overrides["N_THREADS"] = args.n_threads
+    inputs = p21c.InputParameters.from_template(args.template, **input_overrides)
     cache = p21c.OutputCache(cache_dir)
     runcache = RunCache.from_inputs(inputs, cache=cache)
     redshift = args.coeval_redshift if args.coeval_redshift is not None else min(inputs.node_redshifts)
@@ -288,6 +316,7 @@ def main() -> None:
         "hii_dim": args.hii_dim,
         "box_len_mpc": float(inputs.simulation_options.BOX_LEN),
         "lowres_cell_size_mpc": float(inputs.simulation_options._LOWRES_CELL_SIZE_MPC),
+        "n_threads": int(inputs.simulation_options.N_THREADS),
         "random_seed": args.seed,
         "coeval_redshift": float(redshift),
         "coevals_averaged": len(inputs.node_redshifts),

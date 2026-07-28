@@ -9,3 +9,8 @@ dependencies = [
 	"matplotlib",
 	"21cmfast==4.2",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
