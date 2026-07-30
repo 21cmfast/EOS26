@@ -243,7 +243,7 @@ def main() -> None:
     if gc.isenabled():
         raise RuntimeError("Garbage collection must be disabled during scaling measurements")
 
-    cache_dir = args.cache_root / f"HII_DIM_{args.hii_dim}"
+    cache_dir = args.cache_root / f"HII_DIM_{args.hii_dim}" 
     cache_dir.mkdir(parents=True, exist_ok=True)
     args.results_dir.mkdir(parents=True, exist_ok=True)
     input_overrides = {
@@ -305,7 +305,7 @@ def main() -> None:
         results["coeval"] = measure_phase("coeval", coeval, runcache, redshift, args.rss_interval)
         results["coeval"]["elapsed_seconds"] /= len(inputs.node_redshifts)
 
-    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}.json"
+    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}_N_THREADS_{args.n_threads}.json"
     existing_phases: dict[str, dict[str, object]] = {}
     if output.exists():
         with output.open() as handle:

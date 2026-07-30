@@ -148,88 +148,88 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
   <tr><td colspan="7"><em>Scaling tests (measured)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
-    <td>0.00349</td>
-    <td>0.045</td>
-    <td>1.58 GB</td>
-    <td>12.3 GB</td>
+    <td>0.0374</td>
+    <td>0.134</td>
+    <td>0.939 GB</td>
+    <td>21.1 GB</td>
     <td>0.464 GB</td>
     <td>12.5 GB</td>
   </tr>
   <tr>
     <td>One perturbed field</td>
-    <td>0.00252</td>
-    <td>0.00311</td>
-    <td>0.425 GB</td>
-    <td>4.91 GB</td>
+    <td>0.0345</td>
+    <td>0.037</td>
+    <td>0.334 GB</td>
+    <td>4.49 GB</td>
     <td>0.016 GB</td>
     <td>0.432 GB</td>
   </tr>
   <tr>
     <td>Perturbed halo fields</td>
-    <td>0.00693</td>
-    <td>0.0437</td>
-    <td>0.786 GB</td>
-    <td>13.6 GB</td>
+    <td>0.0498</td>
+    <td>0.17</td>
+    <td>0.564 GB</td>
+    <td>11 GB</td>
     <td>0.207 GB</td>
     <td>5.49 GB</td>
   </tr>
   <tr>
     <td>Evolving astrophysics for one coeval</td>
-    <td>0.000529</td>
-    <td>0.0214</td>
-    <td>1.4 GB</td>
-    <td>16.5 GB</td>
+    <td>0.00199</td>
+    <td>0.038</td>
+    <td>1.16 GB</td>
+    <td>25 GB</td>
     <td>0.0441 GB x 92 = 4.06 GB</td>
     <td>1.19 GB x 92 = 109 GB</td>
   </tr>
   <tr><td colspan="7"><em>Extrapolated to EOS-1 (HII_DIM = 1400, 1.5 cMpc/cell, 2100 Mpc)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
-    <td colspan="2">1.24 ± 1.28</td>
-    <td colspan="2">1.06 ± 0.317 TB</td>
+    <td colspan="2">0.701 ± 0.307</td>
+    <td colspan="2">2.13 ± 0.213 TB</td>
     <td colspan="2">1.27 ± 0.122 TB</td>
   </tr>
   <tr>
     <td>One perturbed field</td>
-    <td colspan="2">0.00409 ± 0.000474</td>
-    <td colspan="2">0.473 ± 0.0473 TB</td>
+    <td colspan="2">0.0402 ± 0.00434</td>
+    <td colspan="2">0.439 ± 0.0439 TB</td>
     <td colspan="2">0.0438 ± 0.00418 TB</td>
   </tr>
   <tr>
     <td>Perturbed halo fields</td>
-    <td colspan="2">0.467 ± 0.356</td>
-    <td colspan="2">1.34 ± 0.142 TB</td>
-    <td colspan="2">0.542 ± 0.0522 TB</td>
+    <td colspan="2">0.753 ± 0.644</td>
+    <td colspan="2">1.1 ± 0.11 TB</td>
+    <td colspan="2">0.542 ± 0.0523 TB</td>
   </tr>
   <tr>
     <td>Evolving astrophysics for one coeval</td>
-    <td colspan="2">3.18 ± 2.15</td>
-    <td colspan="2">1.49 ± 0.427 TB</td>
+    <td colspan="2">2.43 ± 0.295</td>
+    <td colspan="2">2.51 ± 0.251 TB</td>
     <td colspan="2">0.12 ± 0.0115 TB x 92 = 11.1 ± 1.06 TB</td>
   </tr>
   <tr><td colspan="7"><em>Extrapolated to EOS-2 (HII_DIM = 1200, 1.667 cMpc/cell, 2000 Mpc)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
-    <td colspan="2">0.875 ± 0.824</td>
-    <td colspan="2">0.668 ± 0.199 TB</td>
+    <td colspan="2">0.589 ± 0.24</td>
+    <td colspan="2">1.34 ± 0.134 TB</td>
     <td colspan="2">0.802 ± 0.0765 TB</td>
   </tr>
   <tr>
     <td>One perturbed field</td>
-    <td colspan="2">0.00398 ± 0.00045</td>
-    <td colspan="2">0.298 ± 0.0298 TB</td>
+    <td colspan="2">0.0398 ± 0.00423</td>
+    <td colspan="2">0.277 ± 0.0277 TB</td>
     <td colspan="2">0.0276 ± 0.00263 TB</td>
   </tr>
   <tr>
     <td>Perturbed halo fields</td>
-    <td colspan="2">0.363 ± 0.255</td>
-    <td colspan="2">0.846 ± 0.0894 TB</td>
-    <td colspan="2">0.342 ± 0.0329 TB</td>
+    <td colspan="2">0.639 ± 0.501</td>
+    <td colspan="2">0.695 ± 0.0696 TB</td>
+    <td colspan="2">0.342 ± 0.033 TB</td>
   </tr>
   <tr>
     <td>Evolving astrophysics for one coeval</td>
-    <td colspan="2">1.91 ± 1.19</td>
-    <td colspan="2">0.941 ± 0.268 TB</td>
+    <td colspan="2">1.61 ± 0.19</td>
+    <td colspan="2">1.58 ± 0.158 TB</td>
     <td colspan="2">0.0758 ± 0.00724 TB x 92 = 6.97 ± 0.666 TB</td>
   </tr>
 </tbody></table>
@@ -249,15 +249,15 @@ Evolving astrophysics for one coeval is the most memory-intensive phase at every
 <tbody>
   <tr>
     <td>3.0 TB</td>
-    <td>1624</td>
-    <td>2436</td>
-    <td>2.33 ± 0.668 TB</td>
+    <td>1439</td>
+    <td>2158</td>
+    <td>2.72 ± 0.273 TB</td>
   </tr>
   <tr>
     <td>2.7 TB (90% safety margin)</td>
-    <td>1568</td>
-    <td>2352</td>
-    <td>2.1 ± 0.601 TB</td>
+    <td>1390</td>
+    <td>2085</td>
+    <td>2.45 ± 0.246 TB</td>
   </tr>
 </tbody></table>
 
@@ -267,8 +267,8 @@ Predicted coeval peak RSS at the current EOS target sizes (affine `overhead + co
   <tr><th>EOS target</th><th>HII_DIM</th><th>Predicted peak RSS (coeval)</th></tr>
 </thead>
 <tbody>
-  <tr><td>EOS-1</td><td>1400</td><td>1.49 ± 0.427 TB</td></tr>
-  <tr><td>EOS-2</td><td>1200</td><td>0.941 ± 0.268 TB</td></tr>
+  <tr><td>EOS-1</td><td>1400</td><td>2.51 ± 0.251 TB</td></tr>
+  <tr><td>EOS-2</td><td>1200</td><td>1.58 ± 0.158 TB</td></tr>
 </tbody></table>
 
 With only 3 measured points, the affine fit above is pulled noticeably off the data by whichever point dominates the linear-space sum of squares. A free-exponent power-law fit (the same form used for time and storage; see `fit_power_law`) tracks the coeval measurements markedly better, so it is shown here for comparison -- the affine model above remains the one used for the Max HII_DIM budget table:
@@ -277,8 +277,8 @@ With only 3 measured points, the affine fit above is pulled noticeably off the d
   <tr><th>EOS target</th><th>HII_DIM</th><th>Predicted peak RSS, affine</th><th>Predicted peak RSS, power law</th></tr>
 </thead>
 <tbody>
-  <tr><td>EOS-1</td><td>1400</td><td>1.49 ± 0.427 TB</td><td>0.64 ± 0.453 TB</td></tr>
-  <tr><td>EOS-2</td><td>1200</td><td>0.941 ± 0.268 TB</td><td>0.45 ± 0.293 TB</td></tr>
+  <tr><td>EOS-1</td><td>1400</td><td>2.51 ± 0.251 TB</td><td>1.8 ± 0.225 TB</td></tr>
+  <tr><td>EOS-2</td><td>1200</td><td>1.58 ± 0.158 TB</td><td>1.17 ± 0.142 TB</td></tr>
 </tbody></table>
 
 **Caveats:** this projection extrapolates well beyond the largest measured `HII_DIM` (300) to production scale, so treat it as an order-of-magnitude estimate rather than a precise bound. Run an additional scaling point at `HII_DIM = 400` (or larger) on the cluster and check whether the residuals from the affine fit stay small -- growing residuals at larger `HII_DIM` would mean memory grows faster than the assumed overhead-plus-cubic form and this projection is optimistic. Consider also profiling one run with `memray` to see the full memory-vs-redshift curve and confirm the RSS sampler is not missing any brief spikes.
