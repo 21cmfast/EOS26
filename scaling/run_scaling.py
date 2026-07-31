@@ -31,7 +31,7 @@ import sim_steps
 
 PHASES = ("ics", "pf", "phf", "coeval")
 SCRIPT_PATH = Path(__file__).resolve()
-COEVAL_STRUCTS = ("BrightnessTemp", "IonizedBox", "TsBox", "HaloBox")
+COEVAL_STRUCTS = ("BrightnessTemp", "IonizedBox", "TsBox", "HaloBox", "XraySourceBox")
 
 
 @dataclass

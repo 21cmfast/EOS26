@@ -1,0 +1,74 @@
+{
+  "box_len_mpc": 300.0,
+  "coeval_redshift": 5.0,
+  "coevals_averaged": 92,
+  "gc_enabled": false,
+  "hii_dim": 200,
+  "lowres_cell_size_mpc": 1.5,
+  "max_peak_rss_bytes": 9010577408,
+  "max_rss_above_baseline_bytes": 8839462912,
+  "phases": {
+    "coeval": {
+      "elapsed_seconds": 14.69402958061951,
+      "files": {
+        "BrightnessTemp": {
+          "bytes": 64033376,
+          "file_count": 1
+        },
+        "HaloBox": {
+          "bytes": 160034464,
+          "file_count": 1
+        },
+        "IonizedBox": {
+          "bytes": 128034368,
+          "file_count": 1
+        },
+        "TsBox": {
+          "bytes": 128034120,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 9010577408,
+      "rss_above_baseline_bytes": 8839462912,
+      "total_file_bytes": 480136328
+    },
+    "ics": {
+      "elapsed_seconds": 41.50942599999689,
+      "files": {
+        "InitialConditions": {
+          "bytes": 3712036664,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 7115767808,
+      "rss_above_baseline_bytes": 6945128448,
+      "total_file_bytes": 3712036664
+    },
+    "pf": {
+      "elapsed_seconds": 10.044268334000662,
+      "files": {
+        "PerturbedField": {
+          "bytes": 128033960,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 1642348544,
+      "rss_above_baseline_bytes": 1471283200,
+      "total_file_bytes": 128033960
+    },
+    "phf": {
+      "elapsed_seconds": 57.60998287500115,
+      "files": {
+        "HaloCatalog": {
+          "bytes": 1626672188,
+          "file_count": 92
+        }
+      },
+      "peak_rss_bytes": 4649844736,
+      "rss_above_baseline_bytes": 4478877696,
+      "total_file_bytes": 1626672188
+    }
+  },
+  "pid": 36250,
+  "random_seed": 42
+}

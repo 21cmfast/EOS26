@@ -1,0 +1,313 @@
+{
+  "file_size_fits": {
+    "BrightnessTemp": {
+      "coefficient": 8.173828646466985,
+      "exponent": 2.996178162618161,
+      "kind": "power_law",
+      "log_residual_variance": 8.069227181633327e-07,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "HaloBox": {
+      "coefficient": 20.17859057126178,
+      "exponent": 2.9984194049173514,
+      "kind": "power_law",
+      "log_residual_variance": 1.381085916678671e-07,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "HaloCatalog": {
+      "coefficient": 223.1473156690321,
+      "exponent": 2.983170626857266,
+      "kind": "power_law",
+      "log_residual_variance": 2.8744418440335127e-05,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "InitialConditions": {
+      "coefficient": 464.1893474178684,
+      "exponent": 2.9999274593516314,
+      "kind": "power_law",
+      "log_residual_variance": 2.910304623964233e-10,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "IonizedBox": {
+      "coefficient": 16.17824926523091,
+      "exponent": 2.998030198301147,
+      "kind": "power_law",
+      "log_residual_variance": 2.1447358059703044e-07,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "PerturbedField": {
+      "coefficient": 16.176123911029674,
+      "exponent": 2.998053556804305,
+      "kind": "power_law",
+      "log_residual_variance": 2.0941862099606125e-07,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    },
+    "TsBox": {
+      "coefficient": 16.17695735666978,
+      "exponent": 2.9980443965325967,
+      "kind": "power_law",
+      "log_residual_variance": 2.1139379355366257e-07,
+      "log_sxx": 0.6172679762079822,
+      "log_u_bar": 5.202423342397442,
+      "n": 3
+    }
+  },
+  "phase_fits": {
+    "coeval": {
+      "elapsed_seconds": {
+        "coefficient": 3.013667620105766e-05,
+        "exponent": 2.6899001274059886,
+        "kind": "power_law",
+        "log_residual_variance": 0.0007887013483070927,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      },
+      "peak_rss_bytes": {
+        "intercept": 328434531.4769802,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 1.98504641930232e+16,
+        "slope": 913.1773001546961,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "peak_rss_bytes_power_law": {
+        "coefficient": 3066.056587107362,
+        "exponent": 2.787047170519218,
+        "kind": "power_law",
+        "log_residual_variance": 0.0009204373402234392,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      },
+      "rss_above_baseline_bytes": {
+        "intercept": 166349354.43093872,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 1.985302099567778e+16,
+        "slope": 913.1807964640884,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "storage_bytes": {
+        "coefficient": 44.52899917185362,
+        "exponent": 2.997875156965077,
+        "kind": "power_law",
+        "log_residual_variance": 2.495527217730495e-07,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      }
+    },
+    "ics": {
+      "elapsed_seconds": {
+        "coefficient": 0.713869969562379,
+        "exponent": 1.1279501167006083,
+        "kind": "power_law",
+        "log_residual_variance": 0.02420878669851149,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      },
+      "peak_rss_bytes": {
+        "intercept": 145046179.1233883,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 849603920655062.9,
+        "slope": 777.4145428508288,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "rss_above_baseline_bytes": {
+        "intercept": -10321520.206260681,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 304794949592848.7,
+        "slope": 777.2588609060773,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "storage_bytes": {
+        "coefficient": 464.1893474178684,
+        "exponent": 2.9999274593516314,
+        "kind": "power_law",
+        "log_residual_variance": 2.910304623964233e-10,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      }
+    },
+    "pf": {
+      "elapsed_seconds": {
+        "coefficient": 93.86866215564751,
+        "exponent": 0.05964527324720981,
+        "kind": "power_law",
+        "log_residual_variance": 0.0003592498118174099,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      },
+      "peak_rss_bytes": {
+        "intercept": 169988971.0202577,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 56344158282465.53,
+        "slope": 160.0151733038674,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "rss_above_baseline_bytes": {
+        "intercept": 7904472.869244814,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 53977403465924.03,
+        "slope": 160.01451703867403,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "storage_bytes": {
+        "coefficient": 16.176123911029674,
+        "exponent": 2.998053556804305,
+        "kind": "power_law",
+        "log_residual_variance": 2.0941862099606125e-07,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      }
+    },
+    "phf": {
+      "elapsed_seconds": {
+        "coefficient": 1.2404194396592765,
+        "exponent": 1.0614373124010807,
+        "kind": "power_law",
+        "log_residual_variance": 0.08349501879104859,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      },
+      "peak_rss_bytes": {
+        "intercept": 171655175.54327774,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 294365824283336.1,
+        "slope": 402.3665771491713,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "rss_above_baseline_bytes": {
+        "intercept": 9608846.379374504,
+        "kind": "affine",
+        "n": 3,
+        "residual_variance": 297427481932043.06,
+        "slope": 402.3609196906077,
+        "sxx": 362000000000000.0,
+        "x_bar": 12000000.0
+      },
+      "storage_bytes": {
+        "coefficient": 223.1473156690321,
+        "exponent": 2.983170626857266,
+        "kind": "power_law",
+        "log_residual_variance": 2.8744418440335127e-05,
+        "log_sxx": 0.6172679762079822,
+        "log_u_bar": 5.202423342397442,
+        "n": 3
+      }
+    }
+  },
+  "source_dimensions": [
+    100,
+    200,
+    300
+  ],
+  "targets": {
+    "1200": {
+      "file_sizes": {
+        "BrightnessTemp": 13746784900.76165,
+        "HaloBox": 34480029433.49323,
+        "HaloCatalog": 342227350394.35394,
+        "InitialConditions": 801706753452.7802,
+        "IonizedBox": 27568293527.538857,
+        "PerturbedField": 27569237312.92228,
+        "TsBox": 27568867194.00636
+      },
+      "phases": {
+        "coeval": {
+          "elapsed_seconds": 5778.104313110083,
+          "peak_rss_bytes": 1578298809198.792,
+          "peak_rss_bytes_power_law": 1170586591674.8306,
+          "rss_above_baseline_bytes": 1578142765644.3757,
+          "storage_bytes": 75795582585.43394
+        },
+        "ics": {
+          "elapsed_seconds": 2122.178736095444,
+          "peak_rss_bytes": 1343517376225.3555,
+          "rss_above_baseline_bytes": 1343092990125.4954,
+          "storage_bytes": 801706753452.7802
+        },
+        "pf": {
+          "elapsed_seconds": 143.27790907453598,
+          "peak_rss_bytes": 276676208440.10315,
+          "rss_above_baseline_bytes": 276512989915.698,
+          "storage_bytes": 27569237312.92228
+        },
+        "phf": {
+          "elapsed_seconds": 2301.0519835329305,
+          "peak_rss_bytes": 695461100489.3113,
+          "rss_above_baseline_bytes": 695289278071.7495,
+          "storage_bytes": 342227350394.35394
+        }
+      }
+    },
+    "1400": {
+      "file_sizes": {
+        "BrightnessTemp": 21816528531.28758,
+        "HaloBox": 54739670767.12011,
+        "HaloCatalog": 542036348914.2968,
+        "InitialConditions": 1273066395890.0474,
+        "IonizedBox": 43764138238.689285,
+        "PerturbedField": 43765794068.405106,
+        "TsBox": 43765144710.44931
+      },
+      "phases": {
+        "coeval": {
+          "elapsed_seconds": 8747.12949371744,
+          "peak_rss_bytes": 2506086946155.9634,
+          "peak_rss_bytes_power_law": 1798818750263.899,
+          "rss_above_baseline_bytes": 2505934454851.8896,
+          "storage_bytes": 120321160732.03818
+        },
+        "ics": {
+          "elapsed_seconds": 2525.193122502538,
+          "peak_rss_bytes": 2133370551761.7974,
+          "rss_above_baseline_bytes": 2132787992806.0698,
+          "storage_bytes": 1273066395890.0474
+        },
+        "pf": {
+          "elapsed_seconds": 144.60133235902856,
+          "peak_rss_bytes": 439251624516.83246,
+          "rss_above_baseline_bytes": 439087739226.9908,
+          "storage_bytes": 43765794068.405106
+        },
+        "phf": {
+          "elapsed_seconds": 2710.105830061322,
+          "peak_rss_bytes": 1104265542872.8691,
+          "rss_above_baseline_bytes": 1104087972477.407,
+          "storage_bytes": 542036348914.2968
+        }
+      }
+    }
+  }
+}

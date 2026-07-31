@@ -119,9 +119,9 @@ ipython_config.py
 
 # Scaling benchmark outputs (can be very large).
 scaling/cache/
-scaling/results/
-scaling/reports/
-
+#scaling/results/
+#scaling/reports/
+scaling/results/*build
 # pixi
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 #pixi.lock

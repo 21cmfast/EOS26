@@ -27,9 +27,17 @@ README_PHASE_LABELS = {
     **PHASE_LABELS,
     "coeval": "Evolving astrophysics for one coeval",
 }
-README_STORAGE_EXCLUSIONS = {"IonizedBox"}
+# IonizedBox is retained production output. XraySourceBox is a transient 4D
+# cache product that is removed after writing and is therefore excluded from
+# retained-storage projections.
+README_STORAGE_EXCLUSIONS = {"XraySourceBox"}
 FIXED_RELATIVE_POINT_ERROR = 0.10
 COEVAL_STORAGE_COUNT = 92
+FIXED_CUBIC_EXPONENT = 3.0
+IC_READ_HOURS = 1.5
+IC_WRITE_HOURS = 3.0
+MAX_JOB_WALLTIME_HOURS = 24.0
+COEVALS_PER_JOB = 4
 
 # Peak RSS for 3D simulation grids is physically fixed per-process overhead
 # plus a term that scales with box volume (HII_DIM**3), so memory is fit with
@@ -125,6 +133,40 @@ def fit_power_law(dimensions: np.ndarray, values: np.ndarray) -> dict[str, float
     }
 
 
+def fit_fixed_power_law(
+    dimensions: np.ndarray,
+    values: np.ndarray,
+    exponent: float = FIXED_CUBIC_EXPONENT,
+) -> dict[str, float]:
+    """Fit y = coefficient * HII_DIM ** exponent by linear least squares.
+
+    A fixed-cubic model represents a quantity proportional to grid volume.
+    Fitting its normalization in linear space makes the larger, production-like
+    measurements appropriately influential; a log-space fit would give equal
+    relative weight to small-box points and can badly overstate the EOS-scale
+    estimate when fixed startup overhead dominates those points.
+    """
+    valid = values > 0
+    if valid.sum() < 2:
+        raise ValueError("Need two positive measurements to fit a fixed-exponent power law")
+    x = dimensions[valid] ** exponent
+    y = values[valid]
+    n = len(x)
+    x_squared_sum = float(np.sum(x**2))
+    coefficient = float(np.sum(x * y) / x_squared_sum)
+    residuals = y - coefficient * x
+    residual_variance = float(np.sum(residuals**2) / (n - 1)) if n > 1 else 0.0
+
+    return {
+        "kind": "fixed_cubic",
+        "coefficient": coefficient,
+        "exponent": exponent,
+        "x_squared_sum": x_squared_sum,
+        "residual_variance": residual_variance,
+        "n": n,
+    }
+
+
 def fit_affine(dimensions: np.ndarray, values: np.ndarray) -> dict[str, float]:
     """Fit y = intercept + slope * HII_DIM ** 3 by ordinary least squares.
 
@@ -165,7 +207,7 @@ def fit_affine(dimensions: np.ndarray, values: np.ndarray) -> dict[str, float]:
 
 
 def predict(fit: dict[str, float], dimension: float) -> float:
-    if fit["kind"] == "power_law":
+    if fit["kind"] in {"power_law", "fixed_cubic"}:
         return fit["coefficient"] * dimension ** fit["exponent"]
     return fit["intercept"] + fit["slope"] * dimension ** 3
 
@@ -189,6 +231,12 @@ def prediction_interval(fit: dict[str, float], dimension: float) -> tuple[float,
         )
         log_sigma = float(np.hypot(fit_log_sigma, np.log1p(FIXED_RELATIVE_POINT_ERROR)))
         return value * np.exp(-log_sigma), value * np.exp(log_sigma)
+
+    if fit["kind"] == "fixed_cubic":
+        x0 = dimension ** fit["exponent"]
+        fit_sigma = np.sqrt(fit["residual_variance"] * x0**2 / fit["x_squared_sum"])
+        sigma = float(np.hypot(fit_sigma, FIXED_RELATIVE_POINT_ERROR * value))
+        return value - sigma, value + sigma
 
     x0 = dimension ** 3
     fit_sigma = np.sqrt(
@@ -352,6 +400,7 @@ def fitted_metrics(records: list[dict[str, Any]]) -> dict[str, dict[str, dict[st
                     phase_fits[f"{metric}_power_law"] = fit_power_law(dimensions, values)
             else:
                 phase_fits[metric] = fit_power_law(dimensions, values)
+            phase_fits[f"{metric}_cubic"] = fit_fixed_power_law(dimensions, values)
         if phase_fits:
             fits[phase] = phase_fits
     return fits
@@ -370,6 +419,22 @@ def fitted_file_sizes(records: list[dict[str, Any]]) -> dict[str, dict[str, floa
         dimensions, values = file_series(records, file_type)
         if len(dimensions) >= 2 and np.all(values > 0):
             fits[file_type] = fit_power_law(dimensions, values)
+    return fits
+
+
+def fitted_cubic_file_sizes(records: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
+    """Fit each stored HDF5 structure with a fixed HII_DIM**3 exponent."""
+    file_types = {
+        name
+        for record in records
+        for phase in record["phases"].values()
+        for name in phase["files"]
+    }
+    fits = {}
+    for file_type in sorted(file_types):
+        dimensions, values = file_series(records, file_type)
+        if len(dimensions) >= 2 and np.all(values > 0):
+            fits[file_type] = fit_fixed_power_law(dimensions, values)
     return fits
 
 
@@ -409,6 +474,23 @@ def format_mean_sigma(
     return f"{value_str} \u00b1 {sigma_str}{suffix}"
 
 
+def fit_label(fit: dict[str, float]) -> str:
+    """Return a concise label that distinguishes the compared fit forms."""
+    if fit["kind"] == "affine":
+        return "affine (overhead + a=3)"
+    if fit["kind"] == "fixed_cubic":
+        return "a=3"
+    return f"a={fit['exponent']:.3g}"
+
+
+def format_labeled_mean_sigma(
+    fit: dict[str, float],
+    dimension: int,
+    formatter: Any,
+) -> str:
+    return f"{fit_label(fit)}: {format_mean_sigma(fit, dimension, formatter)}"
+
+
 def format_coeval_storage(value: float, formatter: Any) -> str:
     """Format one coeval's storage and the total for all node redshifts."""
     return f"{formatter(value)} x {COEVAL_STORAGE_COUNT} = {formatter(value * COEVAL_STORAGE_COUNT)}"
@@ -430,6 +512,14 @@ def format_coeval_storage_mean_sigma(
         f"{value_str} \u00b1 {sigma_str}{suffix} x {COEVAL_STORAGE_COUNT} = "
         f"{total_value_str} \u00b1 {total_sigma_str}{suffix}"
     )
+
+
+def format_labeled_coeval_storage_mean_sigma(
+    fit: dict[str, float],
+    dimension: int,
+    formatter: Any,
+) -> str:
+    return f"{fit_label(fit)}: {format_coeval_storage_mean_sigma(fit, dimension, formatter)}"
 
 
 def update_readme_measured_table(
@@ -531,15 +621,31 @@ def update_readme_measured_table(
         dimension = int(match.group("dimension"))
         for phase, label in README_PHASE_LABELS.items():
             metrics = fits[phase]
-            values = [
-                format_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
-                format_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
-                (
-                    format_coeval_storage_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb)
+            values = (
+                [
+                    format_labeled_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
+                    format_labeled_mean_sigma(metrics["elapsed_seconds_cubic"], dimension, format_readme_hours),
+                    format_labeled_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
+                    format_labeled_mean_sigma(metrics["peak_rss_bytes_cubic"], dimension, format_readme_tb),
+                ]
+                + (
+                    [
+                        format_labeled_coeval_storage_mean_sigma(
+                            metrics["storage_bytes"], dimension, format_readme_tb
+                        ),
+                        format_labeled_coeval_storage_mean_sigma(
+                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                        ),
+                    ]
                     if phase == "coeval"
-                    else format_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb)
-                ),
-            ]
+                    else [
+                        format_labeled_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb),
+                        format_labeled_mean_sigma(
+                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                        ),
+                    ]
+                )
+            )
             pattern = re.compile(
                 rf"(?P<prefix><tr>\s*<td>{re.escape(label)}</td>)(?P<cells>.*?)(?P<suffix></tr>)",
                 re.DOTALL,
@@ -550,7 +656,7 @@ def update_readme_measured_table(
             replacement = (
                 row.group("prefix")
                 + "\n    "
-                + "\n    ".join(f'<td colspan="2">{value}</td>' for value in values)
+                + "\n    ".join(f"<td>{value}</td>" for value in values)
                 + "\n  "
                 + row.group("suffix")
             )
@@ -707,13 +813,14 @@ def write_readme_values(
     records: list[dict[str, Any]],
     fits: dict[str, dict[str, dict[str, float]]],
     file_fits: dict[str, dict[str, float]],
+    cubic_file_fits: dict[str, dict[str, float]],
     targets: list[int],
     output_dir: Path,
 ) -> None:
     lines = [
         "# Scaling Values for README",
         "",
-        "Generated by `scaling/run_scalingrelation.py`. Storage for the coeval row excludes `IonizedBox`, matching the README convention. Extrapolated values are mean \u00b1 1-sigma from a regression fit to all available scaling points (affine `overhead + coefficient * HII_DIM^3` for peak RSS, power law for time and storage).",
+        "Generated by `scaling/run_scalingrelation.py`. Coeval storage retains `IonizedBox` and excludes the transient `XraySourceBox`, matching the production cleanup policy. Each extrapolation reports both the current fit (affine `overhead + coefficient * HII_DIM^3` for peak RSS; free-exponent power law for time and storage) and a fixed `a=3` power law. Values are mean \u00b1 1-sigma from all available scaling points.",
         "",
         "## Measured Values",
         "",
@@ -735,19 +842,29 @@ def write_readme_values(
         "",
         "## Fitted Extrapolations",
         "",
-        "| Phase | HII_DIM | Time | Peak RSS | Storage |",
-        "| --- | ---: | ---: | ---: | ---: |",
+        "| Phase | HII_DIM | Time, current fit | Time, a=3 | Peak RSS, current fit | Peak RSS, a=3 | Storage, current fit | Storage, a=3 |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ])
     for target in targets:
         for phase, label in PHASE_LABELS.items():
             phase_fits = fits.get(phase, {})
             needed = ("elapsed_seconds", "peak_rss_bytes", "storage_bytes")
-            if not all(metric in phase_fits for metric in needed):
+            cubic_needed = tuple(f"{metric}_cubic" for metric in needed)
+            if not all(metric in phase_fits for metric in needed + cubic_needed):
                 continue
+            storage_formatter = (
+                format_labeled_coeval_storage_mean_sigma
+                if phase == "coeval"
+                else format_labeled_mean_sigma
+            )
             lines.append(
-                f"| {label} | {target} | {format_mean_sigma(phase_fits['elapsed_seconds'], target, format_readme_hours)} h | "
-                f"{format_mean_sigma(phase_fits['peak_rss_bytes'], target, format_gib)} | "
-                f"{format_coeval_storage_mean_sigma(phase_fits['storage_bytes'], target, format_gib) if phase == 'coeval' else format_mean_sigma(phase_fits['storage_bytes'], target, format_gib)} |"
+                f"| {label} | {target} | "
+                f"{format_labeled_mean_sigma(phase_fits['elapsed_seconds'], target, format_readme_hours)} h | "
+                f"{format_labeled_mean_sigma(phase_fits['elapsed_seconds_cubic'], target, format_readme_hours)} h | "
+                f"{format_labeled_mean_sigma(phase_fits['peak_rss_bytes'], target, format_gib)} | "
+                f"{format_labeled_mean_sigma(phase_fits['peak_rss_bytes_cubic'], target, format_gib)} | "
+                f"{storage_formatter(phase_fits['storage_bytes'], target, format_gib)} | "
+                f"{storage_formatter(phase_fits['storage_bytes_cubic'], target, format_gib)} |"
             )
 
     coeval_power_law_fit = fits.get("coeval", {}).get("peak_rss_bytes_power_law")
@@ -777,16 +894,150 @@ def write_readme_values(
         "",
         "## File-Size Extrapolations",
         "",
-        "| HDF5 structure | HII_DIM | Storage |",
-        "| --- | ---: | ---: |",
+        "| HDF5 structure | HII_DIM | Storage, current fit | Storage, a=3 |",
+        "| --- | ---: | ---: | ---: |",
     ])
     for target in targets:
         for file_type, fit in file_fits.items():
+            cubic_fit = cubic_file_fits[file_type]
             lines.append(
-                f"| {file_type} | {target} | {format_mean_sigma(fit, target, format_gib)} |"
+                f"| {file_type} | {target} | {format_labeled_mean_sigma(fit, target, format_gib)} | "
+                f"{format_labeled_mean_sigma(cubic_fit, target, format_gib)} |"
             )
 
+    write_runtime_plan(lines, fits, cubic_file_fits, max(targets))
     (output_dir / "README_scaling_values.md").write_text("\n".join(lines) + "\n")
+
+
+def write_runtime_plan(
+    lines: list[str],
+    fits: dict[str, dict[str, dict[str, float]]],
+    cubic_file_fits: dict[str, dict[str, float]],
+    target: int,
+) -> None:
+    """Append an EOS runtime plan based on fixed-cubic compute and I/O estimates."""
+    cubic = {phase: metrics for phase, metrics in fits.items()}
+    required = ("ics", "pf", "phf", "coeval")
+    if not all(phase in cubic for phase in required):
+        return
+
+    def hours(phase: str, metric: str = "elapsed_seconds") -> float:
+        return predict(cubic[phase][f"{metric}_cubic"], target) / 3600.0
+
+    def storage_gib(phase: str) -> float:
+        return predict(cubic[phase]["storage_bytes_cubic"], target) / 2**30
+
+    ic_storage_gib = storage_gib("ics")
+    write_hours_per_gib = IC_WRITE_HOURS / ic_storage_gib
+    peak_rss_tb = {
+        phase: predict(cubic[phase]["peak_rss_bytes_cubic"], target) / 1e12
+        for phase in required
+    }
+    pf_compute = hours("pf")
+    pf_write = storage_gib("pf") * write_hours_per_gib
+    phf_compute = hours("phf")
+    phf_write = storage_gib("phf") * write_hours_per_gib
+    coeval_compute = hours("coeval")
+    coeval_storage_gib = storage_gib("coeval")
+    coeval_write = coeval_storage_gib * write_hours_per_gib
+    pfs_per_job = max(1, int((MAX_JOB_WALLTIME_HOURS - IC_READ_HOURS) // (pf_compute + pf_write)))
+    pf_jobs = int(np.ceil(COEVAL_STORAGE_COUNT / pfs_per_job))
+    coeval_jobs = int(np.ceil(COEVAL_STORAGE_COUNT / COEVALS_PER_JOB))
+
+    rows = (
+        (
+            "Initial conditions",
+            "all ICs",
+            1,
+            hours("ics"),
+            0.0,
+            IC_WRITE_HOURS,
+            1,
+            peak_rss_tb["ics"],
+            f"{ic_storage_gib / 1024.0:.2f}",
+        ),
+        (
+            "Perturbed fields",
+            "one PF",
+            pfs_per_job,
+            pf_compute,
+            IC_READ_HOURS,
+            pf_write,
+            pf_jobs,
+            peak_rss_tb["pf"],
+            f"{COEVAL_STORAGE_COUNT * storage_gib('pf') / 1024.0:.2f}",
+        ),
+        (
+            "Perturbed halo fields",
+            "all halo fields",
+            1,
+            phf_compute,
+            IC_READ_HOURS,
+            phf_write,
+            1,
+            peak_rss_tb["phf"],
+            f"{storage_gib('phf') / 1024.0:.2f}",
+        ),
+        (
+            "Coevals",
+            "one coeval",
+            COEVALS_PER_JOB,
+            coeval_compute,
+            IC_READ_HOURS,
+            coeval_write,
+            coeval_jobs,
+            peak_rss_tb["coeval"],
+            f"{COEVAL_STORAGE_COUNT * coeval_storage_gib / 1024.0:.2f}",
+        ),
+    )
+
+    lines.extend([
+        "",
+        f"## EOS-{1 if target == 1400 else target} Fixed-Cubic Runtime Plan",
+        "",
+        (
+            f"Planning values use fixed `a=3` central estimates at `HII_DIM={target}`, a "
+            f"{IC_READ_HOURS:g} h IC-read allowance per dependent job, and the documented "
+            f"{IC_WRITE_HOURS:g} h IC-write time to infer output-write throughput. Coeval "
+            f"output includes retained `IonizedBox` and excludes transient `XraySourceBox`. The table uses the "
+            f"{MAX_JOB_WALLTIME_HOURS:g} h maximum job walltime; coeval jobs are deliberately "
+            f"limited to {COEVALS_PER_JOB} outputs for margin. Peak RSS is the per-phase "
+            f"process estimate; full-phase output totals all {COEVAL_STORAGE_COUNT} PFs or "
+            f"coevals as applicable."
+        ),
+        "",
+        "| Phase | Work unit | Units/job | Compute/unit [h] | IC read/job [h] | Write/unit [h] | Estimated job walltime [h] | Jobs for full phase | Serial phase walltime [h] | Peak RSS [TB] | Output, full phase [TB] |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+    ])
+    for phase, unit, units_per_job, compute, read, write, jobs, peak_rss, output_tb in rows:
+        job_walltime = read + units_per_job * (compute + write)
+        lines.append(
+            f"| {phase} | {unit} | {units_per_job} | {compute:.2f} | {read:.2f} | "
+            f"{write:.2f} | {job_walltime:.2f} | {jobs} | {job_walltime * jobs:.1f} | "
+            f"{peak_rss:.2f} | {output_tb} |"
+        )
+
+
+def update_readme_runtime_plan(
+    readme_path: Path,
+    fits: dict[str, dict[str, dict[str, float]]],
+    cubic_file_fits: dict[str, dict[str, float]],
+    target: int,
+) -> None:
+    """Insert or replace the fixed-cubic full-run walltime planning section."""
+    lines: list[str] = []
+    write_runtime_plan(lines, fits, cubic_file_fits, target)
+    if not lines:
+        return
+    section_text = "\n".join(lines).strip() + "\n"
+    heading = f"## EOS-{1 if target == 1400 else target} Fixed-Cubic Runtime Plan"
+    text = readme_path.read_text()
+    existing_pattern = re.compile(re.escape(heading) + r"\n.*?(?=\n## |\Z)", re.DOTALL)
+    if existing_pattern.search(text):
+        text = existing_pattern.sub(lambda _match: section_text, text, count=1)
+    else:
+        text = text.rstrip() + "\n\n" + section_text
+    readme_path.write_text(text)
 
 
 def main() -> None:
@@ -796,13 +1047,15 @@ def main() -> None:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     fits = fitted_metrics(records)
     file_fits = fitted_file_sizes(records)
+    cubic_file_fits = fitted_cubic_file_sizes(records)
     plot_phase_metrics(records, args.output_dir)
     plot_file_sizes(records, args.output_dir)
-    write_readme_values(records, fits, file_fits, targets, args.output_dir)
+    write_readme_values(records, fits, file_fits, cubic_file_fits, targets, args.output_dir)
     summary = {
         "source_dimensions": [record["hii_dim"] for record in records],
         "phase_fits": fits,
         "file_size_fits": file_fits,
+        "file_size_cubic_fits": cubic_file_fits,
         "targets": {
             str(target): {
                 "phases": {
@@ -818,6 +1071,7 @@ def main() -> None:
     if args.update_readme:
         update_readme_measured_table(args.readme, records, fits)
         update_readme_projection_table(args.readme, fits, records)
+        update_readme_runtime_plan(args.readme, fits, cubic_file_fits, max(targets))
         print(f"Updated scaling values in {args.readme}")
     print(f"Wrote reports to {args.output_dir}")
 

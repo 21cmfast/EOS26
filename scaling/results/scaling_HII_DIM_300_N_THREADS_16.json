@@ -1,0 +1,83 @@
+{
+  "box_len_mpc": 450.0,
+  "coeval_redshift": 5.0,
+  "coevals_averaged": 92,
+  "gc_enabled": false,
+  "hii_dim": 300,
+  "lowres_cell_size_mpc": 1.5,
+  "max_peak_rss_bytes": 24963944448,
+  "max_rss_above_baseline_bytes": 24801853440,
+  "n_threads": 16,
+  "phases": {
+    "coeval": {
+      "average_cpu_cores": 10.36983614426424,
+      "cpu_seconds": 136933.297563215,
+      "elapsed_seconds": 143.5322012411046,
+      "files": {
+        "BrightnessTemp": {
+          "bytes": 216033376,
+          "file_count": 1
+        },
+        "HaloBox": {
+          "bytes": 540034464,
+          "file_count": 1
+        },
+        "IonizedBox": {
+          "bytes": 432034368,
+          "file_count": 1
+        },
+        "TsBox": {
+          "bytes": 432034120,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 24963944448,
+      "rss_above_baseline_bytes": 24801853440,
+      "total_file_bytes": 1620136328
+    },
+    "ics": {
+      "average_cpu_cores": 5.219929934049959,
+      "cpu_seconds": 2812.065898233,
+      "elapsed_seconds": 538.7171731730923,
+      "files": {
+        "InitialConditions": {
+          "bytes": 12528036664,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 21141454848,
+      "rss_above_baseline_bytes": 20979249152,
+      "total_file_bytes": 12528036664
+    },
+    "pf": {
+      "average_cpu_cores": 1.413282281031498,
+      "cpu_seconds": 189.10295308,
+      "elapsed_seconds": 133.80409251432866,
+      "files": {
+        "PerturbedField": {
+          "bytes": 432033960,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 4491644928,
+      "rss_above_baseline_bytes": 4329697280,
+      "total_file_bytes": 432033960
+    },
+    "phf": {
+      "average_cpu_cores": 2.7848680961755674,
+      "cpu_seconds": 1815.0785365499999,
+      "elapsed_seconds": 651.7646343978122,
+      "files": {
+        "HaloCatalog": {
+          "bytes": 5488492120,
+          "file_count": 92
+        }
+      },
+      "peak_rss_bytes": 11116048384,
+      "rss_above_baseline_bytes": 10953900032,
+      "total_file_bytes": 5488492120
+    }
+  },
+  "pid": 1131839,
+  "random_seed": 42
+}

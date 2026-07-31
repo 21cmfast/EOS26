@@ -125,7 +125,7 @@ extrapolation sections.
 
 ## Scaling test results
 
-When updated with `--update-readme`, each extrapolated value is the mean ± 1σ from a regression fit to all available scaling points: peak RSS uses an affine model (`overhead + coefficient * HII_DIM^3`, physically motivated by fixed per-process overhead plus volume-scaling grid buffers) fit by ordinary least squares, while time and storage use a free-exponent power-law fit in log-log space. In both cases the regression's own confidence interval on the mean is combined in quadrature with a fixed 10% relative per-point measurement-uncertainty floor. EOS-1: HII\_DIM = 1400 (1.5 cMpc/cell, 2100 Mpc). EOS-2: HII\_DIM = 1200 (1.667 cMpc/cell, 2000 Mpc). Storage for PFs and coevals is the total across all 92 node redshifts; coeval storage excludes IonizedBox.
+When updated with `--update-readme`, each extrapolated value is the mean ± 1σ from all available scaling points. Each extrapolated quantity shows both its current model (affine `overhead + coefficient * HII_DIM^3` for peak RSS; free-exponent power law for time and storage) and a fixed-cubic `a=3` fit. The regression uncertainty is combined in quadrature with a fixed 10% relative measurement-uncertainty floor. EOS-1: HII\_DIM = 1400 (1.5 cMpc/cell, 2100 Mpc). EOS-2: HII\_DIM = 1200 (1.667 cMpc/cell, 2000 Mpc). Storage for PFs and coevals is the total across all 92 node redshifts; coeval storage includes retained IonizedBox and excludes transient XraySourceBox.
 
 <table><thead>
   <tr>
@@ -179,58 +179,82 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
     <td>0.038</td>
     <td>1.16 GB</td>
     <td>25 GB</td>
-    <td>0.0441 GB x 92 = 4.06 GB</td>
-    <td>1.19 GB x 92 = 109 GB</td>
+    <td>0.0601 GB x 92 = 5.53 GB</td>
+    <td>1.62 GB x 92 = 149 GB</td>
   </tr>
   <tr><td colspan="7"><em>Extrapolated to EOS-1 (HII_DIM = 1400, 1.5 cMpc/cell, 2100 Mpc)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
-    <td colspan="2">0.701 ± 0.307</td>
-    <td colspan="2">2.13 ± 0.213 TB</td>
-    <td colspan="2">1.27 ± 0.122 TB</td>
+    <td>a=1.13: 0.701 ± 0.307</td>
+    <td>a=3: 14.5 ± 3.28</td>
+    <td>affine: 2.13 ± 0.213 TB</td>
+    <td>a=3: 2.15 ± 0.216 TB</td>
+    <td>a=3: 1.27 ± 0.122 TB</td>
+    <td>a=3: 1.28 ± 0.128 TB</td>
   </tr>
   <tr>
     <td>One perturbed field</td>
-    <td colspan="2">0.0402 ± 0.00434</td>
-    <td colspan="2">0.439 ± 0.0439 TB</td>
-    <td colspan="2">0.0438 ± 0.00418 TB</td>
+    <td>a=0.06: 0.0402 ± 0.00434</td>
+    <td>a=3: 4.54 ± 2.81</td>
+    <td>affine: 0.439 ± 0.0439 TB</td>
+    <td>a=3: 0.46 ± 0.0481 TB</td>
+    <td>a=3: 0.0438 ± 0.00418 TB</td>
+    <td>a=3: 0.0439 ± 0.00439 TB</td>
   </tr>
   <tr>
     <td>Perturbed halo fields</td>
-    <td colspan="2">0.753 ± 0.644</td>
-    <td colspan="2">1.1 ± 0.11 TB</td>
-    <td colspan="2">0.542 ± 0.0523 TB</td>
+    <td>a=1.06: 0.753 ± 0.644</td>
+    <td>a=3: 18.1 ± 3.86</td>
+    <td>affine: 1.1 ± 0.11 TB</td>
+    <td>a=3: 1.13 ± 0.114 TB</td>
+    <td>a=2.98: 0.542 ± 0.0523 TB</td>
+    <td>a=3: 0.557 ± 0.0557 TB</td>
   </tr>
   <tr>
     <td>Evolving astrophysics for one coeval</td>
-    <td colspan="2">2.43 ± 0.295</td>
-    <td colspan="2">2.51 ± 0.251 TB</td>
-    <td colspan="2">0.12 ± 0.0115 TB x 92 = 11.1 ± 1.06 TB</td>
+    <td>a=2.69: 2.43 ± 0.295</td>
+    <td>a=3: 3.92 ± 0.415</td>
+    <td>affine: 2.51 ± 0.251 TB</td>
+    <td>a=3: 2.54 ± 0.255 TB</td>
+    <td>a=3: 0.164 ± 0.0122 TB x 92 = 15.1 ± 1.12 TB</td>
+    <td>a=3: 0.165 ± 0.0128 TB x 92 = 15.1 ± 1.18 TB</td>
   </tr>
   <tr><td colspan="7"><em>Extrapolated to EOS-2 (HII_DIM = 1200, 1.667 cMpc/cell, 2000 Mpc)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
-    <td colspan="2">0.589 ± 0.24</td>
-    <td colspan="2">1.34 ± 0.134 TB</td>
-    <td colspan="2">0.802 ± 0.0765 TB</td>
+    <td>a=1.13: 0.589 ± 0.24</td>
+    <td>a=3: 9.13 ± 2.07</td>
+    <td>affine: 1.34 ± 0.134 TB</td>
+    <td>a=3: 1.35 ± 0.135 TB</td>
+    <td>a=3: 0.802 ± 0.0765 TB</td>
+    <td>a=3: 0.804 ± 0.0804 TB</td>
   </tr>
   <tr>
     <td>One perturbed field</td>
-    <td colspan="2">0.0398 ± 0.00423</td>
-    <td colspan="2">0.277 ± 0.0277 TB</td>
-    <td colspan="2">0.0276 ± 0.00263 TB</td>
+    <td>a=0.06: 0.0398 ± 0.00423</td>
+    <td>a=3: 2.86 ± 1.77</td>
+    <td>affine: 0.277 ± 0.0277 TB</td>
+    <td>a=3: 0.29 ± 0.0303 TB</td>
+    <td>a=3: 0.0276 ± 0.00263 TB</td>
+    <td>a=3: 0.0276 ± 0.00276 TB</td>
   </tr>
   <tr>
     <td>Perturbed halo fields</td>
-    <td colspan="2">0.639 ± 0.501</td>
-    <td colspan="2">0.695 ± 0.0696 TB</td>
-    <td colspan="2">0.342 ± 0.033 TB</td>
+    <td>a=1.06: 0.639 ± 0.501</td>
+    <td>a=3: 11.4 ± 2.43</td>
+    <td>affine: 0.695 ± 0.0696 TB</td>
+    <td>a=3: 0.711 ± 0.0715 TB</td>
+    <td>a=2.98: 0.342 ± 0.033 TB</td>
+    <td>a=3: 0.351 ± 0.0351 TB</td>
   </tr>
   <tr>
     <td>Evolving astrophysics for one coeval</td>
-    <td colspan="2">1.61 ± 0.19</td>
-    <td colspan="2">1.58 ± 0.158 TB</td>
-    <td colspan="2">0.0758 ± 0.00724 TB x 92 = 6.97 ± 0.666 TB</td>
+    <td>a=2.69: 1.61 ± 0.19</td>
+    <td>a=3: 2.47 ± 0.262</td>
+    <td>affine: 1.58 ± 0.158 TB</td>
+    <td>a=3: 1.6 ± 0.161 TB</td>
+    <td>a=3: 0.103 ± 0.0077 TB x 92 = 9.51 ± 0.708 TB</td>
+    <td>a=3: 0.104 ± 0.00809 TB x 92 = 9.54 ± 0.744 TB</td>
   </tr>
 </tbody></table>
 
@@ -282,3 +306,14 @@ With only 3 measured points, the affine fit above is pulled noticeably off the d
 </tbody></table>
 
 **Caveats:** this projection extrapolates well beyond the largest measured `HII_DIM` (300) to production scale, so treat it as an order-of-magnitude estimate rather than a precise bound. Run an additional scaling point at `HII_DIM = 400` (or larger) on the cluster and check whether the residuals from the affine fit stay small -- growing residuals at larger `HII_DIM` would mean memory grows faster than the assumed overhead-plus-cubic form and this projection is optimistic. Consider also profiling one run with `memray` to see the full memory-vs-redshift curve and confirm the RSS sampler is not missing any brief spikes.
+
+## EOS-1 Fixed-Cubic Runtime Plan
+
+This planning table uses the fixed `a=3` central values at `HII_DIM=1400`, rather than the shallow free-exponent time fits. It assumes a `1.5 h` read of the ICs for every dependent job and uses the documented `3 h` full-IC write to estimate output-write time. Coeval output includes retained IonizedBox and excludes the transient 4D XraySourceBox. Four coevals per job is deliberately conservative under Gadi's 24-hour maximum walltime. Peak RSS is the per-phase process estimate. The serial column is total work if batches run one after another; PF and coeval jobs may be submitted concurrently once their dependencies are available.
+
+| Phase | Work unit | Units/job | Compute/unit [h] | IC read/job [h] | Write/unit [h] | Estimated job walltime [h] | Jobs for full phase | Serial phase walltime [h] | Peak RSS [TB] | Output, full phase [TB] |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Initial conditions | all ICs | 1 | 14.50 | 0.00 | 3.00 | 17.50 | 1 | 17.5 | 2.15 | 1.28 |
+| Perturbed fields | one PF | 4 | 4.54 | 1.50 | 0.10 | 20.08 | 23 | 461.8 | 0.46 | 4.04 |
+| Perturbed halo fields | all halo fields | 1 | 18.12 | 1.50 | 1.31 | 20.93 | 1 | 20.9 | 1.13 | 0.56 |
+| Coevals | one coeval | 4 | 3.92 | 1.50 | 0.39 | 18.75 | 23 | 431.2 | 2.54 | 15.1 |
