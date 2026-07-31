@@ -309,7 +309,7 @@ With only 3 measured points, the affine fit above is pulled noticeably off the d
 
 ## EOS-1 Fixed-Cubic Runtime Plan
 
-This planning table uses the fixed `a=3` central values at `HII_DIM=1400`, rather than the shallow free-exponent time fits. It assumes a `1.5 h` read of the ICs for every dependent job and uses the documented `3 h` full-IC write to estimate output-write time. Coeval output includes retained IonizedBox and excludes the transient 4D XraySourceBox. Four coevals per job is deliberately conservative under Gadi's 24-hour maximum walltime. Peak RSS is the per-phase process estimate. The serial column is total work if batches run one after another; PF and coeval jobs may be submitted concurrently once their dependencies are available.
+This planning table uses the fixed `a=3` central values at `HII_DIM=1400`. It assumes a `1.5 h` read of the ICs for every job and uses a documented `3 h` full-IC write to estimate output-write time. Coeval output excludes the 4D XraySourceBox. Four coevals per job is deliberately conservative under Gadi's 24-hour maximum walltime when all 96 cores or ~3TB mem are requested. Peak RSS is the per-phase process estimate. The serial column is total work if batches run one after another. The PFs will actually be run in parallel though.
 
 | Phase | Work unit | Units/job | Compute/unit [h] | IC read/job [h] | Write/unit [h] | Estimated job walltime [h] | Jobs for full phase | Serial phase walltime [h] | Peak RSS [TB] | Output, full phase [TB] |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
