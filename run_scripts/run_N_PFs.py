@@ -51,6 +51,7 @@ for i in range(N):
     if args.compare:
         compare_PF(pf, z, z_idx)
     pf.purge()
+    del pf
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed N PF run in {job_dt:.2f}s")
