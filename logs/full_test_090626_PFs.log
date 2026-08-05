@@ -1,0 +1,192 @@
+00:00:00 INFO     00.166 GB Starting N PF run: z_idx_start=0, N=50                                                                                              
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:09 INFO     00.252 GB PF 1/50: z_idx=0, z=35.371975                                                                                                       
+00:00:09 INFO     01.537 GB PF 1/50 done in 0.53s                                                                                                               
+00:00:09 INFO     01.537 GB PF 2/50: z_idx=1, z=34.658799                                                                                                       
+00:00:10 INFO     02.611 GB PF 2/50 done in 0.53s                                                                                                               
+00:00:10 INFO     02.611 GB PF 3/50: z_idx=2, z=33.959607                                                                                                       
+00:00:10 INFO     03.685 GB PF 3/50 done in 0.53s                                                                                                               
+00:00:10 INFO     03.685 GB PF 4/50: z_idx=3, z=33.274124                                                                                                       
+00:00:11 INFO     04.759 GB PF 4/50 done in 0.53s                                                                                                               
+00:00:11 INFO     04.759 GB PF 5/50: z_idx=4, z=32.602082                                                                                                       
+00:00:11 INFO     05.833 GB PF 5/50 done in 0.53s                                                                                                               
+00:00:11 INFO     05.833 GB PF 6/50: z_idx=5, z=31.943218                                                                                                       
+00:00:12 INFO     06.907 GB PF 6/50 done in 0.53s                                                                                                               
+00:00:12 INFO     06.907 GB PF 7/50: z_idx=6, z=31.297273                                                                                                       
+00:00:12 INFO     07.981 GB PF 7/50 done in 0.53s                                                                                                               
+00:00:12 INFO     07.981 GB PF 8/50: z_idx=7, z=30.663993                                                                                                       
+00:00:13 INFO     09.055 GB PF 8/50 done in 0.53s                                                                                                               
+00:00:13 INFO     09.055 GB PF 9/50: z_idx=8, z=30.043130                                                                                                       
+00:00:13 INFO     10.129 GB PF 9/50 done in 0.53s                                                                                                               
+00:00:13 INFO     10.129 GB PF 10/50: z_idx=9, z=29.434441                                                                                                      
+00:00:14 INFO     11.203 GB PF 10/50 done in 0.56s                                                                                                              
+00:00:14 INFO     11.203 GB PF 11/50: z_idx=10, z=28.837688                                                                                                     
+00:00:14 INFO     12.277 GB PF 11/50 done in 0.55s                                                                                                              
+00:00:14 INFO     12.277 GB PF 12/50: z_idx=11, z=28.252635                                                                                                     
+00:00:15 INFO     13.351 GB PF 12/50 done in 0.55s                                                                                                              
+00:00:15 INFO     13.351 GB PF 13/50: z_idx=12, z=27.679054                                                                                                     
+00:00:16 INFO     03.147 GB PF 13/50 done in 1.55s                                                                                                              
+00:00:17 INFO     03.149 GB PF 14/50: z_idx=13, z=27.116719                                                                                                     
+00:00:17 INFO     04.253 GB PF 14/50 done in 0.63s                                                                                                              
+00:00:17 INFO     04.253 GB PF 15/50: z_idx=14, z=26.565411                                                                                                     
+00:00:18 INFO     05.225 GB PF 15/50 done in 0.63s                                                                                                              
+00:00:18 INFO     05.225 GB PF 16/50: z_idx=15, z=26.024913                                                                                                     
+00:00:19 INFO     05.141 GB PF 16/50 done in 0.74s                                                                                                              
+00:00:19 INFO     05.141 GB PF 17/50: z_idx=16, z=25.495013                                                                                                     
+00:00:19 INFO     05.197 GB PF 17/50 done in 0.70s                                                                                                              
+00:00:19 INFO     05.197 GB PF 18/50: z_idx=17, z=24.975503                                                                                                     
+00:00:20 INFO     05.330 GB PF 18/50 done in 0.77s                                                                                                              
+00:00:20 INFO     05.316 GB PF 19/50: z_idx=18, z=24.466179                                                                                                     
+00:00:21 INFO     05.314 GB PF 19/50 done in 0.73s                                                                                                              
+00:00:21 INFO     05.314 GB PF 20/50: z_idx=19, z=23.966842                                                                                                     
+00:00:21 INFO     05.249 GB PF 20/50 done in 0.75s                                                                                                              
+00:00:21 INFO     05.249 GB PF 21/50: z_idx=20, z=23.477296                                                                                                     
+00:00:22 INFO     05.352 GB PF 21/50 done in 0.71s                                                                                                              
+00:00:22 INFO     05.352 GB PF 22/50: z_idx=21, z=22.997349                                                                                                     
+00:00:23 INFO     05.301 GB PF 22/50 done in 0.78s                                                                                                              
+00:00:23 INFO     05.301 GB PF 23/50: z_idx=22, z=22.526813                                                                                                     
+00:00:24 INFO     05.285 GB PF 23/50 done in 0.76s                                                                                                              
+00:00:24 INFO     05.285 GB PF 24/50: z_idx=23, z=22.065503                                                                                                     
+00:00:25 INFO     05.311 GB PF 24/50 done in 0.77s                                                                                                              
+00:00:25 INFO     05.313 GB PF 25/50: z_idx=24, z=21.613238                                                                                                     
+00:00:25 INFO     05.266 GB PF 25/50 done in 0.75s                                                                                                              
+00:00:25 INFO     05.266 GB PF 26/50: z_idx=25, z=21.169841                                                                                                     
+00:00:26 INFO     05.316 GB PF 26/50 done in 0.79s                                                                                                              
+00:00:26 INFO     05.316 GB PF 27/50: z_idx=26, z=20.735139                                                                                                     
+00:00:27 INFO     05.291 GB PF 27/50 done in 0.87s                                                                                                              
+00:00:27 INFO     05.292 GB PF 28/50: z_idx=27, z=20.308959                                                                                                     
+00:00:28 INFO     05.458 GB PF 28/50 done in 0.75s                                                                                                              
+00:00:28 INFO     05.458 GB PF 29/50: z_idx=28, z=19.891137                                                                                                     
+00:00:29 INFO     05.227 GB PF 29/50 done in 0.84s                                                                                                              
+00:00:29 INFO     05.227 GB PF 30/50: z_idx=29, z=19.481507                                                                                                     
+00:00:29 INFO     05.326 GB PF 30/50 done in 0.75s                                                                                                              
+00:00:29 INFO     05.326 GB PF 31/50: z_idx=30, z=19.079908                                                                                                     
+00:00:30 INFO     05.416 GB PF 31/50 done in 0.85s                                                                                                              
+00:00:30 INFO     05.416 GB PF 32/50: z_idx=31, z=18.686185                                                                                                     
+00:00:31 INFO     05.201 GB PF 32/50 done in 0.93s                                                                                                              
+00:00:31 INFO     05.201 GB PF 33/50: z_idx=32, z=18.300181                                                                                                     
+00:00:32 INFO     05.385 GB PF 33/50 done in 0.80s                                                                                                              
+00:00:32 INFO     05.372 GB PF 34/50: z_idx=33, z=17.921746                                                                                                     
+00:00:33 INFO     04.756 GB PF 34/50 done in 0.89s                                                                                                              
+00:00:33 INFO     04.758 GB PF 35/50: z_idx=34, z=17.550732                                                                                                     
+00:00:33 INFO     05.048 GB PF 35/50 done in 0.68s                                                                                                              
+00:00:33 INFO     05.048 GB PF 36/50: z_idx=35, z=17.186992                                                                                                     
+00:00:34 INFO     05.175 GB PF 36/50 done in 0.75s                                                                                                              
+00:00:34 INFO     05.176 GB PF 37/50: z_idx=36, z=16.830384                                                                                                     
+00:00:35 INFO     05.151 GB PF 37/50 done in 0.83s                                                                                                              
+00:00:35 INFO     05.152 GB PF 38/50: z_idx=37, z=16.480769                                                                                                     
+00:00:36 INFO     05.346 GB PF 38/50 done in 0.76s                                                                                                              
+00:00:36 INFO     05.346 GB PF 39/50: z_idx=38, z=16.138008                                                                                                     
+00:00:37 INFO     05.357 GB PF 39/50 done in 0.81s                                                                                                              
+00:00:37 INFO     05.357 GB PF 40/50: z_idx=39, z=15.801969                                                                                                     
+00:00:37 INFO     05.381 GB PF 40/50 done in 0.74s                                                                                                              
+00:00:37 INFO     05.381 GB PF 41/50: z_idx=40, z=15.472519                                                                                                     
+00:00:38 INFO     05.172 GB PF 41/50 done in 0.81s                                                                                                              
+00:00:38 INFO     05.174 GB PF 42/50: z_idx=41, z=15.149528                                                                                                     
+00:00:39 INFO     05.198 GB PF 42/50 done in 0.78s                                                                                                              
+00:00:39 INFO     05.198 GB PF 43/50: z_idx=42, z=14.832871                                                                                                     
+00:00:40 INFO     05.294 GB PF 43/50 done in 0.77s                                                                                                              
+00:00:40 INFO     05.294 GB PF 44/50: z_idx=43, z=14.522422                                                                                                     
+00:00:40 INFO     05.186 GB PF 44/50 done in 0.80s                                                                                                              
+00:00:40 INFO     05.186 GB PF 45/50: z_idx=44, z=14.218061                                                                                                     
+00:00:41 INFO     05.166 GB PF 45/50 done in 0.77s                                                                                                              
+00:00:41 INFO     05.166 GB PF 46/50: z_idx=45, z=13.919668                                                                                                     
+00:00:42 INFO     05.461 GB PF 46/50 done in 0.76s                                                                                                              
+00:00:42 INFO     05.461 GB PF 47/50: z_idx=46, z=13.627125                                                                                                     
+00:00:43 INFO     05.447 GB PF 47/50 done in 0.80s                                                                                                              
+00:00:43 INFO     05.449 GB PF 48/50: z_idx=47, z=13.340319                                                                                                     
+00:00:44 INFO     05.252 GB PF 48/50 done in 0.83s                                                                                                              
+00:00:44 INFO     05.252 GB PF 49/50: z_idx=48, z=13.059136                                                                                                     
+00:00:44 INFO     05.435 GB PF 49/50 done in 0.77s                                                                                                              
+00:00:44 INFO     05.435 GB PF 50/50: z_idx=49, z=12.783467                                                                                                     
+00:00:45 INFO     05.313 GB PF 50/50 done in 0.81s                                                                                                              
+00:00:45 INFO     05.313 GB Completed N PF run in 45.74s                                                                                                        
+00:00:00 INFO     00.166 GB Starting N PF run: z_idx_start=50, N=-1                                                                                             
+00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:09 INFO     00.257 GB PF 1/42: z_idx=50, z=12.513203                                                                                                      
+00:00:10 INFO     01.543 GB PF 1/42 done in 0.55s                                                                                                               
+00:00:10 INFO     01.543 GB PF 2/42: z_idx=51, z=12.248238                                                                                                      
+00:00:10 INFO     02.617 GB PF 2/42 done in 0.55s                                                                                                               
+00:00:10 INFO     02.617 GB PF 3/42: z_idx=52, z=11.988469                                                                                                      
+00:00:11 INFO     03.691 GB PF 3/42 done in 0.55s                                                                                                               
+00:00:11 INFO     03.691 GB PF 4/42: z_idx=53, z=11.733793                                                                                                      
+00:00:11 INFO     04.765 GB PF 4/42 done in 0.55s                                                                                                               
+00:00:11 INFO     04.765 GB PF 5/42: z_idx=54, z=11.484111                                                                                                      
+00:00:12 INFO     05.839 GB PF 5/42 done in 0.55s                                                                                                               
+00:00:12 INFO     05.839 GB PF 6/42: z_idx=55, z=11.239324                                                                                                      
+00:00:13 INFO     06.913 GB PF 6/42 done in 0.55s                                                                                                               
+00:00:13 INFO     06.913 GB PF 7/42: z_idx=56, z=10.999337                                                                                                      
+00:00:13 INFO     07.987 GB PF 7/42 done in 0.55s                                                                                                               
+00:00:13 INFO     07.987 GB PF 8/42: z_idx=57, z=10.764056                                                                                                      
+00:00:14 INFO     09.061 GB PF 8/42 done in 0.56s                                                                                                               
+00:00:14 INFO     09.061 GB PF 9/42: z_idx=58, z=10.533388                                                                                                      
+00:00:14 INFO     10.135 GB PF 9/42 done in 0.56s                                                                                                               
+00:00:14 INFO     10.135 GB PF 10/42: z_idx=59, z=10.307244                                                                                                     
+00:00:15 INFO     11.209 GB PF 10/42 done in 0.56s                                                                                                              
+00:00:15 INFO     11.209 GB PF 11/42: z_idx=60, z=10.085533                                                                                                     
+00:00:15 INFO     12.283 GB PF 11/42 done in 0.56s                                                                                                              
+00:00:15 INFO     12.283 GB PF 12/42: z_idx=61, z=9.868170                                                                                                      
+00:00:16 INFO     13.357 GB PF 12/42 done in 0.56s                                                                                                              
+00:00:16 INFO     13.357 GB PF 13/42: z_idx=62, z=9.655068                                                                                                      
+00:00:16 INFO     14.431 GB PF 13/42 done in 0.55s                                                                                                              
+00:00:16 INFO     14.431 GB PF 14/42: z_idx=63, z=9.446145                                                                                                      
+00:00:17 INFO     15.505 GB PF 14/42 done in 0.57s                                                                                                              
+00:00:17 INFO     15.505 GB PF 15/42: z_idx=64, z=9.241319                                                                                                      
+00:00:18 INFO     16.397 GB PF 15/42 done in 0.59s                                                                                                              
+00:00:18 INFO     16.397 GB PF 16/42: z_idx=65, z=9.040509                                                                                                      
+00:00:19 INFO     04.720 GB PF 16/42 done in 1.69s                                                                                                              
+00:00:19 INFO     04.720 GB PF 17/42: z_idx=66, z=8.843636                                                                                                      
+00:00:20 INFO     04.919 GB PF 17/42 done in 0.75s                                                                                                              
+00:00:20 INFO     04.919 GB PF 18/42: z_idx=67, z=8.650623                                                                                                      
+00:00:21 INFO     05.306 GB PF 18/42 done in 0.73s                                                                                                              
+00:00:21 INFO     05.306 GB PF 19/42: z_idx=68, z=8.461396                                                                                                      
+00:00:22 INFO     05.046 GB PF 19/42 done in 0.77s                                                                                                              
+00:00:22 INFO     05.046 GB PF 20/42: z_idx=69, z=8.275878                                                                                                      
+00:00:22 INFO     05.205 GB PF 20/42 done in 0.77s                                                                                                              
+00:00:22 INFO     05.205 GB PF 21/42: z_idx=70, z=8.093998                                                                                                      
+00:00:23 INFO     05.238 GB PF 21/42 done in 0.81s                                                                                                              
+00:00:23 INFO     05.240 GB PF 22/42: z_idx=71, z=7.915684                                                                                                      
+00:00:24 INFO     05.254 GB PF 22/42 done in 0.84s                                                                                                              
+00:00:24 INFO     05.254 GB PF 23/42: z_idx=72, z=7.740867                                                                                                      
+00:00:25 INFO     05.226 GB PF 23/42 done in 0.81s                                                                                                              
+00:00:25 INFO     05.227 GB PF 24/42: z_idx=73, z=7.569477                                                                                                      
+00:00:26 INFO     05.218 GB PF 24/42 done in 0.80s                                                                                                              
+00:00:26 INFO     05.218 GB PF 25/42: z_idx=74, z=7.401449                                                                                                      
+00:00:26 INFO     05.252 GB PF 25/42 done in 0.77s                                                                                                              
+00:00:26 INFO     05.252 GB PF 26/42: z_idx=75, z=7.236714                                                                                                      
+00:00:27 INFO     05.244 GB PF 26/42 done in 0.80s                                                                                                              
+00:00:27 INFO     05.244 GB PF 27/42: z_idx=76, z=7.075210                                                                                                      
+00:00:28 INFO     05.407 GB PF 27/42 done in 0.82s                                                                                                              
+00:00:28 INFO     05.407 GB PF 28/42: z_idx=77, z=6.916873                                                                                                      
+00:00:29 INFO     05.273 GB PF 28/42 done in 0.86s                                                                                                              
+00:00:29 INFO     05.273 GB PF 29/42: z_idx=78, z=6.761640                                                                                                      
+00:00:30 INFO     05.381 GB PF 29/42 done in 0.84s                                                                                                              
+00:00:30 INFO     05.381 GB PF 30/42: z_idx=79, z=6.609451                                                                                                      
+00:00:31 INFO     05.306 GB PF 30/42 done in 0.82s                                                                                                              
+00:00:31 INFO     05.306 GB PF 31/42: z_idx=80, z=6.460246                                                                                                      
+00:00:31 INFO     05.135 GB PF 31/42 done in 0.80s                                                                                                              
+00:00:31 INFO     05.137 GB PF 32/42: z_idx=81, z=6.313967                                                                                                      
+00:00:32 INFO     05.517 GB PF 32/42 done in 0.72s                                                                                                              
+00:00:32 INFO     05.517 GB PF 33/42: z_idx=82, z=6.170555                                                                                                      
+00:00:33 INFO     05.200 GB PF 33/42 done in 0.83s                                                                                                              
+00:00:33 INFO     05.200 GB PF 34/42: z_idx=83, z=6.029956                                                                                                      
+00:00:34 INFO     05.449 GB PF 34/42 done in 0.80s                                                                                                              
+00:00:34 INFO     05.449 GB PF 35/42: z_idx=84, z=5.892114                                                                                                      
+00:00:35 INFO     05.309 GB PF 35/42 done in 0.88s                                                                                                              
+00:00:35 INFO     05.309 GB PF 36/42: z_idx=85, z=5.756975                                                                                                      
+00:00:35 INFO     05.241 GB PF 36/42 done in 0.80s                                                                                                              
+00:00:35 INFO     05.243 GB PF 37/42: z_idx=86, z=5.624485                                                                                                      
+00:00:36 INFO     05.476 GB PF 37/42 done in 0.81s                                                                                                              
+00:00:36 INFO     05.476 GB PF 38/42: z_idx=87, z=5.494593                                                                                                      
+00:00:37 INFO     05.199 GB PF 38/42 done in 0.86s                                                                                                              
+00:00:37 INFO     05.200 GB PF 39/42: z_idx=88, z=5.367248                                                                                                      
+00:00:38 INFO     05.364 GB PF 39/42 done in 0.82s                                                                                                              
+00:00:38 INFO     05.364 GB PF 40/42: z_idx=89, z=5.242400                                                                                                      
+00:00:39 INFO     05.281 GB PF 40/42 done in 0.83s                                                                                                              
+00:00:39 INFO     05.281 GB PF 41/42: z_idx=90, z=5.120000                                                                                                      
+00:00:40 INFO     05.264 GB PF 41/42 done in 0.85s                                                                                                              
+00:00:40 INFO     05.264 GB PF 42/42: z_idx=91, z=5.000000                                                                                                      
+00:00:40 INFO     05.115 GB PF 42/42 done in 0.81s                                                                                                              
+00:00:40 INFO     05.115 GB Completed N PF run in 40.85s                                                                                                        
