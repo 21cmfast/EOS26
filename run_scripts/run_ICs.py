@@ -38,3 +38,4 @@ ics_dt = time.perf_counter() - ics_start
 logger.info(f"Initial conditions done in {ics_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
 if args.compare:
     compare_ICs(initial_conditions)
+

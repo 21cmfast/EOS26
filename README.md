@@ -317,3 +317,4 @@ This planning table uses the fixed `a=3` central values at `HII_DIM=1400`. It as
 | Perturbed fields | one PF | 4 | 4.54 | 1.50 | 0.10 | 20.08 | 23 | 461.8 | 0.46 | 4.04 |
 | Perturbed halo fields | all halo fields | 1 | 18.12 | 1.50 | 1.31 | 20.93 | 1 | 20.9 | 1.13 | 0.56 |
 | Coevals | one coeval | 4 | 3.92 | 1.50 | 0.39 | 18.75 | 23 | 431.2 | 2.54 | 15.1 |
+

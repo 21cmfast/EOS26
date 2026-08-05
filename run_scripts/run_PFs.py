@@ -37,7 +37,9 @@ with settings.RssSampler() as rss_sampler:
     pf = sim_steps.compute_perturbed_field(z, inputs, cache)
 if args.compare:
    compare_PF(pf, z, z_idx)
+del pf
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed single PF run in {job_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
     
+

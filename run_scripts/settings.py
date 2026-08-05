@@ -532,3 +532,4 @@ def add_common_args(parser: argparse.ArgumentParser) -> None:
         help="Compare the results to the EOS26 reference outputs",
     )
 
+

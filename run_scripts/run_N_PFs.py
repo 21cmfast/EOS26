@@ -48,6 +48,7 @@ for i in range(N):
 
     loop_dt = time.perf_counter() - loop_start
     logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
+    logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
 
     if args.compare:
         compare_PF(pf, z, z_idx)
