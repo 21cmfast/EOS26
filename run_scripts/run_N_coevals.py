@@ -43,12 +43,18 @@ this_batch_redshifts = sorted(np.array(inputs.node_redshifts)[not_done][:N])[::-
 logger.info(f"Redshifts for this batch: {this_batch_redshifts[0]:.2f} to {this_batch_redshifts[-1]:.2f}")
 count = 0
 prev_tick = time.perf_counter()
-for coeval, _ in sim_steps.generate_coevals(
+coeval_generator = sim_steps.generate_coevals(
     this_batch_redshifts,
     inputs,
     cache,
     progressbar=True,
-):
+)
+while count < N:
+    with settings.RssSampler() as rss_sampler:
+        try:
+            coeval, _ = next(coeval_generator)
+        except StopIteration:
+            break
     now_tick = time.perf_counter()
     loop_dt = now_tick - prev_tick
     z_val = getattr(coeval, "redshift", None)
@@ -58,7 +64,7 @@ for coeval, _ in sim_steps.generate_coevals(
         logger.info(f"coeval {count + 1}/{N}: z={z_val:.6f}")
 
     count += 1
-    logger.info(f"coeval {count}/{N} done in {loop_dt:.2f}s")
+    logger.info(f"coeval {count}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
     if args.compare:
         compare_coeval(coeval, cache, inputs)
         xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
@@ -67,10 +73,9 @@ for coeval, _ in sim_steps.generate_coevals(
         if xray_paths:
             logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
     prev_tick = now_tick
-    if count >= N:
-        break
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed N coeval run in {job_dt:.2f}s")
 
     
+

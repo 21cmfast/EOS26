@@ -32,8 +32,10 @@ inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
 logger.info(f"Inputs prepared with {len(inputs.node_redshifts)} redshifts")
 
 ics_start = time.perf_counter()
-initial_conditions = sim_steps.compute_initial_conditions(inputs, cache)
+with settings.RssSampler() as rss_sampler:
+    initial_conditions = sim_steps.compute_initial_conditions(inputs, cache)
 ics_dt = time.perf_counter() - ics_start
-logger.info(f"Initial conditions done in {ics_dt:.2f}s")
+logger.info(f"Initial conditions done in {ics_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
 if args.compare:
     compare_ICs(initial_conditions)
+

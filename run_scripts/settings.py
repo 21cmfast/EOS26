@@ -35,6 +35,7 @@ def inputs_for_run(test: bool, compare: bool) -> tuple[str, dict[str, int]]:
 
 import logging
 import math
+import threading
 import tracemalloc as tr
 from argparse import ArgumentParser, Namespace
 from collections.abc import Iterable
@@ -87,6 +88,39 @@ def fmt_bytes(x: float | int) -> str:
 
     unit = [" B", "KB", "MB", "GB", "TB"][order]
     return f"{x:06.3f} {unit}"
+
+
+class RssSampler:
+    """Sample process RSS in the background while one simulation step runs."""
+
+    def __init__(self, interval_seconds: float = 0.1) -> None:
+        import psutil
+
+        self.interval_seconds = interval_seconds
+        self.process = psutil.Process()
+        self.baseline_rss_bytes = 0
+        self.peak_rss_bytes = 0
+        self._stop = threading.Event()
+        self._thread = threading.Thread(target=self._sample, daemon=True)
+
+    def __enter__(self) -> RssSampler:
+        self.baseline_rss_bytes = self.process.memory_info().rss
+        self.peak_rss_bytes = self.baseline_rss_bytes
+        self._thread.start()
+        return self
+
+    def __exit__(self, *_: object) -> None:
+        self._stop.set()
+        self._thread.join()
+        self.peak_rss_bytes = max(self.peak_rss_bytes, self.process.memory_info().rss)
+
+    def _sample(self) -> None:
+        while not self._stop.wait(self.interval_seconds):
+            self.peak_rss_bytes = max(self.peak_rss_bytes, self.process.memory_info().rss)
+
+    def format_peak(self) -> str:
+        """Return the highest RSS observed while this sampler was active."""
+        return fmt_bytes(self.peak_rss_bytes)
 
 
 class LogRender:
@@ -157,7 +191,6 @@ class LogRender:
             import psutil
 
             self._pr = psutil.Process
-            self._psutil_peak_bytes = 0
         else:
             raise ValueError(f"Invalid memory backend: {mem_backend}")
 
@@ -281,19 +314,18 @@ class LogRender:
         return log_time_display
 
     def render_mem_usage(self) -> str:
-        """Render the current memory usage and the peak seen so far (current | peak)."""
+        """Render the current memory usage."""
         if self.mem_backend == "psutil":
             # RSS as reported by the OS: unlike tracemalloc, this also captures
             # memory allocated by C extensions (e.g. 21cmFAST's FFT/grid buffers),
             # which is most of what these scripts actually use.
             m = self._pr().memory_info().rss
-            self._psutil_peak_bytes = max(self._psutil_peak_bytes, m)
-            return f"{fmt_bytes(m)} | {fmt_bytes(self._psutil_peak_bytes)}"
+            return fmt_bytes(m)
         elif self.mem_backend == "tracemalloc":
             # tracemalloc only tracks Python-level allocations, not native/C
             # buffers, so it substantially undercounts RSS for this workload.
-            m, p = tr.get_traced_memory()
-            return f"{fmt_bytes(m)} | {fmt_bytes(p)}"
+            m, _peak = tr.get_traced_memory()
+            return fmt_bytes(m)
 
 
 class RicherHandler(RichHandler):
@@ -499,4 +531,5 @@ def add_common_args(parser: argparse.ArgumentParser) -> None:
         "--compare", action="store_true", default=False,
         help="Compare the results to the EOS26 reference outputs",
     )
+
 
