@@ -32,6 +32,7 @@ cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
 cache = p21c.OutputCache(cache_dir)
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **_input_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
+initial_conditions = runcache.get_ics()
 
 if N == -1:
     N = len(inputs.node_redshifts) - z_idx_start
@@ -42,16 +43,17 @@ for i in range(N):
     z = inputs.node_redshifts[z_idx]
     logger.info(f"PF {i + 1}/{N}: z_idx={z_idx}, z={z:.6f}")
 
-    pf = sim_steps.compute_perturbed_field(z, inputs, cache, runcache.get_ics())
+    with settings.RssSampler() as rss_sampler:
+        pf = sim_steps.compute_perturbed_field(z, inputs, cache, initial_conditions)
 
     loop_dt = time.perf_counter() - loop_start
-    logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s")
-    # ↑ no need to append peak_rss_gb() — RicherHandler prints RSS on every line
+    logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
 
     if args.compare:
         compare_PF(pf, z, z_idx)
     pf.purge()
     del pf
+    gc.collect()
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed N PF run in {job_dt:.2f}s")

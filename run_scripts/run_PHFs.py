@@ -31,16 +31,17 @@ inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
     **_input_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
 halo_start = time.perf_counter()
-sim_steps.evolve_halos(
-    inputs=inputs,
-    all_redshifts=inputs.node_redshifts,
-    cache=cache,
-    initial_conditions=runcache.get_ics(),
-    progressbar=True,
-)
+with settings.RssSampler() as rss_sampler:
+    sim_steps.evolve_halos(
+        inputs=inputs,
+        all_redshifts=inputs.node_redshifts,
+        cache=cache,
+        initial_conditions=runcache.get_ics(),
+        progressbar=True,
+    )
 halo_dt = time.perf_counter() - halo_start
 job_dt = time.perf_counter() - job_start
-logger.info(f"Halo evolution done in {halo_dt:.2f}s")
+logger.info(f"Halo evolution done in {halo_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
 logger.info(f"Completed PHFs run in {job_dt:.2f}s")
 if args.compare:
     compare_PHFs(cache, inputs)

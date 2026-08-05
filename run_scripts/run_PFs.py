@@ -33,10 +33,11 @@ inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
 z = inputs.node_redshifts[z_idx]
 logger.info(f"Running PF at z_idx={z_idx}, z={z:.6f}")
 
-pf = sim_steps.compute_perturbed_field(z, inputs, cache)
+with settings.RssSampler() as rss_sampler:
+    pf = sim_steps.compute_perturbed_field(z, inputs, cache)
 if args.compare:
    compare_PF(pf, z, z_idx)
 
 job_dt = time.perf_counter() - job_start
-logger.info(f"Completed single PF run in {job_dt:.2f}s")
+logger.info(f"Completed single PF run in {job_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
     
