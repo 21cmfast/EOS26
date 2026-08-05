@@ -32,7 +32,7 @@ cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
 cache = p21c.OutputCache(cache_dir)
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **_input_overrides)
 runcache = RunCache.from_inputs(inputs, cache=cache)
-
+ics = runcache.get_ics()
 if N == -1:
     N = len(inputs.node_redshifts) - z_idx_start
 
@@ -42,7 +42,7 @@ for i in range(N):
     z = inputs.node_redshifts[z_idx]
     logger.info(f"PF {i + 1}/{N}: z_idx={z_idx}, z={z:.6f}")
 
-    pf = sim_steps.compute_perturbed_field(z, inputs, cache, runcache.get_ics())
+    pf = sim_steps.compute_perturbed_field(z, inputs, cache, ics)
 
     loop_dt = time.perf_counter() - loop_start
     logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s")

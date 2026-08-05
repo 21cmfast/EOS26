@@ -2,9 +2,9 @@
 #PBS -N scaling
 #PBS -q normal
 #PBS -l ncpus=16
-#PBS -l mem=20gb
-#PBS -l walltime=3:00:00
-#PBS -l jobfs=80gb
+#PBS -l mem=56gb
+#PBS -l walltime=6:00:00
+#PBS -l jobfs=210gb
 #PBS -l storage=scratch/qp00+gdata/qp00 
 # Run 21cmFAST scaling measurements, then fit their scaling relations. 
 # Usage: bash scaling/scaling_job.sh [HII_DIM ...] 
@@ -33,7 +33,7 @@ cd "$PBS_JOBFS"
 pwd
 ls
 if [[ $# -eq 0 ]]; then
-    dimensions=(200)
+    dimensions=(300)
 else
     dimensions=("$@")
 fi
@@ -48,7 +48,6 @@ for hii_dim in "${dimensions[@]}"; do
         echo "=== Scaling measurement: HII_DIM=${hii_dim}, N_THREADS=${thread_num} ==="
         uv run --no-sync --active --project "$ROOT" scaling/run_scaling.py --hii-dim "$hii_dim" --n-threads "$thread_num"
         cp scaling/results/*.json /scratch/qp00/db9528/EOS26/scaling/results/
-	rm -rf scaling/cache/HII_DIM_*
     done
 done
 
