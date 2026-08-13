@@ -1,0 +1,87 @@
+{
+  "box_len_mpc": 300.0,
+  "coeval_redshift": 5.0,
+  "coevals_averaged": 92,
+  "gc_enabled": false,
+  "hii_dim": 200,
+  "lowres_cell_size_mpc": 1.5,
+  "max_peak_rss_bytes": 7252353024,
+  "max_rss_above_baseline_bytes": 7090200576,
+  "n_threads": 16,
+  "phases": {
+    "coeval": {
+      "average_cpu_cores": 6.60422069543321,
+      "cpu_seconds": 20645.339501822004,
+      "elapsed_seconds": 33.979158859033106,
+      "files": {
+        "BrightnessTemp": {
+          "bytes": 64033376,
+          "file_count": 1
+        },
+        "HaloBox": {
+          "bytes": 160034464,
+          "file_count": 1
+        },
+        "IonizedBox": {
+          "bytes": 128034368,
+          "file_count": 1
+        },
+        "TsBox": {
+          "bytes": 128034120,
+          "file_count": 1
+        },
+        "XraySourceBox": {
+          "bytes": 0,
+          "file_count": 0
+        }
+      },
+      "peak_rss_bytes": 7252353024,
+      "rss_above_baseline_bytes": 7090200576,
+      "total_file_bytes": 480136328
+    },
+    "ics": {
+      "average_cpu_cores": 4.392095874926618,
+      "cpu_seconds": 980.7334195110001,
+      "elapsed_seconds": 223.29508449707646,
+      "files": {
+        "InitialConditions": {
+          "bytes": 3712036664,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 6386397184,
+      "rss_above_baseline_bytes": 6224486400,
+      "total_file_bytes": 3712036664
+    },
+    "pf": {
+      "average_cpu_cores": 1.207180997406637,
+      "cpu_seconds": 151.489140943,
+      "elapsed_seconds": 125.48999799403828,
+      "files": {
+        "PerturbedField": {
+          "bytes": 128033960,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 1451827200,
+      "rss_above_baseline_bytes": 1289805824,
+      "total_file_bytes": 128033960
+    },
+    "phf": {
+      "average_cpu_cores": 4.066900762699721,
+      "cpu_seconds": 1127.8267654410001,
+      "elapsed_seconds": 277.31848679098766,
+      "files": {
+        "HaloCatalog": {
+          "bytes": 1625836904,
+          "file_count": 92
+        }
+      },
+      "peak_rss_bytes": 3395330048,
+      "rss_above_baseline_bytes": 3233189888,
+      "total_file_bytes": 1625836904
+    }
+  },
+  "pid": 1328232,
+  "random_seed": 42
+}
