@@ -90,6 +90,11 @@ def fmt_bytes(x: float | int) -> str:
     return f"{x:06.3f} {unit}"
 
 
+def average_cpu_cores(cpu_seconds: float, wall_seconds: float) -> float:
+    """Return the average number of CPU cores used during an operation."""
+    return cpu_seconds / wall_seconds if wall_seconds else 0.0
+
+
 class RssSampler:
     """Sample process RSS in the background while one simulation step runs."""
 

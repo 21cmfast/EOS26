@@ -10,7 +10,6 @@
 # Usage: qsub pbs_scripts/full_test_job.sh
 
 export PATH="$HOME/.local/bin:$PATH"
-export OMP_PROC_BIND="TRUE"
 cd "$PBS_O_WORKDIR"
 
 set -euo pipefail
@@ -37,6 +36,12 @@ JID="${PBS_JOBID%%.*}"
 echo "=========================================="
 echo " Full test simulation (job ${JID})"
 echo "=========================================="
+
+export OMP_NUM_THREADS=16
+export OMP_DYNAMIC=FALSE
+
+unset OMP_PROC_BIND
+unset OMP_PLACES
 
 echo ""
 echo "=== Writing test parameter template ==="

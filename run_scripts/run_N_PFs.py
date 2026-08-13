@@ -25,6 +25,15 @@ job_start = time.perf_counter()
 logger.info(f"Starting N PF run: z_idx_start={z_idx_start}, N={N}")
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
+import os
+
+print("OMP_NUM_THREADS:", os.environ.get("OMP_NUM_THREADS"))
+print("OMP_PROC_BIND:", os.environ.get("OMP_PROC_BIND"))
+print("OMP_PLACES:", os.environ.get("OMP_PLACES"))
+
+if hasattr(os, "sched_getaffinity"):
+    print("Allowed CPUs:", sorted(os.sched_getaffinity(0)))
+    
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
 cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
@@ -39,6 +48,7 @@ if N == -1:
 
 for i in range(N):
     loop_start = time.perf_counter()
+    loop_cpu_start = time.process_time()
     z_idx = z_idx_start + i
     z = inputs.node_redshifts[z_idx]
     logger.info(f"PF {i + 1}/{N}: z_idx={z_idx}, z={z:.6f}")
@@ -47,8 +57,11 @@ for i in range(N):
         pf = sim_steps.compute_perturbed_field(z, inputs, cache, initial_conditions)
 
     loop_dt = time.perf_counter() - loop_start
-    logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
-    logger.info(f"PF {i + 1}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
+    loop_average_cores = settings.average_cpu_cores(time.process_time() - loop_cpu_start, loop_dt)
+    logger.info(
+        f"PF {i + 1}/{N} done in {loop_dt:.2f}s "
+        f"(average CPU cores: {loop_average_cores:.2f}; peak RSS: {rss_sampler.format_peak()})"
+    )
 
     if args.compare:
         compare_PF(pf, z, z_idx)

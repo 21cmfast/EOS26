@@ -25,6 +25,15 @@ job_start = time.perf_counter()
 logger.info(f"Starting N coeval run: N={N}")
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
+import os
+
+print("OMP_NUM_THREADS:", os.environ.get("OMP_NUM_THREADS"))
+print("OMP_PROC_BIND:", os.environ.get("OMP_PROC_BIND"))
+print("OMP_PLACES:", os.environ.get("OMP_PLACES"))
+
+if hasattr(os, "sched_getaffinity"):
+    print("Allowed CPUs:", sorted(os.sched_getaffinity(0)))
+    
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
 cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
@@ -50,6 +59,7 @@ coeval_generator = sim_steps.generate_coevals(
     progressbar=True,
 )
 while count < N:
+    coeval_cpu_start = time.process_time()
     with settings.RssSampler() as rss_sampler:
         try:
             coeval, _ = next(coeval_generator)
@@ -57,6 +67,7 @@ while count < N:
             break
     now_tick = time.perf_counter()
     loop_dt = now_tick - prev_tick
+    coeval_average_cores = settings.average_cpu_cores(time.process_time() - coeval_cpu_start, loop_dt)
     z_val = getattr(coeval, "redshift", None)
     if z_val is None:
         logger.info(f"coeval {count + 1}/{N}: redshift unavailable")
@@ -64,7 +75,10 @@ while count < N:
         logger.info(f"coeval {count + 1}/{N}: z={z_val:.6f}")
 
     count += 1
-    logger.info(f"coeval {count}/{N} done in {loop_dt:.2f}s (peak RSS: {rss_sampler.format_peak()})")
+    logger.info(
+        f"coeval {count}/{N} done in {loop_dt:.2f}s "
+        f"(average CPU cores: {coeval_average_cores:.2f}; peak RSS: {rss_sampler.format_peak()})"
+    )
     if args.compare:
         compare_coeval(coeval, cache, inputs)
         xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
