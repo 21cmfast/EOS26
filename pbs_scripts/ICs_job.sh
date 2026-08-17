@@ -36,6 +36,6 @@ unset OMP_PROC_BIND
 unset OMP_PLACES
 
 uv run --no-sync --active --project "$ROOT" run_scripts/run_ICs.py \
-    --log-file "logs/EOS26_${JID}_ICs.log" \
+    --log-file "logs/EOS26_ICs_${JID}.log" \
     --compare
 wait
