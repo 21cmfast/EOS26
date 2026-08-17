@@ -1,0 +1,3 @@
+00:00:00 INFO     00.164 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.165 GB Inputs prepared with 92 redshifts                                                                                                   
+00:02:10 INFO     03.660 GB Initial conditions done in 130.56s (average CPU cores: 6.40; peak RSS: 05.994 GB)                                                   

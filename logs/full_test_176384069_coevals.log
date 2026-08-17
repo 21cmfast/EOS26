@@ -1,0 +1,106 @@
+00:00:00 INFO     00.162 GB Starting N coeval run: N=50                                                                                                         
+00:00:00 INFO     00.163 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.163 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.163 GB Already have 0 coevals done, at redshifts: []                                                                                       
+00:00:00 INFO     00.163 GB Redshifts for this batch: 35.37 to 12.78                                                                                            
+00:00:32 INFO     01.024 GB coeval 1/50: z=35.371975                                                                                                            
+00:00:32 INFO     01.024 GB coeval 1/50 done in 32.77s (average CPU cores: 4.86; peak RSS: 04.417 GB)                                                           
+00:00:49 INFO     01.899 GB coeval 2/50: z=34.658799                                                                                                            
+00:00:49 INFO     01.899 GB coeval 2/50 done in 16.93s (average CPU cores: 12.81; peak RSS: 05.416 GB)                                                          
+00:01:11 INFO     02.406 GB coeval 3/50: z=33.959607                                                                                                            
+00:01:11 INFO     02.406 GB coeval 3/50 done in 21.85s (average CPU cores: 13.99; peak RSS: 05.863 GB)                                                          
+00:01:34 INFO     02.615 GB coeval 4/50: z=33.274124                                                                                                            
+00:01:34 INFO     02.615 GB coeval 4/50 done in 23.35s (average CPU cores: 14.03; peak RSS: 06.093 GB)                                                          
+00:02:00 INFO     02.824 GB coeval 5/50: z=32.602082                                                                                                            
+00:02:00 INFO     02.824 GB coeval 5/50 done in 25.87s (average CPU cores: 12.22; peak RSS: 06.360 GB)                                                          
+00:02:27 INFO     03.033 GB coeval 6/50: z=31.943218                                                                                                            
+00:02:27 INFO     03.033 GB coeval 6/50 done in 26.58s (average CPU cores: 12.04; peak RSS: 06.490 GB)                                                          
+00:02:52 INFO     03.241 GB coeval 7/50: z=31.297273                                                                                                            
+00:02:52 INFO     03.241 GB coeval 7/50 done in 25.06s (average CPU cores: 15.14; peak RSS: 06.698 GB)                                                          
+00:03:34 INFO     03.479 GB coeval 8/50: z=30.663993                                                                                                            
+00:03:34 INFO     03.479 GB coeval 8/50 done in 42.22s (average CPU cores: 13.80; peak RSS: 06.997 GB)                                                          
+00:04:19 INFO     03.717 GB coeval 9/50: z=30.043130                                                                                                            
+00:04:19 INFO     03.717 GB coeval 9/50 done in 44.60s (average CPU cores: 13.61; peak RSS: 07.144 GB)                                                          
+00:05:06 INFO     03.924 GB coeval 10/50: z=29.434441                                                                                                           
+00:05:06 INFO     03.924 GB coeval 10/50 done in 46.91s (average CPU cores: 12.64; peak RSS: 07.353 GB)                                                         
+00:05:55 INFO     04.136 GB coeval 11/50: z=28.837688                                                                                                           
+00:05:55 INFO     04.136 GB coeval 11/50 done in 48.87s (average CPU cores: 12.96; peak RSS: 07.563 GB)                                                         
+00:06:42 INFO     04.344 GB coeval 12/50: z=28.252635                                                                                                           
+00:06:42 INFO     04.344 GB coeval 12/50 done in 47.04s (average CPU cores: 13.16; peak RSS: 07.840 GB)                                                         
+00:07:29 INFO     04.551 GB coeval 13/50: z=27.679054                                                                                                           
+00:07:29 INFO     04.551 GB coeval 13/50 done in 47.59s (average CPU cores: 13.43; peak RSS: 08.053 GB)                                                         
+00:08:17 INFO     04.758 GB coeval 14/50: z=27.116719                                                                                                           
+00:08:17 INFO     04.758 GB coeval 14/50 done in 48.18s (average CPU cores: 13.18; peak RSS: 08.281 GB)                                                         
+00:09:05 INFO     04.963 GB coeval 15/50: z=26.565411                                                                                                           
+00:09:05 INFO     04.963 GB coeval 15/50 done in 48.08s (average CPU cores: 13.36; peak RSS: 08.499 GB)                                                         
+00:09:54 INFO     05.174 GB coeval 16/50: z=26.024913                                                                                                           
+00:09:54 INFO     05.174 GB coeval 16/50 done in 48.23s (average CPU cores: 13.50; peak RSS: 08.785 GB)                                                         
+00:10:43 INFO     05.381 GB coeval 17/50: z=25.495013                                                                                                           
+00:10:43 INFO     05.381 GB coeval 17/50 done in 48.80s (average CPU cores: 13.17; peak RSS: 08.992 GB)                                                         
+00:11:31 INFO     05.590 GB coeval 18/50: z=24.975503                                                                                                           
+00:11:31 INFO     05.590 GB coeval 18/50 done in 48.15s (average CPU cores: 13.35; peak RSS: 09.147 GB)                                                         
+00:12:20 INFO     05.710 GB coeval 19/50: z=24.466179                                                                                                           
+00:12:20 INFO     05.710 GB coeval 19/50 done in 49.20s (average CPU cores: 13.31; peak RSS: 09.402 GB)                                                         
+00:13:08 INFO     05.919 GB coeval 20/50: z=23.966842                                                                                                           
+00:13:08 INFO     05.919 GB coeval 20/50 done in 47.72s (average CPU cores: 13.46; peak RSS: 09.517 GB)                                                         
+00:13:57 INFO     06.066 GB coeval 21/50: z=23.477296                                                                                                           
+00:13:57 INFO     06.066 GB coeval 21/50 done in 48.92s (average CPU cores: 13.43; peak RSS: 09.557 GB)                                                         
+00:14:46 INFO     06.124 GB coeval 22/50: z=22.997349                                                                                                           
+00:14:46 INFO     06.124 GB coeval 22/50 done in 49.98s (average CPU cores: 13.22; peak RSS: 09.741 GB)                                                         
+00:15:39 INFO     06.244 GB coeval 23/50: z=22.526813                                                                                                           
+00:15:39 INFO     06.244 GB coeval 23/50 done in 52.10s (average CPU cores: 12.92; peak RSS: 09.792 GB)                                                         
+00:16:28 INFO     06.362 GB coeval 24/50: z=22.065503                                                                                                           
+00:16:28 INFO     06.362 GB coeval 24/50 done in 49.11s (average CPU cores: 13.22; peak RSS: 09.882 GB)                                                         
+00:17:15 INFO     06.481 GB coeval 25/50: z=21.613238                                                                                                           
+00:17:15 INFO     06.481 GB coeval 25/50 done in 47.79s (average CPU cores: 13.70; peak RSS: 10.015 GB)                                                         
+00:18:07 INFO     06.597 GB coeval 26/50: z=21.169841                                                                                                           
+00:18:07 INFO     06.597 GB coeval 26/50 done in 51.05s (average CPU cores: 13.21; peak RSS: 10.085 GB)                                                         
+00:18:55 INFO     06.717 GB coeval 27/50: z=20.735139                                                                                                           
+00:18:55 INFO     06.717 GB coeval 27/50 done in 48.86s (average CPU cores: 13.56; peak RSS: 10.270 GB)                                                         
+00:19:42 INFO     06.778 GB coeval 28/50: z=20.308959                                                                                                           
+00:19:42 INFO     06.778 GB coeval 28/50 done in 46.51s (average CPU cores: 13.68; peak RSS: 10.317 GB)                                                         
+00:20:29 INFO     06.895 GB coeval 29/50: z=19.891137                                                                                                           
+00:20:29 INFO     06.895 GB coeval 29/50 done in 47.50s (average CPU cores: 13.68; peak RSS: 10.416 GB)                                                         
+00:21:16 INFO     06.986 GB coeval 30/50: z=19.481507                                                                                                           
+00:21:16 INFO     06.986 GB coeval 30/50 done in 46.69s (average CPU cores: 13.68; peak RSS: 10.571 GB)                                                         
+00:22:05 INFO     07.104 GB coeval 31/50: z=19.079908                                                                                                           
+00:22:05 INFO     07.104 GB coeval 31/50 done in 48.66s (average CPU cores: 13.27; peak RSS: 10.605 GB)                                                         
+00:22:53 INFO     07.225 GB coeval 32/50: z=18.686185                                                                                                           
+00:22:53 INFO     07.225 GB coeval 32/50 done in 47.82s (average CPU cores: 13.61; peak RSS: 10.765 GB)                                                         
+00:23:45 INFO     07.344 GB coeval 33/50: z=18.300181                                                                                                           
+00:23:45 INFO     07.344 GB coeval 33/50 done in 52.10s (average CPU cores: 12.87; peak RSS: 10.863 GB)                                                         
+00:24:35 INFO     07.373 GB coeval 34/50: z=17.921746                                                                                                           
+00:24:35 INFO     07.373 GB coeval 34/50 done in 50.30s (average CPU cores: 12.86; peak RSS: 11.013 GB)                                                         
+00:25:24 INFO     07.493 GB coeval 35/50: z=17.550732                                                                                                           
+00:25:24 INFO     07.493 GB coeval 35/50 done in 49.45s (average CPU cores: 13.49; peak RSS: 11.036 GB)                                                         
+00:26:14 INFO     07.612 GB coeval 36/50: z=17.186992                                                                                                           
+00:26:14 INFO     07.612 GB coeval 36/50 done in 49.96s (average CPU cores: 11.06; peak RSS: 11.132 GB)                                                         
+00:27:03 INFO     07.731 GB coeval 37/50: z=16.830384                                                                                                           
+00:27:03 INFO     07.731 GB coeval 37/50 done in 49.05s (average CPU cores: 13.42; peak RSS: 11.251 GB)                                                         
+00:27:52 INFO     07.851 GB coeval 38/50: z=16.480769                                                                                                           
+00:27:52 INFO     07.851 GB coeval 38/50 done in 48.83s (average CPU cores: 13.44; peak RSS: 11.429 GB)                                                         
+00:28:41 INFO     07.970 GB coeval 39/50: z=16.138008                                                                                                           
+00:28:41 INFO     07.970 GB coeval 39/50 done in 49.01s (average CPU cores: 13.33; peak RSS: 11.457 GB)                                                         
+00:29:29 INFO     08.028 GB coeval 40/50: z=15.801969                                                                                                           
+00:29:29 INFO     08.028 GB coeval 40/50 done in 47.56s (average CPU cores: 13.37; peak RSS: 11.551 GB)                                                         
+00:30:18 INFO     08.149 GB coeval 41/50: z=15.472519                                                                                                           
+00:30:18 INFO     08.149 GB coeval 41/50 done in 49.33s (average CPU cores: 13.34; peak RSS: 11.668 GB)                                                         
+00:31:07 INFO     08.238 GB coeval 42/50: z=15.149528                                                                                                           
+00:31:07 INFO     08.238 GB coeval 42/50 done in 49.01s (average CPU cores: 13.27; peak RSS: 11.776 GB)                                                         
+00:31:57 INFO     08.357 GB coeval 43/50: z=14.832871                                                                                                           
+00:31:57 INFO     08.357 GB coeval 43/50 done in 49.53s (average CPU cores: 13.29; peak RSS: 11.907 GB)                                                         
+00:32:46 INFO     08.476 GB coeval 44/50: z=14.522422                                                                                                           
+00:32:46 INFO     08.476 GB coeval 44/50 done in 49.63s (average CPU cores: 13.23; peak RSS: 11.969 GB)                                                         
+00:33:36 INFO     08.596 GB coeval 45/50: z=14.218061                                                                                                           
+00:33:36 INFO     08.596 GB coeval 45/50 done in 50.07s (average CPU cores: 13.18; peak RSS: 12.116 GB)                                                         
+00:34:26 INFO     08.715 GB coeval 46/50: z=13.919668                                                                                                           
+00:34:26 INFO     08.715 GB coeval 46/50 done in 49.88s (average CPU cores: 13.20; peak RSS: 12.205 GB)                                                         
+00:35:15 INFO     08.744 GB coeval 47/50: z=13.627125                                                                                                           
+00:35:15 INFO     08.744 GB coeval 47/50 done in 48.86s (average CPU cores: 13.10; peak RSS: 12.378 GB)                                                         
+00:36:05 INFO     08.864 GB coeval 48/50: z=13.340319                                                                                                           
+00:36:05 INFO     08.864 GB coeval 48/50 done in 49.92s (average CPU cores: 13.18; peak RSS: 12.383 GB)                                                         
+00:36:56 INFO     08.983 GB coeval 49/50: z=13.059136                                                                                                           
+00:36:56 INFO     08.983 GB coeval 49/50 done in 51.14s (average CPU cores: 13.04; peak RSS: 12.502 GB)                                                         
+00:37:47 INFO     08.625 GB coeval 50/50: z=12.783467                                                                                                           
+00:37:47 INFO     08.625 GB coeval 50/50 done in 50.61s (average CPU cores: 13.09; peak RSS: 12.621 GB)                                                         
+00:37:48 INFO     08.626 GB Completed N coeval run in 2268.04s                                                                                                  

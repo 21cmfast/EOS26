@@ -1,0 +1,196 @@
+00:00:00 INFO     00.162 GB Starting N PF run: z_idx_start=0, N=30                                                                                              
+00:00:00 INFO     00.163 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.163 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.166 GB PF 1/30: z_idx=0, z=35.371975                                                                                                       
+00:00:24 INFO     01.371 GB PF 1/30 done in 23.95s (average CPU cores: 6.28; peak RSS: 01.401 GB)                                                               
+00:00:24 INFO     01.254 GB PF 2/30: z_idx=1, z=34.658799                                                                                                       
+00:00:26 INFO     01.372 GB PF 2/30 done in 2.33s (average CPU cores: 12.01; peak RSS: 01.402 GB)                                                               
+00:00:27 INFO     01.253 GB PF 3/30: z_idx=2, z=33.959607                                                                                                       
+00:00:29 INFO     01.372 GB PF 3/30 done in 2.26s (average CPU cores: 12.27; peak RSS: 01.402 GB)                                                               
+00:00:29 INFO     01.253 GB PF 4/30: z_idx=3, z=33.274124                                                                                                       
+00:00:31 INFO     01.373 GB PF 4/30 done in 1.69s (average CPU cores: 15.26; peak RSS: 01.403 GB)                                                               
+00:00:31 INFO     01.254 GB PF 5/30: z_idx=4, z=32.602082                                                                                                       
+00:00:34 INFO     01.372 GB PF 5/30 done in 2.63s (average CPU cores: 10.07; peak RSS: 01.403 GB)                                                               
+00:00:34 INFO     01.253 GB PF 6/30: z_idx=5, z=31.943218                                                                                                       
+00:00:36 INFO     01.373 GB PF 6/30 done in 2.13s (average CPU cores: 12.10; peak RSS: 01.403 GB)                                                               
+00:00:36 INFO     01.253 GB PF 7/30: z_idx=6, z=31.297273                                                                                                       
+00:00:39 INFO     01.372 GB PF 7/30 done in 2.25s (average CPU cores: 12.60; peak RSS: 01.403 GB)                                                               
+00:00:39 INFO     01.253 GB PF 8/30: z_idx=7, z=30.663993                                                                                                       
+00:00:41 INFO     01.372 GB PF 8/30 done in 1.85s (average CPU cores: 15.01; peak RSS: 01.402 GB)                                                               
+00:00:41 INFO     01.253 GB PF 9/30: z_idx=8, z=30.043130                                                                                                       
+00:00:43 INFO     01.373 GB PF 9/30 done in 1.68s (average CPU cores: 15.07; peak RSS: 01.432 GB)                                                               
+00:00:43 INFO     01.254 GB PF 10/30: z_idx=9, z=29.434441                                                                                                      
+00:00:45 INFO     01.372 GB PF 10/30 done in 2.14s (average CPU cores: 13.03; peak RSS: 01.403 GB)                                                              
+00:00:45 INFO     01.253 GB PF 11/30: z_idx=10, z=28.837688                                                                                                     
+00:00:47 INFO     01.372 GB PF 11/30 done in 1.64s (average CPU cores: 15.27; peak RSS: 01.373 GB)                                                              
+00:00:47 INFO     01.253 GB PF 12/30: z_idx=11, z=28.252635                                                                                                     
+00:00:49 INFO     01.372 GB PF 12/30 done in 1.74s (average CPU cores: 14.45; peak RSS: 01.373 GB)                                                              
+00:00:49 INFO     01.253 GB PF 13/30: z_idx=12, z=27.679054                                                                                                     
+00:00:51 INFO     01.373 GB PF 13/30 done in 1.52s (average CPU cores: 15.81; peak RSS: 01.403 GB)                                                              
+00:00:51 INFO     01.254 GB PF 14/30: z_idx=13, z=27.116719                                                                                                     
+00:00:52 INFO     01.372 GB PF 14/30 done in 1.51s (average CPU cores: 15.84; peak RSS: 01.402 GB)                                                              
+00:00:53 INFO     01.253 GB PF 15/30: z_idx=14, z=26.565411                                                                                                     
+00:00:54 INFO     01.372 GB PF 15/30 done in 1.70s (average CPU cores: 14.37; peak RSS: 01.402 GB)                                                              
+00:00:55 INFO     01.253 GB PF 16/30: z_idx=15, z=26.024913                                                                                                     
+00:00:57 INFO     01.372 GB PF 16/30 done in 2.40s (average CPU cores: 10.63; peak RSS: 01.403 GB)                                                              
+00:00:57 INFO     01.253 GB PF 17/30: z_idx=16, z=25.495013                                                                                                     
+00:00:59 INFO     01.372 GB PF 17/30 done in 2.18s (average CPU cores: 11.03; peak RSS: 01.402 GB)                                                              
+00:01:00 INFO     01.253 GB PF 18/30: z_idx=17, z=24.975503                                                                                                     
+00:01:02 INFO     01.372 GB PF 18/30 done in 2.06s (average CPU cores: 11.23; peak RSS: 01.402 GB)                                                              
+00:01:02 INFO     01.253 GB PF 19/30: z_idx=18, z=24.466179                                                                                                     
+00:01:04 INFO     01.372 GB PF 19/30 done in 2.42s (average CPU cores: 10.12; peak RSS: 01.402 GB)                                                              
+00:01:05 INFO     01.253 GB PF 20/30: z_idx=19, z=23.966842                                                                                                     
+00:01:07 INFO     01.373 GB PF 20/30 done in 2.45s (average CPU cores: 10.59; peak RSS: 01.403 GB)                                                              
+00:01:07 INFO     01.254 GB PF 21/30: z_idx=20, z=23.477296                                                                                                     
+00:01:10 INFO     01.373 GB PF 21/30 done in 2.52s (average CPU cores: 9.61; peak RSS: 01.403 GB)                                                               
+00:01:10 INFO     01.254 GB PF 22/30: z_idx=21, z=22.997349                                                                                                     
+00:01:13 INFO     01.373 GB PF 22/30 done in 2.50s (average CPU cores: 9.29; peak RSS: 01.403 GB)                                                               
+00:01:13 INFO     01.253 GB PF 23/30: z_idx=22, z=22.526813                                                                                                     
+00:01:15 INFO     01.372 GB PF 23/30 done in 2.52s (average CPU cores: 9.85; peak RSS: 01.402 GB)                                                               
+00:01:16 INFO     01.253 GB PF 24/30: z_idx=23, z=22.065503                                                                                                     
+00:01:18 INFO     01.373 GB PF 24/30 done in 2.21s (average CPU cores: 11.40; peak RSS: 01.403 GB)                                                              
+00:01:18 INFO     01.254 GB PF 25/30: z_idx=24, z=21.613238                                                                                                     
+00:01:20 INFO     01.372 GB PF 25/30 done in 2.32s (average CPU cores: 11.16; peak RSS: 01.402 GB)                                                              
+00:01:21 INFO     01.253 GB PF 26/30: z_idx=25, z=21.169841                                                                                                     
+00:01:23 INFO     01.372 GB PF 26/30 done in 2.24s (average CPU cores: 11.89; peak RSS: 01.402 GB)                                                              
+00:01:24 INFO     01.247 GB PF 27/30: z_idx=26, z=20.735139                                                                                                     
+00:01:26 INFO     01.367 GB PF 27/30 done in 2.26s (average CPU cores: 11.27; peak RSS: 01.397 GB)                                                              
+00:01:26 INFO     01.248 GB PF 28/30: z_idx=27, z=20.308959                                                                                                     
+00:01:28 INFO     01.366 GB PF 28/30 done in 2.40s (average CPU cores: 11.01; peak RSS: 01.397 GB)                                                              
+00:01:29 INFO     01.247 GB PF 29/30: z_idx=28, z=19.891137                                                                                                     
+00:01:31 INFO     01.367 GB PF 29/30 done in 2.30s (average CPU cores: 10.43; peak RSS: 01.397 GB)                                                              
+00:01:31 INFO     01.248 GB PF 30/30: z_idx=29, z=19.481507                                                                                                     
+00:01:33 INFO     01.366 GB PF 30/30 done in 1.92s (average CPU cores: 14.21; peak RSS: 01.396 GB)                                                              
+00:01:33 INFO     01.247 GB Completed N PF run in 93.92s                                                                                                        
+00:00:00 INFO     00.162 GB Starting N PF run: z_idx_start=30, N=30                                                                                             
+00:00:00 INFO     00.163 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.163 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.166 GB PF 1/30: z_idx=30, z=19.079908                                                                                                      
+00:00:25 INFO     01.371 GB PF 1/30 done in 25.62s (average CPU cores: 5.86; peak RSS: 01.401 GB)                                                               
+00:00:26 INFO     01.254 GB PF 2/30: z_idx=31, z=18.686185                                                                                                      
+00:00:28 INFO     01.372 GB PF 2/30 done in 2.44s (average CPU cores: 11.44; peak RSS: 01.402 GB)                                                               
+00:00:28 INFO     01.253 GB PF 3/30: z_idx=32, z=18.300181                                                                                                      
+00:00:30 INFO     01.372 GB PF 3/30 done in 2.11s (average CPU cores: 12.94; peak RSS: 01.403 GB)                                                               
+00:00:31 INFO     01.253 GB PF 4/30: z_idx=33, z=17.921746                                                                                                      
+00:00:33 INFO     01.372 GB PF 4/30 done in 2.16s (average CPU cores: 12.04; peak RSS: 01.402 GB)                                                               
+00:00:33 INFO     01.253 GB PF 5/30: z_idx=34, z=17.550732                                                                                                      
+00:00:35 INFO     01.372 GB PF 5/30 done in 2.18s (average CPU cores: 11.97; peak RSS: 01.402 GB)                                                               
+00:00:36 INFO     01.253 GB PF 6/30: z_idx=35, z=17.186992                                                                                                      
+00:00:38 INFO     01.373 GB PF 6/30 done in 2.27s (average CPU cores: 12.21; peak RSS: 01.403 GB)                                                               
+00:00:38 INFO     01.253 GB PF 7/30: z_idx=36, z=16.830384                                                                                                      
+00:00:40 INFO     01.372 GB PF 7/30 done in 2.17s (average CPU cores: 12.62; peak RSS: 01.402 GB)                                                               
+00:00:40 INFO     01.253 GB PF 8/30: z_idx=37, z=16.480769                                                                                                      
+00:00:43 INFO     01.373 GB PF 8/30 done in 2.04s (average CPU cores: 13.59; peak RSS: 01.403 GB)                                                               
+00:00:43 INFO     01.254 GB PF 9/30: z_idx=38, z=16.138008                                                                                                      
+00:00:45 INFO     01.372 GB PF 9/30 done in 2.08s (average CPU cores: 12.40; peak RSS: 01.403 GB)                                                               
+00:00:45 INFO     01.253 GB PF 10/30: z_idx=39, z=15.801969                                                                                                     
+00:00:47 INFO     01.372 GB PF 10/30 done in 2.24s (average CPU cores: 11.95; peak RSS: 01.402 GB)                                                              
+00:00:48 INFO     01.253 GB PF 11/30: z_idx=40, z=15.472519                                                                                                     
+00:00:50 INFO     01.372 GB PF 11/30 done in 2.39s (average CPU cores: 11.29; peak RSS: 01.402 GB)                                                              
+00:00:50 INFO     01.253 GB PF 12/30: z_idx=41, z=15.149528                                                                                                     
+00:00:52 INFO     01.373 GB PF 12/30 done in 2.23s (average CPU cores: 11.94; peak RSS: 01.403 GB)                                                              
+00:00:53 INFO     01.254 GB PF 13/30: z_idx=42, z=14.832871                                                                                                     
+00:00:55 INFO     01.372 GB PF 13/30 done in 2.14s (average CPU cores: 12.35; peak RSS: 01.403 GB)                                                              
+00:00:55 INFO     01.253 GB PF 14/30: z_idx=43, z=14.522422                                                                                                     
+00:00:58 INFO     01.372 GB PF 14/30 done in 2.37s (average CPU cores: 11.60; peak RSS: 01.402 GB)                                                              
+00:00:58 INFO     01.253 GB PF 15/30: z_idx=44, z=14.218061                                                                                                     
+00:01:00 INFO     01.372 GB PF 15/30 done in 1.95s (average CPU cores: 14.60; peak RSS: 01.402 GB)                                                              
+00:01:00 INFO     01.253 GB PF 16/30: z_idx=45, z=13.919668                                                                                                     
+00:01:02 INFO     01.372 GB PF 16/30 done in 1.51s (average CPU cores: 15.89; peak RSS: 01.403 GB)                                                              
+00:01:02 INFO     01.253 GB PF 17/30: z_idx=46, z=13.627125                                                                                                     
+00:01:04 INFO     01.372 GB PF 17/30 done in 1.65s (average CPU cores: 15.48; peak RSS: 01.402 GB)                                                              
+00:01:04 INFO     01.253 GB PF 18/30: z_idx=47, z=13.340319                                                                                                     
+00:01:06 INFO     01.373 GB PF 18/30 done in 1.55s (average CPU cores: 15.79; peak RSS: 01.402 GB)                                                              
+00:01:06 INFO     01.254 GB PF 19/30: z_idx=48, z=13.059136                                                                                                     
+00:01:08 INFO     01.372 GB PF 19/30 done in 2.15s (average CPU cores: 13.08; peak RSS: 01.403 GB)                                                              
+00:01:08 INFO     01.253 GB PF 20/30: z_idx=49, z=12.783467                                                                                                     
+00:01:11 INFO     01.373 GB PF 20/30 done in 2.42s (average CPU cores: 11.14; peak RSS: 01.403 GB)                                                              
+00:01:11 INFO     01.254 GB PF 21/30: z_idx=50, z=12.513203                                                                                                     
+00:01:14 INFO     01.373 GB PF 21/30 done in 2.49s (average CPU cores: 10.27; peak RSS: 01.403 GB)                                                              
+00:01:14 INFO     01.254 GB PF 22/30: z_idx=51, z=12.248238                                                                                                     
+00:01:17 INFO     01.373 GB PF 22/30 done in 2.78s (average CPU cores: 8.97; peak RSS: 01.403 GB)                                                               
+00:01:17 INFO     01.254 GB PF 23/30: z_idx=52, z=11.988469                                                                                                     
+00:01:19 INFO     01.372 GB PF 23/30 done in 2.25s (average CPU cores: 11.92; peak RSS: 01.403 GB)                                                              
+00:01:19 INFO     01.253 GB PF 24/30: z_idx=53, z=11.733793                                                                                                     
+00:01:22 INFO     01.372 GB PF 24/30 done in 2.14s (average CPU cores: 12.60; peak RSS: 01.402 GB)                                                              
+00:01:22 INFO     01.253 GB PF 25/30: z_idx=54, z=11.484111                                                                                                     
+00:01:24 INFO     01.372 GB PF 25/30 done in 2.25s (average CPU cores: 12.29; peak RSS: 01.402 GB)                                                              
+00:01:24 INFO     01.253 GB PF 26/30: z_idx=55, z=11.239324                                                                                                     
+00:01:26 INFO     01.372 GB PF 26/30 done in 2.04s (average CPU cores: 12.87; peak RSS: 01.402 GB)                                                              
+00:01:27 INFO     01.253 GB PF 27/30: z_idx=56, z=10.999337                                                                                                     
+00:01:28 INFO     01.372 GB PF 27/30 done in 1.57s (average CPU cores: 15.86; peak RSS: 01.402 GB)                                                              
+00:01:28 INFO     01.253 GB PF 28/30: z_idx=57, z=10.764056                                                                                                     
+00:01:31 INFO     01.373 GB PF 28/30 done in 2.27s (average CPU cores: 11.68; peak RSS: 01.403 GB)                                                              
+00:01:31 INFO     01.254 GB PF 29/30: z_idx=58, z=10.533388                                                                                                     
+00:01:33 INFO     01.373 GB PF 29/30 done in 2.31s (average CPU cores: 11.78; peak RSS: 01.403 GB)                                                              
+00:01:33 INFO     01.254 GB PF 30/30: z_idx=59, z=10.307244                                                                                                     
+00:01:36 INFO     01.366 GB PF 30/30 done in 2.36s (average CPU cores: 11.46; peak RSS: 01.396 GB)                                                              
+00:01:36 INFO     01.247 GB Completed N PF run in 96.51s                                                                                                        
+00:00:00 INFO     00.160 GB Starting N PF run: z_idx_start=60, N=-1                                                                                             
+00:00:00 INFO     00.161 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.161 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.165 GB PF 1/32: z_idx=60, z=10.085533                                                                                                      
+00:00:26 INFO     01.360 GB PF 1/32 done in 26.52s (average CPU cores: 5.64; peak RSS: 01.390 GB)                                                               
+00:00:27 INFO     01.243 GB PF 2/32: z_idx=61, z=9.868170                                                                                                       
+00:00:29 INFO     01.362 GB PF 2/32 done in 2.39s (average CPU cores: 10.12; peak RSS: 01.392 GB)                                                               
+00:00:29 INFO     01.242 GB PF 3/32: z_idx=62, z=9.655068                                                                                                       
+00:00:31 INFO     01.362 GB PF 3/32 done in 2.07s (average CPU cores: 12.81; peak RSS: 01.392 GB)                                                               
+00:00:31 INFO     01.243 GB PF 4/32: z_idx=63, z=9.446145                                                                                                       
+00:00:33 INFO     01.361 GB PF 4/32 done in 1.89s (average CPU cores: 14.17; peak RSS: 01.392 GB)                                                               
+00:00:33 INFO     01.242 GB PF 5/32: z_idx=64, z=9.241319                                                                                                       
+00:00:35 INFO     01.362 GB PF 5/32 done in 1.74s (average CPU cores: 15.57; peak RSS: 01.392 GB)                                                               
+00:00:35 INFO     01.242 GB PF 6/32: z_idx=65, z=9.040509                                                                                                       
+00:00:38 INFO     01.362 GB PF 6/32 done in 2.26s (average CPU cores: 13.96; peak RSS: 01.392 GB)                                                               
+00:00:38 INFO     01.243 GB PF 7/32: z_idx=66, z=8.843636                                                                                                       
+00:00:40 INFO     01.361 GB PF 7/32 done in 2.33s (average CPU cores: 12.15; peak RSS: 01.390 GB)                                                               
+00:00:40 INFO     01.241 GB PF 8/32: z_idx=67, z=8.650623                                                                                                       
+00:00:42 INFO     01.360 GB PF 8/32 done in 1.52s (average CPU cores: 15.89; peak RSS: 01.390 GB)                                                               
+00:00:42 INFO     01.241 GB PF 9/32: z_idx=68, z=8.461396                                                                                                       
+00:00:44 INFO     01.361 GB PF 9/32 done in 1.97s (average CPU cores: 12.57; peak RSS: 01.391 GB)                                                               
+00:00:44 INFO     01.242 GB PF 10/32: z_idx=69, z=8.275878                                                                                                      
+00:00:46 INFO     01.361 GB PF 10/32 done in 2.24s (average CPU cores: 11.69; peak RSS: 01.389 GB)                                                              
+00:00:47 INFO     01.242 GB PF 11/32: z_idx=70, z=8.093998                                                                                                      
+00:00:49 INFO     01.361 GB PF 11/32 done in 2.32s (average CPU cores: 11.48; peak RSS: 01.391 GB)                                                              
+00:00:49 INFO     01.242 GB PF 12/32: z_idx=71, z=7.915684                                                                                                      
+00:00:51 INFO     01.361 GB PF 12/32 done in 2.17s (average CPU cores: 12.90; peak RSS: 01.391 GB)                                                              
+00:00:51 INFO     01.242 GB PF 13/32: z_idx=72, z=7.740867                                                                                                      
+00:00:54 INFO     01.360 GB PF 13/32 done in 2.09s (average CPU cores: 11.84; peak RSS: 01.391 GB)                                                              
+00:00:54 INFO     01.241 GB PF 14/32: z_idx=73, z=7.569477                                                                                                      
+00:00:56 INFO     01.360 GB PF 14/32 done in 2.09s (average CPU cores: 11.72; peak RSS: 01.390 GB)                                                              
+00:00:56 INFO     01.241 GB PF 15/32: z_idx=74, z=7.401449                                                                                                      
+00:00:58 INFO     01.361 GB PF 15/32 done in 2.10s (average CPU cores: 11.69; peak RSS: 01.390 GB)                                                              
+00:00:58 INFO     01.241 GB PF 16/32: z_idx=75, z=7.236714                                                                                                      
+00:01:01 INFO     01.360 GB PF 16/32 done in 2.24s (average CPU cores: 11.83; peak RSS: 01.391 GB)                                                              
+00:01:01 INFO     01.241 GB PF 17/32: z_idx=76, z=7.075210                                                                                                      
+00:01:03 INFO     01.361 GB PF 17/32 done in 2.25s (average CPU cores: 11.67; peak RSS: 01.391 GB)                                                              
+00:01:03 INFO     01.241 GB PF 18/32: z_idx=77, z=6.916873                                                                                                      
+00:01:06 INFO     01.361 GB PF 18/32 done in 2.47s (average CPU cores: 10.81; peak RSS: 01.391 GB)                                                              
+00:01:06 INFO     01.242 GB PF 19/32: z_idx=78, z=6.761640                                                                                                      
+00:01:08 INFO     01.361 GB PF 19/32 done in 2.09s (average CPU cores: 12.13; peak RSS: 01.386 GB)                                                              
+00:01:08 INFO     01.241 GB PF 20/32: z_idx=79, z=6.609451                                                                                                      
+00:01:10 INFO     01.360 GB PF 20/32 done in 2.25s (average CPU cores: 12.34; peak RSS: 01.391 GB)                                                              
+00:01:10 INFO     01.241 GB PF 21/32: z_idx=80, z=6.460246                                                                                                      
+00:01:13 INFO     01.360 GB PF 21/32 done in 2.22s (average CPU cores: 12.46; peak RSS: 01.391 GB)                                                              
+00:01:13 INFO     01.241 GB PF 22/32: z_idx=81, z=6.313967                                                                                                      
+00:01:15 INFO     01.360 GB PF 22/32 done in 2.09s (average CPU cores: 12.57; peak RSS: 01.390 GB)                                                              
+00:01:15 INFO     01.241 GB PF 23/32: z_idx=82, z=6.170555                                                                                                      
+00:01:17 INFO     01.361 GB PF 23/32 done in 1.70s (average CPU cores: 14.50; peak RSS: 01.362 GB)                                                              
+00:01:17 INFO     01.242 GB PF 24/32: z_idx=83, z=6.029956                                                                                                      
+00:01:20 INFO     01.360 GB PF 24/32 done in 2.77s (average CPU cores: 10.09; peak RSS: 01.390 GB)                                                              
+00:01:20 INFO     01.241 GB PF 25/32: z_idx=84, z=5.892114                                                                                                      
+00:01:22 INFO     01.360 GB PF 25/32 done in 1.74s (average CPU cores: 14.53; peak RSS: 01.392 GB)                                                              
+00:01:22 INFO     01.241 GB PF 26/32: z_idx=85, z=5.756975                                                                                                      
+00:01:24 INFO     01.360 GB PF 26/32 done in 1.69s (average CPU cores: 14.95; peak RSS: 01.383 GB)                                                              
+00:01:24 INFO     01.241 GB PF 27/32: z_idx=86, z=5.624485                                                                                                      
+00:01:26 INFO     01.360 GB PF 27/32 done in 1.67s (average CPU cores: 15.05; peak RSS: 01.360 GB)                                                              
+00:01:26 INFO     01.241 GB PF 28/32: z_idx=87, z=5.494593                                                                                                      
+00:01:28 INFO     01.360 GB PF 28/32 done in 1.91s (average CPU cores: 15.07; peak RSS: 01.390 GB)                                                              
+00:01:28 INFO     01.241 GB PF 29/32: z_idx=88, z=5.367248                                                                                                      
+00:01:31 INFO     01.361 GB PF 29/32 done in 2.75s (average CPU cores: 9.14; peak RSS: 01.391 GB)                                                               
+00:01:31 INFO     01.241 GB PF 30/32: z_idx=89, z=5.242400                                                                                                      
+00:01:34 INFO     01.360 GB PF 30/32 done in 2.89s (average CPU cores: 9.27; peak RSS: 01.391 GB)                                                               
+00:01:34 INFO     01.241 GB PF 31/32: z_idx=90, z=5.120000                                                                                                      
+00:01:37 INFO     01.360 GB PF 31/32 done in 2.56s (average CPU cores: 10.14; peak RSS: 01.390 GB)                                                              
+00:01:37 INFO     01.240 GB PF 32/32: z_idx=91, z=5.000000                                                                                                      
+00:01:39 INFO     01.360 GB PF 32/32 done in 2.58s (average CPU cores: 10.34; peak RSS: 01.390 GB)                                                              
+00:01:40 INFO     01.241 GB Completed N PF run in 100.07s                                                                                                       

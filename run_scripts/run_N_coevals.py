@@ -87,6 +87,8 @@ while count < N:
         if xray_paths:
             logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
     prev_tick = now_tick
+    del coeval
+    gc.collect()
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed N coeval run in {job_dt:.2f}s")
