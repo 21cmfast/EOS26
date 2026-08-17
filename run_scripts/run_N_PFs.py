@@ -64,7 +64,7 @@ for i in range(N):
     )
 
     if args.compare:
-        compare_PF(pf, z, z_idx)
+        compare_PF(pf, z, z_idx, cache, inputs)
     pf.purge()
     del pf
     gc.collect()

@@ -528,7 +528,7 @@ def _check_brightness_pdf(
 # Public API — one function per simulation phase
 # ══════════════════════════════════════════════════════════════════════════════
 
-def compare_ICs(initial_conditions) -> None:
+def compare_ICs(initial_conditions, cache, inputs) -> None:
     """
     Checks 1-3 for a freshly computed InitialConditions object.
 
@@ -540,13 +540,11 @@ def compare_ICs(initial_conditions) -> None:
     """
     _section("compare_ICs: checks 1-3 on InitialConditions")
 
-    # Resolve the on-disk path via the object's cache path attribute
-    eos_path: Path | None = None
-    for attr in ("path", "_path", "cache_path"):
-        p = getattr(initial_conditions, attr, None)
-        if p is not None:
-            eos_path = Path(p)
-            break
+    # Resolve the on-disk path via RunCache (the InitialConditions object itself
+    # has no reliable "path"/"_path"/"cache_path" attribute on this py21cmfast
+    # version -- compare_PHFs already resolves HaloCatalog paths this way).
+    rc = RunCache.from_inputs(inputs, cache=cache)
+    eos_path = Path(str(rc.InitialConditions)) if rc.InitialConditions is not None else None
     if eos_path is None or not eos_path.exists():
         _pline("WARN", "compare_ICs: cannot resolve on-disk path — skipping file checks")
         return
@@ -578,7 +576,7 @@ def _check_density_stats_ics(eos_path: Path) -> None:
     _pline("PASS", "Check 3 [ICs]: IC density stats OK")
 
 
-def compare_PF(perturbed_field, z: float, z_idx: int) -> None:
+def compare_PF(perturbed_field, z: float, z_idx: int, cache, inputs) -> None:
     """
     Checks 1-3 for a freshly computed PerturbedField at redshift *z*.
 
@@ -591,12 +589,11 @@ def compare_PF(perturbed_field, z: float, z_idx: int) -> None:
     label = f"PF z={z:.4f} idx={z_idx}"
     _section(f"compare_PF: checks 1-3 — {label}")
 
-    eos_path: Path | None = None
-    for attr in ("path", "_path", "cache_path"):
-        p = getattr(perturbed_field, attr, None)
-        if p is not None:
-            eos_path = Path(p)
-            break
+    # Resolve the on-disk path via RunCache (see compare_ICs for why -- the
+    # PerturbedField object itself has no reliable path attribute here).
+    rc = RunCache.from_inputs(inputs, cache=cache)
+    eos_path_obj = rc.PerturbedField.get(z)
+    eos_path = Path(str(eos_path_obj)) if eos_path_obj is not None else None
     if eos_path is None or not eos_path.exists():
         _pline("WARN", f"compare_PF: cannot resolve on-disk path — skipping ({label})")
         return

@@ -28,7 +28,7 @@ print("OMP_PLACES:", os.environ.get("OMP_PLACES"))
 
 if hasattr(os, "sched_getaffinity"):
     print("Allowed CPUs:", sorted(os.sched_getaffinity(0)))
-    
+
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
 cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
@@ -51,5 +51,5 @@ logger.info(
     f"(average CPU cores: {ics_average_cores:.2f}; peak RSS: {rss_sampler.format_peak()})"
 )
 if args.compare:
-    compare_ICs(initial_conditions)
+    compare_ICs(initial_conditions, cache, inputs)
 

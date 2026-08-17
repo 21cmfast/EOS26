@@ -1,4 +1,62 @@
 {
+  "file_size_cubic_fits": {
+    "BrightnessTemp": {
+      "coefficient": 8.00151326952141,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 3,
+      "residual_variance": 761812160.1612579,
+      "x_squared_sum": 794000000000000.0
+    },
+    "HaloBox": {
+      "coefficient": 20.00156259949622,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 3,
+      "residual_variance": 812289221.3199568,
+      "x_squared_sum": 794000000000000.0
+    },
+    "HaloCatalog": {
+      "coefficient": 203.17159149400084,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 4,
+      "residual_variance": 7425944982796.091,
+      "x_squared_sum": 1.6419e+16
+    },
+    "InitialConditions": {
+      "coefficient": 464.00035951665757,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 4,
+      "residual_variance": 1084934422.7369883,
+      "x_squared_sum": 1.6419e+16
+    },
+    "IonizedBox": {
+      "coefficient": 16.001558246851385,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 3,
+      "residual_variance": 807770235.8085642,
+      "x_squared_sum": 794000000000000.0
+    },
+    "PerturbedField": {
+      "coefficient": 16.000333002009867,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 4,
+      "residual_variance": 930805976.9780178,
+      "x_squared_sum": 1.6419e+16
+    },
+    "TsBox": {
+      "coefficient": 16.00154700251889,
+      "exponent": 3.0,
+      "kind": "fixed_cubic",
+      "n": 3,
+      "residual_variance": 796154532.9974099,
+      "x_squared_sum": 794000000000000.0
+    }
+  },
   "file_size_fits": {
     "BrightnessTemp": {
       "coefficient": 8.173828646466985,
@@ -19,22 +77,22 @@
       "n": 3
     },
     "HaloCatalog": {
-      "coefficient": 223.1473156690321,
-      "exponent": 2.983170626857266,
+      "coefficient": 216.65531696922827,
+      "exponent": 2.989076532066424,
       "kind": "power_law",
-      "log_residual_variance": 2.8744418440335127e-05,
-      "log_sxx": 0.6172679762079822,
-      "log_u_bar": 5.202423342397442,
-      "n": 3
+      "log_residual_variance": 3.378515395949635e-05,
+      "log_sxx": 1.3856564614546418,
+      "log_u_bar": 5.4554695314036294,
+      "n": 4
     },
     "InitialConditions": {
-      "coefficient": 464.1893474178684,
-      "exponent": 2.9999274593516314,
+      "coefficient": 464.13411071669964,
+      "exponent": 2.9999512640529167,
       "kind": "power_law",
-      "log_residual_variance": 2.910304623964233e-10,
-      "log_sxx": 0.6172679762079822,
-      "log_u_bar": 5.202423342397442,
-      "n": 3
+      "log_residual_variance": 4.6090234592621474e-10,
+      "log_sxx": 1.3856564614546418,
+      "log_u_bar": 5.4554695314036294,
+      "n": 4
     },
     "IonizedBox": {
       "coefficient": 16.17824926523091,
@@ -46,13 +104,13 @@
       "n": 3
     },
     "PerturbedField": {
-      "coefficient": 16.176123911029674,
-      "exponent": 2.998053556804305,
+      "coefficient": 16.124559253611736,
+      "exponent": 2.9986922247569576,
       "kind": "power_law",
-      "log_residual_variance": 2.0941862099606125e-07,
-      "log_sxx": 0.6172679762079822,
-      "log_u_bar": 5.202423342397442,
-      "n": 3
+      "log_residual_variance": 3.3173171695117813e-07,
+      "log_sxx": 1.3856564614546418,
+      "log_u_bar": 5.4554695314036294,
+      "n": 4
     },
     "TsBox": {
       "coefficient": 16.17695735666978,
@@ -67,207 +125,352 @@
   "phase_fits": {
     "coeval": {
       "elapsed_seconds": {
-        "coefficient": 3.013667620105766e-05,
-        "exponent": 2.6899001274059886,
+        "coefficient": 1.7784350657430228e-06,
+        "exponent": 3.25761497608526,
         "kind": "power_law",
-        "log_residual_variance": 0.0007887013483070927,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 0.1555843721302929,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "elapsed_seconds_cubic": {
+        "coefficient": 1.1843044754357684e-05,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 11660.935902190065,
+        "x_squared_sum": 1.6419e+16
       },
       "peak_rss_bytes": {
-        "intercept": 328434531.4769802,
+        "intercept": 1939601291.317318,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 1.98504641930232e+16,
-        "slope": 913.1773001546961,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 4.0976681275934044e+18,
+        "slope": 766.0537668741039,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "peak_rss_bytes_cubic": {
+        "coefficient": 785.0729402648152,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 5.768107065363927e+18,
+        "x_squared_sum": 1.6419e+16
       },
       "peak_rss_bytes_power_law": {
-        "coefficient": 3066.056587107362,
-        "exponent": 2.787047170519218,
+        "coefficient": 3498.452689550038,
+        "exponent": 2.7606699555168417,
         "kind": "power_law",
-        "log_residual_variance": 0.0009204373402234392,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 0.0008627250032481891,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
       },
       "rss_above_baseline_bytes": {
-        "intercept": 166349354.43093872,
+        "intercept": 1777488601.047821,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 1.985302099567778e+16,
-        "slope": 913.1807964640884,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 4.097451123415597e+18,
+        "slope": 766.0571803963275,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "rss_above_baseline_bytes_cubic": {
+        "coefficient": 783.4867232898471,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 5.281618043361126e+18,
+        "x_squared_sum": 1.6419e+16
       },
       "storage_bytes": {
-        "coefficient": 44.52899917185362,
-        "exponent": 2.997875156965077,
+        "coefficient": 60.70724483046336,
+        "exponent": 2.997916498632608,
         "kind": "power_law",
-        "log_residual_variance": 2.495527217730495e-07,
+        "log_residual_variance": 2.399393982622523e-07,
         "log_sxx": 0.6172679762079822,
         "log_u_bar": 5.202423342397442,
         "n": 3
+      },
+      "storage_bytes_cubic": {
+        "coefficient": 60.00618111838791,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 3,
+        "residual_variance": 12710114239.438501,
+        "x_squared_sum": 794000000000000.0
       }
     },
     "ics": {
       "elapsed_seconds": {
-        "coefficient": 0.713869969562379,
-        "exponent": 1.1279501167006083,
+        "coefficient": 0.03767373404665605,
+        "exponent": 1.720214717961416,
         "kind": "power_law",
-        "log_residual_variance": 0.02420878669851149,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 0.16198666969519834,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "elapsed_seconds_cubic": {
+        "coefficient": 1.8110147041497946e-05,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 9021.049661526336,
+        "x_squared_sum": 1.6419e+16
       },
       "peak_rss_bytes": {
-        "intercept": 145046179.1233883,
+        "intercept": 156555491.1319809,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 849603920655062.9,
-        "slope": 777.4145428508288,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 633299299679760.0,
+        "slope": 776.3623981333669,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "peak_rss_bytes_cubic": {
+        "coefficient": 777.8975363313235,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 2.0203753724426144e+16,
+        "x_squared_sum": 1.6419e+16
       },
       "rss_above_baseline_bytes": {
-        "intercept": -10321520.206260681,
+        "intercept": -55123.783573150635,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 304794949592848.7,
-        "slope": 777.2588609060773,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 316915674449183.8,
+        "slope": 776.3164021809583,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "rss_above_baseline_bytes_cubic": {
+        "coefficient": 776.315861652963,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 211279568758913.53,
+        "x_squared_sum": 1.6419e+16
       },
       "storage_bytes": {
-        "coefficient": 464.1893474178684,
-        "exponent": 2.9999274593516314,
+        "coefficient": 464.13411071669964,
+        "exponent": 2.9999512640529167,
         "kind": "power_law",
-        "log_residual_variance": 2.910304623964233e-10,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 4.6090234592621474e-10,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "storage_bytes_cubic": {
+        "coefficient": 464.00035951665757,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 1084934422.7369883,
+        "x_squared_sum": 1.6419e+16
       }
     },
     "pf": {
       "elapsed_seconds": {
-        "coefficient": 93.86866215564751,
-        "exponent": 0.05964527324720981,
+        "coefficient": 59.150103504838796,
+        "exponent": 0.15218027068207118,
         "kind": "power_law",
-        "log_residual_variance": 0.0003592498118174099,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 0.0046139137601694255,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "elapsed_seconds_cubic": {
+        "coefficient": 1.5133276616661095e-06,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 12553.919787628247,
+        "x_squared_sum": 1.6419e+16
       },
       "peak_rss_bytes": {
-        "intercept": 169988971.0202577,
+        "intercept": 169526909.1698656,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 56344158282465.53,
-        "slope": 160.0151733038674,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 28043266607135.074,
+        "slope": 160.04823301441328,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "peak_rss_bytes_cubic": {
+        "coefficient": 161.7105652134722,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 2.321405395634834e+16,
+        "x_squared_sum": 1.6419e+16
       },
       "rss_above_baseline_bytes": {
-        "intercept": 7904472.869244814,
+        "intercept": 7510913.039970398,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 53977403465924.03,
-        "slope": 160.01451703867403,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 27016897524429.207,
+        "slope": 160.04629304248522,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "rss_above_baseline_bytes_cubic": {
+        "coefficient": 160.11994289932395,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 63542482978391.99,
+        "x_squared_sum": 1.6419e+16
       },
       "storage_bytes": {
-        "coefficient": 16.176123911029674,
-        "exponent": 2.998053556804305,
+        "coefficient": 16.124559253611736,
+        "exponent": 2.9986922247569576,
         "kind": "power_law",
-        "log_residual_variance": 2.0941862099606125e-07,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 3.3173171695117813e-07,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "storage_bytes_cubic": {
+        "coefficient": 16.000333002009867,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 930805976.9780178,
+        "x_squared_sum": 1.6419e+16
       }
     },
     "phf": {
       "elapsed_seconds": {
-        "coefficient": 1.2404194396592765,
-        "exponent": 1.0614373124010807,
+        "coefficient": 0.08535745572961076,
+        "exponent": 1.5989150770963865,
         "kind": "power_law",
-        "log_residual_variance": 0.08349501879104859,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 0.18320398560823561,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "elapsed_seconds_cubic": {
+        "coefficient": 1.9289524022654568e-05,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 19340.974011961516,
+        "x_squared_sum": 1.6419e+16
       },
       "peak_rss_bytes": {
-        "intercept": 171655175.54327774,
+        "intercept": 146829677.96634483,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 294365824283336.1,
-        "slope": 402.3665771491713,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 191634422274058.97,
+        "slope": 406.8624127710225,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "peak_rss_bytes_cubic": {
+        "coefficient": 408.3021824374201,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 1.7527846206942614e+16,
+        "x_squared_sum": 1.6419e+16
       },
       "rss_above_baseline_bytes": {
-        "intercept": 9608846.379374504,
+        "intercept": -15239319.816274643,
         "kind": "affine",
-        "n": 3,
-        "residual_variance": 297427481932043.06,
-        "slope": 402.3609196906077,
-        "sxx": 362000000000000.0,
-        "x_bar": 12000000.0
+        "n": 4,
+        "residual_variance": 191974712318351.4,
+        "slope": 406.8606702066155,
+        "sxx": 9938750000000000.0,
+        "x_bar": 40250000.0
+      },
+      "rss_above_baseline_bytes_cubic": {
+        "coefficient": 406.7112378118034,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 315419987186481.3,
+        "x_squared_sum": 1.6419e+16
       },
       "storage_bytes": {
-        "coefficient": 223.1473156690321,
-        "exponent": 2.983170626857266,
+        "coefficient": 216.65531696922827,
+        "exponent": 2.989076532066424,
         "kind": "power_law",
-        "log_residual_variance": 2.8744418440335127e-05,
-        "log_sxx": 0.6172679762079822,
-        "log_u_bar": 5.202423342397442,
-        "n": 3
+        "log_residual_variance": 3.378515395949635e-05,
+        "log_sxx": 1.3856564614546418,
+        "log_u_bar": 5.4554695314036294,
+        "n": 4
+      },
+      "storage_bytes_cubic": {
+        "coefficient": 203.17159149400084,
+        "exponent": 3.0,
+        "kind": "fixed_cubic",
+        "n": 4,
+        "residual_variance": 7425944982796.091,
+        "x_squared_sum": 1.6419e+16
       }
     }
   },
   "source_dimensions": [
     100,
     200,
-    300
+    300,
+    500
   ],
   "targets": {
     "1200": {
       "file_sizes": {
         "BrightnessTemp": 13746784900.76165,
         "HaloBox": 34480029433.49323,
-        "HaloCatalog": 342227350394.35394,
-        "InitialConditions": 801706753452.7802,
+        "HaloCatalog": 346479666043.2929,
+        "InitialConditions": 801746658618.249,
         "IonizedBox": 27568293527.538857,
-        "PerturbedField": 27569237312.92228,
+        "PerturbedField": 27606078186.43985,
         "TsBox": 27568867194.00636
       },
       "phases": {
         "coeval": {
-          "elapsed_seconds": 5778.104313110083,
-          "peak_rss_bytes": 1578298809198.792,
-          "peak_rss_bytes_power_law": 1170586591674.8306,
-          "rss_above_baseline_bytes": 1578142765644.3757,
-          "storage_bytes": 75795582585.43394
+          "elapsed_seconds": 19090.836316629062,
+          "elapsed_seconds_cubic": 20464.78133553008,
+          "peak_rss_bytes": 1325680510449.7688,
+          "peak_rss_bytes_cubic": 1356606040777.6006,
+          "peak_rss_bytes_power_law": 1107845400031.0872,
+          "rss_above_baseline_bytes": 1325524296325.9016,
+          "rss_above_baseline_bytes_cubic": 1353865057844.8557,
+          "storage_bytes": 103363875164.25441,
+          "storage_bytes_cubic": 103690680972.57431
         },
         "ics": {
-          "elapsed_seconds": 2122.178736095444,
-          "peak_rss_bytes": 1343517376225.3555,
-          "rss_above_baseline_bytes": 1343092990125.4954,
-          "storage_bytes": 801706753452.7802
+          "elapsed_seconds": 7462.624100150144,
+          "elapsed_seconds_cubic": 31294.334087708452,
+          "peak_rss_bytes": 1341710779465.59,
+          "peak_rss_bytes_cubic": 1344206942780.527,
+          "rss_above_baseline_bytes": 1341474687844.9124,
+          "rss_above_baseline_bytes_cubic": 1341473808936.32,
+          "storage_bytes": 801746658618.249,
+          "storage_bytes_cubic": 801792621244.7843
         },
         "pf": {
-          "elapsed_seconds": 143.27790907453598,
-          "peak_rss_bytes": 276676208440.10315,
-          "rss_above_baseline_bytes": 276512989915.698,
-          "storage_bytes": 27569237312.92228
+          "elapsed_seconds": 173.99875644452283,
+          "elapsed_seconds_cubic": 2615.0301993590374,
+          "peak_rss_bytes": 276732873558.076,
+          "peak_rss_bytes_cubic": 279435856688.87994,
+          "rss_above_baseline_bytes": 276567505290.4544,
+          "rss_above_baseline_bytes_cubic": 276687261330.0318,
+          "storage_bytes": 27606078186.43985,
+          "storage_bytes_cubic": 27648575427.47305
         },
         "phf": {
-          "elapsed_seconds": 2301.0519835329305,
-          "peak_rss_bytes": 695461100489.3113,
-          "rss_above_baseline_bytes": 695289278071.7495,
-          "storage_bytes": 342227350394.35394
+          "elapsed_seconds": 7154.689334617531,
+          "elapsed_seconds_cubic": 33332.297511147095,
+          "peak_rss_bytes": 703205078946.2932,
+          "peak_rss_bytes_cubic": 705546171251.8619,
+          "rss_above_baseline_bytes": 703039998797.2153,
+          "rss_above_baseline_bytes_cubic": 702797018938.7963,
+          "storage_bytes": 346479666043.2929,
+          "storage_bytes_cubic": 351080510101.6334
         }
       }
     },
@@ -275,37 +478,53 @@
       "file_sizes": {
         "BrightnessTemp": 21816528531.28758,
         "HaloBox": 54739670767.12011,
-        "HaloCatalog": 542036348914.2968,
-        "InitialConditions": 1273066395890.0474,
+        "HaloCatalog": 549271202150.86945,
+        "InitialConditions": 1273134434878.3513,
         "IonizedBox": 43764138238.689285,
-        "PerturbedField": 43765794068.405106,
+        "PerturbedField": 43828593221.234276,
         "TsBox": 43765144710.44931
       },
       "phases": {
         "coeval": {
-          "elapsed_seconds": 8747.12949371744,
-          "peak_rss_bytes": 2506086946155.9634,
-          "peak_rss_bytes_power_law": 1798818750263.899,
-          "rss_above_baseline_bytes": 2505934454851.8896,
-          "storage_bytes": 120321160732.03818
+          "elapsed_seconds": 31543.640795672938,
+          "elapsed_seconds_cubic": 32497.314805957485,
+          "peak_rss_bytes": 2103991137593.8584,
+          "peak_rss_bytes_cubic": 2154240148086.6528,
+          "peak_rss_bytes_power_law": 1695497483489.8557,
+          "rss_above_baseline_bytes": 2103838391608.5703,
+          "rss_above_baseline_bytes_cubic": 2149887568707.3403,
+          "storage_bytes": 164085297213.2416,
+          "storage_bytes_cubic": 164656960988.8564
         },
         "ics": {
-          "elapsed_seconds": 2525.193122502538,
-          "peak_rss_bytes": 2133370551761.7974,
-          "rss_above_baseline_bytes": 2132787992806.0698,
-          "storage_bytes": 1273066395890.0474
+          "elapsed_seconds": 9728.691212721702,
+          "elapsed_seconds_cubic": 49694.24348187036,
+          "peak_rss_bytes": 2130494975969.0908,
+          "peak_rss_bytes_cubic": 2134550839693.1519,
+          "rss_above_baseline_bytes": 2130212152460.7659,
+          "rss_above_baseline_bytes_cubic": 2130210724375.7305,
+          "storage_bytes": 1273134434878.3513,
+          "storage_bytes_cubic": 1273216986513.7083
         },
         "pf": {
-          "elapsed_seconds": 144.60133235902856,
-          "peak_rss_bytes": 439251624516.83246,
-          "rss_above_baseline_bytes": 439087739226.9908,
-          "storage_bytes": 43765794068.405106
+          "elapsed_seconds": 178.1287929410538,
+          "elapsed_seconds_cubic": 4152.571103611805,
+          "peak_rss_bytes": 439341878300.7199,
+          "peak_rss_bytes_cubic": 443733790945.7677,
+          "rss_above_baseline_bytes": 439174539021.6194,
+          "rss_above_baseline_bytes_cubic": 439369123315.74493,
+          "storage_bytes": 43828593221.234276,
+          "storage_bytes_cubic": 43904913757.515076
         },
         "phf": {
-          "elapsed_seconds": 2710.105830061322,
-          "peak_rss_bytes": 1104265542872.8691,
-          "rss_above_baseline_bytes": 1104087972477.407,
-          "storage_bytes": 542036348914.2968
+          "elapsed_seconds": 9154.465919462338,
+          "elapsed_seconds_cubic": 52930.45391816414,
+          "peak_rss_bytes": 1116577290321.652,
+          "peak_rss_bytes_cubic": 1120381188608.2808,
+          "rss_above_baseline_bytes": 1116410439727.1367,
+          "rss_above_baseline_bytes_cubic": 1116015636555.5886,
+          "storage_bytes": 549271202150.86945,
+          "storage_bytes_cubic": 557502847059.5383
         }
       }
     }

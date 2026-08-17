@@ -1,0 +1,127 @@
+{
+  "box_len_mpc": 750.0,
+  "coeval_redshift": 5.0,
+  "coevals_averaged": 92,
+  "gc_enabled": false,
+  "hii_dim": 500,
+  "lowres_cell_size_mpc": 1.5,
+  "max_peak_rss_bytes": 97223725056,
+  "max_rss_above_baseline_bytes": 97062051840,
+  "n_threads": 16,
+  "phases": {
+    "coeval": {
+      "average_cpu_cores": 6.0264329936061145,
+      "coevals_completed": 5,
+      "coevals_target": 92,
+      "cpu_seconds": 45845.931793248004,
+      "elapsed_seconds": 1521.4947827973635,
+      "files": {
+        "BrightnessTemp": {
+          "bytes": 0,
+          "file_count": 0
+        },
+        "HaloBox": {
+          "bytes": 0,
+          "file_count": 0
+        },
+        "IonizedBox": {
+          "bytes": 0,
+          "file_count": 0
+        },
+        "TsBox": {
+          "bytes": 0,
+          "file_count": 0
+        },
+        "XraySourceBox": {
+          "bytes": 0,
+          "file_count": 0
+        }
+      },
+      "peak_rss_bytes": 97223725056,
+      "rss_above_baseline_bytes": 97062051840,
+      "samples": [
+        {
+          "average_cpu_cores": 6.317261722441672,
+          "cpu_seconds": 39875.678583383,
+          "elapsed_seconds": 6312.177702203975,
+          "index": 1,
+          "peak_rss_bytes": 97223725056
+        },
+        {
+          "average_cpu_cores": 4.804512957465234,
+          "cpu_seconds": 1137.4050315839995,
+          "elapsed_seconds": 236.73680176399648,
+          "index": 2,
+          "peak_rss_bytes": 86736433152
+        },
+        {
+          "average_cpu_cores": 4.607439597658799,
+          "cpu_seconds": 1481.2777483809987,
+          "elapsed_seconds": 321.496943580918,
+          "index": 3,
+          "peak_rss_bytes": 88738586624
+        },
+        {
+          "average_cpu_cores": 4.5558836130690805,
+          "cpu_seconds": 1607.0416118430003,
+          "elapsed_seconds": 352.7398301468929,
+          "index": 4,
+          "peak_rss_bytes": 90238812160
+        },
+        {
+          "average_cpu_cores": 4.5392299420425735,
+          "cpu_seconds": 1744.528818057006,
+          "elapsed_seconds": 384.32263629103545,
+          "index": 5,
+          "peak_rss_bytes": 91739258880
+        }
+      ],
+      "total_elapsed_seconds": 7607.473913986818,
+      "total_file_bytes": 0
+    },
+    "ics": {
+      "average_cpu_cores": 6.278033259200696,
+      "cpu_seconds": 14097.251892636,
+      "elapsed_seconds": 2245.48856474692,
+      "files": {
+        "InitialConditions": {
+          "bytes": 58000036664,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 97198481408,
+      "rss_above_baseline_bytes": 97036492800,
+      "total_file_bytes": 58000036664
+    },
+    "pf": {
+      "average_cpu_cores": 2.507965397194475,
+      "cpu_seconds": 403.20002726,
+      "elapsed_seconds": 160.76777921698522,
+      "files": {
+        "PerturbedField": {
+          "bytes": 2000033960,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 20175708160,
+      "rss_above_baseline_bytes": 20013420544,
+      "total_file_bytes": 2000033960
+    },
+    "phf": {
+      "average_cpu_cores": 2.137568369261722,
+      "cpu_seconds": 5074.779020662,
+      "elapsed_seconds": 2374.089686972089,
+      "files": {
+        "HaloCatalog": {
+          "bytes": 25395772336,
+          "file_count": 92
+        }
+      },
+      "peak_rss_bytes": 51007864832,
+      "rss_above_baseline_bytes": 50845581312,
+      "total_file_bytes": 25395772336
+    }
+  },
+  "pid": 1231531,
+  "random_seed": 42
+}

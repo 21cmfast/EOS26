@@ -7,6 +7,7 @@ import argparse
 import json
 from pathlib import Path
 import re
+import sys
 from typing import Any
 
 import matplotlib
@@ -92,15 +93,65 @@ def parse_args() -> argparse.Namespace:
 def read_records(results_dir: Path) -> list[dict[str, Any]]:
     records = []
     for path in sorted(results_dir.glob("scaling_HII_DIM_*.json")):
-        with path.open() as handle:
-            record = json.load(handle)
+        try:
+            with path.open() as handle:
+                record = json.load(handle)
+        except json.JSONDecodeError as error:
+            # A walltime kill or an interrupted copy from the cluster can leave a
+            # malformed JSON file on disk. write_results_json() writes atomically
+            # (temp file + rename), so a corrupt file here reflects damage introduced
+            # after that write (e.g. during transfer); skip it rather than aborting
+            # the whole scaling-relation run over one bad file.
+            print(f"warning: skipping malformed JSON {path}: {error}", file=sys.stderr)
+            continue
         if not record.get("phases"):
             continue
         records.append(record)
+    records = select_canonical_records(records)
     records.sort(key=lambda record: record["hii_dim"])
     if len({record["hii_dim"] for record in records}) < 2:
         raise RuntimeError("At least two distinct HII_DIM result files are required")
     return records
+
+
+def select_canonical_records(
+    records: list[dict[str, Any]], reference_n_threads: int = 16
+) -> list[dict[str, Any]]:
+    """Pick a single measurement per HII_DIM, preferring reference_n_threads runs.
+
+    A results directory can mix a fixed-HII_DIM thread-count scan with the
+    HII_DIM scan itself, i.e. multiple N_THREADS files at the same HII_DIM.
+    The scaling relation assumes one measurement per HII_DIM at a consistent
+    thread count; silently including every N_THREADS variant would let
+    thread-count-driven timing differences masquerade as HII_DIM scaling.
+    """
+    by_dim: dict[int, list[dict[str, Any]]] = {}
+    for record in records:
+        by_dim.setdefault(record["hii_dim"], []).append(record)
+
+    selected = []
+    for hii_dim, group in sorted(by_dim.items()):
+        if len(group) == 1:
+            selected.append(group[0])
+            continue
+        reference = [r for r in group if r.get("n_threads") == reference_n_threads]
+        available = sorted(r.get("n_threads") for r in group)
+        if len(reference) == 1:
+            print(
+                f"warning: HII_DIM={hii_dim} has multiple N_THREADS runs {available}; "
+                f"using N_THREADS={reference_n_threads} for the scaling relation and "
+                "ignoring the others",
+                file=sys.stderr,
+            )
+            selected.append(reference[0])
+        else:
+            print(
+                f"warning: HII_DIM={hii_dim} has multiple N_THREADS runs {available} "
+                f"with no unique N_THREADS={reference_n_threads} run; skipping this "
+                "HII_DIM entirely (ambiguous which thread count to use)",
+                file=sys.stderr,
+            )
+    return selected
 
 
 def fit_power_law(dimensions: np.ndarray, values: np.ndarray) -> dict[str, float]:
@@ -290,6 +341,32 @@ def phase_storage_bytes(phase: str, result: dict[str, Any]) -> int:
     return sum(item["bytes"] for name, item in files.items() if name not in excluded)
 
 
+def phase_incomplete(phase: str, result: dict[str, Any]) -> bool:
+    """True if a checkpointed phase was cut short (e.g. by walltime) before finishing.
+
+    Only the incrementally-checkpointed "coeval" phase records "coevals_completed"/
+    "coevals_target"; older result files and other phases lack these keys and are
+    therefore always treated as complete.
+    """
+    completed = result.get("coevals_completed")
+    target = result.get("coevals_target")
+    return phase == "coeval" and completed is not None and target is not None and completed < target
+
+
+def format_phase_storage_cell(phase: str, result: dict[str, Any], formatter: Any) -> str:
+    """Format a phase's measured storage, or a clear placeholder if not measured.
+
+    A coeval phase stopped early by walltime never reaches the point of writing its
+    output boxes, so phase_storage_bytes() is legitimately 0 rather than a bug.
+    """
+    if phase_incomplete(phase, result):
+        return f"n/a (partial run: {result['coevals_completed']}/{result['coevals_target']} coevals)"
+    bytes_ = phase_storage_bytes(phase, result)
+    if phase == "coeval":
+        return format_coeval_storage(bytes_, formatter)
+    return formatter(bytes_)
+
+
 def series(records: list[dict[str, Any]], phase: str, metric: str) -> tuple[np.ndarray, np.ndarray]:
     dimensions = []
     values = []
@@ -297,11 +374,19 @@ def series(records: list[dict[str, Any]], phase: str, metric: str) -> tuple[np.n
         result = record["phases"].get(phase)
         if result is None:
             continue
-        dimensions.append(record["hii_dim"])
         if metric == "storage_bytes":
-            values.append(phase_storage_bytes(phase, result))
+            value = phase_storage_bytes(phase, result)
         else:
-            values.append(result[metric])
+            value = result[metric]
+        # A phase that was checkpointed but did not run to completion (e.g. a coeval
+        # phase killed by walltime after only some of the target coevals; see
+        # "coevals_completed"/"coevals_target") never wrote its output files, so its
+        # storage_bytes is legitimately 0. Drop just that point instead of letting a
+        # single zero disqualify the fit for every other, fully-measured HII_DIM.
+        if value <= 0:
+            continue
+        dimensions.append(record["hii_dim"])
+        values.append(value)
     return np.asarray(dimensions, dtype=float), np.asarray(values, dtype=float)
 
 
@@ -554,11 +639,15 @@ def update_readme_measured_table(
                 for metric in needed_metrics[:-1]
                 if result.get(metric, 0) <= 0
             ]
-            if missing or phase_storage_bytes(phase, result) <= 0:
-                details = missing + (["storage_bytes"] if phase_storage_bytes(phase, result) <= 0 else [])
+            # A phase interrupted mid-run (see phase_incomplete()) legitimately has no
+            # storage measurement yet; display that as a placeholder rather than
+            # failing the whole README update.
+            if not phase_incomplete(phase, result) and phase_storage_bytes(phase, result) <= 0:
+                missing = missing + ["storage_bytes"]
+            if missing:
                 raise RuntimeError(
                     f"README update requires positive measurements for {phase} at "
-                    f"HII_DIM={record['hii_dim']}; missing: {', '.join(details)}"
+                    f"HII_DIM={record['hii_dim']}; missing: {', '.join(missing)}"
                 )
 
     text = readme_path.read_text()
@@ -588,12 +677,9 @@ def update_readme_measured_table(
         phase_results = [record["phases"][phase] for record in measured_records]
         new_values = [format_readme_hours(result["elapsed_seconds"]) for result in phase_results]
         new_values += [format_readme_gb(result["peak_rss_bytes"]) for result in phase_results]
-        storage_formatter = (
-            lambda result: format_coeval_storage(phase_storage_bytes(phase, result), format_readme_gb)
-            if phase == "coeval"
-            else format_readme_gb(phase_storage_bytes(phase, result))
-        )
-        new_values += [storage_formatter(result) for result in phase_results]
+        new_values += [
+            format_phase_storage_cell(phase, result, format_readme_gb) for result in phase_results
+        ]
         pattern = re.compile(
             rf"(?P<prefix><tr>\s*<td>{re.escape(label)}</td>)(?P<cells>.*?)(?P<suffix></tr>)",
             re.DOTALL,
@@ -755,12 +841,12 @@ def update_readme_projection_table(
     lines.append("")
     if coeval_power_law_fit is not None:
         lines.append(
-            "With only 3 measured points, the affine fit above is pulled noticeably off "
-            "the data by whichever point dominates the linear-space sum of squares. A "
-            "free-exponent power-law fit (the same form used for time and storage; see "
-            "`fit_power_law`) tracks the coeval measurements markedly better, so it is "
-            "shown here for comparison -- the affine model above remains the one used for "
-            "the Max HII_DIM budget table:"
+            f"With only {coeval_power_law_fit['n']} measured points, the affine fit above is "
+            "pulled noticeably off the data by whichever point dominates the linear-space "
+            "sum of squares. A free-exponent power-law fit (the same form used for time and "
+            "storage; see `fit_power_law`) tracks the coeval measurements markedly better, so "
+            "it is shown here for comparison -- the affine model above remains the one used "
+            "for the Max HII_DIM budget table:"
         )
         lines.append("")
         lines.append("<table><thead>")
@@ -835,7 +921,7 @@ def write_readme_values(
             lines.append(
                 f"| {label} | {record['hii_dim']} | {result['elapsed_seconds']:.3g} s | "
                 f"{format_gib(result['peak_rss_bytes'])} | "
-                f"{format_coeval_storage(phase_storage_bytes(phase, result), format_gib) if phase == 'coeval' else format_gib(phase_storage_bytes(phase, result))} |"
+                f"{format_phase_storage_cell(phase, result, format_gib)} |"
             )
 
     lines.extend([
@@ -874,11 +960,11 @@ def write_readme_values(
             "## Coeval Peak RSS: Affine vs Power-Law Fit Comparison",
             "",
             (
-                "With only 3 measured points, the affine fit is pulled noticeably off the "
-                "data by whichever point dominates the linear-space sum of squares; a "
-                "free-exponent power-law fit tracks the coeval measurements markedly "
-                "better. The affine fit remains the one used elsewhere in this document "
-                "(including the projected-maximum-simulation-size budget table)."
+                f"With only {coeval_power_law_fit['n']} measured points, the affine fit is "
+                "pulled noticeably off the data by whichever point dominates the linear-space "
+                "sum of squares; a free-exponent power-law fit tracks the coeval measurements "
+                "markedly better. The affine fit remains the one used elsewhere in this "
+                "document (including the projected-maximum-simulation-size budget table)."
             ),
             "",
             "| HII_DIM | Peak RSS, affine | Peak RSS, power law |",

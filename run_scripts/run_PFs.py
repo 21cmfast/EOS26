@@ -49,7 +49,7 @@ with settings.RssSampler() as rss_sampler:
 pf_dt = time.perf_counter() - pf_start
 pf_average_cores = settings.average_cpu_cores(time.process_time() - pf_cpu_start, pf_dt)
 if args.compare:
-   compare_PF(pf, z, z_idx)
+   compare_PF(pf, z, z_idx, cache, inputs)
 del pf
 
 job_dt = time.perf_counter() - job_start

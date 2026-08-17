@@ -114,17 +114,39 @@ def parse_args() -> argparse.Namespace:
         help="Final redshift of the amortized coeval-history measurement (default: lowest z)",
     )
     parser.add_argument(
+        "--max-coevals",
+        type=int,
+        default=None,
+        help=(
+            "Stop the coeval-history measurement after this many yielded coevals. "
+            "The JSON is checkpointed after every coeval regardless."
+        ),
+    )
+    parser.add_argument(
         "--reuse-cache",
         action="store_true",
         help="Reuse cached products instead of forcing recomputation",
+    )
+    parser.add_argument(
+        "--force-rerun",
+        action="store_true",
+        help=(
+            "Re-measure phases even if this results JSON already contains a measurement. "
+            "By default, existing measurements are preserved on resumed jobs."
+        ),
     )
     args = parser.parse_args()
     args.phases = tuple(part.strip() for part in args.phases.split(",") if part.strip())
     invalid = set(args.phases) - set(PHASES)
     if invalid:
         parser.error(f"Unknown phases: {', '.join(sorted(invalid))}")
-    if args.hii_dim <= 0 or args.rss_interval <= 0 or (args.n_threads is not None and args.n_threads <= 0):
-        parser.error("--hii-dim, --rss-interval, and --n-threads must be positive")
+    if (
+        args.hii_dim <= 0
+        or args.rss_interval <= 0
+        or (args.n_threads is not None and args.n_threads <= 0)
+        or (args.max_coevals is not None and args.max_coevals <= 0)
+    ):
+        parser.error("--hii-dim, --rss-interval, --n-threads, and --max-coevals must be positive")
     return args
 
 
@@ -195,6 +217,208 @@ def measure_phase(
     }
 
 
+
+def load_existing_phases(output: Path) -> dict[str, dict[str, object]]:
+    """Load already-recorded phase measurements from an existing results JSON."""
+    if not output.exists():
+        return {}
+    with output.open() as handle:
+        return json.load(handle).get("phases", {})
+
+
+def phase_cache_complete(
+    runcache: RunCache,
+    phase: str,
+    redshift: float,
+    inputs: p21c.InputParameters,
+) -> bool:
+    """Return whether the cache contains the full product expected for a phase."""
+    try:
+        files = phase_files(runcache, phase, redshift)
+    except (AttributeError, KeyError, TypeError, ValueError):
+        return False
+
+    if phase == "ics":
+        item = files.get("InitialConditions", {})
+        return item.get("file_count", 0) >= 1 and item.get("bytes", 0) > 0
+
+    if phase == "pf":
+        item = files.get("PerturbedField", {})
+        return item.get("file_count", 0) >= 1 and item.get("bytes", 0) > 0
+
+    if phase == "phf":
+        item = files.get("HaloCatalog", {})
+        return (
+            item.get("file_count", 0) >= len(inputs.node_redshifts)
+            and item.get("bytes", 0) > 0
+        )
+
+    return False
+
+
+def should_preserve_phase_measurement(
+    *,
+    phase: str,
+    existing_phases: dict[str, dict[str, object]],
+    force_rerun: bool,
+) -> bool:
+    """Whether an existing timing/memory measurement must not be overwritten."""
+    return not force_rerun and phase in existing_phases
+
+
+def write_results_json(
+    output: Path,
+    *,
+    args: argparse.Namespace,
+    inputs: p21c.InputParameters,
+    redshift: float,
+    new_results: dict[str, dict[str, object]],
+) -> None:
+    """Merge phase results into the scaling JSON and write it atomically."""
+    existing_phases: dict[str, dict[str, object]] = {}
+    if output.exists():
+        with output.open() as handle:
+            existing_phases = json.load(handle).get("phases", {})
+
+    existing_phases.update(new_results)
+    payload = {
+        "hii_dim": args.hii_dim,
+        "box_len_mpc": float(inputs.simulation_options.BOX_LEN),
+        "lowres_cell_size_mpc": float(inputs.simulation_options._LOWRES_CELL_SIZE_MPC),
+        "n_threads": int(inputs.simulation_options.N_THREADS),
+        "random_seed": args.seed,
+        "coeval_redshift": float(redshift),
+        "coevals_averaged": len(inputs.node_redshifts),
+        "gc_enabled": gc.isenabled(),
+        "pid": os.getpid(),
+        "phases": existing_phases,
+        "max_peak_rss_bytes": max(
+            (phase["peak_rss_bytes"] for phase in existing_phases.values()),
+            default=0,
+        ),
+        "max_rss_above_baseline_bytes": max(
+            (phase["rss_above_baseline_bytes"] for phase in existing_phases.values()),
+            default=0,
+        ),
+    }
+
+    # Atomic replacement means a walltime kill cannot leave a truncated JSON.
+    temporary = output.with_suffix(output.suffix + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    temporary.replace(output)
+
+
+def measure_coevals_incrementally(
+    *,
+    args: argparse.Namespace,
+    inputs: p21c.InputParameters,
+    cache: p21c.OutputCache,
+    runcache: RunCache,
+    redshift: float,
+    output: Path,
+) -> dict[str, object]:
+    """Measure coeval evolution and checkpoint statistics after every yielded coeval."""
+    process = psutil.Process()
+    phase_baseline_rss = process.memory_info().rss
+    phase_peak_rss = phase_baseline_rss
+
+    total_elapsed = 0.0
+    total_cpu = 0.0
+    completed = 0
+    samples: list[dict[str, object]] = []
+    target = len(inputs.node_redshifts)
+    limit = target if args.max_coevals is None else min(args.max_coevals, target)
+
+    generator = sim_steps.generate_coevals(
+        [redshift],
+        inputs,
+        cache,
+        # Reuse the IC, PF, and PHF products measured in earlier phases.
+        regenerate=False,
+        progressbar=True,
+    )
+
+    try:
+        while completed < limit:
+            wall_started = time.perf_counter()
+            cpu_started = time.process_time()
+
+            # Advancing the generator performs exactly one yielded coeval step,
+            # so each step gets its own wall/CPU/RSS measurement.
+            with RssSampler(args.rss_interval) as sampler:
+                try:
+                    yielded = next(generator)
+                except StopIteration:
+                    break
+
+            elapsed = time.perf_counter() - wall_started
+            cpu_seconds = time.process_time() - cpu_started
+            memory = sampler.measurement()
+
+            completed += 1
+            total_elapsed += elapsed
+            total_cpu += cpu_seconds
+            phase_peak_rss = max(phase_peak_rss, memory.peak_rss_bytes)
+
+            sample: dict[str, object] = {
+                "index": completed,
+                "elapsed_seconds": elapsed,
+                "cpu_seconds": cpu_seconds,
+                "average_cpu_cores": cpu_seconds / elapsed if elapsed else 0.0,
+                "peak_rss_bytes": memory.peak_rss_bytes,
+            }
+            if isinstance(yielded, tuple) and yielded:
+                first = yielded[0]
+                if isinstance(first, (int, float, str, bool)) or first is None:
+                    sample["yielded_step"] = first
+            samples.append(sample)
+
+            files = phase_files(runcache, "coeval", redshift)
+            result: dict[str, object] = {
+                # Keep elapsed_seconds compatible with the old output:
+                # it is the mean walltime per completed coeval.
+                "elapsed_seconds": total_elapsed / completed,
+                # Keep cpu_seconds cumulative, as in the previous implementation.
+                "cpu_seconds": total_cpu,
+                "average_cpu_cores": total_cpu / total_elapsed if total_elapsed else 0.0,
+                "peak_rss_bytes": phase_peak_rss,
+                "rss_above_baseline_bytes": max(phase_peak_rss - phase_baseline_rss, 0),
+                "files": files,
+                "total_file_bytes": sum(item["bytes"] for item in files.values()),
+                "coevals_completed": completed,
+                "coevals_target": target,
+                "total_elapsed_seconds": total_elapsed,
+                "samples": samples,
+            }
+
+            write_results_json(
+                output,
+                args=args,
+                inputs=inputs,
+                redshift=redshift,
+                new_results={"coeval": result},
+            )
+            print(
+                f"[coeval {completed}/{target}] "
+                f"wall={elapsed:.2f}s "
+                f"cpu={cpu_seconds:.2f}s "
+                f"cores={sample['average_cpu_cores']:.2f} "
+                f"avg_wall={result['elapsed_seconds']:.2f}s "
+                f"avg_cores={result['average_cpu_cores']:.2f} "
+                f"peak_rss={phase_peak_rss / 1e9:.2f}GB",
+                flush=True,
+            )
+
+        if completed == 0:
+            raise RuntimeError("generate_coevals produced no coevals")
+
+        return result
+    finally:
+        close = getattr(generator, "close", None)
+        if close is not None:
+            close()
+
+
 def run_phases_isolated(args: argparse.Namespace) -> None:
     """Run each requested phase in its own subprocess.
 
@@ -227,8 +451,12 @@ def run_phases_isolated(args: argparse.Namespace) -> None:
         common += ["--n-threads", str(args.n_threads)]
     if args.coeval_redshift is not None:
         common += ["--coeval-redshift", str(args.coeval_redshift)]
+    if args.max_coevals is not None:
+        common += ["--max-coevals", str(args.max_coevals)]
     if args.reuse_cache:
         common.append("--reuse-cache")
+    if args.force_rerun:
+        common.append("--force-rerun")
     for phase in args.phases:
         subprocess.run(common + ["--phases", phase], check=True)
 
@@ -258,12 +486,36 @@ def main() -> None:
     redshift = args.coeval_redshift if args.coeval_redshift is not None else min(inputs.node_redshifts)
     regenerate = not args.reuse_cache
     results: dict[str, dict[str, object]] = {}
+    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}_N_THREADS_{args.n_threads}.json"
+    existing_phases = load_existing_phases(output)
 
     def initial_conditions() -> None:
         sim_steps.compute_initial_conditions(inputs, cache, regenerate=regenerate)
 
     if "ics" in args.phases:
-        results["ics"] = measure_phase("ics", initial_conditions, runcache, redshift, args.rss_interval)
+        cached = phase_cache_complete(runcache, "ics", redshift, inputs)
+        if should_preserve_phase_measurement(
+            phase="ics", existing_phases=existing_phases, force_rerun=args.force_rerun
+        ):
+            if cached:
+                print("[ics] Existing JSON measurement and cache found; preserving both and skipping.", flush=True)
+            else:
+                print(
+                    "[ics] Existing JSON measurement found but cache is missing; "
+                    "rebuilding cache WITHOUT replacing the recorded timing/memory measurement.",
+                    flush=True,
+                )
+                initial_conditions()
+        elif args.reuse_cache and cached:
+            print(
+                "[ics] Cached IC already exists but no prior JSON measurement is available; "
+                "skipping rather than recording cache-read time as a scaling measurement.",
+                flush=True,
+            )
+        else:
+            results["ics"] = measure_phase(
+                "ics", initial_conditions, runcache, redshift, args.rss_interval
+            )
 
     if "pf" in args.phases:
         def perturb_field() -> None:
@@ -275,7 +527,29 @@ def main() -> None:
                 regenerate=regenerate,
             )
 
-        results["pf"] = measure_phase("pf", perturb_field, runcache, redshift, args.rss_interval)
+        cached = phase_cache_complete(runcache, "pf", redshift, inputs)
+        if should_preserve_phase_measurement(
+            phase="pf", existing_phases=existing_phases, force_rerun=args.force_rerun
+        ):
+            if cached:
+                print("[pf] Existing JSON measurement and cache found; preserving both and skipping.", flush=True)
+            else:
+                print(
+                    "[pf] Existing JSON measurement found but cache is missing; "
+                    "rebuilding cache WITHOUT replacing the recorded timing/memory measurement.",
+                    flush=True,
+                )
+                perturb_field()
+        elif args.reuse_cache and cached:
+            print(
+                "[pf] Cached PF already exists but no prior JSON measurement is available; "
+                "skipping rather than recording cache-read time as a scaling measurement.",
+                flush=True,
+            )
+        else:
+            results["pf"] = measure_phase(
+                "pf", perturb_field, runcache, redshift, args.rss_interval
+            )
 
     if "phf" in args.phases:
         def evolve_halos() -> None:
@@ -288,54 +562,66 @@ def main() -> None:
                 progressbar=True,
             )
 
-        results["phf"] = measure_phase("phf", evolve_halos, runcache, redshift, args.rss_interval)
+        cached = phase_cache_complete(runcache, "phf", redshift, inputs)
+        if should_preserve_phase_measurement(
+            phase="phf", existing_phases=existing_phases, force_rerun=args.force_rerun
+        ):
+            if cached:
+                print("[phf] Existing JSON measurement and cache found; preserving both and skipping.", flush=True)
+            else:
+                print(
+                    "[phf] Existing JSON measurement found but cache is missing; "
+                    "rebuilding cache WITHOUT replacing the recorded timing/memory measurement.",
+                    flush=True,
+                )
+                evolve_halos()
+        elif args.reuse_cache and cached:
+            print(
+                "[phf] Cached halo catalogs already exist but no prior JSON measurement is available; "
+                "skipping rather than recording cache-read time as a scaling measurement.",
+                flush=True,
+            )
+        else:
+            results["phf"] = measure_phase(
+                "phf", evolve_halos, runcache, redshift, args.rss_interval
+            )
 
     if "coeval" in args.phases:
-        def coeval() -> None:
-            for _, _ in sim_steps.generate_coevals(
-                [redshift],
-                inputs,
-                cache,
-                # Reuse the IC, PF, and PHF products measured in earlier phases.
-                regenerate=False,
-                progressbar=True,
-            ):
-                pass
+        # A partial coeval checkpoint is already a valid scaling measurement.  Do not
+        # restart the coeval evolution and overwrite it on a resumed job.  This is
+        # especially important for discrete-halo runs, where 21cmFAST may need to
+        # restart the redshift evolution rather than resume from the last cached node.
+        if should_preserve_phase_measurement(
+            phase="coeval", existing_phases=existing_phases, force_rerun=args.force_rerun
+        ):
+            completed = existing_phases["coeval"].get("coevals_completed")
+            if completed is None:
+                print("[coeval] Existing JSON measurement found; preserving it and skipping.", flush=True)
+            else:
+                print(
+                    f"[coeval] Existing checkpoint contains {completed} measured coeval(s); "
+                    "preserving it and skipping. Use --force-rerun to replace it.",
+                    flush=True,
+                )
+        else:
+            results["coeval"] = measure_coevals_incrementally(
+                args=args,
+                inputs=inputs,
+                cache=cache,
+                runcache=runcache,
+                redshift=redshift,
+                output=output,
+            )
 
-        results["coeval"] = measure_phase("coeval", coeval, runcache, redshift, args.rss_interval)
-        results["coeval"]["elapsed_seconds"] /= len(inputs.node_redshifts)
-
-    output = args.results_dir / f"scaling_HII_DIM_{args.hii_dim}_N_THREADS_{args.n_threads}.json"
-    existing_phases: dict[str, dict[str, object]] = {}
-    if output.exists():
-        with output.open() as handle:
-            existing_phases = json.load(handle).get("phases", {})
-    existing_phases.update(results)
-
-    payload = {
-        "hii_dim": args.hii_dim,
-        "box_len_mpc": float(inputs.simulation_options.BOX_LEN),
-        "lowres_cell_size_mpc": float(inputs.simulation_options._LOWRES_CELL_SIZE_MPC),
-        "n_threads": int(inputs.simulation_options.N_THREADS),
-        "random_seed": args.seed,
-        "coeval_redshift": float(redshift),
-        "coevals_averaged": len(inputs.node_redshifts),
-        "gc_enabled": gc.isenabled(),
-        "pid": os.getpid(),
-        "phases": existing_phases,
-        "max_peak_rss_bytes": max(
-            (phase["peak_rss_bytes"] for phase in existing_phases.values()),
-            default=0,
-        ),
-        "max_rss_above_baseline_bytes": max(
-            (phase["rss_above_baseline_bytes"] for phase in existing_phases.values()),
-            default=0,
-        ),
-    }
-    output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    write_results_json(
+        output,
+        args=args,
+        inputs=inputs,
+        redshift=redshift,
+        new_results=results,
+    )
     print(f"Wrote {output}")
 
 
 if __name__ == "__main__":
     main()
-
