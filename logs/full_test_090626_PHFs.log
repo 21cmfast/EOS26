@@ -1,5 +1,0 @@
-00:00:00 INFO     00.167 GB Starting PHFs run                                                                                                                   
-00:00:00 INFO     00.167 GB gc.isenabled() = False (expected: False)                                                                                            
-00:00:00 INFO     00.167 GB TEST MODE: HII_DIM=200                                                                                                              
-00:00:58 INFO     04.254 GB Halo evolution done in 47.94s                                                                                                       
-00:00:58 INFO     04.254 GB Completed PHFs run in 58.00s                                                                                                        
