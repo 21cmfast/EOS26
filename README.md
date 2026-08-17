@@ -59,7 +59,7 @@ extrapolation sections.
 
 <table><thead>
   <tr>
-    <th>EOS25 simulation step<br></th>
+    <th>EOS26 simulation step<br></th>
     <th colspan="2">Computation time [hrs]</th>
     <th colspan="2">Memory [Tb]</th>
     <th colspan="2">Storage [Tb]</th>
@@ -182,7 +182,7 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
     <td>0.0601 GB x 92 = 5.53 GB</td>
     <td>n/a (partial run: 5/92 coevals)</td>
   </tr>
-  <tr><td colspan="7"><em>Extrapolated to EOS-1 (HII_DIM = 1400, 1.5 cMpc/cell, 2100 Mpc)</em></td></tr>
+  <tr><td colspan="7"><em>Extrapolated to EOS (HII_DIM = 1400, 1.5 cMpc/cell, 2100 Mpc)</em></td></tr>
   <tr>
     <td>Initial conditions</td>
     <td>a=1.72: 2.7 ± 1.89</td>
@@ -219,95 +219,10 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
     <td>a=3: 0.164 ± 0.0157 TB x 92 = 15.1 ± 1.44 TB</td>
     <td>a=3: 0.165 ± 0.0165 TB x 92 = 15.1 ± 1.51 TB</td>
   </tr>
-  <tr><td colspan="7"><em>Extrapolated to EOS-2 (HII_DIM = 1200, 1.667 cMpc/cell, 2000 Mpc)</em></td></tr>
-  <tr>
-    <td>Initial conditions</td>
-    <td>a=1.72: 2.07 ± 1.32</td>
-    <td>a=3: 8.69 ± 0.939</td>
-    <td>affine (overhead + a=3): 1.34 ± 0.134 TB</td>
-    <td>a=3: 1.34 ± 0.134 TB</td>
-    <td>a=3: 0.802 ± 0.0765 TB</td>
-    <td>a=3: 0.802 ± 0.0802 TB</td>
-  </tr>
-  <tr>
-    <td>One perturbed field</td>
-    <td>a=0.152: 0.0483 ± 0.00671</td>
-    <td>a=3: 0.726 ± 0.426</td>
-    <td>affine (overhead + a=3): 0.277 ± 0.0277 TB</td>
-    <td>a=3: 0.279 ± 0.028 TB</td>
-    <td>a=3: 0.0276 ± 0.00264 TB</td>
-    <td>a=3: 0.0276 ± 0.00276 TB</td>
-  </tr>
-  <tr>
-    <td>Perturbed halo fields</td>
-    <td>a=1.6: 1.99 ± 1.36</td>
-    <td>a=3: 9.26 ± 1.06</td>
-    <td>affine (overhead + a=3): 0.703 ± 0.0703 TB</td>
-    <td>a=3: 0.706 ± 0.0706 TB</td>
-    <td>a=2.99: 0.346 ± 0.0332 TB</td>
-    <td>a=3: 0.351 ± 0.0351 TB</td>
-  </tr>
-  <tr>
-    <td>Evolving astrophysics for one coeval</td>
-    <td>a=3.26: 5.3 ± 3.31</td>
-    <td>a=3: 5.68 ± 0.698</td>
-    <td>affine (overhead + a=3): 1.33 ± 0.137 TB</td>
-    <td>a=3: 1.36 ± 0.139 TB</td>
-    <td>a=3: 0.103 ± 0.00987 TB x 92 = 9.51 ± 0.908 TB</td>
-    <td>a=3: 0.104 ± 0.0104 TB x 92 = 9.54 ± 0.954 TB</td>
-  </tr>
 </tbody></table>
 
-## Projected maximum simulation size
 
-Evolving astrophysics for one coeval is the most memory-intensive phase at every measured `HII_DIM` (see table above), so it sets the ceiling for the largest simulation a single node can run. Peak memory for 3D simulation grids is physically fixed per-process overhead (interpreter, shared libraries, lookup tables) plus a term that scales with box volume (`HII_DIM^3`), so peak RSS is fit as `overhead + coefficient * HII_DIM^3` by ordinary least squares using *all* measured points (`HII_DIM` = 100, 200, 300, 500), rather than a free-exponent log-log power law, which is biased low by that same fixed overhead when it is not negligible at small `HII_DIM` (the same effect documented above for compute time). Resolution is fixed at 1.5 cMpc/cell, matching all current scaling points; only `HII_DIM` is varied. The "Max HII_DIM" columns require the upper end of the fit's 1-sigma band to stay within the memory budget, so the true peak should stay at or below the stated value.
-
-<table><thead>
-  <tr>
-    <th>Memory budget</th>
-    <th>Max HII_DIM</th>
-    <th>Box length [Mpc]</th>
-    <th>Predicted peak RSS (coeval)</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>3.0 TB</td>
-    <td>1525</td>
-    <td>2288</td>
-    <td>2.72 ± 0.281 TB</td>
-  </tr>
-  <tr>
-    <td>2.7 TB (90% safety margin)</td>
-    <td>1472</td>
-    <td>2208</td>
-    <td>2.45 ± 0.253 TB</td>
-  </tr>
-</tbody></table>
-
-Predicted coeval peak RSS at the current EOS target sizes (affine `overhead + coefficient * HII_DIM^3` fit on all measured points):
-
-<table><thead>
-  <tr><th>EOS target</th><th>HII_DIM</th><th>Predicted peak RSS (coeval)</th></tr>
-</thead>
-<tbody>
-  <tr><td>EOS-1</td><td>1400</td><td>2.1 ± 0.217 TB</td></tr>
-  <tr><td>EOS-2</td><td>1200</td><td>1.33 ± 0.137 TB</td></tr>
-</tbody></table>
-
-With only 4 measured points, the affine fit above is pulled noticeably off the data by whichever point dominates the linear-space sum of squares. A free-exponent power-law fit (the same form used for time and storage; see `fit_power_law`) tracks the coeval measurements markedly better, so it is shown here for comparison -- the affine model above remains the one used for the Max HII_DIM budget table:
-
-<table><thead>
-  <tr><th>EOS target</th><th>HII_DIM</th><th>Predicted peak RSS, affine</th><th>Predicted peak RSS, power law</th></tr>
-</thead>
-<tbody>
-  <tr><td>EOS-1</td><td>1400</td><td>2.1 ± 0.217 TB</td><td>1.7 ± 0.181 TB</td></tr>
-  <tr><td>EOS-2</td><td>1200</td><td>1.33 ± 0.137 TB</td><td>1.11 ± 0.116 TB</td></tr>
-</tbody></table>
-
-**Caveats:** this projection extrapolates well beyond the largest measured `HII_DIM` (500) to production scale, so treat it as an order-of-magnitude estimate rather than a precise bound. Run an additional scaling point at `HII_DIM = 400` (or larger) on the cluster and check whether the residuals from the affine fit stay small -- growing residuals at larger `HII_DIM` would mean memory grows faster than the assumed overhead-plus-cubic form and this projection is optimistic. Consider also profiling one run with `memray` to see the full memory-vs-redshift curve and confirm the RSS sampler is not missing any brief spikes.
-
-## EOS-1 Fixed-Cubic Runtime Plan
+## EOS Fixed-Cubic Runtime Plan
 
 Planning values use fixed `a=3` central estimates at `HII_DIM=1400`, a 1.5 h IC-read allowance per dependent job, and the documented 3 h IC-write time to infer output-write throughput. Coeval output includes retained `IonizedBox` and excludes transient `XraySourceBox`. The table uses the 24 h maximum job walltime; coeval jobs are deliberately limited to 4 outputs for margin. Peak RSS is the per-phase process estimate; full-phase output totals all 92 PFs or coevals as applicable.
 

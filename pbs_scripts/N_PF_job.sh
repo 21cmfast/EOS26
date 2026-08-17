@@ -1,41 +1,48 @@
 #!/bin/bash
-#PBS -N EOS26_PF_batch
-#PBS -q RM-512
-#PBS -l select=1:ncpus=128:mpiprocs=128
-#PBS -l walltime=12:00:00
-#PBS -o logs/PF.bootstrap.out
-#PBS -e logs/PF.bootstrap.err
+#PBS -N EOS26_PFs
+#PBS -q normalsr
+#PBS -l ncpus=16
+#PBS -l mem=500gb
+#PBS -l walltime=48:00:00
+#PBS -l storage=scratch/qp00+gdata/qp00
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Run a batch of N=30 (default) PF boxes from starting index IDX
+# for the production-size EOS26 simulation with HII_DIM=1400.
+# Usage: qsub -F "<IDX> [N]" pbs_scripts/N_PF_job.sh
+
+export PATH="$HOME/.local/bin:$PATH"
+cd "$PBS_O_WORKDIR"
+
+set -euo pipefail
+ROOT="$(cd "$PBS_O_WORKDIR" && pwd)"
 cd "$ROOT"
+pwd
 
-module load fftw/3.3.8
-module load gcc/13.2.1-p20240113
-module load openmpi/5.0.3-gcc13.2.1
+source /scratch/qp00/db9528/venvs/EOS26-intel/bin/activate
+set -euo pipefail
 
-POSITIONAL=()
-TEST_FLAG=""
-TEST_SUFFIX=""
-for arg in "$@"; do
-    case "$arg" in
-        --test) TEST_FLAG="--test"; TEST_SUFFIX="_test" ;;
-        *) POSITIONAL+=("$arg") ;;
-    esac
-done
-set -- "${POSITIONAL[@]}"
+module purge
+module load intel-compiler/2021.8.0
+module load gsl/2.7.1
+module load fftw3/3.3.10
 
-IDX="$1"
-N="${2:-10}"
+module list
 
-mkdir -p logs
 JID="${PBS_JOBID%%.*}"
-LOG_OUT="logs/PF_${JID}_zidx${IDX}_N${N}${TEST_SUFFIX}.out"
-LOG_ERR="logs/PF_${JID}_zidx${IDX}_N${N}${TEST_SUFFIX}.err"
-LOG_LOG="logs/PF_${JID}_zidx${IDX}_N${N}${TEST_SUFFIX}.log"
-exec >"$LOG_OUT" 2>"$LOG_ERR"
 
-uv sync --frozen
+export OMP_NUM_THREADS=16
+export OMP_DYNAMIC=FALSE
+
+unset OMP_PROC_BIND
+unset OMP_PLACES
+
+IDX="${1:?Error: IDX (starting z_idx) is required, e.g. qsub -F \"0 30\" pbs_scripts/N_PF_job.sh}"
+N="${2:-30}"
 
 printf "IDX is: %s, N is: %s\n" "$IDX" "$N"
-uv run run_scripts/run_N_PFs.py --z_idx_start "$IDX" --N "$N" --log-file "$LOG_LOG" $TEST_FLAG
+uv run --no-sync --active --project "$ROOT" run_scripts/run_N_PFs.py \
+    --z_idx_start "$IDX" \
+    --N "$N" \
+    --log-file "logs/EOS26_PFs_${IDX}_${JID}.log" \
+    --compare
 wait

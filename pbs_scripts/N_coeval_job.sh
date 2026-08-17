@@ -1,39 +1,45 @@
 #!/bin/bash
 #PBS -N EOS26_coeval
-#PBS -q EM
-#PBS -l select=1:ncpus=96:mpiprocs=96
-#PBS -l walltime=72:00:00
-#PBS -o logs/coeval.bootstrap.out
-#PBS -e logs/coeval.bootstrap.err
+#PBS -q megamem
+#PBS -l ncpus=16
+#PBS -l mem=2990gb
+#PBS -l walltime=48:00:00
+#PBS -l storage=scratch/qp00+gdata/qp00
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Run a batch of N=8 (default) coeval boxes for the production-size EOS26 simulation with HII_DIM=1400.
+# Usage: qsub pbs_scripts/N_coeval_job.sh [--N <N>]
+
+export PATH="$HOME/.local/bin:$PATH"
+cd "$PBS_O_WORKDIR"
+
+set -euo pipefail
+ROOT="$(cd "$PBS_O_WORKDIR" && pwd)"
 cd "$ROOT"
+pwd
 
-module load fftw/3.3.8
-module load gcc/13.2.1-p20240113
-module load openmpi/5.0.3-gcc13.2.1
+source /scratch/qp00/db9528/venvs/EOS26-intel/bin/activate
+set -euo pipefail
 
-POSITIONAL=()
-TEST_FLAG=""
-TEST_SUFFIX=""
-for arg in "$@"; do
-    case "$arg" in
-        --test) TEST_FLAG="--test"; TEST_SUFFIX="_test" ;;
-        *) POSITIONAL+=("$arg") ;;
-    esac
-done
-set -- "${POSITIONAL[@]}"
+module purge
+module load intel-compiler/2021.8.0
+module load gsl/2.7.1
+module load fftw3/3.3.10
 
-N="${1:-10}"
+module list
 
-mkdir -p logs
 JID="${PBS_JOBID%%.*}"
-LOG_OUT="logs/coeval_${JID}_N${N}${TEST_SUFFIX}.out"
-LOG_ERR="logs/coeval_${JID}_N${N}${TEST_SUFFIX}.err"
-LOG_LOG="logs/coeval_${JID}_N${N}${TEST_SUFFIX}.log"
-exec >"$LOG_OUT" 2>"$LOG_ERR"
 
-uv sync --frozen
+export OMP_NUM_THREADS=16
+export OMP_DYNAMIC=FALSE
+
+unset OMP_PROC_BIND
+unset OMP_PLACES
+
+N="${1:-8}"
+
+JID="${PBS_JOBID%%.*}"
 
 printf "N is: %s\n" "$N"
-uv run run_scripts/run_N_coevals.py --N "$N" --log-file "$LOG_LOG" $TEST_FLAG
+uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py --N "$N" \
+    --log-file "logs/EOS26_coeval_${N}_${JID}.log" \
+    --compare
