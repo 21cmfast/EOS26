@@ -81,11 +81,12 @@ while count < N:
     )
     if args.compare:
         compare_coeval(coeval, cache, inputs)
-        xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
-        for xray_path in xray_paths:
-            xray_path.unlink()
-        if xray_paths:
-            logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
+        if count < N - 1:
+            xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
+            for xray_path in xray_paths:
+                xray_path.unlink()
+            if xray_paths:
+                logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
     prev_tick = now_tick
     del coeval
     gc.collect()
