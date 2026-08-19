@@ -1,0 +1,30 @@
+/scratch/qp00/db9528/EOS26
+Starting ICs
+gc.isenabled() = False (expected: False)
+OMP_NUM_THREADS: 16
+OMP_PROC_BIND: None
+OMP_PLACES: None
+Allowed CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+───────────────── compare_ICs: checks 1-3 on InitialConditions ─────────────────
+[08:54:12] [[PASS]] ✓ Check 1 [ICs]: file present, size=801.792 GB              
+           [[PASS]] ✓ Check 1 [ICs]: size ratio=216 (expected≈216) OK           
+           [[PASS]] ✓ Check 2 [ICs]: cubic shape (1200, 1200, 1200) OK          
+[08:54:13] [[PASS]] ✓ Check 2 [ICs]: no NaN/Inf in sampled slabs                
+[08:54:14] [[INFO]] · Check 3 [ICs]: density mean=-0.00437  std=2.91289         
+           min=-15.51975  max=15.53348  NaN=0  Inf=0                            
+           [[INFO]] · Check 3 [ICs]: density[0,0,:6] = [-3.70772171 -2.03938818 
+           -4.12936687 -0.49206072 -0.07024549  4.37024021]                     
+           [[PASS]] ✓ Check 3 [ICs]: IC density stats OK                        
+           [[PASS]] ✓ compare_ICs: all checks passed ✓                          
+
+======================================================================================
+                  Resource Usage on 2026-08-18 08:54:36:
+   Job Id:             176510886.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      3180.64
+   NCPUs Requested:    16                  CPU Time Used: 50:09:00        
+   Memory Requested:   2.92TB                Memory Used: 1.22TB          
+   Walltime Requested: 48:00:00            Walltime Used: 13:36:58        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

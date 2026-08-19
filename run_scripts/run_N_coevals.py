@@ -25,15 +25,6 @@ job_start = time.perf_counter()
 logger.info(f"Starting N coeval run: N={N}")
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 
-import os
-
-print("OMP_NUM_THREADS:", os.environ.get("OMP_NUM_THREADS"))
-print("OMP_PROC_BIND:", os.environ.get("OMP_PROC_BIND"))
-print("OMP_PLACES:", os.environ.get("OMP_PLACES"))
-
-if hasattr(os, "sched_getaffinity"):
-    print("Allowed CPUs:", sorted(os.sched_getaffinity(0)))
-    
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
 cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
@@ -81,15 +72,52 @@ while count < N:
     )
     if args.compare:
         compare_coeval(coeval, cache, inputs)
-        if count < N - 1:
-            xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
-            for xray_path in xray_paths:
-                xray_path.unlink()
-            if xray_paths:
-                logger.info("Removed %d XraySourceBox cache file(s) after comparison", len(xray_paths))
+
+    # Keep the XraySourceBox belonging to the coeval just completed, delete previous ones.
+
+    xray_paths = list(Path(cache_dir).glob("**/XraySourceBox.h5"))
+
+    z_current = getattr(coeval, "redshift", None)
+
+    if z_current is not None:
+        # The cache redshift is encoded in the same path component used
+        # above when identifying completed coevals.
+        z_current_rounded = round(float(z_current), 4)
+
+        current_xray_paths = []
+        old_xray_paths = []
+
+        for xray_path in xray_paths:
+            try:
+                z_path = float(xray_path.parts[-3])
+            except (ValueError, IndexError):
+                # If this isn't a cache path with the expected structure,
+                # don't delete it.
+                continue
+
+            if round(z_path, 4) == z_current_rounded:
+                current_xray_paths.append(xray_path)
+            else:
+                old_xray_paths.append(xray_path)
+
+        # Delete XRSBs from all older coevals, retaining the current one.
+        for xray_path in old_xray_paths:
+            xray_path.unlink()
+
+        logger.info(
+            "XraySourceBox cleanup: retained %d current XraySourceBox file(s) "
+            "at z=%.6f; removed %d older file(s)",
+            len(current_xray_paths),
+            float(z_current),
+            len(old_xray_paths),
+        )
+    else:
+        logger.warning(
+            "Could not determine current coeval redshift; "
+            "leaving all XraySourceBox files untouched."
+        )
+    coeval.purge()
     prev_tick = now_tick
-    del coeval
-    gc.collect()
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed N coeval run in {job_dt:.2f}s")

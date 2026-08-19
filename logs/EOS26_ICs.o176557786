@@ -1,0 +1,43 @@
+/scratch/qp00/db9528/EOS26
+EOS26_ICs_176510886.log
+full_test_176510538_ICs.log
+full_test_176510538_PFs.log
+full_test_176510538_PHFs.log
+full_test_176510538_coevals.log
+full_test_176519047_ICs.log
+full_test_176519047_PFs.log
+full_test_176519047_PHFs.log
+full_test_176519047_coevals.log
+full_test_176556293_ICs.log
+full_test_176556293_PFs.log
+full_test_176556293_PHFs.log
+full_test_176556293_coevals.log
+Starting ICs
+gc.isenabled() = False (expected: False)
+OMP_NUM_THREADS: 16
+OMP_PROC_BIND: None
+OMP_PLACES: None
+Allowed CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+───────────────── compare_ICs: checks 1-3 on InitialConditions ─────────────────
+[19:59:30] [[PASS]] ✓ Check 1 [ICs]: file present, size=1566.000 GB             
+           [[PASS]] ✓ Check 1 [ICs]: size ratio=422 (expected≈422) OK           
+           [[PASS]] ✓ Check 2 [ICs]: cubic shape (1500, 1500, 1500) OK          
+[19:59:31] [[PASS]] ✓ Check 2 [ICs]: no NaN/Inf in sampled slabs                
+[19:59:32] [[INFO]] · Check 3 [ICs]: density mean=+0.00276  std=2.91424         
+           min=-15.30588  max=15.53112  NaN=0  Inf=0                            
+           [[INFO]] · Check 3 [ICs]: density[0,0,:6] = [-4.85928679  4.14395571 
+           -0.44756225  0.31947157  0.90380657 -0.05501572]                     
+           [[PASS]] ✓ Check 3 [ICs]: IC density stats OK                        
+           [[PASS]] ✓ compare_ICs: all checks passed ✓                          
+
+======================================================================================
+                  Resource Usage on 2026-08-19 20:00:06:
+   Job Id:             176557786.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      6968.82
+   NCPUs Requested:    16                  CPU Time Used: 106:20:16       
+   Memory Requested:   2.92TB                Memory Used: 2.41TB          
+   Walltime Requested: 48:00:00            Walltime Used: 29:49:59        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
