@@ -73,7 +73,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target-dims",
-        default="1200,1400",
+        default="1200,1500",
         help="Comma-separated HII_DIM values to include in extrapolated tables",
     )
     parser.add_argument(
@@ -652,7 +652,7 @@ def update_readme_measured_table(
 
     text = readme_path.read_text()
     start_marker = '<tr><td colspan="7"><em>Scaling tests (measured)</em></td></tr>'
-    end_marker = '<tr><td colspan="7"><em>Extrapolated to EOS-1'
+    end_marker = '<tr><td colspan="7"><em>Extrapolated to EOS'
     start = text.find(start_marker)
     end = text.find(end_marker, start)
     if start == -1 or end == -1:
@@ -696,9 +696,9 @@ def update_readme_measured_table(
 
     text = text[:table_start] + header + section + text[end:]
     extrapolated_sections = re.compile(
-        r"(?P<marker><tr><td colspan=\"7\"><em>Extrapolated to EOS-\d+ "
+        r"(?P<marker><tr><td colspan=\"7\"><em>Extrapolated to EOS(?:-\d+)? "
         r"\(HII_DIM = (?P<dimension>\d+),.*?</em></td></tr>)(?P<rows>.*?)"
-        r"(?=(?:<tr><td colspan=\"7\"><em>Extrapolated to EOS-|</tbody>))",
+        r"(?=(?:<tr><td colspan=\"7\"><em>Extrapolated to EOS|</tbody>))",
         re.DOTALL,
     )
 
@@ -750,8 +750,8 @@ def update_readme_measured_table(
         return match.group("marker") + rows
 
     text, replacements = extrapolated_sections.subn(update_extrapolated_section, text)
-    if replacements != 2:
-        raise RuntimeError("Could not update both extrapolated scaling-table sections in README")
+    if replacements == 0:
+        raise RuntimeError("Could not find any 'Extrapolated to EOS' section(s) in README")
     readme_path.write_text(text)
 
 
@@ -777,7 +777,7 @@ def update_readme_projection_table(
         ("3.0 TB", NODE_MEMORY_BUDGET_BYTES),
         ("2.7 TB (90% safety margin)", NODE_MEMORY_SAFETY_BUDGET_BYTES),
     )
-    eos_targets = (("EOS-1", 1400), ("EOS-2", 1200))
+    eos_targets = (("EOS-1", 1500), ("EOS-2", 1200))
 
     lines = [
         "## Projected maximum simulation size",
@@ -881,18 +881,9 @@ def update_readme_projection_table(
     existing_pattern = re.compile(re.escape(heading) + r"\n.*?(?=\n## |\Z)", re.DOTALL)
     if existing_pattern.search(text):
         text = existing_pattern.sub(lambda _match: section_text, text, count=1)
-    else:
-        anchor = "## Scaling test results"
-        anchor_index = text.find(anchor)
-        if anchor_index == -1:
-            raise RuntimeError("Could not find the '## Scaling test results' section in README")
-        table_end_marker = "</tbody></table>"
-        table_end = text.find(table_end_marker, anchor_index)
-        if table_end == -1:
-            raise RuntimeError("Could not find the scaling table's closing tag in README")
-        insert_at = table_end + len(table_end_marker)
-        text = text[:insert_at] + "\n\n" + section_text + text[insert_at:]
-    readme_path.write_text(text)
+        readme_path.write_text(text)
+    # The README does not currently include this section (it was intentionally
+    # removed); don't resurrect it -- only update it in place when present.
 
 
 def write_readme_values(
@@ -1079,7 +1070,7 @@ def write_runtime_plan(
 
     lines.extend([
         "",
-        f"## EOS-{1 if target == 1400 else target} Fixed-Cubic Runtime Plan",
+        "## EOS Fixed-Cubic Runtime Plan",
         "",
         (
             f"Planning values use fixed `a=3` central estimates at `HII_DIM={target}`, a "
@@ -1116,7 +1107,7 @@ def update_readme_runtime_plan(
     if not lines:
         return
     section_text = "\n".join(lines).strip() + "\n"
-    heading = f"## EOS-{1 if target == 1400 else target} Fixed-Cubic Runtime Plan"
+    heading = "## EOS Fixed-Cubic Runtime Plan"
     text = readme_path.read_text()
     existing_pattern = re.compile(re.escape(heading) + r"\n.*?(?=\n## |\Z)", re.DOTALL)
     if existing_pattern.search(text):
