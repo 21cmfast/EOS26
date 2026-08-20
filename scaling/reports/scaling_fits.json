@@ -474,57 +474,57 @@
         }
       }
     },
-    "1400": {
+    "1500": {
       "file_sizes": {
-        "BrightnessTemp": 21816528531.28758,
-        "HaloBox": 54739670767.12011,
-        "HaloCatalog": 549271202150.86945,
-        "InitialConditions": 1273134434878.3513,
-        "IonizedBox": 43764138238.689285,
-        "PerturbedField": 43828593221.234276,
-        "TsBox": 43765144710.44931
+        "BrightnessTemp": 26826301538.51097,
+        "HaloBox": 67320059541.52447,
+        "HaloCatalog": 675070605110.1616,
+        "InitialConditions": 1565894413243.562,
+        "IonizedBox": 53820661302.61245,
+        "PerturbedField": 53902389280.37395,
+        "TsBox": 53821951773.34547
       },
       "phases": {
         "coeval": {
-          "elapsed_seconds": 31543.640795672938,
-          "elapsed_seconds_cubic": 32497.314805957485,
-          "peak_rss_bytes": 2103991137593.8584,
-          "peak_rss_bytes_cubic": 2154240148086.6528,
-          "peak_rss_bytes_power_law": 1695497483489.8557,
-          "rss_above_baseline_bytes": 2103838391608.5703,
-          "rss_above_baseline_bytes_cubic": 2149887568707.3403,
-          "storage_bytes": 164085297213.2416,
-          "storage_bytes_cubic": 164656960988.8564
+          "elapsed_seconds": 39493.030784450835,
+          "elapsed_seconds_cubic": 39970.27604595718,
+          "peak_rss_bytes": 2587371064491.418,
+          "peak_rss_bytes_cubic": 2649621173393.7515,
+          "peak_rss_bytes_power_law": 2051236425672.867,
+          "rss_above_baseline_bytes": 2587220472438.653,
+          "rss_above_baseline_bytes_cubic": 2644267691103.234,
+          "storage_bytes": 201788731272.82407,
+          "storage_bytes_cubic": 202520861274.55917
         },
         "ics": {
-          "elapsed_seconds": 9728.691212721702,
-          "elapsed_seconds_cubic": 49694.24348187036,
-          "peak_rss_bytes": 2130494975969.0908,
-          "peak_rss_bytes_cubic": 2134550839693.1519,
-          "rss_above_baseline_bytes": 2130212152460.7659,
-          "rss_above_baseline_bytes_cubic": 2130210724375.7305,
-          "storage_bytes": 1273134434878.3513,
-          "storage_bytes_cubic": 1273216986513.7083
+          "elapsed_seconds": 10954.627060438412,
+          "elapsed_seconds_cubic": 61121.74626505557,
+          "peak_rss_bytes": 2620379649191.245,
+          "peak_rss_bytes_cubic": 2625404185118.217,
+          "rss_above_baseline_bytes": 2620067802236.9507,
+          "rss_above_baseline_bytes_cubic": 2620066033078.75,
+          "storage_bytes": 1565894413243.562,
+          "storage_bytes_cubic": 1566001213368.7192
         },
         "pf": {
-          "elapsed_seconds": 178.1287929410538,
-          "elapsed_seconds_cubic": 4152.571103611805,
-          "peak_rss_bytes": 439341878300.7199,
-          "peak_rss_bytes_cubic": 443733790945.7677,
-          "rss_above_baseline_bytes": 439174539021.6194,
-          "rss_above_baseline_bytes_cubic": 439369123315.74493,
-          "storage_bytes": 43828593221.234276,
-          "storage_bytes_cubic": 43904913757.515076
+          "elapsed_seconds": 180.00888276344085,
+          "elapsed_seconds_cubic": 5107.48085812312,
+          "peak_rss_bytes": 540332313332.8147,
+          "peak_rss_bytes_cubic": 545773157595.4686,
+          "rss_above_baseline_bytes": 540163749931.4276,
+          "rss_above_baseline_bytes_cubic": 540404807285.2183,
+          "storage_bytes": 53902389280.37395,
+          "storage_bytes_cubic": 54001123881.7833
         },
         "phf": {
-          "elapsed_seconds": 9154.465919462338,
-          "elapsed_seconds_cubic": 52930.45391816414,
-          "peak_rss_bytes": 1116577290321.652,
-          "peak_rss_bytes_cubic": 1120381188608.2808,
-          "rss_above_baseline_bytes": 1116410439727.1367,
-          "rss_above_baseline_bytes_cubic": 1116015636555.5886,
-          "storage_bytes": 549271202150.86945,
-          "storage_bytes_cubic": 557502847059.5383
+          "elapsed_seconds": 10222.136167475212,
+          "elapsed_seconds_cubic": 65102.143576459166,
+          "peak_rss_bytes": 1373307472780.1672,
+          "peak_rss_bytes_cubic": 1378019865726.2927,
+          "rss_above_baseline_bytes": 1373139522627.5112,
+          "rss_above_baseline_bytes_cubic": 1372650427614.8364,
+          "storage_bytes": 675070605110.1616,
+          "storage_bytes_cubic": 685704121292.2528
         }
       }
     }

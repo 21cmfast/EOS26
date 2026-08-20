@@ -61,8 +61,8 @@ extrapolation sections.
   <tr>
     <th>EOS26 simulation step<br></th>
     <th colspan="2">Computation time [hrs]</th>
-    <th colspan="2">Memory [Tb]</th>
-    <th colspan="2">Storage [Tb]</th>
+    <th colspan="2">Memory [TB]</th>
+    <th colspan="2">Storage [TB]</th>
     <th colspan="2">SUs</th>
   </tr></thead>
 <tbody>
@@ -79,14 +79,14 @@ extrapolation sections.
   </tr>
   <tr>
     <td>Initial conditions</td>
-    <td>13.5 + 2.75 <br>for writing to disk<br><br></td>
+    <td>17+~3 write</td>
+    <td>30</td>
+    <td>2.63</td>
+    <td>2.41</td>
+    <td>1.42</td>
+    <td>1.57</td>
     <td></td>
-    <td>1.1</td>
-    <td>1.3</td>
-    <td>652 Gb</td>
-    <td>747 Gb</td>
     <td></td>
-    <td>864 EM <br> for ICs + PFs<br></td>
   </tr>
   <tr>
     <td>One perturbed field<br></td>
@@ -125,7 +125,7 @@ extrapolation sections.
 
 ## Scaling test results
 
-When updated with `--update-readme`, each extrapolated value is the mean ± 1σ from all available scaling points. Each extrapolated quantity shows both its current model (affine `overhead + coefficient * HII_DIM^3` for peak RSS; free-exponent power law for time and storage) and a fixed-cubic `a=3` fit. The regression uncertainty is combined in quadrature with a fixed 10% relative measurement-uncertainty floor. EOS-1: HII\_DIM = 1500 (1.5 cMpc/cell, 2250 Mpc). EOS-2: HII\_DIM = 1200 (1.667 cMpc/cell, 2000 Mpc). Storage for PFs and coevals is the total across all 92 node redshifts; coeval storage includes retained IonizedBox and excludes transient XraySourceBox.
+When updated with `--update-readme`, each extrapolated value is the mean ± 1σ from all available scaling points. Each extrapolated quantity shows both its current model (affine `overhead + coefficient * HII_DIM^3` for peak RSS; free-exponent power law for time and storage) and a fixed-cubic `a=3` fit. The regression uncertainty is combined in quadrature with a fixed 10% relative measurement-uncertainty floor. EOS-1: HII\_DIM = 1500 (1.5 cMpc/cell, 2250 Mpc). EOS-2: HII\_DIM = 1200 (1.667 cMpc/cell, 2000 Mpc). Storage for PFs and coevals is the total across all 92 node redshifts; coeval storage includes retained IonizedBox and excludes transient XraySourceBox. The scaling-test fits are trained only on `HII_DIM<=500` and, for initial conditions, that range's fixed per-job overhead makes the fitted compute-time noticeably underestimate the production values now measured at both EOS target sizes (`elapsed_seconds` fit for HII_DIM=1500: 17h vs. 29.8h measured).
 
 <table><thead>
   <tr>
@@ -224,11 +224,11 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
 
 ## EOS Fixed-Cubic Runtime Plan
 
-Planning values use fixed `a=3` central estimates at `HII_DIM=1500`, a 1.5 h IC-read allowance per dependent job, and the documented 3 h IC-write time to infer output-write throughput. Coeval output includes retained `IonizedBox` and excludes transient `XraySourceBox`. The table uses the 24 h maximum job walltime; coeval jobs are deliberately limited to 4 outputs for margin. Peak RSS is the per-phase process estimate; full-phase output totals all 92 PFs or coevals as applicable.
+Planning values use fixed `a=3` central estimates at `HII_DIM=1500`, a 1.5 h IC-read allowance per dependent job, and a 13 h IC-write time (measured production elapsed time minus the small-scale a=3 cubic fit's compute-only prediction at the same `HII_DIM`; see `estimate_ic_write_hours`) to infer output-write throughput. Coeval output excludes transient `XraySourceBox`. The table uses the 24 h maximum job walltime; coeval jobs are deliberately limited to 4 outputs for margin. Peak RSS is the per-phase process estimate; full-phase output totals all 92 PFs or coevals as applicable.
 
 | Phase | Work unit | Units/job | Compute/unit [h] | IC read/job [h] | Write/unit [h] | Estimated job walltime [h] | Jobs for full phase | Serial phase walltime [h] | Peak RSS [TB] | Output, full phase [TB] |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Initial conditions | all ICs | 1 | 16.98 | 0.00 | 3.00 | 19.98 | 1 | 20.0 | 2.63 | 1.42 |
-| Perturbed fields | one PF | 14 | 1.42 | 1.50 | 0.10 | 22.81 | 7 | 159.7 | 0.55 | 4.52 |
-| Perturbed halo fields | all halo fields | 1 | 18.08 | 1.50 | 1.31 | 20.90 | 1 | 20.9 | 1.38 | 0.62 |
-| Coevals | one coeval | 4 | 11.10 | 1.50 | 0.39 | 47.46 | 23 | 1091.7 | 2.65 | 16.95 |
+| Initial conditions | all ICs | 1 | 29.83 | 0.00 | 12.85 | 42.69 | 1 | 42.7 | 2.41 | 1.42 |
+| Perturbed fields | one PF | 12 | 1.42 | 1.50 | 0.44 | 23.84 | 8 | 190.8 | 0.55 | 4.52 |
+| Perturbed halo fields | all halo fields | 1 | 18.08 | 1.50 | 5.63 | 25.21 | 1 | 25.2 | 1.38 | 0.62 |
+| Coevals | one coeval | 4 | 11.10 | 1.50 | 1.66 | 52.56 | 23 | 1208.9 | 2.65 | 16.95 |

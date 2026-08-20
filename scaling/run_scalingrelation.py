@@ -36,7 +36,12 @@ FIXED_RELATIVE_POINT_ERROR = 0.10
 COEVAL_STORAGE_COUNT = 92
 FIXED_CUBIC_EXPONENT = 3.0
 IC_READ_HOURS = 1.5
-IC_WRITE_HOURS = 3.0
+# Fallback IC-write allowance, only used when no production ICs measurement is
+# available for the requested target (see estimate_ic_write_hours()). This
+# value was originally carried over from measurements on a different cluster
+# and does not reflect Gadi's actual write throughput; prefer the data-derived
+# estimate whenever possible.
+IC_WRITE_HOURS_FALLBACK = 3.0
 MAX_JOB_WALLTIME_HOURS = 24.0
 COEVALS_PER_JOB = 4
 
@@ -57,6 +62,31 @@ MEMORY_METRICS = {"peak_rss_bytes", "rss_above_baseline_bytes"}
 # only -- purely as a comparison; the affine model remains the one used for
 # the README's budget/EOS-target projections.
 COEVAL_COMPARISON_METRICS = {"peak_rss_bytes"}
+
+# Direct measurements from completed full-scale production ICs runs (see
+# logs/EOS26_ICs.o176510886 for HII_DIM=1200 and logs/EOS26_ICs.o176557786 for
+# HII_DIM=1500, both PBS "Resource Usage" blocks). The scaling-test fits above
+# are trained only on HII_DIM<=500, and at that range fixed per-job overhead
+# (interpreter/library startup, small-box I/O) is a large fraction of total
+# runtime; extrapolating ~3-15x beyond HII_DIM=500 systematically
+# underestimates measured production compute time (the a=3 fit predicted
+# ~8.7h/17.0h at HII_DIM=1200/1500 vs. 13.6h/29.8h actually measured). Peak
+# memory and storage extrapolations track the measurements much more closely,
+# but since ground truth is available at these exact target dimensions for
+# every ICs metric, it is used in place of the fitted extrapolation wherever
+# it exists.
+PRODUCTION_ICS_MEASUREMENTS: dict[int, dict[str, float]] = {
+    1200: {
+        "elapsed_seconds": 13 * 3600 + 36 * 60 + 58,  # Walltime Used 13:36:58
+        "peak_rss_bytes": 1.22e12,  # Memory Used 1.22TB
+        "storage_bytes": 801.792e9,  # file present, size=801.792 GB
+    },
+    1500: {
+        "elapsed_seconds": 29 * 3600 + 49 * 60 + 59,  # Walltime Used 29:49:59
+        "peak_rss_bytes": 2.41e12,  # Memory Used 2.41TB
+        "storage_bytes": 1566.000e9,  # file present, size=1566.000 GB
+    },
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -261,6 +291,29 @@ def predict(fit: dict[str, float], dimension: float) -> float:
     if fit["kind"] in {"power_law", "fixed_cubic"}:
         return fit["coefficient"] * dimension ** fit["exponent"]
     return fit["intercept"] + fit["slope"] * dimension ** 3
+
+
+def estimate_ic_write_hours(fits: dict[str, dict[str, dict[str, float]]], target: int) -> float:
+    """Estimate IC output-write time from measured-vs-extrapolated mismatch.
+
+    The small-scale scaling tests (HII_DIM<=500) write comparatively tiny
+    files, so write time is a negligible fraction of their measured elapsed
+    time; their fixed a=3 cubic fit of elapsed_seconds therefore tracks
+    compute time alone reasonably well. At production scale the output file
+    is far larger, and PRODUCTION_ICS_MEASUREMENTS records the real total
+    elapsed time there. The gap between that measurement and what the
+    small-scale cubic fit predicts for the same HII_DIM is attributed to
+    writing the (much larger) output file to disk -- this replaces a flat
+    allowance that had been carried over from a different cluster and did not
+    reflect Gadi's actual write throughput.
+    """
+    measured = PRODUCTION_ICS_MEASUREMENTS.get(target)
+    cubic_fit = fits.get("ics", {}).get("elapsed_seconds_cubic")
+    if measured is None or cubic_fit is None:
+        return IC_WRITE_HOURS_FALLBACK
+    predicted_compute_only_hours = predict(cubic_fit, target) / 3600.0
+    measured_total_hours = measured["elapsed_seconds"] / 3600.0
+    return max(measured_total_hours - predicted_compute_only_hours, 0.0)
 
 
 def prediction_interval(fit: dict[str, float], dimension: float) -> tuple[float, float]:
@@ -576,6 +629,11 @@ def format_labeled_mean_sigma(
     return f"{fit_label(fit)}: {format_mean_sigma(fit, dimension, formatter)}"
 
 
+def format_measured(value: float, formatter: Any) -> str:
+    """Format a direct (non-fitted) production measurement for a table cell."""
+    return f"measured: {formatter(value)}"
+
+
 def format_coeval_storage(value: float, formatter: Any) -> str:
     """Format one coeval's storage and the total for all node redshifts."""
     return f"{formatter(value)} x {COEVAL_STORAGE_COUNT} = {formatter(value * COEVAL_STORAGE_COUNT)}"
@@ -706,32 +764,43 @@ def update_readme_measured_table(
         rows = match.group("rows")
         dimension = int(match.group("dimension"))
         for phase, label in README_PHASE_LABELS.items():
-            metrics = fits[phase]
-            values = (
-                [
-                    format_labeled_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
-                    format_labeled_mean_sigma(metrics["elapsed_seconds_cubic"], dimension, format_readme_hours),
-                    format_labeled_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
-                    format_labeled_mean_sigma(metrics["peak_rss_bytes_cubic"], dimension, format_readme_tb),
+            measured = PRODUCTION_ICS_MEASUREMENTS.get(dimension) if phase == "ics" else None
+            if measured is not None:
+                values = [
+                    format_measured(measured["elapsed_seconds"], format_readme_hours),
+                    format_measured(measured["elapsed_seconds"], format_readme_hours),
+                    format_measured(measured["peak_rss_bytes"], format_readme_tb),
+                    format_measured(measured["peak_rss_bytes"], format_readme_tb),
+                    format_measured(measured["storage_bytes"], format_readme_tb),
+                    format_measured(measured["storage_bytes"], format_readme_tb),
                 ]
-                + (
+            else:
+                metrics = fits[phase]
+                values = (
                     [
-                        format_labeled_coeval_storage_mean_sigma(
-                            metrics["storage_bytes"], dimension, format_readme_tb
-                        ),
-                        format_labeled_coeval_storage_mean_sigma(
-                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
-                        ),
+                        format_labeled_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
+                        format_labeled_mean_sigma(metrics["elapsed_seconds_cubic"], dimension, format_readme_hours),
+                        format_labeled_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
+                        format_labeled_mean_sigma(metrics["peak_rss_bytes_cubic"], dimension, format_readme_tb),
                     ]
-                    if phase == "coeval"
-                    else [
-                        format_labeled_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb),
-                        format_labeled_mean_sigma(
-                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
-                        ),
-                    ]
+                    + (
+                        [
+                            format_labeled_coeval_storage_mean_sigma(
+                                metrics["storage_bytes"], dimension, format_readme_tb
+                            ),
+                            format_labeled_coeval_storage_mean_sigma(
+                                metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                            ),
+                        ]
+                        if phase == "coeval"
+                        else [
+                            format_labeled_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb),
+                            format_labeled_mean_sigma(
+                                metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                            ),
+                        ]
+                    )
                 )
-            )
             pattern = re.compile(
                 rf"(?P<prefix><tr>\s*<td>{re.escape(label)}</td>)(?P<cells>.*?)(?P<suffix></tr>)",
                 re.DOTALL,
@@ -999,15 +1068,26 @@ def write_runtime_plan(
         return
 
     def hours(phase: str, metric: str = "elapsed_seconds") -> float:
+        measured = PRODUCTION_ICS_MEASUREMENTS.get(target) if phase == "ics" else None
+        if measured is not None and metric in measured:
+            return measured[metric] / 3600.0
         return predict(cubic[phase][f"{metric}_cubic"], target) / 3600.0
 
     def storage_gib(phase: str) -> float:
+        measured = PRODUCTION_ICS_MEASUREMENTS.get(target) if phase == "ics" else None
+        if measured is not None:
+            return measured["storage_bytes"] / 2**30
         return predict(cubic[phase]["storage_bytes_cubic"], target) / 2**30
 
     ic_storage_gib = storage_gib("ics")
-    write_hours_per_gib = IC_WRITE_HOURS / ic_storage_gib
+    ic_write_hours = estimate_ic_write_hours(fits, target)
+    write_hours_per_gib = ic_write_hours / ic_storage_gib
     peak_rss_tb = {
-        phase: predict(cubic[phase]["peak_rss_bytes_cubic"], target) / 1e12
+        phase: (
+            PRODUCTION_ICS_MEASUREMENTS[target]["peak_rss_bytes"] / 1e12
+            if phase == "ics" and target in PRODUCTION_ICS_MEASUREMENTS
+            else predict(cubic[phase]["peak_rss_bytes_cubic"], target) / 1e12
+        )
         for phase in required
     }
     pf_compute = hours("pf")
@@ -1028,7 +1108,7 @@ def write_runtime_plan(
             1,
             hours("ics"),
             0.0,
-            IC_WRITE_HOURS,
+            ic_write_hours,
             1,
             peak_rss_tb["ics"],
             f"{ic_storage_gib / 1024.0:.2f}",
@@ -1074,8 +1154,10 @@ def write_runtime_plan(
         "",
         (
             f"Planning values use fixed `a=3` central estimates at `HII_DIM={target}`, a "
-            f"{IC_READ_HOURS:g} h IC-read allowance per dependent job, and the documented "
-            f"{IC_WRITE_HOURS:g} h IC-write time to infer output-write throughput. Coeval "
+            f"{IC_READ_HOURS:g} h IC-read allowance per dependent job, and a "
+            f"{ic_write_hours:.2g} h IC-write time (measured production elapsed time minus the "
+            "small-scale a=3 cubic fit's compute-only prediction at the same `HII_DIM`; see "
+            "`estimate_ic_write_hours`) to infer output-write throughput. Coeval "
             f"output includes retained `IonizedBox` and excludes transient `XraySourceBox`. The table uses the "
             f"{MAX_JOB_WALLTIME_HOURS:g} h maximum job walltime; coeval jobs are deliberately "
             f"limited to {COEVALS_PER_JOB} outputs for margin. Peak RSS is the per-phase "
