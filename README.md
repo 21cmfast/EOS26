@@ -224,11 +224,11 @@ When updated with `--update-readme`, each extrapolated value is the mean ± 1σ 
 
 ## EOS Fixed-Cubic Runtime Plan
 
-Planning values use fixed `a=3` central estimates at `HII_DIM=1500`, a 1.5 h IC-read allowance per dependent job, and a 13 h IC-write time (measured production elapsed time minus the small-scale a=3 cubic fit's compute-only prediction at the same `HII_DIM`; see `estimate_ic_write_hours`) to infer output-write throughput. Coeval output excludes transient `XraySourceBox`. The table uses the 24 h maximum job walltime; coeval jobs are deliberately limited to 4 outputs for margin. Peak RSS is the per-phase process estimate; full-phase output totals all 92 PFs or coevals as applicable.
+Planning values use fixed `a=3` central estimates at `HII_DIM=1500`, a 1.5 h IC-read allowance per dependent job, and a 13 h IC-write time (measured production elapsed time minus the small-scale a=3 cubic fit's compute-only prediction at the same `HII_DIM`; see `estimate_ic_write_hours`) to infer output-write throughput. Coeval output includes retained `IonizedBox` and excludes transient `XraySourceBox`. The table uses the 48 h maximum job walltime; coeval jobs are deliberately limited to 3 outputs for margin. Peak RSS is the per-phase process estimate; full-phase output totals all 92 PFs or coevals as applicable.
 
 | Phase | Work unit | Units/job | Compute/unit [h] | IC read/job [h] | Write/unit [h] | Estimated job walltime [h] | Jobs for full phase | Serial phase walltime [h] | Peak RSS [TB] | Output, full phase [TB] |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Initial conditions | all ICs | 1 | 29.83 | 0.00 | 12.85 | 42.69 | 1 | 42.7 | 2.41 | 1.42 |
-| Perturbed fields | one PF | 12 | 1.42 | 1.50 | 0.44 | 23.84 | 8 | 190.8 | 0.55 | 4.52 |
+| Initial conditions | all ICs | 1 | 16.98 | 0.00 | 12.85 | 29.83 | 1 | 29.8 | 2.63 | 1.42 |
+| Perturbed fields | one PF | 24 | 1.42 | 1.50 | 0.44 | 46.19 | 4 | 184.8 | 0.55 | 4.52 |
 | Perturbed halo fields | all halo fields | 1 | 18.08 | 1.50 | 5.63 | 25.21 | 1 | 25.2 | 1.38 | 0.62 |
-| Coevals | one coeval | 4 | 11.10 | 1.50 | 1.66 | 52.56 | 23 | 1208.9 | 2.65 | 16.95 |
+| Coevals | one coeval | 3 | 11.10 | 1.50 | 1.66 | 39.80 | 31 | 1233.7 | 2.65 | 16.95 |

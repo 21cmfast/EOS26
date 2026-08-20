@@ -42,8 +42,8 @@ IC_READ_HOURS = 1.5
 # and does not reflect Gadi's actual write throughput; prefer the data-derived
 # estimate whenever possible.
 IC_WRITE_HOURS_FALLBACK = 3.0
-MAX_JOB_WALLTIME_HOURS = 24.0
-COEVALS_PER_JOB = 4
+MAX_JOB_WALLTIME_HOURS = 48.0
+COEVALS_PER_JOB = 3
 
 # Peak RSS for 3D simulation grids is physically fixed per-process overhead
 # plus a term that scales with box volume (HII_DIM**3), so memory is fit with
@@ -629,11 +629,6 @@ def format_labeled_mean_sigma(
     return f"{fit_label(fit)}: {format_mean_sigma(fit, dimension, formatter)}"
 
 
-def format_measured(value: float, formatter: Any) -> str:
-    """Format a direct (non-fitted) production measurement for a table cell."""
-    return f"measured: {formatter(value)}"
-
-
 def format_coeval_storage(value: float, formatter: Any) -> str:
     """Format one coeval's storage and the total for all node redshifts."""
     return f"{formatter(value)} x {COEVAL_STORAGE_COUNT} = {formatter(value * COEVAL_STORAGE_COUNT)}"
@@ -764,43 +759,32 @@ def update_readme_measured_table(
         rows = match.group("rows")
         dimension = int(match.group("dimension"))
         for phase, label in README_PHASE_LABELS.items():
-            measured = PRODUCTION_ICS_MEASUREMENTS.get(dimension) if phase == "ics" else None
-            if measured is not None:
-                values = [
-                    format_measured(measured["elapsed_seconds"], format_readme_hours),
-                    format_measured(measured["elapsed_seconds"], format_readme_hours),
-                    format_measured(measured["peak_rss_bytes"], format_readme_tb),
-                    format_measured(measured["peak_rss_bytes"], format_readme_tb),
-                    format_measured(measured["storage_bytes"], format_readme_tb),
-                    format_measured(measured["storage_bytes"], format_readme_tb),
+            metrics = fits[phase]
+            values = (
+                [
+                    format_labeled_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
+                    format_labeled_mean_sigma(metrics["elapsed_seconds_cubic"], dimension, format_readme_hours),
+                    format_labeled_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
+                    format_labeled_mean_sigma(metrics["peak_rss_bytes_cubic"], dimension, format_readme_tb),
                 ]
-            else:
-                metrics = fits[phase]
-                values = (
+                + (
                     [
-                        format_labeled_mean_sigma(metrics["elapsed_seconds"], dimension, format_readme_hours),
-                        format_labeled_mean_sigma(metrics["elapsed_seconds_cubic"], dimension, format_readme_hours),
-                        format_labeled_mean_sigma(metrics["peak_rss_bytes"], dimension, format_readme_tb),
-                        format_labeled_mean_sigma(metrics["peak_rss_bytes_cubic"], dimension, format_readme_tb),
+                        format_labeled_coeval_storage_mean_sigma(
+                            metrics["storage_bytes"], dimension, format_readme_tb
+                        ),
+                        format_labeled_coeval_storage_mean_sigma(
+                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                        ),
                     ]
-                    + (
-                        [
-                            format_labeled_coeval_storage_mean_sigma(
-                                metrics["storage_bytes"], dimension, format_readme_tb
-                            ),
-                            format_labeled_coeval_storage_mean_sigma(
-                                metrics["storage_bytes_cubic"], dimension, format_readme_tb
-                            ),
-                        ]
-                        if phase == "coeval"
-                        else [
-                            format_labeled_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb),
-                            format_labeled_mean_sigma(
-                                metrics["storage_bytes_cubic"], dimension, format_readme_tb
-                            ),
-                        ]
-                    )
+                    if phase == "coeval"
+                    else [
+                        format_labeled_mean_sigma(metrics["storage_bytes"], dimension, format_readme_tb),
+                        format_labeled_mean_sigma(
+                            metrics["storage_bytes_cubic"], dimension, format_readme_tb
+                        ),
+                    ]
                 )
+            )
             pattern = re.compile(
                 rf"(?P<prefix><tr>\s*<td>{re.escape(label)}</td>)(?P<cells>.*?)(?P<suffix></tr>)",
                 re.DOTALL,
@@ -1068,28 +1052,15 @@ def write_runtime_plan(
         return
 
     def hours(phase: str, metric: str = "elapsed_seconds") -> float:
-        measured = PRODUCTION_ICS_MEASUREMENTS.get(target) if phase == "ics" else None
-        if measured is not None and metric in measured:
-            return measured[metric] / 3600.0
         return predict(cubic[phase][f"{metric}_cubic"], target) / 3600.0
 
     def storage_gib(phase: str) -> float:
-        measured = PRODUCTION_ICS_MEASUREMENTS.get(target) if phase == "ics" else None
-        if measured is not None:
-            return measured["storage_bytes"] / 2**30
         return predict(cubic[phase]["storage_bytes_cubic"], target) / 2**30
 
     ic_storage_gib = storage_gib("ics")
     ic_write_hours = estimate_ic_write_hours(fits, target)
     write_hours_per_gib = ic_write_hours / ic_storage_gib
-    peak_rss_tb = {
-        phase: (
-            PRODUCTION_ICS_MEASUREMENTS[target]["peak_rss_bytes"] / 1e12
-            if phase == "ics" and target in PRODUCTION_ICS_MEASUREMENTS
-            else predict(cubic[phase]["peak_rss_bytes_cubic"], target) / 1e12
-        )
-        for phase in required
-    }
+    peak_rss_tb = {phase: predict(cubic[phase]["peak_rss_bytes_cubic"], target) / 1e12 for phase in required}
     pf_compute = hours("pf")
     pf_write = storage_gib("pf") * write_hours_per_gib
     phf_compute = hours("phf")
