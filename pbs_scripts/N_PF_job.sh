@@ -1,8 +1,8 @@
 #!/bin/bash
 #PBS -N EOS26_PFs
-#PBS -q normalsr
+#PBS -q hugemem
 #PBS -l ncpus=16
-#PBS -l mem=500gb
+#PBS -l mem=600gb
 #PBS -l walltime=48:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
 
