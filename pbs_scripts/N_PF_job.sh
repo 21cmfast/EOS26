@@ -5,10 +5,11 @@
 #PBS -l mem=600gb
 #PBS -l walltime=48:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
+#PBS -P qp00
 
-# Run a batch of N=30 (default) PF boxes from starting index IDX
-# for the production-size EOS26 simulation with HII_DIM=1400.
-# Usage: qsub -F "<IDX> [N]" pbs_scripts/N_PF_job.sh
+# Run a batch of N=20 (default) PF boxes from starting index IDX
+# for the production-size EOS26 simulation with HII_DIM=1500.
+# Usage: qsub -v IDX=0,N=20 pbs_scripts/N_PF_job.sh
 
 export PATH="$HOME/.local/bin:$PATH"
 cd "$PBS_O_WORKDIR"
@@ -37,7 +38,7 @@ unset OMP_PROC_BIND
 unset OMP_PLACES
 
 IDX="${1:?Error: IDX (starting z_idx) is required, e.g. qsub -F \"0 30\" pbs_scripts/N_PF_job.sh}"
-N="${2:-30}"
+N="${2:-20}"
 
 printf "IDX is: %s, N is: %s\n" "$IDX" "$N"
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_PFs.py \

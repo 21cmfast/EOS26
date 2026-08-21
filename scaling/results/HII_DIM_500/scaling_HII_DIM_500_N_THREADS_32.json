@@ -1,0 +1,57 @@
+{
+  "box_len_mpc": 750.0,
+  "coeval_redshift": 5.0,
+  "coevals_averaged": 92,
+  "gc_enabled": false,
+  "hii_dim": 500,
+  "lowres_cell_size_mpc": 1.5,
+  "max_peak_rss_bytes": 97224433664,
+  "max_rss_above_baseline_bytes": 97062531072,
+  "n_threads": 32,
+  "phases": {
+    "ics": {
+      "average_cpu_cores": 9.703294605805809,
+      "cpu_seconds": 20612.02213505,
+      "elapsed_seconds": 2124.2292409340153,
+      "files": {
+        "InitialConditions": {
+          "bytes": 58000036664,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 97224433664,
+      "rss_above_baseline_bytes": 97062531072,
+      "total_file_bytes": 58000036664
+    },
+    "pf": {
+      "average_cpu_cores": 2.6090491530696416,
+      "cpu_seconds": 398.61963025899996,
+      "elapsed_seconds": 152.7834881109884,
+      "files": {
+        "PerturbedField": {
+          "bytes": 2000033960,
+          "file_count": 1
+        }
+      },
+      "peak_rss_bytes": 20148584448,
+      "rss_above_baseline_bytes": 19986669568,
+      "total_file_bytes": 2000033960
+    },
+    "phf": {
+      "average_cpu_cores": 2.4531835418422983,
+      "cpu_seconds": 5691.554360569,
+      "elapsed_seconds": 2320.0687039889162,
+      "files": {
+        "HaloCatalog": {
+          "bytes": 25411338096,
+          "file_count": 92
+        }
+      },
+      "peak_rss_bytes": 51012177920,
+      "rss_above_baseline_bytes": 50850193408,
+      "total_file_bytes": 25411338096
+    }
+  },
+  "pid": 2327967,
+  "random_seed": 42
+}
