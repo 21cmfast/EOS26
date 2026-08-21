@@ -2,10 +2,39 @@ import gc
 gc.collect()
 gc.disable()
 
+import ctypes
+import ctypes.util
 import time
 import argparse
 import numpy as np
 import settings
+
+# glibc's malloc keeps freed memory in per-thread/arena free lists rather than
+# returning it to the OS, especially when many small, variably-sized
+# allocations (e.g. compare_EOS.py's numpy/h5py work) are interleaved with the
+# large grid buffers py21cmfast allocates/frees each coeval. That interleaving
+# fragments the heap so freed large blocks can't always be reused in place,
+# and the process's RSS keeps growing even though live memory isn't. This is
+# a genuine peak-RSS climb we measured directly (~25-90MB/coeval over long
+# runs), NOT a Python-level leak: gc.collect() already runs every coeval (see
+# below) and consistently finds nothing to collect after the first call.
+# malloc_trim(0) asks glibc to release those free lists back to the OS; it's
+# a no-op (safely skipped) on non-glibc libc's such as macOS's.
+_libc = None
+try:
+    _libc_path = ctypes.util.find_library("c")
+    if _libc_path:
+        _candidate = ctypes.CDLL(_libc_path)
+        if hasattr(_candidate, "malloc_trim"):
+            _libc = _candidate
+except OSError:
+    pass
+
+
+def _malloc_trim() -> None:
+    """Best-effort: ask glibc to release freed heap memory back to the OS."""
+    if _libc is not None:
+        _libc.malloc_trim(0)
 
 parser = argparse.ArgumentParser()
 settings.add_common_args(parser)
@@ -98,6 +127,23 @@ try:
         # struct's in-memory arrays is prepare_for_next_snapshot(). We're done with
         # this coeval entirely (about to move to the next one), so purge everything.
         coeval.prepare_for_next_snapshot(force=True)
+
+        # Measured directly (not just theorized): with gc.disable() active for
+        # the whole script, gc.collect() here consistently finds 0 collectible
+        # objects after the first coeval, so per-coeval Python reference cycles
+        # are NOT the source of the RSS growth we saw on the cluster (ruled out
+        # empirically). The real cause is heap fragmentation: --compare's many
+        # small numpy/h5py allocations (see compare_EOS.py) get interleaved with
+        # this loop's large grid buffer alloc/free cycle, so freed large blocks
+        # can't always be reused in place and the allocator keeps requesting new
+        # OS memory instead -- confirmed by A/B testing the same run with and
+        # without --compare (flat peak RSS without it, climbing ~25-90MB/coeval
+        # with it). gc.collect() is still cheap insurance against the one-time
+        # startup garbage; malloc_trim(0) is the actual fragmentation fix (only
+        # effective on glibc/Linux, a safe no-op elsewhere).
+        n_collected = gc.collect()
+        _malloc_trim()
+        logger.debug(f"gc.collect() after coeval {count}/{N} collected {n_collected} objects")
         prev_tick = now_tick
 finally:
     # coeval_generator wraps py21cmfast's _redshift_loop_generator, whose entire
