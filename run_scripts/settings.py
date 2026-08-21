@@ -12,7 +12,7 @@ TEST_RANDOM_SEED = 42
 # ── cache directories ──────────────────────────────────────────────────────
 
 # Main EOS26 cache (used by production runs)
-CACHE_FULL = "EOS26_HIIDIM1400/"
+CACHE_FULL = "EOS26_cache/"
 # Small reference simulation generated with --test and without --compare.
 CACHE_TEST_REFERENCE = "EOS26_test_HIIDIM200/"
 # Separate local candidate cache for --test --compare.
