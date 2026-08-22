@@ -1,0 +1,618 @@
+/scratch/qp00/db9528/EOS26
+IDX is: 20, N is: 40
+OMP_NUM_THREADS: 16
+OMP_PROC_BIND: None
+OMP_PLACES: None
+Allowed CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+───────────────── compare_PF: checks 1-3 — PF z=23.4773 idx=20 ─────────────────
+[00:24:54] [[PASS]] ✓ Check 1 [PF z=23.4773 idx=20]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=23.4773 idx=20]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=23.4773 idx=20]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[00:24:55] [[PASS]] ✓ Check 2 [PF z=23.4773 idx=20]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=23.4773 idx=20]: density mean=+0.00014      
+           std=0.11749  min=-0.45355  max=0.99301  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=23.4773 idx=20]: density[0,0,:6] =          
+           [-0.07140702  0.0443231   0.01788558  0.02207017  0.00064017         
+           -0.00463081]                                                         
+           [[PASS]] ✓ Check 3 [PF z=23.4773 idx=20]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=23.4773 idx=20 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=22.9973 idx=21 ─────────────────
+[00:41:37] [[PASS]] ✓ Check 1 [PF z=22.9973 idx=21]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=22.9973 idx=21]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=22.9973 idx=21]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=22.9973 idx=21]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=22.9973 idx=21]: density mean=+0.00014      
+           std=0.11993  min=-0.46122  max=1.03199  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=22.9973 idx=21]: density[0,0,:6] =          
+           [-0.07258107  0.04540068  0.0179968   0.02202275  0.00050619         
+           -0.00483612]                                                         
+           [[PASS]] ✓ Check 3 [PF z=22.9973 idx=21]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=22.9973 idx=21 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=22.5268 idx=22 ─────────────────
+[00:56:45] [[PASS]] ✓ Check 1 [PF z=22.5268 idx=22]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=22.5268 idx=22]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=22.5268 idx=22]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[00:56:46] [[PASS]] ✓ Check 2 [PF z=22.5268 idx=22]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=22.5268 idx=22]: density mean=+0.00015      
+           std=0.12243  min=-0.46817  max=1.07318  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=22.5268 idx=22]: density[0,0,:6] =          
+           [-0.0737748   0.04651342  0.01809668  0.02195713  0.00036528         
+           -0.00505268]                                                         
+           [[PASS]] ✓ Check 3 [PF z=22.5268 idx=22]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=22.5268 idx=22 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=22.0655 idx=23 ─────────────────
+[01:12:56] [[PASS]] ✓ Check 1 [PF z=22.0655 idx=23]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=22.0655 idx=23]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=22.0655 idx=23]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[01:12:58] [[PASS]] ✓ Check 2 [PF z=22.0655 idx=23]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=22.0655 idx=23]: density mean=+0.00015      
+           std=0.12498  min=-0.47507  max=1.11726  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=22.0655 idx=23]: density[0,0,:6] =          
+           [-0.07498886  0.04766261  0.01818445  0.02187241  0.00021732         
+           -0.00528121]                                                         
+           [[PASS]] ✓ Check 3 [PF z=22.0655 idx=23]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=22.0655 idx=23 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=21.6132 idx=24 ─────────────────
+[01:28:01] [[PASS]] ✓ Check 1 [PF z=21.6132 idx=24]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=21.6132 idx=24]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=21.6132 idx=24]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[01:28:02] [[PASS]] ✓ Check 2 [PF z=21.6132 idx=24]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=21.6132 idx=24]: density mean=+0.00015      
+           std=0.12759  min=-0.48200  max=1.16341  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=21.6132 idx=24]: density[0,0,:6] =          
+           [-7.62230381e-02  4.88492474e-02  1.82592086e-02  2.17673853e-02     
+             6.17813348e-05 -5.52221388e-03]                                    
+           [[PASS]] ✓ Check 3 [PF z=21.6132 idx=24]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=21.6132 idx=24 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=21.1698 idx=25 ─────────────────
+[01:43:22] [[PASS]] ✓ Check 1 [PF z=21.1698 idx=25]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=21.1698 idx=25]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=21.1698 idx=25]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[01:43:23] [[PASS]] ✓ Check 2 [PF z=21.1698 idx=25]: no NaN/Inf in sampled slabs
+[01:43:24] [[INFO]] · Check 3 [PF z=21.1698 idx=25]: density mean=+0.00016      
+           std=0.13024  min=-0.48899  max=1.21117  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=21.1698 idx=25]: density[0,0,:6] =          
+           [-0.07747792  0.05007488  0.01832029  0.02164109 -0.00010169         
+           -0.0057763 ]                                                         
+           [[PASS]] ✓ Check 3 [PF z=21.1698 idx=25]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=21.1698 idx=25 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=20.7351 idx=26 ─────────────────
+[01:58:54] [[PASS]] ✓ Check 1 [PF z=20.7351 idx=26]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=20.7351 idx=26]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=20.7351 idx=26]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[01:58:55] [[PASS]] ✓ Check 2 [PF z=20.7351 idx=26]: no NaN/Inf in sampled slabs
+[01:58:56] [[INFO]] · Check 3 [PF z=20.7351 idx=26]: density mean=+0.00016      
+           std=0.13296  min=-0.49604  max=1.26031  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=20.7351 idx=26]: density[0,0,:6] =          
+           [-0.07875358  0.05134059  0.01836658  0.0214921  -0.00027338         
+           -0.00604422]                                                         
+           [[PASS]] ✓ Check 3 [PF z=20.7351 idx=26]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=20.7351 idx=26 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=20.3090 idx=27 ─────────────────
+[02:14:13] [[PASS]] ✓ Check 1 [PF z=20.3090 idx=27]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=20.3090 idx=27]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=20.3090 idx=27]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[02:14:14] [[PASS]] ✓ Check 2 [PF z=20.3090 idx=27]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=20.3090 idx=27]: density mean=+0.00016      
+           std=0.13572  min=-0.50313  max=1.31148  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=20.3090 idx=27]: density[0,0,:6] =          
+           [-8.00500065e-02  5.26697896e-02  1.84754115e-02  2.13610101e-02     
+             1.45161475e-05 -6.25104597e-03]                                    
+           [[PASS]] ✓ Check 3 [PF z=20.3090 idx=27]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=20.3090 idx=27 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=19.8911 idx=28 ─────────────────
+[02:29:18] [[PASS]] ✓ Check 1 [PF z=19.8911 idx=28]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=19.8911 idx=28]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=19.8911 idx=28]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[02:29:19] [[PASS]] ✓ Check 2 [PF z=19.8911 idx=28]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=19.8911 idx=28]: density mean=+0.00017      
+           std=0.13855  min=-0.51023  max=1.36463  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=19.8911 idx=28]: density[0,0,:6] =          
+           [-0.0813679   0.05407472  0.01897488  0.02314177  0.0031599          
+           -0.00594835]                                                         
+           [[PASS]] ✓ Check 3 [PF z=19.8911 idx=28]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=19.8911 idx=28 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=19.4815 idx=29 ─────────────────
+[02:44:24] [[PASS]] ✓ Check 1 [PF z=19.4815 idx=29]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=19.4815 idx=29]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=19.4815 idx=29]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[02:44:25] [[PASS]] ✓ Check 2 [PF z=19.4815 idx=29]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=19.4815 idx=29]: density mean=+0.00017      
+           std=0.14143  min=-0.51601  max=1.41971  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=19.4815 idx=29]: density[0,0,:6] =          
+           [-0.08270699  0.05622054  0.02228596  0.02601914  0.00621689         
+           -0.00544129]                                                         
+           [[PASS]] ✓ Check 3 [PF z=19.4815 idx=29]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=19.4815 idx=29 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=19.0799 idx=30 ─────────────────
+[02:59:43] [[PASS]] ✓ Check 1 [PF z=19.0799 idx=30]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=19.0799 idx=30]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=19.0799 idx=30]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=19.0799 idx=30]: no NaN/Inf in sampled slabs
+[02:59:44] [[INFO]] · Check 3 [PF z=19.0799 idx=30]: density mean=+0.00018      
+           std=0.14437  min=-0.52053  max=1.47680  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=19.0799 idx=30]: density[0,0,:6] =          
+           [-0.08406778  0.05843769  0.02487422  0.02493549  0.00856937         
+           -0.00472313]                                                         
+           [[PASS]] ✓ Check 3 [PF z=19.0799 idx=30]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=19.0799 idx=30 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=18.6862 idx=31 ─────────────────
+[03:14:53] [[PASS]] ✓ Check 1 [PF z=18.6862 idx=31]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=18.6862 idx=31]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=18.6862 idx=31]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=18.6862 idx=31]: no NaN/Inf in sampled slabs
+[03:14:54] [[INFO]] · Check 3 [PF z=18.6862 idx=31]: density mean=+0.00018      
+           std=0.14738  min=-0.52486  max=1.53599  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=18.6862 idx=31]: density[0,0,:6] =          
+           [-0.08541472  0.06089975  0.02688458  0.02231348  0.01122187         
+           -0.00177566]                                                         
+           [[PASS]] ✓ Check 3 [PF z=18.6862 idx=31]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=18.6862 idx=31 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=18.3002 idx=32 ─────────────────
+[03:30:12] [[PASS]] ✓ Check 1 [PF z=18.3002 idx=32]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=18.3002 idx=32]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=18.3002 idx=32]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[03:30:13] [[PASS]] ✓ Check 2 [PF z=18.3002 idx=32]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=18.3002 idx=32]: density mean=+0.00018      
+           std=0.15044  min=-0.52697  max=1.59534  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=18.3002 idx=32]: density[0,0,:6] =          
+           [-0.08638026  0.06531151  0.02928521  0.02004336  0.01425894         
+           0.00100196]                                                          
+           [[PASS]] ✓ Check 3 [PF z=18.3002 idx=32]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=18.3002 idx=32 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=17.9217 idx=33 ─────────────────
+[03:45:20] [[PASS]] ✓ Check 1 [PF z=17.9217 idx=33]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=17.9217 idx=33]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=17.9217 idx=33]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[03:45:21] [[PASS]] ✓ Check 2 [PF z=17.9217 idx=33]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=17.9217 idx=33]: density mean=+0.00019      
+           std=0.15356  min=-0.52893  max=1.65545  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=17.9217 idx=33]: density[0,0,:6] =          
+           [-0.08715549  0.07008093  0.02914229  0.01665902  0.01218366         
+           0.00310124]                                                          
+           [[PASS]] ✓ Check 3 [PF z=17.9217 idx=33]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=17.9217 idx=33 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=17.5507 idx=34 ─────────────────
+[04:00:46] [[PASS]] ✓ Check 1 [PF z=17.5507 idx=34]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=17.5507 idx=34]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=17.5507 idx=34]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[04:00:47] [[PASS]] ✓ Check 2 [PF z=17.5507 idx=34]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=17.5507 idx=34]: density mean=+0.00019      
+           std=0.15675  min=-0.53371  max=1.71485  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=17.5507 idx=34]: density[0,0,:6] =          
+           [-0.08798267  0.07402565  0.02657641  0.01215643  0.00903328         
+           0.00522598]                                                          
+           [[PASS]] ✓ Check 3 [PF z=17.5507 idx=34]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=17.5507 idx=34 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=17.1870 idx=35 ─────────────────
+[04:16:18] [[PASS]] ✓ Check 1 [PF z=17.1870 idx=35]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=17.1870 idx=35]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=17.1870 idx=35]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[04:16:19] [[PASS]] ✓ Check 2 [PF z=17.1870 idx=35]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=17.1870 idx=35]: density mean=+0.00020      
+           std=0.16001  min=-0.54275  max=1.78296  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=17.1870 idx=35]: density[0,0,:6] =          
+           [-0.08871011  0.07809517  0.02388558  0.00728691  0.00557499         
+           0.00724121]                                                          
+           [[PASS]] ✓ Check 3 [PF z=17.1870 idx=35]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=17.1870 idx=35 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=16.8304 idx=36 ─────────────────
+[04:31:31] [[PASS]] ✓ Check 1 [PF z=16.8304 idx=36]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=16.8304 idx=36]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=16.8304 idx=36]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[04:31:32] [[PASS]] ✓ Check 2 [PF z=16.8304 idx=36]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=16.8304 idx=36]: density mean=+0.00020      
+           std=0.16333  min=-0.55166  max=1.85368  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=16.8304 idx=36]: density[0,0,:6] =          
+           [-0.09003147  0.07710024  0.02091633  0.00236627  0.00142116         
+           0.00428445]                                                          
+           [[PASS]] ✓ Check 3 [PF z=16.8304 idx=36]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=16.8304 idx=36 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=16.4808 idx=37 ─────────────────
+[04:46:33] [[PASS]] ✓ Check 1 [PF z=16.4808 idx=37]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=16.4808 idx=37]: size ratio=422             
+           (expected≈422) OK                                                    
+[04:46:34] [[PASS]] ✓ Check 2 [PF z=16.4808 idx=37]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[04:46:37] [[PASS]] ✓ Check 2 [PF z=16.4808 idx=37]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=16.4808 idx=37]: density mean=+0.00020      
+           std=0.16671  min=-0.56036  max=1.92699  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=16.4808 idx=37]: density[0,0,:6] =          
+           [-0.09185657  0.07612286  0.01893243 -0.00207624 -0.00091015         
+           0.00177124]                                                          
+           [[PASS]] ✓ Check 3 [PF z=16.4808 idx=37]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=16.4808 idx=37 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=16.1380 idx=38 ─────────────────
+[05:01:43] [[PASS]] ✓ Check 1 [PF z=16.1380 idx=38]: file present, size=54.000  
+           GB                                                                   
+[05:01:44] [[PASS]] ✓ Check 1 [PF z=16.1380 idx=38]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=16.1380 idx=38]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[05:01:45] [[PASS]] ✓ Check 2 [PF z=16.1380 idx=38]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=16.1380 idx=38]: density mean=+0.00021      
+           std=0.17017  min=-0.56886  max=2.00141  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=16.1380 idx=38]: density[0,0,:6] =          
+           [-0.09500007  0.07499593  0.01736684 -0.00405435 -0.00183065         
+           0.00224301]                                                          
+           [[PASS]] ✓ Check 3 [PF z=16.1380 idx=38]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=16.1380 idx=38 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=15.8020 idx=39 ─────────────────
+[05:16:45] [[PASS]] ✓ Check 1 [PF z=15.8020 idx=39]: file present, size=54.000  
+           GB                                                                   
+[05:16:46] [[PASS]] ✓ Check 1 [PF z=15.8020 idx=39]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=15.8020 idx=39]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=15.8020 idx=39]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=15.8020 idx=39]: density mean=+0.00021      
+           std=0.17369  min=-0.57731  max=2.08005  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=15.8020 idx=39]: density[0,0,:6] =          
+           [-0.10299952  0.07307381  0.01571916 -0.00611881 -0.00291527         
+           0.00172335]                                                          
+           [[PASS]] ✓ Check 3 [PF z=15.8020 idx=39]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=15.8020 idx=39 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=15.4725 idx=40 ─────────────────
+[05:32:00] [[PASS]] ✓ Check 1 [PF z=15.4725 idx=40]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=15.4725 idx=40]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=15.4725 idx=40]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=15.4725 idx=40]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=15.4725 idx=40]: density mean=+0.00022      
+           std=0.17729  min=-0.58463  max=2.16451  NaN=0  Inf=0                 
+[05:32:01] [[INFO]] · Check 3 [PF z=15.4725 idx=40]: density[0,0,:6] =          
+           [-0.10942241  0.07247622  0.01417212 -0.00818339 -0.00351436         
+           0.00125982]                                                          
+           [[PASS]] ✓ Check 3 [PF z=15.4725 idx=40]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=15.4725 idx=40 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=15.1495 idx=41 ─────────────────
+[05:47:19] [[PASS]] ✓ Check 1 [PF z=15.1495 idx=41]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=15.1495 idx=41]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=15.1495 idx=41]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[05:47:20] [[PASS]] ✓ Check 2 [PF z=15.1495 idx=41]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=15.1495 idx=41]: density mean=+0.00022      
+           std=0.18097  min=-0.59097  max=2.25840  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=15.1495 idx=41]: density[0,0,:6] =          
+           [-0.11447499  0.07318661  0.01279442 -0.01014288 -0.00394593         
+           0.00092526]                                                          
+           [[PASS]] ✓ Check 3 [PF z=15.1495 idx=41]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=15.1495 idx=41 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=14.8329 idx=42 ─────────────────
+[06:03:06] [[PASS]] ✓ Check 1 [PF z=14.8329 idx=42]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=14.8329 idx=42]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=14.8329 idx=42]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[06:03:07] [[PASS]] ✓ Check 2 [PF z=14.8329 idx=42]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=14.8329 idx=42]: density mean=+0.00022      
+           std=0.18471  min=-0.59637  max=2.35943  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=14.8329 idx=42]: density[0,0,:6] =          
+           [-0.11656085  0.07406782  0.01141599 -0.01163719 -0.00433618         
+           0.00078861]                                                          
+           [[PASS]] ✓ Check 3 [PF z=14.8329 idx=42]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=14.8329 idx=42 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=14.5224 idx=43 ─────────────────
+[06:18:21] [[PASS]] ✓ Check 1 [PF z=14.5224 idx=43]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=14.5224 idx=43]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=14.5224 idx=43]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=14.5224 idx=43]: no NaN/Inf in sampled slabs
+[06:18:22] [[INFO]] · Check 3 [PF z=14.5224 idx=43]: density mean=+0.00023      
+           std=0.18854  min=-0.59998  max=2.46760  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=14.5224 idx=43]: density[0,0,:6] =          
+           [-0.11857453  0.07497546  0.00995905 -0.01319879 -0.00474823         
+           0.00072735]                                                          
+           [[PASS]] ✓ Check 3 [PF z=14.5224 idx=43]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=14.5224 idx=43 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=14.2181 idx=44 ─────────────────
+[06:33:36] [[PASS]] ✓ Check 1 [PF z=14.2181 idx=44]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=14.2181 idx=44]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=14.2181 idx=44]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[06:33:37] [[PASS]] ✓ Check 2 [PF z=14.2181 idx=44]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=14.2181 idx=44]: density mean=+0.00023      
+           std=0.19245  min=-0.60810  max=2.58145  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=14.2181 idx=44]: density[0,0,:6] =          
+           [-0.12056374  0.07590385  0.0084371  -0.0148282  -0.00518275         
+           0.00063887]                                                          
+           [[PASS]] ✓ Check 3 [PF z=14.2181 idx=44]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=14.2181 idx=44 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=13.9197 idx=45 ─────────────────
+[06:48:42] [[PASS]] ✓ Check 1 [PF z=13.9197 idx=45]: file present, size=54.000  
+           GB                                                                   
+[06:48:43] [[PASS]] ✓ Check 1 [PF z=13.9197 idx=45]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=13.9197 idx=45]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=13.9197 idx=45]: no NaN/Inf in sampled slabs
+[06:48:44] [[INFO]] · Check 3 [PF z=13.9197 idx=45]: density mean=+0.00024      
+           std=0.19644  min=-0.61819  max=2.69664  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=13.9197 idx=45]: density[0,0,:6] =          
+           [-0.12255825  0.07700966  0.00750385 -0.01645905 -0.00564102         
+           0.00041509]                                                          
+           [[PASS]] ✓ Check 3 [PF z=13.9197 idx=45]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=13.9197 idx=45 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=13.6271 idx=46 ─────────────────
+[07:03:35] [[PASS]] ✓ Check 1 [PF z=13.6271 idx=46]: file present, size=54.000  
+           GB                                                                   
+[07:03:36] [[PASS]] ✓ Check 1 [PF z=13.6271 idx=46]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=13.6271 idx=46]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=13.6271 idx=46]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=13.6271 idx=46]: density mean=+0.00024      
+           std=0.20052  min=-0.62822  max=2.81605  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=13.6271 idx=46]: density[0,0,:6] =          
+           [-0.12447058  0.07852288  0.00657138 -0.01816143 -0.00612411         
+           0.00016869]                                                          
+           [[PASS]] ✓ Check 3 [PF z=13.6271 idx=46]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=13.6271 idx=46 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=13.3403 idx=47 ─────────────────
+[07:18:28] [[PASS]] ✓ Check 1 [PF z=13.3403 idx=47]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=13.3403 idx=47]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=13.3403 idx=47]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[07:18:29] [[PASS]] ✓ Check 2 [PF z=13.3403 idx=47]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=13.3403 idx=47]: density mean=+0.00025      
+           std=0.20468  min=-0.63775  max=2.94354  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=13.3403 idx=47]: density[0,0,:6] =          
+           [-0.12619059  0.08020629  0.00588718 -0.01821268 -0.00263765         
+           0.00056179]                                                          
+           [[PASS]] ✓ Check 3 [PF z=13.3403 idx=47]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=13.3403 idx=47 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=13.0591 idx=48 ─────────────────
+[07:33:38] [[PASS]] ✓ Check 1 [PF z=13.0591 idx=48]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=13.0591 idx=48]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=13.0591 idx=48]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[07:33:39] [[PASS]] ✓ Check 2 [PF z=13.0591 idx=48]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=13.0591 idx=48]: density mean=+0.00025      
+           std=0.20894  min=-0.64701  max=3.07476  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=13.0591 idx=48]: density[0,0,:6] =          
+           [-0.12784913  0.08281161  0.00836008 -0.01573362  0.00155136         
+           0.00144408]                                                          
+           [[PASS]] ✓ Check 3 [PF z=13.0591 idx=48]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=13.0591 idx=48 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=12.7835 idx=49 ─────────────────
+[07:49:12] [[PASS]] ✓ Check 1 [PF z=12.7835 idx=49]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=12.7835 idx=49]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=12.7835 idx=49]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[07:49:13] [[PASS]] ✓ Check 2 [PF z=12.7835 idx=49]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=12.7835 idx=49]: density mean=+0.00026      
+           std=0.21328  min=-0.65500  max=3.20902  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=12.7835 idx=49]: density[0,0,:6] =          
+           [-0.12951356  0.08583332  0.01114596 -0.0166633   0.00488841         
+           0.00226204]                                                          
+           [[PASS]] ✓ Check 3 [PF z=12.7835 idx=49]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=12.7835 idx=49 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=12.5132 idx=50 ─────────────────
+[08:04:46] [[PASS]] ✓ Check 1 [PF z=12.5132 idx=50]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=12.5132 idx=50]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=12.5132 idx=50]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[08:04:47] [[PASS]] ✓ Check 2 [PF z=12.5132 idx=50]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=12.5132 idx=50]: density mean=+0.00026      
+           std=0.21772  min=-0.66238  max=3.34548  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=12.5132 idx=50]: density[0,0,:6] =          
+           [-0.13115878  0.08907463  0.01288323 -0.02187786  0.0081089          
+           0.00588273]                                                          
+           [[PASS]] ✓ Check 3 [PF z=12.5132 idx=50]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=12.5132 idx=50 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=12.2482 idx=51 ─────────────────
+[08:19:59] [[PASS]] ✓ Check 1 [PF z=12.2482 idx=51]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=12.2482 idx=51]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=12.2482 idx=51]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[08:20:00] [[PASS]] ✓ Check 2 [PF z=12.2482 idx=51]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=12.2482 idx=51]: density mean=+0.00027      
+           std=0.22226  min=-0.66923  max=3.48787  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=12.2482 idx=51]: density[0,0,:6] =          
+           [-0.1324525   0.09381156  0.01476413 -0.02678269  0.01226271         
+           0.01017503]                                                          
+           [[PASS]] ✓ Check 3 [PF z=12.2482 idx=51]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=12.2482 idx=51 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=11.9885 idx=52 ─────────────────
+[08:34:59] [[PASS]] ✓ Check 1 [PF z=11.9885 idx=52]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=11.9885 idx=52]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=11.9885 idx=52]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=11.9885 idx=52]: no NaN/Inf in sampled slabs
+[08:35:00] [[INFO]] · Check 3 [PF z=11.9885 idx=52]: density mean=+0.00027      
+           std=0.22690  min=-0.67559  max=3.64118  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=11.9885 idx=52]: density[0,0,:6] =          
+           [-0.1330585   0.1009334   0.01548206 -0.03244964  0.0118086          
+           0.01384658]                                                          
+           [[PASS]] ✓ Check 3 [PF z=11.9885 idx=52]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=11.9885 idx=52 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=11.7338 idx=53 ─────────────────
+[08:50:14] [[PASS]] ✓ Check 1 [PF z=11.7338 idx=53]: file present, size=54.000  
+           GB                                                                   
+[08:50:15] [[PASS]] ✓ Check 1 [PF z=11.7338 idx=53]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=11.7338 idx=53]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=11.7338 idx=53]: no NaN/Inf in sampled slabs
+[08:50:16] [[INFO]] · Check 3 [PF z=11.7338 idx=53]: density mean=+0.00028      
+           std=0.23164  min=-0.68307  max=3.79948  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=11.7338 idx=53]: density[0,0,:6] =          
+           [-0.13367027  0.10625784  0.0104644  -0.03985833  0.00766544         
+           0.01709643]                                                          
+           [[PASS]] ✓ Check 3 [PF z=11.7338 idx=53]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=11.7338 idx=53 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=11.4841 idx=54 ─────────────────
+[09:05:12] [[PASS]] ✓ Check 1 [PF z=11.4841 idx=54]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=11.4841 idx=54]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=11.4841 idx=54]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[09:05:13] [[PASS]] ✓ Check 2 [PF z=11.4841 idx=54]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=11.4841 idx=54]: density mean=+0.00028      
+           std=0.23649  min=-0.69034  max=3.97235  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=11.4841 idx=54]: density[0,0,:6] =          
+           [-0.13422382  0.11162853  0.00501102 -0.04870799  0.00222594         
+           0.02048544]                                                          
+           [[PASS]] ✓ Check 3 [PF z=11.4841 idx=54]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=11.4841 idx=54 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=11.2393 idx=55 ─────────────────
+[09:20:12] [[PASS]] ✓ Check 1 [PF z=11.2393 idx=55]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=11.2393 idx=55]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=11.2393 idx=55]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=11.2393 idx=55]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=11.2393 idx=55]: density mean=+0.00029      
+           std=0.24144  min=-0.69509  max=4.15618  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=11.2393 idx=55]: density[0,0,:6] =          
+           [-0.1351596   0.11219151 -0.00132854 -0.05779526 -0.00388346         
+           0.01904617]                                                          
+           [[PASS]] ✓ Check 3 [PF z=11.2393 idx=55]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=11.2393 idx=55 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=10.9993 idx=56 ─────────────────
+[09:35:10] [[PASS]] ✓ Check 1 [PF z=10.9993 idx=56]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=10.9993 idx=56]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=10.9993 idx=56]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[09:35:11] [[PASS]] ✓ Check 2 [PF z=10.9993 idx=56]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=10.9993 idx=56]: density mean=+0.00029      
+           std=0.24651  min=-0.69843  max=4.34529  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=10.9993 idx=56]: density[0,0,:6] =          
+           [-0.13679554  0.11024665 -0.00589431 -0.06651039 -0.00914961         
+           0.01535739]                                                          
+           [[PASS]] ✓ Check 3 [PF z=10.9993 idx=56]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=10.9993 idx=56 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=10.7641 idx=57 ─────────────────
+[09:50:07] [[PASS]] ✓ Check 1 [PF z=10.7641 idx=57]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=10.7641 idx=57]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=10.7641 idx=57]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+           [[PASS]] ✓ Check 2 [PF z=10.7641 idx=57]: no NaN/Inf in sampled slabs
+[09:50:08] [[INFO]] · Check 3 [PF z=10.7641 idx=57]: density mean=+0.00029      
+           std=0.25170  min=-0.70166  max=4.54344  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=10.7641 idx=57]: density[0,0,:6] =          
+           [-0.13857807  0.1083042  -0.01000457 -0.07251588 -0.01148063         
+           0.01495965]                                                          
+           [[PASS]] ✓ Check 3 [PF z=10.7641 idx=57]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=10.7641 idx=57 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=10.5334 idx=58 ─────────────────
+[10:05:22] [[PASS]] ✓ Check 1 [PF z=10.5334 idx=58]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=10.5334 idx=58]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=10.5334 idx=58]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[10:05:23] [[PASS]] ✓ Check 2 [PF z=10.5334 idx=58]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=10.5334 idx=58]: density mean=+0.00030      
+           std=0.25700  min=-0.70563  max=4.75346  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=10.5334 idx=58]: density[0,0,:6] =          
+           [-0.14660001  0.10525755 -0.01350753 -0.0775773  -0.01369243         
+           0.01488626]                                                          
+           [[PASS]] ✓ Check 3 [PF z=10.5334 idx=58]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=10.5334 idx=58 ✓   
+───────────────── compare_PF: checks 1-3 — PF z=10.3072 idx=59 ─────────────────
+[10:20:52] [[PASS]] ✓ Check 1 [PF z=10.3072 idx=59]: file present, size=54.000  
+           GB                                                                   
+           [[PASS]] ✓ Check 1 [PF z=10.3072 idx=59]: size ratio=422             
+           (expected≈422) OK                                                    
+           [[PASS]] ✓ Check 2 [PF z=10.3072 idx=59]: cubic shape (1500, 1500,   
+           1500) OK                                                             
+[10:20:53] [[PASS]] ✓ Check 2 [PF z=10.3072 idx=59]: no NaN/Inf in sampled slabs
+           [[INFO]] · Check 3 [PF z=10.3072 idx=59]: density mean=+0.00030      
+           std=0.26243  min=-0.70951  max=4.97212  NaN=0  Inf=0                 
+           [[INFO]] · Check 3 [PF z=10.3072 idx=59]: density[0,0,:6] =          
+           [-0.15596533  0.10232208 -0.01633574 -0.0826809  -0.01564804         
+           0.01415067]                                                          
+           [[PASS]] ✓ Check 3 [PF z=10.3072 idx=59]: density stats OK           
+           [[PASS]] ✓ compare_PF: all checks passed for PF z=10.3072 idx=59 ✓   
+
+======================================================================================
+                  Resource Usage on 2026-08-22 10:21:06:
+   Job Id:             176972525.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      558.38
+   NCPUs Requested:    16                  CPU Time Used: 84:41:15        
+   Memory Requested:   520.0GB               Memory Used: 520.0GB         
+   Walltime Requested: 48:00:00            Walltime Used: 11:27:14        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
