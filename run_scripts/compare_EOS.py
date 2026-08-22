@@ -142,7 +142,13 @@ def _hdf5_histogram(
         step_y = max(ds.shape[1] // MAX_HIST_SIDE, 1)
         step_x = max(ds.shape[2] // MAX_HIST_SIDE, 1)
         for i in _sample_indices(ds.shape[0]):
-            slab = ds[i, ::step_y, ::step_x].astype(np.float32).ravel()
+            # Read the full 2-D slab contiguously (h5py's fast read path only
+            # handles plain integer/`:` indexing; an explicit stepped slice
+            # like `::step` forces a fallback to the slow generic selection
+            # path, which leaks memory — each call retains a new HDF5 type
+            # object that is never freed). Do the downsampling in NumPy
+            # instead, on the array already in memory.
+            slab = ds[i][::step_y, ::step_x].astype(np.float32).ravel()
             h, _ = np.histogram(slab, bins=bins)
             counts += h
     return counts, bins

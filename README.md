@@ -90,11 +90,11 @@ extrapolation sections.
   </tr>
   <tr>
     <td>One perturbed field<br></td>
-    <td>0.6<br></td>
-    <td></td>
-    <td>25 Gb<br></td>
-    <td>26 Gb</td>
-    <td>25Gb x 92 = 2.3Tb</td>
+    <td>1.42<br></td>
+    <td>0.2</td>
+    <td>0.545<br></td>
+    <td>0.505</td>
+    <td>--Gb x 92 = 2.3Tb</td>
     <td>2.4Tb</td>
     <td></td>
     <td></td>
