@@ -29,7 +29,7 @@ module load fftw3/3.3.10
 module list
 
 uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py
-uv run --no-sync --active --project "$ROOT" postprocess/plot_pfs.py
+uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py
 wait
 
 
