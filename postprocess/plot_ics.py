@@ -50,10 +50,12 @@ initial_conditions = runcache.get_ics()
 
 HII_DIM = inputs.simulation_options.HII_DIM
 L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
-
+print(f"HII_DIM: {HII_DIM}, L: {L}")
 box = initial_conditions.get("lowres_density") * un.dimensionless_unscaled
 if args.zoom:
-    box = box[:100, :100, :100]
+    box = box[:100, :100, :10]
+else:
+    box = box[:,:,:10]
 
 if args.vel:
     v_x = initial_conditions.get("lowres_vx")[0, ...] * un.m / un.s

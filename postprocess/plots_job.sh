@@ -3,7 +3,7 @@
 #PBS -N EOS26_plots
 #PBS -q normal
 #PBS -l ncpus=1
-#PBS -l mem=16gb
+#PBS -l mem=32gb
 #PBS -l walltime=1:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
 

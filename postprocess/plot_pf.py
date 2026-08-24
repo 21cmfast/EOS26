@@ -63,8 +63,9 @@ L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
 
 box = perturbed_field.get("density") * un.dimensionless_unscaled
 if args.zoom:
-    box = box[:100, :100, :100]
-
+    box = box[:100, :100, :10]
+else:
+    box = box[:,:,:10]
 if args.vel:
     v_x = perturbed_field.get("velocity_x")[0, ...] * un.m / un.s
     v_y = perturbed_field.get("velocity_y")[0, ...] * un.m / un.s
