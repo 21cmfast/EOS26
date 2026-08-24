@@ -1,18 +1,35 @@
 #!/bin/bash
-#SBATCH -p RM-shared
-#SBATCH -t 1:00:00
-#SBATCH --ntasks-per-node=24
+#!/bin/bash
+#PBS -N EOS26_ICs
+#PBS -q megamem
+#PBS -l ncpus=1
+#PBS -l mem=16gb
+#PBS -l walltime=1:00:00
+#PBS -l storage=scratch/qp00+gdata/qp00
 
-#echo commands to stdout
-#set -x
+# Run the ICs for the production-size EOS26 simulation with HII_DIM=1400.
+# Usage: qsub pbs_scripts/ICs_job.sh
 
-module load anaconda3/2024.10-1
-module load fftw/3.3.8
-module load gcc/13.2.1-p20240113
-module load openmpi/5.0.3-gcc13.2.1
+export PATH="$HOME/.local/bin:$PATH"
+cd "$PBS_O_WORKDIR"
 
-conda activate 21cmFASTv4
-cd /jet/home/breitman/EOSv4/Results
+set -euo pipefail
+ROOT="$(cd "$PBS_O_WORKDIR" && pwd)"
+cd "$ROOT"
+pwd
 
-python plot_ics.py
+source /scratch/qp00/db9528/venvs/EOS26-intel/bin/activate
+set -euo pipefail
+
+module purge
+module load intel-compiler/2021.8.0
+module load gsl/2.7.1
+module load fftw3/3.3.10
+
+module list
+
+uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py
+uv run --no-sync --active --project "$ROOT" postprocess/plot_pfs.py
+wait
+
 

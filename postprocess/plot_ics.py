@@ -17,14 +17,21 @@ if test:
     toml = path+"/config-448e84.toml"
     out = "/home/dbreitman/EOS25/ICs"
 else:
-    path = '/ocean/projects/phy210034p/breitman/EOS25/EOS25_L2100_HIIDIM1400_DIM4200'
-    L=2100*un.Mpc
-    toml = "/jet/home/breitman/EOSv4/EOS25.toml"
-    out = "/jet/home/breitman/EOSv4/Results/ICs"
+    path = '/scratch/qp00/db9528/EOS26/EOS26/EOS26_cache/'
+    L=2250*un.Mpc
+    toml = "/scratch/qp00/db9528/EOS26/EOS26.toml"
+    out = "/scratch/qp00/db9528/EOS26/plots/EOS26_ICs"
 
-cache = p21c.OutputCache(path)
+if zoom:
+    out += "_zoom"
 
-inputs = p21c.InputParameters.from_template(toml, random_seed=1234)
+cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
+cache = p21c.OutputCache(cache_dir)
+
+inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
+    **_input_overrides,
+    )
+
 runcache = RunCache.from_inputs(inputs, cache=cache)
 initial_conditions = runcache.get_ics()
 
