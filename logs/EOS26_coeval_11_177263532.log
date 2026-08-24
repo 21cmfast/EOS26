@@ -1,0 +1,4 @@
+00:00:00 INFO     00.191 GB Starting N coeval run: N=11                                                                                                         
+00:00:00 INFO     00.192 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.192 GB Already have 3 coevals done, at redshifts: [33.9596, 34.6588, 35.372]                                                               
+00:00:00 INFO     00.192 GB Redshifts for this batch: 33.27 to 27.12                                                                                            

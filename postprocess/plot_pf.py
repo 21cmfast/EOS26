@@ -38,7 +38,7 @@ import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
 from astropy import units as un
 import matplotlib.pyplot as plt
-from tuesday.core import coeval2slice_x, plot_coeval_slice
+from tuesday.core import coeval2slice_z, plot_coeval_slice
 
 if args.test:
     logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
@@ -63,9 +63,9 @@ L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
 
 box = perturbed_field.get("density") * un.dimensionless_unscaled
 if args.zoom:
-    box = box[:100, :100, :10]
+    box = box[:100, :100, :1]
 else:
-    box = box[:,:,:10]
+    box = box[:,:,:1]
 if args.vel:
     v_x = perturbed_field.get("velocity_x")[0, ...] * un.m / un.s
     v_y = perturbed_field.get("velocity_y")[0, ...] * un.m / un.s
@@ -89,7 +89,7 @@ fig, ax = plt.subplots(1, 1, layout="constrained")
 ax = plot_coeval_slice(
     box,
     L / HII_DIM * box.shape[0],
-    transform2slice=coeval2slice_x(idx=0),
+    transform2slice=coeval2slice_z(idx=0),
     ax=ax, vmin=-0.5, vmax=0.5,
     v_x=v_x,
     v_y=v_y,
