@@ -8,3 +8,7 @@
 05:17:27 INFO     00.629 TB coeval 2/3: z=34.658799                                                                                                             
 05:17:27 INFO     00.629 TB coeval 2/3 done in 15887.22s (average CPU cores: 2.66; peak RSS: 02.035 TB)                                                         
 05:17:34 DEBUG    00.332 TB gc.collect() after coeval 2/3 collected 0 objects                                                                                   
+11:06:21 INFO     00.491 TB coeval 3/3: z=33.959607                                                                                                             
+11:06:21 INFO     00.491 TB coeval 3/3 done in 20933.78s (average CPU cores: 2.52; peak RSS: 02.087 TB)                                                         
+11:06:34 DEBUG    00.184 TB gc.collect() after coeval 3/3 collected 0 objects                                                                                   
+11:06:35 INFO     00.199 GB Completed N coeval run in 39996.00s                                                                                                 
