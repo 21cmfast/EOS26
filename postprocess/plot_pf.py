@@ -3,12 +3,20 @@ gc.collect()
 gc.disable()
 
 import argparse
+import logging
 import sys
 sys.path.insert(1, 'run_scripts/')
 import settings
 
 parser = argparse.ArgumentParser()
-settings.add_common_args(parser)
+parser.add_argument(
+    "--test", action="store_true", default=False,
+    help=f"Run a small test box (HII_DIM={settings.TEST_HII_DIM}) instead of the full EOS",
+)
+parser.add_argument(
+    "--compare", action="store_true", default=False,
+    help="Use the cache from a run with --compare",
+)
 parser.add_argument(
     "--zoom", action="store_true", default=False,
     help="Crop the plotted box to a 100^3 corner instead of the full volume",
@@ -23,7 +31,8 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-logger = settings.setup_logging(args.log_file)
+settings.setup_logger()
+logger = logging.getLogger("21cmFAST")
 
 import py21cmfast as p21c
 from py21cmfast.io.caching import RunCache
