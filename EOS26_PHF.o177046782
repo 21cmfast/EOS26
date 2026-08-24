@@ -1,0 +1,27 @@
+/scratch/qp00/db9528/EOS26
+OMP_NUM_THREADS: 16
+OMP_PROC_BIND: None
+OMP_PLACES: None
+Allowed CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+          Evolving Halos ━━━━━ 100% • 92/92 redshifts • 1     • 0:00:… remaining
+                                                        day,                    
+                                                        15:1…                   
+──────────── compare_PHFs: checks 1 and 4 on all HaloCatalog files ─────────────
+[10:49:42] [[PASS]] ✓ Check 1 [PHF z=5.0000]: file present, size=47.397 GB      
+[10:49:59] [[INFO]] · Check 4 [PHF z=5.0000]: n_halos=1,692,744,852             
+           n_density=1.4861e-01 Mpc⁻³                                           
+           [[PASS]] ✓ Check 4 [PHF z=5.0000]: n_density ratio EOS/test=1.00 (OK)
+           [[FAIL]] ✗ Check 4 [PHF z=5.0000]: halo mass PDF differs in          
+           log10(M/M_sun) [12.75, 13.00): diff=0.0% > errorbar=0.0%             
+
+======================================================================================
+                  Resource Usage on 2026-08-24 10:50:12:
+   Job Id:             177046782.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      5222.68
+   NCPUs Requested:    16                  CPU Time Used: 59:26:30        
+   Memory Requested:   1.39TB                Memory Used: 1.25TB          
+   Walltime Requested: 48:00:00            Walltime Used: 39:13:53        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

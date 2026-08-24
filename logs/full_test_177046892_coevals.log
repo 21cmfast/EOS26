@@ -1,0 +1,155 @@
+00:00:00 INFO     00.162 GB Starting N coeval run: N=50                                                                                                         
+00:00:00 INFO     00.163 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.163 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.163 GB Already have 71 coevals done, at redshifts: [8.094, 8.2759, 8.4614, 8.6506, 8.8436, 9.0405, 9.2413, 9.4461, 9.6551, 9.8682, 10.0855,
+                            10.3072, 10.5334, 10.7641, 10.9993, 11.2393, 11.4841, 11.7338, 11.9885, 12.2482, 12.5132, 12.7835, 13.0591, 13.3403, 13.6271,       
+                            13.9197, 14.2181, 14.5224, 14.8329, 15.1495, 15.4725, 15.802, 16.138, 16.4808, 16.8304, 17.187, 17.5507, 17.9217, 18.3002, 18.6862, 
+                            19.0799, 19.4815, 19.8911, 20.309, 20.7351, 21.1698, 21.6132, 22.0655, 22.5268, 22.9973, 23.4773, 23.9668, 24.4662, 24.9755, 25.495,
+                            26.0249, 26.5654, 27.1167, 27.6791, 28.2526, 28.8377, 29.4344, 30.0431, 30.664, 31.2973, 31.9432, 32.6021, 33.2741, 33.9596,        
+                            34.6588, 35.372]                                                                                                                    
+00:00:00 INFO     00.164 GB Redshifts for this batch: 7.92 to 5.00                                                                                              
+00:00:33 DEBUG    00.620 GB Skipping intermediate coeval at z=35.371975 (required for redshift evolution, not part of this batch)                               
+00:00:51 DEBUG    00.951 GB Skipping intermediate coeval at z=34.658799 (required for redshift evolution, not part of this batch)                               
+00:01:14 DEBUG    01.100 GB Skipping intermediate coeval at z=33.959607 (required for redshift evolution, not part of this batch)                               
+00:01:40 DEBUG    01.189 GB Skipping intermediate coeval at z=33.274124 (required for redshift evolution, not part of this batch)                               
+00:02:07 DEBUG    01.280 GB Skipping intermediate coeval at z=32.602082 (required for redshift evolution, not part of this batch)                               
+00:02:37 DEBUG    01.371 GB Skipping intermediate coeval at z=31.943218 (required for redshift evolution, not part of this batch)                               
+00:03:04 DEBUG    01.461 GB Skipping intermediate coeval at z=31.297273 (required for redshift evolution, not part of this batch)                               
+00:03:29 DEBUG    01.552 GB Skipping intermediate coeval at z=30.663993 (required for redshift evolution, not part of this batch)                               
+00:03:56 DEBUG    01.642 GB Skipping intermediate coeval at z=30.043130 (required for redshift evolution, not part of this batch)                               
+00:04:22 DEBUG    01.733 GB Skipping intermediate coeval at z=29.434441 (required for redshift evolution, not part of this batch)                               
+00:04:49 DEBUG    01.822 GB Skipping intermediate coeval at z=28.837688 (required for redshift evolution, not part of this batch)                               
+00:05:16 DEBUG    01.913 GB Skipping intermediate coeval at z=28.252635 (required for redshift evolution, not part of this batch)                               
+00:05:45 DEBUG    02.003 GB Skipping intermediate coeval at z=27.679054 (required for redshift evolution, not part of this batch)                               
+00:06:14 DEBUG    02.094 GB Skipping intermediate coeval at z=27.116719 (required for redshift evolution, not part of this batch)                               
+00:06:42 DEBUG    02.184 GB Skipping intermediate coeval at z=26.565411 (required for redshift evolution, not part of this batch)                               
+00:07:12 DEBUG    02.275 GB Skipping intermediate coeval at z=26.024913 (required for redshift evolution, not part of this batch)                               
+00:07:43 DEBUG    02.366 GB Skipping intermediate coeval at z=25.495013 (required for redshift evolution, not part of this batch)                               
+00:08:13 DEBUG    02.455 GB Skipping intermediate coeval at z=24.975503 (required for redshift evolution, not part of this batch)                               
+00:08:43 DEBUG    02.516 GB Skipping intermediate coeval at z=24.466179 (required for redshift evolution, not part of this batch)                               
+00:09:12 DEBUG    02.517 GB Skipping intermediate coeval at z=23.966842 (required for redshift evolution, not part of this batch)                               
+00:09:43 DEBUG    02.548 GB Skipping intermediate coeval at z=23.477296 (required for redshift evolution, not part of this batch)                               
+00:10:12 DEBUG    02.549 GB Skipping intermediate coeval at z=22.997349 (required for redshift evolution, not part of this batch)                               
+00:10:41 DEBUG    02.550 GB Skipping intermediate coeval at z=22.526813 (required for redshift evolution, not part of this batch)                               
+00:11:12 DEBUG    02.551 GB Skipping intermediate coeval at z=22.065503 (required for redshift evolution, not part of this batch)                               
+00:11:43 DEBUG    02.552 GB Skipping intermediate coeval at z=21.613238 (required for redshift evolution, not part of this batch)                               
+00:12:12 DEBUG    02.554 GB Skipping intermediate coeval at z=21.169841 (required for redshift evolution, not part of this batch)                               
+00:12:42 DEBUG    02.554 GB Skipping intermediate coeval at z=20.735139 (required for redshift evolution, not part of this batch)                               
+00:13:10 DEBUG    02.616 GB Skipping intermediate coeval at z=20.308959 (required for redshift evolution, not part of this batch)                               
+00:13:38 DEBUG    02.617 GB Skipping intermediate coeval at z=19.891137 (required for redshift evolution, not part of this batch)                               
+00:14:06 DEBUG    02.618 GB Skipping intermediate coeval at z=19.481507 (required for redshift evolution, not part of this batch)                               
+00:14:33 DEBUG    02.619 GB Skipping intermediate coeval at z=19.079908 (required for redshift evolution, not part of this batch)                               
+00:15:03 DEBUG    02.620 GB Skipping intermediate coeval at z=18.686185 (required for redshift evolution, not part of this batch)                               
+00:15:32 DEBUG    02.621 GB Skipping intermediate coeval at z=18.300181 (required for redshift evolution, not part of this batch)                               
+00:15:59 DEBUG    02.622 GB Skipping intermediate coeval at z=17.921746 (required for redshift evolution, not part of this batch)                               
+00:16:27 DEBUG    02.623 GB Skipping intermediate coeval at z=17.550732 (required for redshift evolution, not part of this batch)                               
+00:16:56 DEBUG    02.563 GB Skipping intermediate coeval at z=17.186992 (required for redshift evolution, not part of this batch)                               
+00:17:24 DEBUG    02.566 GB Skipping intermediate coeval at z=16.830384 (required for redshift evolution, not part of this batch)                               
+00:17:53 DEBUG    02.567 GB Skipping intermediate coeval at z=16.480769 (required for redshift evolution, not part of this batch)                               
+00:18:22 DEBUG    02.568 GB Skipping intermediate coeval at z=16.138008 (required for redshift evolution, not part of this batch)                               
+00:18:50 DEBUG    02.569 GB Skipping intermediate coeval at z=15.801969 (required for redshift evolution, not part of this batch)                               
+00:19:17 DEBUG    02.570 GB Skipping intermediate coeval at z=15.472519 (required for redshift evolution, not part of this batch)                               
+00:19:44 DEBUG    02.571 GB Skipping intermediate coeval at z=15.149528 (required for redshift evolution, not part of this batch)                               
+00:20:11 DEBUG    02.572 GB Skipping intermediate coeval at z=14.832871 (required for redshift evolution, not part of this batch)                               
+00:20:38 DEBUG    02.574 GB Skipping intermediate coeval at z=14.522422 (required for redshift evolution, not part of this batch)                               
+00:21:05 DEBUG    02.575 GB Skipping intermediate coeval at z=14.218061 (required for redshift evolution, not part of this batch)                               
+00:21:32 DEBUG    02.576 GB Skipping intermediate coeval at z=13.919668 (required for redshift evolution, not part of this batch)                               
+00:21:58 DEBUG    02.577 GB Skipping intermediate coeval at z=13.627125 (required for redshift evolution, not part of this batch)                               
+00:22:24 DEBUG    02.487 GB Skipping intermediate coeval at z=13.340319 (required for redshift evolution, not part of this batch)                               
+00:22:52 DEBUG    02.488 GB Skipping intermediate coeval at z=13.059136 (required for redshift evolution, not part of this batch)                               
+00:23:20 DEBUG    02.489 GB Skipping intermediate coeval at z=12.783467 (required for redshift evolution, not part of this batch)                               
+00:23:48 DEBUG    02.491 GB Skipping intermediate coeval at z=12.513203 (required for redshift evolution, not part of this batch)                               
+00:24:16 DEBUG    02.492 GB Skipping intermediate coeval at z=12.248238 (required for redshift evolution, not part of this batch)                               
+00:24:44 DEBUG    02.493 GB Skipping intermediate coeval at z=11.988469 (required for redshift evolution, not part of this batch)                               
+00:25:12 DEBUG    02.494 GB Skipping intermediate coeval at z=11.733793 (required for redshift evolution, not part of this batch)                               
+00:25:38 DEBUG    02.495 GB Skipping intermediate coeval at z=11.484111 (required for redshift evolution, not part of this batch)                               
+00:26:04 DEBUG    02.496 GB Skipping intermediate coeval at z=11.239324 (required for redshift evolution, not part of this batch)                               
+00:26:30 DEBUG    02.497 GB Skipping intermediate coeval at z=10.999337 (required for redshift evolution, not part of this batch)                               
+00:26:56 DEBUG    02.499 GB Skipping intermediate coeval at z=10.764056 (required for redshift evolution, not part of this batch)                               
+00:27:23 DEBUG    02.500 GB Skipping intermediate coeval at z=10.533388 (required for redshift evolution, not part of this batch)                               
+00:27:49 DEBUG    02.501 GB Skipping intermediate coeval at z=10.307244 (required for redshift evolution, not part of this batch)                               
+00:28:15 DEBUG    02.502 GB Skipping intermediate coeval at z=10.085533 (required for redshift evolution, not part of this batch)                               
+00:28:40 DEBUG    02.414 GB Skipping intermediate coeval at z=9.868170 (required for redshift evolution, not part of this batch)                                
+00:29:07 DEBUG    02.415 GB Skipping intermediate coeval at z=9.655068 (required for redshift evolution, not part of this batch)                                
+00:29:34 DEBUG    02.416 GB Skipping intermediate coeval at z=9.446145 (required for redshift evolution, not part of this batch)                                
+00:30:01 DEBUG    02.417 GB Skipping intermediate coeval at z=9.241319 (required for redshift evolution, not part of this batch)                                
+00:30:29 DEBUG    02.418 GB Skipping intermediate coeval at z=9.040509 (required for redshift evolution, not part of this batch)                                
+00:30:56 DEBUG    02.418 GB Skipping intermediate coeval at z=8.843636 (required for redshift evolution, not part of this batch)                                
+00:31:23 DEBUG    02.419 GB Skipping intermediate coeval at z=8.650623 (required for redshift evolution, not part of this batch)                                
+00:31:50 DEBUG    02.421 GB Skipping intermediate coeval at z=8.461396 (required for redshift evolution, not part of this batch)                                
+00:32:18 DEBUG    02.422 GB Skipping intermediate coeval at z=8.275878 (required for redshift evolution, not part of this batch)                                
+00:32:46 DEBUG    02.423 GB Skipping intermediate coeval at z=8.093998 (required for redshift evolution, not part of this batch)                                
+00:33:37 INFO     02.910 GB coeval 1/50: z=7.915684                                                                                                             
+00:33:37 INFO     02.910 GB coeval 1/50 done in 2017.68s (average CPU cores: 13.93; peak RSS: 06.334 GB)                                                        
+00:33:40 DEBUG    02.494 GB gc.collect() after coeval 1/50 collected 1349257 objects                                                                            
+00:34:27 INFO     02.822 GB coeval 2/50: z=7.740867                                                                                                             
+00:34:27 INFO     02.822 GB coeval 2/50 done in 49.86s (average CPU cores: 13.15; peak RSS: 06.223 GB)                                                          
+00:34:28 DEBUG    02.644 GB gc.collect() after coeval 2/50 collected 0 objects                                                                                  
+00:35:15 INFO     02.851 GB coeval 3/50: z=7.569477                                                                                                             
+00:35:15 INFO     02.851 GB coeval 3/50 done in 47.68s (average CPU cores: 13.83; peak RSS: 06.251 GB)                                                          
+00:35:16 DEBUG    02.673 GB gc.collect() after coeval 3/50 collected 0 objects                                                                                  
+00:36:02 INFO     02.882 GB coeval 4/50: z=7.401449                                                                                                             
+00:36:02 INFO     02.882 GB coeval 4/50 done in 47.27s (average CPU cores: 13.88; peak RSS: 06.303 GB)                                                          
+00:36:03 DEBUG    02.703 GB gc.collect() after coeval 4/50 collected 0 objects                                                                                  
+00:36:50 INFO     02.912 GB coeval 5/50: z=7.236714                                                                                                             
+00:36:50 INFO     02.912 GB coeval 5/50 done in 47.62s (average CPU cores: 13.76; peak RSS: 06.279 GB)                                                          
+00:36:51 DEBUG    02.733 GB gc.collect() after coeval 5/50 collected 0 objects                                                                                  
+00:37:38 INFO     02.941 GB coeval 6/50: z=7.075210                                                                                                             
+00:37:38 INFO     02.941 GB coeval 6/50 done in 48.04s (average CPU cores: 13.72; peak RSS: 06.341 GB)                                                          
+00:37:39 DEBUG    02.763 GB gc.collect() after coeval 6/50 collected 0 objects                                                                                  
+00:38:26 INFO     03.002 GB coeval 7/50: z=6.916873                                                                                                             
+00:38:26 INFO     03.002 GB coeval 7/50 done in 48.34s (average CPU cores: 13.68; peak RSS: 06.368 GB)                                                          
+00:38:27 DEBUG    02.823 GB gc.collect() after coeval 7/50 collected 0 objects                                                                                  
+00:39:14 INFO     03.030 GB coeval 8/50: z=6.761640                                                                                                             
+00:39:14 INFO     03.030 GB coeval 8/50 done in 48.00s (average CPU cores: 13.84; peak RSS: 06.429 GB)                                                          
+00:39:15 DEBUG    02.851 GB gc.collect() after coeval 8/50 collected 0 objects                                                                                  
+00:40:02 INFO     03.089 GB coeval 9/50: z=6.609451                                                                                                             
+00:40:02 INFO     03.089 GB coeval 9/50 done in 47.54s (average CPU cores: 13.84; peak RSS: 06.474 GB)                                                          
+00:40:02 DEBUG    02.911 GB gc.collect() after coeval 9/50 collected 0 objects                                                                                  
+00:40:50 INFO     03.119 GB coeval 10/50: z=6.460246                                                                                                            
+00:40:50 INFO     03.119 GB coeval 10/50 done in 47.95s (average CPU cores: 13.78; peak RSS: 06.549 GB)                                                         
+00:40:50 DEBUG    02.941 GB gc.collect() after coeval 10/50 collected 0 objects                                                                                 
+00:41:37 INFO     03.149 GB coeval 11/50: z=6.313967                                                                                                            
+00:41:37 INFO     03.149 GB coeval 11/50 done in 47.70s (average CPU cores: 13.84; peak RSS: 06.550 GB)                                                         
+00:41:38 DEBUG    02.970 GB gc.collect() after coeval 11/50 collected 0 objects                                                                                 
+00:42:24 INFO     03.089 GB coeval 12/50: z=6.170555                                                                                                            
+00:42:24 INFO     03.089 GB coeval 12/50 done in 46.74s (average CPU cores: 13.70; peak RSS: 06.581 GB)                                                         
+00:42:25 DEBUG    02.941 GB gc.collect() after coeval 12/50 collected 0 objects                                                                                 
+00:43:11 INFO     03.121 GB coeval 13/50: z=6.029956                                                                                                            
+00:43:11 INFO     03.121 GB coeval 13/50 done in 46.77s (average CPU cores: 13.74; peak RSS: 06.604 GB)                                                         
+00:43:12 DEBUG    02.942 GB gc.collect() after coeval 13/50 collected 0 objects                                                                                 
+00:43:59 INFO     03.149 GB coeval 14/50: z=5.892114                                                                                                            
+00:43:59 INFO     03.149 GB coeval 14/50 done in 48.33s (average CPU cores: 13.73; peak RSS: 06.529 GB)                                                         
+00:44:00 DEBUG    02.971 GB gc.collect() after coeval 14/50 collected 0 objects                                                                                 
+00:44:48 INFO     03.180 GB coeval 15/50: z=5.756975                                                                                                            
+00:44:48 INFO     03.180 GB coeval 15/50 done in 48.59s (average CPU cores: 13.72; peak RSS: 06.580 GB)                                                         
+00:44:49 DEBUG    03.001 GB gc.collect() after coeval 15/50 collected 0 objects                                                                                 
+00:45:37 INFO     03.209 GB coeval 16/50: z=5.624485                                                                                                            
+00:45:37 INFO     03.209 GB coeval 16/50 done in 49.41s (average CPU cores: 13.78; peak RSS: 06.637 GB)                                                         
+00:45:38 DEBUG    03.031 GB gc.collect() after coeval 16/50 collected 0 objects                                                                                 
+00:46:26 INFO     03.238 GB coeval 17/50: z=5.494593                                                                                                            
+00:46:26 INFO     03.238 GB coeval 17/50 done in 48.71s (average CPU cores: 13.68; peak RSS: 06.655 GB)                                                         
+00:46:27 DEBUG    03.060 GB gc.collect() after coeval 17/50 collected 0 objects                                                                                 
+00:47:14 INFO     03.269 GB coeval 18/50: z=5.367248                                                                                                            
+00:47:14 INFO     03.269 GB coeval 18/50 done in 47.83s (average CPU cores: 13.77; peak RSS: 06.637 GB)                                                         
+00:47:14 DEBUG    03.090 GB gc.collect() after coeval 18/50 collected 0 objects                                                                                 
+00:48:01 INFO     03.358 GB coeval 19/50: z=5.242400                                                                                                            
+00:48:01 INFO     03.358 GB coeval 19/50 done in 47.78s (average CPU cores: 13.81; peak RSS: 06.758 GB)                                                         
+00:48:02 DEBUG    03.179 GB gc.collect() after coeval 19/50 collected 0 objects                                                                                 
+00:48:50 INFO     03.387 GB coeval 20/50: z=5.120000                                                                                                            
+00:48:50 INFO     03.387 GB coeval 20/50 done in 48.55s (average CPU cores: 13.59; peak RSS: 06.789 GB)                                                         
+00:48:51 DEBUG    03.209 GB gc.collect() after coeval 20/50 collected 0 objects                                                                                 
+00:49:37 INFO     02.999 GB coeval 21/50: z=5.000000                                                                                                            
+00:49:37 INFO     02.999 GB coeval 21/50 done in 47.03s (average CPU cores: 13.66; peak RSS: 06.862 GB)                                                         
+00:49:38 DEBUG    02.911 GB gc.collect() after coeval 21/50 collected 0 objects                                                                                 
+00:49:38 INFO     02.120 GB Completed N coeval run in 2978.73s                                                                                                  
+00:00:00 INFO     00.162 GB Starting N coeval run: N=-1                                                                                                         
+00:00:00 INFO     00.163 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.163 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.163 GB Already have 92 coevals done, at redshifts: [5.0, 5.12, 5.2424, 5.3672, 5.4946, 5.6245, 5.757, 5.8921, 6.03, 6.1706, 6.314, 6.4602, 
+                            6.6095, 6.7616, 6.9169, 7.0752, 7.2367, 7.4014, 7.5695, 7.7409, 7.9157, 8.094, 8.2759, 8.4614, 8.6506, 8.8436, 9.0405, 9.2413,      
+                            9.4461, 9.6551, 9.8682, 10.0855, 10.3072, 10.5334, 10.7641, 10.9993, 11.2393, 11.4841, 11.7338, 11.9885, 12.2482, 12.5132, 12.7835, 
+                            13.0591, 13.3403, 13.6271, 13.9197, 14.2181, 14.5224, 14.8329, 15.1495, 15.4725, 15.802, 16.138, 16.4808, 16.8304, 17.187, 17.5507, 
+                            17.9217, 18.3002, 18.6862, 19.0799, 19.4815, 19.8911, 20.309, 20.7351, 21.1698, 21.6132, 22.0655, 22.5268, 22.9973, 23.4773,        
+                            23.9668, 24.4662, 24.9755, 25.495, 26.0249, 26.5654, 27.1167, 27.6791, 28.2526, 28.8377, 29.4344, 30.0431, 30.664, 31.2973, 31.9432,
+                            32.6021, 33.2741, 33.9596, 34.6588, 35.372]                                                                                         

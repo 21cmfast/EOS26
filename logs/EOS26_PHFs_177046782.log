@@ -1,0 +1,4 @@
+00:00:00 INFO     00.164 GB Starting PHFs run                                                                                                                   
+00:00:00 INFO     00.164 GB gc.isenabled() = False (expected: False)                                                                                            
+39:12:32 INFO     00.344 TB Halo evolution done in 141151.97s (average CPU cores: 1.52; peak RSS: 01.249 TB)                                                    
+39:12:32 INFO     00.344 TB Completed PHFs run in 141152.12s                                                                                                    
