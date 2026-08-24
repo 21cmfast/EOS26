@@ -5,6 +5,7 @@
 #PBS -l mem=2990gb
 #PBS -l walltime=48:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
+#PBS -P qp00
 
 # Run a batch of N=8 (default) coeval boxes for the production-size EOS26 simulation with HII_DIM=1400.
 # Usage: qsub pbs_scripts/N_coeval_job.sh [--N <N>]
@@ -35,8 +36,7 @@ export OMP_DYNAMIC=FALSE
 unset OMP_PROC_BIND
 unset OMP_PLACES
 
-N="${1:-8}"
-
+N="${N:-3}"
 JID="${PBS_JOBID%%.*}"
 
 printf "N is: %s\n" "$N"
