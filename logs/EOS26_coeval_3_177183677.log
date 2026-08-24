@@ -2,3 +2,5 @@
 00:00:00 INFO     00.162 GB gc.isenabled() = False (expected: False)                                                                                            
 00:00:00 INFO     00.163 GB Already have 0 coevals done, at redshifts: []                                                                                       
 00:00:00 INFO     00.163 GB Redshifts for this batch: 35.37 to 33.96                                                                                            
+00:52:40 INFO     00.295 TB coeval 1/3: z=35.371975                                                                                                             
+00:52:40 INFO     00.295 TB coeval 1/3 done in 3160.10s (average CPU cores: 1.83; peak RSS: 01.719 TB)                                                          

@@ -1,7 +1,7 @@
 #!/bin/bash
 #!/bin/bash
-#PBS -N EOS26_ICs
-#PBS -q megamem
+#PBS -N EOS26_plots
+#PBS -q normal
 #PBS -l ncpus=1
 #PBS -l mem=16gb
 #PBS -l walltime=1:00:00
@@ -28,11 +28,23 @@ module load fftw3/3.3.10
 
 module list
 
+uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py
+
 uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py \
+	--zoom
 uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
         --redshift 5.00
 uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
         --redshift 5.00 \
+        --zoom
+uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+        --redshift 5.00 \
+        --zoom \
+	--vel
+uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+        --redshift 15.10
+uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+        --redshift 15.10 \
         --zoom
 wait
 
