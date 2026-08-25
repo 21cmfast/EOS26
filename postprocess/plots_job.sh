@@ -28,19 +28,19 @@ module load fftw3/3.3.10
 
 module list
 
-uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py
+#uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py
 
-uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py \
-	--zoom
-uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
-        --redshift 5.00
-uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
-        --redshift 5.00 \
-        --zoom
-uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
-        --redshift 5.00 \
-        --zoom \
-	--vel
+#uv run --no-sync --active --project "$ROOT" postprocess/plot_ics.py \
+#	--zoom
+#uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+#        --redshift 5.00
+#uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+#        --redshift 5.00 \
+#        --zoom
+#uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
+#        --redshift 5.00 \
+#        --zoom \
+#	--vel
 uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \
         --redshift 15.10
 uv run --no-sync --active --project "$ROOT" postprocess/plot_pf.py \

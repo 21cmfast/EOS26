@@ -70,8 +70,8 @@ if args.vel:
     v_x = perturbed_field.get("velocity_x")[0, ...] * un.m / un.s
     v_y = perturbed_field.get("velocity_y")[0, ...] * un.m / un.s
     if args.zoom:
-        v_x = v_x[:100, :100]
-        v_y = v_y[:100, :100]
+        v_x = v_x[:100, :100,:1]
+        v_y = v_y[:100, :100,:1]
 else:
     v_x = None
     v_y = None
@@ -84,7 +84,7 @@ if args.zoom:
     out += "_zoom"
 if args.vel:
     out += "_wvel"
-
+out += str(perturbed_field.redshift).split(".")[0]
 fig, ax = plt.subplots(1, 1, layout="constrained")
 ax = plot_coeval_slice(
     box,

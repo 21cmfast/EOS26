@@ -2,3 +2,9 @@
 00:00:00 INFO     00.192 GB gc.isenabled() = False (expected: False)                                                                                            
 00:00:00 INFO     00.192 GB Already have 3 coevals done, at redshifts: [33.9596, 34.6588, 35.372]                                                               
 00:00:00 INFO     00.192 GB Redshifts for this batch: 33.27 to 27.12                                                                                            
+00:42:38 DEBUG    00.148 TB Skipping intermediate coeval at z=35.371975 (required for redshift evolution, not part of this batch)                               
+04:32:33 DEBUG    00.270 TB Skipping intermediate coeval at z=34.658799 (required for redshift evolution, not part of this batch)                               
+09:35:37 DEBUG    00.307 TB Skipping intermediate coeval at z=33.959607 (required for redshift evolution, not part of this batch)                               
+15:51:10 INFO     00.749 TB coeval 1/11: z=33.274124                                                                                                            
+15:51:10 INFO     00.749 TB coeval 1/11 done in 57070.23s (average CPU cores: 1.73; peak RSS: 02.161 TB)                                                        
+15:51:17 DEBUG    00.442 TB gc.collect() after coeval 1/11 collected 158695 objects                                                                             
