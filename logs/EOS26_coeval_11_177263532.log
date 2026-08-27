@@ -8,3 +8,12 @@
 15:51:10 INFO     00.749 TB coeval 1/11: z=33.274124                                                                                                            
 15:51:10 INFO     00.749 TB coeval 1/11 done in 57070.23s (average CPU cores: 1.73; peak RSS: 02.161 TB)                                                        
 15:51:17 DEBUG    00.442 TB gc.collect() after coeval 1/11 collected 158695 objects                                                                             
+22:38:04 INFO     00.749 TB coeval 2/11: z=32.602082                                                                                                            
+22:38:04 INFO     00.749 TB coeval 2/11 done in 24414.41s (average CPU cores: 2.07; peak RSS: 02.149 TB)                                                        
+22:38:10 DEBUG    00.442 TB gc.collect() after coeval 2/11 collected 0 objects                                                                                  
+29:42:22 INFO     00.798 TB coeval 3/11: z=31.943218                                                                                                            
+29:42:22 INFO     00.798 TB coeval 3/11 done in 25457.39s (average CPU cores: 2.04; peak RSS: 02.198 TB)                                                        
+29:42:27 DEBUG    00.491 TB gc.collect() after coeval 3/11 collected 0 objects                                                                                  
+37:03:26 INFO     00.847 TB coeval 4/11: z=31.297273                                                                                                            
+37:03:26 INFO     00.847 TB coeval 4/11 done in 26464.07s (average CPU cores: 1.94; peak RSS: 02.247 TB)                                                        
+37:03:32 DEBUG    00.540 TB gc.collect() after coeval 4/11 collected 0 objects                                                                                  

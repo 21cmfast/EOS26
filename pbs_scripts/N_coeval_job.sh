@@ -36,10 +36,10 @@ export OMP_DYNAMIC=FALSE
 unset OMP_PROC_BIND
 unset OMP_PLACES
 
-N="${N:-3}"
+N="${N:-4}"
 JID="${PBS_JOBID%%.*}"
 
 printf "N is: %s\n" "$N"
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py --N "$N" \
     --log-file "logs/EOS26_coeval_${N}_${JID}.log" \
-    --compare
+#    --compare

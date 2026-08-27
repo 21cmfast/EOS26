@@ -1,0 +1,184 @@
+/scratch/qp00/db9528/EOS26
+N is: 11
+Perturbing Matter Fields ━━━━━ 100% • 14/14 redshifts • 0:00… • 0:00:… remaining
+          Evolving Halos ━━━━━ 100% • 14/14 redshifts • 0:00… • 0:00:… remaining
+────────────── compare_coeval: checks 1-2, 5-6 — coeval z=33.2741 ──────────────
+[15:37:16] [[PASS]] ✓ Check 1 : file present, size=27.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  brightness_temp: mean=-6.9090  std=1.2460        
+           min=-18.5759  max=-2.3644                                            
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-6.9090  test          
+           mean=-6.9052 (z=33.274)  rdiff=0.1%                                  
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-6.0749,       
+           -7.4039, -7.2446, -7.2423, -6.975 , -6.8946]                         
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-5.2228,       
+           -5.1415, -5.4498, -5.8969, -5.6316, -5.6533]                         
+[15:37:17] [[INFO]] · Check 6 : brightness_temp p25=-9.05  p50=-8.12  p75=-7.18 
+           IQR=1.87 mK                                                          
+           [[PASS]] ✓ Check 6 : EOS p50=-8.12 test p50=-8.11  EOS IQR=1.87 test 
+           IQR=1.86 (z=33.274)                                                  
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9998  std=0.0000        
+           min=0.9998  max=0.9998                                               
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9998  test          
+           mean=0.9998 (z=33.274)  rdiff=0.0%                                   
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+[15:37:18] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  spin_temperature: mean=82.0824  std=0.9698       
+           min=75.8941  max=86.7782                                             
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=82.0824  test         
+           mean=82.0845 (z=33.274)  rdiff=0.0%                                  
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [82.7151,      
+           81.6325, 81.7593, 81.7629, 81.9733, 82.0331]                         
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [83.483 ,      
+           83.5603, 83.2713, 82.869 , 83.1056, 83.0861]                         
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=33.2741 ✓  
+────────────── compare_coeval: checks 1-2, 5-6 — coeval z=32.6021 ──────────────
+[22:24:09] [[PASS]] ✓ Check 1 : file present, size=27.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+[22:24:10] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  brightness_temp: mean=-6.2818  std=1.1899        
+           min=-17.8238  max=-2.0940                                            
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-6.2818  test          
+           mean=-6.2780 (z=32.602)  rdiff=0.1%                                  
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-5.4942,       
+           -6.7476, -6.5912, -6.5963, -6.3497, -6.2729]                         
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-4.6974,       
+           -4.6229, -4.9075, -5.3225, -5.0767, -5.0971]                         
+[22:24:11] [[INFO]] · Check 6 : brightness_temp p25=-8.60  p50=-7.43  p75=-6.14 
+           IQR=2.46 mK                                                          
+           [[PASS]] ✓ Check 6 : EOS p50=-7.43 test p50=-7.42  EOS IQR=2.46 test 
+           IQR=2.45 (z=32.602)                                                  
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9998  std=0.0000        
+           min=0.9998  max=0.9998                                               
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9998  test          
+           mean=0.9998 (z=32.602)  rdiff=0.0%                                   
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+[22:24:12] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  spin_temperature: mean=81.2879  std=0.9494       
+           min=74.9325  max=85.6815                                             
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=81.2879  test         
+           mean=81.2902 (z=32.602)  rdiff=0.0%                                  
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [81.9015,      
+           80.8667, 80.9923, 80.9907, 81.1877, 81.2455]                         
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [82.6302,      
+           82.7022, 82.431 , 82.0515, 82.2744, 82.2557]                         
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=32.6021 ✓  
+────────────── compare_coeval: checks 1-2, 5-6 — coeval z=31.9432 ──────────────
+[05:28:26] [[PASS]] ✓ Check 1 : file present, size=27.000 GB                    
+[05:28:27] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  brightness_temp: mean=-5.6996  std=1.1166        
+           min=-17.2098  max=-1.8544                                            
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-5.6996  test          
+           mean=-5.6960 (z=31.943)  rdiff=0.1%                                  
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-4.9693,       
+           -6.1444, -5.9715, -5.9974, -5.7554, -5.6992]                         
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-4.2234,       
+           -4.1552, -4.4176, -4.8026, -4.5749, -4.5942]                         
+[05:28:28] [[INFO]] · Check 6 : brightness_temp p25=-7.89  p50=-6.63  p75=-5.71 
+           IQR=2.19 mK                                                          
+           [[PASS]] ✓ Check 6 : EOS p50=-6.63 test p50=-6.62  EOS IQR=2.19 test 
+           IQR=2.18 (z=31.943)                                                  
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9998  std=0.0000        
+           min=0.9998  max=0.9998                                               
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9998  test          
+           mean=0.9998 (z=31.943)  rdiff=0.0%                                   
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+[05:28:29] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  spin_temperature: mean=80.4567  std=0.9038       
+           min=73.7089  max=84.5429                                             
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=80.4567  test         
+           mean=80.4588 (z=31.943)  rdiff=0.0%                                  
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [81.0344,      
+           80.0527, 80.1906, 80.1741, 80.3688, 80.4123]                         
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [81.7249,      
+           81.7919, 81.538 , 81.1812, 81.3905, 81.3726]                         
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=31.9432 ✓  
+────────────── compare_coeval: checks 1-2, 5-6 — coeval z=31.2973 ──────────────
+[12:49:30] [[PASS]] ✓ Check 1 : file present, size=27.000 GB                    
+[12:49:31] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  brightness_temp: mean=-5.1695  std=1.0421        
+           min=-17.0131  max=-1.6050                                            
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-5.1695  test          
+           mean=-5.1662 (z=31.297)  rdiff=0.1%                                  
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-4.4997,       
+           -5.5944, -5.4042, -5.4229, -5.1993, -5.1454]                         
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-3.7968,       
+           -3.7344, -3.9763, -4.3331, -4.1223, -4.1405]                         
+[12:49:32] [[INFO]] · Check 6 : brightness_temp p25=-7.00  p50=-6.23  p75=-5.46 
+           IQR=1.54 mK                                                          
+           [[PASS]] ✓ Check 6 : EOS p50=-6.23 test p50=-6.23  EOS IQR=1.54 test 
+           IQR=1.53 (z=31.297)                                                  
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+[12:49:33] [[INFO]] · Check 5  neutral_fraction: mean=0.9998  std=0.0000        
+           min=0.9998  max=0.9998                                               
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9998  test          
+           mean=0.9998 (z=31.297)  rdiff=0.0%                                   
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9998,       
+           0.9998, 0.9998, 0.9998, 0.9998, 0.9998]                              
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB                    
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK                
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK               
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs                     
+           [[INFO]] · Check 5  spin_temperature: mean=79.5788  std=0.8531       
+           min=72.2999  max=83.4691                                             
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=79.5788  test         
+           mean=79.5807 (z=31.297)  rdiff=0.0%                                  
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [80.1151,      
+           79.1911, 79.342 , 79.3304, 79.5128, 79.5549]                         
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [80.7718,      
+           80.8337, 80.5968, 80.2622, 80.4582, 80.4411]                         
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=31.2973 ✓  
+
+======================================================================================
+                  Resource Usage on 2026-08-26 23:47:11:
+   Job Id:             177263532.gadi-pbs
+   Project:            qp00
+   Exit Status:        -29 (Job failed due to exceeding walltime)
+   Service Units:      11217.17
+   NCPUs Requested:    16                  CPU Time Used: 90:39:54        
+   Memory Requested:   2.92TB                Memory Used: 2.71TB          
+   Walltime Requested: 48:00:00            Walltime Used: 48:01:12        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
