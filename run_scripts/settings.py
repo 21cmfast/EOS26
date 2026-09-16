@@ -521,6 +521,19 @@ def setup_logging(log_file: str) -> logging.Logger:
     handler.setLevel(logging.DEBUG)
     logger.addHandler(handler)
 
+    # py21cmfast's own modules log via logging.getLogger(__name__), i.e. under
+    # the "py21cmfast" namespace -- a completely separate tree from "21cmFAST"
+    # above. Without this, none of py21cmfast's internal INFO/DEBUG messages
+    # (e.g. cache-hit/miss notices from _handle_read_from_cache, or progress
+    # inside compute_xray_source_field/spin_temperature) ever reach the log
+    # file: "py21cmfast" is never configured, so it falls back to the default
+    # WARNING-level root logger with no handler attached.
+    p21c_logger = logging.getLogger("py21cmfast")
+    p21c_logger.setLevel(logging.DEBUG)
+    p21c_logger.handlers.clear()
+    p21c_logger.propagate = False
+    p21c_logger.addHandler(handler)
+
     return logger
 
 # ── argument parsing ───────────────────────────────────────────────────────
