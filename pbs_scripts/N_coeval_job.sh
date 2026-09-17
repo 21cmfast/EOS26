@@ -42,4 +42,4 @@ JID="${PBS_JOBID%%.*}"
 printf "N is: %s\n" "$N"
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py --N "$N" \
     --log-file "logs/EOS26_coeval_${N}_${JID}.log" \
-1    --compare
+    --compare
