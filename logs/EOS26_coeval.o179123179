@@ -1,0 +1,16 @@
+/scratch/qp00/db9528/EOS26
+N is: 3
+Perturbing Matter Fields ━━━━━ 100% • 10/10 redshifts • 0:00… • 0:00:… remaining
+          Evolving Halos ━━━━━ 100% • 10/10 redshifts • 0:00… • 0:00:… remaining
+
+======================================================================================
+                  Resource Usage on 2026-09-16 13:22:58:
+   Job Id:             179123179.gadi-pbs
+   Project:            qp00
+   Exit Status:        271 (Linux Signal 15 SIGTERM Termination)
+   Service Units:      213.09
+   NCPUs Requested:    16                  CPU Time Used: 00:47:14        
+   Memory Requested:   2.92TB                Memory Used: 2.11TB          
+   Walltime Requested: 48:00:00            Walltime Used: 00:54:44        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

@@ -1,0 +1,14 @@
+/scratch/qp00/db9528/EOS26
+N is: 3
+
+======================================================================================
+                  Resource Usage on 2026-09-17 14:12:42:
+   Job Id:             179221959.gadi-pbs
+   Project:            qp00
+   Exit Status:        2
+   Service Units:      0.91
+   NCPUs Requested:    16                  CPU Time Used: 00:00:03        
+   Memory Requested:   2.92TB                Memory Used: 87.12MB         
+   Walltime Requested: 48:00:00            Walltime Used: 00:00:14        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

@@ -69,3 +69,18 @@
 00:43:27 INFO     00.148 TB Existing BrightnessTemp found at z=35.37197473298901 and read in (seed=42).                                                         
 00:43:27 DEBUG    00.148 TB Skipping intermediate coeval at z=35.371975 (required for redshift evolution, not part of this batch)                               
 00:45:15 INFO     00.197 TB Existing HaloBox found at z=34.658798757832365 and read in (seed=42).                                                               
+00:51:44 DEBUG    00.307 TB Calling UpdateXraySourceBox with following args:                                                                                    
+00:52:16 DEBUG    00.307 TB                                                                                                                                     
+00:52:16 DEBUG    00.307 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+00:52:16 DEBUG    00.307 TB                          halo_sfr:  6.2760e-21,  1.6757e-19,  3.6093e-27,  8.2864e-13,  1.4036e-17                                  
+00:52:16 DEBUG    00.307 TB                     halo_sfr_mini:  3.6988e-18,  4.1031e-17,  1.2831e-22,  3.2594e-12,  7.8068e-16                                  
+00:52:16 DEBUG    00.307 TB                         halo_xray:  6.9377e-08,  7.7028e-07,  6.8215e-12,  7.5236e-02,  1.4825e-05                                  
+00:52:16 DEBUG    00.307 TB                             n_ion:  initialized                                                                                     
+00:52:16 DEBUG    00.307 TB                         whalo_sfr:  initialized                                                                                     
+00:52:16 DEBUG    00.307 TB               log10_Mcrit_ACG_ave: None                                                                                             
+00:52:16 DEBUG    00.307 TB               log10_Mcrit_MCG_ave: 5.68808810253274                                                                                 
+00:52:16 DEBUG    00.307 TB                                                                                                                                     
+00:52:16 DEBUG    00.307 TB     0                                                                                                                               
+00:52:16 DEBUG    00.307 TB     0.9305257363491002                                                                                                              
+00:52:16 DEBUG    00.307 TB     0                                                                                                                               
+00:52:16 DEBUG    00.307 TB     0.0                                                                                                                             
