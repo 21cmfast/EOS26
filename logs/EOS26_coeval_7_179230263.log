@@ -1,0 +1,618 @@
+00:00:00 INFO     00.191 GB Starting N coeval run: N=7                                                                                                          
+00:00:00 INFO     00.192 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.192 GB Already have 8 coevals done, at redshifts: [30.664, 31.2973, 31.9432, 32.6021, 33.2741, 33.9596, 34.6588, 35.372]                   
+00:00:00 INFO     00.192 GB Redshifts for this batch: 30.04 to 26.57                                                                                            
+00:00:00 INFO     00.194 GB Existing InitialConditions found and read in (seed=42).                                                                             
+00:17:38 INFO     00.430 TB Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).                                                         
+00:17:39 INFO     00.430 TB Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).                                                        
+00:17:39 INFO     00.430 TB Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).                                                        
+00:17:39 INFO     00.430 TB Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).                                                         
+00:17:40 INFO     00.430 TB Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).                                                         
+00:17:40 INFO     00.430 TB Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).                                                        
+00:17:40 INFO     00.430 TB Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).                                                        
+00:17:41 INFO     00.430 TB Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).                                                        
+00:17:41 INFO     00.430 TB Existing PerturbedField found at z=30.043130215776173 and read in (seed=42).                                                        
+00:17:41 INFO     00.430 TB Existing PerturbedField found at z=29.43444138801586 and read in (seed=42).                                                         
+00:17:42 INFO     00.430 TB Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).                                                         
+00:17:42 INFO     00.430 TB Existing PerturbedField found at z=28.25263493657811 and read in (seed=42).                                                         
+00:17:42 INFO     00.430 TB Existing PerturbedField found at z=27.679053859390308 and read in (seed=42).                                                        
+00:17:43 INFO     00.430 TB Existing PerturbedField found at z=27.1167194699905 and read in (seed=42).                                                          
+00:17:43 INFO     00.430 TB Existing PerturbedField found at z=26.56541124508873 and read in (seed=42).                                                         
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=26.56541124508873 and read in (seed=42).                                                            
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=27.1167194699905 and read in (seed=42).                                                             
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=27.679053859390308 and read in (seed=42).                                                           
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=28.25263493657811 and read in (seed=42).                                                            
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=28.83768763530967 and read in (seed=42).                                                            
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=29.43444138801586 and read in (seed=42).                                                            
+00:18:10 INFO     00.430 TB Existing HaloCatalog found at z=30.043130215776173 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=30.663992820091696 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=31.297272676493527 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=31.943218130023396 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=32.60208249262386 and read in (seed=42).                                                            
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=33.27412414247633 and read in (seed=42).                                                            
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=33.959606625325854 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=34.658798757832365 and read in (seed=42).                                                           
+00:18:11 INFO     00.430 TB Existing HaloCatalog found at z=35.37197473298901 and read in (seed=42).                                                            
+00:20:31 INFO     00.148 TB Existing HaloBox found at z=35.37197473298901 and read in (seed=42).                                                                
+00:20:31 INFO     00.148 TB Existing TsBox found at z=35.37197473298901 and read in (seed=42).                                                                  
+00:20:31 INFO     00.148 TB Existing IonizedBox found at z=35.37197473298901 and read in (seed=42).                                                             
+00:20:32 INFO     00.148 TB Existing BrightnessTemp found at z=35.37197473298901 and read in (seed=42).                                                         
+00:20:32 DEBUG    00.148 TB Skipping intermediate coeval at z=35.371975 (required for redshift evolution, not part of this batch)                               
+00:22:23 INFO     00.197 TB Existing HaloBox found at z=34.658798757832365 and read in (seed=42).                                                               
+00:22:23 INFO     00.197 TB Existing TsBox found at z=34.658798757832365 and read in (seed=42).                                                                 
+00:22:23 INFO     00.197 TB Existing IonizedBox found at z=34.658798757832365 and read in (seed=42).                                                            
+00:22:23 INFO     00.197 TB Existing BrightnessTemp found at z=34.658798757832365 and read in (seed=42).                                                        
+00:24:01 DEBUG    00.234 TB Skipping intermediate coeval at z=34.658799 (required for redshift evolution, not part of this batch)                               
+00:26:22 INFO     00.234 TB Existing HaloBox found at z=33.959606625325854 and read in (seed=42).                                                               
+00:26:22 INFO     00.234 TB Existing TsBox found at z=33.959606625325854 and read in (seed=42).                                                                 
+00:26:23 INFO     00.234 TB Existing IonizedBox found at z=33.959606625325854 and read in (seed=42).                                                            
+00:26:23 INFO     00.234 TB Existing BrightnessTemp found at z=33.959606625325854 and read in (seed=42).                                                        
+00:28:06 DEBUG    00.270 TB Skipping intermediate coeval at z=33.959607 (required for redshift evolution, not part of this batch)                               
+00:30:17 INFO     00.270 TB Existing HaloBox found at z=33.27412414247633 and read in (seed=42).                                                                
+00:30:17 INFO     00.270 TB Existing TsBox found at z=33.27412414247633 and read in (seed=42).                                                                  
+00:30:18 INFO     00.270 TB Existing IonizedBox found at z=33.27412414247633 and read in (seed=42).                                                             
+00:30:18 INFO     00.270 TB Existing BrightnessTemp found at z=33.27412414247633 and read in (seed=42).                                                         
+00:31:46 DEBUG    00.307 TB Skipping intermediate coeval at z=33.274124 (required for redshift evolution, not part of this batch)                               
+00:34:00 INFO     00.307 TB Existing HaloBox found at z=32.60208249262386 and read in (seed=42).                                                                
+00:34:00 INFO     00.307 TB Existing TsBox found at z=32.60208249262386 and read in (seed=42).                                                                  
+00:34:00 INFO     00.307 TB Existing IonizedBox found at z=32.60208249262386 and read in (seed=42).                                                             
+00:34:01 INFO     00.307 TB Existing BrightnessTemp found at z=32.60208249262386 and read in (seed=42).                                                         
+00:35:45 DEBUG    00.344 TB Skipping intermediate coeval at z=32.602082 (required for redshift evolution, not part of this batch)                               
+00:38:02 INFO     00.344 TB Existing HaloBox found at z=31.943218130023396 and read in (seed=42).                                                               
+00:38:02 INFO     00.344 TB Existing TsBox found at z=31.943218130023396 and read in (seed=42).                                                                 
+00:38:02 INFO     00.344 TB Existing IonizedBox found at z=31.943218130023396 and read in (seed=42).                                                            
+00:38:03 INFO     00.344 TB Existing BrightnessTemp found at z=31.943218130023396 and read in (seed=42).                                                        
+00:39:40 DEBUG    00.381 TB Skipping intermediate coeval at z=31.943218 (required for redshift evolution, not part of this batch)                               
+00:41:42 INFO     00.381 TB Existing HaloBox found at z=31.297272676493527 and read in (seed=42).                                                               
+00:41:42 INFO     00.381 TB Existing TsBox found at z=31.297272676493527 and read in (seed=42).                                                                 
+00:41:43 INFO     00.381 TB Existing IonizedBox found at z=31.297272676493527 and read in (seed=42).                                                            
+00:41:43 INFO     00.381 TB Existing BrightnessTemp found at z=31.297272676493527 and read in (seed=42).                                                        
+00:43:43 DEBUG    00.418 TB Skipping intermediate coeval at z=31.297273 (required for redshift evolution, not part of this batch)                               
+00:46:02 INFO     00.418 TB Existing HaloBox found at z=30.663992820091696 and read in (seed=42).                                                               
+00:46:02 INFO     00.418 TB Existing TsBox found at z=30.663992820091696 and read in (seed=42).                                                                 
+00:46:02 INFO     00.418 TB Existing IonizedBox found at z=30.663992820091696 and read in (seed=42).                                                            
+00:46:02 INFO     00.418 TB Existing BrightnessTemp found at z=30.663992820091696 and read in (seed=42).                                                        
+00:47:33 DEBUG    00.455 TB Skipping intermediate coeval at z=30.663993 (required for redshift evolution, not part of this batch)                               
+00:49:58 INFO     00.455 TB Existing HaloBox found at z=30.043130215776173 and read in (seed=42).                                                               
+00:57:46 DEBUG    00.565 TB Calling UpdateXraySourceBox with following args:                                                                                    
+00:58:41 DEBUG    00.565 TB                                                                                                                                     
+00:58:41 DEBUG    00.565 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+00:58:41 DEBUG    00.565 TB                          halo_sfr:  4.8977e-19,  1.1711e-17,  5.8125e-25,  1.5579e-11,  5.4504e-16                                  
+00:58:41 DEBUG    00.565 TB                     halo_sfr_mini:  9.6502e-17,  9.6397e-16,  6.3312e-21,  1.9906e-11,  1.1576e-14                                  
+00:58:41 DEBUG    00.565 TB                         halo_xray:  1.7804e-06,  1.7862e-05,  1.1697e-10,  6.3321e-01,  2.2102e-04                                  
+00:58:41 DEBUG    00.565 TB                             n_ion:  initialized                                                                                     
+00:58:41 DEBUG    00.565 TB                         whalo_sfr:  initialized                                                                                     
+00:58:41 DEBUG    00.565 TB               log10_Mcrit_ACG_ave: None                                                                                             
+00:58:41 DEBUG    00.565 TB               log10_Mcrit_MCG_ave: 5.781859533689735                                                                                
+00:58:41 DEBUG    00.565 TB                                                                                                                                     
+00:58:41 DEBUG    00.565 TB     0                                                                                                                               
+00:58:41 DEBUG    00.565 TB     0.9305257363491002                                                                                                              
+00:58:41 DEBUG    00.565 TB     0                                                                                                                               
+00:58:41 DEBUG    00.565 TB     0.0                                                                                                                             
+01:11:54 DEBUG    00.602 TB Calling UpdateXraySourceBox with following args:                                                                                    
+01:12:48 DEBUG    00.602 TB                                                                                                                                     
+01:12:48 DEBUG    00.602 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+01:12:48 DEBUG    00.602 TB                          halo_sfr:  4.8568e-19,  1.1615e-17,  5.7580e-25,  1.5485e-11,  5.4107e-16                                  
+01:12:48 DEBUG    00.602 TB                     halo_sfr_mini:  9.5863e-17,  9.5776e-16,  6.2827e-21,  1.9830e-11,  1.1510e-14                                  
+01:12:48 DEBUG    00.602 TB                         halo_xray:  1.7687e-06,  1.7747e-05,  1.1608e-10,  6.3023e-01,  2.1977e-04                                  
+01:12:48 DEBUG    00.602 TB                             n_ion:  initialized                                                                                     
+01:12:48 DEBUG    00.602 TB                         whalo_sfr:  initialized                                                                                     
+01:12:48 DEBUG    00.602 TB               log10_Mcrit_ACG_ave: None                                                                                             
+01:12:48 DEBUG    00.602 TB               log10_Mcrit_MCG_ave: 5.781598255573111                                                                                
+01:12:48 DEBUG    00.602 TB                                                                                                                                     
+01:12:48 DEBUG    00.602 TB     0.9305257363491002                                                                                                              
+01:12:48 DEBUG    00.602 TB     1.0888910536868943                                                                                                              
+01:12:48 DEBUG    00.602 TB     1                                                                                                                               
+01:12:48 DEBUG    00.602 TB     0.0                                                                                                                             
+01:25:53 DEBUG    00.639 TB Calling UpdateXraySourceBox with following args:                                                                                    
+01:26:47 DEBUG    00.639 TB                                                                                                                                     
+01:26:47 DEBUG    00.639 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+01:26:47 DEBUG    00.639 TB                          halo_sfr:  4.8438e-19,  1.1585e-17,  5.7408e-25,  1.5455e-11,  5.3981e-16                                  
+01:26:47 DEBUG    00.639 TB                     halo_sfr_mini:  9.5661e-17,  9.5580e-16,  6.2674e-21,  1.9806e-11,  1.1490e-14                                  
+01:26:47 DEBUG    00.639 TB                         halo_xray:  1.7650e-06,  1.7711e-05,  1.1580e-10,  6.2929e-01,  2.1938e-04                                  
+01:26:47 DEBUG    00.639 TB                             n_ion:  initialized                                                                                     
+01:26:47 DEBUG    00.639 TB                         whalo_sfr:  initialized                                                                                     
+01:26:47 DEBUG    00.639 TB               log10_Mcrit_ACG_ave: None                                                                                             
+01:26:47 DEBUG    00.639 TB               log10_Mcrit_MCG_ave: 5.781515581160075                                                                                
+01:26:47 DEBUG    00.639 TB                                                                                                                                     
+01:26:47 DEBUG    00.639 TB     1.0888910536868943                                                                                                              
+01:26:47 DEBUG    00.639 TB     1.2742084184058808                                                                                                              
+01:26:47 DEBUG    00.639 TB     2                                                                                                                               
+01:26:47 DEBUG    00.639 TB     0.0                                                                                                                             
+01:39:54 DEBUG    00.676 TB Calling UpdateXraySourceBox with following args:                                                                                    
+01:40:48 DEBUG    00.676 TB                                                                                                                                     
+01:40:48 DEBUG    00.676 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+01:40:48 DEBUG    00.676 TB                          halo_sfr:  4.8286e-19,  1.1549e-17,  5.7206e-25,  1.5420e-11,  5.3834e-16                                  
+01:40:48 DEBUG    00.676 TB                     halo_sfr_mini:  9.5425e-17,  9.5350e-16,  6.2494e-21,  1.9778e-11,  1.1466e-14                                  
+01:40:48 DEBUG    00.676 TB                         halo_xray:  1.7606e-06,  1.7668e-05,  1.1547e-10,  6.2819e-01,  2.1892e-04                                  
+01:40:48 DEBUG    00.676 TB                             n_ion:  initialized                                                                                     
+01:40:48 DEBUG    00.676 TB                         whalo_sfr:  initialized                                                                                     
+01:40:48 DEBUG    00.676 TB               log10_Mcrit_ACG_ave: None                                                                                             
+01:40:48 DEBUG    00.676 TB               log10_Mcrit_MCG_ave: 5.781418836099467                                                                                
+01:40:48 DEBUG    00.676 TB                                                                                                                                     
+01:40:48 DEBUG    00.676 TB     1.2742084184058808                                                                                                              
+01:40:48 DEBUG    00.676 TB     1.491064774606255                                                                                                               
+01:40:48 DEBUG    00.676 TB     3                                                                                                                               
+01:40:48 DEBUG    00.676 TB     0.0                                                                                                                             
+01:53:51 DEBUG    00.712 TB Calling UpdateXraySourceBox with following args:                                                                                    
+01:54:45 DEBUG    00.712 TB                                                                                                                                     
+01:54:45 DEBUG    00.712 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+01:54:45 DEBUG    00.712 TB                          halo_sfr:  4.8109e-19,  1.1508e-17,  5.6970e-25,  1.5380e-11,  5.3662e-16                                  
+01:54:45 DEBUG    00.712 TB                     halo_sfr_mini:  9.5148e-17,  9.5081e-16,  6.2284e-21,  1.9745e-11,  1.1437e-14                                  
+01:54:45 DEBUG    00.712 TB                         halo_xray:  1.7555e-06,  1.7619e-05,  1.1508e-10,  6.2689e-01,  2.1837e-04                                  
+01:54:45 DEBUG    00.712 TB                             n_ion:  initialized                                                                                     
+01:54:45 DEBUG    00.712 TB                         whalo_sfr:  initialized                                                                                     
+01:54:45 DEBUG    00.712 TB               log10_Mcrit_ACG_ave: None                                                                                             
+01:54:45 DEBUG    00.712 TB               log10_Mcrit_MCG_ave: 5.781305626086172                                                                                
+01:54:45 DEBUG    00.712 TB                                                                                                                                     
+01:54:45 DEBUG    00.712 TB     1.491064774606255                                                                                                               
+01:54:45 DEBUG    00.712 TB     1.7448277141765123                                                                                                              
+01:54:45 DEBUG    00.712 TB     4                                                                                                                               
+01:54:45 DEBUG    00.712 TB     0.0                                                                                                                             
+02:08:11 DEBUG    00.749 TB Calling UpdateXraySourceBox with following args:                                                                                    
+02:09:02 DEBUG    00.749 TB                                                                                                                                     
+02:09:02 DEBUG    00.749 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+02:09:02 DEBUG    00.749 TB                          halo_sfr:  4.7901e-19,  1.1459e-17,  5.6694e-25,  1.5332e-11,  5.3460e-16                                  
+02:09:02 DEBUG    00.749 TB                     halo_sfr_mini:  9.4824e-17,  9.4766e-16,  6.2038e-21,  1.9706e-11,  1.1404e-14                                  
+02:09:02 DEBUG    00.749 TB                         halo_xray:  1.7496e-06,  1.7561e-05,  1.1463e-10,  6.2538e-01,  2.1774e-04                                  
+02:09:02 DEBUG    00.749 TB                             n_ion:  initialized                                                                                     
+02:09:02 DEBUG    00.749 TB                         whalo_sfr:  initialized                                                                                     
+02:09:02 DEBUG    00.749 TB               log10_Mcrit_ACG_ave: None                                                                                             
+02:09:02 DEBUG    00.749 TB               log10_Mcrit_MCG_ave: 5.781173148965065                                                                                
+02:09:02 DEBUG    00.749 TB                                                                                                                                     
+02:09:02 DEBUG    00.749 TB     1.7448277141765123                                                                                                              
+02:09:02 DEBUG    00.749 TB     2.041778334520962                                                                                                               
+02:09:02 DEBUG    00.749 TB     5                                                                                                                               
+02:09:02 DEBUG    00.749 TB     0.0                                                                                                                             
+02:21:54 DEBUG    00.786 TB Calling UpdateXraySourceBox with following args:                                                                                    
+02:22:46 DEBUG    00.786 TB                                                                                                                                     
+02:22:46 DEBUG    00.786 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+02:22:46 DEBUG    00.786 TB                          halo_sfr:  4.7658e-19,  1.1402e-17,  5.6371e-25,  1.5276e-11,  5.3225e-16                                  
+02:22:46 DEBUG    00.786 TB                     halo_sfr_mini:  9.4445e-17,  9.4398e-16,  6.1750e-21,  1.9661e-11,  1.1366e-14                                  
+02:22:46 DEBUG    00.786 TB                         halo_xray:  1.7426e-06,  1.7493e-05,  1.1410e-10,  6.2362e-01,  2.1700e-04                                  
+02:22:46 DEBUG    00.786 TB                             n_ion:  initialized                                                                                     
+02:22:46 DEBUG    00.786 TB                         whalo_sfr:  initialized                                                                                     
+02:22:46 DEBUG    00.786 TB               log10_Mcrit_ACG_ave: None                                                                                             
+02:22:46 DEBUG    00.786 TB               log10_Mcrit_MCG_ave: 5.781018125684832                                                                                
+02:22:46 DEBUG    00.786 TB                                                                                                                                     
+02:22:46 DEBUG    00.786 TB     2.041778334520962                                                                                                               
+02:22:46 DEBUG    00.786 TB     2.3892667072214198                                                                                                              
+02:22:46 DEBUG    00.786 TB     6                                                                                                                               
+02:22:46 DEBUG    00.786 TB     0.0                                                                                                                             
+02:35:39 DEBUG    00.823 TB Calling UpdateXraySourceBox with following args:                                                                                    
+02:36:31 DEBUG    00.823 TB                                                                                                                                     
+02:36:31 DEBUG    00.823 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+02:36:31 DEBUG    00.823 TB                          halo_sfr:  4.7374e-19,  1.1336e-17,  5.5993e-25,  1.5210e-11,  5.2949e-16                                  
+02:36:31 DEBUG    00.823 TB                     halo_sfr_mini:  9.4001e-17,  9.3966e-16,  6.1413e-21,  1.9609e-11,  1.1320e-14                                  
+02:36:31 DEBUG    00.823 TB                         halo_xray:  1.7345e-06,  1.7413e-05,  1.1348e-10,  6.2155e-01,  2.1613e-04                                  
+02:36:31 DEBUG    00.823 TB                             n_ion:  initialized                                                                                     
+02:36:31 DEBUG    00.823 TB                         whalo_sfr:  initialized                                                                                     
+02:36:31 DEBUG    00.823 TB               log10_Mcrit_ACG_ave: None                                                                                             
+02:36:31 DEBUG    00.823 TB               log10_Mcrit_MCG_ave: 5.780836719135432                                                                                
+02:36:31 DEBUG    00.823 TB                                                                                                                                     
+02:36:31 DEBUG    00.823 TB     2.3892667072214198                                                                                                              
+02:36:31 DEBUG    00.823 TB     2.795893805767131                                                                                                               
+02:36:31 DEBUG    00.823 TB     7                                                                                                                               
+02:36:31 DEBUG    00.823 TB     0.0                                                                                                                             
+02:49:26 DEBUG    00.860 TB Calling UpdateXraySourceBox with following args:                                                                                    
+02:50:17 DEBUG    00.860 TB                                                                                                                                     
+02:50:17 DEBUG    00.860 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+02:50:17 DEBUG    00.860 TB                          halo_sfr:  4.7041e-19,  1.1258e-17,  5.5551e-25,  1.5134e-11,  5.2626e-16                                  
+02:50:17 DEBUG    00.860 TB                     halo_sfr_mini:  9.3482e-17,  9.3462e-16,  6.1019e-21,  1.9547e-11,  1.1267e-14                                  
+02:50:17 DEBUG    00.860 TB                         halo_xray:  1.7250e-06,  1.7320e-05,  1.1275e-10,  6.1913e-01,  2.1512e-04                                  
+02:50:17 DEBUG    00.860 TB                             n_ion:  initialized                                                                                     
+02:50:17 DEBUG    00.860 TB                         whalo_sfr:  initialized                                                                                     
+02:50:17 DEBUG    00.860 TB               log10_Mcrit_ACG_ave: None                                                                                             
+02:50:17 DEBUG    00.860 TB               log10_Mcrit_MCG_ave: 5.780624439172605                                                                                
+02:50:17 DEBUG    00.860 TB                                                                                                                                     
+02:50:17 DEBUG    00.860 TB     2.795893805767131                                                                                                               
+02:50:17 DEBUG    00.860 TB     3.271724395397349                                                                                                               
+02:50:17 DEBUG    00.860 TB     8                                                                                                                               
+02:50:17 DEBUG    00.860 TB     0.0                                                                                                                             
+03:03:09 DEBUG    00.897 TB Calling UpdateXraySourceBox with following args:                                                                                    
+03:04:12 DEBUG    00.897 TB                                                                                                                                     
+03:04:12 DEBUG    00.897 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+03:04:12 DEBUG    00.897 TB                          halo_sfr:  4.6652e-19,  1.1166e-17,  5.5033e-25,  1.5044e-11,  5.2249e-16                                  
+03:04:12 DEBUG    00.897 TB                     halo_sfr_mini:  9.2875e-17,  9.2872e-16,  6.0558e-21,  1.9475e-11,  1.1205e-14                                  
+03:04:12 DEBUG    00.897 TB                         halo_xray:  1.7138e-06,  1.7211e-05,  1.1190e-10,  6.1629e-01,  2.1393e-04                                  
+03:04:12 DEBUG    00.897 TB                             n_ion:  initialized                                                                                     
+03:04:12 DEBUG    00.897 TB                         whalo_sfr:  initialized                                                                                     
+03:04:12 DEBUG    00.897 TB               log10_Mcrit_ACG_ave: None                                                                                             
+03:04:12 DEBUG    00.897 TB               log10_Mcrit_MCG_ave: 5.780376031478578                                                                                
+03:04:12 DEBUG    00.897 TB                                                                                                                                     
+03:04:12 DEBUG    00.897 TB     3.271724395397349                                                                                                               
+03:04:12 DEBUG    00.897 TB     3.828536154469985                                                                                                               
+03:04:12 DEBUG    00.897 TB     9                                                                                                                               
+03:04:12 DEBUG    00.897 TB     0.0                                                                                                                             
+03:17:42 DEBUG    00.933 TB Calling UpdateXraySourceBox with following args:                                                                                    
+03:18:36 DEBUG    00.933 TB                                                                                                                                     
+03:18:36 DEBUG    00.933 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+03:18:36 DEBUG    00.933 TB                          halo_sfr:  4.6196e-19,  1.1060e-17,  5.4427e-25,  1.4939e-11,  5.1807e-16                                  
+03:18:36 DEBUG    00.933 TB                     halo_sfr_mini:  9.2164e-17,  9.2181e-16,  6.0018e-21,  1.9390e-11,  1.1133e-14                                  
+03:18:36 DEBUG    00.933 TB                         halo_xray:  1.7008e-06,  1.7083e-05,  1.1091e-10,  6.1298e-01,  2.1254e-04                                  
+03:18:36 DEBUG    00.933 TB                             n_ion:  initialized                                                                                     
+03:18:36 DEBUG    00.933 TB                         whalo_sfr:  initialized                                                                                     
+03:18:36 DEBUG    00.933 TB               log10_Mcrit_ACG_ave: None                                                                                             
+03:18:36 DEBUG    00.933 TB               log10_Mcrit_MCG_ave: 5.78008534750808                                                                                 
+03:18:36 DEBUG    00.933 TB                                                                                                                                     
+03:18:36 DEBUG    00.933 TB     3.828536154469985                                                                                                               
+03:18:36 DEBUG    00.933 TB     4.480111193566369                                                                                                               
+03:18:36 DEBUG    00.933 TB     10                                                                                                                              
+03:18:36 DEBUG    00.933 TB     0.0                                                                                                                             
+03:31:47 DEBUG    00.970 TB Calling UpdateXraySourceBox with following args:                                                                                    
+03:32:39 DEBUG    00.970 TB                                                                                                                                     
+03:32:39 DEBUG    00.970 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+03:32:39 DEBUG    00.970 TB                          halo_sfr:  4.5663e-19,  1.0935e-17,  5.3718e-25,  1.4817e-11,  5.1290e-16                                  
+03:32:39 DEBUG    00.970 TB                     halo_sfr_mini:  9.1332e-17,  9.1372e-16,  5.9387e-21,  1.9291e-11,  1.1048e-14                                  
+03:32:39 DEBUG    00.970 TB                         halo_xray:  1.6855e-06,  1.6934e-05,  1.0975e-10,  6.0910e-01,  2.1091e-04                                  
+03:32:39 DEBUG    00.970 TB                             n_ion:  initialized                                                                                     
+03:32:39 DEBUG    00.970 TB                         whalo_sfr:  initialized                                                                                     
+03:32:39 DEBUG    00.970 TB               log10_Mcrit_ACG_ave: None                                                                                             
+03:32:39 DEBUG    00.970 TB               log10_Mcrit_MCG_ave: 5.779745192300586                                                                                
+03:32:39 DEBUG    00.970 TB                                                                                                                                     
+03:32:39 DEBUG    00.970 TB     4.480111193566369                                                                                                               
+03:32:39 DEBUG    00.970 TB     5.242577187963718                                                                                                               
+03:32:39 DEBUG    00.970 TB     11                                                                                                                              
+03:32:39 DEBUG    00.970 TB     0.0                                                                                                                             
+03:45:29 DEBUG    01.007 TB Calling UpdateXraySourceBox with following args:                                                                                    
+03:46:21 DEBUG    01.007 TB                                                                                                                                     
+03:46:21 DEBUG    01.007 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+03:46:21 DEBUG    01.007 TB                          halo_sfr:  4.5038e-19,  1.0788e-17,  5.2887e-25,  1.4673e-11,  5.0683e-16                                  
+03:46:21 DEBUG    01.007 TB                     halo_sfr_mini:  9.0357e-17,  9.0425e-16,  5.8646e-21,  1.9175e-11,  1.0949e-14                                  
+03:46:21 DEBUG    01.007 TB                         halo_xray:  1.6676e-06,  1.6759e-05,  1.0839e-10,  6.0455e-01,  2.0900e-04                                  
+03:46:21 DEBUG    01.007 TB                             n_ion:  initialized                                                                                     
+03:46:21 DEBUG    01.007 TB                         whalo_sfr:  initialized                                                                                     
+03:46:21 DEBUG    01.007 TB               log10_Mcrit_ACG_ave: None                                                                                             
+03:46:21 DEBUG    01.007 TB               log10_Mcrit_MCG_ave: 5.779346480920399                                                                                
+03:46:21 DEBUG    01.007 TB                                                                                                                                     
+03:46:21 DEBUG    01.007 TB     5.242577187963718                                                                                                               
+03:46:21 DEBUG    01.007 TB     6.134806567128654                                                                                                               
+03:46:21 DEBUG    01.007 TB     12                                                                                                                              
+03:46:21 DEBUG    01.007 TB     0.0                                                                                                                             
+03:59:14 DEBUG    01.044 TB Calling UpdateXraySourceBox with following args:                                                                                    
+04:00:07 DEBUG    01.044 TB                                                                                                                                     
+04:00:07 DEBUG    01.044 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+04:00:07 DEBUG    01.044 TB                          halo_sfr:  4.4305e-19,  1.0616e-17,  5.1912e-25,  1.4504e-11,  4.9972e-16                                  
+04:00:07 DEBUG    01.044 TB                     halo_sfr_mini:  8.9214e-17,  8.9313e-16,  5.7778e-21,  1.9039e-11,  1.0832e-14                                  
+04:00:07 DEBUG    01.044 TB                         halo_xray:  1.6466e-06,  1.6554e-05,  1.0679e-10,  5.9922e-01,  2.0676e-04                                  
+04:00:07 DEBUG    01.044 TB                             n_ion:  initialized                                                                                     
+04:00:07 DEBUG    01.044 TB                         whalo_sfr:  initialized                                                                                     
+04:00:07 DEBUG    01.044 TB               log10_Mcrit_ACG_ave: None                                                                                             
+04:00:07 DEBUG    01.044 TB               log10_Mcrit_MCG_ave: 5.778878786661473                                                                                
+04:00:07 DEBUG    01.044 TB                                                                                                                                     
+04:00:07 DEBUG    01.044 TB     6.134806567128654                                                                                                               
+04:00:07 DEBUG    01.044 TB     7.178883641902678                                                                                                               
+04:00:07 DEBUG    01.044 TB     13                                                                                                                              
+04:00:07 DEBUG    01.044 TB     0.0                                                                                                                             
+04:13:19 DEBUG    01.081 TB Calling UpdateXraySourceBox with following args:                                                                                    
+04:14:10 DEBUG    01.081 TB                                                                                                                                     
+04:14:10 DEBUG    01.081 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+04:14:10 DEBUG    01.081 TB                          halo_sfr:  4.3446e-19,  1.0415e-17,  5.0770e-25,  1.4307e-11,  4.9140e-16                                  
+04:14:10 DEBUG    01.081 TB                     halo_sfr_mini:  8.7874e-17,  8.8011e-16,  5.6761e-21,  1.8880e-11,  1.0695e-14                                  
+04:14:10 DEBUG    01.081 TB                         halo_xray:  1.6220e-06,  1.6314e-05,  1.0492e-10,  5.9297e-01,  2.0414e-04                                  
+04:14:10 DEBUG    01.081 TB                             n_ion:  initialized                                                                                     
+04:14:10 DEBUG    01.081 TB                         whalo_sfr:  initialized                                                                                     
+04:14:10 DEBUG    01.081 TB               log10_Mcrit_ACG_ave: None                                                                                             
+04:14:10 DEBUG    01.081 TB               log10_Mcrit_MCG_ave: 5.778331034862729                                                                                
+04:14:10 DEBUG    01.081 TB                                                                                                                                     
+04:14:10 DEBUG    01.081 TB     7.178883641902678                                                                                                               
+04:14:10 DEBUG    01.081 TB     8.400651231632722                                                                                                               
+04:14:10 DEBUG    01.081 TB     14                                                                                                                              
+04:14:10 DEBUG    01.081 TB     0.0                                                                                                                             
+04:27:01 DEBUG    01.118 TB Calling UpdateXraySourceBox with following args:                                                                                    
+04:27:53 DEBUG    01.118 TB                                                                                                                                     
+04:27:53 DEBUG    01.118 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+04:27:53 DEBUG    01.118 TB                          halo_sfr:  4.2442e-19,  1.0180e-17,  4.9434e-25,  1.4075e-11,  4.8165e-16                                  
+04:27:53 DEBUG    01.118 TB                     halo_sfr_mini:  8.6307e-17,  8.6488e-16,  5.5571e-21,  1.8693e-11,  1.0535e-14                                  
+04:27:53 DEBUG    01.118 TB                         halo_xray:  1.5932e-06,  1.6032e-05,  1.0273e-10,  5.8566e-01,  2.0108e-04                                  
+04:27:53 DEBUG    01.118 TB                             n_ion:  initialized                                                                                     
+04:27:53 DEBUG    01.118 TB                         whalo_sfr:  initialized                                                                                     
+04:27:53 DEBUG    01.118 TB               log10_Mcrit_ACG_ave: None                                                                                             
+04:27:53 DEBUG    01.118 TB               log10_Mcrit_MCG_ave: 5.77769006169026                                                                                 
+04:27:53 DEBUG    01.118 TB                                                                                                                                     
+04:27:53 DEBUG    01.118 TB     8.400651231632722                                                                                                               
+04:27:53 DEBUG    01.118 TB     9.830350321269226                                                                                                               
+04:27:53 DEBUG    01.118 TB     15                                                                                                                              
+04:27:53 DEBUG    01.118 TB     0.0                                                                                                                             
+04:40:50 DEBUG    01.154 TB Calling UpdateXraySourceBox with following args:                                                                                    
+04:41:41 DEBUG    01.154 TB                                                                                                                                     
+04:41:41 DEBUG    01.154 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+04:41:41 DEBUG    01.154 TB                          halo_sfr:  4.1264e-19,  9.9037e-18,  4.7868e-25,  1.3804e-11,  4.7023e-16                                  
+04:41:41 DEBUG    01.154 TB                     halo_sfr_mini:  8.4469e-17,  8.4701e-16,  5.4176e-21,  1.8475e-11,  1.0348e-14                                  
+04:41:41 DEBUG    01.154 TB                         halo_xray:  1.5595e-06,  1.5703e-05,  1.0016e-10,  5.7709e-01,  1.9748e-04                                  
+04:41:41 DEBUG    01.154 TB                             n_ion:  initialized                                                                                     
+04:41:41 DEBUG    01.154 TB                         whalo_sfr:  initialized                                                                                     
+04:41:41 DEBUG    01.154 TB               log10_Mcrit_ACG_ave: None                                                                                             
+04:41:41 DEBUG    01.154 TB               log10_Mcrit_MCG_ave: 5.7769384596079245                                                                               
+04:41:41 DEBUG    01.154 TB                                                                                                                                     
+04:41:41 DEBUG    01.154 TB     9.830350321269226                                                                                                               
+04:41:41 DEBUG    01.154 TB     11.503368581116083                                                                                                              
+04:41:41 DEBUG    01.154 TB     16                                                                                                                              
+04:41:41 DEBUG    01.154 TB     0.0                                                                                                                             
+04:54:36 DEBUG    01.191 TB Calling UpdateXraySourceBox with following args:                                                                                    
+04:55:27 DEBUG    01.191 TB                                                                                                                                     
+04:55:27 DEBUG    01.191 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+04:55:27 DEBUG    01.191 TB                          halo_sfr:  3.9882e-19,  9.5799e-18,  4.6030e-25,  1.3486e-11,  4.5682e-16                                  
+04:55:27 DEBUG    01.191 TB                     halo_sfr_mini:  8.2314e-17,  8.2606e-16,  5.2539e-21,  1.8218e-11,  1.0128e-14                                  
+04:55:27 DEBUG    01.191 TB                         halo_xray:  1.5199e-06,  1.5316e-05,  9.7154e-11,  5.6704e-01,  1.9326e-04                                  
+04:55:27 DEBUG    01.191 TB                             n_ion:  initialized                                                                                     
+04:55:27 DEBUG    01.191 TB                         whalo_sfr:  initialized                                                                                     
+04:55:27 DEBUG    01.191 TB               log10_Mcrit_ACG_ave: None                                                                                             
+04:55:27 DEBUG    01.191 TB               log10_Mcrit_MCG_ave: 5.776056869014669                                                                                
+04:55:27 DEBUG    01.191 TB                                                                                                                                     
+04:55:27 DEBUG    01.191 TB     11.503368581116083                                                                                                              
+04:55:27 DEBUG    01.191 TB     13.46111627646688                                                                                                               
+04:55:27 DEBUG    01.191 TB     17                                                                                                                              
+04:55:27 DEBUG    01.191 TB     0.0                                                                                                                             
+05:08:29 DEBUG    01.228 TB Calling UpdateXraySourceBox with following args:                                                                                    
+05:09:20 DEBUG    01.228 TB                                                                                                                                     
+05:09:20 DEBUG    01.228 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+05:09:20 DEBUG    01.228 TB                          halo_sfr:  3.8262e-19,  9.2003e-18,  4.3877e-25,  1.3114e-11,  4.4112e-16                                  
+05:09:20 DEBUG    01.228 TB                     halo_sfr_mini:  7.9787e-17,  8.0150e-16,  5.0621e-21,  1.7918e-11,  9.8696e-15                                  
+05:09:20 DEBUG    01.228 TB                         halo_xray:  1.4736e-06,  1.4862e-05,  9.3625e-11,  5.5525e-01,  1.8832e-04                                  
+05:09:20 DEBUG    01.228 TB                             n_ion:  initialized                                                                                     
+05:09:20 DEBUG    01.228 TB                         whalo_sfr:  initialized                                                                                     
+05:09:20 DEBUG    01.228 TB               log10_Mcrit_ACG_ave: None                                                                                             
+05:09:20 DEBUG    01.228 TB               log10_Mcrit_MCG_ave: 5.7750236163665765                                                                               
+05:09:20 DEBUG    01.228 TB                                                                                                                                     
+05:09:20 DEBUG    01.228 TB     13.46111627646688                                                                                                               
+05:09:20 DEBUG    01.228 TB     15.75205124749476                                                                                                               
+05:09:20 DEBUG    01.228 TB     18                                                                                                                              
+05:09:20 DEBUG    01.228 TB     0.0                                                                                                                             
+05:22:22 DEBUG    01.265 TB Calling UpdateXraySourceBox with following args:                                                                                    
+05:23:12 DEBUG    01.265 TB                                                                                                                                     
+05:23:12 DEBUG    01.265 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+05:23:12 DEBUG    01.265 TB                          halo_sfr:  3.6362e-19,  8.7551e-18,  4.1350e-25,  1.2676e-11,  4.2269e-16                                  
+05:23:12 DEBUG    01.265 TB                     halo_sfr_mini:  7.6823e-17,  7.7270e-16,  4.8370e-21,  1.7565e-11,  9.5671e-15                                  
+05:23:12 DEBUG    01.265 TB                         halo_xray:  1.4191e-06,  1.4331e-05,  8.9485e-11,  5.4143e-01,  1.8252e-04                                  
+05:23:12 DEBUG    01.265 TB                             n_ion:  initialized                                                                                     
+05:23:12 DEBUG    01.265 TB                         whalo_sfr:  initialized                                                                                     
+05:23:12 DEBUG    01.265 TB               log10_Mcrit_ACG_ave: None                                                                                             
+05:23:12 DEBUG    01.265 TB               log10_Mcrit_MCG_ave: 5.773811485775008                                                                                
+05:23:12 DEBUG    01.265 TB                                                                                                                                     
+05:23:12 DEBUG    01.265 TB     15.75205124749476                                                                                                               
+05:23:12 DEBUG    01.265 TB     18.432878329524893                                                                                                              
+05:23:12 DEBUG    01.265 TB     19                                                                                                                              
+05:23:12 DEBUG    01.265 TB     0.0                                                                                                                             
+05:36:11 DEBUG    01.302 TB Calling UpdateXraySourceBox with following args:                                                                                    
+05:37:01 DEBUG    01.302 TB                                                                                                                                     
+05:37:01 DEBUG    01.302 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+05:37:01 DEBUG    01.302 TB                          halo_sfr:  3.4132e-19,  8.2324e-18,  3.8384e-25,  1.2163e-11,  4.0106e-16                                  
+05:37:01 DEBUG    01.302 TB                     halo_sfr_mini:  7.3344e-17,  7.3888e-16,  4.5729e-21,  1.7151e-11,  9.2120e-15                                  
+05:37:01 DEBUG    01.302 TB                         halo_xray:  1.3553e-06,  1.3706e-05,  8.4625e-11,  5.2520e-01,  1.7571e-04                                  
+05:37:01 DEBUG    01.302 TB                             n_ion:  initialized                                                                                     
+05:37:01 DEBUG    01.302 TB                         whalo_sfr:  initialized                                                                                     
+05:37:01 DEBUG    01.302 TB               log10_Mcrit_ACG_ave: None                                                                                             
+05:37:01 DEBUG    01.302 TB               log10_Mcrit_MCG_ave: 5.772388587414414                                                                                
+05:37:01 DEBUG    01.302 TB                                                                                                                                     
+05:37:01 DEBUG    01.302 TB     18.432878329524893                                                                                                              
+05:37:01 DEBUG    01.302 TB     21.569952901537594                                                                                                              
+05:37:01 DEBUG    01.302 TB     20                                                                                                                              
+05:37:01 DEBUG    01.302 TB     0.0                                                                                                                             
+05:50:09 DEBUG    01.339 TB Calling UpdateXraySourceBox with following args:                                                                                    
+05:51:01 DEBUG    01.339 TB                                                                                                                                     
+05:51:01 DEBUG    01.339 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+05:51:01 DEBUG    01.339 TB                          halo_sfr:  3.1513e-19,  7.6188e-18,  3.4903e-25,  1.1560e-11,  3.7566e-16                                  
+05:51:01 DEBUG    01.339 TB                     halo_sfr_mini:  6.9259e-17,  6.9918e-16,  4.2627e-21,  1.6665e-11,  8.7951e-15                                  
+05:51:01 DEBUG    01.339 TB                         halo_xray:  1.2803e-06,  1.2973e-05,  7.8920e-11,  5.0615e-01,  1.6772e-04                                  
+05:51:01 DEBUG    01.339 TB                             n_ion:  initialized                                                                                     
+05:51:01 DEBUG    01.339 TB                         whalo_sfr:  initialized                                                                                     
+05:51:01 DEBUG    01.339 TB               log10_Mcrit_ACG_ave: None                                                                                             
+05:51:01 DEBUG    01.339 TB               log10_Mcrit_MCG_ave: 5.770718125367165                                                                                
+05:51:01 DEBUG    01.339 TB                                                                                                                                     
+05:51:01 DEBUG    01.339 TB     21.569952901537594                                                                                                              
+05:51:01 DEBUG    01.339 TB     25.24092330329738                                                                                                               
+05:51:01 DEBUG    01.339 TB     21                                                                                                                              
+05:51:01 DEBUG    01.339 TB     0.0                                                                                                                             
+06:04:02 DEBUG    01.375 TB Calling UpdateXraySourceBox with following args:                                                                                    
+06:04:52 DEBUG    01.375 TB                                                                                                                                     
+06:04:52 DEBUG    01.375 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+06:04:52 DEBUG    01.375 TB                          halo_sfr:  2.8438e-19,  6.8980e-18,  3.0813e-25,  1.0853e-11,  3.4583e-16                                  
+06:04:52 DEBUG    01.375 TB                     halo_sfr_mini:  6.4461e-17,  6.5254e-16,  3.8984e-21,  1.6094e-11,  8.3054e-15                                  
+06:04:52 DEBUG    01.375 TB                         halo_xray:  1.1922e-06,  1.2112e-05,  7.2219e-11,  4.8377e-01,  1.5833e-04                                  
+06:04:52 DEBUG    01.375 TB                             n_ion:  initialized                                                                                     
+06:04:52 DEBUG    01.375 TB                         whalo_sfr:  initialized                                                                                     
+06:04:52 DEBUG    01.375 TB               log10_Mcrit_ACG_ave: None                                                                                             
+06:04:52 DEBUG    01.375 TB               log10_Mcrit_MCG_ave: 5.768755915046369                                                                                
+06:04:52 DEBUG    01.375 TB                                                                                                                                     
+06:04:52 DEBUG    01.375 TB     25.24092330329738                                                                                                               
+06:04:52 DEBUG    01.375 TB     29.536652773939306                                                                                                              
+06:04:52 DEBUG    01.375 TB     22                                                                                                                              
+06:04:52 DEBUG    01.375 TB     0.0                                                                                                                             
+06:17:15 DEBUG    01.412 TB Calling UpdateXraySourceBox with following args:                                                                                    
+06:18:03 DEBUG    01.412 TB                                                                                                                                     
+06:18:03 DEBUG    01.412 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+06:18:03 DEBUG    01.412 TB                          halo_sfr:  2.6184e-19,  6.3633e-18,  2.8038e-25,  1.0244e-11,  3.2224e-16                                  
+06:18:03 DEBUG    01.412 TB                     halo_sfr_mini:  6.0484e-17,  6.1349e-16,  3.6177e-21,  1.5525e-11,  7.8731e-15                                  
+06:18:03 DEBUG    01.412 TB                         halo_xray:  1.1190e-06,  1.1390e-05,  6.7041e-11,  4.6302e-01,  1.5006e-04                                  
+06:18:03 DEBUG    01.412 TB                             n_ion:  initialized                                                                                     
+06:18:03 DEBUG    01.412 TB                         whalo_sfr:  initialized                                                                                     
+06:18:03 DEBUG    01.412 TB               log10_Mcrit_ACG_ave: None                                                                                             
+06:18:03 DEBUG    01.412 TB               log10_Mcrit_MCG_ave: 5.766506629660849                                                                                
+06:18:03 DEBUG    01.412 TB                                                                                                                                     
+06:18:03 DEBUG    01.412 TB     29.536652773939306                                                                                                              
+06:18:03 DEBUG    01.412 TB     34.56346848351174                                                                                                               
+06:18:03 DEBUG    01.412 TB     23                                                                                                                              
+06:18:03 DEBUG    01.412 TB     0.0                                                                                                                             
+06:30:27 DEBUG    01.449 TB Calling UpdateXraySourceBox with following args:                                                                                    
+06:31:14 DEBUG    01.449 TB                                                                                                                                     
+06:31:14 DEBUG    01.449 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+06:31:14 DEBUG    01.449 TB                          halo_sfr:  2.3764e-19,  5.7873e-18,  2.5117e-25,  9.5667e-12,  2.9642e-16                                  
+06:31:14 DEBUG    01.449 TB                     halo_sfr_mini:  5.6086e-17,  5.7023e-16,  3.3124e-21,  1.4872e-11,  7.3888e-15                                  
+06:31:14 DEBUG    01.449 TB                         halo_xray:  1.0380e-06,  1.0590e-05,  6.1408e-11,  4.3954e-01,  1.4080e-04                                  
+06:31:14 DEBUG    01.449 TB                             n_ion:  initialized                                                                                     
+06:31:14 DEBUG    01.449 TB                         whalo_sfr:  initialized                                                                                     
+06:31:14 DEBUG    01.449 TB               log10_Mcrit_ACG_ave: None                                                                                             
+06:31:14 DEBUG    01.449 TB               log10_Mcrit_MCG_ave: 5.763869745246577                                                                                
+06:31:14 DEBUG    01.449 TB                                                                                                                                     
+06:31:14 DEBUG    01.449 TB     34.56346848351174                                                                                                               
+06:31:14 DEBUG    01.449 TB     40.445793325124356                                                                                                              
+06:31:14 DEBUG    01.449 TB     24                                                                                                                              
+06:31:14 DEBUG    01.449 TB     0.0                                                                                                                             
+06:43:45 DEBUG    01.486 TB Calling UpdateXraySourceBox with following args:                                                                                    
+06:44:32 DEBUG    01.486 TB                                                                                                                                     
+06:44:32 DEBUG    01.486 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+06:44:32 DEBUG    01.486 TB                          halo_sfr:  2.0914e-19,  5.1091e-18,  2.1679e-25,  8.7686e-12,  2.6602e-16                                  
+06:44:32 DEBUG    01.486 TB                     halo_sfr_mini:  5.0907e-17,  5.1928e-16,  2.9530e-21,  1.4104e-11,  6.8186e-15                                  
+06:44:32 DEBUG    01.486 TB                         halo_xray:  9.4271e-07,  9.6476e-06,  5.4775e-11,  4.1189e-01,  1.2990e-04                                  
+06:44:32 DEBUG    01.486 TB                             n_ion:  initialized                                                                                     
+06:44:32 DEBUG    01.486 TB                         whalo_sfr:  initialized                                                                                     
+06:44:32 DEBUG    01.486 TB               log10_Mcrit_ACG_ave: None                                                                                             
+06:44:32 DEBUG    01.486 TB               log10_Mcrit_MCG_ave: 5.760764994865124                                                                                
+06:44:32 DEBUG    01.486 TB                                                                                                                                     
+06:44:32 DEBUG    01.486 TB     40.445793325124356                                                                                                              
+06:44:32 DEBUG    01.486 TB     47.329225609375705                                                                                                              
+06:44:32 DEBUG    01.486 TB     25                                                                                                                              
+06:44:32 DEBUG    01.486 TB     0.0                                                                                                                             
+06:57:28 DEBUG    01.523 TB Calling UpdateXraySourceBox with following args:                                                                                    
+06:58:21 DEBUG    01.523 TB                                                                                                                                     
+06:58:21 DEBUG    01.523 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+06:58:21 DEBUG    01.523 TB                          halo_sfr:  1.7554e-19,  4.3094e-18,  1.7624e-25,  7.8277e-12,  2.3018e-16                                  
+06:58:21 DEBUG    01.523 TB                     halo_sfr_mini:  4.4802e-17,  4.5921e-16,  2.5292e-21,  1.3198e-11,  6.1462e-15                                  
+06:58:21 DEBUG    01.523 TB                         halo_xray:  8.3030e-07,  8.5366e-06,  4.6954e-11,  3.7930e-01,  1.1704e-04                                  
+06:58:21 DEBUG    01.523 TB                             n_ion:  initialized                                                                                     
+06:58:21 DEBUG    01.523 TB                         whalo_sfr:  initialized                                                                                     
+06:58:21 DEBUG    01.523 TB               log10_Mcrit_ACG_ave: None                                                                                             
+06:58:21 DEBUG    01.523 TB               log10_Mcrit_MCG_ave: 5.757104302561128                                                                                
+06:58:21 DEBUG    01.523 TB                                                                                                                                     
+06:58:21 DEBUG    01.523 TB     47.329225609375705                                                                                                              
+06:58:21 DEBUG    01.523 TB     55.384142889136854                                                                                                              
+06:58:21 DEBUG    01.523 TB     26                                                                                                                              
+06:58:21 DEBUG    01.523 TB     0.0                                                                                                                             
+07:11:21 DEBUG    01.560 TB Calling UpdateXraySourceBox with following args:                                                                                    
+07:11:54 DEBUG    01.560 TB                                                                                                                                     
+07:11:54 DEBUG    01.560 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+07:11:54 DEBUG    01.560 TB                          halo_sfr:  1.4475e-19,  3.5722e-18,  1.4037e-25,  6.8954e-12,  1.9610e-16                                  
+07:11:54 DEBUG    01.560 TB                     halo_sfr_mini:  3.8868e-17,  4.0041e-16,  2.1312e-21,  1.2228e-11,  5.4709e-15                                  
+07:11:54 DEBUG    01.560 TB                         halo_xray:  7.2093e-07,  7.4480e-06,  3.9600e-11,  3.4563e-01,  1.0414e-04                                  
+07:11:54 DEBUG    01.560 TB                             n_ion:  initialized                                                                                     
+07:11:54 DEBUG    01.560 TB                         whalo_sfr:  initialized                                                                                     
+07:11:54 DEBUG    01.560 TB               log10_Mcrit_ACG_ave: None                                                                                             
+07:11:54 DEBUG    01.560 TB               log10_Mcrit_MCG_ave: 5.752836747667813                                                                                
+07:11:54 DEBUG    01.560 TB                                                                                                                                     
+07:11:54 DEBUG    01.560 TB     55.384142889136854                                                                                                              
+07:11:54 DEBUG    01.560 TB     64.80991911595295                                                                                                               
+07:11:54 DEBUG    01.560 TB     27                                                                                                                              
+07:11:54 DEBUG    01.560 TB     0.0                                                                                                                             
+07:23:43 DEBUG    01.596 TB Calling UpdateXraySourceBox with following args:                                                                                    
+07:24:16 DEBUG    01.596 TB                                                                                                                                     
+07:24:16 DEBUG    01.596 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+07:24:16 DEBUG    01.596 TB                          halo_sfr:  1.1853e-19,  2.9385e-18,  1.1175e-25,  5.9982e-12,  1.6528e-16                                  
+07:24:16 DEBUG    01.596 TB                     halo_sfr_mini:  3.3317e-17,  3.4478e-16,  1.7781e-21,  1.1198e-11,  4.8086e-15                                  
+07:24:16 DEBUG    01.596 TB                         halo_xray:  6.1844e-07,  6.4172e-06,  3.3065e-11,  3.1135e-01,  9.1505e-05                                  
+07:24:16 DEBUG    01.596 TB                             n_ion:  initialized                                                                                     
+07:24:16 DEBUG    01.596 TB                         whalo_sfr:  initialized                                                                                     
+07:24:16 DEBUG    01.596 TB               log10_Mcrit_ACG_ave: None                                                                                             
+07:24:16 DEBUG    01.596 TB               log10_Mcrit_MCG_ave: 5.747853486705115                                                                                
+07:24:16 DEBUG    01.596 TB                                                                                                                                     
+07:24:16 DEBUG    01.596 TB     64.80991911595295                                                                                                               
+07:24:16 DEBUG    01.596 TB     75.83985951040546                                                                                                               
+07:24:16 DEBUG    01.596 TB     28                                                                                                                              
+07:24:16 DEBUG    01.596 TB     0.0                                                                                                                             
+07:35:52 DEBUG    01.633 TB Calling UpdateXraySourceBox with following args:                                                                                    
+07:36:24 DEBUG    01.633 TB                                                                                                                                     
+07:36:24 DEBUG    01.633 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+07:36:24 DEBUG    01.633 TB                          halo_sfr:  8.7487e-20,  2.1879e-18,  7.7840e-26,  4.9354e-12,  1.2877e-16                                  
+07:36:24 DEBUG    01.633 TB                     halo_sfr_mini:  2.6742e-17,  2.7890e-16,  1.3599e-21,  9.9782e-12,  4.0242e-15                                  
+07:36:24 DEBUG    01.633 TB                         halo_xray:  4.9704e-07,  5.1963e-06,  2.5325e-11,  2.7076e-01,  7.6537e-05                                  
+07:36:24 DEBUG    01.633 TB                             n_ion:  initialized                                                                                     
+07:36:24 DEBUG    01.633 TB                         whalo_sfr:  initialized                                                                                     
+07:36:24 DEBUG    01.633 TB               log10_Mcrit_ACG_ave: None                                                                                             
+07:36:24 DEBUG    01.633 TB               log10_Mcrit_MCG_ave: 5.741950977928053                                                                                
+07:36:24 DEBUG    01.633 TB                                                                                                                                     
+07:36:24 DEBUG    01.633 TB     75.83985951040546                                                                                                               
+07:36:24 DEBUG    01.633 TB     88.74697529351283                                                                                                               
+07:36:24 DEBUG    01.633 TB     29                                                                                                                              
+07:36:24 DEBUG    01.633 TB     0.0                                                                                                                             
+07:48:25 DEBUG    01.670 TB Calling UpdateXraySourceBox with following args:                                                                                    
+07:48:58 DEBUG    01.670 TB                                                                                                                                     
+07:48:58 DEBUG    01.670 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+07:48:58 DEBUG    01.670 TB                          halo_sfr:  6.6325e-20,  1.6688e-18,  5.6758e-26,  4.0621e-12,  1.0153e-16                                  
+07:48:58 DEBUG    01.670 TB                     halo_sfr_mini:  2.1577e-17,  2.2643e-16,  1.0576e-21,  8.8005e-12,  3.3596e-15                                  
+07:48:58 DEBUG    01.670 TB                         halo_xray:  4.0144e-07,  4.2220e-06,  1.9714e-11,  2.3404e-01,  6.3878e-05                                  
+07:48:58 DEBUG    01.670 TB                             n_ion:  initialized                                                                                     
+07:48:58 DEBUG    01.670 TB                         whalo_sfr:  initialized                                                                                     
+07:48:58 DEBUG    01.670 TB               log10_Mcrit_ACG_ave: None                                                                                             
+07:48:58 DEBUG    01.670 TB               log10_Mcrit_MCG_ave: 5.73511959568137                                                                                 
+07:48:58 DEBUG    01.670 TB                                                                                                                                     
+07:48:58 DEBUG    01.670 TB     88.74697529351283                                                                                                               
+07:48:58 DEBUG    01.670 TB     103.85074121434472                                                                                                              
+07:48:58 DEBUG    01.670 TB     30                                                                                                                              
+07:48:58 DEBUG    01.670 TB     0.0                                                                                                                             
+08:00:57 DEBUG    01.707 TB Calling UpdateXraySourceBox with following args:                                                                                    
+08:01:30 DEBUG    01.707 TB                                                                                                                                     
+08:01:30 DEBUG    01.707 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+08:01:30 DEBUG    01.707 TB                          halo_sfr:  4.3938e-20,  1.1181e-18,  3.4883e-26,  3.1020e-12,  7.2179e-17                                  
+08:01:30 DEBUG    01.707 TB                     halo_sfr_mini:  1.5950e-17,  1.6910e-16,  7.3384e-22,  7.4615e-12,  2.6243e-15                                  
+08:01:30 DEBUG    01.707 TB                         halo_xray:  2.9724e-07,  3.1571e-06,  1.3755e-11,  1.9283e-01,  4.9874e-05                                  
+08:01:30 DEBUG    01.707 TB                             n_ion:  initialized                                                                                     
+08:01:30 DEBUG    01.707 TB                         whalo_sfr:  initialized                                                                                     
+08:01:30 DEBUG    01.707 TB               log10_Mcrit_ACG_ave: None                                                                                             
+08:01:30 DEBUG    01.707 TB               log10_Mcrit_MCG_ave: 5.7270301893325986                                                                               
+08:01:30 DEBUG    01.707 TB                                                                                                                                     
+08:01:30 DEBUG    01.707 TB     103.85074121434472                                                                                                              
+08:01:30 DEBUG    01.707 TB     121.52500313503248                                                                                                              
+08:01:30 DEBUG    01.707 TB     31                                                                                                                              
+08:01:30 DEBUG    01.707 TB     0.0                                                                                                                             
+08:12:55 DEBUG    01.744 TB Calling UpdateXraySourceBox with following args:                                                                                    
+08:13:28 DEBUG    01.744 TB                                                                                                                                     
+08:13:28 DEBUG    01.744 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+08:13:28 DEBUG    01.744 TB                          halo_sfr:  2.8470e-20,  7.3185e-19,  2.1155e-26,  2.3000e-12,  4.9927e-17                                  
+08:13:28 DEBUG    01.744 TB                     halo_sfr_mini:  1.1458e-17,  1.2268e-16,  4.9631e-22,  6.1531e-12,  1.9914e-15                                  
+08:13:28 DEBUG    01.744 TB                         halo_xray:  2.1384e-07,  2.2933e-06,  9.7451e-12,  1.5480e-01,  3.7834e-05                                  
+08:13:28 DEBUG    01.744 TB                             n_ion:  initialized                                                                                     
+08:13:28 DEBUG    01.744 TB                         whalo_sfr:  initialized                                                                                     
+08:13:28 DEBUG    01.744 TB               log10_Mcrit_ACG_ave: None                                                                                             
+08:13:28 DEBUG    01.744 TB               log10_Mcrit_MCG_ave: 5.71756145135687                                                                                 
+08:13:28 DEBUG    01.744 TB                                                                                                                                     
+08:13:28 DEBUG    01.744 TB     121.52500313503248                                                                                                              
+08:13:28 DEBUG    01.744 TB     142.20723140038342                                                                                                              
+08:13:28 DEBUG    01.744 TB     32                                                                                                                              
+08:13:28 DEBUG    01.744 TB     0.0                                                                                                                             
+08:25:05 DEBUG    01.781 TB Calling UpdateXraySourceBox with following args:                                                                                    
+08:25:38 DEBUG    01.781 TB                                                                                                                                     
+08:25:38 DEBUG    01.781 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+08:25:38 DEBUG    01.781 TB                          halo_sfr:  1.6667e-20,  4.3403e-19,  1.1364e-26,  1.5949e-12,  3.1758e-17                                  
+08:25:38 DEBUG    01.781 TB                     halo_sfr_mini:  7.6442e-18,  8.2853e-17,  3.0700e-22,  4.8534e-12,  1.4215e-15                                  
+08:25:38 DEBUG    01.781 TB                         halo_xray:  1.4292e-07,  1.5512e-06,  7.8734e-12,  1.1851e-01,  2.6999e-05                                  
+08:25:38 DEBUG    01.781 TB                             n_ion:  initialized                                                                                     
+08:25:38 DEBUG    01.781 TB                         whalo_sfr:  initialized                                                                                     
+08:25:38 DEBUG    01.781 TB               log10_Mcrit_ACG_ave: None                                                                                             
+08:25:38 DEBUG    01.781 TB               log10_Mcrit_MCG_ave: 5.706357928375758                                                                                
+08:25:38 DEBUG    01.781 TB                                                                                                                                     
+08:25:38 DEBUG    01.781 TB     142.20723140038342                                                                                                              
+08:25:38 DEBUG    01.781 TB     166.40934902994005                                                                                                              
+08:25:38 DEBUG    01.781 TB     33                                                                                                                              
+08:25:38 DEBUG    01.781 TB     0.0                                                                                                                             
+08:36:49 DEBUG    01.817 TB Calling UpdateXraySourceBox with following args:                                                                                    
+08:37:20 DEBUG    01.817 TB                                                                                                                                     
+08:37:20 DEBUG    01.817 TB                       HaloBox       1st:         End:         Min:         Max:         Mean:                                       
+08:37:20 DEBUG    01.817 TB                          halo_sfr:  8.5659e-21,  2.2670e-19,  5.2384e-27,  1.0128e-12,  1.8116e-17                                  
+08:37:20 DEBUG    01.817 TB                     halo_sfr_mini:  4.6290e-18,  5.0950e-17,  1.6891e-22,  3.6482e-12,  9.3667e-16                                  
+08:37:20 DEBUG    01.817 TB                         halo_xray:  8.6733e-08,  9.5564e-07,  7.0530e-12,  8.5989e-02,  1.7788e-05                                  
+08:37:20 DEBUG    01.817 TB                             n_ion:  initialized                                                                                     
+08:37:20 DEBUG    01.817 TB                         whalo_sfr:  initialized                                                                                     
+08:37:20 DEBUG    01.817 TB               log10_Mcrit_ACG_ave: None                                                                                             
+08:37:20 DEBUG    01.817 TB               log10_Mcrit_MCG_ave: 5.693125934450347                                                                                
+08:37:20 DEBUG    01.817 TB                                                                                                                                     
+08:37:20 DEBUG    01.817 TB     166.40934902994005                                                                                                              
+08:37:20 DEBUG    01.817 TB     194.73040275006554                                                                                                              
+08:37:20 DEBUG    01.817 TB     34                                                                                                                              
+08:37:20 DEBUG    01.817 TB     0.0                                                                                                                             
+08:46:24 DEBUG    01.854 TB ignoring Radius 35 which is above Z_HEAT_MAX                                                                                        
+08:46:42 DEBUG    01.891 TB ignoring Radius 36 which is above Z_HEAT_MAX                                                                                        
+08:47:02 DEBUG    01.928 TB ignoring Radius 37 which is above Z_HEAT_MAX                                                                                        
+08:47:20 DEBUG    01.965 TB ignoring Radius 38 which is above Z_HEAT_MAX                                                                                        
+08:47:52 DEBUG    02.002 TB ignoring Radius 39 which is above Z_HEAT_MAX                                                                                        
+08:50:24 DEBUG    02.051 TB Calling ComputeTsBox with following args:                                                                                           
+08:50:24 DEBUG    02.051 TB     30.043130215776173                                                                                                              
+08:50:24 DEBUG    02.051 TB     30.663992820091696                                                                                                              
+08:50:24 DEBUG    02.051 TB     30.043130215776173                                                                                                              
+08:50:24 DEBUG    02.051 TB     False                                                                                                                           
+08:51:27 DEBUG    02.051 TB                                                                                                                                     
+08:51:27 DEBUG    02.051 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+08:51:27 DEBUG    02.051 TB                           density: -5.2424e-02, -9.0332e-02, -4.2931e-01,  8.6445e-01, -9.2593e-12                                  
+08:51:27 DEBUG    02.051 TB                        velocity_z:  2.0524e-20, -7.7877e-18, -3.9819e-16,  3.8636e-16,  3.9654e-29                                  
+08:51:27 DEBUG    02.051 TB                        velocity_x:  1.1923e-16,  1.3237e-16, -3.8648e-16,  3.7913e-16, -3.6185e-25                                  
+08:51:27 DEBUG    02.051 TB                        velocity_y: -3.0197e-18,  4.6991e-19, -3.8336e-16,  3.9748e-16, -1.0280e-27                                  
+08:51:27 DEBUG    02.051 TB                                                                                                                                     
