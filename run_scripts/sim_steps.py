@@ -2,7 +2,7 @@
 
 Both the production run scripts (run_ICs.py, run_PFs.py, run_N_PFs.py,
 run_PHFs.py, run_N_coevals.py) and the scaling-test harness
-(scaling/run_scaling.py) need to make the *exact* same py21cmfast calls,
+(scaling/_worker.py) need to make the *exact* same py21cmfast calls,
 with the exact same config, for each simulation step (initial conditions,
 perturbed field, halo evolution, coeval generation). Duplicating those
 calls independently in each script is how config drift creeps in silently
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 from typing import Any, Iterable, Iterator
 
+import attrs
 import py21cmfast as p21c
 from py21cmfast.io.caching import CacheConfig
 
@@ -123,7 +124,20 @@ def generate_coevals(
         out_redshifts=out_redshifts,
         inputs=inputs,
         cache=cache,
-        write=CacheConfig(xray_source_box=False) if write is None else write,
+        write=coeval_write_config() if write is None else write,
         regenerate=regenerate,
         progressbar=progressbar,
     )
+
+
+def coeval_write_config() -> CacheConfig:
+    """Cache every coeval product except the huge, transient X-ray box.
+
+    21cmFAST v4.3 renamed XraySourceBox -> RadiationFields (CacheConfig field
+    ``xray_source_box`` -> ``radiation_fields``). Pick whichever this version
+    has, so the production call is identical for v4.2 and v4.3.
+    """
+    fields = {f.name for f in attrs.fields(CacheConfig)}
+    if "radiation_fields" in fields:  # v4.3+
+        return CacheConfig(radiation_fields=False)
+    return CacheConfig(xray_source_box=False)  # v4.2

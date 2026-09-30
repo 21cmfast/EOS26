@@ -23,22 +23,19 @@ test modes use the same input parameters and random seed (`42`).
 
 ### Scaling Measurements
 
-- Run `bash scaling/scaling_job.sh` to measure the default `HII_DIM=200` and
-`HII_DIM=300` cases. Each run disables garbage collection, records peak process
-RSS with `psutil`, and amortizes the full node-redshift coeval evolution over its
-outputs, then writes a phase-by-phase JSON record under
-`scaling/results/`. To benchmark other dimensions, pass them as arguments, for
-example `bash scaling/scaling_job.sh 200 300 400`.
+Peak memory (and time) of every phase as a function of `HII_DIM` and
+`N_THREADS`, for 21cmFAST v4.2 and v4.3, to find the largest `HII_DIM` that
+fits safely on a 3 TB megamem node. Full description: [`scaling/README.md`](scaling/README.md).
 
-- After at least two measurements, `scaling/run_scalingrelation.py` fits power
-laws for time, peak memory, phase storage, and every stored HDF5 structure. It
-writes plots, `README_scaling_values.md`, and `scaling_fits.json` to
-`scaling/reports/`. The generated Markdown file is the source for updating the
-scaling table below. To apply direct measurements from the smallest and largest
-completed `HII_DIM` runs plus fitted extrapolation intervals from every available
-scaling result, run `uv run --no-sync scaling/run_scalingrelation.py
---update-readme`; it relabels the two measured columns and updates both EOS
-extrapolation sections.
+- `bash scaling/campaign_v4.2.sh` / `bash scaling/campaign_v4.3.sh` submit one
+PBS job per (`HII_DIM`, `N_THREADS`). Re-running a campaign script resumes
+unfinished configurations from the beginning of their unfinished phase.
+- `python3 scaling/summarize.py` prints the status/results table and writes
+`scaling/results/<version>/summary_*.csv`.
+- The v4.3 environment is created with `envs/create_venv_v4.3.sh` (Mac or Gadi).
+Switch versions with `source envs/use.sh v4.2|v4.3`.
+- The previous harness and its v4.2 results are in `scaling_old/`. They are
+superseded; see `scaling_old/ASSESSMENT.md`.
 
 ### Production run (in order)
 1. **Initial conditions (ICs):**
@@ -124,6 +121,8 @@ extrapolation sections.
 </tbody></table>
 
 ## Scaling test results
+
+> **Note (2026-09-30):** the values below come from the superseded v4.2 measurements in `scaling_old/` (the HII_DIM=500 coeval point covers only 5/92 coevals; see `scaling_old/ASSESSMENT.md`). They will be replaced by the results of the new `scaling/` campaigns.
 
 When updated with `--update-readme`, each extrapolated value is the mean ± 1σ from all available scaling points. Each extrapolated quantity shows both its current model (affine `overhead + coefficient * HII_DIM^3` for peak RSS; free-exponent power law for time and storage) and a fixed-cubic `a=3` fit. The regression uncertainty is combined in quadrature with a fixed 10% relative measurement-uncertainty floor. EOS-1: HII\_DIM = 1500 (1.5 cMpc/cell, 2250 Mpc). EOS-2: HII\_DIM = 1200 (1.667 cMpc/cell, 2000 Mpc). Storage for PFs and coevals is the total across all 92 node redshifts; coeval storage includes retained IonizedBox and excludes transient XraySourceBox. The scaling-test fits are trained only on `HII_DIM<=500` and, for initial conditions, that range's fixed per-job overhead makes the fitted compute-time noticeably underestimate the production values now measured at both EOS target sizes (`elapsed_seconds` fit for HII_DIM=1500: 17h vs. 29.8h measured).
 

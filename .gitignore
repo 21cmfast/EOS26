@@ -117,7 +117,8 @@ ipython_config.py
 .pdm-build/
 
 # Scaling benchmark outputs (can be very large).
-scaling/cache/
+scaling_old/cache/
+scaling/sims/
 #scaling/results/
 #scaling/reports/
 scaling/results/*build
@@ -142,6 +143,7 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv-v4.3/
 env/
 venv/
 ENV/
@@ -211,7 +213,7 @@ marimo/_lsp/
 __marimo__/
 
 # 21cmFAST
-21cmFAST/
+21cmFAST*/
 memray*html
 
 # EOS

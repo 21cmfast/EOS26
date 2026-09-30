@@ -1,0 +1,74 @@
+#!/bin/bash
+# PBS job measuring ONE scaling configuration (label, HII_DIM, N_THREADS).
+#
+# Do not qsub this by hand: scaling/launch.sh sets the resources (-l ...) and
+# passes these variables with -v:
+#   SC_ROOT        EOS26 repository root (absolute)
+#   SC_LABEL       21cmFAST version label: v4.2 | v4.3
+#   SC_HII_DIM     HII_DIM
+#   SC_N_THREADS   N_THREADS (also OMP_NUM_THREADS)
+#   SC_PHASES      phases joined by '+', or 'all'
+#   SC_COEVAL_BATCH  0 = full coeval evolution in one process; N = production-like batches
+#   SC_EXTRA       extra measure.py flags joined by '+' (e.g. --keep-sim+--restart)
+#
+# Re-submitting the same configuration resumes it (see scaling/README.md).
+
+set -euo pipefail
+
+: "${SC_ROOT:?SC_ROOT not set -- submit with scaling/launch.sh}"
+: "${SC_LABEL:?}" "${SC_HII_DIM:?}" "${SC_N_THREADS:?}"
+
+# shellcheck source=config.sh
+source "$SC_ROOT/scaling/config.sh"
+# shellcheck source=_lib.sh
+source "$SC_ROOT/scaling/_lib.sh"
+
+CONFIG_DIR=$(sc_config_dir "$SC_ROOT" "$SC_LABEL" "$SC_HII_DIM" "$SC_N_THREADS" "${SC_COEVAL_BATCH:-0}")
+mkdir -p "$CONFIG_DIR/pbs"
+
+echo "=== $(date -u +%FT%TZ) job ${PBS_JOBID:-none} on $(hostname): ${SC_LABEL} HII_DIM=${SC_HII_DIM} N_THREADS=${SC_N_THREADS}"
+echo "    queue=${PBS_QUEUE:-?} ncpus=${PBS_NCPUS:-?} phases=${SC_PHASES:-all} coeval_batch=${SC_COEVAL_BATCH:-0} extra=${SC_EXTRA:-}"
+
+sc_load_modules
+command -v module >/dev/null 2>&1 && { module list 2>&1 || true; }
+
+# Same OpenMP environment as pbs_scripts/N_coeval_job.sh (OMP_PROC_BIND=TRUE
+# made the old scaling jobs run serially).
+export OMP_NUM_THREADS="$SC_N_THREADS"
+export OMP_DYNAMIC=FALSE
+unset OMP_PROC_BIND OMP_PLACES
+
+VENV=$(sc_venv "$SC_LABEL")
+TEMPLATE=$(sc_template "$SC_LABEL")
+EXPECT=$(sc_expect_version "$SC_LABEL")
+PY="$VENV/bin/python"
+[[ -x "$PY" ]] || { echo "ERROR: no python in venv $VENV" >&2; exit 2; }
+
+extra=()
+if [[ -n "${SC_EXTRA:-}" ]]; then IFS='+' read -r -a extra <<< "$SC_EXTRA"; fi
+
+cd "$SC_ROOT"
+set +e
+"$PY" scaling/measure.py \
+  --label "$SC_LABEL" \
+  --hii-dim "$SC_HII_DIM" \
+  --n-threads "$SC_N_THREADS" \
+  --template "$TEMPLATE" \
+  --seed "$SC_SEED" \
+  --phases "${SC_PHASES:-all}" \
+  --coeval-batch "${SC_COEVAL_BATCH:-0}" \
+  --results-root "$SC_RESULTS_ROOT" \
+  --sim-root "$SC_SIM_ROOT" \
+  --expect-version "$EXPECT" \
+  ${extra[@]+"${extra[@]}"}
+status=$?
+set -e
+
+# Keep PBS's own accounting (cgroup memory high-water mark, CPU time) next to
+# our measurement, for cross-checking.
+if [[ -n "${PBS_JOBID:-}" ]] && command -v qstat >/dev/null 2>&1; then
+  qstat -f "$PBS_JOBID" 2>/dev/null | grep -E "resources_used|Resource_List|exec_host|job_state" \
+    > "$CONFIG_DIR/pbs/${PBS_JOBID%%.*}.qstat" || true
+fi
+echo "=== $(date -u +%FT%TZ) measure.py exit status $status"
+exit "$status"
