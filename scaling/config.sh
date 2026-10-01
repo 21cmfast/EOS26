@@ -39,7 +39,7 @@ sc_template() {
 }
 # Regex the installed py21cmfast.__version__ must match (catches a wrong venv
 # before any compute is spent). A source build of 21cmFAST reports a
-# setuptools-scm version such as 4.3.dev279+gd45dc4020; if your v4.2 venv was
+# setuptools-scm version such as 4.3.dev287+g3f0289071; if your v4.2 venv was
 # built from a git checkout, adjust the v4.2 pattern accordingly.
 sc_expect_version() {
   case "$1" in

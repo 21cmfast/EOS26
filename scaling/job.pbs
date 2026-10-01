@@ -26,6 +26,12 @@ source "$SC_ROOT/scaling/_lib.sh"
 CONFIG_DIR=$(sc_config_dir "$SC_ROOT" "$SC_LABEL" "$SC_HII_DIM" "$SC_N_THREADS" "${SC_COEVAL_BATCH:-0}")
 mkdir -p "$CONFIG_DIR/pbs"
 
+# Live copy of everything this job prints. The PBS -o file only appears once
+# the job has ended (and not at all if PBS cannot deliver it), so this log is
+# the first place to look while a job runs or when it died early.
+JOBLOG="$CONFIG_DIR/pbs/job_${PBS_JOBID:-local}.log"
+exec > >(tee -a "$JOBLOG") 2>&1
+
 echo "=== $(date -u +%FT%TZ) job ${PBS_JOBID:-none} on $(hostname): ${SC_LABEL} HII_DIM=${SC_HII_DIM} N_THREADS=${SC_N_THREADS}"
 echo "    queue=${PBS_QUEUE:-?} ncpus=${PBS_NCPUS:-?} phases=${SC_PHASES:-all} coeval_batch=${SC_COEVAL_BATCH:-0} extra=${SC_EXTRA:-}"
 

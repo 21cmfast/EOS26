@@ -99,6 +99,15 @@ def summarize_label(label_dir: Path, quiet: bool) -> None:
                         "avg_cores": s.get("avg_cores"), "halo_catalog_bytes": s.get("halo_catalog_bytes"),
                         "includes_setup": s.get("includes_setup", False),
                     })
+        if not state:
+            # measure.py never started for this configuration (it writes
+            # state.json first thing): job still queued, or job.pbs failed early.
+            jobids = cdir / "pbs" / "jobids"
+            last = jobids.read_text().split("\n")[-2].split() if jobids.exists() and jobids.read_text().strip() else []
+            jid = last[1] if len(last) > 1 else None
+            logs = sorted((cdir / "pbs").glob("job_*.log")) + sorted((cdir / "pbs").glob("*.out"))
+            notes.append(f"not started: job {jid} queued or failed early -> qstat -xf {jid}"
+                         + (f"; see {logs[-1].relative_to(label_dir)}" if logs else "") if jid else "never submitted")
         if not quiet:
             top = max(peaks.values(), default=None)
             coeval = read_json(cdir / "phases" / "coeval.json") if "coeval" in peaks else None

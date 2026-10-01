@@ -18,7 +18,7 @@ Each configuration `(version, HII_DIM, N_THREADS)` runs the four phases in produ
 * The py21cmfast calls come from `run_scripts/sim_steps.py`, the same wrappers production uses. The per-step clean-up (`pf.purge()`, `coeval.prepare_for_next_snapshot(force=True)`, `gc.collect()`) and `gc.disable()` also match production.
 * **Peak memory** is the kernel's resident-set high-water mark (`VmHWM`). It is reset at every step boundary through `/proc/self/clear_refs`, so both the per-step and the whole-phase peaks are exact, with no sampling gaps. That covers Python, numpy and all of 21cmFAST's C/OpenMP allocations. A 1 s background sampler also writes an RSS time series (`rss/*.csv`) as a cross-check, and the larger of the two values is reported. Off Linux (e.g. macOS), only the sampler is available, and `peak_rss_method` says so.
 * **The coeval peak is the maximum over the entire evolution.** Memory grows as halos form. The per-redshift peaks are all stored, so you can see where the maximum occurs.
-* **Production-like batches** (`--coeval-batch N`, results in `…_CBNN/`). Production can't run the coeval phase at HII_DIM≈1500 in one job, so `run_N_coevals.py` runs it in batches: each batch is a fresh process that first re-establishes the whole history from the cache. That needs more memory. In a small v4.2 test (HII_DIM=40), the batched peak was 32% above the continuous one, and it grew with every re-established redshift. Both HII_DIM=1500 OOM kills happened in such resumed batches. The campaigns therefore measure a few batched configurations next to the continuous ones. **v4.3 caveat:** at `release-v4.3` d45dc402, resuming a coeval run whose RadiationFields are not cached (the production setting) crashes: `TypeError: radiation_fields should be of type RadiationFields, got NoneType`. So batched v4.3 configurations, and production v4.3 batch jobs, fail until 21cmFAST fixes this. Group D is disabled in `campaign_v4.3.sh` for that reason.
+* **Production-like batches** (`--coeval-batch N`, results in `…_CBNN/`). Production can't run the coeval phase at HII_DIM≈1500 in one job, so `run_N_coevals.py` runs it in batches: each batch is a fresh process that first re-establishes the whole history from the cache. That needs more memory. In a small v4.2 test (HII_DIM=40), the batched peak was 32% above the continuous one, and it grew with every re-established redshift. Both HII_DIM=1500 OOM kills happened in such resumed batches. The campaigns therefore measure a few batched configurations next to the continuous ones. **v4.3 caveat:** at `release-v4.3` 3f028907, resuming a coeval run in a new process segfaults in `setup_radiation_fields`, because the heating tables are never initialised (`bug_reports/2_v4.3_resume_segfault_heat_not_initialised.md`). The earlier `TypeError` (21cmFAST #791) is fixed. So batched v4.3 configurations, and production v4.3 batch jobs, fail until 21cmFAST fixes this, unless the v4.3 venv is built with `V43_PATCH=envs/patches/v4.3_setup_radiation_fields_heat.patch`. Group D is disabled in `campaign_v4.3.sh` for that reason.
 * **What PBS sees.** The sampler also records the job's memory *cgroup* (RSS + page cache), which is what PBS accounts and enforces (`cgroup` in the phase JSON, column `cgroup_bytes` in the RSS CSV). PBS's own `resources_used` is saved at the end of each job (`pbs/*.qstat`).
 * **No stale caches.** Before a phase is measured, its own products and all downstream products are deleted from the simulation cache. After the phase, every expected product must exist *and* have been written during that attempt, or the phase fails. So a measurement can never be a silent cache read.
 
@@ -101,6 +101,18 @@ python scaling/measure.py --label v4.3 --template scaling/templates/EOS26_v4.3.t
 
 (`HII_DIM` must be at least 34, because `BOX_LEN = 1.5 Mpc × HII_DIM` has to exceed `R_BUBBLE_MAX = 50 Mpc`.)
 
+## Where to look when a job ran (or didn't)
+
+The files appear in this order. Whatever is missing tells you where the job stopped:
+
+1. `pbs/jobids` is written by `launch.sh` at submission (time, job id, resources). If it's the only file, the job hasn't started yet or it died before `job.pbs` got going. Check with `qstat -xf <jobid>` (`job_state`, `Exit_status`, `comment`, `Output_Path`).
+2. `pbs/job_<jobid>.log` is written live by `job.pbs` from its first line on: modules, venv checks and all driver output. Use it to see why a job failed before measuring anything.
+3. `run.log` and `state.json` are created as soon as `measure.py` starts. `logs/<phase>.attemptN.log` is the live log of the phase that is running.
+4. `phases/<phase>.json` is written when a phase completes. `summary.json` is written after every run.
+5. `pbs/<submit-time>.out` (PBS's own stdout/stderr plus the resource-usage epilogue) and `pbs/<jobid>.qstat` are only written when the job has ended.
+
+`python3 scaling/summarize.py` lists configurations that never started, with the `qstat -xf` command to run for each.
+
 ## Results of one configuration
 
 `results/<version>/HII_DIM_0500_NT_16/`
@@ -116,7 +128,7 @@ python scaling/measure.py --label v4.3 --template scaling/templates/EOS26_v4.3.t
 | `state.json` | phase status/attempts plus an event history (which job did what, when) |
 | `config.json` | fingerprint (21cmFAST version and commit, template/inputs/`sim_steps.py` hashes, seed, …) and setup info |
 | `inputs_full.toml` | fully resolved input parameters of this configuration |
-| `pbs/` | PBS output of every submission, `jobids`, and PBS's own `resources_used` (`*.qstat`) |
+| `pbs/` | `jobids` (every submission), `job_<jobid>.log` (live job log), PBS output `<submit-time>.out`, PBS's own `resources_used` (`<jobid>.qstat`) |
 
 `summarize.py` also writes `results/<version>/summary_phases.csv` (one row per configuration and phase) and `summary_coeval_steps.csv` (peak RSS at every coeval redshift) for the scaling fits.
 

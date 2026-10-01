@@ -29,13 +29,14 @@ PAIRS_C=""
 #    redshifts that re-reads the history from the cache). Both HII_DIM=1500
 #    production OOM kills happened in such resumed batches, so check whether
 #    batching raises the coeval peak compared with A. Results: ..._CB08/
-#    DISABLED for v4.3: at release-v4.3 d45dc402, resuming a coeval run whose
-#    RadiationFields are not cached (production writes radiation_fields=False)
-#    crashes in the first re-established redshift:
-#      TypeError: radiation_fields should be of type RadiationFields, got NoneType
-#    (drivers/coeval.py: skip_radfields leaves radiation_fields=None, which
-#    compute_spin_temperature rejects). Production batch jobs (run_N_coevals.py)
-#    hit the same bug. Re-enable once 21cmFAST fixes it:
+#    DISABLED for v4.3: resuming a coeval run in a new process segfaults in
+#    setup_radiation_fields, because the heating tables are never initialised
+#    (still the case at release-v4.3 3f028907; see
+#    bug_reports/2_v4.3_resume_segfault_heat_not_initialised.md). Production
+#    batch jobs (run_N_coevals.py) hit the same bug. (The earlier TypeError,
+#    21cmFAST #791, is fixed at 3f028907.) Re-enable once 21cmFAST fixes it, or
+#    after building the v4.3 venv with
+#    V43_PATCH=envs/patches/v4.3_setup_radiation_fields_heat.patch:
 # PAIRS_D="200:16 300:16"
 PAIRS_D=""
 COEVAL_BATCH_D=8

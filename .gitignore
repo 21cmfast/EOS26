@@ -221,3 +221,5 @@ EOS2*_L2*0_HIIDIM200/
 EOS2*_test_HIIDIM200*/
 EOS2*cache/
 *.DS_Store
+Claude*
+bug_reports*
