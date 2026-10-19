@@ -14,6 +14,7 @@
 # Memory: one array at a time (the largest is a high-res IC field, ~360 GB at
 # HII_DIM=1500). Re-submitting is safe: files already converted are skipped.
 #
+# Normally submitted by pbs_scripts/submit_copy_and_migrate.sh, after the copy.
 #   qsub -v DRY_RUN=1 pbs_scripts/migrate_cache_job.sh   # report only
 #   qsub pbs_scripts/migrate_cache_job.sh
 
@@ -21,6 +22,16 @@ export PATH="$HOME/.local/bin:$PATH"
 set -euo pipefail
 ROOT="$(cd "$PBS_O_WORKDIR" && pwd)"
 cd "$ROOT"
+
+# Only migrate a complete copy (pbs_scripts/copy_cache_job.sh writes $DONE once
+# the copy from scratch is verified). SKIP_COPY_CHECK=1 for a cache made on gdata.
+DATA="${EOS26_DATA:-/g/data/qp00/$USER}"
+DONE="$DATA/EOS26_cache.copy_complete"
+if [[ -z "${SKIP_COPY_CHECK:-}" && ! -e "$DONE" ]]; then
+  echo "ERROR: $DONE not found: the copy of EOS26_cache to $DATA is not complete." >&2
+  echo "       Not migrating. Run more copy rounds (pbs_scripts/submit_copy_and_migrate.sh)." >&2
+  exit 1
+fi
 
 source "$ROOT/envs/use.sh" v4.3
 set -euo pipefail

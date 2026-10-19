@@ -23,6 +23,8 @@ The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the 
 21cmfast migrate /g/data/qp00/$USER/EOS26_cache --kind InitialConditions PerturbedField HaloCatalog
 ```
 
+On Gadi, `bash pbs_scripts/submit_copy_and_migrate.sh [--after <running copy job>]` does the whole move. It submits chained copy rounds on copyq (`pbs_scripts/copy_cache_job.sh`, under 10 h each, each continuing where the last stopped), then the migration on hugemem (`pbs_scripts/migrate_cache_job.sh`). The migration only runs once a copy round has verified the copy and written `/g/data/qp00/$USER/EOS26_cache.copy_complete`. Follow the copy with `tail -f /g/data/qp00/$USER/rsync_EOS26_cache.log`.
+
 This writes converted copies next to the originals, so it needs as much free space again as those boxes take. It holds one array at a time in memory; the largest is a high-resolution IC field, ~360 GB at HII_DIM=1500, so run it on hugemem. `run_N_coevals.py` stops if the ICs, PFs or halo catalogs for its inputs are missing, instead of computing them inside a coeval job.
 
 ### Comparison workflow
