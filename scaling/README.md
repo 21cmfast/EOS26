@@ -36,7 +36,8 @@ scaling/
   summarize.py                         status table + CSV summaries
   templates/EOS26_v4.3.toml            EOS26.toml with the one parameter v4.3 renamed
   results/v4.2/, results/v4.3/         one folder per configuration (below)
-  sims/                                simulation caches while a configuration runs (git-ignored)
+  sims/                                simulation caches while a configuration runs, when not on Gadi (git-ignored);
+                                       on Gadi they go to /g/data/qp00/$USER/EOS26_scaling_sims/ (SC_SIM_ROOT in config.sh)
 ```
 
 ## Running on Gadi
@@ -73,7 +74,7 @@ Resuming always restarts the **first unfinished phase from its beginning**. Comp
 
 ### Clean-up
 
-When all four phases of a configuration are complete, its simulation cache (`scaling/sims/<version>/HII_DIM_*_NT_*`) is deleted. Pass `--keep-sim` to keep it. An incomplete configuration always keeps its cache, because resuming needs it.
+When all four phases of a configuration are complete, its simulation cache (`<SC_SIM_ROOT>/<version>/HII_DIM_*_NT_*`; on Gadi `SC_SIM_ROOT` is `/g/data/qp00/$USER/EOS26_scaling_sims`) is deleted. Pass `--keep-sim` to keep it. An incomplete configuration always keeps its cache, because resuming needs it.
 
 ### Options
 
@@ -138,5 +139,5 @@ Only completed phases are ever reported. Partial attempts stay in their `attempt
 
 * `baseline_rss_bytes` (about 0.2 GB: Python, py21cmfast and tables) is included in `peak_rss_bytes`, which is the whole process's resident memory, i.e. what must fit on the node.
 * The first coeval step includes the generator's set-up (reading ICs, PFs and halo catalogs from the cache), and the first PF includes one-off table initialisation (`includes_setup` / step 0).
-* Disk: one configuration peaks at about 7 kB per HII cell (about 0.9 TB at HII_DIM=500). If the whole campaign runs at once, `launch.sh` estimates the total. Check `lquota`.
+* Disk: one configuration peaks at about 7 kB per HII cell (about 0.9 TB at HII_DIM=500). If the whole campaign runs at once, `launch.sh` estimates the total. The caches are on gdata (scratch is too small); check `lquota` (gdata row).
 * Only `config.sh` has site-specific settings (project, modules, venv paths, resource model).

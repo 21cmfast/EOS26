@@ -39,7 +39,10 @@ from py21cmfast.io.caching import RunCache
 
 # ── Reference simulation paths ────────────────────────────────────────────────
 
-TEST_CACHE_DIR = Path(__file__).resolve().parents[1] / "EOS26_test_HIIDIM200"
+# Same location as the --test reference written by the run scripts (on /g/data on Gadi).
+from settings import CACHE_TEST_REFERENCE  # noqa: E402
+
+TEST_CACHE_DIR = Path(CACHE_TEST_REFERENCE)
 
 # Each check reads a bounded number of 2-D slabs, never a full 3-D field.
 MAX_SLAB_SAMPLES = 16

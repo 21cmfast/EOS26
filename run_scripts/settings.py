@@ -3,20 +3,54 @@
 from __future__ import annotations
 import os
 import argparse
+import getpass
+import socket
+from pathlib import Path
 
 # ── template ───────────────────────────────────────────────────────────────
 
 TEMPLATE_NAME = "EOS26.toml"
 TEST_RANDOM_SEED = 42
 
+# ── data location ──────────────────────────────────────────────────────────
+
+# All simulation caches -- production and tests -- live below DATA_ROOT:
+#   * $EOS26_DATA, if set;
+#   * on Gadi: /g/data/qp00/$USER (scratch is too small for EOS26, and I/O on
+#     gdata was measured to be as fast). PBS jobs must request
+#     "-l storage=gdata/qp00" (the Gadi scripts in pbs_scripts/ and scaling/ do);
+#   * elsewhere: the repository root, as before.
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
+def _on_gadi() -> bool:
+    return "gadi" in socket.gethostname() or Path("/g/data").is_dir()
+
+
+def _data_root() -> Path:
+    if os.environ.get("EOS26_DATA"):
+        return Path(os.environ["EOS26_DATA"]).expanduser().resolve()
+    if _on_gadi():
+        root = Path("/g/data/qp00") / getpass.getuser()
+        if not root.is_dir():
+            raise RuntimeError(
+                f"{root} is not accessible. On Gadi the EOS26 caches live on /g/data: "
+                "request '#PBS -l storage=gdata/qp00' (or set EOS26_DATA)."
+            )
+        return root
+    return REPO_ROOT
+
+
+DATA_ROOT = _data_root()
+
 # ── cache directories ──────────────────────────────────────────────────────
 
 # Main EOS26 cache (used by production runs)
-CACHE_FULL = "EOS26_cache/"
+CACHE_FULL = f"{DATA_ROOT / 'EOS26_cache'}/"
 # Small reference simulation generated with --test and without --compare.
-CACHE_TEST_REFERENCE = "EOS26_test_HIIDIM200/"
+CACHE_TEST_REFERENCE = f"{DATA_ROOT / 'EOS26_test_HIIDIM200'}/"
 # Separate local candidate cache for --test --compare.
-CACHE_TEST_COMPARE = "EOS26_test_HIIDIM200_compare/"
+CACHE_TEST_COMPARE = f"{DATA_ROOT / 'EOS26_test_HIIDIM200_compare'}/"
 
 # ── simulation parameters ──────────────────────────────────────────────────
 

@@ -6,6 +6,14 @@ EOS26 is run phase by phase i.e. ICs first, then PFs, then PHFs, and finally coe
 ## How to run
 All scripts accept an optional `--test` flag to run a small test box (HII_DIM=200).
 
+### Where the data go
+All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIIDIM200_compare/`) and the scaling-test caches (`EOS26_scaling_sims/`) are written below one data root (`run_scripts/settings.py`, `scaling/config.sh`):
+- on Gadi: `/g/data/qp00/$USER`, because scratch is too small and I/O on gdata is as fast. Every PBS job must request `-l storage=gdata/qp00`.
+- elsewhere: the repository root.
+- `EOS26_DATA=/some/path` overrides both.
+
+Code, logs (`logs/`) and the scaling results (`scaling/results/`) stay in the repository.
+
 ### Comparison workflow
 
 - Generate the reference once with `--test` and no `--compare`. It is written to

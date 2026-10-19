@@ -16,7 +16,17 @@ SC_MODULES="intel-compiler/2021.8.0 gsl/2.7.1 fftw3/3.3.10"
 SC_RESULTS_ROOT="${SC_RESULTS_ROOT:-scaling/results}"
 # Simulation caches. MUST be persistent storage (not $PBS_JOBFS): resuming an
 # interrupted configuration re-uses the products of its completed phases.
-SC_SIM_ROOT="${SC_SIM_ROOT:-scaling/sims}"
+# Same rule as run_scripts/settings.py: $EOS26_DATA if set, /g/data/qp00/$USER
+# on Gadi (scratch is too small; gdata I/O is as fast), else inside the repo.
+if [[ -z "${SC_SIM_ROOT:-}" ]]; then
+  if [[ -n "${EOS26_DATA:-}" ]]; then
+    SC_SIM_ROOT="$EOS26_DATA/EOS26_scaling_sims"
+  elif [[ "$(hostname)" == *gadi* || -d /g/data ]]; then
+    SC_SIM_ROOT="/g/data/qp00/${USER:-$(id -un)}/EOS26_scaling_sims"
+  else
+    SC_SIM_ROOT="scaling/sims"
+  fi
+fi
 SC_SEED=42
 
 # --------------------------------------------------------- per 21cmFAST version
