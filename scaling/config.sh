@@ -29,7 +29,9 @@ sc_venv() {
     *) return 1 ;;
   esac
 }
-# Parameter template for each version (v4.3 needs one renamed parameter).
+# Parameter template for each version. 21cmFAST 4.3.0 also reads EOS26.toml (same
+# inputs, but a DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX); the v4.3 copy uses
+# the new name MIN_XE_FOR_NION_IN_TAUX.
 sc_template() {
   case "$1" in
     v4.2) echo "EOS26.toml" ;;
@@ -38,13 +40,16 @@ sc_template() {
   esac
 }
 # Regex the installed py21cmfast.__version__ must match (catches a wrong venv
-# before any compute is spent). A source build of 21cmFAST reports a
-# setuptools-scm version such as 4.3.dev287+g3f0289071; if your v4.2 venv was
-# built from a git checkout, adjust the v4.2 pattern accordingly.
+# before any compute is spent). If your v4.2 venv was built from a git checkout
+# (setuptools-scm version such as 4.2.1.dev84+g603e4efe), the v4.2 pattern still
+# matches. v4.3 must be a 4.3.x release (PyPI, see envs/create_venv_v4.3.sh):
+# pre-release builds of the release-v4.3 branch (4.3.devNNN) crash when a batched
+# (resumed) coeval run continues (#791, #794) or differ from the release (FFTW
+# threading #789, LW fix #799, FFTW clean-up, z > Z_HEAT_MAX changes).
 sc_expect_version() {
   case "$1" in
     v4.2) echo '^4\.2' ;;
-    v4.3) echo '^4\.3' ;;
+    v4.3) echo '^4\.3\.[0-9]+$' ;;
     *) return 1 ;;
   esac
 }

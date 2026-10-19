@@ -29,16 +29,9 @@ PAIRS_C=""
 #    redshifts that re-reads the history from the cache). Both HII_DIM=1500
 #    production OOM kills happened in such resumed batches, so check whether
 #    batching raises the coeval peak compared with A. Results: ..._CB08/
-#    DISABLED for v4.3: resuming a coeval run in a new process segfaults in
-#    setup_radiation_fields, because the heating tables are never initialised
-#    (still the case at release-v4.3 3f028907; see
-#    bug_reports/2_v4.3_resume_segfault_heat_not_initialised.md). Production
-#    batch jobs (run_N_coevals.py) hit the same bug. (The earlier TypeError,
-#    21cmFAST #791, is fixed at 3f028907.) Re-enable once 21cmFAST fixes it, or
-#    after building the v4.3 venv with
-#    V43_PATCH=envs/patches/v4.3_setup_radiation_fields_heat.patch:
-# PAIRS_D="200:16 300:16"
-PAIRS_D=""
+#    Needs 21cmFAST 4.3.0: resuming in a new process failed in pre-release
+#    builds (TypeError #791, fixed in #792; segfault #794, fixed in #800).
+PAIRS_D="200:16 300:16"
 COEVAL_BATCH_D=8
 
 bash "$HERE/launch.sh" --version v4.3 --dims "$DIMS_A" --threads "$THREADS_A" --pairs "$PAIRS_B $PAIRS_C" "$@"

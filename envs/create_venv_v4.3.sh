@@ -6,48 +6,55 @@
 #   bash envs/create_venv_v4.3.sh gadi    # on a Gadi login node, from /scratch/qp00/$USER/EOS26
 #
 # What it does (each step is echoed):
-#   1. check out 21cmFAST's release-v4.3 branch at a PINNED commit
-#      (v4.3 is not on PyPI; setuptools-scm reports it as 4.3.dev287+g3f0289071),
+#   1. pick the 21cmFAST release: by default the PINNED PyPI release below
+#      (21cmfast==4.3.0), always compiled here from its source distribution with
+#      the same compiler/libraries as the v4.2 venv (never a pre-built wheel),
 #   2. freeze the existing v4.2 venv's third-party packages into a constraints
 #      file, so v4.3 gets *identical* numpy/scipy/h5py/classy/hmf/... and the
 #      21cmFAST version is the only difference between the two environments,
-#   3. create the new venv with uv and build 21cmFAST v4.3 into it (non-editable,
-#      so later edits of the source tree cannot change the installed code),
-#   4. print the installed version and write a full freeze for provenance.
+#   3. create the new venv with uv and install 21cmFAST into it,
+#   4. check the installed version and write a full freeze for provenance.
 #
 # Switching between versions afterwards: see envs/use.sh
 #   source envs/use.sh v4.2   |   source envs/use.sh v4.3
 #
-# Re-running is safe: an existing venv is upgraded in place to the pinned commit
-# (21cmFAST is rebuilt, the other packages stay as they are); add --force to
-# delete and rebuild it from scratch.
+# Re-running is safe: an existing venv is upgraded in place to the pinned
+# release (21cmFAST is rebuilt, the other packages stay as they are); add
+# --force to delete and rebuild it from scratch.
 #
-# Optional overrides (environment variables), e.g. for a patched test build:
-#   V43_COMMIT commit to build (default: the pin below; "latest" = the current
-#              head of release-v4.3, recorded in the freeze file)
-#   V43_SRC    source checkout to build from        (default: 21cmFASTv4.3/)
-#   V43_REPO   where to clone it from if missing   (default: GitHub)
-#   V43_VENV   venv to create                       (default: .venv-v4.3 / EOS26-v4.3-intel)
-#   V43_PATCH  patch applied on top of the pinned commit (V43_SRC must then be a
-#              dedicated clone: it is reset to the commit before patching)
+# Optional overrides (environment variables):
+#   V43_VERSION  PyPI release to install (default: the pin below; "latest" = the
+#                newest 4.3.x patch release, recorded in the freeze file)
+#   V43_VENV     venv to create            (default: .venv-v4.3 / EOS26-v4.3-intel)
+# Source build instead of PyPI (e.g. to test an unreleased fix):
+#   V43_GIT_REF  tag, branch or commit of the 21cmFAST git repo to build
+#                (e.g. v4.3.0 or main); setting it switches to a source build
+#   V43_SRC      checkout to build from    (default: 21cmFASTv4.3/)
+#   V43_REPO     where to clone it from if missing (default: GitHub)
+#   V43_PATCH    patch applied on top of V43_GIT_REF (V43_SRC must then be a
+#                dedicated clone: it is reset before patching)
 
 set -euo pipefail
 
 TARGET=${1:-}
 FORCE=0; [[ "${2:-}" == "--force" ]] && FORCE=1
 
-# ---- pinned 21cmFAST v4.3 source -------------------------------------------------
+# ---- pinned 21cmFAST v4.3 release ----------------------------------------------
+# 21cmFAST 4.3.0 (PyPI, 2026-10-14; git tag v4.3.0 = ee535b94). Includes the
+# resume fixes #792 (#791) and #800 (#794), the shared astropy cosmology #798
+# (#796) and reading of v4.2 files/templates (#793).
+# Earlier pins were release-v4.3 branch commits: 7f0c8453 (2026-10-04),
+# 3f028907 (2026-10-01), d45dc402 (2026-09-30).
+V43_VERSION="${V43_VERSION:-4.3.0}"
+V43_GIT_REF="${V43_GIT_REF:-}"
 V43_REPO="${V43_REPO:-https://github.com/21cmfast/21cmFAST.git}"
-V43_BRANCH="release-v4.3"
-# release-v4.3 head on 2026-10-01 (merge of #792, which fixes the resume TypeError #791).
-# Previous pin: d45dc4020fa88795b068b584fe927b3d240f371d (2026-09-30).
-V43_COMMIT="${V43_COMMIT:-3f0289071a5e830260248e05e60e3353ad80c84d}"
 
 EOS26_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 V43_SRC="${V43_SRC:-$EOS26_ROOT/21cmFASTv4.3}"
 V43_PATCH="${V43_PATCH:-}"
 [[ -z "$V43_PATCH" || -f "$V43_PATCH" ]] || { echo "patch not found: $V43_PATCH" >&2; exit 1; }
 [[ -z "$V43_PATCH" ]] || V43_PATCH="$(cd "$(dirname "$V43_PATCH")" && pwd)/$(basename "$V43_PATCH")"
+[[ -z "$V43_PATCH" || -n "$V43_GIT_REF" ]] || { echo "V43_PATCH needs a source build: set V43_GIT_REF (e.g. v4.3.0)" >&2; exit 1; }
 
 case "$TARGET" in
   mac)
@@ -111,33 +118,34 @@ if so:
 PY
 echo "   building v4.3 with CC=${CC:-<default>}"
 
-echo "== 1. 21cmFAST source at $V43_COMMIT"
-if [[ ! -d "$V43_SRC/.git" ]]; then
-  run git clone --branch "$V43_BRANCH" "$V43_REPO" "$V43_SRC"
-fi
-if [[ -n "$V43_PATCH" ]]; then
-  # Dedicated clone for a patched build: always start from the pinned commit.
-  run git -C "$V43_SRC" reset --quiet --hard
-elif [[ -n "$(git -C "$V43_SRC" status --porcelain --untracked-files=no)" ]]; then
-  echo "ERROR: $V43_SRC has local modifications; commit/stash them first" >&2; exit 1
-fi
-run git -C "$V43_SRC" fetch --quiet origin "$V43_BRANCH" || echo "   (fetch failed; using local clone)"
-if [[ "$V43_COMMIT" == latest ]]; then
-  V43_COMMIT=$(git -C "$V43_SRC" rev-parse "origin/$V43_BRANCH")
-  echo "   latest $V43_BRANCH = $V43_COMMIT"
-fi
-has_commit() { git -C "$V43_SRC" cat-file -e "${V43_COMMIT}^{commit}" 2>/dev/null; }
-if ! has_commit; then
-  # A clone of a local clone (V43_REPO=<path>) only sees that clone's own
-  # branches: also try its remote-tracking branch, then GitHub itself.
-  git -C "$V43_SRC" fetch --quiet origin "refs/remotes/origin/$V43_BRANCH" 2>/dev/null || true
-  has_commit || run git -C "$V43_SRC" fetch --quiet https://github.com/21cmfast/21cmFAST.git "$V43_BRANCH" || true
-fi
-run git -C "$V43_SRC" checkout --quiet --detach "$V43_COMMIT"
-git -C "$V43_SRC" log -1 --format='   %H %cd %s' --date=short
-if [[ -n "$V43_PATCH" ]]; then
-  run git -C "$V43_SRC" apply "$V43_PATCH"
-  echo "   patched with $(basename "$V43_PATCH") (reported version gets a .dYYYYMMDD 'dirty' suffix)"
+if [[ -z "$V43_GIT_REF" ]]; then
+  # PyPI release, built from its sdist (--no-binary): same compiler as v4.2.
+  if [[ "$V43_VERSION" == latest ]]; then V43_REQ="21cmfast>=4.3,<4.4"; else V43_REQ="21cmfast==$V43_VERSION"; fi
+  echo "== 1. 21cmFAST from PyPI: $V43_REQ (compiled from the source distribution)"
+  V43_INSTALL=("$V43_REQ" --no-binary 21cmfast)
+else
+  echo "== 1. 21cmFAST source build at $V43_GIT_REF"
+  if [[ ! -d "$V43_SRC/.git" ]]; then
+    run git clone "$V43_REPO" "$V43_SRC"
+  fi
+  if [[ -n "$V43_PATCH" ]]; then
+    # Dedicated clone for a patched build: always start from a clean tree.
+    run git -C "$V43_SRC" reset --quiet --hard
+  elif [[ -n "$(git -C "$V43_SRC" status --porcelain --untracked-files=no)" ]]; then
+    echo "ERROR: $V43_SRC has local modifications; commit/stash them first" >&2; exit 1
+  fi
+  run git -C "$V43_SRC" fetch --quiet --tags origin || echo "   (fetch failed; using local clone)"
+  # A branch name means its current state on the remote.
+  if git -C "$V43_SRC" rev-parse -q --verify "refs/remotes/origin/$V43_GIT_REF" >/dev/null; then
+    V43_GIT_REF="origin/$V43_GIT_REF"
+  fi
+  run git -C "$V43_SRC" checkout --quiet --detach "$V43_GIT_REF"
+  git -C "$V43_SRC" log -1 --format='   %H %cd %s' --date=short
+  if [[ -n "$V43_PATCH" ]]; then
+    run git -C "$V43_SRC" apply "$V43_PATCH"
+    echo "   patched with $(basename "$V43_PATCH") (reported version gets a .dYYYYMMDD 'dirty' suffix)"
+  fi
+  V43_INSTALL=("$V43_SRC")
 fi
 
 echo "== 2. constraints = third-party packages of the v4.2 venv"
@@ -154,14 +162,19 @@ fi
 BASE_PY=$("$V42_VENV/bin/python" -c 'import sys; print(sys._base_executable)')
 echo "   base interpreter: $BASE_PY ($("$BASE_PY" -V 2>&1))"
 [[ -d "$V43_VENV" ]] || run uv venv "$V43_VENV" --python "$BASE_PY" --prompt "EOS26-v4.3"
-# --refresh/--reinstall: never reuse a wheel uv cached from another checkout.
+# --refresh/--reinstall: never reuse a 21cmFAST wheel uv built earlier (possibly
+# with another compiler or from another checkout).
 # shellcheck disable=SC2086  # EXTRA_PKGS is a word list
 run uv pip install --python "$V43_VENV/bin/python" \
   --refresh-package 21cmfast --reinstall-package 21cmfast \
-  -c "$CONSTRAINTS" "$V43_SRC" $EXTRA_PKGS
+  -c "$CONSTRAINTS" "${V43_INSTALL[@]}" $EXTRA_PKGS
 
 echo "== 4. check"
-"$V43_VENV/bin/python" -W ignore -c "import py21cmfast as p; print('   py21cmfast', p.__version__, p.__file__)"
+INSTALLED=$("$V43_VENV/bin/python" -W ignore -c "import py21cmfast as p; print(p.__version__)" | tail -n 1)
+"$V43_VENV/bin/python" -W ignore -c "import py21cmfast as p; print('   py21cmfast', p.__version__, p.__file__)" | tail -n 1
+if [[ -z "$V43_GIT_REF" && "$V43_VERSION" != latest && "$INSTALLED" != "$V43_VERSION" ]]; then
+  echo "ERROR: installed py21cmfast $INSTALLED, expected $V43_VERSION" >&2; exit 1
+fi
 FREEZE="$EOS26_ROOT/envs/freeze-$(basename "$V43_VENV" | sed 's/^\.//')-${TARGET}-${HOST_TAG}.txt"
 uv pip freeze --python "$V43_VENV/bin/python" > "$FREEZE"
 echo "   full freeze -> $FREEZE"
