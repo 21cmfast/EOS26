@@ -29,6 +29,27 @@ cache = p21c.OutputCache(cache_dir)
 
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
                                             **_input_overrides)
+
+# ICs, PFs and halo catalogs come from the ICs / PFs / PHFs jobs and must never be
+# computed inside a coeval job (generate_coeval would silently do so). If any is
+# missing for these inputs, stop. Usually the cache was written by another
+# 21cmFAST version (cache hashes change between versions; convert it with
+# `21cmfast migrate`), or the cache location is wrong.
+from pathlib import Path
+from py21cmfast.io.caching import RunCache
+
+_rc = RunCache.from_inputs(inputs, cache=cache)
+_upstream = [Path(_rc.InitialConditions), *(Path(f) for f in _rc.PerturbedField.values())]
+if inputs.matter_options.has_discrete_halos:
+    _upstream += [Path(f) for f in _rc.HaloCatalog.values()]
+_missing = [f for f in _upstream if not f.exists()]
+if _missing:
+    logger.error(f"{len(_missing)} of {len(_upstream)} upstream files missing in {cache_dir}, e.g. {_missing[0]}")
+    raise SystemExit(
+        f"py21cmfast {p21c.__version__}: {len(_missing)} of {len(_upstream)} ICs/PF/halo-catalog files are "
+        f"missing in {cache_dir} for these inputs (first: {_missing[0]}). Run the ICs/PFs/PHFs jobs first, "
+        "or migrate a cache written by an older 21cmFAST version with `21cmfast migrate`."
+    )
 # Scope the "already done" lookup to the current inputs' cache hash (matter_cosmo/
 # seed/zgrid/astro_flag). An unscoped glob would silently pick up coevals from a
 # stale/mismatched cache (e.g. built with different simulation options), making us

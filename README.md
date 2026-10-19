@@ -14,6 +14,17 @@ All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIID
 
 Code, logs (`logs/`) and the scaling results (`scaling/results/`) stay in the repository.
 
+### 21cmFAST version
+The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.0 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. The scaling jobs use the same venvs (`scaling/config.sh`).
+
+21cmFAST 4.3 cannot *find* boxes in a cache written by 4.2, because the cache hashes changed. Its ICs, PFs and halo catalogs can be converted, and are then the same as what 4.3.0 computes (ICs and PFs bit-identical, halo masses to ~1e-5). Coevals depend on physics that changed in 4.3, so they have to be recomputed:
+
+```bash
+21cmfast migrate /g/data/qp00/$USER/EOS26_cache --kind InitialConditions PerturbedField HaloCatalog
+```
+
+This writes converted copies next to the originals, so it needs as much free space again as those boxes take. It holds one array at a time in memory; the largest is a high-resolution IC field, ~360 GB at HII_DIM=1500, so run it on hugemem. `run_N_coevals.py` stops if the ICs, PFs or halo catalogs for its inputs are missing, instead of computing them inside a coeval job.
+
 ### Comparison workflow
 
 - Generate the reference once with `--test` and no `--compare`. It is written to

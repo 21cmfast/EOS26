@@ -95,6 +95,12 @@ SC_WALLTIME_BATCH_FACTOR=3   # for --coeval-batch configurations
 # configuration whose unfinished phase has been attempted SC_MAX_ATTEMPTS times
 # is not resubmitted until you look at it (then use launch.sh --retry).
 SC_MAX_ATTEMPTS=3
+# launch.sh --follow: queue of the small follow-up job, and the longest chain.
+SC_FOLLOW_QUEUE="normal"
+SC_FOLLOW_MAX_ROUNDS=6
 # Disk used by one configuration at its peak (IC + 92 PF + halos + 92 coevals),
-# ~7.2 kB per HII cell in v4.2 (HII_DIM=300: ~190 GiB). Only for a warning.
-SC_DISK_BYTES_PER_CELL=7200
+# per HII cell: ~2.1 kB upstream + ~60 B per coeval (README storage table at
+# HII_DIM=500: ICs 58 GB, PFs 92 x 2 GB, PHFs 25 GB, 7.5 GB per coeval; a v4.2
+# HII_DIM=500 cache with 11 coevals measured ~330 GB) -> ~0.96 TB at 500.
+# v4.3 writes the same boxes. Used for the launch.sh disk estimate only.
+SC_DISK_BYTES_PER_CELL=7700

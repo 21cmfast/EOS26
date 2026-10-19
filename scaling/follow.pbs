@@ -1,0 +1,11 @@
+#!/bin/bash
+# Follow-up job submitted by `launch.sh --follow`. PBS starts it when all jobs of
+# the previous submission have ended (afterany); it re-runs that launch command,
+# which resumes / retries whatever is not complete and chains the next follow-up.
+# Do not qsub this by hand.
+set -euo pipefail
+: "${SC_ROOT:?}" "${SC_FOLLOW_CMD:?}"
+cd "$SC_ROOT"
+echo "=== $(date -u +%FT%TZ) follow-up job ${PBS_JOBID:-none} on $(hostname): $(cat "$SC_FOLLOW_CMD")"
+bash "$SC_FOLLOW_CMD"
+echo "=== $(date -u +%FT%TZ) follow-up done"

@@ -31,12 +31,20 @@
 #                       SC_MAX_ATTEMPTS times (see config.sh)
 #   --dry-run           print the qsub commands, submit nothing
 #   --no-preflight      skip the login-node check of venv/template
+#   --follow            also submit a small follow-up job that starts when all jobs
+#                       submitted now have ended (PBS afterany) and re-runs this
+#                       same command: it resumes / retries what did not complete
+#                       (with +50% memory or walltime after a kill) and chains the
+#                       next follow-up, until nothing is left to submit, every
+#                       retry is used up, or SC_FOLLOW_MAX_ROUNDS is reached.
+#                       --restart and --retry are not passed on to follow-ups.
 #   -h | --help
 
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$HERE/.." && pwd)"
+ORIG_ARGS=("$@")
 # shellcheck source=config.sh
 source "$HERE/config.sh"
 # shellcheck source=_lib.sh
@@ -46,7 +54,7 @@ usage() { sed -n '2,/^$/p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'; exit "${1
 die() { echo "ERROR: $*" >&2; exit 1; }
 
 VERSION="" DIMS="" THREADS="" PAIRS="" PHASES="all" CBATCH=0
-KEEP_SIM=0 RESTART=0 DRY=0 PREFLIGHT=1 RETRY=0
+KEEP_SIM=0 RESTART=0 DRY=0 PREFLIGHT=1 RETRY=0 FOLLOW=0 FOLLOW_ROUND=0
 MEM_OVERRIDE="" WALL_OVERRIDE="" QUEUE_OVERRIDE=""
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -64,6 +72,8 @@ while [[ $# -gt 0 ]]; do
     --dry-run) DRY=1; shift ;;
     --retry) RETRY=1; shift ;;
     --no-preflight) PREFLIGHT=0; shift ;;
+    --follow) FOLLOW=1; shift ;;
+    --follow-round) FOLLOW_ROUND=$2; shift 2 ;;   # internal (set by follow-up jobs)
     -h|--help) usage 0 ;;
     *) die "unknown option '$1' (see --help)" ;;
   esac
@@ -126,6 +136,7 @@ EXTRA_PBS=$(IFS=+; echo "${EXTRA[*]:-}")
 
 printf '\n%-23s %-9s %-8s %-9s %-10s %s\n' "config" "queue" "mem" "walltime" "disk~" "action"
 n_sub=0 n_skip=0 disk_total=0
+SUBMITTED=()
 for c in "${CONFIGS[@]}"; do
   dim=${c%%:*} nt=${c#*:}
   cdir=$(sc_config_dir "$ROOT" "$VERSION" "$dim" "$nt" "$CBATCH")
@@ -185,6 +196,7 @@ for c in "${CONFIGS[@]}"; do
   else
     mkdir -p "$cdir/pbs"
     jid=$("${cmd[@]}")
+    SUBMITTED+=("$jid")
     echo "$(date -u +%FT%TZ) $jid queue=$queue ncpus=$nt mem=${mem}GB walltime=$wall phases=$PHASES extra=${EXTRA_PBS:-none}" >> "$cdir/pbs/jobids"
     printf '%-23s %-9s %-8s %-9s %-10s %s\n' "$name" "$queue" "${mem}GB" "$wall" "${disk}GB" "submitted $jid$note"
   fi
@@ -193,4 +205,37 @@ done
 
 echo
 echo "$VERSION: $n_sub to run, $n_skip skipped. Peak disk if all run at once: ~${disk_total} GB under $SIMS_ABS (check with lquota)."
+
+# ---- follow-up job (--follow) -------------------------------------------------
+if (( FOLLOW && ! DRY )); then
+  if (( ${#SUBMITTED[@]} == 0 )); then
+    echo "follow-up: nothing was submitted, so no follow-up job (chain ends here)."
+  elif (( FOLLOW_ROUND >= SC_FOLLOW_MAX_ROUNDS )); then
+    echo "follow-up: round $FOLLOW_ROUND reached SC_FOLLOW_MAX_ROUNDS=$SC_FOLLOW_MAX_ROUNDS; not chaining another one."
+  else
+    # Same command again, without --restart/--retry/--follow-round.
+    next=()
+    skip_next=0
+    for a in "${ORIG_ARGS[@]}"; do
+      if (( skip_next )); then skip_next=0; continue; fi
+      case "$a" in
+        --restart|--retry) ;;
+        --follow-round) skip_next=1 ;;
+        *) next+=("$a") ;;
+      esac
+    done
+    fdir="$RESULTS_ABS/$VERSION/follow"
+    mkdir -p "$fdir"
+    stamp=$(date +%Y%m%dT%H%M%S)
+    fcmd="$fdir/$stamp.round$((FOLLOW_ROUND + 1)).sh"
+    printf '%q ' bash "$HERE/launch.sh" "${next[@]}" --follow-round "$((FOLLOW_ROUND + 1))" > "$fcmd"
+    echo >> "$fcmd"
+    deps=$(IFS=:; echo "${SUBMITTED[*]}")
+    fjid=$(qsub -N "${VERSION//[^A-Za-z0-9]/}follow" -P "$SC_PROJECT" -q "$SC_FOLLOW_QUEUE" \
+             -l "ncpus=1,mem=4GB,walltime=00:30:00,storage=$SC_STORAGE,wd" \
+             -W "depend=afterany:$deps" -j oe -o "$fdir/$stamp.round$((FOLLOW_ROUND + 1)).out" \
+             -v "SC_ROOT=$ROOT,SC_FOLLOW_CMD=$fcmd" "$HERE/follow.pbs")
+    echo "follow-up: job $fjid (round $((FOLLOW_ROUND + 1))) starts after the ${#SUBMITTED[@]} job(s) above end; it runs $fcmd"
+  fi
+fi
 echo "Progress: python3 scaling/summarize.py --label $VERSION"

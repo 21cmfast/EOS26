@@ -52,10 +52,10 @@ bash scaling/launch.sh --version v4.2 --pairs 64:4
 bash scaling/launch.sh --version v4.3 --pairs 64:4
 python3 scaling/summarize.py
 
-# 2. campaigns
-bash scaling/campaign_v4.2.sh --dry-run          # see queue/mem/walltime per job
-bash scaling/campaign_v4.2.sh
-bash scaling/campaign_v4.3.sh
+# 2. campaigns (--follow: resume/retry automatically, see below)
+bash scaling/campaign_v4.3.sh --dry-run          # see queue/mem/walltime/disk per job
+bash scaling/campaign_v4.3.sh --follow
+bash scaling/campaign_v4.2.sh --follow           # optional: the v4.2 comparison
 
 # 3. progress, any time
 python3 scaling/summarize.py --label v4.2
@@ -67,6 +67,8 @@ python3 scaling/summarize.py --label v4.2
 * After a walltime kill, it asks for 50% more walltime (at most 48 h).
 * Requests never shrink below the previous submission's.
 * A configuration whose unfinished phase has already been attempted 3 times is left alone until you look at it and pass `--retry`.
+
+**`--follow` does the re-running for you.** Each `launch.sh --follow` also submits a small follow-up job (`normal`, 1 CPU, 30 min) that PBS starts when all jobs it just submitted have ended (`-W depend=afterany:…`). The follow-up re-runs the same command, so whatever did not complete is resumed or retried by the rules above, and it chains the next follow-up. The chain ends when nothing is left to submit, when every retry is used up, or after `SC_FOLLOW_MAX_ROUNDS` (6) rounds. `--restart` and `--retry` are not passed on to follow-ups. Their commands and logs are in `results/<version>/follow/`. The follow-up job calls `qsub` itself; if that is not allowed on a compute node, its log says so, and you re-run the campaign script by hand.
 
 ### Resuming
 
@@ -91,6 +93,7 @@ When all four phases of a configuration are complete, its simulation cache (`<SC
 | `--mem GB`, `--walltime H:M:S`, `--queue Q` | override the resource model in `config.sh` |
 | `--retry` | resubmit configurations that already failed `SC_MAX_ATTEMPTS` (3) times |
 | `--dry-run` | print the `qsub` commands only |
+| `--follow` | after this submission, resume/retry automatically with chained follow-up jobs (see above) |
 
 `measure.py` also takes `--redo-from PHASE`, which re-measures one phase and everything downstream. It can be run without PBS, e.g. on a laptop:
 

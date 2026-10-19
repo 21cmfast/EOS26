@@ -18,13 +18,11 @@ cd "$ROOT"
 pwd
 
 #ROOT="/scratch/qp00/$USER/EOS26"
-source /scratch/qp00/db9528/venvs/EOS26-intel/bin/activate
+# 21cmFAST environment: venv + modules (envs/use.sh; venv paths in scaling/config.sh).
+# Default v4.3; submit with  qsub -v EOS26_VERSION=v4.2 ...  to use the old one.
+EOS26_VERSION="${EOS26_VERSION:-v4.3}"
+source "$ROOT/envs/use.sh" "$EOS26_VERSION"
 set -euo pipefail
-
-module purge
-module load intel-compiler/2021.8.0
-module load gsl/2.7.1
-module load fftw3/3.3.10
 
 module list
 
