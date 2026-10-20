@@ -1,0 +1,1 @@
+bash /scratch/qp00/db9528/EOS26/scaling/launch.sh --version v4.3 --dims 100\ 200\ 300\ 400\ 500 --threads 16\ 48 --pairs \ 200:1\ 200:2\ 200:4\ 200:8\ 200:16\ 200:24\ 200:32\ 200:48\ 400:8\ 400:16\ 400:24\ 400:32\ 400:48\  --follow --follow-round 1 

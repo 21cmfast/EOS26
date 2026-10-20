@@ -1,0 +1,136 @@
+{
+  "complete": false,
+  "history": [
+    {
+      "event": "run_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "keep_sim": false,
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phases": "all",
+      "utc": "2026-10-19T07:00:17+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phase": "ics",
+      "utc": "2026-10-19T07:00:21+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 6445801472,
+      "phase": "ics",
+      "utc": "2026-10-19T07:01:29+00:00",
+      "wall_s": 68.24702453613281
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phase": "pf",
+      "utc": "2026-10-19T07:01:29+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 1545551872,
+      "phase": "pf",
+      "utc": "2026-10-19T07:04:29+00:00",
+      "wall_s": 180.17481923103333
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phase": "phf",
+      "utc": "2026-10-19T07:04:29+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 3467333632,
+      "phase": "phf",
+      "utc": "2026-10-19T07:06:13+00:00",
+      "wall_s": 104.0161645412445
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phase": "coeval",
+      "utc": "2026-10-19T07:06:13+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_interrupted",
+      "exit_code": -15,
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "phase": "coeval",
+      "utc": "2026-10-19T07:10:49+00:00"
+    }
+  ],
+  "phases": {
+    "coeval": {
+      "attempts": 1,
+      "error": "interrupted by signal (worker exit -15)",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "started_utc": "2026-10-19T07:06:13+00:00",
+      "status": "interrupted"
+    },
+    "ics": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 10.581416926110201,
+      "finished_utc": "2026-10-19T07:01:29+00:00",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 6445801472,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-19T07:00:21+00:00",
+      "status": "complete",
+      "wall_s": 65.80894034169614
+    },
+    "pf": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 13.20682873041937,
+      "finished_utc": "2026-10-19T07:04:29+00:00",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 1545551872,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-19T07:01:29+00:00",
+      "status": "complete",
+      "wall_s": 176.93152251280844
+    },
+    "phf": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 9.790468432708558,
+      "finished_utc": "2026-10-19T07:06:13+00:00",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586191.gadi-pbs",
+      "peak_rss_bytes": 3467333632,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-19T07:04:29+00:00",
+      "status": "complete",
+      "wall_s": 99.46966588590294
+    }
+  },
+  "schema": 1,
+  "sim_deleted": false,
+  "updated_utc": "2026-10-19T07:10:49+00:00"
+}

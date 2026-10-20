@@ -1,0 +1,6 @@
+2026-10-19 18:00:18 [driver] INFO ---- start: 2026-10-19T07:00:18+00:00  label=v4.3 HII_DIM=300 N_THREADS=16 phases=all host=gadi-cpu-clx-0972.gadi.nci.org.au pbs_jobid=181586192.gadi-pbs
+2026-10-19 18:00:21 [driver] INFO py21cmfast 4.3.0 | /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=450 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-19 18:00:21 [driver] INFO === phase ics (attempt 1) ===
+2026-10-19 18:03:10 [driver] INFO phase ics complete: peak RSS 19.73 GiB, wall 2.8m, 12.98 cores
+2026-10-19 18:03:10 [driver] INFO === phase pf (attempt 1) ===
+2026-10-19 18:10:49 [driver] ERROR received signal 15; stopping the running phase (it will be resumed from its start)

@@ -1,0 +1,5 @@
+# 2026-10-19T07:02:04+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0100_NT_48 --phase phf --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0100_NT_48/phases/phf.attempt1.json --batch-index -1
+2026-10-19 18:02:04 scaling.worker INFO worker start: phase=phf attempt=1 pid=1621738 host=gadi-cpu-clx-0437.gadi.nci.org.au
+2026-10-19 18:02:06 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 170.06 MiB
+2026-10-19 18:02:52 scaling.worker INFO step 0   evolve_halos           wall=46.0s    cores=26.99 peak=697.12 MiB after=313.46 MiB
+2026-10-19 18:02:52 scaling.worker INFO phase phf done: wall=46.0s cores=26.98 PEAK RSS=697.12 MiB (vmhwm_reset) products=92/92 fresh

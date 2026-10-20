@@ -1,0 +1,82 @@
+{
+  "complete": false,
+  "history": [
+    {
+      "event": "run_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "keep_sim": false,
+      "pbs_jobid": "181586192.gadi-pbs",
+      "phases": "all",
+      "utc": "2026-10-19T07:00:18+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "phase": "ics",
+      "utc": "2026-10-19T07:00:21+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "peak_rss_bytes": 21180432384,
+      "phase": "ics",
+      "utc": "2026-10-19T07:03:10+00:00",
+      "wall_s": 169.22512555122375
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "phase": "pf",
+      "utc": "2026-10-19T07:03:10+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_interrupted",
+      "exit_code": -15,
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "phase": "pf",
+      "utc": "2026-10-19T07:10:49+00:00"
+    }
+  ],
+  "phases": {
+    "coeval": {
+      "attempts": 0,
+      "status": "pending"
+    },
+    "ics": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 12.981188663864145,
+      "finished_utc": "2026-10-19T07:03:10+00:00",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "peak_rss_bytes": 21180432384,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-19T07:00:21+00:00",
+      "status": "complete",
+      "wall_s": 166.69894451182336
+    },
+    "pf": {
+      "attempts": 1,
+      "error": "interrupted by signal (worker exit -15)",
+      "host": "gadi-cpu-clx-0972.gadi.nci.org.au",
+      "pbs_jobid": "181586192.gadi-pbs",
+      "started_utc": "2026-10-19T07:03:10+00:00",
+      "status": "interrupted"
+    },
+    "phf": {
+      "attempts": 0,
+      "status": "pending"
+    }
+  },
+  "schema": 1,
+  "sim_deleted": false,
+  "updated_utc": "2026-10-19T07:10:49+00:00"
+}

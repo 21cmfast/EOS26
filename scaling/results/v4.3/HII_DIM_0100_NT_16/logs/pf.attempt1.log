@@ -1,0 +1,96 @@
+# 2026-10-19T07:01:07+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0100_NT_16 --phase pf --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0100_NT_16/phases/pf.attempt1.json --batch-index -1
+2026-10-19 18:01:07 scaling.worker INFO worker start: phase=pf attempt=1 pid=97307 host=gadi-cpu-clx-1010.gadi.nci.org.au
+2026-10-19 18:01:10 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 169.09 MiB
+2026-10-19 18:01:39 scaling.worker INFO step 0   perturbed_field        z=35.372 wall=28.8s    cores= 4.50 peak=369.99 MiB after=347.16 MiB
+2026-10-19 18:01:39 scaling.worker INFO step 1   perturbed_field        z=34.659 wall=0.7s     cores= 8.93 peak=377.16 MiB after=346.85 MiB
+2026-10-19 18:01:40 scaling.worker INFO step 2   perturbed_field        z=33.960 wall=0.6s     cores=11.23 peak=376.98 MiB after=346.43 MiB
+2026-10-19 18:01:41 scaling.worker INFO step 3   perturbed_field        z=33.274 wall=0.7s     cores=10.76 peak=376.45 MiB after=346.11 MiB
+2026-10-19 18:01:41 scaling.worker INFO step 4   perturbed_field        z=32.602 wall=0.3s     cores=15.66 peak=376.75 MiB after=346.30 MiB
+2026-10-19 18:01:41 scaling.worker INFO step 5   perturbed_field        z=31.943 wall=0.3s     cores=15.86 peak=376.18 MiB after=345.73 MiB
+2026-10-19 18:01:42 scaling.worker INFO step 6   perturbed_field        z=31.297 wall=0.4s     cores=14.51 peak=376.88 MiB after=346.91 MiB
+2026-10-19 18:01:42 scaling.worker INFO step 7   perturbed_field        z=30.664 wall=0.5s     cores=14.12 peak=376.32 MiB after=345.89 MiB
+2026-10-19 18:01:43 scaling.worker INFO step 8   perturbed_field        z=30.043 wall=0.6s     cores=12.49 peak=377.32 MiB after=346.87 MiB
+2026-10-19 18:01:43 scaling.worker INFO step 9   perturbed_field        z=29.434 wall=0.5s     cores=12.98 peak=377.26 MiB after=346.81 MiB
+2026-10-19 18:01:44 scaling.worker INFO step 10  perturbed_field        z=28.838 wall=0.6s     cores=12.56 peak=376.42 MiB after=345.97 MiB
+2026-10-19 18:01:44 scaling.worker INFO step 11  perturbed_field        z=28.253 wall=0.5s     cores=11.83 peak=376.93 MiB after=346.50 MiB
+2026-10-19 18:01:45 scaling.worker INFO step 12  perturbed_field        z=27.679 wall=0.5s     cores=11.48 peak=376.49 MiB after=346.10 MiB
+2026-10-19 18:01:46 scaling.worker INFO step 13  perturbed_field        z=27.117 wall=0.6s     cores=10.69 peak=376.75 MiB after=346.27 MiB
+2026-10-19 18:01:46 scaling.worker INFO step 14  perturbed_field        z=26.565 wall=0.6s     cores=10.70 peak=376.64 MiB after=346.09 MiB
+2026-10-19 18:01:47 scaling.worker INFO step 15  perturbed_field        z=26.025 wall=0.7s     cores=10.09 peak=376.63 MiB after=346.55 MiB
+2026-10-19 18:01:47 scaling.worker INFO step 16  perturbed_field        z=25.495 wall=0.5s     cores=10.92 peak=376.29 MiB after=345.84 MiB
+2026-10-19 18:01:48 scaling.worker INFO step 17  perturbed_field        z=24.976 wall=0.5s     cores=10.93 peak=376.75 MiB after=346.25 MiB
+2026-10-19 18:01:49 scaling.worker INFO step 18  perturbed_field        z=24.466 wall=0.7s     cores= 9.87 peak=377.38 MiB after=346.89 MiB
+2026-10-19 18:01:49 scaling.worker INFO step 19  perturbed_field        z=23.967 wall=0.6s     cores=10.13 peak=377.03 MiB after=346.52 MiB
+2026-10-19 18:01:50 scaling.worker INFO step 20  perturbed_field        z=23.477 wall=0.6s     cores=10.02 peak=376.65 MiB after=346.13 MiB
+2026-10-19 18:01:51 scaling.worker INFO step 21  perturbed_field        z=22.997 wall=0.6s     cores=10.09 peak=377.02 MiB after=346.51 MiB
+2026-10-19 18:01:51 scaling.worker INFO step 22  perturbed_field        z=22.527 wall=0.6s     cores= 9.98 peak=377.16 MiB after=346.64 MiB
+2026-10-19 18:01:52 scaling.worker INFO step 23  perturbed_field        z=22.066 wall=0.6s     cores=10.11 peak=376.52 MiB after=345.99 MiB
+2026-10-19 18:01:52 scaling.worker INFO step 24  perturbed_field        z=21.613 wall=0.7s     cores=10.08 peak=377.15 MiB after=346.63 MiB
+2026-10-19 18:01:53 scaling.worker INFO step 25  perturbed_field        z=21.170 wall=0.6s     cores=10.09 peak=377.02 MiB after=346.49 MiB
+2026-10-19 18:01:54 scaling.worker INFO step 26  perturbed_field        z=20.735 wall=0.7s     cores= 9.81 peak=376.88 MiB after=346.35 MiB
+2026-10-19 18:01:54 scaling.worker INFO step 27  perturbed_field        z=20.309 wall=0.5s     cores=11.37 peak=377.00 MiB after=346.47 MiB
+2026-10-19 18:01:55 scaling.worker INFO step 28  perturbed_field        z=19.891 wall=0.5s     cores=11.05 peak=377.12 MiB after=346.59 MiB
+2026-10-19 18:01:55 scaling.worker INFO step 29  perturbed_field        z=19.482 wall=0.5s     cores=11.78 peak=376.97 MiB after=346.45 MiB
+2026-10-19 18:01:56 scaling.worker INFO step 30  perturbed_field        z=19.080 wall=0.5s     cores=13.30 peak=376.98 MiB after=346.64 MiB
+2026-10-19 18:01:56 scaling.worker INFO step 31  perturbed_field        z=18.686 wall=0.5s     cores=12.47 peak=377.00 MiB after=346.46 MiB
+2026-10-19 18:01:57 scaling.worker INFO step 32  perturbed_field        z=18.300 wall=0.6s     cores=11.84 peak=377.37 MiB after=346.83 MiB
+2026-10-19 18:01:57 scaling.worker INFO step 33  perturbed_field        z=17.922 wall=0.4s     cores=12.95 peak=376.96 MiB after=346.41 MiB
+2026-10-19 18:01:58 scaling.worker INFO step 34  perturbed_field        z=17.551 wall=0.4s     cores=12.95 peak=376.55 MiB after=346.26 MiB
+2026-10-19 18:01:58 scaling.worker INFO step 35  perturbed_field        z=17.187 wall=0.5s     cores=12.90 peak=376.91 MiB after=346.62 MiB
+2026-10-19 18:01:59 scaling.worker INFO step 36  perturbed_field        z=16.830 wall=0.6s     cores=11.78 peak=376.84 MiB after=346.29 MiB
+2026-10-19 18:02:00 scaling.worker INFO step 37  perturbed_field        z=16.481 wall=0.7s     cores=10.68 peak=377.25 MiB after=346.78 MiB
+2026-10-19 18:02:00 scaling.worker INFO step 38  perturbed_field        z=16.138 wall=0.4s     cores=11.88 peak=376.88 MiB after=346.37 MiB
+2026-10-19 18:02:01 scaling.worker INFO step 39  perturbed_field        z=15.802 wall=0.4s     cores=11.94 peak=376.75 MiB after=346.20 MiB
+2026-10-19 18:02:01 scaling.worker INFO step 40  perturbed_field        z=15.473 wall=0.5s     cores=11.90 peak=376.08 MiB after=345.78 MiB
+2026-10-19 18:02:02 scaling.worker INFO step 41  perturbed_field        z=15.150 wall=0.6s     cores=11.82 peak=376.96 MiB after=346.41 MiB
+2026-10-19 18:02:02 scaling.worker INFO step 42  perturbed_field        z=14.833 wall=0.5s     cores=12.82 peak=376.23 MiB after=345.78 MiB
+2026-10-19 18:02:03 scaling.worker INFO step 43  perturbed_field        z=14.522 wall=0.5s     cores=12.87 peak=377.21 MiB after=346.91 MiB
+2026-10-19 18:02:03 scaling.worker INFO step 44  perturbed_field        z=14.218 wall=0.6s     cores=11.71 peak=376.26 MiB after=345.97 MiB
+2026-10-19 18:02:04 scaling.worker INFO step 45  perturbed_field        z=13.920 wall=0.5s     cores=12.86 peak=376.36 MiB after=346.05 MiB
+2026-10-19 18:02:04 scaling.worker INFO step 46  perturbed_field        z=13.627 wall=0.5s     cores=12.87 peak=376.70 MiB after=346.38 MiB
+2026-10-19 18:02:05 scaling.worker INFO step 47  perturbed_field        z=13.340 wall=0.5s     cores=12.88 peak=376.77 MiB after=346.45 MiB
+2026-10-19 18:02:05 scaling.worker INFO step 48  perturbed_field        z=13.059 wall=0.5s     cores=12.88 peak=376.58 MiB after=346.25 MiB
+2026-10-19 18:02:06 scaling.worker INFO step 49  perturbed_field        z=12.783 wall=0.5s     cores=12.81 peak=376.64 MiB after=346.31 MiB
+2026-10-19 18:02:06 scaling.worker INFO step 50  perturbed_field        z=12.513 wall=0.4s     cores=12.84 peak=376.42 MiB after=346.12 MiB
+2026-10-19 18:02:07 scaling.worker INFO step 51  perturbed_field        z=12.248 wall=0.5s     cores=12.91 peak=376.51 MiB after=346.18 MiB
+2026-10-19 18:02:07 scaling.worker INFO step 52  perturbed_field        z=11.988 wall=0.5s     cores=12.88 peak=376.56 MiB after=346.24 MiB
+2026-10-19 18:02:07 scaling.worker INFO step 53  perturbed_field        z=11.734 wall=0.5s     cores=12.88 peak=376.89 MiB after=346.56 MiB
+2026-10-19 18:02:08 scaling.worker INFO step 54  perturbed_field        z=11.484 wall=0.5s     cores=12.89 peak=376.70 MiB after=346.37 MiB
+2026-10-19 18:02:08 scaling.worker INFO step 55  perturbed_field        z=11.239 wall=0.5s     cores=12.89 peak=376.50 MiB after=346.17 MiB
+2026-10-19 18:02:09 scaling.worker INFO step 56  perturbed_field        z=10.999 wall=0.4s     cores=12.93 peak=377.08 MiB after=346.75 MiB
+2026-10-19 18:02:09 scaling.worker INFO step 57  perturbed_field        z=10.764 wall=0.5s     cores=12.91 peak=376.36 MiB after=346.04 MiB
+2026-10-19 18:02:10 scaling.worker INFO step 58  perturbed_field        z=10.533 wall=0.5s     cores=12.86 peak=376.95 MiB after=346.62 MiB
+2026-10-19 18:02:10 scaling.worker INFO step 59  perturbed_field        z=10.307 wall=0.5s     cores=12.91 peak=376.47 MiB after=346.16 MiB
+2026-10-19 18:02:11 scaling.worker INFO step 60  perturbed_field        z=10.086 wall=0.5s     cores=12.88 peak=376.55 MiB after=346.23 MiB
+2026-10-19 18:02:11 scaling.worker INFO step 61  perturbed_field        z=9.868 wall=0.5s     cores=12.91 peak=376.36 MiB after=346.03 MiB
+2026-10-19 18:02:12 scaling.worker INFO step 62  perturbed_field        z=9.655 wall=0.4s     cores=12.95 peak=376.68 MiB after=346.35 MiB
+2026-10-19 18:02:12 scaling.worker INFO step 63  perturbed_field        z=9.446 wall=0.4s     cores=12.95 peak=377.00 MiB after=346.66 MiB
+2026-10-19 18:02:13 scaling.worker INFO step 64  perturbed_field        z=9.241 wall=0.4s     cores=12.94 peak=377.05 MiB after=346.72 MiB
+2026-10-19 18:02:13 scaling.worker INFO step 65  perturbed_field        z=9.041 wall=0.4s     cores=12.93 peak=376.85 MiB after=346.52 MiB
+2026-10-19 18:02:14 scaling.worker INFO step 66  perturbed_field        z=8.844 wall=0.6s     cores=11.88 peak=376.91 MiB after=346.59 MiB
+2026-10-19 18:02:14 scaling.worker INFO step 67  perturbed_field        z=8.651 wall=0.5s     cores=12.86 peak=376.72 MiB after=346.39 MiB
+2026-10-19 18:02:15 scaling.worker INFO step 68  perturbed_field        z=8.461 wall=0.4s     cores=12.94 peak=376.52 MiB after=346.20 MiB
+2026-10-19 18:02:15 scaling.worker INFO step 69  perturbed_field        z=8.276 wall=0.5s     cores=12.90 peak=376.58 MiB after=346.26 MiB
+2026-10-19 18:02:16 scaling.worker INFO step 70  perturbed_field        z=8.094 wall=0.4s     cores=12.93 peak=376.91 MiB after=346.59 MiB
+2026-10-19 18:02:16 scaling.worker INFO step 71  perturbed_field        z=7.916 wall=0.5s     cores=12.85 peak=376.72 MiB after=346.41 MiB
+2026-10-19 18:02:17 scaling.worker INFO step 72  perturbed_field        z=7.741 wall=0.5s     cores=12.81 peak=376.80 MiB after=346.49 MiB
+2026-10-19 18:02:17 scaling.worker INFO step 73  perturbed_field        z=7.569 wall=0.4s     cores=12.95 peak=376.62 MiB after=346.31 MiB
+2026-10-19 18:02:18 scaling.worker INFO step 74  perturbed_field        z=7.401 wall=0.5s     cores=12.91 peak=376.96 MiB after=346.65 MiB
+2026-10-19 18:02:18 scaling.worker INFO step 75  perturbed_field        z=7.237 wall=0.5s     cores=12.91 peak=376.25 MiB after=345.94 MiB
+2026-10-19 18:02:19 scaling.worker INFO step 76  perturbed_field        z=7.075 wall=0.5s     cores=12.83 peak=376.85 MiB after=346.52 MiB
+2026-10-19 18:02:19 scaling.worker INFO step 77  perturbed_field        z=6.917 wall=0.5s     cores=12.79 peak=376.65 MiB after=346.32 MiB
+2026-10-19 18:02:19 scaling.worker INFO step 78  perturbed_field        z=6.762 wall=0.5s     cores=12.88 peak=376.45 MiB after=346.13 MiB
+2026-10-19 18:02:20 scaling.worker INFO step 79  perturbed_field        z=6.609 wall=0.5s     cores=12.90 peak=376.53 MiB after=346.21 MiB
+2026-10-19 18:02:20 scaling.worker INFO step 80  perturbed_field        z=6.460 wall=0.4s     cores=12.95 peak=376.58 MiB after=346.29 MiB
+2026-10-19 18:02:21 scaling.worker INFO step 81  perturbed_field        z=6.314 wall=0.4s     cores=12.92 peak=376.93 MiB after=346.62 MiB
+2026-10-19 18:02:21 scaling.worker INFO step 82  perturbed_field        z=6.171 wall=0.4s     cores=12.94 peak=376.54 MiB after=346.19 MiB
+2026-10-19 18:02:22 scaling.worker INFO step 83  perturbed_field        z=6.030 wall=0.5s     cores=12.85 peak=377.09 MiB after=346.78 MiB
+2026-10-19 18:02:22 scaling.worker INFO step 84  perturbed_field        z=5.892 wall=0.4s     cores=12.94 peak=377.18 MiB after=346.85 MiB
+2026-10-19 18:02:23 scaling.worker INFO step 85  perturbed_field        z=5.757 wall=0.5s     cores=12.90 peak=376.46 MiB after=346.15 MiB
+2026-10-19 18:02:23 scaling.worker INFO step 86  perturbed_field        z=5.624 wall=0.4s     cores=12.95 peak=376.79 MiB after=346.48 MiB
+2026-10-19 18:02:24 scaling.worker INFO step 87  perturbed_field        z=5.495 wall=0.5s     cores=12.88 peak=377.12 MiB after=346.79 MiB
+2026-10-19 18:02:24 scaling.worker INFO step 88  perturbed_field        z=5.367 wall=0.5s     cores=12.91 peak=376.67 MiB after=346.33 MiB
+2026-10-19 18:02:25 scaling.worker INFO step 89  perturbed_field        z=5.242 wall=0.5s     cores=12.72 peak=376.46 MiB after=346.12 MiB
+2026-10-19 18:02:25 scaling.worker INFO step 90  perturbed_field        z=5.120 wall=0.5s     cores=12.91 peak=376.77 MiB after=346.42 MiB
+2026-10-19 18:02:26 scaling.worker INFO step 91  perturbed_field        z=5.000 wall=0.5s     cores=12.91 peak=376.30 MiB after=345.95 MiB
+2026-10-19 18:02:26 scaling.worker INFO phase pf done: wall=75.9s cores=9.21 PEAK RSS=377.38 MiB (vmhwm_reset) products=92/92 fresh

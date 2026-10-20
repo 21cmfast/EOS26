@@ -1,0 +1,13 @@
+copy already complete (/g/data/qp00/db9528/EOS26_cache.copy_complete: 2026-10-19T21:18:04Z 218 files); nothing to do
+
+======================================================================================
+                  Resource Usage on 2026-10-20 08:19:28:
+   Job Id:             181587635.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.00
+   NCPUs Requested:    1                   CPU Time Used: 00:00:00        
+   Memory Requested:   4.0GB                 Memory Used: 8.52MB          
+   Walltime Requested: 10:00:00            Walltime Used: 00:00:02        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

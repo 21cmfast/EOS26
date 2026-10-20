@@ -1,0 +1,29 @@
+=== 2026-10-19T07:06:01Z job 181586186.gadi-pbs on gadi-cpu-clx-0894.gadi.nci.org.au: v4.3 HII_DIM=400 N_THREADS=48
+    queue=normal-exec ncpus=48 phases=all coeval_batch=0 extra=
+Currently Loaded Modulefiles:
+ 1) intel-compiler/2021.8.0   2) gsl/2.7.1   3) fftw3/3.3.10  
+2026-10-19 18:06:02 [driver] INFO ---- start: 2026-10-19T07:06:02+00:00  label=v4.3 HII_DIM=400 N_THREADS=48 phases=all host=gadi-cpu-clx-0894.gadi.nci.org.au pbs_jobid=181586186.gadi-pbs
+2026-10-19 18:06:11 [driver] INFO py21cmfast 4.3.0 | /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=600 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-19 18:06:11 [driver] INFO === phase ics (attempt 1) ===
+2026-10-19 18:14:16 [driver] INFO phase ics complete: peak RSS 46.59 GiB, wall 8.0m, 32.25 cores
+2026-10-19 18:14:16 [driver] INFO === phase pf (attempt 1) ===
+2026-10-19 18:25:43 [driver] INFO phase pf complete: peak RSS 10.09 GiB, wall 11.4m, 38.34 cores
+2026-10-19 18:25:43 [driver] INFO === phase phf (attempt 1) ===
+2026-10-19 18:30:49 [driver] INFO phase phf complete: peak RSS 24.55 GiB, wall 5.0m, 11.44 cores
+2026-10-19 18:30:49 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-20 01:14:19 [driver] INFO phase coeval complete: peak RSS 59.57 GiB, wall 6.72h, 34.06 cores
+2026-10-20 01:14:19 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3/HII_DIM_0400_NT_48
+2026-10-20 01:14:24 [driver] INFO configuration COMPLETE: max peak RSS 59.57 GiB
+=== 2026-10-19T14:14:24Z measure.py exit status 0
+
+======================================================================================
+                  Resource Usage on 2026-10-20 01:14:27:
+   Job Id:             181586186.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      685.44
+   NCPUs Requested:    48                  CPU Time Used: 241:30:43       
+   Memory Requested:   90.0GB                Memory Used: 90.0GB          
+   Walltime Requested: 20:00:00            Walltime Used: 07:08:24        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

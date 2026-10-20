@@ -1,0 +1,38 @@
+# 2026-10-19T07:06:13+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0200_NT_16_CB08 --phase coeval --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3/HII_DIM_0200_NT_16_CB08/phases/coeval.attempt1.batch00.json --batch-index 0
+2026-10-19 18:06:14 scaling.worker INFO worker start: phase=coeval attempt=1 pid=1103518 host=gadi-cpu-clx-0972.gadi.nci.org.au
+2026-10-19 18:06:18 scaling.worker INFO coeval batch 0: 8 redshifts 35.372 .. 30.664 (0 already done)
+2026-10-19 18:06:18 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 169.36 MiB
+2026-10-19 18:06:18 py21cmfast.drivers._param_config INFO Existing InitialConditions found and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).
+2026-10-19 18:06:19 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=30.663992820091696 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.297272676493527 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.943218130023396 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=32.60208249262386 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.27412414247633 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.959606625325854 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=34.658798757832365 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=35.37197473298901 and read in (seed=42).
+2026-10-19 18:06:41 py21cmfast.drivers.coeval INFO Computing Redshift 35.37197473298901 (1/8) iterations.
+2026-10-19 18:06:46 scaling.worker INFO step 0   coeval (+setup)        z=35.372 wall=27.6s    cores= 5.27 peak=1.28 GiB after=372.06 MiB
+2026-10-19 18:06:46 py21cmfast.drivers.coeval INFO Computing Redshift 34.658798757832365 (2/8) iterations.
+2026-10-19 18:06:55 scaling.worker INFO step 1   coeval                 z=34.659 wall=8.7s     cores=13.49 peak=1.67 GiB after=1.32 GiB
+2026-10-19 18:06:55 py21cmfast.drivers.coeval INFO Computing Redshift 33.959606625325854 (3/8) iterations.
+2026-10-19 18:07:03 scaling.worker INFO step 2   coeval                 z=33.960 wall=8.9s     cores=14.81 peak=1.79 GiB after=1.43 GiB
+2026-10-19 18:07:03 py21cmfast.drivers.coeval INFO Computing Redshift 33.27412414247633 (4/8) iterations.
+2026-10-19 18:07:13 scaling.worker INFO step 3   coeval                 z=33.274 wall=9.9s     cores=14.46 peak=1.97 GiB after=1.55 GiB
+2026-10-19 18:07:13 py21cmfast.drivers.coeval INFO Computing Redshift 32.60208249262386 (5/8) iterations.
+2026-10-19 18:07:24 scaling.worker INFO step 4   coeval                 z=32.602 wall=10.3s    cores=14.76 peak=2.09 GiB after=1.67 GiB
+2026-10-19 18:07:24 py21cmfast.drivers.coeval INFO Computing Redshift 31.943218130023396 (6/8) iterations.
+2026-10-19 18:07:35 scaling.worker INFO step 5   coeval                 z=31.943 wall=10.9s    cores=14.87 peak=2.21 GiB after=1.79 GiB
+2026-10-19 18:07:35 py21cmfast.drivers.coeval INFO Computing Redshift 31.297272676493527 (7/8) iterations.
+2026-10-19 18:07:46 scaling.worker INFO step 6   coeval                 z=31.297 wall=11.3s    cores=14.65 peak=2.33 GiB after=1.91 GiB
+2026-10-19 18:07:46 py21cmfast.drivers.coeval INFO Computing Redshift 30.663992820091696 (8/8) iterations.
+2026-10-19 18:08:01 scaling.worker INFO step 7   coeval                 z=30.664 wall=15.3s    cores=15.20 peak=2.45 GiB after=2.03 GiB
+2026-10-19 18:08:01 scaling.worker INFO phase coeval done: wall=103.0s cores=12.14 PEAK RSS=2.45 GiB (vmhwm_reset) products=32/32 fresh
