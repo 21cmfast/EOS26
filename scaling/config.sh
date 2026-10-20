@@ -30,12 +30,16 @@ fi
 SC_SEED=42
 
 # --------------------------------------------------------- per 21cmFAST version
+# Labels: v4.2, v4.3 (the 4.3.0 release) and v4.3_patch (4.3.0 + the patch named in
+# sc_patch below, built by envs/create_venv_v4.3_patch.sh). Results and simulation
+# caches go to <root>/<label>/, so the labels never overwrite each other.
 # Virtual environment holding each version (see envs/create_venv_v4.3.sh).
 sc_venv() {
   if [[ -n "${SC_VENV_OVERRIDE:-}" ]]; then echo "$SC_VENV_OVERRIDE"; return; fi  # local testing only
   case "$1" in
     v4.2) echo "/scratch/qp00/${USER}/venvs/EOS26-intel" ;;       # production v4.2 venv
     v4.3) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;
+    v4.3_patch) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3_patch-intel" ;;
     *) return 1 ;;
   esac
 }
@@ -45,7 +49,7 @@ sc_venv() {
 sc_template() {
   case "$1" in
     v4.2) echo "EOS26.toml" ;;
-    v4.3) echo "scaling/templates/EOS26_v4.3.toml" ;;
+    v4.3|v4.3_patch) echo "scaling/templates/EOS26_v4.3.toml" ;;
     *) return 1 ;;
   esac
 }
@@ -60,7 +64,21 @@ sc_expect_version() {
   case "$1" in
     v4.2) echo '^4\.2' ;;
     v4.3) echo '^4\.3\.[0-9]+$' ;;
+    # A patched source build reports e.g. 4.3.1.dev0+gee535b94.d20261020 (dirty
+    # tree); sc_patch is what actually identifies it.
+    v4.3_patch) echo '^4\.3\.' ;;
     *) return 1 ;;
+  esac
+}
+# Patch (relative to the repository root) that the label's py21cmfast must contain,
+# or nothing. Checked by scaling/check_patch.py in launch.sh's preflight, in every
+# job before measuring, and by envs/use.sh.
+# v4.3.0_sfr_allzero.patch: the radiation-field check that read sfrd_acg of every
+# past redshift back from disk at every step (bug_reports/5_v4.3_sfrd_history_reloaded.md).
+sc_patch() {
+  case "$1" in
+    v4.3_patch) echo "envs/patches/v4.3.0_sfr_allzero.patch" ;;
+    *) echo "" ;;
   esac
 }
 

@@ -4,7 +4,7 @@
 # Do not qsub this by hand: scaling/launch.sh sets the resources (-l ...) and
 # passes these variables with -v:
 #   SC_ROOT        EOS26 repository root (absolute)
-#   SC_LABEL       21cmFAST version label: v4.2 | v4.3
+#   SC_LABEL       21cmFAST version label: v4.2 | v4.3 | v4.3_patch
 #   SC_HII_DIM     HII_DIM
 #   SC_N_THREADS   N_THREADS (also OMP_NUM_THREADS)
 #   SC_PHASES      phases joined by '+', or 'all'
@@ -54,6 +54,10 @@ extra=()
 if [[ -n "${SC_EXTRA:-}" ]]; then IFS='+' read -r -a extra <<< "$SC_EXTRA"; fi
 
 cd "$SC_ROOT"
+PATCH=$(sc_patch "$SC_LABEL")
+if [[ -n "$PATCH" ]]; then
+  "$PY" scaling/check_patch.py "$PATCH" || { echo "ERROR: venv $VENV lacks $PATCH" >&2; exit 2; }
+fi
 set +e
 "$PY" scaling/measure.py \
   --label "$SC_LABEL" \

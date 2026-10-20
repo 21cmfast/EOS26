@@ -14,7 +14,7 @@
 #     first unfinished phase (completed phases are not re-measured).
 #
 # Options
-#   --version V         21cmFAST version label (v4.2 | v4.3)            [required]
+#   --version V         21cmFAST version label (v4.2 | v4.3 | v4.3_patch) [required]
 #   --dims "D ..."      HII_DIM values        } cross product,
 #   --threads "N ..."   N_THREADS values      } and/or
 #   --pairs "D:N ..."   explicit HII_DIM:N_THREADS pairs
@@ -121,6 +121,10 @@ inp = p21c.InputParameters.from_template(template, HII_DIM=dim)
 print(f"preflight OK: py21cmfast {v}; {template} loads (HII_DIM={dim}, BOX_LEN={inp.simulation_options.BOX_LEN:.0f} Mpc)")
 PY
   ) || die "preflight failed"
+  PATCH=$(sc_patch "$VERSION")
+  if [[ -n "$PATCH" ]]; then
+    "$VENV/bin/python" "$HERE/check_patch.py" "$ROOT/$PATCH" || die "preflight failed: rebuild the venv (envs/create_venv_v4.3_patch.sh)"
+  fi
 fi
 
 command -v qsub >/dev/null 2>&1 || (( DRY )) || die "qsub not found (use --dry-run off the cluster)"

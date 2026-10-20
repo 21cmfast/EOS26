@@ -179,4 +179,4 @@ FREEZE="$EOS26_ROOT/envs/freeze-$(basename "$V43_VENV" | sed 's/^\.//')-${TARGET
 uv pip freeze --python "$V43_VENV/bin/python" > "$FREEZE"
 echo "   full freeze -> $FREEZE"
 echo
-echo "Done. Activate with:  source envs/use.sh v4.3"
+echo "Done. Activate with:  source envs/use.sh ${V43_USE_LABEL:-v4.3}"

@@ -7,8 +7,11 @@
 #
 # Any extra arguments are passed to scaling/launch.sh (e.g. --keep-sim).
 # Results: scaling/results/v4.3/HII_DIM_XXXX_NT_YY/
+# SC_CAMPAIGN_LABEL selects another version label for the same grid
+# (campaign_v4.3_patch.sh sets v4.3_patch).
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LABEL="${SC_CAMPAIGN_LABEL:-v4.3}"
 
 # A) HII_DIM scan (lever arm for the extrapolation to ~1400), at the production
 #    thread count (16) and at a full Gadi node (48 cores).
@@ -34,7 +37,7 @@ PAIRS_C=""
 PAIRS_D="200:16 300:16"
 COEVAL_BATCH_D=8
 
-bash "$HERE/launch.sh" --version v4.3 --dims "$DIMS_A" --threads "$THREADS_A" --pairs "$PAIRS_B $PAIRS_C" "$@"
+bash "$HERE/launch.sh" --version "$LABEL" --dims "$DIMS_A" --threads "$THREADS_A" --pairs "$PAIRS_B $PAIRS_C" "$@"
 if [[ -n "$PAIRS_D" ]]; then
-  bash "$HERE/launch.sh" --version v4.3 --pairs "$PAIRS_D" --coeval-batch "$COEVAL_BATCH_D" --no-preflight "$@"
+  bash "$HERE/launch.sh" --version "$LABEL" --pairs "$PAIRS_D" --coeval-batch "$COEVAL_BATCH_D" --no-preflight "$@"
 fi

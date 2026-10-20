@@ -15,7 +15,7 @@ All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIID
 Code, logs (`logs/`) and the scaling results (`scaling/results/`) stay in the repository.
 
 ### 21cmFAST version
-The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.0 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. The scaling jobs use the same venvs (`scaling/config.sh`).
+The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.0 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment, or `EOS26_VERSION=v4.3_patch` for 4.3.0 with the memory fix in `envs/patches/v4.3.0_sfr_allzero.patch` (built by `envs/create_venv_v4.3_patch.sh gadi`). The scaling jobs use the same venvs (`scaling/config.sh`).
 
 21cmFAST 4.3 cannot *find* boxes in a cache written by 4.2, because the cache hashes changed. Its ICs, PFs and halo catalogs can be converted, and are then the same as what 4.3.0 computes (ICs and PFs bit-identical, halo masses to ~1e-5). Coevals depend on physics that changed in 4.3, so they have to be recomputed:
 
@@ -48,13 +48,15 @@ Peak memory (and time) of every phase as a function of `HII_DIM` and
 `N_THREADS`, for 21cmFAST v4.2 and v4.3, to find the largest `HII_DIM` that
 fits safely on a 3 TB megamem node. Full description: [`scaling/README.md`](scaling/README.md).
 
-- `bash scaling/campaign_v4.2.sh` / `bash scaling/campaign_v4.3.sh` submit one
+- `bash scaling/campaign_v4.2.sh` / `bash scaling/campaign_v4.3.sh` / `bash scaling/campaign_v4.3_patch.sh` submit one
 PBS job per (`HII_DIM`, `N_THREADS`). Re-running a campaign script resumes
 unfinished configurations from the beginning of their unfinished phase.
 - `python3 scaling/summarize.py` prints the status/results table and writes
 `scaling/results/<version>/summary_*.csv`.
 - The v4.3 environment is created with `envs/create_venv_v4.3.sh` (Mac or Gadi).
-Switch versions with `source envs/use.sh v4.2|v4.3`.
+Switch versions with `source envs/use.sh v4.2|v4.3|v4.3_patch`. `v4.3_patch` (4.3.0 +
+`envs/patches/v4.3.0_sfr_allzero.patch`, `envs/create_venv_v4.3_patch.sh`) writes its
+scaling results to `scaling/results/v4.3_patch/`.
 - The previous harness and its v4.2 results are in `scaling_old/`. They are
 superseded; see `scaling_old/ASSESSMENT.md`.
 

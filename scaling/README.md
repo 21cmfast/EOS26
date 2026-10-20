@@ -27,6 +27,8 @@ Each configuration `(version, HII_DIM, N_THREADS)` runs the four phases in produ
 ```
 scaling/
   campaign_v4.2.sh, campaign_v4.3.sh   the grid of (HII_DIM, N_THREADS) to measure -> launch.sh
+  campaign_v4.3_patch.sh               the v4.3 grid with the patched 4.3.0 build (label v4.3_patch)
+  check_patch.py                       checks that a venv's py21cmfast contains a patch (patched labels)
   launch.sh                            submits one PBS job per configuration (idempotent)
   job.pbs                              PBS job: modules, OpenMP env, venv -> measure.py
   config.sh                            site settings: project, modules, venv/template per version, resource model
@@ -35,7 +37,8 @@ scaling/
   _memory.py, _common.py, _lib.sh      helpers
   summarize.py                         status table + CSV summaries
   templates/EOS26_v4.3.toml            EOS26.toml with the one parameter v4.3 renamed
-  results/v4.2/, results/v4.3/         one folder per configuration (below)
+  results/v4.2/, results/v4.3/,        one folder per configuration (below), per version label
+  results/v4.3_patch/
   sims/                                simulation caches while a configuration runs, when not on Gadi (git-ignored);
                                        on Gadi they go to /g/data/qp00/$USER/EOS26_scaling_sims/ (SC_SIM_ROOT in config.sh)
 ```
@@ -61,6 +64,20 @@ bash scaling/campaign_v4.2.sh --follow           # optional: the v4.2 comparison
 python3 scaling/summarize.py --label v4.2
 ```
 
+### Patched 21cmFAST build (`v4.3_patch`)
+
+`v4.3_patch` is 21cmFAST 4.3.0 plus `envs/patches/v4.3.0_sfr_allzero.patch`. Without the patch, every coeval step reads the `sfrd_acg` box of every past redshift back from disk and keeps it until the end of the step (`bug_reports/5_v4.3_sfrd_history_reloaded.md`). It is a label of its own, so its results go to `results/v4.3_patch/` and its caches to `<SC_SIM_ROOT>/v4.3_patch/`. Nothing under `v4.3/` is overwritten.
+
+```bash
+bash envs/create_venv_v4.3_patch.sh gadi           # once: source build of the v4.3.0 tag + the patch
+bash scaling/launch.sh --version v4.3_patch --pairs 400:24   # quick check (~3.5 h)
+bash scaling/campaign_v4.3_patch.sh --dry-run      # the full v4.3 grid
+bash scaling/campaign_v4.3_patch.sh --follow
+python3 scaling/summarize.py --label v4.3_patch
+```
+
+The venv is `sc_venv v4.3_patch` in `config.sh` (`/scratch/qp00/$USER/venvs/EOS26-v4.3_patch-intel`). A patched source build reports a version such as `4.3.1.dev0+gee535b94.d20261020`, so the version check only asks for `4.3.`; `sc_patch` names the patch, and `check_patch.py` verifies it in the preflight, in every job and in `source envs/use.sh v4.3_patch`.
+
 **Re-run a campaign script whenever you like.** It skips complete configurations and configurations whose job is still queued or running. It (re)submits everything else, and those jobs resume. Automatic retry rules:
 
 * After a SIGKILL (on Gadi, the memory limit), the next submission asks for 50% more memory.
@@ -84,7 +101,7 @@ When all four phases of a configuration are complete, its simulation cache (`<SC
 
 | option | meaning |
 |---|---|
-| `--version v4.2\|v4.3` | selects venv, template and results folder (from `config.sh`) |
+| `--version v4.2\|v4.3\|v4.3_patch` | selects venv, template and results folder (from `config.sh`) |
 | `--dims "…" --threads "…"` / `--pairs "D:N …"` | configurations (cross product and/or explicit pairs) |
 | `--phases ics,pf` | measure only these phases (upstream phases are added if needed) |
 | `--coeval-batch N` | coevals in production-like batches of N redshifts per process (separate results folder `…_CBNN`) |

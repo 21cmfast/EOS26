@@ -144,6 +144,7 @@ celerybeat.pid
 .envrc
 .venv
 .venv-v4.3/
+.venv-v4.3_patch/
 env/
 venv/
 ENV/
