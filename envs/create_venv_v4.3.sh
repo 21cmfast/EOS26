@@ -7,7 +7,7 @@
 #
 # What it does (each step is echoed):
 #   1. pick the 21cmFAST release: by default the PINNED PyPI release below
-#      (21cmfast==4.3.0), always compiled here from its source distribution with
+#      (21cmfast==4.3.1), always compiled here from its source distribution with
 #      the same compiler/libraries as the v4.2 venv (never a pre-built wheel),
 #   2. freeze the existing v4.2 venv's third-party packages into a constraints
 #      file, so v4.3 gets *identical* numpy/scipy/h5py/classy/hmf/... and the
@@ -40,12 +40,18 @@ TARGET=${1:-}
 FORCE=0; [[ "${2:-}" == "--force" ]] && FORCE=1
 
 # ---- pinned 21cmFAST v4.3 release ----------------------------------------------
-# 21cmFAST 4.3.0 (PyPI, 2026-10-14; git tag v4.3.0 = ee535b94). Includes the
-# resume fixes #792 (#791) and #800 (#794), the shared astropy cosmology #798
-# (#796) and reading of v4.2 files/templates (#793).
-# Earlier pins were release-v4.3 branch commits: 7f0c8453 (2026-10-04),
+# 21cmFAST 4.3.1 (PyPI, 2026-10-21; git tag v4.3.1 = 72d8a2d2) = 4.3.0 plus
+#   #810 (fixes #809): the radiation-field check no longer reads sfrd_acg of every
+#        past redshift back from disk at every step (the same change as
+#        envs/patches/v4.3.0_sfr_allzero.patch, i.e. the v4.3_patch scaling build);
+#   #808: CLASS d_m transfer kept positive where it is extrapolated beyond CLASS's
+#        k range (POWER_SPECTRUM="CLASS"; with USE_MCGS the edge is at k ~ 1100/Mpc).
+# 4.3.0 (2026-10-14; v4.3.0 = ee535b94) brought the resume fixes #792 (#791) and
+# #800 (#794), the shared astropy cosmology #798 (#796) and reading of v4.2
+# files/templates (#793).
+# Earlier pins: 4.3.0, and release-v4.3 branch commits 7f0c8453 (2026-10-04),
 # 3f028907 (2026-10-01), d45dc402 (2026-09-30).
-V43_VERSION="${V43_VERSION:-4.3.0}"
+V43_VERSION="${V43_VERSION:-4.3.1}"
 V43_GIT_REF="${V43_GIT_REF:-}"
 V43_REPO="${V43_REPO:-https://github.com/21cmfast/21cmFAST.git}"
 

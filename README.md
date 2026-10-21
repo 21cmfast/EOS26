@@ -15,9 +15,9 @@ All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIID
 Code, logs (`logs/`) and the scaling results (`scaling/results/`) stay in the repository.
 
 ### 21cmFAST version
-The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.0 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment, or `EOS26_VERSION=v4.3_patch` for 4.3.0 with the memory fix in `envs/patches/v4.3.0_sfr_allzero.patch` (built by `envs/create_venv_v4.3_patch.sh gadi`). The scaling jobs use the same venvs (`scaling/config.sh`).
+The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.1 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. 4.3.1 fixes the coeval memory growth of 4.3.0 (#809, fixed by #810; `bug_reports/5_v4.3_sfrd_history_reloaded.md`). Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. `EOS26_VERSION=v4.3_patch` (4.3.0 + `envs/patches/v4.3.0_sfr_allzero.patch`, the same fix) is kept for the scaling record and is not needed with 4.3.1. The scaling jobs use the same venvs (`scaling/config.sh`).
 
-21cmFAST 4.3 cannot *find* boxes in a cache written by 4.2, because the cache hashes changed. Its ICs, PFs and halo catalogs can be converted, and are then the same as what 4.3.0 computes (ICs and PFs bit-identical, halo masses to ~1e-5). Coevals depend on physics that changed in 4.3, so they have to be recomputed:
+21cmFAST 4.3 cannot *find* boxes in a cache written by 4.2, because the cache hashes changed. Its ICs, PFs and halo catalogs can be converted, and are then the same as what 4.3.0 computes (ICs and PFs bit-identical, halo masses to ~1e-5). 4.3.1 finds and reads a 4.3.0 cache (same hashes), and for the EOS26 template its CLASS tables, sigma(M) and ICs are bit-identical to 4.3.0's (#808 only changes the transfer function beyond CLASS's k range, k > 1119/Mpc here). Coevals depend on physics that changed in 4.3, so they have to be recomputed:
 
 ```bash
 21cmfast migrate /g/data/qp00/$USER/EOS26_cache --kind InitialConditions PerturbedField HaloCatalog
@@ -54,9 +54,10 @@ unfinished configurations from the beginning of their unfinished phase.
 - `python3 scaling/summarize.py` prints the status/results table and writes
 `scaling/results/<version>/summary_*.csv`.
 - The v4.3 environment is created with `envs/create_venv_v4.3.sh` (Mac or Gadi).
-Switch versions with `source envs/use.sh v4.2|v4.3|v4.3_patch`. `v4.3_patch` (4.3.0 +
+Switch versions with `source envs/use.sh v4.2|v4.3|v4.3_patch`. `v4.3` is 21cmFAST 4.3.1;
+`scaling/results/v4.3/` was measured with 4.3.0. `v4.3_patch` (4.3.0 +
 `envs/patches/v4.3.0_sfr_allzero.patch`, `envs/create_venv_v4.3_patch.sh`) writes its
-scaling results to `scaling/results/v4.3_patch/`.
+scaling results to `scaling/results/v4.3_patch/`; it has the same fix as 4.3.1.
 - The previous harness and its v4.2 results are in `scaling_old/`. They are
 superseded; see `scaling_old/ASSESSMENT.md`.
 

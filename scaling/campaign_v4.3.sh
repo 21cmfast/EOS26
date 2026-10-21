@@ -32,7 +32,7 @@ PAIRS_C=""
 #    redshifts that re-reads the history from the cache). Both HII_DIM=1500
 #    production OOM kills happened in such resumed batches, so check whether
 #    batching raises the coeval peak compared with A. Results: ..._CB08/
-#    Needs 21cmFAST 4.3.0: resuming in a new process failed in pre-release
+#    Needs 21cmFAST >= 4.3.0: resuming in a new process failed in pre-release
 #    builds (TypeError #791, fixed in #792; segfault #794, fixed in #800).
 PAIRS_D="200:16 300:16"
 COEVAL_BATCH_D=8

@@ -30,8 +30,9 @@ fi
 SC_SEED=42
 
 # --------------------------------------------------------- per 21cmFAST version
-# Labels: v4.2, v4.3 (the 4.3.0 release) and v4.3_patch (4.3.0 + the patch named in
-# sc_patch below, built by envs/create_venv_v4.3_patch.sh). Results and simulation
+# Labels: v4.2, v4.3 (a 4.3.x release; 4.3.1 since 2026-10-21, while results/v4.3/
+# was measured with 4.3.0) and v4.3_patch (4.3.0 + the patch named in sc_patch
+# below, built by envs/create_venv_v4.3_patch.sh; 4.3.1 contains the same fix). Results and simulation
 # caches go to <root>/<label>/, so the labels never overwrite each other.
 # Virtual environment holding each version (see envs/create_venv_v4.3.sh).
 sc_venv() {
@@ -43,7 +44,7 @@ sc_venv() {
     *) return 1 ;;
   esac
 }
-# Parameter template for each version. 21cmFAST 4.3.0 also reads EOS26.toml (same
+# Parameter template for each version. 21cmFAST 4.3.x also reads EOS26.toml (same
 # inputs, but a DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX); the v4.3 copy uses
 # the new name MIN_XE_FOR_NION_IN_TAUX.
 sc_template() {
