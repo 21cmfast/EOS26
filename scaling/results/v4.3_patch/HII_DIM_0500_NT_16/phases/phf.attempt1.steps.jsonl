@@ -1,0 +1,1 @@
+{"avg_cores": 6.059065694467538, "cgroup_peak_sampled_bytes": 62105214976, "cpu_s": 4456.870392747001, "index": 0, "n_redshifts": 92, "peak_rss_bytes": 51082575872, "rss_after_bytes": 207523840, "rss_before_bytes": 177696768, "started_utc": "2026-10-20T03:27:32+00:00", "step": "evolve_halos", "wall_s": 735.5705677224323}

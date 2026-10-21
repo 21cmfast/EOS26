@@ -1,0 +1,85 @@
+{
+  "astropy_version": "8.0.1",
+  "cffi_version": "2.1.0",
+  "classy_version": "3.3.4.0",
+  "created_utc": "2026-10-20T02:37:47+00:00",
+  "h5py_version": "3.16.0",
+  "halo_catalog_mem_factor": 2.0,
+  "hmf_version": "3.6.2",
+  "host": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_NUM_THREADS": "16",
+    "OMP_PLACES": null,
+    "OMP_PROC_BIND": null,
+    "cpu_count": 96,
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8274 CPU @ 3.20GHz",
+    "cpus_allowed": 16,
+    "hostname": "gadi-cpu-clx-0253.gadi.nci.org.au",
+    "mem_total_bytes": 202463862784,
+    "pbs_jobid": "181674204.gadi-pbs",
+    "pbs_ncpus": "16",
+    "pbs_queue": "normal-exec",
+    "pid": 2557658
+  },
+  "inputs_sha256": "c52db96146ac4878a307384434f60171354b94e647c721d81a9896033f5f0b5d",
+  "inputs_summary": {
+    "BOX_LEN_Mpc": 300.0,
+    "DIM": 600,
+    "HII_DIM": 200,
+    "MINIMIZE_MEMORY": true,
+    "N_THREADS": 16,
+    "USE_TS_FLUCT": true,
+    "has_discrete_halos": true,
+    "n_node_redshifts": 92,
+    "random_seed": 42,
+    "z_max": 35.37197473298901,
+    "z_min": 5.0
+  },
+  "memory_method": "vmhwm_reset",
+  "numpy_version": "2.5.1",
+  "phase": "setup",
+  "product_status": {
+    "coeval": {
+      "bytes": 0,
+      "complete": false,
+      "n_expected": 368,
+      "n_fresh": 0,
+      "n_present": 0
+    },
+    "ics": {
+      "bytes": 0,
+      "complete": false,
+      "n_expected": 1,
+      "n_fresh": 0,
+      "n_present": 0
+    },
+    "pf": {
+      "bytes": 0,
+      "complete": false,
+      "n_expected": 92,
+      "n_fresh": 0,
+      "n_present": 0
+    },
+    "phf": {
+      "bytes": 0,
+      "complete": false,
+      "n_expected": 92,
+      "n_fresh": 0,
+      "n_present": 0
+    }
+  },
+  "psutil_version": "7.2.2",
+  "py21cmfast_file": "/scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast/__init__.py",
+  "py21cmfast_git_commit": "ee535b94b",
+  "py21cmfast_install_source": {
+    "dir_info": {},
+    "url": "file:///scratch/qp00/db9528/EOS26/21cmFASTv4.3-patch"
+  },
+  "py21cmfast_version": "4.3.1.dev0+gee535b94b.d20261020",
+  "python": "3.13.14",
+  "python_executable": "/scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/bin/python",
+  "schema": 1,
+  "scipy_version": "1.18.0",
+  "sim_steps_sha256": "185f8d7f2032ef0b38c71889570c1ef8bb1b2262f222cf4c6152dcb5fe598948",
+  "template_sha256": "e779fa8f5eb3ed2afed26f58aaaf506fa9c39a7481ece0364f9ba137e48db56c"
+}

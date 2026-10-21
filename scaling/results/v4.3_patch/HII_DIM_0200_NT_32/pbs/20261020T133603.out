@@ -1,0 +1,30 @@
+=== 2026-10-20T02:37:21Z job 181674192.gadi-pbs on gadi-cpu-clx-2841.gadi.nci.org.au: v4.3_patch HII_DIM=200 N_THREADS=32
+    queue=normal-exec ncpus=32 phases=all coeval_batch=0 extra=
+Currently Loaded Modulefiles:
+ 1) intel-compiler/2021.8.0   2) gsl/2.7.1   3) fftw3/3.3.10  
+check_patch: v4.3.0_sfr_allzero.patch is applied in /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast
+2026-10-20 13:37:22 [driver] INFO ---- start: 2026-10-20T02:37:22+00:00  label=v4.3_patch HII_DIM=200 N_THREADS=32 phases=all host=gadi-cpu-clx-2841.gadi.nci.org.au pbs_jobid=181674192.gadi-pbs
+2026-10-20 13:37:27 [driver] INFO py21cmfast 4.3.1.dev0+gee535b94b.d20261020 | /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=300 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-20 13:37:27 [driver] INFO === phase ics (attempt 1) ===
+2026-10-20 13:38:43 [driver] INFO phase ics complete: peak RSS 6.04 GiB, wall 73.5s, 20.07 cores
+2026-10-20 13:38:43 [driver] INFO === phase pf (attempt 1) ===
+2026-10-20 13:40:52 [driver] INFO phase pf complete: peak RSS 1.48 GiB, wall 2.1m, 22.55 cores
+2026-10-20 13:40:52 [driver] INFO === phase phf (attempt 1) ===
+2026-10-20 13:42:10 [driver] INFO phase phf complete: peak RSS 3.28 GiB, wall 74.7s, 15.79 cores
+2026-10-20 13:42:10 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-20 14:07:00 [driver] INFO phase coeval complete: peak RSS 5.35 GiB, wall 24.8m, 28.89 cores
+2026-10-20 14:07:00 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3_patch/HII_DIM_0200_NT_32
+2026-10-20 14:07:02 [driver] INFO configuration COMPLETE: max peak RSS 6.04 GiB
+=== 2026-10-20T03:07:09Z measure.py exit status 0
+
+======================================================================================
+                  Resource Usage on 2026-10-20 14:07:12:
+   Job Id:             181674192.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      31.80
+   NCPUs Requested:    32                  CPU Time Used: 13:28:06        
+   Memory Requested:   15.0GB                Memory Used: 15.01GB         
+   Walltime Requested: 05:00:00            Walltime Used: 00:29:49        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -1,0 +1,3 @@
+# 2026-10-20T02:37:35+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0100_NT_16 --phase setup --attempt 0 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0100_NT_16/setup.json --batch-index -1
+2026-10-20 13:37:35 scaling.worker INFO worker start: phase=setup attempt=0 pid=2184271 host=gadi-cpu-clx-1116.gadi.nci.org.au
+2026-10-20 13:37:39 scaling.worker INFO setup ok: py21cmfast 4.3.1.dev0+gee535b94b.d20261020, BOX_LEN=150.0 Mpc, 92 node redshifts, memory method=vmhwm_reset

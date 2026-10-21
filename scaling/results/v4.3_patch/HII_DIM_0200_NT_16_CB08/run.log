@@ -1,0 +1,36 @@
+2026-10-20 13:37:38 [driver] INFO ---- start: 2026-10-20T02:37:38+00:00  label=v4.3_patch HII_DIM=200 N_THREADS=16 phases=all host=gadi-cpu-clx-0253.gadi.nci.org.au pbs_jobid=181674204.gadi-pbs
+2026-10-20 13:37:47 [driver] INFO py21cmfast 4.3.1.dev0+gee535b94b.d20261020 | /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=300 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-20 13:37:47 [driver] INFO === phase ics (attempt 1) ===
+2026-10-20 13:39:28 [driver] INFO phase ics complete: peak RSS 6.00 GiB, wall 97.6s, 7.43 cores
+2026-10-20 13:39:28 [driver] INFO === phase pf (attempt 1) ===
+2026-10-20 13:44:23 [driver] INFO phase pf complete: peak RSS 1.44 GiB, wall 4.8m, 8.91 cores
+2026-10-20 13:44:23 [driver] INFO === phase phf (attempt 1) ===
+2026-10-20 13:46:30 [driver] INFO phase phf complete: peak RSS 3.24 GiB, wall 2.0m, 8.52 cores
+2026-10-20 13:46:30 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-20 13:46:30 [driver] INFO coeval batch 1/12 (8 redshifts per process)
+2026-10-20 13:48:24 [driver] INFO coeval batch 1/12: peak RSS 2.45 GiB, wall 107.1s
+2026-10-20 13:48:24 [driver] INFO coeval batch 2/12 (8 redshifts per process)
+2026-10-20 13:51:54 [driver] INFO coeval batch 2/12: peak RSS 3.20 GiB, wall 3.4m
+2026-10-20 13:51:54 [driver] INFO coeval batch 3/12 (8 redshifts per process)
+2026-10-20 13:55:19 [driver] INFO coeval batch 3/12: peak RSS 3.35 GiB, wall 3.3m
+2026-10-20 13:55:19 [driver] INFO coeval batch 4/12 (8 redshifts per process)
+2026-10-20 13:59:17 [driver] INFO coeval batch 4/12: peak RSS 3.34 GiB, wall 3.9m
+2026-10-20 13:59:17 [driver] INFO coeval batch 5/12 (8 redshifts per process)
+2026-10-20 14:02:52 [driver] INFO coeval batch 5/12: peak RSS 3.17 GiB, wall 3.5m
+2026-10-20 14:02:52 [driver] INFO coeval batch 6/12 (8 redshifts per process)
+2026-10-20 14:06:20 [driver] INFO coeval batch 6/12: peak RSS 3.08 GiB, wall 3.2m
+2026-10-20 14:06:20 [driver] INFO coeval batch 7/12 (8 redshifts per process)
+2026-10-20 14:09:39 [driver] INFO coeval batch 7/12: peak RSS 3.00 GiB, wall 3.2m
+2026-10-20 14:09:39 [driver] INFO coeval batch 8/12 (8 redshifts per process)
+2026-10-20 14:13:33 [driver] INFO coeval batch 8/12: peak RSS 2.86 GiB, wall 3.8m
+2026-10-20 14:13:33 [driver] INFO coeval batch 9/12 (8 redshifts per process)
+2026-10-20 14:17:31 [driver] INFO coeval batch 9/12: peak RSS 2.84 GiB, wall 3.8m
+2026-10-20 14:17:31 [driver] INFO coeval batch 10/12 (8 redshifts per process)
+2026-10-20 14:21:20 [driver] INFO coeval batch 10/12: peak RSS 2.83 GiB, wall 3.5m
+2026-10-20 14:21:20 [driver] INFO coeval batch 11/12 (8 redshifts per process)
+2026-10-20 14:25:06 [driver] INFO coeval batch 11/12: peak RSS 2.81 GiB, wall 3.7m
+2026-10-20 14:25:06 [driver] INFO coeval batch 12/12 (8 redshifts per process)
+2026-10-20 14:28:01 [driver] INFO coeval batch 12/12: peak RSS 2.71 GiB, wall 2.8m
+2026-10-20 14:28:01 [driver] INFO phase coeval complete: peak RSS 3.35 GiB, wall 39.9m, 11.17 cores
+2026-10-20 14:28:01 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3_patch/HII_DIM_0200_NT_16_CB08
+2026-10-20 14:28:04 [driver] INFO configuration COMPLETE: max peak RSS 6.00 GiB

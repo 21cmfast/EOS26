@@ -1,0 +1,18 @@
+=== 2026-10-20T02:37:19Z job 181674200.gadi-pbs on gadi-cpu-clx-0583.gadi.nci.org.au: v4.3_patch HII_DIM=400 N_THREADS=48
+    queue=normal-exec ncpus=48 phases=all coeval_batch=0 extra=
+Currently Loaded Modulefiles:
+ 1) intel-compiler/2021.8.0   2) gsl/2.7.1   3) fftw3/3.3.10  
+check_patch: v4.3.0_sfr_allzero.patch is applied in /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast
+2026-10-20 13:37:20 [driver] INFO ---- start: 2026-10-20T02:37:20+00:00  label=v4.3_patch HII_DIM=400 N_THREADS=48 phases=all host=gadi-cpu-clx-0583.gadi.nci.org.au pbs_jobid=181674200.gadi-pbs
+2026-10-20 13:37:25 [driver] INFO py21cmfast 4.3.1.dev0+gee535b94b.d20261020 | /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=600 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-20 13:37:25 [driver] INFO === phase ics (attempt 1) ===
+2026-10-20 13:44:29 [driver] INFO phase ics complete: peak RSS 46.59 GiB, wall 7.0m, 36.82 cores
+2026-10-20 13:44:29 [driver] INFO === phase pf (attempt 1) ===
+2026-10-20 13:56:06 [driver] INFO phase pf complete: peak RSS 10.09 GiB, wall 11.6m, 37.98 cores
+2026-10-20 13:56:06 [driver] INFO === phase phf (attempt 1) ===
+2026-10-20 14:01:34 [driver] INFO phase phf complete: peak RSS 24.55 GiB, wall 5.3m, 11.39 cores
+2026-10-20 14:01:34 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-20 20:10:37 [driver] INFO phase coeval complete: peak RSS 40.02 GiB, wall 6.15h, 35.58 cores
+2026-10-20 20:10:37 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3_patch/HII_DIM_0400_NT_48
+2026-10-20 20:10:45 [driver] INFO configuration COMPLETE: max peak RSS 46.59 GiB
+=== 2026-10-20T09:10:45Z measure.py exit status 0

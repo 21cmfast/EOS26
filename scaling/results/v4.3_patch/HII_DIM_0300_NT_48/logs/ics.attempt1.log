@@ -1,0 +1,5 @@
+# 2026-10-20T02:37:25+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0300_NT_48 --phase ics --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0300_NT_48/phases/ics.attempt1.json --batch-index -1
+2026-10-20 13:37:26 scaling.worker INFO worker start: phase=ics attempt=1 pid=4127822 host=gadi-cpu-clx-2376.gadi.nci.org.au
+2026-10-20 13:37:28 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 169.79 MiB
+2026-10-20 13:42:21 scaling.worker INFO step 0   initial_conditions     wall=4.9m     cores=39.60 peak=19.83 GiB after=11.97 GiB
+2026-10-20 13:42:21 scaling.worker INFO phase ics done: wall=4.9m cores=39.58 PEAK RSS=19.83 GiB (vmhwm_reset) products=1/1 fresh

@@ -1,0 +1,230 @@
+# 2026-10-20T02:55:19+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0200_NT_16_CB08 --phase coeval --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3_patch/HII_DIM_0200_NT_16_CB08/phases/coeval.attempt1.batch03.json --batch-index 3
+2026-10-20 13:55:20 scaling.worker INFO worker start: phase=coeval attempt=1 pid=2561565 host=gadi-cpu-clx-0253.gadi.nci.org.au
+2026-10-20 13:55:22 scaling.worker INFO coeval batch 3: 8 redshifts 21.613 .. 18.686 (24 already done)
+2026-10-20 13:55:22 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 169.56 MiB
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing InitialConditions found and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:22 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=21.613238250268047 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=21.16984142183142 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=20.73513864885434 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=20.308959459661118 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.89113672515796 and read in (seed=42).
+2026-10-20 13:55:23 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.481506593292117 and read in (seed=42).
+2026-10-20 13:55:24 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.079908424796198 and read in (seed=42).
+2026-10-20 13:55:24 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=18.686184730192352 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=18.686184730192352 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.079908424796198 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.481506593292117 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.89113672515796 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=20.308959459661118 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=20.73513864885434 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=21.16984142183142 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=21.613238250268047 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers.coeval INFO Computing Redshift 35.37197473298901 (1/32) iterations.
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing TsBox found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=35.37197473298901 and read in (seed=42).
+2026-10-20 13:55:52 scaling.worker INFO step 0   coeval (+setup)        z=35.372 wall=30.8s    cores= 4.13 peak=1.28 GiB after=583.25 MiB
+2026-10-20 13:55:52 py21cmfast.drivers.coeval INFO Computing Redshift 34.658798757832365 (2/32) iterations.
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing TsBox found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:52 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=34.658798757832365 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 1   coeval                 z=34.659 wall=0.1s     cores= 0.97 peak=796.76 MiB after=796.76 MiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 33.959606625325854 (3/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=33.959606625325854 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 2   coeval                 z=33.960 wall=0.2s     cores= 0.85 peak=888.19 MiB after=888.19 MiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 33.27412414247633 (4/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=33.27412414247633 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 3   coeval                 z=33.274 wall=0.1s     cores= 0.97 peak=979.95 MiB after=979.95 MiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 32.60208249262386 (5/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=32.60208249262386 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 4   coeval                 z=32.602 wall=0.2s     cores= 0.83 peak=1.05 GiB after=1.05 GiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 31.943218130023396 (6/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=31.943218130023396 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 5   coeval                 z=31.943 wall=0.2s     cores= 0.95 peak=1.14 GiB after=1.14 GiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 31.297272676493527 (7/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=31.297272676493527 and read in (seed=42).
+2026-10-20 13:55:53 scaling.worker INFO step 6   coeval                 z=31.297 wall=0.2s     cores= 0.97 peak=1.23 GiB after=1.23 GiB
+2026-10-20 13:55:53 py21cmfast.drivers.coeval INFO Computing Redshift 30.663992820091696 (8/32) iterations.
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing TsBox found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:53 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=30.663992820091696 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 7   coeval                 z=30.664 wall=0.2s     cores= 0.97 peak=1.31 GiB after=1.31 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 30.043130215776173 (9/32) iterations.
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing TsBox found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=30.043130215776173 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 8   coeval                 z=30.043 wall=0.2s     cores= 0.96 peak=1.40 GiB after=1.40 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 29.43444138801586 (10/32) iterations.
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing TsBox found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=29.43444138801586 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 9   coeval                 z=29.434 wall=0.2s     cores= 0.98 peak=1.49 GiB after=1.49 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 28.83768763530967 (11/32) iterations.
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing TsBox found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=28.83768763530967 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 10  coeval                 z=28.838 wall=0.2s     cores= 0.97 peak=1.58 GiB after=1.58 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 28.25263493657811 (12/32) iterations.
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing TsBox found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=28.25263493657811 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 11  coeval                 z=28.253 wall=0.2s     cores= 0.93 peak=1.67 GiB after=1.67 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 27.679053859390308 (13/32) iterations.
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing TsBox found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:54 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=27.679053859390308 and read in (seed=42).
+2026-10-20 13:55:54 scaling.worker INFO step 12  coeval                 z=27.679 wall=0.3s     cores= 0.77 peak=1.76 GiB after=1.76 GiB
+2026-10-20 13:55:54 py21cmfast.drivers.coeval INFO Computing Redshift 27.1167194699905 (14/32) iterations.
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing TsBox found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=27.1167194699905 and read in (seed=42).
+2026-10-20 13:55:55 scaling.worker INFO step 13  coeval                 z=27.117 wall=0.2s     cores= 0.98 peak=1.85 GiB after=1.85 GiB
+2026-10-20 13:55:55 py21cmfast.drivers.coeval INFO Computing Redshift 26.56541124508873 (15/32) iterations.
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing TsBox found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=26.56541124508873 and read in (seed=42).
+2026-10-20 13:55:55 scaling.worker INFO step 14  coeval                 z=26.565 wall=0.2s     cores= 0.98 peak=1.94 GiB after=1.94 GiB
+2026-10-20 13:55:55 py21cmfast.drivers.coeval INFO Computing Redshift 26.02491298538111 (16/32) iterations.
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing TsBox found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=26.02491298538111 and read in (seed=42).
+2026-10-20 13:55:55 scaling.worker INFO step 15  coeval                 z=26.025 wall=0.2s     cores= 0.98 peak=2.03 GiB after=2.03 GiB
+2026-10-20 13:55:55 py21cmfast.drivers.coeval INFO Computing Redshift 25.495012730765797 (17/32) iterations.
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing TsBox found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=25.495012730765797 and read in (seed=42).
+2026-10-20 13:55:55 scaling.worker INFO step 16  coeval                 z=25.495 wall=0.2s     cores= 0.98 peak=2.12 GiB after=2.12 GiB
+2026-10-20 13:55:55 py21cmfast.drivers.coeval INFO Computing Redshift 24.97550267722137 (18/32) iterations.
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing TsBox found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:55 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=24.97550267722137 and read in (seed=42).
+2026-10-20 13:55:55 scaling.worker INFO step 17  coeval                 z=24.976 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:55 py21cmfast.drivers.coeval INFO Computing Redshift 24.466179095315074 (19/32) iterations.
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing TsBox found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=24.466179095315074 and read in (seed=42).
+2026-10-20 13:55:56 scaling.worker INFO step 18  coeval                 z=24.466 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:56 py21cmfast.drivers.coeval INFO Computing Redshift 23.966842250308897 (20/32) iterations.
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing TsBox found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=23.966842250308897 and read in (seed=42).
+2026-10-20 13:55:56 scaling.worker INFO step 19  coeval                 z=23.967 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:56 py21cmfast.drivers.coeval INFO Computing Redshift 23.477296323832253 (21/32) iterations.
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing TsBox found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=23.477296323832253 and read in (seed=42).
+2026-10-20 13:55:56 scaling.worker INFO step 20  coeval                 z=23.477 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:56 py21cmfast.drivers.coeval INFO Computing Redshift 22.997349337090448 (22/32) iterations.
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing TsBox found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=22.997349337090448 and read in (seed=42).
+2026-10-20 13:55:56 scaling.worker INFO step 21  coeval                 z=22.997 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:56 py21cmfast.drivers.coeval INFO Computing Redshift 22.526813075578872 (23/32) iterations.
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing TsBox found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:56 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=22.526813075578872 and read in (seed=42).
+2026-10-20 13:55:57 scaling.worker INFO step 22  coeval                 z=22.527 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:57 py21cmfast.drivers.coeval INFO Computing Redshift 22.065503015273407 (24/32) iterations.
+2026-10-20 13:55:57 py21cmfast.drivers._param_config INFO Existing EmissivityFields found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:57 py21cmfast.drivers._param_config INFO Existing TsBox found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:57 py21cmfast.drivers._param_config INFO Existing IonizedBox found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:57 py21cmfast.drivers._param_config INFO Existing BrightnessTemp found at z=22.065503015273407 and read in (seed=42).
+2026-10-20 13:55:57 scaling.worker INFO step 23  coeval                 z=22.066 wall=0.2s     cores= 0.98 peak=2.21 GiB after=2.21 GiB
+2026-10-20 13:55:57 py21cmfast.drivers.coeval INFO Computing Redshift 21.613238250268047 (25/32) iterations.
+2026-10-20 13:56:28 scaling.worker INFO step 24  coeval                 z=21.613 wall=31.7s    cores=10.34 peak=3.23 GiB after=2.61 GiB
+2026-10-20 13:56:28 py21cmfast.drivers.coeval INFO Computing Redshift 21.16984142183142 (26/32) iterations.
+2026-10-20 13:56:54 scaling.worker INFO step 25  coeval                 z=21.170 wall=25.9s    cores=11.56 peak=3.17 GiB after=2.76 GiB
+2026-10-20 13:56:54 py21cmfast.drivers.coeval INFO Computing Redshift 20.73513864885434 (27/32) iterations.
+2026-10-20 13:57:21 scaling.worker INFO step 26  coeval                 z=20.735 wall=26.6s    cores=11.17 peak=3.20 GiB after=2.82 GiB
+2026-10-20 13:57:21 py21cmfast.drivers.coeval INFO Computing Redshift 20.308959459661118 (28/32) iterations.
+2026-10-20 13:57:45 scaling.worker INFO step 27  coeval                 z=20.309 wall=24.3s    cores=12.93 peak=3.17 GiB after=2.73 GiB
+2026-10-20 13:57:45 py21cmfast.drivers.coeval INFO Computing Redshift 19.89113672515796 (29/32) iterations.
+2026-10-20 13:58:10 scaling.worker INFO step 28  coeval                 z=19.891 wall=24.4s    cores=13.94 peak=3.20 GiB after=2.82 GiB
+2026-10-20 13:58:10 py21cmfast.drivers.coeval INFO Computing Redshift 19.481506593292117 (30/32) iterations.
+2026-10-20 13:58:34 scaling.worker INFO step 29  coeval                 z=19.482 wall=24.1s    cores=13.85 peak=3.27 GiB after=2.85 GiB
+2026-10-20 13:58:34 py21cmfast.drivers.coeval INFO Computing Redshift 19.079908424796198 (31/32) iterations.
+2026-10-20 13:58:58 scaling.worker INFO step 30  coeval                 z=19.080 wall=23.9s    cores=14.13 peak=3.29 GiB after=2.91 GiB
+2026-10-20 13:58:58 py21cmfast.drivers.coeval INFO Computing Redshift 18.686184730192352 (32/32) iterations.
+2026-10-20 13:59:16 scaling.worker INFO step 31  coeval                 z=18.686 wall=18.6s    cores=14.95 peak=3.34 GiB after=2.93 GiB
+2026-10-20 13:59:16 scaling.worker INFO phase coeval done: wall=3.9m cores=11.33 PEAK RSS=3.34 GiB (vmhwm_reset) products=32/32 fresh

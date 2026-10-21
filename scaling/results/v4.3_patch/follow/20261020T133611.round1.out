@@ -1,0 +1,22 @@
+=== 2026-10-20T05:07:08Z follow-up job 181674206.gadi-pbs on gadi-cpu-clx-1287.gadi.nci.org.au: bash /scratch/qp00/db9528/EOS26/scaling/launch.sh --version v4.3_patch --pairs 200:16\ 300:16 --coeval-batch 8 --no-preflight --follow --follow-round 1 
+
+config                  queue     mem      walltime  disk~      action
+HII_DIM_0200_NT_16_CB08                                          skip (complete)
+HII_DIM_0300_NT_16_CB08                                          skip (complete)
+
+v4.3_patch: 0 to run, 2 skipped. Peak disk if all run at once: ~0 GB under /g/data/qp00/db9528/EOS26_scaling_sims (check with lquota).
+follow-up: nothing was submitted, so no follow-up job (chain ends here).
+Progress: python3 scaling/summarize.py --label v4.3_patch
+=== 2026-10-20T05:07:08Z follow-up done
+
+======================================================================================
+                  Resource Usage on 2026-10-20 16:07:12:
+   Job Id:             181674206.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.00
+   NCPUs Requested:    1                   CPU Time Used: 00:00:00        
+   Memory Requested:   4.0GB                 Memory Used: 11.62MB         
+   Walltime Requested: 00:30:00            Walltime Used: 00:00:01        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

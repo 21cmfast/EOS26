@@ -1,0 +1,110 @@
+{
+  "astropy_version": "8.0.1",
+  "attempt": 1,
+  "avg_cores": 6.058920716586657,
+  "baseline_rss_bytes": 177508352,
+  "cffi_version": "2.1.0",
+  "cgroup": {
+    "limit_bytes": 183609851904,
+    "max_usage_bytes": 97589395456,
+    "path": "/sys/fs/cgroup/memory/pbspro.service/jobid/181674201.gadi-pbs",
+    "phase_peak_sampled_bytes": 62105214976,
+    "stat_total_cache": 25529274368,
+    "stat_total_dirty": 68829184,
+    "stat_total_mapped_file": 15986688,
+    "stat_total_rss": 198881280,
+    "stat_total_shmem": 4096,
+    "stat_total_writeback": 0,
+    "usage_bytes": 25839673344,
+    "version": 1
+  },
+  "classy_version": "3.3.4.0",
+  "coeval_batch": 0,
+  "cpu_s": 4456.871647685,
+  "finished_utc": "2026-10-20T03:39:47+00:00",
+  "gc_enabled": false,
+  "h5py_version": "3.16.0",
+  "hii_dim": 500,
+  "hmf_version": "3.6.2",
+  "host": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_NUM_THREADS": "16",
+    "OMP_PLACES": null,
+    "OMP_PROC_BIND": null,
+    "cpu_count": 96,
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8274 CPU @ 3.20GHz",
+    "cpus_allowed": 16,
+    "hostname": "gadi-cpu-clx-0308.gadi.nci.org.au",
+    "mem_total_bytes": 202463842304,
+    "pbs_jobid": "181674201.gadi-pbs",
+    "pbs_ncpus": "16",
+    "pbs_queue": "normal-exec",
+    "pid": 2106478
+  },
+  "label": "v4.3_patch",
+  "n_steps": 1,
+  "n_threads": 16,
+  "numpy_version": "2.5.1",
+  "peak_rss_bytes": 51082575872,
+  "peak_rss_method": "vmhwm_reset",
+  "peak_step": {
+    "avg_cores": 6.059065694467538,
+    "cgroup_peak_sampled_bytes": 62105214976,
+    "cpu_s": 4456.870392747001,
+    "index": 0,
+    "n_redshifts": 92,
+    "peak_rss_bytes": 51082575872,
+    "rss_after_bytes": 207523840,
+    "rss_before_bytes": 177696768,
+    "started_utc": "2026-10-20T03:27:32+00:00",
+    "step": "evolve_halos",
+    "wall_s": 735.5705677224323
+  },
+  "phase": "phf",
+  "process_lifetime_max_rss_bytes": 207552512,
+  "product_bytes_total": 25337136056,
+  "product_check": {
+    "bytes": 25337136056,
+    "complete": true,
+    "n_expected": 92,
+    "n_fresh": 92,
+    "n_present": 92
+  },
+  "products": {
+    "HaloCatalog": {
+      "bytes": 25337136056,
+      "count": 92
+    }
+  },
+  "psutil_version": "7.2.2",
+  "py21cmfast_file": "/scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/lib/python3.13/site-packages/py21cmfast/__init__.py",
+  "py21cmfast_git_commit": "ee535b94b",
+  "py21cmfast_install_source": {
+    "dir_info": {},
+    "url": "file:///scratch/qp00/db9528/EOS26/21cmFASTv4.3-patch"
+  },
+  "py21cmfast_version": "4.3.1.dev0+gee535b94b.d20261020",
+  "python": "3.13.14",
+  "python_executable": "/scratch/qp00/db9528/venvs/EOS26-v4.3_patch-intel/bin/python",
+  "rss_csv": "rss/phf.attempt1.csv",
+  "sampler_peak_rss_bytes": 50366173184,
+  "schema": 1,
+  "scipy_version": "1.18.0",
+  "started_utc": "2026-10-20T03:27:32+00:00",
+  "steps": [
+    {
+      "avg_cores": 6.059065694467538,
+      "cgroup_peak_sampled_bytes": 62105214976,
+      "cpu_s": 4456.870392747001,
+      "index": 0,
+      "n_redshifts": 92,
+      "peak_rss_bytes": 51082575872,
+      "rss_after_bytes": 207523840,
+      "rss_before_bytes": 177696768,
+      "started_utc": "2026-10-20T03:27:32+00:00",
+      "step": "evolve_halos",
+      "wall_s": 735.5705677224323
+    }
+  ],
+  "wall_s": 735.5883755804971
+}

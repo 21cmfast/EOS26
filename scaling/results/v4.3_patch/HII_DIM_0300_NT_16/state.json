@@ -1,0 +1,156 @@
+{
+  "complete": true,
+  "history": [
+    {
+      "event": "run_start",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "keep_sim": false,
+      "pbs_jobid": "181674195.gadi-pbs",
+      "phases": "all",
+      "utc": "2026-10-20T02:37:36+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "phase": "ics",
+      "utc": "2026-10-20T02:37:40+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 21192568832,
+      "phase": "ics",
+      "utc": "2026-10-20T02:40:57+00:00",
+      "wall_s": 197.7362024784088
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "phase": "pf",
+      "utc": "2026-10-20T02:40:58+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 4660060160,
+      "phase": "pf",
+      "utc": "2026-10-20T02:49:19+00:00",
+      "wall_s": 501.0541195869446
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "phase": "phf",
+      "utc": "2026-10-20T02:49:19+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 11217285120,
+      "phase": "phf",
+      "utc": "2026-10-20T02:52:44+00:00",
+      "wall_s": 205.56184673309326
+    },
+    {
+      "attempt": 1,
+      "event": "phase_start",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "phase": "coeval",
+      "utc": "2026-10-20T02:52:44+00:00"
+    },
+    {
+      "attempt": 1,
+      "event": "phase_complete",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 18202267648,
+      "phase": "coeval",
+      "utc": "2026-10-20T05:20:58+00:00",
+      "wall_s": 8893.975380420685
+    },
+    {
+      "event": "sim_deleted",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "path": "/g/data/qp00/db9528/EOS26_scaling_sims/v4.3_patch/HII_DIM_0300_NT_16",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "utc": "2026-10-20T05:21:02+00:00"
+    },
+    {
+      "complete": true,
+      "event": "run_end",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "utc": "2026-10-20T05:21:02+00:00"
+    }
+  ],
+  "phases": {
+    "coeval": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 10.818620633229777,
+      "finished_utc": "2026-10-20T05:20:58+00:00",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 18202267648,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-20T02:52:44+00:00",
+      "status": "complete",
+      "wall_s": 8885.168390362523
+    },
+    "ics": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 12.465518448911679,
+      "finished_utc": "2026-10-20T02:40:57+00:00",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 21192568832,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-20T02:37:40+00:00",
+      "status": "complete",
+      "wall_s": 195.1830016868189
+    },
+    "pf": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 14.567432992623182,
+      "finished_utc": "2026-10-20T02:49:19+00:00",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 4660060160,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-20T02:40:58+00:00",
+      "status": "complete",
+      "wall_s": 497.12878707423806
+    },
+    "phf": {
+      "attempt_used": 1,
+      "attempts": 1,
+      "avg_cores": 7.829814608589246,
+      "finished_utc": "2026-10-20T02:52:44+00:00",
+      "host": "gadi-cpu-clx-2871.gadi.nci.org.au",
+      "pbs_jobid": "181674195.gadi-pbs",
+      "peak_rss_bytes": 11217285120,
+      "peak_rss_method": "vmhwm_reset",
+      "started_utc": "2026-10-20T02:49:19+00:00",
+      "status": "complete",
+      "wall_s": 200.66101119667292
+    }
+  },
+  "schema": 1,
+  "sim_deleted": true,
+  "updated_utc": "2026-10-20T05:21:02+00:00"
+}

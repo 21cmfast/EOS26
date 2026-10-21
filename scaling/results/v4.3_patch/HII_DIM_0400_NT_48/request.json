@@ -1,0 +1,14 @@
+{
+  "coeval_batch": 0,
+  "hii_dim": 400,
+  "label": "v4.3_patch",
+  "log_level": "INFO",
+  "measure_py_sha256": "2ad202221ce7e2385fb7be59f91887a66ed5435195c632083ef3ddaf17c4c18a",
+  "n_threads": 48,
+  "random_seed": 42,
+  "sample_interval_s": 1.0,
+  "sim_dir": "/g/data/qp00/db9528/EOS26_scaling_sims/v4.3_patch/HII_DIM_0400_NT_48",
+  "template": "/scratch/qp00/db9528/EOS26/scaling/templates/EOS26_v4.3.toml",
+  "worker_py_sha256": "1cdeb2ede41725ee71d7208e81fa8c944233e2bffcc2934778644fdf94f80873",
+  "written_utc": "2026-10-20T02:37:20+00:00"
+}
