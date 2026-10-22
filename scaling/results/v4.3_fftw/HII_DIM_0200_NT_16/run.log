@@ -1,0 +1,3 @@
+2026-10-22 12:13:16 [driver] INFO ---- start: 2026-10-22T01:13:16+00:00  label=v4.3_fftw HII_DIM=200 N_THREADS=16 phases=all host=gadi-cpu-clx-2899.gadi.nci.org.au pbs_jobid=181963525.gadi-pbs
+2026-10-22 12:13:26 [driver] INFO py21cmfast 4.3.1 | /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=300 Mpc | 92 node z | memory method: vmhwm_reset
+2026-10-22 12:13:26 [driver] INFO === phase ics (attempt 1) ===

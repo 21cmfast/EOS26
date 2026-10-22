@@ -1,0 +1,846 @@
+00:00:00 INFO     00.165 GB Starting N PF run: z_idx_start=0, N=30                                                                                              
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.168 GB PF 1/30: z_idx=0, z=35.371975                                                                                                       
+00:00:23 DEBUG    00.209 GB Reading array of shape (600, 600, 600) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
+00:00:24 DEBUG    01.014 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+00:00:24 DEBUG    01.044 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+00:00:24 DEBUG    01.073 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+00:00:24 DEBUG    01.103 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+00:00:24 DEBUG    01.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+00:00:24 DEBUG    01.163 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+00:00:24 DEBUG    01.193 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+00:00:24 DEBUG    01.223 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+00:00:24 DEBUG    01.252 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:24 DEBUG    01.252 GB     35.37197473298901                                                                                                               
+00:00:24 DEBUG    01.252 GB                                                                                                                                     
+00:00:24 DEBUG    01.252 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:24 DEBUG    01.252 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:24 DEBUG    01.252 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:24 DEBUG    01.252 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:24 DEBUG    01.252 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:24 DEBUG    01.252 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:24 DEBUG    01.252 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:24 DEBUG    01.252 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:24 DEBUG    01.252 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:24 DEBUG    01.252 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.252 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.252 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.252 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:24 DEBUG    01.252 GB                                                                                                                                     
+00:00:27 INFO     01.374 GB PF 1/30 done in 27.52s (average CPU cores: 5.49; peak RSS: 02.057 GB)                                                               
+00:00:27 INFO     01.374 GB PF 2/30: z_idx=1, z=34.658799                                                                                                       
+00:00:27 INFO     01.374 GB Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).                                                        
+00:00:27 INFO     01.374 GB PF 2/30 done in 0.09s (average CPU cores: 0.52; peak RSS: 01.374 GB)                                                                
+00:00:27 INFO     01.374 GB PF 3/30: z_idx=2, z=33.959607                                                                                                       
+00:00:28 INFO     01.374 GB Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).                                                        
+00:00:28 INFO     01.374 GB PF 3/30 done in 0.12s (average CPU cores: 0.37; peak RSS: 01.374 GB)                                                                
+00:00:28 INFO     01.374 GB PF 4/30: z_idx=3, z=33.274124                                                                                                       
+00:00:28 INFO     01.374 GB Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).                                                         
+00:00:28 INFO     01.374 GB PF 4/30 done in 0.09s (average CPU cores: 0.48; peak RSS: 01.374 GB)                                                                
+00:00:28 INFO     01.374 GB PF 5/30: z_idx=4, z=32.602082                                                                                                       
+00:00:28 INFO     01.374 GB Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).                                                         
+00:00:28 INFO     01.374 GB PF 5/30 done in 0.15s (average CPU cores: 0.51; peak RSS: 01.374 GB)                                                                
+00:00:28 INFO     01.374 GB PF 6/30: z_idx=5, z=31.943218                                                                                                       
+00:00:28 INFO     01.374 GB Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).                                                        
+00:00:28 INFO     01.374 GB PF 6/30 done in 0.10s (average CPU cores: 0.45; peak RSS: 01.374 GB)                                                                
+00:00:28 INFO     01.374 GB PF 7/30: z_idx=6, z=31.297273                                                                                                       
+00:00:28 INFO     01.374 GB Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).                                                        
+00:00:28 INFO     01.374 GB PF 7/30 done in 0.15s (average CPU cores: 0.30; peak RSS: 01.374 GB)                                                                
+00:00:28 INFO     01.374 GB PF 8/30: z_idx=7, z=30.663993                                                                                                       
+00:00:28 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:28 DEBUG    01.374 GB     30.663992820091696                                                                                                              
+00:00:29 DEBUG    01.374 GB                                                                                                                                     
+00:00:29 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:29 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:29 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:29 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:29 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:29 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:29 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:29 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:29 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:29 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:29 DEBUG    01.374 GB                                                                                                                                     
+00:00:31 INFO     01.374 GB PF 8/30 done in 2.80s (average CPU cores: 9.54; peak RSS: 02.179 GB)                                                                
+00:00:31 INFO     01.374 GB PF 9/30: z_idx=8, z=30.043130                                                                                                       
+00:00:31 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:31 DEBUG    01.374 GB     30.043130215776173                                                                                                              
+00:00:32 DEBUG    01.374 GB                                                                                                                                     
+00:00:32 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:32 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:32 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:32 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:32 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:32 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:32 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:32 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:32 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:32 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:32 DEBUG    01.374 GB                                                                                                                                     
+00:00:34 INFO     01.374 GB PF 9/30 done in 2.89s (average CPU cores: 9.27; peak RSS: 02.178 GB)                                                                
+00:00:34 INFO     01.374 GB PF 10/30: z_idx=9, z=29.434441                                                                                                      
+00:00:34 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:34 DEBUG    01.374 GB     29.43444138801586                                                                                                               
+00:00:35 DEBUG    01.374 GB                                                                                                                                     
+00:00:35 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:35 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:35 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:35 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:35 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:35 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:35 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:35 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:35 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:35 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:35 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:35 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:35 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:35 DEBUG    01.374 GB                                                                                                                                     
+00:00:37 INFO     01.374 GB PF 10/30 done in 2.73s (average CPU cores: 9.76; peak RSS: 02.179 GB)                                                               
+00:00:37 INFO     01.374 GB PF 11/30: z_idx=10, z=28.837688                                                                                                     
+00:00:37 INFO     01.374 GB Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).                                                         
+00:00:37 INFO     01.374 GB PF 11/30 done in 0.14s (average CPU cores: 0.54; peak RSS: 01.374 GB)                                                               
+00:00:37 INFO     01.374 GB PF 12/30: z_idx=11, z=28.252635                                                                                                     
+00:00:37 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:37 DEBUG    01.374 GB     28.25263493657811                                                                                                               
+00:00:38 DEBUG    01.374 GB                                                                                                                                     
+00:00:38 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:38 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:38 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:38 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:38 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:38 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:38 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:38 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:38 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:38 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:38 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:38 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:38 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:38 DEBUG    01.374 GB                                                                                                                                     
+00:00:40 INFO     01.375 GB PF 12/30 done in 2.74s (average CPU cores: 9.73; peak RSS: 02.179 GB)                                                               
+00:00:40 INFO     01.375 GB PF 13/30: z_idx=12, z=27.679054                                                                                                     
+00:00:40 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:40 DEBUG    01.375 GB     27.679053859390308                                                                                                              
+00:00:40 DEBUG    01.375 GB                                                                                                                                     
+00:00:40 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:40 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:41 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:41 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:41 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:41 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:41 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:41 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:41 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:41 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:41 DEBUG    01.375 GB                                                                                                                                     
+00:00:42 INFO     01.374 GB PF 13/30 done in 2.32s (average CPU cores: 10.38; peak RSS: 02.179 GB)                                                              
+00:00:42 INFO     01.374 GB PF 14/30: z_idx=13, z=27.116719                                                                                                     
+00:00:42 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:42 DEBUG    01.374 GB     27.1167194699905                                                                                                                
+00:00:43 DEBUG    01.374 GB                                                                                                                                     
+00:00:43 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:43 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:43 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:43 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:43 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:43 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:43 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:43 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:43 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:43 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:43 DEBUG    01.374 GB                                                                                                                                     
+00:00:45 INFO     01.374 GB PF 14/30 done in 2.24s (average CPU cores: 10.78; peak RSS: 02.179 GB)                                                              
+00:00:45 INFO     01.374 GB PF 15/30: z_idx=14, z=26.565411                                                                                                     
+00:00:45 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:45 DEBUG    01.374 GB     26.56541124508873                                                                                                               
+00:00:45 DEBUG    01.374 GB                                                                                                                                     
+00:00:45 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:45 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:45 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:45 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:45 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:45 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:45 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:45 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:45 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:45 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:45 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:45 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:45 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:45 DEBUG    01.374 GB                                                                                                                                     
+00:00:47 INFO     01.375 GB PF 15/30 done in 2.30s (average CPU cores: 10.55; peak RSS: 02.179 GB)                                                              
+00:00:47 INFO     01.375 GB PF 16/30: z_idx=15, z=26.024913                                                                                                     
+00:00:47 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:47 DEBUG    01.375 GB     26.02491298538111                                                                                                               
+00:00:48 DEBUG    01.375 GB                                                                                                                                     
+00:00:48 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:48 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:48 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:48 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:48 DEBUG    01.375 GB                                                                                                                                     
+00:00:49 INFO     01.374 GB PF 16/30 done in 2.30s (average CPU cores: 10.47; peak RSS: 02.179 GB)                                                              
+00:00:49 INFO     01.374 GB PF 17/30: z_idx=16, z=25.495013                                                                                                     
+00:00:49 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:49 DEBUG    01.374 GB     25.495012730765797                                                                                                              
+00:00:50 DEBUG    01.374 GB                                                                                                                                     
+00:00:50 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:50 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:50 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:50 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:50 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:50 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:50 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:50 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:50 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:50 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:50 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:50 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:50 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:50 DEBUG    01.374 GB                                                                                                                                     
+00:00:52 INFO     01.374 GB PF 17/30 done in 2.53s (average CPU cores: 9.52; peak RSS: 02.179 GB)                                                               
+00:00:52 INFO     01.374 GB PF 18/30: z_idx=17, z=24.975503                                                                                                     
+00:00:52 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:52 DEBUG    01.374 GB     24.97550267722137                                                                                                               
+00:00:53 DEBUG    01.374 GB                                                                                                                                     
+00:00:53 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:53 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:53 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:53 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:53 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:53 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:53 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:53 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:53 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:53 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:53 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:53 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:53 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:53 DEBUG    01.374 GB                                                                                                                                     
+00:00:54 INFO     01.374 GB PF 18/30 done in 2.18s (average CPU cores: 11.13; peak RSS: 02.178 GB)                                                              
+00:00:54 INFO     01.374 GB PF 19/30: z_idx=18, z=24.466179                                                                                                     
+00:00:54 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:54 DEBUG    01.374 GB     24.466179095315074                                                                                                              
+00:00:55 DEBUG    01.374 GB                                                                                                                                     
+00:00:55 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:55 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:55 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:55 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:55 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:55 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:55 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:55 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:55 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:55 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:55 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:55 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:55 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:55 DEBUG    01.374 GB                                                                                                                                     
+00:00:56 INFO     01.374 GB PF 19/30 done in 2.19s (average CPU cores: 11.07; peak RSS: 02.178 GB)                                                              
+00:00:56 INFO     01.374 GB PF 20/30: z_idx=19, z=23.966842                                                                                                     
+00:00:56 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:56 DEBUG    01.374 GB     23.966842250308897                                                                                                              
+00:00:57 DEBUG    01.374 GB                                                                                                                                     
+00:00:57 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:57 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:57 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:57 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:57 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:57 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:57 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:57 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:57 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:57 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:57 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:57 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:57 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:57 DEBUG    01.374 GB                                                                                                                                     
+00:00:59 INFO     01.374 GB PF 20/30 done in 2.07s (average CPU cores: 11.66; peak RSS: 02.178 GB)                                                              
+00:00:59 INFO     01.374 GB PF 21/30: z_idx=20, z=23.477296                                                                                                     
+00:00:59 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:59 DEBUG    01.374 GB     23.477296323832253                                                                                                              
+00:00:59 DEBUG    01.374 GB                                                                                                                                     
+00:00:59 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:59 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:59 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:59 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:59 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:59 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:59 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:59 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:59 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:59 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:59 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:59 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:59 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:59 DEBUG    01.374 GB                                                                                                                                     
+00:01:01 INFO     01.374 GB PF 21/30 done in 2.24s (average CPU cores: 10.77; peak RSS: 02.179 GB)                                                              
+00:01:01 INFO     01.374 GB PF 22/30: z_idx=21, z=22.997349                                                                                                     
+00:01:01 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:01 DEBUG    01.374 GB     22.997349337090448                                                                                                              
+00:01:01 DEBUG    01.374 GB                                                                                                                                     
+00:01:01 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:01 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:01 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:01 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:01 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:01 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:01 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:01 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:01 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:01 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:01 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:01 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:01 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:01 DEBUG    01.374 GB                                                                                                                                     
+00:01:04 INFO     01.375 GB PF 22/30 done in 2.96s (average CPU cores: 9.08; peak RSS: 02.179 GB)                                                               
+00:01:04 INFO     01.375 GB PF 23/30: z_idx=22, z=22.526813                                                                                                     
+00:01:04 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:04 DEBUG    01.375 GB     22.526813075578872                                                                                                              
+00:01:05 DEBUG    01.375 GB                                                                                                                                     
+00:01:05 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:05 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:05 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:05 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:05 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:05 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:05 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:05 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:05 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:05 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:05 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:05 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:05 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:05 DEBUG    01.375 GB                                                                                                                                     
+00:01:07 INFO     01.375 GB PF 23/30 done in 2.96s (average CPU cores: 9.15; peak RSS: 02.179 GB)                                                               
+00:01:07 INFO     01.375 GB PF 24/30: z_idx=23, z=22.065503                                                                                                     
+00:01:07 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:07 DEBUG    01.375 GB     22.065503015273407                                                                                                              
+00:01:08 DEBUG    01.375 GB                                                                                                                                     
+00:01:08 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:08 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:08 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:08 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:08 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:08 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:08 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:08 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:08 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:08 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:08 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:08 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:08 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:08 DEBUG    01.375 GB                                                                                                                                     
+00:01:09 INFO     01.434 GB PF 24/30 done in 2.40s (average CPU cores: 10.10; peak RSS: 02.179 GB)                                                              
+00:01:10 INFO     01.434 GB PF 25/30: z_idx=24, z=21.613238                                                                                                     
+00:01:10 INFO     01.374 GB Existing PerturbedField found at z=21.613238250268047 and read in (seed=42).                                                        
+00:01:10 INFO     01.374 GB PF 25/30 done in 0.15s (average CPU cores: 0.45; peak RSS: 01.434 GB)                                                               
+00:01:10 INFO     01.374 GB PF 26/30: z_idx=25, z=21.169841                                                                                                     
+00:01:10 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:10 DEBUG    01.374 GB     21.16984142183142                                                                                                               
+00:01:10 DEBUG    01.374 GB                                                                                                                                     
+00:01:10 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:10 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:10 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:10 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:10 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:10 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:10 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:10 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:10 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:10 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:10 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:10 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:10 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:10 DEBUG    01.374 GB                                                                                                                                     
+00:01:12 INFO     01.375 GB PF 26/30 done in 2.09s (average CPU cores: 11.61; peak RSS: 02.179 GB)                                                              
+00:01:12 INFO     01.375 GB PF 27/30: z_idx=26, z=20.735139                                                                                                     
+00:01:12 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:12 DEBUG    01.375 GB     20.73513864885434                                                                                                               
+00:01:12 DEBUG    01.375 GB                                                                                                                                     
+00:01:12 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:12 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:12 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:12 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:12 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:12 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:12 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:12 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:12 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:12 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:12 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:12 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:12 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:12 DEBUG    01.375 GB                                                                                                                                     
+00:01:15 INFO     01.375 GB PF 27/30 done in 2.65s (average CPU cores: 10.08; peak RSS: 02.179 GB)                                                              
+00:01:15 INFO     01.375 GB PF 28/30: z_idx=27, z=20.308959                                                                                                     
+00:01:15 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:15 DEBUG    01.375 GB     20.308959459661118                                                                                                              
+00:01:15 DEBUG    01.375 GB                                                                                                                                     
+00:01:15 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:15 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:15 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:15 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:15 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:15 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:15 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:15 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:15 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:15 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:15 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:15 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:15 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:15 DEBUG    01.375 GB                                                                                                                                     
+00:01:17 INFO     01.374 GB PF 28/30 done in 2.28s (average CPU cores: 10.97; peak RSS: 02.179 GB)                                                              
+00:01:17 INFO     01.374 GB PF 29/30: z_idx=28, z=19.891137                                                                                                     
+00:01:17 DEBUG    01.374 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:17 DEBUG    01.374 GB     19.89113672515796                                                                                                               
+00:01:18 DEBUG    01.374 GB                                                                                                                                     
+00:01:18 DEBUG    01.374 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:18 DEBUG    01.374 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:18 DEBUG    01.374 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:18 DEBUG    01.374 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:18 DEBUG    01.374 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:18 DEBUG    01.374 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:18 DEBUG    01.374 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:18 DEBUG    01.374 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:18 DEBUG    01.374 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:18 DEBUG    01.374 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:18 DEBUG    01.374 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:18 DEBUG    01.374 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:18 DEBUG    01.374 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:18 DEBUG    01.374 GB                                                                                                                                     
+00:01:19 INFO     01.375 GB PF 29/30 done in 2.27s (average CPU cores: 10.64; peak RSS: 02.178 GB)                                                              
+00:01:19 INFO     01.375 GB PF 30/30: z_idx=29, z=19.481507                                                                                                     
+00:01:19 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:19 DEBUG    01.375 GB     19.481506593292117                                                                                                              
+00:01:20 DEBUG    01.375 GB                                                                                                                                     
+00:01:20 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:20 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:20 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:20 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:20 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:20 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:20 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:20 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:20 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:20 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:20 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:20 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:20 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:20 DEBUG    01.375 GB                                                                                                                                     
+00:01:22 INFO     01.375 GB PF 30/30 done in 2.74s (average CPU cores: 9.90; peak RSS: 02.179 GB)                                                               
+00:01:22 INFO     01.375 GB Completed N PF run in 82.61s                                                                                                        
+00:00:00 INFO     00.165 GB Starting N PF run: z_idx_start=30, N=30                                                                                             
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.168 GB PF 1/30: z_idx=30, z=19.079908                                                                                                      
+00:00:21 DEBUG    00.210 GB Reading array of shape (600, 600, 600) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
+00:00:21 DEBUG    01.015 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+00:00:21 DEBUG    01.045 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+00:00:21 DEBUG    01.075 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+00:00:21 DEBUG    01.104 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+00:00:21 DEBUG    01.134 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+00:00:21 DEBUG    01.164 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+00:00:21 DEBUG    01.194 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+00:00:21 DEBUG    01.224 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+00:00:21 DEBUG    01.253 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:21 DEBUG    01.253 GB     19.079908424796198                                                                                                              
+00:00:22 DEBUG    01.253 GB                                                                                                                                     
+00:00:22 DEBUG    01.253 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:22 DEBUG    01.253 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:22 DEBUG    01.253 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:22 DEBUG    01.253 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:22 DEBUG    01.253 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:22 DEBUG    01.253 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:22 DEBUG    01.253 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:22 DEBUG    01.253 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:22 DEBUG    01.253 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:22 DEBUG    01.253 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:22 DEBUG    01.253 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:22 DEBUG    01.253 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:22 DEBUG    01.253 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:22 DEBUG    01.253 GB                                                                                                                                     
+00:00:24 INFO     01.376 GB PF 1/30 done in 24.11s (average CPU cores: 6.25; peak RSS: 02.058 GB)                                                               
+00:00:24 INFO     01.376 GB PF 2/30: z_idx=31, z=18.686185                                                                                                      
+00:00:24 DEBUG    01.376 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:24 DEBUG    01.376 GB     18.686184730192352                                                                                                              
+00:00:24 DEBUG    01.376 GB                                                                                                                                     
+00:00:24 DEBUG    01.376 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:24 DEBUG    01.376 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:24 DEBUG    01.376 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:24 DEBUG    01.376 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:24 DEBUG    01.376 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:24 DEBUG    01.376 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:24 DEBUG    01.376 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:24 DEBUG    01.376 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:24 DEBUG    01.376 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:24 DEBUG    01.376 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.376 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.376 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:24 DEBUG    01.376 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:24 DEBUG    01.376 GB                                                                                                                                     
+00:00:26 INFO     01.375 GB PF 2/30 done in 2.41s (average CPU cores: 10.69; peak RSS: 02.180 GB)                                                               
+00:00:26 INFO     01.375 GB PF 3/30: z_idx=32, z=18.300181                                                                                                      
+00:00:26 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:26 DEBUG    01.375 GB     18.30018110803172                                                                                                               
+00:00:27 DEBUG    01.375 GB                                                                                                                                     
+00:00:27 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:27 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:27 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:27 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:27 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:27 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:27 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:27 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:27 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:27 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:27 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:27 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:27 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:27 DEBUG    01.375 GB                                                                                                                                     
+00:00:29 INFO     01.375 GB PF 3/30 done in 2.40s (average CPU cores: 10.86; peak RSS: 02.180 GB)                                                               
+00:00:29 INFO     01.375 GB PF 4/30: z_idx=33, z=17.921746                                                                                                      
+00:00:29 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:29 DEBUG    01.375 GB     17.921746184344826                                                                                                              
+00:00:29 DEBUG    01.375 GB                                                                                                                                     
+00:00:29 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:29 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:29 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:29 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:29 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:29 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:29 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:29 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:29 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:29 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:29 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:29 DEBUG    01.375 GB                                                                                                                                     
+00:00:31 INFO     01.375 GB PF 4/30 done in 2.46s (average CPU cores: 10.77; peak RSS: 02.179 GB)                                                               
+00:00:31 INFO     01.375 GB PF 5/30: z_idx=34, z=17.550732                                                                                                      
+00:00:31 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:31 DEBUG    01.375 GB     17.550731553279242                                                                                                              
+00:00:32 DEBUG    01.375 GB                                                                                                                                     
+00:00:32 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:32 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:32 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:32 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:32 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:32 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:32 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:32 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:32 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:32 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:32 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:32 DEBUG    01.375 GB                                                                                                                                     
+00:00:34 INFO     01.375 GB PF 5/30 done in 2.41s (average CPU cores: 10.82; peak RSS: 02.179 GB)                                                               
+00:00:34 INFO     01.375 GB PF 6/30: z_idx=35, z=17.186992                                                                                                      
+00:00:34 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:34 DEBUG    01.375 GB     17.18699171890122                                                                                                               
+00:00:34 DEBUG    01.375 GB                                                                                                                                     
+00:00:34 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:34 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:34 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:34 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:34 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:34 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:34 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:34 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:34 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:34 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:34 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:34 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:34 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:34 DEBUG    01.375 GB                                                                                                                                     
+00:00:36 INFO     01.375 GB PF 6/30 done in 2.31s (average CPU cores: 11.28; peak RSS: 02.180 GB)                                                               
+00:00:36 INFO     01.375 GB PF 7/30: z_idx=36, z=16.830384                                                                                                      
+00:00:36 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:36 DEBUG    01.375 GB     16.83038403813845                                                                                                               
+00:00:37 DEBUG    01.375 GB                                                                                                                                     
+00:00:37 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:37 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:37 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:37 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:37 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:37 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:37 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:37 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:37 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:37 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:37 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:37 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:37 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:37 DEBUG    01.375 GB                                                                                                                                     
+00:00:39 INFO     01.375 GB PF 7/30 done in 2.37s (average CPU cores: 11.03; peak RSS: 02.180 GB)                                                               
+00:00:39 INFO     01.375 GB PF 8/30: z_idx=37, z=16.480769                                                                                                      
+00:00:39 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:39 DEBUG    01.375 GB     16.480768664841623                                                                                                              
+00:00:39 DEBUG    01.375 GB                                                                                                                                     
+00:00:39 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:39 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:39 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:39 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:39 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:39 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:39 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:39 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:39 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:39 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:39 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:39 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:39 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:39 DEBUG    01.375 GB                                                                                                                                     
+00:00:41 INFO     01.376 GB PF 8/30 done in 2.08s (average CPU cores: 11.60; peak RSS: 02.179 GB)                                                               
+00:00:41 INFO     01.376 GB PF 9/30: z_idx=38, z=16.138008                                                                                                      
+00:00:41 DEBUG    01.376 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:41 DEBUG    01.376 GB     16.138008494942767                                                                                                              
+00:00:41 DEBUG    01.376 GB                                                                                                                                     
+00:00:41 DEBUG    01.376 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:41 DEBUG    01.376 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:41 DEBUG    01.376 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:41 DEBUG    01.376 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:41 DEBUG    01.376 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:41 DEBUG    01.376 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:41 DEBUG    01.376 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:41 DEBUG    01.376 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:41 DEBUG    01.376 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:41 DEBUG    01.376 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.376 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.376 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:41 DEBUG    01.376 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:41 DEBUG    01.376 GB                                                                                                                                     
+00:00:43 INFO     01.375 GB PF 9/30 done in 2.09s (average CPU cores: 11.61; peak RSS: 02.181 GB)                                                               
+00:00:43 INFO     01.375 GB PF 10/30: z_idx=39, z=15.801969                                                                                                     
+00:00:43 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:43 DEBUG    01.375 GB     15.80196911268899                                                                                                               
+00:00:43 DEBUG    01.375 GB                                                                                                                                     
+00:00:43 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:43 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:43 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:43 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:43 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:43 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:43 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:43 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:43 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:43 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:43 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:43 DEBUG    01.375 GB                                                                                                                                     
+00:00:45 INFO     01.375 GB PF 10/30 done in 2.25s (average CPU cores: 10.90; peak RSS: 02.180 GB)                                                              
+00:00:45 INFO     01.375 GB PF 11/30: z_idx=40, z=15.472519                                                                                                     
+00:00:45 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:45 DEBUG    01.375 GB     15.472518737930383                                                                                                              
+00:00:46 DEBUG    01.375 GB                                                                                                                                     
+00:00:46 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:46 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:46 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:46 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:46 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:46 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:46 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:46 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:46 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:46 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:46 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:46 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:46 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:46 DEBUG    01.375 GB                                                                                                                                     
+00:00:47 INFO     01.375 GB PF 11/30 done in 2.18s (average CPU cores: 11.39; peak RSS: 02.180 GB)                                                              
+00:00:47 INFO     01.375 GB PF 12/30: z_idx=41, z=15.149528                                                                                                     
+00:00:47 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:47 DEBUG    01.375 GB     15.149528174441553                                                                                                              
+00:00:48 DEBUG    01.375 GB                                                                                                                                     
+00:00:48 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:48 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:48 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:48 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:48 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:48 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:48 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:48 DEBUG    01.375 GB                                                                                                                                     
+00:00:50 INFO     01.376 GB PF 12/30 done in 2.43s (average CPU cores: 11.00; peak RSS: 02.180 GB)                                                              
+00:00:50 INFO     01.376 GB PF 13/30: z_idx=42, z=14.832871                                                                                                     
+00:00:50 DEBUG    01.376 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:50 DEBUG    01.376 GB     14.832870759256426                                                                                                              
+00:00:51 DEBUG    01.376 GB                                                                                                                                     
+00:00:51 DEBUG    01.376 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:51 DEBUG    01.376 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:51 DEBUG    01.376 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:51 DEBUG    01.376 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:51 DEBUG    01.376 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:51 DEBUG    01.376 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:51 DEBUG    01.376 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:51 DEBUG    01.376 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:51 DEBUG    01.376 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:51 DEBUG    01.376 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:51 DEBUG    01.376 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:51 DEBUG    01.376 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:51 DEBUG    01.376 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:51 DEBUG    01.376 GB                                                                                                                                     
+00:00:53 INFO     01.376 GB PF 13/30 done in 2.98s (average CPU cores: 9.08; peak RSS: 02.181 GB)                                                               
+00:00:53 INFO     01.376 GB PF 14/30: z_idx=43, z=14.522422                                                                                                     
+00:00:53 DEBUG    01.376 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:53 DEBUG    01.376 GB     14.522422312996499                                                                                                              
+00:00:54 DEBUG    01.376 GB                                                                                                                                     
+00:00:54 DEBUG    01.376 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:54 DEBUG    01.376 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:54 DEBUG    01.376 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:54 DEBUG    01.376 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:54 DEBUG    01.376 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:54 DEBUG    01.376 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:54 DEBUG    01.376 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:54 DEBUG    01.376 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:54 DEBUG    01.376 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:54 DEBUG    01.376 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:54 DEBUG    01.376 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:54 DEBUG    01.376 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:54 DEBUG    01.376 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:54 DEBUG    01.376 GB                                                                                                                                     
+00:00:55 INFO     01.375 GB PF 14/30 done in 2.25s (average CPU cores: 10.79; peak RSS: 02.181 GB)                                                              
+00:00:55 INFO     01.375 GB PF 15/30: z_idx=44, z=14.218061                                                                                                     
+00:00:55 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:55 DEBUG    01.375 GB     14.21806109117304                                                                                                               
+00:00:56 DEBUG    01.375 GB                                                                                                                                     
+00:00:56 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:56 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:56 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:56 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:56 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:56 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:56 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:56 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:56 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:56 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:56 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:56 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:56 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:56 DEBUG    01.375 GB                                                                                                                                     
+00:00:58 INFO     01.375 GB PF 15/30 done in 2.22s (average CPU cores: 10.98; peak RSS: 02.179 GB)                                                              
+00:00:58 INFO     01.375 GB PF 16/30: z_idx=45, z=13.919668                                                                                                     
+00:00:58 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:00:58 DEBUG    01.375 GB     13.919667736444158                                                                                                              
+00:00:58 DEBUG    01.375 GB                                                                                                                                     
+00:00:58 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:00:58 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:00:58 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:00:58 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:00:58 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:00:58 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:00:58 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:00:58 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:00:58 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:00:58 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:00:58 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:00:58 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:00:58 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:00:58 DEBUG    01.375 GB                                                                                                                                     
+00:01:00 INFO     01.375 GB PF 16/30 done in 2.13s (average CPU cores: 11.38; peak RSS: 02.180 GB)                                                              
+00:01:00 INFO     01.375 GB PF 17/30: z_idx=46, z=13.627125                                                                                                     
+00:01:00 DEBUG    01.375 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:00 DEBUG    01.375 GB     13.627125231808                                                                                                                 
+00:01:00 DEBUG    01.375 GB                                                                                                                                     
+00:01:00 DEBUG    01.375 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:00 DEBUG    01.375 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:00 DEBUG    01.375 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:00 DEBUG    01.375 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:00 DEBUG    01.375 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:00 DEBUG    01.375 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:00 DEBUG    01.375 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:00 DEBUG    01.375 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:00 DEBUG    01.375 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:00 DEBUG    01.375 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:00 DEBUG    01.375 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:00 DEBUG    01.375 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:00 DEBUG    01.375 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:00 DEBUG    01.375 GB                                                                                                                                     
+00:01:02 INFO     01.376 GB PF 17/30 done in 2.45s (average CPU cores: 10.02; peak RSS: 02.180 GB)                                                              
+00:01:02 INFO     01.376 GB PF 18/30: z_idx=47, z=13.340319                                                                                                     
+00:01:02 DEBUG    01.376 GB Calling ComputePerturbedField with following args:                                                                                  
+00:01:02 DEBUG    01.376 GB     13.340318854713725                                                                                                              
+00:01:03 DEBUG    01.376 GB                                                                                                                                     
+00:01:03 DEBUG    01.376 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:01:03 DEBUG    01.376 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:01:03 DEBUG    01.376 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:01:03 DEBUG    01.376 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:01:03 DEBUG    01.376 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:01:03 DEBUG    01.376 GB                     hires_density:  1.2496e-02,  1.5320e+00, -2.6406e+01,  2.7383e+01, -1.1574e-09                                  
+00:01:03 DEBUG    01.376 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:01:03 DEBUG    01.376 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:01:03 DEBUG    01.376 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:01:03 DEBUG    01.376 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:01:03 DEBUG    01.376 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:01:03 DEBUG    01.376 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:01:03 DEBUG    01.376 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:01:03 DEBUG    01.376 GB                                                                                                                                     
+00:01:05 INFO     01.375 GB PF 18/30 done in 2.56s (average CPU cores: 9.52; peak RSS: 02.181 GB)                                                               
+00:01:05 INFO     01.375 GB PF 19/30: z_idx=48, z=13.059136                                                                                                     

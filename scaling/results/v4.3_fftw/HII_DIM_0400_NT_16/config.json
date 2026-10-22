@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-22T01:13:37+00:00",
+  "fingerprint": {
+    "coeval_batch": 0,
+    "halo_catalog_mem_factor": 2.0,
+    "hii_dim": 400,
+    "inputs_sha256": "92dfd869a50aa505b46fe4cd463fae686f441b9736122a16b5a096644d968878",
+    "label": "v4.3_fftw",
+    "n_threads": 16,
+    "py21cmfast_version": "4.3.1",
+    "random_seed": 42,
+    "sim_steps_sha256": "73ba6c97087a69da76de577bf465f051f7768a81ff6c12ddbc5ba9ef8bdb13b9",
+    "template_sha256": "b0070339cb5275ea4e43c980533ab202d83a3e40aae16c3d791c8b41385497a9"
+  },
+  "schema": 1,
+  "setup": {
+    "astropy_version": "8.0.1",
+    "cffi_version": "2.1.0",
+    "classy_version": "3.3.4.0",
+    "created_utc": "2026-10-22T01:13:37+00:00",
+    "h5py_version": "3.16.0",
+    "halo_catalog_mem_factor": 2.0,
+    "hmf_version": "3.6.2",
+    "host": {
+      "OMP_DYNAMIC": "FALSE",
+      "OMP_NUM_THREADS": "16",
+      "OMP_PLACES": null,
+      "OMP_PROC_BIND": null,
+      "cpu_count": 96,
+      "cpu_model": "Intel(R) Xeon(R) Platinum 8274 CPU @ 3.20GHz",
+      "cpus_allowed": 16,
+      "hostname": "gadi-cpu-clx-1949.gadi.nci.org.au",
+      "mem_total_bytes": 202463887360,
+      "pbs_jobid": "181963532.gadi-pbs",
+      "pbs_ncpus": "16",
+      "pbs_queue": "normal-exec",
+      "pid": 2764423
+    },
+    "inputs_sha256": "92dfd869a50aa505b46fe4cd463fae686f441b9736122a16b5a096644d968878",
+    "inputs_summary": {
+      "BOX_LEN_Mpc": 600.0,
+      "DIM": 1200,
+      "HII_DIM": 400,
+      "MINIMIZE_MEMORY": true,
+      "N_THREADS": 16,
+      "USE_TS_FLUCT": true,
+      "has_discrete_halos": true,
+      "n_node_redshifts": 92,
+      "random_seed": 42,
+      "z_max": 35.37197473298901,
+      "z_min": 5.0
+    },
+    "memory_method": "vmhwm_reset",
+    "numpy_version": "2.5.1",
+    "phase": "setup",
+    "product_status": {
+      "coeval": {
+        "bytes": 0,
+        "complete": false,
+        "n_expected": 368,
+        "n_fresh": 0,
+        "n_present": 0
+      },
+      "ics": {
+        "bytes": 0,
+        "complete": false,
+        "n_expected": 1,
+        "n_fresh": 0,
+        "n_present": 0
+      },
+      "pf": {
+        "bytes": 0,
+        "complete": false,
+        "n_expected": 92,
+        "n_fresh": 0,
+        "n_present": 0
+      },
+      "phf": {
+        "bytes": 0,
+        "complete": false,
+        "n_expected": 92,
+        "n_fresh": 0,
+        "n_present": 0
+      }
+    },
+    "psutil_version": "7.2.2",
+    "py21cmfast_file": "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py",
+    "py21cmfast_version": "4.3.1",
+    "python": "3.13.14",
+    "python_executable": "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/bin/python",
+    "schema": 1,
+    "scipy_version": "1.18.0",
+    "sim_steps_sha256": "73ba6c97087a69da76de577bf465f051f7768a81ff6c12ddbc5ba9ef8bdb13b9",
+    "template_sha256": "b0070339cb5275ea4e43c980533ab202d83a3e40aae16c3d791c8b41385497a9"
+  },
+  "sim_dir": "/g/data/qp00/db9528/EOS26_scaling_sims/v4.3_fftw/HII_DIM_0400_NT_16",
+  "template": "/scratch/qp00/db9528/EOS26/scaling/templates/EOS26_v4.3_fftw.toml"
+}
