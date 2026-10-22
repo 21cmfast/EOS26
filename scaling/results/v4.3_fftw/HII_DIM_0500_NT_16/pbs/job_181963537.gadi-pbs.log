@@ -11,3 +11,7 @@ Currently Loaded Modulefiles:
 2026-10-22 17:04:34 [driver] INFO === phase phf (attempt 1) ===
 2026-10-22 17:15:24 [driver] INFO phase phf complete: peak RSS 47.58 GiB, wall 10.3m, 5.57 cores
 2026-10-22 17:15:24 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-23 00:28:32 [driver] INFO phase coeval complete: peak RSS 77.60 GiB, wall 7.21h, 6.04 cores
+2026-10-23 00:28:32 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3_fftw/HII_DIM_0500_NT_16
+2026-10-23 00:28:34 [driver] INFO configuration COMPLETE: max peak RSS 90.63 GiB
+=== 2026-10-22T13:28:35Z measure.py exit status 0

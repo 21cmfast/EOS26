@@ -353,3 +353,21 @@
 2026-10-22 23:38:40 py21cmfast.drivers.coeval INFO Computing Redshift 6.170555411733859 (83/92) iterations.
 2026-10-22 23:43:47 scaling.worker INFO step 82  coeval                 z=6.171 wall=5.1m     cores= 5.90 peak=72.87 GiB after=55.05 GiB
 2026-10-22 23:43:47 py21cmfast.drivers.coeval INFO Computing Redshift 6.029956286013588 (84/92) iterations.
+2026-10-22 23:48:44 scaling.worker INFO step 83  coeval                 z=6.030 wall=5.0m     cores= 6.07 peak=73.40 GiB after=55.52 GiB
+2026-10-22 23:48:44 py21cmfast.drivers.coeval INFO Computing Redshift 5.892114005895675 (85/92) iterations.
+2026-10-22 23:53:58 scaling.worker INFO step 84  coeval                 z=5.892 wall=5.2m     cores= 5.96 peak=73.93 GiB after=55.98 GiB
+2026-10-22 23:53:58 py21cmfast.drivers.coeval INFO Computing Redshift 5.756974515583996 (86/92) iterations.
+2026-10-22 23:58:23 scaling.worker INFO step 85  coeval                 z=5.757 wall=4.4m     cores= 6.68 peak=74.47 GiB after=56.45 GiB
+2026-10-22 23:58:23 py21cmfast.drivers.coeval INFO Computing Redshift 5.6244848191999965 (87/92) iterations.
+2026-10-23 00:03:02 scaling.worker INFO step 86  coeval                 z=5.624 wall=4.7m     cores= 6.37 peak=75.00 GiB after=56.87 GiB
+2026-10-23 00:03:02 py21cmfast.drivers.coeval INFO Computing Redshift 5.494592959999998 (88/92) iterations.
+2026-10-23 00:07:51 scaling.worker INFO step 87  coeval                 z=5.495 wall=4.8m     cores= 6.59 peak=75.49 GiB after=57.34 GiB
+2026-10-23 00:07:51 py21cmfast.drivers.coeval INFO Computing Redshift 5.367247999999998 (89/92) iterations.
+2026-10-23 00:12:55 scaling.worker INFO step 88  coeval                 z=5.367 wall=5.1m     cores= 6.66 peak=76.02 GiB after=57.80 GiB
+2026-10-23 00:12:55 py21cmfast.drivers.coeval INFO Computing Redshift 5.242399999999999 (90/92) iterations.
+2026-10-23 00:18:11 scaling.worker INFO step 89  coeval                 z=5.242 wall=5.3m     cores= 6.77 peak=76.54 GiB after=58.26 GiB
+2026-10-23 00:18:11 py21cmfast.drivers.coeval INFO Computing Redshift 5.119999999999999 (91/92) iterations.
+2026-10-23 00:23:22 scaling.worker INFO step 90  coeval                 z=5.120 wall=5.2m     cores= 6.62 peak=77.07 GiB after=58.73 GiB
+2026-10-23 00:23:22 py21cmfast.drivers.coeval INFO Computing Redshift 5.0 (92/92) iterations.
+2026-10-23 00:28:23 scaling.worker INFO step 91  coeval                 z=5.000 wall=5.0m     cores= 6.67 peak=77.60 GiB after=60.59 GiB
+2026-10-23 00:28:28 scaling.worker INFO phase coeval done: wall=7.21h cores=6.04 PEAK RSS=77.60 GiB (vmhwm_reset) products=368/368 fresh

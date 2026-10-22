@@ -1,0 +1,22 @@
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+Traceback (most recent call last):
+  File "/scratch/qp00/db9528/EOS26/scaling/bench_fft_wisdom.py", line 32, in <module>
+    fftw = ctypes.CDLL("libfftw3f.so.3")  # by soname: the copies already loaded
+  File "/home/376/db9528/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/ctypes/__init__.py", line 361, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/376/db9528/.local/share/uv/python/cpython-3.13.14-linux-x86_64-gnu/lib/python3.13/ctypes/__init__.py", line 403, in _load_library
+    return _dlopen(name, mode)
+OSError: libfftw3f.so.3: cannot open shared object file: No such file or directory
+
+======================================================================================
+                  Resource Usage on 2026-10-23 00:08:04:
+   Job Id:             182035766.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      0.40
+   NCPUs Requested:    16                  CPU Time Used: 00:00:09        
+   Memory Requested:   64.0GB                Memory Used: 401.19MB        
+   Walltime Requested: 01:00:00            Walltime Used: 00:00:45        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
