@@ -71170,3 +71170,260 @@
 00:12:55 DEBUG    03.894 GB                           Q_HI_zp: 0.993756367023912                                                                                
 00:12:55 DEBUG    03.894 GB                          NO_LIGHT: 0                                                                                                
 00:12:55 DEBUG    03.894 GB                                                                                                                                     
+00:12:55 DEBUG    03.864 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:12:56 DEBUG    03.864 GB     19.079908424796198                                                                                                              
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                          sfrd_acg:  7.7343e-15,  4.7347e-15,  7.1037e-19,  2.6886e-09,  9.2209e-13                                  
+00:12:56 DEBUG    03.894 GB                          sfrd_mcg:  1.0851e-13,  6.9605e-14,  1.8331e-16,  1.6347e-10,  1.7941e-12                                  
+00:12:56 DEBUG    03.894 GB                   xray_emissivity:  1.9012e-03,  1.2164e-03,  3.0894e-06,  2.1452e+01,  4.2946e-02                                  
+00:12:56 DEBUG    03.894 GB                             n_ion:  initialized                                                                                     
+00:12:56 DEBUG    03.894 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:12:56 DEBUG    03.894 GB               log10_mturn_acg_ave: None                                                                                             
+00:12:56 DEBUG    03.894 GB               log10_mturn_mcg_ave: None                                                                                             
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB     5                                                                                                                               
+00:12:56 DEBUG    03.894 GB     0.0                                                                                                                             
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:12:56 DEBUG    03.894 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:12:56 DEBUG    03.894 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:12:56 DEBUG    03.894 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                  spin_temperature:  uninitialized                                                                                   
+00:12:56 DEBUG    03.894 GB             xray_ionised_fraction:  1.8734e-04,  1.8813e-04,  1.8061e-04,  3.6407e-04,  1.8626e-04                                  
+00:12:56 DEBUG    03.894 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:12:56 DEBUG    03.894 GB                           J_21_LW:  7.8639e-02,  7.7585e-02,  4.6912e-02,  4.9946e+00,  9.3066e-02                                  
+00:12:56 DEBUG    03.894 GB                              Q_HI: 0.9948142493140888                                                                               
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                           zpp_avg:  1.9085e+01,  2.4477e+01,  1.9085e+01,  2.4477e+01,  1.9931e+01                                  
+00:12:56 DEBUG    03.894 GB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+00:12:56 DEBUG    03.894 GB                         zpp_edges:  1.9090e+01,  2.4981e+01,  1.9090e+01,  2.4981e+01,  2.0005e+01                                  
+00:12:56 DEBUG    03.894 GB         filtered_sfrd_acg_for_lya:  1.5136e-13,  2.0229e-14,  0.0000e+00,  3.3272e-10,  9.2044e-13                                  
+00:12:56 DEBUG    03.894 GB         filtered_sfrd_mcg_for_lya:  4.7285e-13,  1.7975e-13,  0.0000e+00,  6.4321e-11,  1.7919e-12                                  
+00:12:56 DEBUG    03.894 GB          filtered_xray_emissivity:  9.9891e-03,  3.2542e-03,  0.0000e+00,  5.7868e+00,  4.2886e-02                                  
+00:12:56 DEBUG    03.894 GB                 freq_int_heat_tbl:  1.2099e-15,  1.8845e-16,  3.8987e-17,  6.9789e-15,  2.2243e-15                                  
+00:12:56 DEBUG    03.894 GB                  freq_int_ion_tbl:  1.7663e-04,  7.5464e-08,  7.5464e-08,  1.7663e-04,  6.0740e-05                                  
+00:12:56 DEBUG    03.894 GB                  freq_int_lya_tbl:  1.9586e+06,  5.7040e+00,  5.7040e+00,  1.9586e+06,  6.1040e+05                                  
+00:12:56 DEBUG    03.894 GB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.5819e-16                                  
+00:12:56 DEBUG    03.894 GB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -7.1110e-06                                  
+00:12:56 DEBUG    03.894 GB             freq_int_lya_tbl_diff: -6.3299e+04,  0.0000e+00, -4.6256e+05,  0.0000e+00, -8.1482e+04                                  
+00:12:56 DEBUG    03.894 GB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+00:12:56 DEBUG    03.894 GB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e+00,  1.0750e-05                                  
+00:12:56 DEBUG    03.894 GB                   inverse_val_box:  6.6266e-01,  6.6867e-01,  1.4210e-03,  9.9887e-01,  6.5446e-01                                  
+00:12:56 DEBUG    03.894 GB         lya_flux_continuum_prefactor_acg:  4.1894e-07,  0.0000e+00,  0.0000e+00,  4.9430e-07,  4.1181e-07                           
+00:12:56 DEBUG    03.894 GB         lya_flux_injected_prefactor_acg:  7.9823e-07,  0.0000e+00,  0.0000e+00,  7.9823e-07,  1.9317e-07                            
+00:12:56 DEBUG    03.894 GB            lyw_flux_prefactor_acg:  2.1985e+08,  0.0000e+00,  0.0000e+00,  2.1985e+08,  1.2754e+08                                  
+00:12:56 DEBUG    03.894 GB            lyw_flux_prefactor_mcg:  3.2846e+07,  0.0000e+00,  0.0000e+00,  3.2846e+07,  1.7891e+07                                  
+00:12:56 DEBUG    03.894 GB         lya_flux_continuum_prefactor_mcg:  4.2228e-08,  0.0000e+00,  0.0000e+00,  5.8846e-08,  4.3079e-08                           
+00:12:56 DEBUG    03.894 GB         lya_flux_injected_prefactor_mcg:  2.5951e-07,  0.0000e+00,  0.0000e+00,  2.5951e-07,  5.0754e-08                            
+00:12:56 DEBUG    03.894 GB                 ave_log10_MturnLW:  6.2124e+00,  5.9255e+00,  5.9255e+00,  6.2124e+00,  6.1598e+00                                  
+00:12:56 DEBUG    03.894 GB                        x_e_ave_zp: 0.00018625902462595149                                                                           
+00:12:56 DEBUG    03.894 GB                           Q_HI_zp: 0.993756367023912                                                                                
+00:12:56 DEBUG    03.894 GB                          NO_LIGHT: 0                                                                                                
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.864 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:12:56 DEBUG    03.864 GB     19.079908424796198                                                                                                              
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                          sfrd_acg:  7.7486e-15,  4.7441e-15,  7.1192e-19,  2.7106e-09,  9.2366e-13                                  
+00:12:56 DEBUG    03.894 GB                          sfrd_mcg:  1.0864e-13,  6.9694e-14,  1.8359e-16,  1.6356e-10,  1.7960e-12                                  
+00:12:56 DEBUG    03.894 GB                   xray_emissivity:  1.9035e-03,  1.2180e-03,  3.0941e-06,  2.1472e+01,  4.2997e-02                                  
+00:12:56 DEBUG    03.894 GB                             n_ion:  initialized                                                                                     
+00:12:56 DEBUG    03.894 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:12:56 DEBUG    03.894 GB               log10_mturn_acg_ave: None                                                                                             
+00:12:56 DEBUG    03.894 GB               log10_mturn_mcg_ave: None                                                                                             
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB     4                                                                                                                               
+00:12:56 DEBUG    03.894 GB     0.0                                                                                                                             
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:12:56 DEBUG    03.894 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:12:56 DEBUG    03.894 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:12:56 DEBUG    03.894 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                  spin_temperature:  uninitialized                                                                                   
+00:12:56 DEBUG    03.894 GB             xray_ionised_fraction:  1.8734e-04,  1.8813e-04,  1.8061e-04,  3.6407e-04,  1.8626e-04                                  
+00:12:56 DEBUG    03.894 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:12:56 DEBUG    03.894 GB                           J_21_LW:  7.8639e-02,  7.7585e-02,  4.6912e-02,  4.9946e+00,  9.3066e-02                                  
+00:12:56 DEBUG    03.894 GB                              Q_HI: 0.9948142493140888                                                                               
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:56 DEBUG    03.894 GB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+00:12:56 DEBUG    03.894 GB                           zpp_avg:  1.9085e+01,  2.4477e+01,  1.9085e+01,  2.4477e+01,  1.9931e+01                                  
+00:12:56 DEBUG    03.894 GB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+00:12:56 DEBUG    03.894 GB                         zpp_edges:  1.9090e+01,  2.4981e+01,  1.9090e+01,  2.4981e+01,  2.0005e+01                                  
+00:12:56 DEBUG    03.894 GB         filtered_sfrd_acg_for_lya:  6.7475e-14,  8.0142e-15,  0.0000e+00,  4.2769e-10,  9.2216e-13                                  
+00:12:56 DEBUG    03.894 GB         filtered_sfrd_mcg_for_lya:  3.1288e-13,  1.3800e-13,  0.0000e+00,  7.3509e-11,  1.7941e-12                                  
+00:12:56 DEBUG    03.894 GB          filtered_xray_emissivity:  6.1327e-03,  2.3885e-03,  0.0000e+00,  7.2727e+00,  4.2946e-02                                  
+00:12:56 DEBUG    03.894 GB                 freq_int_heat_tbl:  1.2099e-15,  1.8845e-16,  3.8987e-17,  6.9789e-15,  2.2243e-15                                  
+00:12:56 DEBUG    03.894 GB                  freq_int_ion_tbl:  1.7663e-04,  7.5464e-08,  7.5464e-08,  1.7663e-04,  6.0740e-05                                  
+00:12:56 DEBUG    03.894 GB                  freq_int_lya_tbl:  1.9586e+06,  5.7040e+00,  5.7040e+00,  1.9586e+06,  6.1040e+05                                  
+00:12:56 DEBUG    03.894 GB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.5819e-16                                  
+00:12:56 DEBUG    03.894 GB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -7.1110e-06                                  
+00:12:56 DEBUG    03.894 GB             freq_int_lya_tbl_diff: -6.3299e+04,  0.0000e+00, -4.6256e+05,  0.0000e+00, -8.1482e+04                                  
+00:12:56 DEBUG    03.894 GB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+00:12:56 DEBUG    03.894 GB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e+00,  1.0750e-05                                  
+00:12:56 DEBUG    03.894 GB                   inverse_val_box:  6.6266e-01,  6.6867e-01,  1.4210e-03,  9.9887e-01,  6.5446e-01                                  
+00:12:56 DEBUG    03.894 GB         lya_flux_continuum_prefactor_acg:  4.1894e-07,  0.0000e+00,  0.0000e+00,  4.9430e-07,  4.1181e-07                           
+00:12:56 DEBUG    03.894 GB         lya_flux_injected_prefactor_acg:  7.9823e-07,  0.0000e+00,  0.0000e+00,  7.9823e-07,  1.9317e-07                            
+00:12:56 DEBUG    03.894 GB            lyw_flux_prefactor_acg:  2.1985e+08,  0.0000e+00,  0.0000e+00,  2.1985e+08,  1.2754e+08                                  
+00:12:56 DEBUG    03.894 GB            lyw_flux_prefactor_mcg:  3.2846e+07,  0.0000e+00,  0.0000e+00,  3.2846e+07,  1.7891e+07                                  
+00:12:56 DEBUG    03.894 GB         lya_flux_continuum_prefactor_mcg:  4.2228e-08,  0.0000e+00,  0.0000e+00,  5.8846e-08,  4.3079e-08                           
+00:12:56 DEBUG    03.894 GB         lya_flux_injected_prefactor_mcg:  2.5951e-07,  0.0000e+00,  0.0000e+00,  2.5951e-07,  5.0754e-08                            
+00:12:56 DEBUG    03.894 GB                 ave_log10_MturnLW:  6.2124e+00,  5.9255e+00,  5.9255e+00,  6.2124e+00,  6.1598e+00                                  
+00:12:56 DEBUG    03.894 GB                        x_e_ave_zp: 0.00018625902462595149                                                                           
+00:12:56 DEBUG    03.894 GB                           Q_HI_zp: 0.993756367023912                                                                                
+00:12:56 DEBUG    03.894 GB                          NO_LIGHT: 0                                                                                                
+00:12:56 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.864 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:12:57 DEBUG    03.864 GB     19.079908424796198                                                                                                              
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                          sfrd_acg:  7.7609e-15,  4.7521e-15,  7.1325e-19,  2.7293e-09,  9.2500e-13                                  
+00:12:57 DEBUG    03.894 GB                          sfrd_mcg:  1.0875e-13,  6.9771e-14,  1.8384e-16,  1.6364e-10,  1.7976e-12                                  
+00:12:57 DEBUG    03.894 GB                   xray_emissivity:  1.9054e-03,  1.2193e-03,  3.0981e-06,  2.1490e+01,  4.3042e-02                                  
+00:12:57 DEBUG    03.894 GB                             n_ion:  initialized                                                                                     
+00:12:57 DEBUG    03.894 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:12:57 DEBUG    03.894 GB               log10_mturn_acg_ave: None                                                                                             
+00:12:57 DEBUG    03.894 GB               log10_mturn_mcg_ave: None                                                                                             
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB     3                                                                                                                               
+00:12:57 DEBUG    03.894 GB     0.0                                                                                                                             
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:12:57 DEBUG    03.894 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:12:57 DEBUG    03.894 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:12:57 DEBUG    03.894 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                  spin_temperature:  uninitialized                                                                                   
+00:12:57 DEBUG    03.894 GB             xray_ionised_fraction:  1.8734e-04,  1.8813e-04,  1.8061e-04,  3.6407e-04,  1.8626e-04                                  
+00:12:57 DEBUG    03.894 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:12:57 DEBUG    03.894 GB                           J_21_LW:  7.8639e-02,  7.7585e-02,  4.6912e-02,  4.9946e+00,  9.3066e-02                                  
+00:12:57 DEBUG    03.894 GB                              Q_HI: 0.9948142493140888                                                                               
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                           zpp_avg:  1.9085e+01,  2.4477e+01,  1.9085e+01,  2.4477e+01,  1.9931e+01                                  
+00:12:57 DEBUG    03.894 GB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+00:12:57 DEBUG    03.894 GB                         zpp_edges:  1.9090e+01,  2.4981e+01,  1.9090e+01,  2.4981e+01,  2.0005e+01                                  
+00:12:57 DEBUG    03.894 GB         filtered_sfrd_acg_for_lya:  1.4121e-14,  8.0359e-15,  0.0000e+00,  4.8753e-10,  9.2397e-13                                  
+00:12:57 DEBUG    03.894 GB         filtered_sfrd_mcg_for_lya:  2.0704e-13,  1.2095e-13,  0.0000e+00,  8.6086e-11,  1.7960e-12                                  
+00:12:57 DEBUG    03.894 GB          filtered_xray_emissivity:  3.6126e-03,  2.1081e-03,  0.0000e+00,  8.2838e+00,  4.2998e-02                                  
+00:12:57 DEBUG    03.894 GB                 freq_int_heat_tbl:  1.2099e-15,  1.8845e-16,  3.8987e-17,  6.9789e-15,  2.2243e-15                                  
+00:12:57 DEBUG    03.894 GB                  freq_int_ion_tbl:  1.7663e-04,  7.5464e-08,  7.5464e-08,  1.7663e-04,  6.0740e-05                                  
+00:12:57 DEBUG    03.894 GB                  freq_int_lya_tbl:  1.9586e+06,  5.7040e+00,  5.7040e+00,  1.9586e+06,  6.1040e+05                                  
+00:12:57 DEBUG    03.894 GB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.5819e-16                                  
+00:12:57 DEBUG    03.894 GB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -7.1110e-06                                  
+00:12:57 DEBUG    03.894 GB             freq_int_lya_tbl_diff: -6.3299e+04,  0.0000e+00, -4.6256e+05,  0.0000e+00, -8.1482e+04                                  
+00:12:57 DEBUG    03.894 GB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+00:12:57 DEBUG    03.894 GB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e+00,  1.0750e-05                                  
+00:12:57 DEBUG    03.894 GB                   inverse_val_box:  6.6266e-01,  6.6867e-01,  1.4210e-03,  9.9887e-01,  6.5446e-01                                  
+00:12:57 DEBUG    03.894 GB         lya_flux_continuum_prefactor_acg:  4.1894e-07,  0.0000e+00,  0.0000e+00,  4.9430e-07,  4.1181e-07                           
+00:12:57 DEBUG    03.894 GB         lya_flux_injected_prefactor_acg:  7.9823e-07,  0.0000e+00,  0.0000e+00,  7.9823e-07,  1.9317e-07                            
+00:12:57 DEBUG    03.894 GB            lyw_flux_prefactor_acg:  2.1985e+08,  0.0000e+00,  0.0000e+00,  2.1985e+08,  1.2754e+08                                  
+00:12:57 DEBUG    03.894 GB            lyw_flux_prefactor_mcg:  3.2846e+07,  0.0000e+00,  0.0000e+00,  3.2846e+07,  1.7891e+07                                  
+00:12:57 DEBUG    03.894 GB         lya_flux_continuum_prefactor_mcg:  4.2228e-08,  0.0000e+00,  0.0000e+00,  5.8846e-08,  4.3079e-08                           
+00:12:57 DEBUG    03.894 GB         lya_flux_injected_prefactor_mcg:  2.5951e-07,  0.0000e+00,  0.0000e+00,  2.5951e-07,  5.0754e-08                            
+00:12:57 DEBUG    03.894 GB                 ave_log10_MturnLW:  6.2124e+00,  5.9255e+00,  5.9255e+00,  6.2124e+00,  6.1598e+00                                  
+00:12:57 DEBUG    03.894 GB                        x_e_ave_zp: 0.00018625902462595149                                                                           
+00:12:57 DEBUG    03.894 GB                           Q_HI_zp: 0.993756367023912                                                                                
+00:12:57 DEBUG    03.894 GB                          NO_LIGHT: 0                                                                                                
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.864 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:12:57 DEBUG    03.864 GB     19.079908424796198                                                                                                              
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                          sfrd_acg:  7.7714e-15,  4.7590e-15,  7.1439e-19,  2.7453e-09,  9.2614e-13                                  
+00:12:57 DEBUG    03.894 GB                          sfrd_mcg:  1.0884e-13,  6.9836e-14,  1.8404e-16,  1.6371e-10,  1.7989e-12                                  
+00:12:57 DEBUG    03.894 GB                   xray_emissivity:  1.9070e-03,  1.2204e-03,  3.1016e-06,  2.1505e+01,  4.3079e-02                                  
+00:12:57 DEBUG    03.894 GB                             n_ion:  initialized                                                                                     
+00:12:57 DEBUG    03.894 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:12:57 DEBUG    03.894 GB               log10_mturn_acg_ave: None                                                                                             
+00:12:57 DEBUG    03.894 GB               log10_mturn_mcg_ave: None                                                                                             
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB     2                                                                                                                               
+00:12:57 DEBUG    03.894 GB     0.0                                                                                                                             
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:12:57 DEBUG    03.894 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:12:57 DEBUG    03.894 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:12:57 DEBUG    03.894 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                  spin_temperature:  uninitialized                                                                                   
+00:12:57 DEBUG    03.894 GB             xray_ionised_fraction:  1.8734e-04,  1.8813e-04,  1.8061e-04,  3.6407e-04,  1.8626e-04                                  
+00:12:57 DEBUG    03.894 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:12:57 DEBUG    03.894 GB                           J_21_LW:  7.8639e-02,  7.7585e-02,  4.6912e-02,  4.9946e+00,  9.3066e-02                                  
+00:12:57 DEBUG    03.894 GB                              Q_HI: 0.9948142493140888                                                                               
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:57 DEBUG    03.894 GB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+00:12:57 DEBUG    03.894 GB                           zpp_avg:  1.9085e+01,  2.4477e+01,  1.9085e+01,  2.4477e+01,  1.9931e+01                                  
+00:12:57 DEBUG    03.894 GB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+00:12:57 DEBUG    03.894 GB                         zpp_edges:  1.9090e+01,  2.4981e+01,  1.9090e+01,  2.4981e+01,  2.0005e+01                                  
+00:12:57 DEBUG    03.894 GB         filtered_sfrd_acg_for_lya:  0.0000e+00,  1.1139e-14,  0.0000e+00,  6.0839e-10,  9.2591e-13                                  
+00:12:57 DEBUG    03.894 GB         filtered_sfrd_mcg_for_lya:  1.4430e-13,  1.1318e-13,  0.0000e+00,  9.7211e-11,  1.7976e-12                                  
+00:12:57 DEBUG    03.894 GB          filtered_xray_emissivity:  2.1674e-03,  2.0255e-03,  0.0000e+00,  1.0079e+01,  4.3043e-02                                  
+00:12:57 DEBUG    03.894 GB                 freq_int_heat_tbl:  1.2099e-15,  1.8845e-16,  3.8987e-17,  6.9789e-15,  2.2243e-15                                  
+00:12:57 DEBUG    03.894 GB                  freq_int_ion_tbl:  1.7663e-04,  7.5464e-08,  7.5464e-08,  1.7663e-04,  6.0740e-05                                  
+00:12:57 DEBUG    03.894 GB                  freq_int_lya_tbl:  1.9586e+06,  5.7040e+00,  5.7040e+00,  1.9586e+06,  6.1040e+05                                  
+00:12:57 DEBUG    03.894 GB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.5819e-16                                  
+00:12:57 DEBUG    03.894 GB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -7.1110e-06                                  
+00:12:57 DEBUG    03.894 GB             freq_int_lya_tbl_diff: -6.3299e+04,  0.0000e+00, -4.6256e+05,  0.0000e+00, -8.1482e+04                                  
+00:12:57 DEBUG    03.894 GB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+00:12:57 DEBUG    03.894 GB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e+00,  1.0750e-05                                  
+00:12:57 DEBUG    03.894 GB                   inverse_val_box:  6.6266e-01,  6.6867e-01,  1.4210e-03,  9.9887e-01,  6.5446e-01                                  
+00:12:57 DEBUG    03.894 GB         lya_flux_continuum_prefactor_acg:  4.1894e-07,  0.0000e+00,  0.0000e+00,  4.9430e-07,  4.1181e-07                           
+00:12:57 DEBUG    03.894 GB         lya_flux_injected_prefactor_acg:  7.9823e-07,  0.0000e+00,  0.0000e+00,  7.9823e-07,  1.9317e-07                            
+00:12:57 DEBUG    03.894 GB            lyw_flux_prefactor_acg:  2.1985e+08,  0.0000e+00,  0.0000e+00,  2.1985e+08,  1.2754e+08                                  
+00:12:57 DEBUG    03.894 GB            lyw_flux_prefactor_mcg:  3.2846e+07,  0.0000e+00,  0.0000e+00,  3.2846e+07,  1.7891e+07                                  
+00:12:57 DEBUG    03.894 GB         lya_flux_continuum_prefactor_mcg:  4.2228e-08,  0.0000e+00,  0.0000e+00,  5.8846e-08,  4.3079e-08                           
+00:12:57 DEBUG    03.894 GB         lya_flux_injected_prefactor_mcg:  2.5951e-07,  0.0000e+00,  0.0000e+00,  2.5951e-07,  5.0754e-08                            
+00:12:57 DEBUG    03.894 GB                 ave_log10_MturnLW:  6.2124e+00,  5.9255e+00,  5.9255e+00,  6.2124e+00,  6.1598e+00                                  
+00:12:57 DEBUG    03.894 GB                        x_e_ave_zp: 0.00018625902462595149                                                                           
+00:12:57 DEBUG    03.894 GB                           Q_HI_zp: 0.993756367023912                                                                                
+00:12:57 DEBUG    03.894 GB                          NO_LIGHT: 0                                                                                                
+00:12:57 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.864 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:12:58 DEBUG    03.864 GB     19.079908424796198                                                                                                              
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.894 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:12:58 DEBUG    03.894 GB                          sfrd_acg:  7.7803e-15,  4.7648e-15,  7.1536e-19,  2.7590e-09,  9.2712e-13                                  
+00:12:58 DEBUG    03.894 GB                          sfrd_mcg:  1.0892e-13,  6.9892e-14,  1.8422e-16,  1.6377e-10,  1.8001e-12                                  
+00:12:58 DEBUG    03.894 GB                   xray_emissivity:  1.9084e-03,  1.2214e-03,  3.1045e-06,  2.1517e+01,  4.3111e-02                                  
+00:12:58 DEBUG    03.894 GB                             n_ion:  initialized                                                                                     
+00:12:58 DEBUG    03.894 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:12:58 DEBUG    03.894 GB               log10_mturn_acg_ave: None                                                                                             
+00:12:58 DEBUG    03.894 GB               log10_mturn_mcg_ave: None                                                                                             
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.894 GB     1                                                                                                                               
+00:12:58 DEBUG    03.894 GB     0.0                                                                                                                             
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.894 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:12:58 DEBUG    03.894 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:12:58 DEBUG    03.894 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:12:58 DEBUG    03.894 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:12:58 DEBUG    03.894 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
+00:12:58 DEBUG    03.894 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:12:58 DEBUG    03.894 GB                  spin_temperature:  uninitialized                                                                                   
+00:12:58 DEBUG    03.894 GB             xray_ionised_fraction:  1.8734e-04,  1.8813e-04,  1.8061e-04,  3.6407e-04,  1.8626e-04                                  
+00:12:58 DEBUG    03.894 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:12:58 DEBUG    03.894 GB                           J_21_LW:  7.8639e-02,  7.7585e-02,  4.6912e-02,  4.9946e+00,  9.3066e-02                                  
+00:12:58 DEBUG    03.894 GB                              Q_HI: 0.9948142493140888                                                                               
+00:12:58 DEBUG    03.894 GB                                                                                                                                     
