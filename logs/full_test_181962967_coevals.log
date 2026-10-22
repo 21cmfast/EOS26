@@ -71658,3 +71658,201 @@
 00:13:04 DEBUG    03.773 GB                                                                                                                                     
 00:13:05 INFO     03.773 GB coeval 31/50: z=19.079908                                                                                                           
 00:13:05 INFO     03.773 GB coeval 31/50 done in 28.34s (average CPU cores: 9.88; peak RSS: 03.983 GB)                                                          
+00:13:05 DEBUG    03.594 GB gc.collect() after coeval 31/50 collected 0 objects                                                                                 
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                  
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (18,) and dtype float32 from disk                                                                            
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                    
+00:13:05 DEBUG    03.594 GB Reading array of shape (18,) and dtype float32 from disk                                                                            
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                       
+00:13:05 DEBUG    03.594 GB Reading array of shape (18,) and dtype float32 from disk                                                                            
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                        
+00:13:05 DEBUG    03.594 GB Reading array of shape (18,) and dtype float32 from disk                                                                            
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                       
+00:13:05 DEBUG    03.594 GB Reading array of shape (18, 3) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                    
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/InitialConditions.h5'),     
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                   
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))             
+00:13:05 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                         
+00:13:05 DEBUG    03.594 GB Calling ComputeEmissivityFields with following args:                                                                                
+00:13:05 DEBUG    03.594 GB     18.686184730192352                                                                                                              
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:13:05 DEBUG    03.594 GB                    lowres_density: -2.6140e+00, -4.5645e+00, -1.4966e+01,  1.6908e+01, -1.2204e-04                                  
+00:13:05 DEBUG    03.594 GB                         lowres_vx:  8.5040e+00,  6.0567e+00, -3.2279e+01,  3.0420e+01,  4.5000e-06                                  
+00:13:05 DEBUG    03.594 GB                         lowres_vy: -9.2182e+00, -1.0282e+01, -2.7447e+01,  3.0323e+01, -9.2028e-06                                  
+00:13:05 DEBUG    03.594 GB                         lowres_vz: -3.9029e+00, -7.1187e+00, -3.1791e+01,  3.1595e+01, -1.3060e-06                                  
+00:13:05 DEBUG    03.594 GB                     hires_density:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB                    lowres_vx_2LPT: -9.1355e+00, -8.2334e+00, -5.3209e+01,  4.7243e+01,  7.9824e-06                                  
+00:13:05 DEBUG    03.594 GB                    lowres_vy_2LPT:  2.1065e+00,  5.7096e+00, -3.5061e+01,  3.9932e+01, -2.9990e-05                                  
+00:13:05 DEBUG    03.594 GB                    lowres_vz_2LPT:  4.7980e+00,  1.2236e+01, -3.9400e+01,  4.2632e+01, -2.8166e-06                                  
+00:13:05 DEBUG    03.594 GB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:13:05 DEBUG    03.594 GB                           density: -2.0004e-01, -2.7285e-01, -4.9129e-01,  1.5573e+00,  0.0000e+00                                  
+00:13:05 DEBUG    03.594 GB                        velocity_z: -2.1808e-17, -3.8931e-17, -2.1475e-16,  2.1251e-16,  1.3599e-27                                  
+00:13:05 DEBUG    03.594 GB                        velocity_x:  4.4182e-17,  3.2363e-17, -2.1897e-16,  2.0767e-16,  0.0000e+00                                  
+00:13:05 DEBUG    03.594 GB                        velocity_y: -5.9722e-17, -5.9243e-17, -1.8627e-16,  2.0425e-16,  1.7788e-26                                  
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+00:13:05 DEBUG    03.594 GB                       halo_masses:  7.2731e+09,  1.0546e+10,  5.0261e+09,  1.0546e+10,  6.4980e+09                                  
+00:13:05 DEBUG    03.594 GB                          star_rng: -2.1257e-01, -2.4291e-01, -2.2459e+00,  1.7861e+00,  1.0725e-02                                  
+00:13:05 DEBUG    03.594 GB                           sfr_rng:  1.0355e+00,  4.1364e-01, -1.7762e+00,  1.9968e+00, -9.4943e-02                                  
+00:13:05 DEBUG    03.594 GB                          xray_rng:  3.6832e-01, -3.8677e-01, -1.3804e+00,  1.6410e+00,  1.2069e-01                                  
+00:13:05 DEBUG    03.594 GB                       halo_coords:  8.6422e+00,  2.3446e+02,  2.7362e+00,  2.9913e+02,  1.3796e+02                                  
+00:13:05 DEBUG    03.594 GB                           n_halos: 18                                                                                               
+00:13:05 DEBUG    03.594 GB                       buffer_size: 18                                                                                               
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:05 DEBUG    03.594 GB                  spin_temperature:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB             xray_ionised_fraction:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB                           J_21_LW:  9.5783e-02,  9.4532e-02,  5.7654e-02,  8.1458e+00,  1.1319e-01                                  
+00:13:05 DEBUG    03.594 GB                              Q_HI: 0.993756367023912                                                                                
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:05 DEBUG    03.594 GB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:05 DEBUG    03.594 GB                  neutral_fraction:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0495e+00,  2.4766e-07                                  
+00:13:05 DEBUG    03.594 GB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -9.9999e-01                                  
+00:13:05 DEBUG    03.594 GB         cumulative_recombinations:  uninitialized                                                                                   
+00:13:05 DEBUG    03.594 GB            nion_unconditional_acg: 0.007092554987607073                                                                             
+00:13:05 DEBUG    03.594 GB            nion_unconditional_mcg: 2.630461991171678e-07                                                                            
+00:13:05 DEBUG    03.594 GB               log10_mturn_ave_acg: 7.53536542458459                                                                                 
+00:13:05 DEBUG    03.594 GB               log10_mturn_ave_mcg: 6.212831446892379                                                                                
+00:13:05 DEBUG    03.594 GB                                                                                                                                     
+00:13:06 DEBUG    03.594 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/xray_ionised_fraction'))                     
+00:13:06 DEBUG    03.594 GB Calling SetupRadiationFields with following args:                                                                                   
+00:13:06 DEBUG    03.594 GB     18.686184730192352                                                                                                              
+00:13:06 DEBUG    03.594 GB                                                                                                                                     
+00:13:06 DEBUG    03.594 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:06 DEBUG    03.594 GB                  spin_temperature:  uninitialized                                                                                   
+00:13:06 DEBUG    03.594 GB             xray_ionised_fraction:  1.8795e-04,  1.8876e-04,  1.8095e-04,  3.9798e-04,  1.8708e-04                                  
+00:13:06 DEBUG    03.594 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:13:06 DEBUG    03.594 GB                           J_21_LW:  9.5783e-02,  9.4532e-02,  5.7654e-02,  8.1458e+00,  1.1319e-01                                  
+00:13:06 DEBUG    03.594 GB                              Q_HI: 0.993756367023912                                                                                
+00:13:06 DEBUG    03.594 GB                                                                                                                                     
+00:13:06 DEBUG    03.595 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:13:06 DEBUG    03.595 GB     18.686184730192352                                                                                                              
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:13:07 DEBUG    03.595 GB                          sfrd_acg:  2.5301e-16,  1.2424e-16,  1.1827e-20,  1.7619e-10,  4.3729e-14                                  
+00:13:07 DEBUG    03.595 GB                          sfrd_mcg:  1.1961e-14,  6.4694e-15,  1.0255e-17,  5.5598e-11,  2.5785e-13                                  
+00:13:07 DEBUG    03.595 GB                   xray_emissivity:  2.1379e-04,  1.1547e-04,  1.8178e-07,  3.6892e+00,  5.2039e-03                                  
+00:13:07 DEBUG    03.595 GB                             n_ion:  initialized                                                                                     
+00:13:07 DEBUG    03.595 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:13:07 DEBUG    03.595 GB               log10_mturn_acg_ave: None                                                                                             
+00:13:07 DEBUG    03.595 GB               log10_mturn_mcg_ave: None                                                                                             
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB     39                                                                                                                              
+00:13:07 DEBUG    03.595 GB     0.0                                                                                                                             
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:13:07 DEBUG    03.595 GB                           density: -2.0004e-01, -2.7285e-01, -4.9129e-01,  1.5573e+00,  0.0000e+00                                  
+00:13:07 DEBUG    03.595 GB                        velocity_z: -2.1808e-17, -3.8931e-17, -2.1475e-16,  2.1251e-16,  1.3599e-27                                  
+00:13:07 DEBUG    03.595 GB                        velocity_x:  4.4182e-17,  3.2363e-17, -2.1897e-16,  2.0767e-16,  0.0000e+00                                  
+00:13:07 DEBUG    03.595 GB                        velocity_y: -5.9722e-17, -5.9243e-17, -1.8627e-16,  2.0425e-16,  1.7788e-26                                  
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:07 DEBUG    03.595 GB                  spin_temperature:  uninitialized                                                                                   
+00:13:07 DEBUG    03.595 GB             xray_ionised_fraction:  1.8795e-04,  1.8876e-04,  1.8095e-04,  3.9798e-04,  1.8708e-04                                  
+00:13:07 DEBUG    03.595 GB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:13:07 DEBUG    03.595 GB                           J_21_LW:  9.5783e-02,  9.4532e-02,  5.7654e-02,  8.1458e+00,  1.1319e-01                                  
+00:13:07 DEBUG    03.595 GB                              Q_HI: 0.993756367023912                                                                                
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.595 GB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+00:13:07 DEBUG    03.595 GB                           zpp_avg:  1.8691e+01,  2.3914e+01,  1.8691e+01,  2.3914e+01,  1.9512e+01                                  
+00:13:07 DEBUG    03.595 GB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+00:13:07 DEBUG    03.595 GB                         zpp_edges:  1.8696e+01,  2.4402e+01,  1.8696e+01,  2.4402e+01,  1.9583e+01                                  
+00:13:07 DEBUG    03.595 GB         filtered_sfrd_acg_for_lya:  7.8086e-15,  4.7833e-15,  7.1843e-19,  2.8022e-09,  9.3021e-13                                  
+00:13:07 DEBUG    03.595 GB         filtered_sfrd_mcg_for_lya:  1.0917e-13,  7.0069e-14,  1.8479e-16,  1.6395e-10,  1.8038e-12                                  
+00:13:07 DEBUG    03.595 GB          filtered_xray_emissivity:  1.9128e-03,  1.2245e-03,  3.1138e-06,  2.1558e+01,  4.3213e-02                                  
+00:13:07 DEBUG    03.595 GB                 freq_int_heat_tbl:  1.2099e-15,  1.9546e-16,  4.0495e-17,  6.9789e-15,  2.2474e-15                                  
+00:13:07 DEBUG    03.595 GB                  freq_int_ion_tbl:  1.7663e-04,  7.9047e-08,  7.9047e-08,  1.7663e-04,  6.1372e-05                                  
+00:13:07 DEBUG    03.595 GB                  freq_int_lya_tbl:  2.0178e+06,  6.0473e+00,  6.0473e+00,  2.0178e+06,  6.3532e+05                                  
+00:13:07 DEBUG    03.595 GB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.5980e-16                                  
+00:13:07 DEBUG    03.595 GB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -7.1849e-06                                  
+00:13:07 DEBUG    03.595 GB             freq_int_lya_tbl_diff: -6.5211e+04,  0.0000e+00, -4.7653e+05,  0.0000e+00, -8.4810e+04                                  
+00:13:07 DEBUG    03.595 GB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+00:13:07 DEBUG    03.595 GB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0000e+00,  1.9500e-05                                  
+00:13:07 DEBUG    03.595 GB                   inverse_val_box:  6.6731e-01,  6.7344e-01,  2.9320e-04,  9.9911e-01,  6.6068e-01                                  
+00:13:07 DEBUG    03.595 GB         lya_flux_continuum_prefactor_acg:  3.9477e-07,  0.0000e+00,  0.0000e+00,  4.7875e-07,  3.8874e-07                           
+00:13:07 DEBUG    03.595 GB         lya_flux_injected_prefactor_acg:  7.5221e-07,  0.0000e+00,  0.0000e+00,  7.5221e-07,  1.8207e-07                            
+00:13:07 DEBUG    03.595 GB            lyw_flux_prefactor_acg:  2.0720e+08,  0.0000e+00,  0.0000e+00,  2.0720e+08,  1.2051e+08                                  
+00:13:07 DEBUG    03.595 GB            lyw_flux_prefactor_mcg:  3.0960e+07,  0.0000e+00,  0.0000e+00,  3.0960e+07,  1.6907e+07                                  
+00:13:07 DEBUG    03.595 GB         lya_flux_continuum_prefactor_mcg:  3.9792e-08,  0.0000e+00,  0.0000e+00,  5.8592e-08,  4.0704e-08                           
+00:13:07 DEBUG    03.595 GB         lya_flux_injected_prefactor_mcg:  2.4454e-07,  0.0000e+00,  0.0000e+00,  2.4454e-07,  4.7813e-08                            
+00:13:07 DEBUG    03.595 GB                 ave_log10_MturnLW:  6.2424e+00,  5.9470e+00,  5.9470e+00,  6.2424e+00,  6.1884e+00                                  
+00:13:07 DEBUG    03.595 GB                        x_e_ave_zp: 0.00018708096755248697                                                                           
+00:13:07 DEBUG    03.595 GB                           Q_HI_zp: 0.9925160950624254                                                                               
+00:13:07 DEBUG    03.595 GB                          NO_LIGHT: 0                                                                                                
+00:13:07 DEBUG    03.595 GB                                                                                                                                     
+00:13:07 DEBUG    03.892 GB Calling UpdateRadiationFields with following args:                                                                                  
+00:13:07 DEBUG    03.892 GB     18.686184730192352                                                                                                              
+00:13:07 DEBUG    03.892 GB                                                                                                                                     
+00:13:07 DEBUG    03.892 GB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+00:13:07 DEBUG    03.892 GB                          sfrd_acg:  4.8976e-16,  2.4942e-16,  2.5910e-20,  2.7121e-10,  7.8313e-14                                  
+00:13:07 DEBUG    03.892 GB                          sfrd_mcg:  1.8637e-14,  1.0380e-14,  1.8055e-17,  6.7200e-11,  3.8089e-13                                  
+00:13:07 DEBUG    03.892 GB                   xray_emissivity:  3.3153e-04,  1.8434e-04,  3.1756e-07,  5.2595e+00,  7.8296e-03                                  
+00:13:07 DEBUG    03.892 GB                             n_ion:  initialized                                                                                     
+00:13:07 DEBUG    03.892 GB                fesc_weighted_sfrd:  initialized                                                                                     
+00:13:07 DEBUG    03.892 GB               log10_mturn_acg_ave: None                                                                                             
+00:13:07 DEBUG    03.892 GB               log10_mturn_mcg_ave: None                                                                                             
+00:13:07 DEBUG    03.892 GB                                                                                                                                     
+00:13:07 DEBUG    03.892 GB     38                                                                                                                              
+00:13:07 DEBUG    03.892 GB     0.0                                                                                                                             
