@@ -123,6 +123,65 @@ def apply_coeval_runtime_overrides() -> dict[str, Any]:
     return _runtime_overrides
 
 
+# ------------------------------------------------------------- damaged cache files
+def h5_problem(path: str | Path) -> str | None:
+    """None if the HDF5 file at `path` reads cleanly, else what is wrong with it.
+
+    Opens every group and dataset, reads every attribute and the last element of every
+    dataset, and checks that the file is at least as large as the data it claims to
+    hold. That finds files cut short by a job killed while writing (e.g. h5py
+    "address of object past end of allocation") without reading the whole file, so it
+    is cheap even for the HII_DIM=1500 boxes.
+    """
+    import h5py
+
+    path = Path(path)
+    try:
+        with h5py.File(path, "r") as f:
+            stored = 0
+
+            def visit(name, obj):
+                nonlocal stored
+                dict(obj.attrs)
+                if isinstance(obj, h5py.Dataset):
+                    stored += obj.id.get_storage_size()
+                    if obj.size:
+                        obj[(-1,) * obj.ndim] if obj.ndim else obj[()]
+
+            dict(f.attrs)
+            f.visititems(visit)
+        if path.stat().st_size < stored:
+            return f"file is {path.stat().st_size} bytes but holds {stored} bytes of data"
+    except Exception as exc:  # noqa: BLE001  (h5py raises KeyError, OSError, RuntimeError, ...)
+        return f"{type(exc).__name__}: {exc}"
+    return None
+
+
+def quarantine(path: str | Path) -> Path:
+    """Rename a damaged cache file to <name>.corrupt-<time>, so it is recomputed (not deleted)."""
+    import time
+
+    path = Path(path)
+    target = path.with_name(f"{path.name}.corrupt-{time.strftime('%Y%m%dT%H%M%S')}")
+    path.rename(target)
+    return target
+
+
+def _retry_if_damaged(compute, cached_path):
+    """Run `compute()`; if reading its cached file fails because the file is damaged,
+    rename the file aside and compute again (once). Other errors are re-raised."""
+    try:
+        return compute()
+    except (KeyError, OSError, RuntimeError):
+        path = Path(cached_path())
+        problem = h5_problem(path) if path.exists() else None
+        if problem is None:
+            raise
+        moved = quarantine(path)
+        _log.warning("damaged cache file %s (%s); moved to %s, computing it again", path, problem, moved.name)
+        return compute()
+
+
 def compute_initial_conditions(
     inputs: Any,
     cache: Any,
@@ -132,11 +191,16 @@ def compute_initial_conditions(
 ) -> Any:
     """Compute (or load) the initial-conditions box."""
     apply_fftw_wisdoms_path()
-    return p21c.compute_initial_conditions(
-        inputs=inputs,
-        cache=cache,
-        write=write,
-        regenerate=regenerate,
+    from py21cmfast.io.caching import RunCache
+
+    return _retry_if_damaged(
+        lambda: p21c.compute_initial_conditions(
+            inputs=inputs,
+            cache=cache,
+            write=write,
+            regenerate=regenerate,
+        ),
+        lambda: RunCache.from_inputs(inputs, cache=cache).InitialConditions,
     )
 
 
@@ -163,7 +227,12 @@ def compute_perturbed_field(
     )
     if initial_conditions is not None:
         kwargs["initial_conditions"] = initial_conditions
-    return p21c.perturb_field(**kwargs)
+    from py21cmfast.io.caching import RunCache
+
+    return _retry_if_damaged(
+        lambda: p21c.perturb_field(**kwargs),
+        lambda: RunCache.from_inputs(inputs, cache=cache).PerturbedField[redshift],
+    )
 
 
 def evolve_halos(
