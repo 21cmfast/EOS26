@@ -224,3 +224,4 @@ EOS2*cache/
 *.DS_Store
 Claude*
 bug_reports*
+paper/

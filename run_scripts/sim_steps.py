@@ -77,7 +77,8 @@ def apply_fftw_wisdoms_path() -> Path:
 # So for coevals we keep the template values for hashing and checks, and change only
 # what the C code runs with:
 #   EOS26_RUN_THREADS=32       OpenMP and FFTW threads of the C code
-#   EOS26_RUN_FFTW_WISDOM=1    FFTW wisdom (FFTW_PATIENT plans, made once and saved)
+#   EOS26_RUN_FFTW_WISDOM=1    FFTW wisdom (FFTW_PATIENT plans of the HII_DIM FFTs,
+#                              made once and saved in <wisdoms>/coeval)
 # Not for ICs or halo catalogs: their random numbers are drawn per thread
 # (rng.c: one stream per thread), so the thread count changes the realisation.
 _runtime_overrides: dict[str, Any] | None = None
@@ -110,7 +111,8 @@ def apply_coeval_runtime_overrides() -> dict[str, Any]:
                 self.inputs.matter_options._cstruct.USE_FFTW_WISDOM = wisdom
         original(self)
         if first and wisdom and not self.inputs.matter_options.USE_FFTW_WISDOM:
-            lib.CreateFFTWWisdoms()  # original() only does this for USE_FFTW_WISDOM=True inputs
+            # original() only does this for USE_FFTW_WISDOM=True inputs
+            _create_coeval_wisdoms(lib, self.inputs.simulation_options._cstruct)
 
     gi.GlobalInitializationManager._broadcast_input_struct = _broadcast_input_struct
     if n_threads is not None:
@@ -118,9 +120,67 @@ def apply_coeval_runtime_overrides() -> dict[str, Any]:
         _runtime_overrides["N_THREADS"] = n_threads
     if wisdom is not None:
         _runtime_overrides["USE_FFTW_WISDOM"] = wisdom
-        _runtime_overrides["wisdoms_path"] = str(apply_fftw_wisdoms_path())
+        _runtime_overrides["wisdoms_path"] = str(apply_fftw_wisdoms_path() / "coeval")
     _log.warning("coeval run-time overrides (not in the cache hash): %s", _runtime_overrides)
     return _runtime_overrides
+
+
+def _create_coeval_wisdoms(lib, so) -> None:
+    """lib.CreateFFTWWisdoms() for the coeval phase, without the hires plans.
+
+    CreateFFTWWisdoms() makes (FFTW_PATIENT) and saves the r2c and c2r plans of both FFT
+    sizes, the hires DIM^3 box and the HII_DIM^3 box, unless their wisdom files exist.
+    Coevals only do HII_DIM FFTs; at DIM=4500 the hires planning would take hours on a
+    365 GB buffer at the start of the first coeval job. So coevals use <wisdoms>/coeval
+    (<wisdoms> = apply_fftw_wisdoms_path()):
+      * its hires files hold a wisdom without plans, written by this FFTW build, so the
+        import succeeds and nothing is planned. A coeval FFT that needed a hires plan
+        would raise (FFTW_WISDOM_ONLY), not run without one;
+      * its HII_DIM files are copied from <wisdoms> when they exist there (any run with
+        that FFT size and thread count makes them, e.g. a scaling test whose hires box
+        has this size), else planned here once and saved for later jobs.
+    A separate directory, so the placeholders never stand in for the hires plans of a
+    run that needs them (ICs or PFs with that DIM).
+    """
+    import ctypes
+    import shutil
+    import time
+
+    def names(dim):
+        para = int(so.NON_CUBIC_FACTOR * dim)
+        return [f"{kind}_DIM{dim}_DIM{para}_NTHREADS{so.N_THREADS}" for kind in ("r2c", "c2r")]
+
+    shared = apply_fftw_wisdoms_path()
+    coeval = shared / "coeval"
+    coeval.mkdir(exist_ok=True)
+    for name in names(so.HII_DIM):
+        if not (coeval / name).exists() and (shared / name).exists():
+            shutil.copy2(shared / name, coeval / name)
+    placeholders = [coeval / n for n in names(so.DIM) if n not in names(so.HII_DIM)]
+    missing = [f for f in placeholders if not f.exists()]
+    if missing:
+        try:
+            # dlopen by soname returns the copies py21cmfast's C extension has loaded. The
+            # file header depends on the threaded planner, so initialise it first.
+            fftw = ctypes.CDLL("libfftw3f.so.3")
+            ctypes.CDLL("libfftw3f_omp.so.3").fftwf_init_threads()
+            tmp = coeval / f".placeholder.{os.getpid()}"
+            if fftw.fftwf_export_wisdom_to_filename(str(tmp).encode()) != 1:
+                raise OSError(f"could not write {tmp}")
+            for f in missing:
+                shutil.copyfile(tmp, f)
+            tmp.unlink()
+        except (OSError, AttributeError) as e:
+            _log.warning("no hires wisdom placeholders (%s): coevals will plan DIM^3 FFTs too", e)
+    before = {f: f.stat().st_mtime_ns for f in placeholders if f.exists()}
+    p21c.config["wisdoms_path"] = coeval
+    t0 = time.perf_counter()
+    status = lib.CreateFFTWWisdoms()
+    replanned = [f.name for f, t in before.items() if f.stat().st_mtime_ns != t]
+    _log.warning(
+        "FFTW wisdoms for coevals (%s): %.0f s, status %d%s", coeval, time.perf_counter() - t0, status,
+        f"; hires placeholders not accepted, planned {replanned}" if replanned else "",
+    )
 
 
 # ------------------------------------------------------------- damaged cache files
