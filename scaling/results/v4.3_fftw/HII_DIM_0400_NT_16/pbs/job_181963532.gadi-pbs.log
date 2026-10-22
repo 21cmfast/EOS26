@@ -5,3 +5,13 @@ Currently Loaded Modulefiles:
 2026-10-22 12:13:16 [driver] INFO ---- start: 2026-10-22T01:13:16+00:00  label=v4.3_fftw HII_DIM=400 N_THREADS=16 phases=all host=gadi-cpu-clx-1949.gadi.nci.org.au pbs_jobid=181963532.gadi-pbs
 2026-10-22 12:13:37 [driver] INFO py21cmfast 4.3.1 | /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py | BOX_LEN=600 Mpc | 92 node z | memory method: vmhwm_reset
 2026-10-22 12:13:37 [driver] INFO === phase ics (attempt 1) ===
+2026-10-22 15:45:13 [driver] INFO phase ics complete: peak RSS 46.53 GiB, wall 3.52h, 6.94 cores
+2026-10-22 15:45:13 [driver] INFO === phase pf (attempt 1) ===
+2026-10-22 16:04:38 [driver] INFO phase pf complete: peak RSS 10.00 GiB, wall 18.6m, 13.77 cores
+2026-10-22 16:04:38 [driver] INFO === phase phf (attempt 1) ===
+2026-10-22 16:11:01 [driver] INFO phase phf complete: peak RSS 24.47 GiB, wall 5.8m, 6.28 cores
+2026-10-22 16:11:01 [driver] INFO === phase coeval (attempt 1) ===
+2026-10-22 19:55:12 [driver] INFO phase coeval complete: peak RSS 39.89 GiB, wall 3.73h, 7.24 cores
+2026-10-22 19:55:12 [driver] INFO deleting simulation cache /g/data/qp00/db9528/EOS26_scaling_sims/v4.3_fftw/HII_DIM_0400_NT_16
+2026-10-22 19:55:19 [driver] INFO configuration COMPLETE: max peak RSS 46.53 GiB
+=== 2026-10-22T08:55:19Z measure.py exit status 0

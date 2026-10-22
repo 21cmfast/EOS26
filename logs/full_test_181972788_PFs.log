@@ -1,0 +1,288 @@
+00:00:00 INFO     00.165 GB Starting N PF run: z_idx_start=0, N=30                                                                                              
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.168 GB PF 1/30: z_idx=0, z=35.371975                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).                                                         
+00:00:00 INFO     00.168 GB PF 1/30 done in 0.01s (average CPU cores: 0.96; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 2/30: z_idx=1, z=34.658799                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 2/30 done in 0.04s (average CPU cores: 0.82; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 3/30: z_idx=2, z=33.959607                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 3/30 done in 0.04s (average CPU cores: 0.82; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 4/30: z_idx=3, z=33.274124                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).                                                         
+00:00:00 INFO     00.168 GB PF 4/30 done in 0.04s (average CPU cores: 0.81; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 5/30: z_idx=4, z=32.602082                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).                                                         
+00:00:00 INFO     00.168 GB PF 5/30 done in 0.04s (average CPU cores: 0.82; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 6/30: z_idx=5, z=31.943218                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 6/30 done in 0.04s (average CPU cores: 0.81; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 7/30: z_idx=6, z=31.297273                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 7/30 done in 0.04s (average CPU cores: 0.83; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 8/30: z_idx=7, z=30.663993                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 8/30 done in 0.02s (average CPU cores: 0.91; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 9/30: z_idx=8, z=30.043130                                                                                                       
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=30.043130215776173 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 9/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 10/30: z_idx=9, z=29.434441                                                                                                      
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=29.43444138801586 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 10/30 done in 0.22s (average CPU cores: 0.20; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 11/30: z_idx=10, z=28.837688                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 11/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 12/30: z_idx=11, z=28.252635                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=28.25263493657811 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 12/30 done in 0.04s (average CPU cores: 0.81; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 13/30: z_idx=12, z=27.679054                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=27.679053859390308 and read in (seed=42).                                                        
+00:00:01 INFO     00.168 GB PF 13/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 14/30: z_idx=13, z=27.116719                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=27.1167194699905 and read in (seed=42).                                                          
+00:00:01 INFO     00.168 GB PF 14/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 15/30: z_idx=14, z=26.565411                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=26.56541124508873 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 15/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 16/30: z_idx=15, z=26.024913                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=26.02491298538111 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 16/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 17/30: z_idx=16, z=25.495013                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=25.495012730765797 and read in (seed=42).                                                        
+00:00:01 INFO     00.168 GB PF 17/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 18/30: z_idx=17, z=24.975503                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=24.97550267722137 and read in (seed=42).                                                         
+00:00:01 INFO     00.168 GB PF 18/30 done in 0.02s (average CPU cores: 0.84; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 19/30: z_idx=18, z=24.466179                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=24.466179095315074 and read in (seed=42).                                                        
+00:00:01 INFO     00.168 GB PF 19/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.168 GB)                                                               
+00:00:01 INFO     00.168 GB PF 20/30: z_idx=19, z=23.966842                                                                                                     
+00:00:01 INFO     00.168 GB Existing PerturbedField found at z=23.966842250308897 and read in (seed=42).                                                        
+00:00:01 INFO     00.168 GB PF 20/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 21/30: z_idx=20, z=23.477296                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=23.477296323832253 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 21/30 done in 0.02s (average CPU cores: 0.83; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 22/30: z_idx=21, z=22.997349                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=22.997349337090448 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 22/30 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 23/30: z_idx=22, z=22.526813                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=22.526813075578872 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 23/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 24/30: z_idx=23, z=22.065503                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=22.065503015273407 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 24/30 done in 0.02s (average CPU cores: 0.83; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 25/30: z_idx=24, z=21.613238                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=21.613238250268047 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 25/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 26/30: z_idx=25, z=21.169841                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=21.16984142183142 and read in (seed=42).                                                         
+00:00:02 INFO     00.168 GB PF 26/30 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 27/30: z_idx=26, z=20.735139                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=20.73513864885434 and read in (seed=42).                                                         
+00:00:02 INFO     00.168 GB PF 27/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 28/30: z_idx=27, z=20.308959                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=20.308959459661118 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 28/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 29/30: z_idx=28, z=19.891137                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=19.89113672515796 and read in (seed=42).                                                         
+00:00:02 INFO     00.168 GB PF 29/30 done in 0.02s (average CPU cores: 0.84; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB PF 30/30: z_idx=29, z=19.481507                                                                                                     
+00:00:02 INFO     00.168 GB Existing PerturbedField found at z=19.481506593292117 and read in (seed=42).                                                        
+00:00:02 INFO     00.168 GB PF 30/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.168 GB)                                                               
+00:00:02 INFO     00.168 GB Completed N PF run in 2.87s                                                                                                         
+00:00:00 INFO     00.165 GB Starting N PF run: z_idx_start=30, N=30                                                                                             
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.168 GB PF 1/30: z_idx=30, z=19.079908                                                                                                      
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=19.079908424796198 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 1/30 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.168 GB PF 2/30: z_idx=31, z=18.686185                                                                                                      
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=18.686184730192352 and read in (seed=42).                                                        
+00:00:00 INFO     00.168 GB PF 2/30 done in 0.01s (average CPU cores: 0.96; peak RSS: 00.168 GB)                                                                
+00:00:00 INFO     00.165 GB PF 3/30: z_idx=32, z=18.300181                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=18.30018110803172 and read in (seed=42).                                                         
+00:00:00 INFO     00.164 GB PF 3/30 done in 0.03s (average CPU cores: 0.60; peak RSS: 00.165 GB)                                                                
+00:00:00 INFO     00.163 GB PF 4/30: z_idx=33, z=17.921746                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=17.921746184344826 and read in (seed=42).                                                        
+00:00:00 INFO     00.164 GB PF 4/30 done in 0.03s (average CPU cores: 0.59; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 5/30: z_idx=34, z=17.550732                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=17.550731553279242 and read in (seed=42).                                                        
+00:00:00 INFO     00.164 GB PF 5/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 6/30: z_idx=35, z=17.186992                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=17.18699171890122 and read in (seed=42).                                                         
+00:00:00 INFO     00.164 GB PF 6/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 7/30: z_idx=36, z=16.830384                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=16.83038403813845 and read in (seed=42).                                                         
+00:00:00 INFO     00.164 GB PF 7/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 8/30: z_idx=37, z=16.480769                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=16.480768664841623 and read in (seed=42).                                                        
+00:00:00 INFO     00.164 GB PF 8/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 9/30: z_idx=38, z=16.138008                                                                                                      
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=16.138008494942767 and read in (seed=42).                                                        
+00:00:00 INFO     00.164 GB PF 9/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                                
+00:00:00 INFO     00.164 GB PF 10/30: z_idx=39, z=15.801969                                                                                                     
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=15.80196911268899 and read in (seed=42).                                                         
+00:00:00 INFO     00.164 GB PF 10/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:00 INFO     00.164 GB PF 11/30: z_idx=40, z=15.472519                                                                                                     
+00:00:00 INFO     00.164 GB Existing PerturbedField found at z=15.472518737930383 and read in (seed=42).                                                        
+00:00:00 INFO     00.164 GB PF 11/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 12/30: z_idx=41, z=15.149528                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=15.149528174441553 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 12/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 13/30: z_idx=42, z=14.832871                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=14.832870759256426 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 13/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 14/30: z_idx=43, z=14.522422                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=14.522422312996499 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 14/30 done in 0.01s (average CPU cores: 0.96; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 15/30: z_idx=44, z=14.218061                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=14.21806109117304 and read in (seed=42).                                                         
+00:00:01 INFO     00.164 GB PF 15/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 16/30: z_idx=45, z=13.919668                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=13.919667736444158 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 16/30 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 17/30: z_idx=46, z=13.627125                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=13.627125231808 and read in (seed=42).                                                           
+00:00:01 INFO     00.164 GB PF 17/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 18/30: z_idx=47, z=13.340319                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=13.340318854713725 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 18/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 19/30: z_idx=48, z=13.059136                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=13.059136132072283 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 19/30 done in 0.01s (average CPU cores: 0.96; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 20/30: z_idx=49, z=12.783467                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=12.783466796149296 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 20/30 done in 0.04s (average CPU cores: 0.83; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 21/30: z_idx=50, z=12.513203                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=12.513202741322841 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 21/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 22/30: z_idx=51, z=12.248238                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=12.248237981689062 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 22/30 done in 0.04s (average CPU cores: 0.84; peak RSS: 00.164 GB)                                                               
+00:00:01 INFO     00.164 GB PF 23/30: z_idx=52, z=11.988469                                                                                                     
+00:00:01 INFO     00.164 GB Existing PerturbedField found at z=11.988468609499082 and read in (seed=42).                                                        
+00:00:01 INFO     00.164 GB PF 23/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 24/30: z_idx=53, z=11.733793                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=11.733792754410866 and read in (seed=42).                                                        
+00:00:02 INFO     00.164 GB PF 24/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 25/30: z_idx=54, z=11.484111                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=11.484110543540066 and read in (seed=42).                                                        
+00:00:02 INFO     00.164 GB PF 25/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 26/30: z_idx=55, z=11.239324                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=11.239324062294182 and read in (seed=42).                                                        
+00:00:02 INFO     00.164 GB PF 26/30 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 27/30: z_idx=56, z=10.999337                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=10.99933731597469 and read in (seed=42).                                                         
+00:00:02 INFO     00.164 GB PF 27/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 28/30: z_idx=57, z=10.764056                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=10.76405619213205 and read in (seed=42).                                                         
+00:00:02 INFO     00.164 GB PF 28/30 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 29/30: z_idx=58, z=10.533388                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=10.533388423658874 and read in (seed=42).                                                        
+00:00:02 INFO     00.164 GB PF 29/30 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB PF 30/30: z_idx=59, z=10.307244                                                                                                     
+00:00:02 INFO     00.164 GB Existing PerturbedField found at z=10.30724355260674 and read in (seed=42).                                                         
+00:00:02 INFO     00.164 GB PF 30/30 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.164 GB)                                                               
+00:00:02 INFO     00.164 GB Completed N PF run in 2.55s                                                                                                         
+00:00:00 INFO     00.165 GB Starting N PF run: z_idx_start=60, N=-1                                                                                             
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.168 GB PF 1/32: z_idx=60, z=10.085533                                                                                                      
+00:00:00 INFO     00.168 GB Existing PerturbedField found at z=10.085532894712491 and read in (seed=42).                                                        
+00:00:00 INFO     00.169 GB PF 1/32 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 2/32: z_idx=61, z=9.868170                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=9.868169504620091 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 2/32 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 3/32: z_idx=62, z=9.655068                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=9.655068141784405 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 3/32 done in 0.02s (average CPU cores: 0.91; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 4/32: z_idx=63, z=9.446145                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=9.446145237043535 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 4/32 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 5/32: z_idx=64, z=9.241319                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=9.241318859846603 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 5/32 done in 0.01s (average CPU cores: 0.97; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 6/32: z_idx=65, z=9.040509                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=9.040508686124122 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 6/32 done in 0.02s (average CPU cores: 0.83; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 7/32: z_idx=66, z=8.843636                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=8.843635966788355 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 7/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 8/32: z_idx=67, z=8.650623                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=8.65062349685133 and read in (seed=42).                                                          
+00:00:00 INFO     00.169 GB PF 8/32 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 9/32: z_idx=68, z=8.461396                                                                                                       
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=8.461395585148363 and read in (seed=42).                                                         
+00:00:00 INFO     00.169 GB PF 9/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                                
+00:00:00 INFO     00.169 GB PF 10/32: z_idx=69, z=8.275878                                                                                                      
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=8.27587802465526 and read in (seed=42).                                                          
+00:00:00 INFO     00.169 GB PF 10/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:00 INFO     00.169 GB PF 11/32: z_idx=70, z=8.093998                                                                                                      
+00:00:00 INFO     00.169 GB Existing PerturbedField found at z=8.09399806338751 and read in (seed=42).                                                          
+00:00:00 INFO     00.169 GB PF 11/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 12/32: z_idx=71, z=7.915684                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.915684375870109 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 12/32 done in 0.04s (average CPU cores: 0.83; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 13/32: z_idx=72, z=7.740867                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.740867035166774 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 13/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 14/32: z_idx=73, z=7.569477                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.569477485457622 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 14/32 done in 0.02s (average CPU cores: 0.84; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 15/32: z_idx=74, z=7.401449                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.401448515154533 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 15/32 done in 0.02s (average CPU cores: 0.88; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 16/32: z_idx=75, z=7.236714                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.23671423054366 and read in (seed=42).                                                          
+00:00:01 INFO     00.169 GB PF 16/32 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 17/32: z_idx=76, z=7.075210                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=7.075210029944765 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 17/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 18/32: z_idx=77, z=6.916873                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.916872578377222 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 18/32 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 19/32: z_idx=78, z=6.761640                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.761639782722767 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 19/32 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 20/32: z_idx=79, z=6.609451                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.609450767375263 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 20/32 done in 0.02s (average CPU cores: 0.87; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 21/32: z_idx=80, z=6.460246                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.460245850367905 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 21/32 done in 0.01s (average CPU cores: 0.97; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 22/32: z_idx=81, z=6.313967                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.3139665199685355 and read in (seed=42).                                                        
+00:00:01 INFO     00.169 GB PF 22/32 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 23/32: z_idx=82, z=6.170555                                                                                                      
+00:00:01 INFO     00.169 GB Existing PerturbedField found at z=6.170555411733859 and read in (seed=42).                                                         
+00:00:01 INFO     00.169 GB PF 23/32 done in 0.02s (average CPU cores: 0.86; peak RSS: 00.169 GB)                                                               
+00:00:01 INFO     00.169 GB PF 24/32: z_idx=83, z=6.029956                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=6.029956286013588 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 24/32 done in 0.02s (average CPU cores: 0.85; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 25/32: z_idx=84, z=5.892114                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.892114005895675 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 25/32 done in 0.01s (average CPU cores: 0.97; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 26/32: z_idx=85, z=5.756975                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.756974515583996 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 26/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 27/32: z_idx=86, z=5.624485                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.6244848191999965 and read in (seed=42).                                                        
+00:00:02 INFO     00.169 GB PF 27/32 done in 0.19s (average CPU cores: 0.23; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 28/32: z_idx=87, z=5.494593                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.494592959999998 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 28/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 29/32: z_idx=88, z=5.367248                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.367247999999998 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 29/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 30/32: z_idx=89, z=5.242400                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.242399999999999 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 30/32 done in 0.01s (average CPU cores: 0.98; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 31/32: z_idx=90, z=5.120000                                                                                                      
+00:00:02 INFO     00.169 GB Existing PerturbedField found at z=5.119999999999999 and read in (seed=42).                                                         
+00:00:02 INFO     00.169 GB PF 31/32 done in 0.04s (average CPU cores: 0.83; peak RSS: 00.169 GB)                                                               
+00:00:02 INFO     00.169 GB PF 32/32: z_idx=91, z=5.000000                                                                                                      
+00:00:03 INFO     00.169 GB Existing PerturbedField found at z=5.0 and read in (seed=42).                                                                       
+00:00:03 INFO     00.169 GB PF 32/32 done in 0.45s (average CPU cores: 0.10; peak RSS: 00.169 GB)                                                               
+00:00:03 INFO     00.169 GB Completed N PF run in 3.30s                                                                                                         

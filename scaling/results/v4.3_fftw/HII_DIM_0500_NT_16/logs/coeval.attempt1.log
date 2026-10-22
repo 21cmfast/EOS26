@@ -1,0 +1,355 @@
+# 2026-10-22T06:15:24+00:00 /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/bin/python /scratch/qp00/db9528/EOS26/scaling/_worker.py --config-dir /scratch/qp00/db9528/EOS26/scaling/results/v4.3_fftw/HII_DIM_0500_NT_16 --phase coeval --attempt 1 --out /scratch/qp00/db9528/EOS26/scaling/results/v4.3_fftw/HII_DIM_0500_NT_16/phases/coeval.attempt1.json --batch-index -1
+2026-10-22 17:15:24 scaling.worker INFO worker start: phase=coeval attempt=1 pid=2720446 host=gadi-cpu-clx-1544.gadi.nci.org.au
+2026-10-22 17:15:54 scaling.worker INFO memory method: vmhwm_reset; baseline RSS 169.09 MiB
+2026-10-22 17:15:55 py21cmfast.drivers._param_config INFO Existing InitialConditions found and read in (seed=42).
+2026-10-22 17:16:36 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).
+2026-10-22 17:16:36 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).
+2026-10-22 17:16:36 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).
+2026-10-22 17:16:37 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).
+2026-10-22 17:16:37 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).
+2026-10-22 17:16:37 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).
+2026-10-22 17:16:38 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).
+2026-10-22 17:16:38 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).
+2026-10-22 17:16:39 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=30.043130215776173 and read in (seed=42).
+2026-10-22 17:16:39 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=29.43444138801586 and read in (seed=42).
+2026-10-22 17:16:39 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).
+2026-10-22 17:16:40 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=28.25263493657811 and read in (seed=42).
+2026-10-22 17:16:40 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=27.679053859390308 and read in (seed=42).
+2026-10-22 17:16:40 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=27.1167194699905 and read in (seed=42).
+2026-10-22 17:16:41 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=26.56541124508873 and read in (seed=42).
+2026-10-22 17:16:41 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=26.02491298538111 and read in (seed=42).
+2026-10-22 17:16:41 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=25.495012730765797 and read in (seed=42).
+2026-10-22 17:16:41 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=24.97550267722137 and read in (seed=42).
+2026-10-22 17:16:41 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=24.466179095315074 and read in (seed=42).
+2026-10-22 17:16:42 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=23.966842250308897 and read in (seed=42).
+2026-10-22 17:16:42 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=23.477296323832253 and read in (seed=42).
+2026-10-22 17:16:43 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.997349337090448 and read in (seed=42).
+2026-10-22 17:16:43 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.526813075578872 and read in (seed=42).
+2026-10-22 17:16:43 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=22.065503015273407 and read in (seed=42).
+2026-10-22 17:16:44 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=21.613238250268047 and read in (seed=42).
+2026-10-22 17:16:44 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=21.16984142183142 and read in (seed=42).
+2026-10-22 17:16:44 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=20.73513864885434 and read in (seed=42).
+2026-10-22 17:16:45 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=20.308959459661118 and read in (seed=42).
+2026-10-22 17:16:45 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.89113672515796 and read in (seed=42).
+2026-10-22 17:16:45 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.481506593292117 and read in (seed=42).
+2026-10-22 17:16:45 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=19.079908424796198 and read in (seed=42).
+2026-10-22 17:16:46 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=18.686184730192352 and read in (seed=42).
+2026-10-22 17:16:46 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=18.30018110803172 and read in (seed=42).
+2026-10-22 17:16:46 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=17.921746184344826 and read in (seed=42).
+2026-10-22 17:16:47 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=17.550731553279242 and read in (seed=42).
+2026-10-22 17:16:47 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=17.18699171890122 and read in (seed=42).
+2026-10-22 17:16:47 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=16.83038403813845 and read in (seed=42).
+2026-10-22 17:16:47 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=16.480768664841623 and read in (seed=42).
+2026-10-22 17:16:48 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=16.138008494942767 and read in (seed=42).
+2026-10-22 17:16:48 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=15.80196911268899 and read in (seed=42).
+2026-10-22 17:16:48 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=15.472518737930383 and read in (seed=42).
+2026-10-22 17:16:49 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=15.149528174441553 and read in (seed=42).
+2026-10-22 17:16:49 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=14.832870759256426 and read in (seed=42).
+2026-10-22 17:16:49 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=14.522422312996499 and read in (seed=42).
+2026-10-22 17:16:49 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=14.21806109117304 and read in (seed=42).
+2026-10-22 17:16:50 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=13.919667736444158 and read in (seed=42).
+2026-10-22 17:16:50 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=13.627125231808 and read in (seed=42).
+2026-10-22 17:16:50 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=13.340318854713725 and read in (seed=42).
+2026-10-22 17:16:51 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=13.059136132072283 and read in (seed=42).
+2026-10-22 17:16:51 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=12.783466796149296 and read in (seed=42).
+2026-10-22 17:16:51 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=12.513202741322841 and read in (seed=42).
+2026-10-22 17:16:51 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=12.248237981689062 and read in (seed=42).
+2026-10-22 17:16:52 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=11.988468609499082 and read in (seed=42).
+2026-10-22 17:16:52 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=11.733792754410866 and read in (seed=42).
+2026-10-22 17:16:52 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=11.484110543540066 and read in (seed=42).
+2026-10-22 17:16:53 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=11.239324062294182 and read in (seed=42).
+2026-10-22 17:16:53 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=10.99933731597469 and read in (seed=42).
+2026-10-22 17:16:53 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=10.76405619213205 and read in (seed=42).
+2026-10-22 17:16:54 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=10.533388423658874 and read in (seed=42).
+2026-10-22 17:16:54 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=10.30724355260674 and read in (seed=42).
+2026-10-22 17:16:54 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=10.085532894712491 and read in (seed=42).
+2026-10-22 17:16:55 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=9.868169504620091 and read in (seed=42).
+2026-10-22 17:16:55 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=9.655068141784405 and read in (seed=42).
+2026-10-22 17:16:56 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=9.446145237043535 and read in (seed=42).
+2026-10-22 17:16:56 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=9.241318859846603 and read in (seed=42).
+2026-10-22 17:16:56 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=9.040508686124122 and read in (seed=42).
+2026-10-22 17:16:57 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=8.843635966788355 and read in (seed=42).
+2026-10-22 17:16:57 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=8.65062349685133 and read in (seed=42).
+2026-10-22 17:16:57 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=8.461395585148363 and read in (seed=42).
+2026-10-22 17:16:57 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=8.27587802465526 and read in (seed=42).
+2026-10-22 17:16:58 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=8.09399806338751 and read in (seed=42).
+2026-10-22 17:16:58 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.915684375870109 and read in (seed=42).
+2026-10-22 17:16:58 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.740867035166774 and read in (seed=42).
+2026-10-22 17:16:59 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.569477485457622 and read in (seed=42).
+2026-10-22 17:16:59 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.401448515154533 and read in (seed=42).
+2026-10-22 17:17:00 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.23671423054366 and read in (seed=42).
+2026-10-22 17:17:00 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=7.075210029944765 and read in (seed=42).
+2026-10-22 17:17:00 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.916872578377222 and read in (seed=42).
+2026-10-22 17:17:00 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.761639782722767 and read in (seed=42).
+2026-10-22 17:17:01 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.609450767375263 and read in (seed=42).
+2026-10-22 17:17:01 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.460245850367905 and read in (seed=42).
+2026-10-22 17:17:02 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.3139665199685355 and read in (seed=42).
+2026-10-22 17:17:02 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.170555411733859 and read in (seed=42).
+2026-10-22 17:17:02 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=6.029956286013588 and read in (seed=42).
+2026-10-22 17:17:03 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.892114005895675 and read in (seed=42).
+2026-10-22 17:17:03 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.756974515583996 and read in (seed=42).
+2026-10-22 17:17:03 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.6244848191999965 and read in (seed=42).
+2026-10-22 17:17:04 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.494592959999998 and read in (seed=42).
+2026-10-22 17:17:04 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.367247999999998 and read in (seed=42).
+2026-10-22 17:17:04 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.242399999999999 and read in (seed=42).
+2026-10-22 17:17:04 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.119999999999999 and read in (seed=42).
+2026-10-22 17:17:05 py21cmfast.drivers._param_config INFO Existing PerturbedField found at z=5.0 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.0 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.119999999999999 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.242399999999999 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.367247999999998 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.494592959999998 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.6244848191999965 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.756974515583996 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=5.892114005895675 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.029956286013588 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.170555411733859 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.3139665199685355 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.460245850367905 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.609450767375263 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.761639782722767 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=6.916872578377222 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.075210029944765 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.23671423054366 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.401448515154533 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.569477485457622 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.740867035166774 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=7.915684375870109 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=8.09399806338751 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=8.27587802465526 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=8.461395585148363 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=8.65062349685133 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=8.843635966788355 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=9.040508686124122 and read in (seed=42).
+2026-10-22 17:17:29 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=9.241318859846603 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=9.446145237043535 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=9.655068141784405 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=9.868169504620091 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=10.085532894712491 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=10.30724355260674 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=10.533388423658874 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=10.76405619213205 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=10.99933731597469 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=11.239324062294182 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=11.484110543540066 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=11.733792754410866 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=11.988468609499082 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=12.248237981689062 and read in (seed=42).
+2026-10-22 17:17:30 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=12.513202741322841 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=12.783466796149296 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=13.059136132072283 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=13.340318854713725 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=13.627125231808 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=13.919667736444158 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=14.21806109117304 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=14.522422312996499 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=14.832870759256426 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=15.149528174441553 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=15.472518737930383 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=15.80196911268899 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=16.138008494942767 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=16.480768664841623 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=16.83038403813845 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=17.18699171890122 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=17.550731553279242 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=17.921746184344826 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=18.30018110803172 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=18.686184730192352 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.079908424796198 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.481506593292117 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=19.89113672515796 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=20.308959459661118 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=20.73513864885434 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=21.16984142183142 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=21.613238250268047 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.065503015273407 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.526813075578872 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=22.997349337090448 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=23.477296323832253 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=23.966842250308897 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=24.466179095315074 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=24.97550267722137 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=25.495012730765797 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=26.02491298538111 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=26.56541124508873 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=27.1167194699905 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=27.679053859390308 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=28.25263493657811 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=28.83768763530967 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=29.43444138801586 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=30.043130215776173 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=30.663992820091696 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.297272676493527 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=31.943218130023396 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=32.60208249262386 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.27412414247633 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=33.959606625325854 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=34.658798757832365 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers._param_config INFO Existing HaloCatalog found at z=35.37197473298901 and read in (seed=42).
+2026-10-22 17:17:31 py21cmfast.drivers.coeval INFO Computing Redshift 35.37197473298901 (1/92) iterations.
+2026-10-22 17:17:51 scaling.worker INFO step 0   coeval (+setup)        z=35.372 wall=116.6s   cores= 2.15 peak=16.52 GiB after=211.44 MiB
+2026-10-22 17:17:51 py21cmfast.drivers.coeval INFO Computing Redshift 34.658798757832365 (2/92) iterations.
+2026-10-22 17:19:51 scaling.worker INFO step 1   coeval                 z=34.659 wall=2.0m     cores= 4.88 peak=22.56 GiB after=7.66 GiB
+2026-10-22 17:19:51 py21cmfast.drivers.coeval INFO Computing Redshift 33.959606625325854 (3/92) iterations.
+2026-10-22 17:22:28 scaling.worker INFO step 2   coeval                 z=33.960 wall=2.6m     cores= 4.58 peak=24.42 GiB after=9.52 GiB
+2026-10-22 17:22:28 py21cmfast.drivers.coeval INFO Computing Redshift 33.27412414247633 (4/92) iterations.
+2026-10-22 17:25:23 scaling.worker INFO step 3   coeval                 z=33.274 wall=2.9m     cores= 4.74 peak=26.29 GiB after=11.39 GiB
+2026-10-22 17:25:23 py21cmfast.drivers.coeval INFO Computing Redshift 32.60208249262386 (5/92) iterations.
+2026-10-22 17:28:25 scaling.worker INFO step 4   coeval                 z=32.602 wall=3.0m     cores= 4.58 peak=28.15 GiB after=13.25 GiB
+2026-10-22 17:28:25 py21cmfast.drivers.coeval INFO Computing Redshift 31.943218130023396 (6/92) iterations.
+2026-10-22 17:31:25 scaling.worker INFO step 5   coeval                 z=31.943 wall=3.0m     cores= 4.86 peak=30.01 GiB after=15.11 GiB
+2026-10-22 17:31:25 py21cmfast.drivers.coeval INFO Computing Redshift 31.297272676493527 (7/92) iterations.
+2026-10-22 17:34:42 scaling.worker INFO step 6   coeval                 z=31.297 wall=3.3m     cores= 4.61 peak=31.88 GiB after=16.97 GiB
+2026-10-22 17:34:42 py21cmfast.drivers.coeval INFO Computing Redshift 30.663992820091696 (8/92) iterations.
+2026-10-22 17:39:01 scaling.worker INFO step 7   coeval                 z=30.664 wall=4.3m     cores= 6.14 peak=33.75 GiB after=18.84 GiB
+2026-10-22 17:39:01 py21cmfast.drivers.coeval INFO Computing Redshift 30.043130215776173 (9/92) iterations.
+2026-10-22 17:43:28 scaling.worker INFO step 8   coeval                 z=30.043 wall=4.4m     cores= 6.17 peak=35.62 GiB after=20.70 GiB
+2026-10-22 17:43:28 py21cmfast.drivers.coeval INFO Computing Redshift 29.43444138801586 (10/92) iterations.
+2026-10-22 17:47:57 scaling.worker INFO step 9   coeval                 z=29.434 wall=4.5m     cores= 6.08 peak=37.48 GiB after=22.56 GiB
+2026-10-22 17:47:57 py21cmfast.drivers.coeval INFO Computing Redshift 28.83768763530967 (11/92) iterations.
+2026-10-22 17:52:29 scaling.worker INFO step 10  coeval                 z=28.838 wall=4.5m     cores= 6.03 peak=39.34 GiB after=24.43 GiB
+2026-10-22 17:52:29 py21cmfast.drivers.coeval INFO Computing Redshift 28.25263493657811 (12/92) iterations.
+2026-10-22 17:57:07 scaling.worker INFO step 11  coeval                 z=28.253 wall=4.6m     cores= 6.07 peak=41.21 GiB after=26.29 GiB
+2026-10-22 17:57:07 py21cmfast.drivers.coeval INFO Computing Redshift 27.679053859390308 (13/92) iterations.
+2026-10-22 18:01:47 scaling.worker INFO step 12  coeval                 z=27.679 wall=4.7m     cores= 6.08 peak=43.07 GiB after=28.15 GiB
+2026-10-22 18:01:47 py21cmfast.drivers.coeval INFO Computing Redshift 27.1167194699905 (14/92) iterations.
+2026-10-22 18:06:36 scaling.worker INFO step 13  coeval                 z=27.117 wall=4.8m     cores= 6.00 peak=44.93 GiB after=30.01 GiB
+2026-10-22 18:06:36 py21cmfast.drivers.coeval INFO Computing Redshift 26.56541124508873 (15/92) iterations.
+2026-10-22 18:11:33 scaling.worker INFO step 14  coeval                 z=26.565 wall=5.0m     cores= 6.20 peak=46.79 GiB after=31.88 GiB
+2026-10-22 18:11:33 py21cmfast.drivers.coeval INFO Computing Redshift 26.02491298538111 (16/92) iterations.
+2026-10-22 18:16:28 scaling.worker INFO step 15  coeval                 z=26.025 wall=4.9m     cores= 5.89 peak=48.65 GiB after=33.74 GiB
+2026-10-22 18:16:28 py21cmfast.drivers.coeval INFO Computing Redshift 25.495012730765797 (17/92) iterations.
+2026-10-22 18:21:22 scaling.worker INFO step 16  coeval                 z=25.495 wall=4.9m     cores= 5.96 peak=50.51 GiB after=35.60 GiB
+2026-10-22 18:21:22 py21cmfast.drivers.coeval INFO Computing Redshift 24.97550267722137 (18/92) iterations.
+2026-10-22 18:26:24 scaling.worker INFO step 17  coeval                 z=24.976 wall=5.0m     cores= 6.08 peak=52.38 GiB after=37.46 GiB
+2026-10-22 18:26:24 py21cmfast.drivers.coeval INFO Computing Redshift 24.466179095315074 (19/92) iterations.
+2026-10-22 18:31:15 scaling.worker INFO step 18  coeval                 z=24.466 wall=4.8m     cores= 6.04 peak=54.24 GiB after=37.93 GiB
+2026-10-22 18:31:15 py21cmfast.drivers.coeval INFO Computing Redshift 23.966842250308897 (20/92) iterations.
+2026-10-22 18:36:05 scaling.worker INFO step 19  coeval                 z=23.967 wall=4.8m     cores= 5.96 peak=54.71 GiB after=38.40 GiB
+2026-10-22 18:36:05 py21cmfast.drivers.coeval INFO Computing Redshift 23.477296323832253 (21/92) iterations.
+2026-10-22 18:40:55 scaling.worker INFO step 20  coeval                 z=23.477 wall=4.8m     cores= 6.00 peak=55.18 GiB after=37.46 GiB
+2026-10-22 18:40:55 py21cmfast.drivers.coeval INFO Computing Redshift 22.997349337090448 (22/92) iterations.
+2026-10-22 18:45:42 scaling.worker INFO step 21  coeval                 z=22.997 wall=4.8m     cores= 6.04 peak=54.24 GiB after=37.93 GiB
+2026-10-22 18:45:42 py21cmfast.drivers.coeval INFO Computing Redshift 22.526813075578872 (23/92) iterations.
+2026-10-22 18:50:23 scaling.worker INFO step 22  coeval                 z=22.527 wall=4.7m     cores= 6.17 peak=54.71 GiB after=38.40 GiB
+2026-10-22 18:50:23 py21cmfast.drivers.coeval INFO Computing Redshift 22.065503015273407 (24/92) iterations.
+2026-10-22 18:55:17 scaling.worker INFO step 23  coeval                 z=22.066 wall=4.9m     cores= 6.02 peak=55.17 GiB after=38.86 GiB
+2026-10-22 18:55:17 py21cmfast.drivers.coeval INFO Computing Redshift 21.613238250268047 (25/92) iterations.
+2026-10-22 19:00:17 scaling.worker INFO step 24  coeval                 z=21.613 wall=5.0m     cores= 6.01 peak=55.64 GiB after=39.33 GiB
+2026-10-22 19:00:17 py21cmfast.drivers.coeval INFO Computing Redshift 21.16984142183142 (26/92) iterations.
+2026-10-22 19:05:10 scaling.worker INFO step 25  coeval                 z=21.170 wall=4.9m     cores= 5.95 peak=56.11 GiB after=39.79 GiB
+2026-10-22 19:05:10 py21cmfast.drivers.coeval INFO Computing Redshift 20.73513864885434 (27/92) iterations.
+2026-10-22 19:10:04 scaling.worker INFO step 26  coeval                 z=20.735 wall=4.9m     cores= 5.96 peak=56.57 GiB after=38.86 GiB
+2026-10-22 19:10:04 py21cmfast.drivers.coeval INFO Computing Redshift 20.308959459661118 (28/92) iterations.
+2026-10-22 19:15:00 scaling.worker INFO step 27  coeval                 z=20.309 wall=4.9m     cores= 5.95 peak=55.65 GiB after=39.33 GiB
+2026-10-22 19:15:00 py21cmfast.drivers.coeval INFO Computing Redshift 19.89113672515796 (29/92) iterations.
+2026-10-22 19:19:53 scaling.worker INFO step 28  coeval                 z=19.891 wall=4.9m     cores= 5.94 peak=56.11 GiB after=39.79 GiB
+2026-10-22 19:19:53 py21cmfast.drivers.coeval INFO Computing Redshift 19.481506593292117 (30/92) iterations.
+2026-10-22 19:24:46 scaling.worker INFO step 29  coeval                 z=19.482 wall=4.9m     cores= 5.96 peak=56.59 GiB after=40.26 GiB
+2026-10-22 19:24:46 py21cmfast.drivers.coeval INFO Computing Redshift 19.079908424796198 (31/92) iterations.
+2026-10-22 19:29:39 scaling.worker INFO step 30  coeval                 z=19.080 wall=4.9m     cores= 5.89 peak=57.07 GiB after=40.72 GiB
+2026-10-22 19:29:39 py21cmfast.drivers.coeval INFO Computing Redshift 18.686184730192352 (32/92) iterations.
+2026-10-22 19:34:34 scaling.worker INFO step 31  coeval                 z=18.686 wall=4.9m     cores= 5.96 peak=57.57 GiB after=41.19 GiB
+2026-10-22 19:34:34 py21cmfast.drivers.coeval INFO Computing Redshift 18.30018110803172 (33/92) iterations.
+2026-10-22 19:39:36 scaling.worker INFO step 32  coeval                 z=18.300 wall=5.0m     cores= 5.98 peak=58.10 GiB after=40.26 GiB
+2026-10-22 19:39:36 py21cmfast.drivers.coeval INFO Computing Redshift 17.921746184344826 (34/92) iterations.
+2026-10-22 19:44:27 scaling.worker INFO step 33  coeval                 z=17.922 wall=4.8m     cores= 5.99 peak=57.27 GiB after=40.72 GiB
+2026-10-22 19:44:27 py21cmfast.drivers.coeval INFO Computing Redshift 17.550731553279242 (35/92) iterations.
+2026-10-22 19:49:16 scaling.worker INFO step 34  coeval                 z=17.551 wall=4.8m     cores= 6.04 peak=57.82 GiB after=41.19 GiB
+2026-10-22 19:49:16 py21cmfast.drivers.coeval INFO Computing Redshift 17.18699171890122 (36/92) iterations.
+2026-10-22 19:54:06 scaling.worker INFO step 35  coeval                 z=17.187 wall=4.8m     cores= 5.97 peak=58.39 GiB after=41.65 GiB
+2026-10-22 19:54:06 py21cmfast.drivers.coeval INFO Computing Redshift 16.83038403813845 (37/92) iterations.
+2026-10-22 19:58:55 scaling.worker INFO step 36  coeval                 z=16.830 wall=4.8m     cores= 6.12 peak=58.89 GiB after=42.12 GiB
+2026-10-22 19:58:55 py21cmfast.drivers.coeval INFO Computing Redshift 16.480768664841623 (38/92) iterations.
+2026-10-22 20:03:46 scaling.worker INFO step 37  coeval                 z=16.481 wall=4.9m     cores= 6.21 peak=59.36 GiB after=42.58 GiB
+2026-10-22 20:03:46 py21cmfast.drivers.coeval INFO Computing Redshift 16.138008494942767 (39/92) iterations.
+2026-10-22 20:08:35 scaling.worker INFO step 38  coeval                 z=16.138 wall=4.8m     cores= 6.14 peak=59.83 GiB after=41.65 GiB
+2026-10-22 20:08:35 py21cmfast.drivers.coeval INFO Computing Redshift 15.80196911268899 (40/92) iterations.
+2026-10-22 20:13:18 scaling.worker INFO step 39  coeval                 z=15.802 wall=4.7m     cores= 6.08 peak=58.90 GiB after=42.12 GiB
+2026-10-22 20:13:18 py21cmfast.drivers.coeval INFO Computing Redshift 15.472518737930383 (41/92) iterations.
+2026-10-22 20:18:00 scaling.worker INFO step 40  coeval                 z=15.473 wall=4.7m     cores= 6.16 peak=59.36 GiB after=42.59 GiB
+2026-10-22 20:18:00 py21cmfast.drivers.coeval INFO Computing Redshift 15.149528174441553 (42/92) iterations.
+2026-10-22 20:22:58 scaling.worker INFO step 41  coeval                 z=15.150 wall=5.0m     cores= 5.92 peak=59.83 GiB after=43.05 GiB
+2026-10-22 20:22:58 py21cmfast.drivers.coeval INFO Computing Redshift 14.832870759256426 (43/92) iterations.
+2026-10-22 20:27:56 scaling.worker INFO step 42  coeval                 z=14.833 wall=5.0m     cores= 5.96 peak=60.29 GiB after=43.52 GiB
+2026-10-22 20:27:56 py21cmfast.drivers.coeval INFO Computing Redshift 14.522422312996499 (44/92) iterations.
+2026-10-22 20:32:44 scaling.worker INFO step 43  coeval                 z=14.522 wall=4.8m     cores= 5.97 peak=60.76 GiB after=43.98 GiB
+2026-10-22 20:32:44 py21cmfast.drivers.coeval INFO Computing Redshift 14.21806109117304 (45/92) iterations.
+2026-10-22 20:37:29 scaling.worker INFO step 44  coeval                 z=14.218 wall=4.7m     cores= 6.06 peak=61.23 GiB after=44.45 GiB
+2026-10-22 20:37:29 py21cmfast.drivers.coeval INFO Computing Redshift 13.919667736444158 (46/92) iterations.
+2026-10-22 20:42:18 scaling.worker INFO step 45  coeval                 z=13.920 wall=4.8m     cores= 6.09 peak=61.69 GiB after=43.52 GiB
+2026-10-22 20:42:18 py21cmfast.drivers.coeval INFO Computing Redshift 13.627125231808 (47/92) iterations.
+2026-10-22 20:47:05 scaling.worker INFO step 46  coeval                 z=13.627 wall=4.8m     cores= 6.01 peak=60.76 GiB after=43.98 GiB
+2026-10-22 20:47:05 py21cmfast.drivers.coeval INFO Computing Redshift 13.340318854713725 (48/92) iterations.
+2026-10-22 20:51:55 scaling.worker INFO step 47  coeval                 z=13.340 wall=4.8m     cores= 6.01 peak=61.23 GiB after=44.45 GiB
+2026-10-22 20:51:55 py21cmfast.drivers.coeval INFO Computing Redshift 13.059136132072283 (49/92) iterations.
+2026-10-22 20:56:50 scaling.worker INFO step 48  coeval                 z=13.059 wall=4.9m     cores= 5.97 peak=61.70 GiB after=44.92 GiB
+2026-10-22 20:56:50 py21cmfast.drivers.coeval INFO Computing Redshift 12.783466796149296 (50/92) iterations.
+2026-10-22 21:01:48 scaling.worker INFO step 49  coeval                 z=12.783 wall=5.0m     cores= 6.14 peak=62.16 GiB after=45.38 GiB
+2026-10-22 21:01:48 py21cmfast.drivers.coeval INFO Computing Redshift 12.513202741322841 (51/92) iterations.
+2026-10-22 21:06:39 scaling.worker INFO step 50  coeval                 z=12.513 wall=4.9m     cores= 6.05 peak=62.63 GiB after=45.85 GiB
+2026-10-22 21:06:39 py21cmfast.drivers.coeval INFO Computing Redshift 12.248237981689062 (52/92) iterations.
+2026-10-22 21:11:24 scaling.worker INFO step 51  coeval                 z=12.248 wall=4.7m     cores= 6.03 peak=63.10 GiB after=46.32 GiB
+2026-10-22 21:11:24 py21cmfast.drivers.coeval INFO Computing Redshift 11.988468609499082 (53/92) iterations.
+2026-10-22 21:16:04 scaling.worker INFO step 52  coeval                 z=11.988 wall=4.7m     cores= 6.10 peak=63.57 GiB after=46.78 GiB
+2026-10-22 21:16:04 py21cmfast.drivers.coeval INFO Computing Redshift 11.733792754410866 (54/92) iterations.
+2026-10-22 21:20:49 scaling.worker INFO step 53  coeval                 z=11.734 wall=4.7m     cores= 6.05 peak=64.03 GiB after=45.85 GiB
+2026-10-22 21:20:49 py21cmfast.drivers.coeval INFO Computing Redshift 11.484110543540066 (55/92) iterations.
+2026-10-22 21:25:43 scaling.worker INFO step 54  coeval                 z=11.484 wall=4.9m     cores= 6.10 peak=63.11 GiB after=46.32 GiB
+2026-10-22 21:25:43 py21cmfast.drivers.coeval INFO Computing Redshift 11.239324062294182 (56/92) iterations.
+2026-10-22 21:30:40 scaling.worker INFO step 55  coeval                 z=11.239 wall=4.9m     cores= 5.86 peak=63.58 GiB after=46.79 GiB
+2026-10-22 21:30:40 py21cmfast.drivers.coeval INFO Computing Redshift 10.99933731597469 (57/92) iterations.
+2026-10-22 21:35:29 scaling.worker INFO step 56  coeval                 z=10.999 wall=4.8m     cores= 6.02 peak=64.05 GiB after=47.26 GiB
+2026-10-22 21:35:29 py21cmfast.drivers.coeval INFO Computing Redshift 10.76405619213205 (58/92) iterations.
+2026-10-22 21:40:21 scaling.worker INFO step 57  coeval                 z=10.764 wall=4.9m     cores= 6.02 peak=64.52 GiB after=47.72 GiB
+2026-10-22 21:40:21 py21cmfast.drivers.coeval INFO Computing Redshift 10.533388423658874 (59/92) iterations.
+2026-10-22 21:45:17 scaling.worker INFO step 58  coeval                 z=10.533 wall=4.9m     cores= 6.04 peak=65.00 GiB after=48.20 GiB
+2026-10-22 21:45:17 py21cmfast.drivers.coeval INFO Computing Redshift 10.30724355260674 (60/92) iterations.
+2026-10-22 21:50:10 scaling.worker INFO step 59  coeval                 z=10.307 wall=4.9m     cores= 6.17 peak=65.48 GiB after=48.67 GiB
+2026-10-22 21:50:10 py21cmfast.drivers.coeval INFO Computing Redshift 10.085532894712491 (61/92) iterations.
+2026-10-22 21:55:00 scaling.worker INFO step 60  coeval                 z=10.086 wall=4.8m     cores= 5.99 peak=65.96 GiB after=49.14 GiB
+2026-10-22 21:55:00 py21cmfast.drivers.coeval INFO Computing Redshift 9.868169504620091 (62/92) iterations.
+2026-10-22 22:00:06 scaling.worker INFO step 61  coeval                 z=9.868 wall=5.1m     cores= 5.99 peak=66.44 GiB after=48.16 GiB
+2026-10-22 22:00:06 py21cmfast.drivers.coeval INFO Computing Redshift 9.655068141784405 (63/92) iterations.
+2026-10-22 22:04:53 scaling.worker INFO step 62  coeval                 z=9.655 wall=4.8m     cores= 6.03 peak=65.53 GiB after=48.63 GiB
+2026-10-22 22:04:53 py21cmfast.drivers.coeval INFO Computing Redshift 9.446145237043535 (64/92) iterations.
+2026-10-22 22:09:39 scaling.worker INFO step 63  coeval                 z=9.446 wall=4.8m     cores= 6.05 peak=66.02 GiB after=49.09 GiB
+2026-10-22 22:09:39 py21cmfast.drivers.coeval INFO Computing Redshift 9.241318859846603 (65/92) iterations.
+2026-10-22 22:14:33 scaling.worker INFO step 64  coeval                 z=9.241 wall=4.9m     cores= 6.19 peak=66.51 GiB after=49.56 GiB
+2026-10-22 22:14:33 py21cmfast.drivers.coeval INFO Computing Redshift 9.040508686124122 (66/92) iterations.
+2026-10-22 22:19:33 scaling.worker INFO step 65  coeval                 z=9.041 wall=5.0m     cores= 6.13 peak=67.00 GiB after=50.02 GiB
+2026-10-22 22:19:33 py21cmfast.drivers.coeval INFO Computing Redshift 8.843635966788355 (67/92) iterations.
+2026-10-22 22:24:33 scaling.worker INFO step 66  coeval                 z=8.844 wall=5.0m     cores= 5.97 peak=67.50 GiB after=50.49 GiB
+2026-10-22 22:24:33 py21cmfast.drivers.coeval INFO Computing Redshift 8.65062349685133 (68/92) iterations.
+2026-10-22 22:29:24 scaling.worker INFO step 67  coeval                 z=8.651 wall=4.9m     cores= 6.09 peak=67.99 GiB after=50.95 GiB
+2026-10-22 22:29:24 py21cmfast.drivers.coeval INFO Computing Redshift 8.461395585148363 (69/92) iterations.
+2026-10-22 22:34:25 scaling.worker INFO step 68  coeval                 z=8.461 wall=5.0m     cores= 6.19 peak=68.50 GiB after=51.42 GiB
+2026-10-22 22:34:25 py21cmfast.drivers.coeval INFO Computing Redshift 8.27587802465526 (70/92) iterations.
+2026-10-22 22:39:23 scaling.worker INFO step 69  coeval                 z=8.276 wall=5.0m     cores= 5.97 peak=69.00 GiB after=51.89 GiB
+2026-10-22 22:39:23 py21cmfast.drivers.coeval INFO Computing Redshift 8.09399806338751 (71/92) iterations.
+2026-10-22 22:44:08 scaling.worker INFO step 70  coeval                 z=8.094 wall=4.7m     cores= 6.12 peak=69.51 GiB after=50.96 GiB
+2026-10-22 22:44:08 py21cmfast.drivers.coeval INFO Computing Redshift 7.915684375870109 (72/92) iterations.
+2026-10-22 22:48:55 scaling.worker INFO step 71  coeval                 z=7.916 wall=4.8m     cores= 6.13 peak=68.62 GiB after=51.43 GiB
+2026-10-22 22:48:55 py21cmfast.drivers.coeval INFO Computing Redshift 7.740867035166774 (73/92) iterations.
+2026-10-22 22:53:47 scaling.worker INFO step 72  coeval                 z=7.741 wall=4.9m     cores= 6.07 peak=69.13 GiB after=51.89 GiB
+2026-10-22 22:53:47 py21cmfast.drivers.coeval INFO Computing Redshift 7.569477485457622 (74/92) iterations.
+2026-10-22 22:58:52 scaling.worker INFO step 73  coeval                 z=7.569 wall=5.1m     cores= 6.18 peak=69.65 GiB after=52.36 GiB
+2026-10-22 22:58:52 py21cmfast.drivers.coeval INFO Computing Redshift 7.401448515154533 (75/92) iterations.
+2026-10-22 23:03:49 scaling.worker INFO step 74  coeval                 z=7.401 wall=5.0m     cores= 5.99 peak=70.16 GiB after=52.82 GiB
+2026-10-22 23:03:49 py21cmfast.drivers.coeval INFO Computing Redshift 7.23671423054366 (76/92) iterations.
+2026-10-22 23:08:32 scaling.worker INFO step 75  coeval                 z=7.237 wall=4.7m     cores= 6.25 peak=70.67 GiB after=53.28 GiB
+2026-10-22 23:08:32 py21cmfast.drivers.coeval INFO Computing Redshift 7.075210029944765 (77/92) iterations.
+2026-10-22 23:13:30 scaling.worker INFO step 76  coeval                 z=7.075 wall=5.0m     cores= 6.22 peak=71.20 GiB after=53.75 GiB
+2026-10-22 23:13:30 py21cmfast.drivers.coeval INFO Computing Redshift 6.916872578377222 (78/92) iterations.
+2026-10-22 23:18:30 scaling.worker INFO step 77  coeval                 z=6.917 wall=5.0m     cores= 6.27 peak=71.72 GiB after=54.21 GiB
+2026-10-22 23:18:30 py21cmfast.drivers.coeval INFO Computing Redshift 6.761639782722767 (79/92) iterations.
+2026-10-22 23:23:24 scaling.worker INFO step 78  coeval                 z=6.762 wall=4.9m     cores= 6.11 peak=72.25 GiB after=54.68 GiB
+2026-10-22 23:23:24 py21cmfast.drivers.coeval INFO Computing Redshift 6.609450767375263 (80/92) iterations.
+2026-10-22 23:28:18 scaling.worker INFO step 79  coeval                 z=6.609 wall=4.9m     cores= 6.10 peak=72.77 GiB after=55.05 GiB
+2026-10-22 23:28:18 py21cmfast.drivers.coeval INFO Computing Redshift 6.460245850367905 (81/92) iterations.
+2026-10-22 23:33:33 scaling.worker INFO step 80  coeval                 z=6.460 wall=5.2m     cores= 6.34 peak=73.20 GiB after=55.51 GiB
+2026-10-22 23:33:33 py21cmfast.drivers.coeval INFO Computing Redshift 6.3139665199685355 (82/92) iterations.
+2026-10-22 23:38:40 scaling.worker INFO step 81  coeval                 z=6.314 wall=5.1m     cores= 6.68 peak=73.73 GiB after=54.58 GiB
+2026-10-22 23:38:40 py21cmfast.drivers.coeval INFO Computing Redshift 6.170555411733859 (83/92) iterations.
+2026-10-22 23:43:47 scaling.worker INFO step 82  coeval                 z=6.171 wall=5.1m     cores= 5.90 peak=72.87 GiB after=55.05 GiB
+2026-10-22 23:43:47 py21cmfast.drivers.coeval INFO Computing Redshift 6.029956286013588 (84/92) iterations.

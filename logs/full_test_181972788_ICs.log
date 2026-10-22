@@ -1,0 +1,4 @@
+00:00:00 INFO     00.164 GB TEST MODE: HII_DIM=200                                                                                                              
+00:00:00 INFO     00.165 GB Inputs prepared with 92 redshifts                                                                                                   
+00:00:00 INFO     00.167 GB Existing InitialConditions found and read in (seed=42).                                                                             
+00:00:00 INFO     00.167 GB Initial conditions done in 0.11s (average CPU cores: 0.46; peak RSS: 00.167 GB)                                                     
