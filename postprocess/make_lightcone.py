@@ -7,9 +7,12 @@ import argparse
 import sys
 sys.path.insert(1, 'run_scripts/')
 import settings
+import sim_steps
 
 parser = argparse.ArgumentParser()
 settings.add_common_args(parser)
+parser.add_argument("--all-quantities", action="store_true", default=False,
+                    help="Every field of the coeval boxes (default: the main ones)")
 args = parser.parse_args()
 
 logger = settings.setup_logging(args.log_file)
@@ -35,20 +38,34 @@ runcache = RunCache.from_inputs(inputs, cache=cache)
 
 
 prev_tick = time.perf_counter()
-lc_path = str(cache_dir + "lc")
+lc_path = settings.lightcone_path(cache_dir)
+QUANTITIES = (
+    "brightness_temp",
+    "spin_temperature",
+    "neutral_fraction",
+    "cumulative_recombinations",
+    "z_reion",
+    "ionisation_rate_G12",
+    "J_21_LW",
+    "density",
+)
+ALL_QUANTITIES = QUANTITIES + (
+    "tau_21",                  # BrightnessTemp
+    "kinetic_temp_neutral",    # TsBox
+    "xray_ionised_fraction",
+    "velocity_z",              # PerturbedField
+    "sfrd_acg",                # EmissivityFields
+    "sfrd_mcg",
+    "xray_emissivity",
+    "n_ion",
+    "fesc_weighted_sfrd",
+)
+quantities = ALL_QUANTITIES if args.all_quantities else QUANTITIES
+logger.info(f"Lightcone quantities: {quantities} -> {lc_path}")
 lcn = p21c.RectilinearLightconer.between_redshifts(
     min_redshift=5.0,
     max_redshift=35.0,
-    quantities=(
-        "brightness_temp",
-        "spin_temperature",
-        "neutral_fraction",
-        "cumulative_recombinations",
-        "z_reion",
-        "ionisation_rate_G12",
-        "J_21_LW",
-        "density",
-    ),
+    quantities=quantities,
     resolution=inputs.simulation_options.cell_size,
 )
 
@@ -58,9 +75,12 @@ lc = p21c.run_lightcone(
     initial_conditions=runcache.get_ics(),
     cache=cache,
     regenerate=False,
+    # Read the cached coevals. The default CacheConfig() would recompute the
+    # RadiationFields at every redshift (they are never cached) and write them.
+    write=sim_steps.coeval_write_config(),
     progressbar=True,
 )
-lc.save(lc_path)
+lc.save(lc_path, clobber=True)
 
 job_dt = time.perf_counter() - job_start
 logger.info(f"Completed lightcone run in {job_dt:.2f}s")

@@ -15,11 +15,16 @@ truth.
 
 from __future__ import annotations
 
+import logging
+import os
+from pathlib import Path
 from typing import Any, Iterable, Iterator
 
 import attrs
 import py21cmfast as p21c
 from py21cmfast.io.caching import CacheConfig
+
+_log = logging.getLogger(__name__)
 
 # py21cmfast's default (1.2) under-allocates the halo-catalog buffer and
 # raises ArgumentValueError at large HII_DIM (confirmed empirically at
@@ -41,6 +46,83 @@ def apply_halo_catalog_mem_factor() -> None:
     _halo_catalog_mem_factor_applied = True
 
 
+def apply_fftw_wisdoms_path() -> Path:
+    """Point 21cmFAST's FFTW wisdom directory at one shared place, and create it.
+
+    $EOS26_WISDOMS if set, else <DATA_ROOT>/fftw_wisdoms (run_scripts/settings.py;
+    /g/data/qp00/$USER/fftw_wisdoms on Gadi). 21cmFAST 4.3.x saves the FFTW_PATIENT
+    plans it makes (USE_FFTW_WISDOM) to config["wisdoms_path"], but does not create
+    that directory and ignores a failed save; without it, every process plans its
+    FFTs from scratch again. Files are named by FFT size and thread count
+    (r2c_DIM<n>_DIM<n>_NTHREADS<t>), so production, tests and scaling can share them.
+    """
+    if os.environ.get("EOS26_WISDOMS"):
+        path = Path(os.environ["EOS26_WISDOMS"])
+    else:
+        import settings  # run_scripts/ is on sys.path for every caller
+
+        path = Path(settings.DATA_ROOT) / "fftw_wisdoms"
+    p21c.config["wisdoms_path"] = path
+    path = path.expanduser()
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+# ------------------------------------------------- run-time-only coeval settings
+# N_THREADS (SimulationOptions) and USE_FFTW_WISDOM (MatterOptions) are part of the
+# 21cmFAST cache hash, and a box read from the cache must have the same inputs as
+# the run, so changing either in EOS26.toml loses every cached box. In the coeval
+# phase neither changes the physics: no random numbers are drawn after the halo
+# catalogs, only the order of OpenMP sums and the FFT algorithm change (round-off).
+# So for coevals we keep the template values for hashing and checks, and change only
+# what the C code runs with:
+#   EOS26_RUN_THREADS=32       OpenMP and FFTW threads of the C code
+#   EOS26_RUN_FFTW_WISDOM=1    FFTW wisdom (FFTW_PATIENT plans, made once and saved)
+# Not for ICs or halo catalogs: their random numbers are drawn per thread
+# (rng.c: one stream per thread), so the thread count changes the realisation.
+_runtime_overrides: dict[str, Any] | None = None
+
+
+def apply_coeval_runtime_overrides() -> dict[str, Any]:
+    """Apply EOS26_RUN_THREADS / EOS26_RUN_FFTW_WISDOM to the C backend (coevals only)."""
+    global _runtime_overrides
+    if _runtime_overrides is not None:
+        return _runtime_overrides
+    n_threads = int(os.environ["EOS26_RUN_THREADS"]) if os.environ.get("EOS26_RUN_THREADS") else None
+    wisdom = bool(int(os.environ["EOS26_RUN_FFTW_WISDOM"])) if os.environ.get("EOS26_RUN_FFTW_WISDOM") else None
+    _runtime_overrides = {}
+    if n_threads is None and wisdom is None:
+        return _runtime_overrides
+
+    from py21cmfast.c_21cmfast import lib
+    from py21cmfast.drivers import _global_initialization as gi
+
+    original = gi.GlobalInitializationManager._broadcast_input_struct
+
+    def _broadcast_input_struct(self):
+        first = not self.inputs_are_broadcast
+        if first:
+            # The C globals point at these structs, so this is what the C code sees.
+            # The Python attributes (hash, compatibility checks) are left alone.
+            if n_threads is not None:
+                self.inputs.simulation_options._cstruct.N_THREADS = n_threads
+            if wisdom is not None:
+                self.inputs.matter_options._cstruct.USE_FFTW_WISDOM = wisdom
+        original(self)
+        if first and wisdom and not self.inputs.matter_options.USE_FFTW_WISDOM:
+            lib.CreateFFTWWisdoms()  # original() only does this for USE_FFTW_WISDOM=True inputs
+
+    gi.GlobalInitializationManager._broadcast_input_struct = _broadcast_input_struct
+    if n_threads is not None:
+        os.environ["OMP_NUM_THREADS"] = str(n_threads)
+        _runtime_overrides["N_THREADS"] = n_threads
+    if wisdom is not None:
+        _runtime_overrides["USE_FFTW_WISDOM"] = wisdom
+        _runtime_overrides["wisdoms_path"] = str(apply_fftw_wisdoms_path())
+    _log.warning("coeval run-time overrides (not in the cache hash): %s", _runtime_overrides)
+    return _runtime_overrides
+
+
 def compute_initial_conditions(
     inputs: Any,
     cache: Any,
@@ -49,6 +131,7 @@ def compute_initial_conditions(
     write: bool = True,
 ) -> Any:
     """Compute (or load) the initial-conditions box."""
+    apply_fftw_wisdoms_path()
     return p21c.compute_initial_conditions(
         inputs=inputs,
         cache=cache,
@@ -70,6 +153,7 @@ def compute_perturbed_field(
 
     If `initial_conditions` is not given, py21cmfast loads it from `cache`.
     """
+    apply_fftw_wisdoms_path()
     kwargs: dict[str, Any] = dict(
         redshift=redshift,
         inputs=inputs,
@@ -94,6 +178,7 @@ def evolve_halos(
 ) -> Any:
     """Evolve halo catalogs across `all_redshifts`."""
     apply_halo_catalog_mem_factor()
+    apply_fftw_wisdoms_path()
     return p21c.drivers.coeval.evolve_halos(
         inputs=inputs,
         all_redshifts=all_redshifts,
@@ -118,8 +203,11 @@ def generate_coevals(
 
     Reuses cached initial conditions, perturbed fields, and halo catalogs
     (regenerate applies only to the coeval-specific products).
+    EOS26_RUN_THREADS / EOS26_RUN_FFTW_WISDOM are applied here (see above).
     """
     apply_halo_catalog_mem_factor()
+    apply_fftw_wisdoms_path()
+    apply_coeval_runtime_overrides()
     return p21c.generate_coeval(
         out_redshifts=out_redshifts,
         inputs=inputs,

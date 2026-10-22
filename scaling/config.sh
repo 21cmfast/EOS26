@@ -31,8 +31,10 @@ SC_SEED=42
 
 # --------------------------------------------------------- per 21cmFAST version
 # Labels: v4.2, v4.3 (a 4.3.x release; 4.3.1 since 2026-10-21, while results/v4.3/
-# was measured with 4.3.0) and v4.3_patch (4.3.0 + the patch named in sc_patch
-# below, built by envs/create_venv_v4.3_patch.sh; 4.3.1 contains the same fix). Results and simulation
+# was measured with 4.3.0), v4.3_patch (4.3.0 + the patch named in sc_patch
+# below, built by envs/create_venv_v4.3_patch.sh; 4.3.1 contains the same fix) and
+# v4.3_fftw (the v4.3 venv with USE_FFTW_WISDOM = true; FFTW wisdom files go to
+# /g/data/qp00/$USER/fftw_wisdoms, see run_scripts/sim_steps.py). Results and simulation
 # caches go to <root>/<label>/, so the labels never overwrite each other.
 # Virtual environment holding each version (see envs/create_venv_v4.3.sh).
 sc_venv() {
@@ -41,6 +43,7 @@ sc_venv() {
     v4.2) echo "/scratch/qp00/${USER}/venvs/EOS26-intel" ;;       # production v4.2 venv
     v4.3) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;
     v4.3_patch) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3_patch-intel" ;;
+    v4.3_fftw) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;   # same venv as v4.3
     *) return 1 ;;
   esac
 }
@@ -51,6 +54,7 @@ sc_template() {
   case "$1" in
     v4.2) echo "EOS26.toml" ;;
     v4.3|v4.3_patch) echo "scaling/templates/EOS26_v4.3.toml" ;;
+    v4.3_fftw) echo "scaling/templates/EOS26_v4.3_fftw.toml" ;;   # USE_FFTW_WISDOM = true
     *) return 1 ;;
   esac
 }
@@ -64,7 +68,7 @@ sc_template() {
 sc_expect_version() {
   case "$1" in
     v4.2) echo '^4\.2' ;;
-    v4.3) echo '^4\.3\.[0-9]+$' ;;
+    v4.3|v4.3_fftw) echo '^4\.3\.[0-9]+$' ;;
     # A patched source build reports e.g. 4.3.1.dev0+gee535b94.d20261020 (dirty
     # tree); sc_patch is what actually identifies it.
     v4.3_patch) echo '^4\.3\.' ;;

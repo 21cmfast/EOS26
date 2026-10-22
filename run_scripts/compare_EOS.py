@@ -245,21 +245,31 @@ _TEST_RC: RunCache | None = None
 
 
 def _test_runcache() -> RunCache | None:
-    """Return a RunCache for the reference test simulation (built lazily, once)."""
+    """Return a RunCache for the reference test simulation (built lazily, once).
+
+    The reference is looked up by the cache hash of the test inputs (EOS26.toml with
+    the test overrides) for the running 21cmFAST version. The test cache directory
+    can also hold references from older versions or other inputs (e.g. a v4.2 run);
+    picking any file found there would compare against the wrong simulation.
+    """
     global _TEST_RC
     if _TEST_RC is not None:
         return _TEST_RC
-    # Prefer BrightnessTemp files: they store the full inputs including node_redshifts
-    examples = sorted(TEST_CACHE_DIR.glob("**/BrightnessTemp.h5"))
-    if not examples:
-        examples = sorted(TEST_CACHE_DIR.glob("**/*.h5"))
-    if not examples:
-        _pline("WARN", "test RunCache: no HDF5 files found in test cache dir")
-        return None
+    import py21cmfast as p21c
+    from settings import TEMPLATE_NAME, inputs_for_run
+
     try:
-        _TEST_RC = RunCache.from_example_file(examples[0])
+        _, overrides = inputs_for_run(True, False)
+        test_inputs = p21c.InputParameters.from_template(TEMPLATE_NAME, **overrides)
+        rc = RunCache.from_inputs(test_inputs, cache=p21c.OutputCache(TEST_CACHE_DIR))
     except Exception as exc:
         _pline("WARN", f"Could not build test RunCache: {exc}")
+        return None
+    if not any(Path(p).exists() for p in rc.BrightnessTemp.values()):
+        _pline("WARN", f"test RunCache: no reference coevals for the test inputs in {TEST_CACHE_DIR} "
+                       f"(py21cmfast {p21c.__version__}); comparisons against the reference are skipped")
+        return None
+    _TEST_RC = rc
     return _TEST_RC
 
 

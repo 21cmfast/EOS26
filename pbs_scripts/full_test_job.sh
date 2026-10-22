@@ -2,11 +2,16 @@
 #PBS -N EOS26_full_test
 #PBS -q normal
 #PBS -l ncpus=16
-#PBS -l mem=22gb
+#PBS -l mem=64gb
 #PBS -l walltime=5:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
 
-# Run the complete EOS pipeline end-to-end in test mode (HII_DIM=200).
+# Run the complete EOS pipeline end-to-end in test mode (HII_DIM=200). This is the
+# reference that run_N_coevals.py --compare checks the production coevals against
+# (settings.CACHE_TEST_REFERENCE on /g/data). Ends with a lightcone of every coeval
+# field (<cache>/lightcone_v<version>.h5) and plots/lightcones_test_HIIDIM200_v<version>.png.
+# 64 GB: 16 CPUs' share on normal, so it costs no more than 22 GB; the lightcone of
+# all fields needs ~20 GB on top of the coevals.
 # Usage: qsub pbs_scripts/full_test_job.sh
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -102,6 +107,7 @@ echo ""
 echo "=== Postprocessing: Lightcone ==="
 uv run --no-sync --active --project "$ROOT" postprocess/make_lightcone.py \
     --log-file "logs/full_test_${JID}_lightcone.log" \
+    --all-quantities \
     --test
 
 uv run --no-sync --active --project "$ROOT" postprocess/plot_lightcone.py \

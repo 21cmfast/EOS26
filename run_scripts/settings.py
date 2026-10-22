@@ -57,12 +57,31 @@ CACHE_TEST_COMPARE = f"{DATA_ROOT / 'EOS26_test_HIIDIM200_compare'}/"
 TEST_HII_DIM = 200
 
 
+def lightcone_path(cache_dir: str | Path) -> Path:
+    """Lightcone file of a run: <cache_dir>/lightcone_v<21cmFAST version>.h5.
+
+    Versioned, so a lightcone from an older 21cmFAST in the same directory is neither
+    overwritten nor read by mistake.
+    """
+    import py21cmfast
+
+    return Path(cache_dir) / f"lightcone_v{py21cmfast.__version__}.h5"
+
+
 def inputs_for_run(test: bool, compare: bool) -> tuple[str, dict[str, int]]:
-    """Return the output cache and template overrides for this invocation."""
+    """Return the output cache and template overrides for this invocation.
+
+    $EOS26_CACHE_DIR, if set, replaces the cache directory (same inputs), e.g. for a
+    test that recomputes the coevals of an existing run with linked upstream boxes.
+    """
     if test:
         cache_dir = CACHE_TEST_COMPARE if compare else CACHE_TEST_REFERENCE
-        return cache_dir, {"HII_DIM": TEST_HII_DIM, "random_seed": TEST_RANDOM_SEED}
-    return CACHE_FULL, {}
+        overrides = {"HII_DIM": TEST_HII_DIM, "random_seed": TEST_RANDOM_SEED}
+    else:
+        cache_dir, overrides = CACHE_FULL, {}
+    if os.environ.get("EOS26_CACHE_DIR"):
+        cache_dir = os.environ["EOS26_CACHE_DIR"].rstrip("/") + "/"
+    return cache_dir, overrides
 
 """Module for adding a nicer logger and ability to turn it on in a CLI."""
 
