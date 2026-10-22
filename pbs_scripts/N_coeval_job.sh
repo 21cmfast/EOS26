@@ -55,6 +55,11 @@ JID="${PBS_JOBID%%.*}"
 COMPARE="${COMPARE:-1}"
 COMPARE_ARG=(); [[ "$COMPARE" == 1 ]] && COMPARE_ARG=(--compare)
 
+# A job killed while writing (e.g. at the walltime) leaves a damaged HDF5 file, which
+# the next job would crash on. Damaged coevals are renamed *.corrupt-<time> and
+# computed again; a damaged IC/PF/halo file makes run_N_coevals.py stop (missing).
+uv run --no-sync --active --project "$ROOT" run_scripts/check_cache.py --quarantine
+
 printf "N is: %s, compare: %s\n" "$N" "$COMPARE"
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py --N "$N" \
     --log-file "logs/EOS26_coeval_${N}_${JID}.log" \

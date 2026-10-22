@@ -59,6 +59,11 @@ uv run --no-sync --active --project "$ROOT" 21cmfast template create \
     --out "test_template.toml"
 
 echo ""
+echo "=== Damaged files in the test cache (e.g. left by a killed job) ==="
+# Renamed to *.corrupt-<time>, so they are computed again below.
+uv run --no-sync --active --project "$ROOT" run_scripts/check_cache.py --test --quarantine
+
+echo ""
 echo "=== Step 1/4: ICs ==="
 uv run --no-sync --active --project "$ROOT" run_scripts/run_ICs.py \
     --log-file "logs/full_test_${JID}_ICs.log" \
