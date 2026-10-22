@@ -71628,3 +71628,33 @@
 00:13:00 DEBUG    03.655 GB                     hires_vz_2LPT:  uninitialized                                                                                   
 00:13:00 DEBUG    03.655 GB                        lowres_vcb:  2.1683e+01,  2.5188e+01,  1.5435e-01,  7.8013e+01,  2.5769e+01                                  
 00:13:00 DEBUG    03.655 GB                                                                                                                                     
+00:13:04 DEBUG    03.713 GB Calling ComputeBrightnessTemp with following args:                                                                                  
+00:13:04 DEBUG    03.713 GB     19.079908424796198                                                                                                              
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:04 DEBUG    03.773 GB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:04 DEBUG    03.773 GB                  spin_temperature:  2.9474e+01,  2.8847e+01,  1.1956e+01,  3.3662e+01,  3.0157e+01                                  
+00:13:04 DEBUG    03.773 GB             xray_ionised_fraction:  1.8795e-04,  1.8876e-04,  1.8095e-04,  3.9798e-04,  1.8708e-04                                  
+00:13:04 DEBUG    03.773 GB              kinetic_temp_neutral:  7.2774e+00,  6.9259e+00,  5.3930e+00,  2.0520e+01,  8.2110e+00                                  
+00:13:04 DEBUG    03.773 GB                           J_21_LW:  9.5783e-02,  9.4532e-02,  5.7654e-02,  8.1458e+00,  1.1319e-01                                  
+00:13:04 DEBUG    03.773 GB                              Q_HI: 0.993756367023912                                                                                
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:04 DEBUG    03.773 GB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+00:13:04 DEBUG    03.773 GB                  neutral_fraction:  9.9936e-01,  9.9949e-01,  0.0000e+00,  9.9981e-01,  9.9377e-01                                  
+00:13:04 DEBUG    03.773 GB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.0495e+00,  2.4766e-07                                  
+00:13:04 DEBUG    03.773 GB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -9.9999e-01                                  
+00:13:04 DEBUG    03.773 GB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  3.1519e-01,  5.6471e-08                                  
+00:13:04 DEBUG    03.773 GB            nion_unconditional_acg: 0.007092554987607073                                                                             
+00:13:04 DEBUG    03.773 GB            nion_unconditional_mcg: 2.630461991171678e-07                                                                            
+00:13:04 DEBUG    03.773 GB               log10_mturn_ave_acg: 7.53536542458459                                                                                 
+00:13:04 DEBUG    03.773 GB               log10_mturn_ave_mcg: 6.212831446892379                                                                                
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:04 DEBUG    03.773 GB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+00:13:04 DEBUG    03.773 GB                           density: -1.9701e-01, -2.6615e-01, -4.8331e-01,  1.4982e+00, -2.4414e-10                                  
+00:13:04 DEBUG    03.773 GB                        velocity_z: -2.2029e-17, -3.9420e-17, -2.1655e-16,  2.1475e-16, -1.1819e-26                                  
+00:13:04 DEBUG    03.773 GB                        velocity_x:  4.4875e-17,  3.2754e-17, -2.2123e-16,  2.0987e-16, -8.6736e-25                                  
+00:13:04 DEBUG    03.773 GB                        velocity_y: -6.0432e-17, -6.0087e-17, -1.8848e-16,  2.0607e-16, -2.0329e-26                                  
+00:13:04 DEBUG    03.773 GB                                                                                                                                     
+00:13:05 INFO     03.773 GB coeval 31/50: z=19.079908                                                                                                           
+00:13:05 INFO     03.773 GB coeval 31/50 done in 28.34s (average CPU cores: 9.88; peak RSS: 03.983 GB)                                                          
