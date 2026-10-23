@@ -1,0 +1,78 @@
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+== how the 21cmFAST extension gets FFTW
+/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/c_21cmfast.abi3.so
+	libfftw3f_omp_Intel.so.3 => /apps/fftw3/3.3.10/lib/libfftw3f_omp_Intel.so.3 (0x000014659e214000)
+	libfftw3f_Intel.so.3 => /apps/fftw3/3.3.10/lib/libfftw3f_Intel.so.3 (0x000014659de02000)
+	libimf.so => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libimf.so (0x000014659da1d000)
+	libsvml.so => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libsvml.so (0x000014659c411000)
+	libirng.so => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libirng.so (0x000014659c0a7000)
+	libintlc.so.5 => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libintlc.so.5 (0x00001465a031c000)
+	libiomp5.so => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so (0x000014659b46f000)
+  fftwf_* symbols defined in the extension: 0
+== wisdom files for 16 threads in /g/data/qp00/db9528/fftw_wisdoms
+-rw-r--r-- 1 db9528 qp00 10198 Oct 22 15:23 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM1200_DIM1200_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 15364 Oct 22 16:05 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM1500_DIM1500_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 18390 Oct 22 13:09 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM200_DIM200_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 19971 Oct 22 14:02 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM300_DIM300_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 16716 Oct 22 15:39 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM400_DIM400_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 26748 Oct 22 16:18 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM500_DIM500_NTHREADS16
+-rw-r--r-- 1 db9528 qp00  7212 Oct 22 13:06 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM600_DIM600_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 11964 Oct 22 13:55 /g/data/qp00/db9528/fftw_wisdoms/c2r_DIM900_DIM900_NTHREADS16
+-rw-r--r-- 1 db9528 qp00  5327 Oct 22 13:50 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM1200_DIM1200_NTHREADS16
+-rw-r--r-- 1 db9528 qp00  7661 Oct 22 14:09 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM1500_DIM1500_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 13138 Oct 22 13:08 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM200_DIM200_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 16061 Oct 22 13:58 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM300_DIM300_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 13601 Oct 22 15:29 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM400_DIM400_NTHREADS16
+-rw-r--r-- 1 db9528 qp00 21008 Oct 22 16:11 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM500_DIM500_NTHREADS16
+-rw-r--r-- 1 db9528 qp00  3690 Oct 22 12:39 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM600_DIM600_NTHREADS16
+-rw-r--r-- 1 db9528 qp00  6302 Oct 22 13:04 /g/data/qp00/db9528/fftw_wisdoms/r2c_DIM900_DIM900_NTHREADS16
+== icc -O2 -qopenmp scaling/bench_fft_wisdom.c -lfftw3f_omp -lfftw3f -lm
+icc: remark #10441: The Intel(R) C++ Compiler Classic (ICC) is deprecated and will be removed from product release in the second half of 2023. The Intel(R) oneAPI DPC++/C++ Compiler (ICX) is the recommended compiler moving forward. Please transition to use this compiler. Use '-diag-disable=10441' to disable this message.
+	libfftw3f_omp_Intel.so.3 => /apps/fftw3/3.3.10/lib/libfftw3f_omp_Intel.so.3 (0x000014e3a1913000)
+	libfftw3f_Intel.so.3 => /apps/fftw3/3.3.10/lib/libfftw3f_Intel.so.3 (0x000014e3a1501000)
+	libiomp5.so => /apps/intel-ct/2021.8.0/compiler/linux/compiler/lib/intel64_lin/libiomp5.so (0x000014e3a0d39000)
+	libimf.so => /apps/intel-tools/intel-compiler-llvm/2024.0.2/lib/libimf.so (0x000014e39ff09000)
+	libsvml.so => /apps/intel-tools/intel-compiler-llvm/2024.0.2/lib/libsvml.so (0x000014e39e8d5000)
+	libirng.so => /apps/intel-tools/intel-compiler-llvm/2024.0.2/lib/libirng.so (0x000014e3a1c3c000)
+	libintlc.so.5 => /apps/intel-tools/intel-compiler-llvm/2024.0.2/lib/libintlc.so.5 (0x000014e3a1bdb000)
+
+fftw-3.3.10-sse2-avx, 16 threads, wisdom from /g/data/qp00/db9528/fftw_wisdoms, 3 r2c+c2r pairs per round
+  n=  200 estimate     0.058s     0.022s     0.021s
+  n=  200 wisdom       0.021s     0.015s     0.013s
+  n=  200 estimate     0.042s     0.020s     0.020s
+  n=  200 wisdom       0.014s     0.014s     0.014s
+  n=  300 estimate     0.430s     0.407s     0.419s
+  n=  300 wisdom       0.044s     0.040s     0.040s
+  n=  300 estimate     0.777s     0.402s     0.404s
+  n=  300 wisdom       0.038s     0.038s     0.078s
+  n=  400 estimate     0.150s     0.124s     0.124s
+  n=  400 wisdom       0.079s     0.076s     0.076s
+  n=  400 estimate     0.150s     0.124s     0.124s
+  n=  400 wisdom       0.076s     0.076s     0.076s
+  n=  500 estimate     0.295s     0.272s     0.274s
+  n=  500 wisdom       0.370s     0.301s     0.352s
+  n=  500 estimate     0.425s     0.561s     0.435s
+  n=  500 wisdom       0.250s     0.251s     0.249s
+  n= 1500 estimate     8.823s     8.832s     9.084s
+  n= 1500 wisdom       3.857s     3.734s     3.699s
+  n= 1500 estimate     9.280s     9.123s     8.801s
+  n= 1500 wisdom       3.581s     3.635s     3.624s
+
+    n  ESTIMATE r2c+c2r  wisdom r2c+c2r  wisdom/ESTIMATE
+  200            0.021s          0.014s            0.637
+  300            0.413s          0.040s            0.097
+  400            0.124s          0.076s            0.613
+  500            0.360s          0.276s            0.766
+ 1500            8.958s          3.667s            0.409
+
+======================================================================================
+                  Resource Usage on 2026-10-23 11:23:24:
+   Job Id:             182072822.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      1.24
+   NCPUs Requested:    16                  CPU Time Used: 00:23:28        
+   Memory Requested:   64.0GB                Memory Used: 12.99GB         
+   Walltime Requested: 01:00:00            Walltime Used: 00:02:20        
+   JobFS Requested:    1.0GB                  JobFS Used: 319.15KB        
+======================================================================================
