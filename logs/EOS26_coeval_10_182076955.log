@@ -1,0 +1,8 @@
+00:00:00 INFO     00.165 GB Starting N coeval run: N=10                                                                                                         
+00:00:00 INFO     00.165 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB Already have 0 coevals done, at redshifts: []                                                                                       
+00:00:00 INFO     00.166 GB Redshifts for this batch: 35.37 to 29.43                                                                                            
+00:00:00 INFO     00.168 GB Existing InitialConditions found and read in (seed=42).                                                                             
+00:00:00 DEBUG    00.168 GB Reading array of shape (4500, 4500, 4500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
