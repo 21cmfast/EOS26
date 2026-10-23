@@ -581,11 +581,14 @@ def setup_logging(log_file: str) -> logging.Logger:
     # inside compute_xray_source_field/spin_temperature) ever reach the log
     # file: "py21cmfast" is never configured, so it falls back to the default
     # WARNING-level root logger with no handler attached.
-    p21c_logger = logging.getLogger("py21cmfast")
-    p21c_logger.setLevel(logging.DEBUG)
-    p21c_logger.handlers.clear()
-    p21c_logger.propagate = False
-    p21c_logger.addHandler(handler)
+    # The same for sim_steps (run-time overrides, FFTW wisdom, damaged cache files):
+    # unconfigured, its warnings would only reach the job's stderr (.e file).
+    for name in ("py21cmfast", "sim_steps"):
+        other = logging.getLogger(name)
+        other.setLevel(logging.DEBUG)
+        other.handlers.clear()
+        other.propagate = False
+        other.addHandler(handler)
 
     return logger
 
