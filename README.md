@@ -12,7 +12,7 @@ All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIID
 - elsewhere: the repository root.
 - `EOS26_DATA=/some/path` overrides both.
 
-Code, logs (`logs/`) and the scaling results (`scaling/results/`) stay in the repository.
+Code, logs and the scaling results (`scaling/results/`) stay in the repository. `logs/` holds the production run logs: the 4.3.1 run and the cache copy/migration at the top level, the old 4.2 run (ICs, PFs, halo catalogs, coeval attempts, plots) in `logs/EOS26_v4.2/`, and the HII_DIM=200 test reference in `logs/HII_DIM200_reference/`. Scaling and benchmark logs are in `scaling/`. PBS's own `<jobname>.o<jobid>`/`.e<jobid>` files are git-ignored: before committing, `python pbs_scripts/fold_pbs_output.py` appends what only they contain (PBS resource summary, compare_* results, tracebacks) to the job's log and deletes them.
 
 ### 21cmFAST version
 The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.1 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. 4.3.1 fixes the coeval memory growth of 4.3.0 (#809, fixed by #810; `bug_reports/5_v4.3_sfrd_history_reloaded.md`). Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. `EOS26_VERSION=v4.3_patch` (4.3.0 + `envs/patches/v4.3.0_sfr_allzero.patch`, the same fix) is kept for the scaling record and is not needed with 4.3.1. The scaling jobs use the same venvs (`scaling/config.sh`).

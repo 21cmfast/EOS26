@@ -27,8 +27,8 @@ set -euo pipefail
 module list
 
 JID="${PBS_JOBID%%.*}"
-#LOG_OUT="logs/full_test_${JID}.out"
-#LOG_ERR="logs/full_test_${JID}.err"
+#LOG_OUT="logs/HII_DIM200_reference/full_test_${JID}.out"
+#LOG_ERR="logs/HII_DIM200_reference/full_test_${JID}.err"
 #exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 echo "=========================================="
@@ -56,7 +56,7 @@ uv run --no-sync --active --project "$ROOT" 21cmfast template create \
 echo ""
 echo "=== Step 1/4: ICs ==="
 uv run --no-sync --active --project "$ROOT" run_scripts/run_ICs.py \
-    --log-file "logs/full_test_${JID}_ICs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_ICs.log" \
     --test \
     --compare
 
@@ -65,41 +65,41 @@ echo "=== Step 2/4: PFs ==="
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_PFs.py \
     --z_idx_start 0 \
     --N "30" \
-    --log-file "logs/full_test_${JID}_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PFs.log" \
     --test \
     --compare
 
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_PFs.py \
     --z_idx_start 30 \
     --N "30" \
-    --log-file "logs/full_test_${JID}_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PFs.log" \
     --test \
     --compare
 
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_PFs.py \
     --z_idx_start 60 \
     --N "-1" \
-    --log-file "logs/full_test_${JID}_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PFs.log" \
     --test \
     --compare
 
 echo ""
 echo "=== Step 3/4: PHFs ==="
 uv run --no-sync --active --project "$ROOT" run_scripts/run_PHFs.py \
-    --log-file "logs/full_test_${JID}_PHFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PHFs.log" \
     --test \
     --compare
 
 echo ""
 echo "=== Step 4/4: Coevals ==="
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py \
-    --log-file "logs/full_test_${JID}_coevals.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_coevals.log" \
     --N "50" \
     --test \
     --compare
 
 uv run --no-sync --active --project "$ROOT" run_scripts/run_N_coevals.py \
-    --log-file "logs/full_test_${JID}_coevals.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_coevals.log" \
     --N "-1" \
     --test \
     --compare
@@ -109,9 +109,9 @@ echo "=== Full test simulation complete ==="
 echo ""
 echo "=== Postprocessing: Lightcone ==="
 uv run --no-sync --active --project "$ROOT" postprocess/make_lightcone.py \
-    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
     --test
 
 uv run --no-sync --active --project "$ROOT" postprocess/plot_lightcone.py \
-    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
     --test

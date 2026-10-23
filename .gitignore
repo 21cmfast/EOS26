@@ -225,3 +225,8 @@ EOS2*cache/
 Claude*
 bug_reports*
 paper/
+
+# PBS job stdout/stderr (<jobname>.o<jobid>, <jobname>.e<jobid>). Fold them into the
+# job's log before committing: python pbs_scripts/fold_pbs_output.py
+*.o[0-9]*
+*.e[0-9]*

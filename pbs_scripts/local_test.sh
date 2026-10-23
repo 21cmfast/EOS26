@@ -6,9 +6,9 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 JID="090626"
-LOG_OUT="logs/full_test_${JID}.out"
-LOG_ERR="logs/full_test_${JID}.err"
-mkdir -p logs
+LOG_OUT="logs/HII_DIM200_reference/full_test_${JID}.out"
+LOG_ERR="logs/HII_DIM200_reference/full_test_${JID}.err"
+mkdir -p logs/HII_DIM200_reference
 exec >"$LOG_OUT" 2>"$LOG_ERR"
 
 uv sync --frozen
@@ -32,7 +32,7 @@ uv run --no-sync 21cmfast template create \
 echo ""
 echo "=== Step 1/4: ICs ==="
 uv run run_scripts/run_ICs.py \
-    --log-file "logs/full_test_${JID}_ICs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_ICs.log" \
     --test
 
 echo ""
@@ -40,25 +40,25 @@ echo "=== Step 2/4: PFs ==="
 uv run run_scripts/run_N_PFs.py \
     --z_idx_start 0 \
     --N "50" \
-    --log-file "logs/full_test_${JID}_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PFs.log" \
     --test
 
 uv run run_scripts/run_N_PFs.py \
     --z_idx_start 50 \
     --N "-1" \
-    --log-file "logs/full_test_${JID}_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PFs.log" \
     --test
 
 echo ""
 echo "=== Step 3/4: PHFs ==="
 uv run run_scripts/run_PHFs.py \
-    --log-file "logs/full_test_${JID}_PHFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_PHFs.log" \
     --test
 
 echo ""
 echo "=== Step 4/4: Coevals ==="
 uv run run_scripts/run_N_coevals.py \
-    --log-file "logs/full_test_${JID}_coevals.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_coevals.log" \
     --N "-1" \
     --test
 
@@ -67,38 +67,38 @@ echo "=== Full test simulation complete ==="
 echo ""
 echo "=== Postprocessing: Lightcone ==="
 uv run postprocess/make_lightcone.py \
-    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
     --test
 
 uv run postprocess/plot_lightcone.py \
-    --log-file "logs/full_test_${JID}_lightcone.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
     --test
 
 echo ""
 echo "=== Comparing a new test simulation against the reference ==="
 
 uv run run_scripts/run_ICs.py \
-    --log-file "logs/full_test_${JID}_compare_ICs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_compare_ICs.log" \
     --test --compare
 
 uv run run_scripts/run_N_PFs.py \
     --z_idx_start 0 \
     --N "50" \
-    --log-file "logs/full_test_${JID}_compare_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_compare_PFs.log" \
     --test --compare
 
 uv run run_scripts/run_N_PFs.py \
     --z_idx_start 50 \
     --N "-1" \
-    --log-file "logs/full_test_${JID}_compare_PFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_compare_PFs.log" \
     --test --compare
 
 uv run run_scripts/run_PHFs.py \
-    --log-file "logs/full_test_${JID}_compare_PHFs.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_compare_PHFs.log" \
     --test --compare
 
 uv run run_scripts/run_N_coevals.py \
-    --log-file "logs/full_test_${JID}_compare_coevals.log" \
+    --log-file "logs/HII_DIM200_reference/full_test_${JID}_compare_coevals.log" \
     --N "-1" \
     --test --compare
 

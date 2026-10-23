@@ -1,0 +1,58 @@
+00:00:00 INFO     00.164 GB Starting PHFs run                                                                                                                   
+00:00:00 INFO     00.164 GB gc.isenabled() = False (expected: False)                                                                                            
+39:12:32 INFO     00.344 TB Halo evolution done in 141151.97s (average CPU cores: 1.52; peak RSS: 01.249 TB)                                                    
+39:12:32 INFO     00.344 TB Completed PHFs run in 141152.12s                                                                                                    
+
+==== PBS output of job 177046782 (EOS26_PHF.o177046782, EOS26_PHF.e177046782), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+OMP_NUM_THREADS: 16
+OMP_PROC_BIND: None
+OMP_PLACES: None
+Allowed CPUs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+                                                        day,
+                                                        15:1…
+──────────── compare_PHFs: checks 1 and 4 on all HaloCatalog files ─────────────
+[10:49:42] [[PASS]] ✓ Check 1 [PHF z=5.0000]: file present, size=47.397 GB
+[10:49:59] [[INFO]] · Check 4 [PHF z=5.0000]: n_halos=1,692,744,852
+           n_density=1.4861e-01 Mpc⁻³
+           [[PASS]] ✓ Check 4 [PHF z=5.0000]: n_density ratio EOS/test=1.00 (OK)
+           [[FAIL]] ✗ Check 4 [PHF z=5.0000]: halo mass PDF differs in
+           log10(M/M_sun) [12.75, 13.00): diff=0.0% > errorbar=0.0%
+---- stderr ----
+Traceback (most recent call last):
+  File "/scratch/qp00/db9528/EOS26/run_scripts/run_PHFs.py", line 61, in <module>
+    compare_PHFs(cache, inputs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/EOS26/run_scripts/compare_EOS.py", line 640, in compare_PHFs
+    _check_halo_counts(eos_path, box_len, label, test_path)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/EOS26/run_scripts/compare_EOS.py", line 406, in _check_halo_counts
+    _check_halo_mass_pdf(eos_mass_counts, n_halos, test_mass_counts, n_test, label)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/EOS26/run_scripts/compare_EOS.py", line 231, in _check_halo_mass_pdf
+    _fail(
+    ~~~~~^
+        f"Check 4 [{label}]: halo mass PDF differs in log10(M/M_sun) "
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        f"[{lo:.2f}, {hi:.2f}): diff={deviation[worst]:.1%} "
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        f"> errorbar={tolerance[worst]:.1%}"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/scratch/qp00/db9528/EOS26/run_scripts/compare_EOS.py", line 99, in _fail
+    raise RuntimeError(f"EOS check FAILED: {msg}")
+RuntimeError: EOS check FAILED: Check 4 [PHF z=5.0000]: halo mass PDF differs in log10(M/M_sun) [12.75, 13.00): diff=0.0% > errorbar=0.0%
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-08-24 10:50:12:
+   Job Id:             177046782.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      5222.68
+   NCPUs Requested:    16                  CPU Time Used: 59:26:30        
+   Memory Requested:   1.39TB                Memory Used: 1.25TB          
+   Walltime Requested: 48:00:00            Walltime Used: 39:13:53        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

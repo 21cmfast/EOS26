@@ -16,7 +16,7 @@
 # About 15-30 min; 14 GB at 1500.
 # Usage: qsub pbs_scripts/bench_fft_wisdom_job.sh
 #        qsub -v SIZES="300 1500",THREADS=16 pbs_scripts/bench_fft_wisdom_job.sh
-# Output: logs/fft_bench_<jobid>.log
+# Output: scaling/logs/fft_bench_<jobid>.log
 
 export PATH="$HOME/.local/bin:$PATH"
 cd "$PBS_O_WORKDIR"
@@ -33,8 +33,8 @@ THREADS="${THREADS:-16}"
 SIZES="${SIZES:-200 300 400 500 1500}"
 export OMP_NUM_THREADS="$THREADS" OMP_DYNAMIC=FALSE
 unset OMP_PROC_BIND OMP_PLACES
-mkdir -p logs
-LOG="logs/fft_bench_${JID}.log"
+mkdir -p scaling/logs
+LOG="scaling/logs/fft_bench_${JID}.log"
 WISDOMS="${EOS26_WISDOMS:-$(python -c "import sys; sys.path.insert(0, 'run_scripts'); import settings; print(settings.DATA_ROOT)")/fftw_wisdoms}"
 
 {

@@ -1,0 +1,19 @@
+
+==== PBS output of job 181587634 (EOS26_copy2.o181587634), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+=== 2026-10-19T16:45:24Z copy round 181587634.gadi-pbs on gadi-dm-01.gadi.nci.org.au: /scratch/qp00/db9528/EOS26/EOS26_cache/ -> /g/data/qp00/db9528/EOS26_cache/
+=== 2026-10-19T21:17:59Z rsync exit status 0
+files: scratch 218, gdata 218, still to copy 0
+copy COMPLETE and verified -> /g/data/qp00/db9528/EOS26_cache.copy_complete
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-10-20 08:18:08:
+   Job Id:             181587634.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.09
+   NCPUs Requested:    1                   CPU Time Used: 04:09:12        
+   Memory Requested:   4.0GB                 Memory Used: 4.0GB           
+   Walltime Requested: 10:00:00            Walltime Used: 04:32:42        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
