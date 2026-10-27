@@ -18337,3 +18337,31 @@
 38:33:18 INFO     00.909 TB coeval 10/10 done in 21260.52s (average CPU cores: 3.29; peak RSS: 00.983 TB)                                                       
 38:33:20 DEBUG    00.590 TB gc.collect() after coeval 10/10 collected 0 objects                                                                                 
 38:33:28 INFO     00.193 GB Completed N coeval run in 138808.04s                                                                                                
+
+==== PBS output of job 182076955 (EOS26_coeval.o182076955, EOS26_coeval.e182076955), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 185 files in /g/data/qp00/db9528/EOS26_cache
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  PerturbedField     ok   92   damaged    0
+no damaged files
+N is: 10, compare: 0
+                                                        day,
+                                                        14:1…
+---- stderr ----
+coeval run-time overrides (not in the cache hash): {'USE_FFTW_WISDOM': True, 'wisdoms_path': '/g/data/qp00/db9528/fftw_wisdoms'}
+FFTW wisdoms for coevals (HII_DIM=1500, 16 threads, /g/data/qp00/db9528/fftw_wisdoms): 2 s, status 0
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-10-25 02:37:27:
+   Job Id:             182076955.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      4526.73
+   NCPUs Requested:    16                  CPU Time Used: 121:31:33       
+   Memory Requested:   1.46TB                Memory Used: 1.35TB          
+   Walltime Requested: 48:00:00            Walltime Used: 38:37:41        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
