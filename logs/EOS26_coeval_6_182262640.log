@@ -9858,3 +9858,31 @@
 22:15:26 DEBUG    01.186 TB                           J_21_LW:  6.7420e-03,  6.6075e-03,  2.3606e-03,  1.8033e+00,  7.2944e-03                                  
 22:15:26 DEBUG    01.186 TB                              Q_HI: 0.9995564614300607                                                                               
 22:15:26 DEBUG    01.186 TB                                                                                                                                     
+22:16:24 DEBUG    01.186 TB                                                                                                                                     
+22:16:24 DEBUG    01.186 TB          RadiationFieldsSetup       1st:         End:         Min:         Max:         Mean:                                       
+22:16:24 DEBUG    01.186 TB                           zpp_avg:  2.3974e+01,  3.1627e+01,  2.3974e+01,  3.1627e+01,  2.5162e+01                                  
+22:16:24 DEBUG    01.186 TB                          R_values:  9.3053e-01,  4.2728e+02,  9.3053e-01,  4.2728e+02,  7.3311e+01                                  
+22:16:24 DEBUG    01.186 TB                         zpp_edges:  2.3982e+01,  3.2359e+01,  2.3982e+01,  3.2359e+01,  2.5267e+01                                  
+22:16:24 DEBUG    01.186 TB         filtered_sfrd_acg_for_lya:  3.8558e-14,  4.0484e-14,  0.0000e+00,  1.4209e-12,  3.7326e-14                                  
+22:16:24 DEBUG    01.186 TB         filtered_sfrd_mcg_for_lya:  2.3147e-13,  2.4668e-13,  1.2956e-14,  1.3616e-12,  2.2829e-13                                  
+22:16:24 DEBUG    01.186 TB          filtered_xray_emissivity:  4.6699e-03,  4.9668e-03,  2.3823e-04,  3.9266e-02,  4.5962e-03                                  
+22:16:24 DEBUG    01.186 TB                 freq_int_heat_tbl:  1.2099e-15,  1.2504e-16,  2.5474e-17,  6.9789e-15,  1.9584e-15                                  
+22:16:24 DEBUG    01.186 TB                  freq_int_ion_tbl:  1.7663e-04,  4.4979e-08,  4.4979e-08,  1.7663e-04,  5.3454e-05                                  
+22:16:24 DEBUG    01.186 TB                  freq_int_lya_tbl:  1.4118e+06,  2.7904e+00,  2.7904e+00,  1.4118e+06,  3.8763e+05                                  
+22:16:24 DEBUG    01.186 TB            freq_int_heat_tbl_diff:  2.0294e-16,  0.0000e+00, -1.5806e-15,  1.2066e-15,  1.3965e-16                                  
+22:16:24 DEBUG    01.186 TB             freq_int_ion_tbl_diff: -1.4733e-06,  0.0000e+00, -4.7705e-05,  0.0000e+00, -6.2590e-06                                  
+22:16:24 DEBUG    01.186 TB             freq_int_lya_tbl_diff: -4.5628e+04,  0.0000e+00, -3.3343e+05,  0.0000e+00, -5.1720e+04                                  
+22:16:24 DEBUG    01.186 TB                      inverse_diff:  7.5873e+03,  0.0000e+00,  0.0000e+00,  7.5873e+03,  1.0957e+03                                  
+22:16:24 DEBUG    01.186 TB                    m_xHII_low_box:  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00                                  
+22:16:24 DEBUG    01.186 TB                   inverse_val_box:  6.7777e-01,  6.8086e-01,  6.3429e-01,  9.5514e-01,  6.7341e-01                                  
+22:16:24 DEBUG    01.186 TB         lya_flux_continuum_prefactor_acg:  8.0532e-07,  0.0000e+00,  0.0000e+00,  9.6936e-07,  7.7731e-07                           
+22:16:24 DEBUG    01.186 TB         lya_flux_injected_prefactor_acg:  1.4516e-06,  0.0000e+00,  0.0000e+00,  1.4516e-06,  3.4627e-07                            
+22:16:24 DEBUG    01.186 TB            lyw_flux_prefactor_acg:  4.2188e+08,  0.0000e+00,  0.0000e+00,  4.2188e+08,  2.3789e+08                                  
+22:16:24 DEBUG    01.186 TB            lyw_flux_prefactor_mcg:  6.2938e+07,  0.0000e+00,  0.0000e+00,  6.2938e+07,  3.3311e+07                                  
+22:16:24 DEBUG    01.186 TB         lya_flux_continuum_prefactor_mcg:  8.1177e-08,  0.0000e+00,  0.0000e+00,  1.1775e-07,  8.1429e-08                           
+22:16:24 DEBUG    01.186 TB         lya_flux_injected_prefactor_mcg:  4.6538e-07,  0.0000e+00,  0.0000e+00,  4.6538e-07,  8.9944e-08                            
+22:16:24 DEBUG    01.186 TB                 ave_log10_MturnLW:  5.9585e+00,  5.7452e+00,  5.7452e+00,  5.9585e+00,  5.9202e+00                                  
+22:16:24 DEBUG    01.186 TB                        x_e_ave_zp: 0.0001887560707904335                                                                            
+22:16:24 DEBUG    01.186 TB                           Q_HI_zp: 0.9994257603311453                                                                               
+22:16:24 DEBUG    01.186 TB                          NO_LIGHT: 0                                                                                                
+22:16:24 DEBUG    01.186 TB                                                                                                                                     

@@ -15251,3 +15251,32 @@
 34:33:12 INFO     01.081 TB coeval 6/6 done in 21303.22s (average CPU cores: 3.35; peak RSS: 01.154 TB)                                                         
 34:33:15 DEBUG    00.761 TB gc.collect() after coeval 6/6 collected 0 objects                                                                                   
 34:33:23 INFO     00.208 GB Completed N coeval run in 124403.40s                                                                                                
+
+==== PBS output of job 182190131 (EOS26_coeval.o182190131, EOS26_coeval.e182190131), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 225 files in /g/data/qp00/db9528/EOS26_cache
+  BrightnessTemp     ok   10   damaged    0
+  EmissivityFields   ok   10   damaged    0
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  IonizedBox         ok   10   damaged    0
+  PerturbedField     ok   92   damaged    0
+  TsBox              ok   10   damaged    0
+no damaged files
+N is: 6, compare: 0
+                                                        day,
+                                                        10:1…
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-10-26 13:13:26:
+   Job Id:             182190131.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      4324.24
+   NCPUs Requested:    16                  CPU Time Used: 117:38:25       
+   Memory Requested:   1.56TB                Memory Used: 1.42TB          
+   Walltime Requested: 48:00:00            Walltime Used: 34:35:38        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
