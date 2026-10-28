@@ -1,92 +1,60 @@
-import gc
-gc.collect()
-gc.disable()
+"""Slice through the initial conditions of the EOS26 run (production cache by default).
 
+    python postprocess/plot_ics.py                        # lowres density, plane x=0
+    python postprocess/plot_ics.py --zoom --vel           # first 100x100 cells, with velocity arrows
+    python postprocess/plot_ics.py --field hires_density --zoom 300
+    python postprocess/plot_ics.py --test                 # the HII_DIM=200 test reference
+
+Reads only the plane x0 of the field from the cached InitialConditions file (eos_boxes),
+so it needs little memory even at HII_DIM=1500. Output: plots/ICs_<run>[_<field>][_zoom<N>][_vel].png
+"""
 import argparse
 import logging
 import sys
-sys.path.insert(1, 'run_scripts/')
-import settings
+from pathlib import Path
 
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    "--test", action="store_true", default=False,
-    help=f"Run a small test box (HII_DIM={settings.TEST_HII_DIM}) instead of the full EOS",
-)
-parser.add_argument(
-    "--compare", action="store_true", default=False,
-    help="Use the cache from a run with --compare",
-)
-parser.add_argument(
-    "--zoom", action="store_true", default=False,
-    help="Crop the plotted box to a 100^3 corner instead of the full volume",
-)
-parser.add_argument(
-    "--vel", action="store_true", default=False,
-    help="Overlay the lowres velocity field as a quiver plot",
-)
+sys.path.insert(1, str(Path(__file__).resolve().parents[1] / "run_scripts"))
+import settings  # noqa: E402
+
+parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+parser.add_argument("--test", action="store_true", help=f"the HII_DIM={settings.TEST_HII_DIM} test reference")
+parser.add_argument("--field", default="lowres_density", help="InitialConditions field (default lowres_density)")
+parser.add_argument("--x0", type=int, default=0,
+                    help="plane to plot: index along the first axis, in cells of that field's grid")
+parser.add_argument("--zoom", type=int, nargs="?", const=100, default=None,
+                    help="show only the first N x N cells (N=100 if no value)")
+parser.add_argument("--vel", action="store_true", help="overlay the lowres velocity field (in-plane components)")
+parser.add_argument("--vmax", type=float, default=None, help="colour scale -vmax..vmax (default: 99.5th percentile)")
 args = parser.parse_args()
 
 settings.setup_logger()
-logger = logging.getLogger("21cmFAST")
+log = logging.getLogger("21cmFAST")
 
-import py21cmfast as p21c
-from py21cmfast.io.caching import RunCache
-from astropy import units as un
-import matplotlib.pyplot as plt
-from tuesday.core import coeval2slice_z, plot_coeval_slice
+import eos_boxes as eb  # noqa: E402
 
-if args.test:
-    logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
-cache = p21c.OutputCache(cache_dir)
-
-inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-    **_input_overrides,
-    )
-
-runcache = RunCache.from_inputs(inputs, cache=cache)
-initial_conditions = runcache.get_ics()
-
-HII_DIM = inputs.simulation_options.HII_DIM
-L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
-print(f"HII_DIM: {HII_DIM}, L: {L}")
-box = initial_conditions.get("lowres_density") * un.dimensionless_unscaled
-if args.zoom:
-    box = box[:100, :100, :1]
-else:
-    box = box[...,:1]
+run = eb.Run(test=args.test)
+ics = run.path("InitialConditions")
+if ics is None:
+    sys.exit(f"no InitialConditions in {run.cache_dir}")
+plane = eb.read_plane(ics, "InitialConditions", args.field, x0=args.x0)
+vel = None
 if args.vel:
-    v_x = initial_conditions.get("lowres_vx")[0, ...] * un.m / un.s
-    v_y = initial_conditions.get("lowres_vy")[0, ...] * un.m / un.s
-    if args.zoom:
-        v_x = v_x[:100, :100]
-        v_y = v_y[:100, :100]
-else:
-    v_x = None
-    v_y = None
+    comps = ("lowres_vy", "lowres_vz")
+    if all(eb.has_field(ics, "InitialConditions", c) for c in comps):
+        vel = tuple(eb.read_plane(ics, "InitialConditions", c, x0=args.x0) for c in comps)
+        if vel[0].shape != plane.shape:
+            log.warning("velocity planes are lowres, the field is not: no arrows")
+            vel = None
+    else:
+        log.warning(f"{ics.name} has no {comps}: no arrows")
 
-plotspath = 'plots/'
-out = plotspath + "ICs"
-if args.test:
-    out += "_test"
-if args.zoom:
-    out += "_zoom"
-if args.vel:
-    out += "_wvel"
-
-fig, ax = plt.subplots(1, 1, layout="constrained")
-ax = plot_coeval_slice(
-    box,
-    L / HII_DIM * box.shape[0],
-    transform2slice=coeval2slice_z(idx=0),
-    ax=ax, vmin=-17, vmax=17,
-    v_x=v_x,
-    v_y=v_y,
-    quiver_decimate_factor=10 if args.zoom else 18,
+out = f"{eb.PLOTS}/ICs_{run.tag}"
+out += "" if args.field == "lowres_density" else f"_{args.field}"
+out += f"_zoom{args.zoom}" if args.zoom else ""
+out += "_vel" if vel is not None else ""
+eb.slice_figure(
+    plane, float(run.inputs.simulation_options.BOX_LEN), out + ".png",
+    title=f"{run.tag} initial conditions, {args.field}, plane x={args.x0} (21cmFAST {run.version})",
+    label=r"$\delta$" if "density" in args.field else args.field,
+    vel=vel, zoom=args.zoom, vmax=args.vmax,
 )
-plt.savefig(out, dpi=300)
-logger.info(f"Saved ICs plot to {out}")
-
-
-

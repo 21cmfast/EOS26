@@ -1,103 +1,63 @@
-import gc
-gc.collect()
-gc.disable()
+"""Slices through the perturbed density of the EOS26 run (production cache by default).
 
+    python postprocess/plot_pf.py --redshift 15.1               # closest node redshift
+    python postprocess/plot_pf.py --redshift 5 10 15 --zoom     # several, first 100x100 cells
+    python postprocess/plot_pf.py --redshift 10 --vel           # with velocity arrows
+    python postprocess/plot_pf.py --test --redshift 10          # the HII_DIM=200 test reference
+
+Reads only the plane x0 from the cached PerturbedField files (eos_boxes), so it needs
+little memory even at HII_DIM=1500. One file per redshift:
+plots/PF_<run>_z<z>[_<field>][_zoom<N>][_vel].png
+"""
 import argparse
 import logging
 import sys
-sys.path.insert(1, 'run_scripts/')
-import settings
+from pathlib import Path
 
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    "--test", action="store_true", default=False,
-    help=f"Run a small test box (HII_DIM={settings.TEST_HII_DIM}) instead of the full EOS",
-)
-parser.add_argument(
-    "--compare", action="store_true", default=False,
-    help="Use the cache from a run with --compare",
-)
-parser.add_argument(
-    "--zoom", action="store_true", default=False,
-    help="Crop the plotted box to a 100^3 corner instead of the full volume",
-)
-parser.add_argument(
-    "--vel", action="store_true", default=False,
-    help="Overlay the velocity field as a quiver plot",
-)
-parser.add_argument(
-    "--redshift", type=float, default=33.9596,
-    help="Redshift to plot (the closest available node redshift is used)",
-)
+sys.path.insert(1, str(Path(__file__).resolve().parents[1] / "run_scripts"))
+import settings  # noqa: E402
+
+parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+parser.add_argument("--test", action="store_true", help=f"the HII_DIM={settings.TEST_HII_DIM} test reference")
+parser.add_argument("--redshift", type=float, nargs="+", default=[15.1],
+                    help="redshift(s) to plot; the closest node redshift is used")
+parser.add_argument("--field", default="density", help="PerturbedField field (default density)")
+parser.add_argument("--x0", type=int, default=0, help="plane (index along the first axis) to plot")
+parser.add_argument("--zoom", type=int, nargs="?", const=100, default=None,
+                    help="show only the first N x N cells (N=100 if no value)")
+parser.add_argument("--vel", action="store_true", help="overlay the velocity field (in-plane components)")
+parser.add_argument("--vmax", type=float, default=None, help="colour scale -vmax..vmax (default: 99.5th percentile)")
 args = parser.parse_args()
 
 settings.setup_logger()
-logger = logging.getLogger("21cmFAST")
+log = logging.getLogger("21cmFAST")
 
-import py21cmfast as p21c
-from py21cmfast.io.caching import RunCache
-from astropy import units as un
-import matplotlib.pyplot as plt
-from tuesday.core import coeval2slice_z, plot_coeval_slice
+import eos_boxes as eb  # noqa: E402
 
-if args.test:
-    logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
-cache_dir, _input_overrides = settings.inputs_for_run(args.test, args.compare)
-cache = p21c.OutputCache(cache_dir)
-
-inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME,
-    **_input_overrides,
+run = eb.Run(test=args.test)
+for z_req in args.redshift:
+    z = run.nearest_z(z_req)
+    pf = run.path("PerturbedField", z)
+    if pf is None:
+        log.warning(f"no PerturbedField at z={z:.4f} in {run.cache_dir}")
+        continue
+    log.info(f"Requested z={z_req:.4f}; closest node redshift z={z:.4f}")
+    plane = eb.read_plane(pf, "PerturbedField", args.field, x0=args.x0)
+    vel = None
+    if args.vel:
+        comps = ("velocity_y", "velocity_z")
+        if all(eb.has_field(pf, "PerturbedField", c) for c in comps):
+            vel = tuple(eb.read_plane(pf, "PerturbedField", c, x0=args.x0) for c in comps)
+        else:
+            log.warning(f"{pf.name} at z={z:.4f} has no {comps}: no arrows")
+    out = f"{eb.PLOTS}/PF_{run.tag}_z{z:05.2f}"
+    out += "" if args.field == "density" else f"_{args.field}"
+    out += f"_zoom{args.zoom}" if args.zoom else ""
+    out += "_vel" if vel is not None else ""
+    eb.slice_figure(
+        plane, float(run.inputs.simulation_options.BOX_LEN), out + ".png",
+        title=f"{run.tag} perturbed field, {args.field}, z = {z:.2f} (requested {z_req:.2f}), "
+              f"plane x={args.x0} (21cmFAST {run.version})",
+        label=r"$\delta$" if args.field == "density" else args.field,
+        vel=vel, zoom=args.zoom, vmax=args.vmax,
     )
-
-runcache = RunCache.from_inputs(inputs, cache=cache)
-perturbed_field = runcache.get_output_struct_at_z(
-    "PerturbedField", z=args.redshift, match_z_within=0.1,
-)
-logger.info(
-    f"Requested z={args.redshift:.4f}; closest available redshift is "
-    f"z={perturbed_field.redshift:.4f}"
-)
-
-HII_DIM = inputs.simulation_options.HII_DIM
-L = inputs.simulation_options._LOWRES_CELL_SIZE_MPC * HII_DIM * un.Mpc
-
-box = perturbed_field.get("density") * un.dimensionless_unscaled
-if args.zoom:
-    box = box[:100, :100, :1]
-else:
-    box = box[:,:,:1]
-if args.vel:
-    v_x = perturbed_field.get("velocity_x")[0, ...] * un.m / un.s
-    v_y = perturbed_field.get("velocity_y")[0, ...] * un.m / un.s
-    if args.zoom:
-        v_x = v_x[:100, :100,:1]
-        v_y = v_y[:100, :100,:1]
-else:
-    v_x = None
-    v_y = None
-
-plotspath = 'plots/'
-out = plotspath + "PF"
-if args.test:
-    out += "_test"
-if args.zoom:
-    out += "_zoom"
-if args.vel:
-    out += "_wvel"
-out += str(perturbed_field.redshift).split(".")[0]
-fig, ax = plt.subplots(1, 1, layout="constrained")
-ax = plot_coeval_slice(
-    box,
-    L / HII_DIM * box.shape[0],
-    transform2slice=coeval2slice_z(idx=0),
-    ax=ax, vmin=-0.5, vmax=0.5,
-    v_x=v_x,
-    v_y=v_y,
-    quiver_decimate_factor=10 if args.zoom else 18,
-    title=f"z = {perturbed_field.redshift:.2f} (requested {args.redshift:.2f})",
-)
-plt.savefig(out, dpi=300)
-logger.info(f"Saved PF plot to {out}")
-
-
-

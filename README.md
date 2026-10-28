@@ -76,6 +76,8 @@ superseded; see `scaling_old/ASSESSMENT.md`.
 4. **Coevals:**
    - `sbatch sbatch_scripts/N_coeval_job.sh [N] [--test]` — runs a batch of N coevals (default N=10) with `run_scripts/run_N_coevals.py`.
   - `qsub pbs_scripts/N_coeval_job.sh [N] [--test]` on PBS.
+5. **Plots (any time):**
+  - `qsub postprocess/plots_job.sh` — slices of the ICs and PFs, and the lightcones of what is cached so far (`postprocess/plot_lightcone.py --quantities …`; `--list` shows which quantities and redshifts are there). Resubmit it after coeval jobs to extend the lightcones; only new boxes are read (`<cache>/lightcone_planes/`).
 ## Table
 
 <table><thead>

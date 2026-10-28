@@ -117,4 +117,4 @@ uv run --no-sync --active --project "$ROOT" postprocess/make_lightcone.py \
 
 uv run --no-sync --active --project "$ROOT" postprocess/plot_lightcone.py \
     --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
-    --test
+    --test --quantities all

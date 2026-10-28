@@ -72,7 +72,7 @@ uv run postprocess/make_lightcone.py \
 
 uv run postprocess/plot_lightcone.py \
     --log-file "logs/HII_DIM200_reference/full_test_${JID}_lightcone.log" \
-    --test
+    --test --quantities all
 
 echo ""
 echo "=== Comparing a new test simulation against the reference ==="
