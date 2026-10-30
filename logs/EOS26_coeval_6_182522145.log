@@ -7485,3 +7485,32 @@
 16:49:25 DEBUG    01.090 TB                           Q_HI_zp: 0.9925987975375221                                                                               
 16:49:25 DEBUG    01.090 TB                          NO_LIGHT: 0                                                                                                
 16:49:25 DEBUG    01.090 TB                                                                                                                                     
+16:52:48 DEBUG    01.090 TB Calling UpdateRadiationFields with following args:                                                                                  
+16:52:48 DEBUG    01.090 TB     18.686184730192352                                                                                                              
+16:53:19 DEBUG    01.090 TB                                                                                                                                     
+16:53:19 DEBUG    01.090 TB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+16:53:19 DEBUG    01.090 TB                          sfrd_acg:  4.3454e-15,  7.9807e-14,  2.4049e-20,  5.4646e-09,  9.9122e-13                                  
+16:53:19 DEBUG    01.090 TB                          sfrd_mcg:  5.3388e-14,  4.4883e-13,  9.8842e-18,  2.0963e-10,  1.8469e-12                                  
+16:53:19 DEBUG    01.090 TB                   xray_emissivity:  9.4183e-04,  8.5270e-03,  1.6597e-07,  1.4355e+03,  4.4743e-02                                  
+16:53:19 DEBUG    01.090 TB                             n_ion:  initialized                                                                                     
+16:53:19 DEBUG    01.090 TB                fesc_weighted_sfrd:  initialized                                                                                     
+16:53:19 DEBUG    01.090 TB               log10_mturn_acg_ave: None                                                                                             
+16:53:19 DEBUG    01.090 TB               log10_mturn_mcg_ave: None                                                                                             
+16:53:19 DEBUG    01.090 TB                                                                                                                                     
+16:53:19 DEBUG    01.090 TB     22                                                                                                                              
+16:53:19 DEBUG    01.090 TB     0.0                                                                                                                             
+16:54:04 DEBUG    01.090 TB                                                                                                                                     
+16:54:04 DEBUG    01.090 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+16:54:04 DEBUG    01.090 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+16:54:04 DEBUG    01.090 TB                        velocity_z: -3.6727e-19, -6.3354e-18, -3.2011e-16,  3.0479e-16,  3.4452e-28                                  
+16:54:04 DEBUG    01.090 TB                        velocity_x:  9.7622e-17,  1.0485e-16, -3.1145e-16,  3.0500e-16, -2.6316e-25                                  
+16:54:04 DEBUG    01.090 TB                        velocity_y: -1.6033e-18,  2.0126e-18, -3.0426e-16,  3.1770e-16,  2.5057e-27                                  
+16:54:04 DEBUG    01.090 TB                                                                                                                                     
+16:54:26 DEBUG    01.090 TB                                                                                                                                     
+16:54:26 DEBUG    01.090 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+16:54:26 DEBUG    01.090 TB                  spin_temperature:  uninitialized                                                                                   
+16:54:26 DEBUG    01.090 TB             xray_ionised_fraction:  1.8727e-04,  1.8778e-04,  1.7953e-04,  2.5393e-03,  1.8702e-04                                  
+16:54:26 DEBUG    01.090 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+16:54:26 DEBUG    01.090 TB                           J_21_LW:  1.0946e-01,  1.0759e-01,  4.4344e-02,  1.7374e+01,  1.1316e-01                                  
+16:54:26 DEBUG    01.090 TB                              Q_HI: 0.993828956915561                                                                                
+16:54:26 DEBUG    01.090 TB                                                                                                                                     

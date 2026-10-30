@@ -1,0 +1,126 @@
+
+==== PBS output of job 182522402 (EOS26_plots.o182522402, EOS26_plots.e182522402), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+00:00:00 INFO     00.134 GB Saved /scratch/qp00/db9528/EOS26/plots/ICs_EOS26.png
+00:00:00 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/ICs_EOS26_zoom100_vel.png
+00:00:00 INFO     93.853 MB Requested z=5.0000; closest node redshift z=5.0000
+00:00:02 INFO     00.135 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z05.00.png
+00:00:02 INFO     00.135 GB Requested z=8.0000; closest node redshift z=7.9157
+00:00:03 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z07.92.png
+00:00:03 INFO     00.144 GB Requested z=10.0000; closest node redshift z=10.0855
+00:00:05 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z10.09.png
+00:00:05 INFO     00.144 GB Requested z=15.0000; closest node redshift z=15.1495
+00:00:06 INFO     00.154 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z15.15.png
+00:00:06 INFO     00.154 GB Requested z=20.0000; closest node redshift z=19.8911
+00:00:08 INFO     00.164 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z19.89.png
+00:00:08 INFO     00.164 GB Requested z=30.0000; closest node redshift z=30.0431
+00:00:09 INFO     00.154 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z30.04.png
+00:00:00 INFO     93.831 MB Requested z=10.0000; closest node redshift z=10.0855
+00:00:01 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z10.09_zoom100_vel.png
+00:00:00 INFO     00.289 GB z=5.000: 1127973 of 1692744852 halos in the slab (no feedback grids yet)
+00:00:50 INFO     00.302 GB z=5.120: 1084046 of 1627641782 halos in the slab (no feedback grids yet)
+00:02:17 INFO     00.298 GB z=5.242: 1039987 of 1560889768 halos in the slab (no feedback grids yet)
+00:03:37 INFO     00.294 GB z=5.367: 995093 of 1492871150 halos in the slab (no feedback grids yet)
+00:05:24 INFO     00.289 GB z=5.495: 949505 of 1423925113 halos in the slab (no feedback grids yet)
+00:07:15 INFO     00.285 GB z=5.624: 903856 of 1354365278 halos in the slab (no feedback grids yet)
+00:09:04 INFO     00.281 GB z=5.757: 857580 of 1284557569 halos in the slab (no feedback grids yet)
+00:11:39 INFO     00.276 GB z=5.892: 810885 of 1214801114 halos in the slab (no feedback grids yet)
+00:17:43 INFO     00.272 GB z=6.030: 764940 of 1145502017 halos in the slab (no feedback grids yet)
+00:21:44 INFO     00.267 GB z=6.171: 719124 of 1076894263 halos in the slab (no feedback grids yet)
+00:26:08 INFO     00.263 GB z=6.314: 674657 of 1009283712 halos in the slab (no feedback grids yet)
+00:29:58 INFO     00.259 GB z=6.460: 630416 of 942900982 halos in the slab (no feedback grids yet)
+00:33:39 INFO     00.254 GB z=6.609: 587253 of 877978432 halos in the slab (no feedback grids yet)
+00:38:21 INFO     00.250 GB z=6.762: 545184 of 814686603 halos in the slab (no feedback grids yet)
+00:42:14 INFO     00.246 GB z=6.917: 504182 of 753208660 halos in the slab (no feedback grids yet)
+00:44:10 INFO     00.243 GB z=7.075: 464932 of 693770909 halos in the slab (no feedback grids yet)
+00:47:03 INFO     00.239 GB z=7.237: 426716 of 636526096 halos in the slab (no feedback grids yet)
+00:49:04 INFO     00.235 GB z=7.401: 390256 of 581636340 halos in the slab (no feedback grids yet)
+00:51:47 INFO     00.232 GB z=7.569: 355418 of 529249172 halos in the slab (no feedback grids yet)
+00:53:17 INFO     00.229 GB z=7.741: 322161 of 479473523 halos in the slab (no feedback grids yet)
+00:55:13 INFO     00.226 GB z=7.916: 290941 of 432383224 halos in the slab (no feedback grids yet)
+00:56:07 INFO     00.223 GB z=8.094: 261436 of 388058156 halos in the slab (no feedback grids yet)
+00:57:02 INFO     00.220 GB z=8.276: 233646 of 346553884 halos in the slab (no feedback grids yet)
+00:57:56 INFO     00.218 GB z=8.461: 207763 of 307911988 halos in the slab (no feedback grids yet)
+00:58:38 INFO     00.215 GB z=8.651: 183560 of 272109818 halos in the slab (no feedback grids yet)
+00:59:26 INFO     00.213 GB z=8.844: 161485 of 239126529 halos in the slab (no feedback grids yet)
+01:00:21 INFO     00.211 GB z=9.041: 141140 of 208924755 halos in the slab (no feedback grids yet)
+01:01:32 INFO     00.209 GB z=9.241: 122598 of 181425235 halos in the slab (no feedback grids yet)
+01:05:10 INFO     00.208 GB z=9.446: 105895 of 156550738 halos in the slab (no feedback grids yet)
+01:05:50 INFO     00.206 GB z=9.655: 91073 of 134191818 halos in the slab (no feedback grids yet)
+01:06:27 INFO     00.205 GB z=9.868: 77614 of 114238291 halos in the slab (no feedback grids yet)
+01:07:08 INFO     00.204 GB z=10.086: 65883 of 96558131 halos in the slab (no feedback grids yet)
+01:07:37 INFO     00.203 GB z=10.307: 55344 of 80992745 halos in the slab (no feedback grids yet)
+01:08:00 INFO     00.202 GB z=10.533: 46268 of 67409993 halos in the slab (no feedback grids yet)
+01:08:14 INFO     00.201 GB z=10.764: 38305 of 55651876 halos in the slab (no feedback grids yet)
+01:08:22 INFO     00.201 GB z=10.999: 31569 of 45557836 halos in the slab (no feedback grids yet)
+01:08:30 INFO     00.200 GB z=11.239: 25723 of 36959746 halos in the slab (no feedback grids yet)
+01:08:35 INFO     00.200 GB z=11.484: 20721 of 29712218 halos in the slab (no feedback grids yet)
+01:08:40 INFO     00.199 GB z=11.734: 16446 of 23651112 halos in the slab (no feedback grids yet)
+01:08:44 INFO     00.199 GB z=11.988: 12952 of 18646331 halos in the slab (no feedback grids yet)
+01:08:46 INFO     00.199 GB z=12.248: 10122 of 14542891 halos in the slab (no feedback grids yet)
+01:08:48 INFO     00.198 GB z=12.513: 7785 of 11224637 halos in the slab (no feedback grids yet)
+01:08:50 INFO     00.198 GB z=12.783: 5957 of 8564861 halos in the slab (no feedback grids yet)
+01:08:52 INFO     00.198 GB z=13.059: 4535 of 6459806 halos in the slab (no feedback grids yet)
+01:08:54 INFO     00.198 GB z=13.340: 3377 of 4814546 halos in the slab (no feedback grids yet)
+01:08:55 INFO     00.198 GB z=13.627: 2497 of 3543201 halos in the slab (no feedback grids yet)
+01:08:56 INFO     00.198 GB z=13.920: 1840 of 2573149 halos in the slab (no feedback grids yet)
+01:08:57 INFO     00.198 GB z=14.218: 1298 of 1845498 halos in the slab (no feedback grids yet)
+01:08:58 INFO     00.198 GB z=14.522: 921 of 1303225 halos in the slab (no feedback grids yet)
+01:08:59 INFO     00.198 GB z=14.833: 660 of 907611 halos in the slab (no feedback grids yet)
+01:08:59 INFO     00.198 GB z=15.150: 464 of 623402 halos in the slab (no feedback grids yet)
+01:09:00 INFO     00.198 GB z=15.473: 317 of 420840 halos in the slab (no feedback grids yet)
+01:09:01 INFO     00.198 GB z=15.802: 208 of 280155 halos in the slab (no feedback grids yet)
+01:09:02 INFO     00.198 GB z=16.138: 130 of 183103 halos in the slab (no feedback grids yet)
+01:09:02 INFO     00.198 GB z=16.481: 78 of 117538 halos in the slab (no feedback grids yet)
+01:09:03 INFO     00.198 GB z=16.830: 49 of 74438 halos in the slab (no feedback grids yet)
+01:09:04 INFO     00.198 GB z=17.187: 30 of 46145 halos in the slab (no feedback grids yet)
+01:09:05 INFO     00.198 GB z=17.551: 16 of 28130 halos in the slab (no feedback grids yet)
+01:09:06 INFO     00.198 GB z=17.922: 9 of 17004 halos in the slab (no feedback grids yet)
+01:09:06 INFO     00.198 GB z=18.300: 4 of 10001 halos in the slab (no feedback grids yet)
+01:09:07 INFO     00.198 GB z=18.686: 3 of 5723 halos in the slab (no feedback grids yet)
+01:09:08 INFO     00.198 GB z=19.080: 0 of 3191 halos in the slab (no feedback grids yet)
+01:09:09 INFO     00.198 GB z=19.482: 0 of 1756 halos in the slab (no feedback grids yet)
+01:09:10 INFO     00.198 GB z=19.891: 0 of 922 halos in the slab (no feedback grids yet)
+01:09:29 INFO     00.206 GB z=20.309: 0 of 486 halos in the slab
+01:09:32 INFO     00.231 GB z=20.735: 0 of 236 halos in the slab
+01:09:35 INFO     00.248 GB z=21.170: 0 of 110 halos in the slab
+01:09:38 INFO     00.248 GB z=21.613: 0 of 51 halos in the slab
+01:09:42 INFO     00.248 GB z=22.066: 0 of 29 halos in the slab
+01:09:44 INFO     00.248 GB z=22.527: 0 of 14 halos in the slab
+01:09:47 INFO     00.248 GB z=22.997: 0 of 6 halos in the slab
+01:09:49 INFO     00.248 GB z=23.477: 0 of 4 halos in the slab
+01:09:52 INFO     00.248 GB z=23.967: 0 of 1 halos in the slab
+01:09:54 INFO     00.248 GB z=24.466: 0 of 0 halos in the slab
+01:09:56 INFO     00.248 GB z=24.976: 0 of 0 halos in the slab
+01:09:59 INFO     00.248 GB z=25.495: 0 of 0 halos in the slab
+01:10:02 INFO     00.248 GB z=26.025: 0 of 0 halos in the slab
+01:10:04 INFO     00.248 GB z=26.565: 0 of 0 halos in the slab
+01:10:06 INFO     00.248 GB z=27.117: 0 of 0 halos in the slab
+01:10:08 INFO     00.248 GB z=27.679: 0 of 0 halos in the slab
+01:10:10 INFO     00.248 GB z=28.253: 0 of 0 halos in the slab
+01:10:16 INFO     00.248 GB z=28.838: 0 of 0 halos in the slab
+01:10:18 INFO     00.248 GB z=29.434: 0 of 0 halos in the slab
+01:10:23 INFO     00.248 GB z=30.043: 0 of 0 halos in the slab
+01:10:25 INFO     00.248 GB z=30.664: 0 of 0 halos in the slab
+01:10:28 INFO     00.248 GB z=31.297: 0 of 0 halos in the slab
+01:10:30 INFO     00.248 GB z=31.943: 0 of 0 halos in the slab
+01:10:33 INFO     00.248 GB z=32.602: 0 of 0 halos in the slab
+01:10:35 INFO     00.248 GB z=33.274: 0 of 0 halos in the slab
+01:10:38 INFO     00.248 GB z=33.960: 0 of 0 halos in the slab
+01:10:39 INFO     00.248 GB z=34.659: 0 of 0 halos in the slab
+01:10:40 INFO     00.248 GB z=35.372: 0 of 0 halos in the slab (no feedback grids yet)
+01:10:40 INFO     00.206 GB lightcone planes for 92 redshifts in 4402 s (store: /g/data/qp00/db9528/EOS26_cache/lightcone_planes/x0_w1)
+01:12:37 INFO     00.357 GB Saved 5 lightcones to /scratch/qp00/db9528/EOS26/plots/lightcones_EOS26_v4.3.1.png
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-10-29 13:17:12:
+   Job Id:             182522402.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      20.87
+   NCPUs Requested:    4                   CPU Time Used: 01:07:13        
+   Memory Requested:   32.0GB                Memory Used: 29.16GB         
+   Walltime Requested: 02:00:00            Walltime Used: 01:18:15        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
