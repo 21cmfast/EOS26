@@ -1,0 +1,49 @@
+
+==== PBS output of job 182863881 (EOS26_plots.o182863881, EOS26_plots.e182863881), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+00:00:00 INFO     00.134 GB Saved /scratch/qp00/db9528/EOS26/plots/ICs_EOS26.png
+00:00:00 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/ICs_EOS26_zoom100_vel.png
+00:00:00 INFO     93.851 MB Requested z=5.0000; closest node redshift z=5.0000
+00:00:02 INFO     00.135 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z05.00.png
+00:00:02 INFO     00.135 GB Requested z=8.0000; closest node redshift z=7.9157
+00:00:03 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z07.92.png
+00:00:03 INFO     00.144 GB Requested z=10.0000; closest node redshift z=10.0855
+00:00:05 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z10.09.png
+00:00:05 INFO     00.144 GB Requested z=15.0000; closest node redshift z=15.1495
+00:00:07 INFO     00.154 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z15.15.png
+00:00:07 INFO     00.154 GB Requested z=20.0000; closest node redshift z=19.8911
+00:00:08 INFO     00.164 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z19.89.png
+00:00:08 INFO     00.164 GB Requested z=30.0000; closest node redshift z=30.0431
+00:00:10 INFO     00.154 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z30.04.png
+00:00:00 INFO     93.853 MB Requested z=10.0000; closest node redshift z=10.0855
+00:00:01 INFO     00.144 GB Saved /scratch/qp00/db9528/EOS26/plots/PF_EOS26_z10.09_zoom100_vel.png
+00:00:00 INFO     00.197 GB z=14.833: 660 of 907611 halos in the slab
+00:00:01 INFO     00.223 GB z=15.150: 464 of 623402 halos in the slab
+00:00:03 INFO     00.248 GB z=15.473: 317 of 420840 halos in the slab
+00:00:05 INFO     00.248 GB z=15.802: 208 of 280155 halos in the slab
+00:00:06 INFO     00.248 GB z=16.138: 130 of 183103 halos in the slab
+00:00:09 INFO     00.248 GB z=16.481: 78 of 117538 halos in the slab
+00:00:10 INFO     00.248 GB z=16.830: 49 of 74438 halos in the slab
+00:00:12 INFO     00.248 GB z=17.187: 30 of 46145 halos in the slab
+00:00:14 INFO     00.248 GB z=17.551: 16 of 28130 halos in the slab
+00:00:15 INFO     00.248 GB z=17.922: 9 of 17004 halos in the slab
+00:00:17 INFO     00.248 GB z=18.300: 4 of 10001 halos in the slab
+00:00:19 INFO     00.248 GB z=18.686: 3 of 5723 halos in the slab
+00:00:20 INFO     00.248 GB z=19.080: 0 of 3191 halos in the slab
+00:00:22 INFO     00.248 GB z=19.482: 0 of 1756 halos in the slab
+00:00:24 INFO     00.248 GB z=19.891: 0 of 922 halos in the slab
+00:00:40 INFO     00.206 GB lightcone planes for 92 redshifts in 178 s (store: /g/data/qp00/db9528/EOS26_cache/lightcone_planes/x0_w1)
+00:00:48 INFO     00.357 GB Saved 5 lightcones to /scratch/qp00/db9528/EOS26/plots/lightcones_EOS26_v4.3.1.png
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-02 11:36:54:
+   Job Id:             182863881.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      1.23
+   NCPUs Requested:    4                   CPU Time Used: 00:03:40        
+   Memory Requested:   32.0GB                Memory Used: 7.15GB          
+   Walltime Requested: 02:00:00            Walltime Used: 00:04:37        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
