@@ -154,6 +154,38 @@ def _create_coeval_wisdoms(lib, so) -> None:
         raise RuntimeError(f"CreateFFTWWisdoms() failed with status {status}")
 
 
+# --------------------------------------------------------------- logging cost
+def skip_radiation_field_argument_dumps() -> None:
+    """Don't log the argument summary of every UpdateRadiationFields call.
+
+    At DEBUG level (run_scripts/settings.py sets it for py21cmfast), 21cmFAST logs a
+    summary (first, last, min, max, mean) of every input array before each C call.
+    The spin-temperature step calls UpdateRadiationFields once per X-ray shell, 40
+    times per coeval, each time summarising the same EmissivityFields, PerturbedField
+    and TsBox boxes and the filtered fields: single-threaded numpy passes over
+    1500^3 arrays, ~2.7 min per call, ~1.8 h of each ~5.7 h coeval at HII_DIM=1500
+    (hence ~3.6 busy cores out of 16 on average). The summaries of the other calls
+    (EmissivityFields, TsBox, IonizedBox, BrightnessTemp: ~20 min per coeval) are
+    kept; they hold the global means used to compare with the test reference.
+    Logging only: nothing that is computed or cached changes.
+    """
+    from py21cmfast.wrapper import outputs
+
+    current = getattr(outputs.OutputStruct, "_log_call_arguments", None)
+    if current is None or getattr(current, "_eos26_quiet", False):
+        return
+    original = current.__func__
+
+    def _log_call_arguments(cls, *args):
+        if cls._c_compute_function.__name__ == "UpdateRadiationFields":
+            outputs.logger.debug("Calling UpdateRadiationFields (argument summary skipped by sim_steps)")
+            return None
+        return original(cls, *args)
+
+    _log_call_arguments._eos26_quiet = True
+    outputs.OutputStruct._log_call_arguments = classmethod(_log_call_arguments)
+
+
 # ------------------------------------------------------------- damaged cache files
 def h5_problem(path: str | Path) -> str | None:
     """None if the HDF5 file at `path` reads cleanly, else what is wrong with it.
@@ -303,11 +335,13 @@ def generate_coevals(
 
     Reuses cached initial conditions, perturbed fields, and halo catalogs
     (regenerate applies only to the coeval-specific products).
-    EOS26_RUN_THREADS / EOS26_RUN_FFTW_WISDOM are applied here (see above).
+    EOS26_RUN_THREADS / EOS26_RUN_FFTW_WISDOM are applied here (see above), and the
+    UpdateRadiationFields argument summaries are not logged (see below).
     """
     apply_halo_catalog_mem_factor()
     apply_fftw_wisdoms_path()
     apply_coeval_runtime_overrides()
+    skip_radiation_field_argument_dumps()
     return p21c.generate_coeval(
         out_redshifts=out_redshifts,
         inputs=inputs,
