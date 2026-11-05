@@ -10,3 +10,30 @@
 00:00:00 DEBUG    00.168 GB Reading array of shape (4500, 4500, 4500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
                             dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
+
+==== PBS output of job 183113662 (EOS26_coeval.o183113662, EOS26_coeval.e183113662), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 390 files in /g/data/qp00/db9528/EOS26_cache
+  BrightnessTemp     ok   51   damaged    0
+  EmissivityFields   ok   52   damaged    0
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  IonizedBox         ok   51   damaged    0
+  PerturbedField     ok   92   damaged    0
+  TsBox              ok   51   damaged    0
+no damaged files
+N is: 10, compare: 0
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-04 17:29:11:
+   Job Id:             183113662.gadi-pbs
+   Project:            qp00
+   Exit Status:        271 (Linux Signal 15 SIGTERM Termination)
+   Service Units:      6.02
+   NCPUs Requested:    16                  CPU Time Used: 00:02:35        
+   Memory Requested:   1.37TB                Memory Used: 174.65GB        
+   Walltime Requested: 48:00:00            Walltime Used: 00:03:18        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
