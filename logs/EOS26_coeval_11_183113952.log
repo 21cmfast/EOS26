@@ -4287,3 +4287,114 @@
 29:34:20 DEBUG    00.972 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/10.9
                             993/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                               
+
+==== PBS output of job 183113952 (EOS26_coeval.o183113952, EOS26_coeval.e183113952), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 390 files in /g/data/qp00/db9528/EOS26_cache
+  BrightnessTemp     ok   51   damaged    0
+  EmissivityFields   ok   52   damaged    0
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  IonizedBox         ok   51   damaged    0
+  PerturbedField     ok   92   damaged    0
+  TsBox              ok   51   damaged    0
+no damaged files
+N is: 11, compare: 0
+                                                        day,
+                                                        5:51…
+---- stderr ----
+Traceback (most recent call last):
+  File "/scratch/qp00/db9528/EOS26/run_scripts/run_N_coevals.py", line 89, in <module>
+    coeval, is_output = next(coeval_generator)
+                        ~~~~^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/_param_config.py", line 494, in __call__
+    yield from self._func(**kwargs)
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/coeval.py", line 673, in generate_coeval
+    for _, coeval in _redshift_loop_generator(  # noqa: B020
+                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+        inputs=inputs,
+        ^^^^^^^^^^^^^^
+    ...<9 lines>...
+        start_idx=idx + 1,
+        ^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/coeval.py", line 874, in _redshift_loop_generator
+    this_spin_temp = sf.compute_spin_temperature(
+        inputs=inputs,
+    ...<4 lines>...
+        **kw,
+    )
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/_param_config.py", line 463, in __call__
+    out = self._func(**kwargs)
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/_global_initialization.py", line 300, in wrapper
+    return func(**kwargs)
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/drivers/single_field.py", line 907, in compute_spin_temperature
+    return box.compute(
+           ~~~~~~~~~~~^
+        perturbed_field=perturbed_field,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        ics=initial_conditions,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 108, in wrapper
+    return compute(self, *args, **kwargs)
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 2054, in compute
+    return self._compute(
+           ~~~~~~~~~~~~~^
+        allow_already_computed,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        ics,
+        ^^^^
+    )
+    ^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 522, in _compute
+    self._ensure_arguments_exist(*args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 508, in _ensure_arguments_exist
+    and not self.ensure_input_computed(arg, load=True)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 453, in ensure_input_computed
+    return input_box.ensure_arrays_computed(*arrays, load=load)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 428, in ensure_arrays_computed
+    self.prepare(keep=arrays, flush=[])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 351, in prepare
+    self.get(k)
+    ~~~~~~~~^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/outputs.py", line 291, in get
+    ary = ary.loaded_from_disk()
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/arrays.py", line 233, in loaded_from_disk
+    value = backend.read().astype(self.dtype, copy=False)
+            ~~~~~~~~~~~~^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/wrapper/arrays.py", line 53, in read
+    return f[self.dataset][()]
+           ~~~~~~~~~~~~~~~^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/h5py/_hl/dataset.py", line 872, in __getitem__
+    return self._fast_reader.read(args)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/_selector.pyx", line 393, in h5py._selector.Reader.read
+OSError: [Errno 5] Can't synchronously read data (file read failed: time = Thu Nov  5 23:37:16 2026
+, filename = '/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/10.9993/7bc826193765d02608ff8d29badcea62/TsBox.h5', file descriptor = 6, errno = 5, error message = 'Input/output error', buf = 0x1460f5357a10, total read size = 13491608832, bytes this sub-read = 13491608832, offset = 27008401408)
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-05 23:40:18:
+   Job Id:             183113952.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      3293.92
+   NCPUs Requested:    16                  CPU Time Used: 128:20:31       
+   Memory Requested:   1.37TB                Memory Used: 1.37TB          
+   Walltime Requested: 48:00:00            Walltime Used: 30:06:57        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
