@@ -1,0 +1,426 @@
+00:00:00 INFO     00.164 GB Starting N coeval run: N=-1                                                                                                         
+00:00:00 INFO     00.165 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB Already have 86 coevals done, at redshifts: [5.757, 5.8921, 6.03, 6.1706, 6.314, 6.4602, 6.6095, 6.7616, 6.9169, 7.0752, 7.2367,    
+                            7.4014, 7.5695, 7.7409, 7.9157, 8.094, 8.2759, 8.4614, 8.6506, 8.8436, 9.0405, 9.2413, 9.4461, 9.6551, 9.8682, 10.0855, 10.3072,    
+                            10.5334, 10.7641, 10.9993, 11.2393, 11.4841, 11.7338, 11.9885, 12.2482, 12.5132, 12.7835, 13.0591, 13.3403, 13.6271, 13.9197,       
+                            14.2181, 14.5224, 14.8329, 15.1495, 15.4725, 15.802, 16.138, 16.4808, 16.8304, 17.187, 17.5507, 17.9217, 18.3002, 18.6862, 19.0799, 
+                            19.4815, 19.8911, 20.309, 20.7351, 21.1698, 21.6132, 22.0655, 22.5268, 22.9973, 23.4773, 23.9668, 24.4662, 24.9755, 25.495, 26.0249,
+                            26.5654, 27.1167, 27.6791, 28.2526, 28.8377, 29.4344, 30.0431, 30.664, 31.2973, 31.9432, 32.6021, 33.2741, 33.9596, 34.6588, 35.372]
+00:00:00 INFO     00.166 GB Redshifts for this batch: 5.62 to 5.00                                                                                              
+00:00:00 INFO     00.168 GB Existing InitialConditions found and read in (seed=42).                                                                             
+00:00:00 DEBUG    00.168 GB Reading array of shape (4500, 4500, 4500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
+00:11:31 DEBUG    00.332 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+00:11:49 DEBUG    00.344 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+00:12:05 DEBUG    00.356 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+00:12:22 DEBUG    00.368 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+00:12:38 DEBUG    00.381 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+00:12:51 DEBUG    00.393 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+00:13:05 DEBUG    00.405 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+00:13:21 DEBUG    00.418 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=35.37197473298901 and read in (seed=42).                                                         
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=34.658798757832365 and read in (seed=42).                                                        
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=33.959606625325854 and read in (seed=42).                                                        
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=33.27412414247633 and read in (seed=42).                                                         
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=32.60208249262386 and read in (seed=42).                                                         
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=31.943218130023396 and read in (seed=42).                                                        
+00:13:40 INFO     00.430 TB Existing PerturbedField found at z=31.297272676493527 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=30.663992820091696 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=30.043130215776173 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=29.43444138801586 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=28.83768763530967 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=28.25263493657811 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=27.679053859390308 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=27.1167194699905 and read in (seed=42).                                                          
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=26.56541124508873 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=26.02491298538111 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=25.495012730765797 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=24.97550267722137 and read in (seed=42).                                                         
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=24.466179095315074 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=23.966842250308897 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=23.477296323832253 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=22.997349337090448 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=22.526813075578872 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=22.065503015273407 and read in (seed=42).                                                        
+00:13:41 INFO     00.430 TB Existing PerturbedField found at z=21.613238250268047 and read in (seed=42).                                                        
+00:13:42 INFO     00.430 TB Existing PerturbedField found at z=21.16984142183142 and read in (seed=42).                                                         
+00:13:42 INFO     00.430 TB Existing PerturbedField found at z=20.73513864885434 and read in (seed=42).                                                         
+00:13:42 INFO     00.430 TB Existing PerturbedField found at z=20.308959459661118 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=19.89113672515796 and read in (seed=42).                                                         
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=19.481506593292117 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=19.079908424796198 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=18.686184730192352 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=18.30018110803172 and read in (seed=42).                                                         
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=17.921746184344826 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=17.550731553279242 and read in (seed=42).                                                        
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=17.18699171890122 and read in (seed=42).                                                         
+00:13:43 INFO     00.430 TB Existing PerturbedField found at z=16.83038403813845 and read in (seed=42).                                                         
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=16.480768664841623 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=16.138008494942767 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=15.80196911268899 and read in (seed=42).                                                         
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=15.472518737930383 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=15.149528174441553 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=14.832870759256426 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=14.522422312996499 and read in (seed=42).                                                        
+00:13:44 INFO     00.430 TB Existing PerturbedField found at z=14.21806109117304 and read in (seed=42).                                                         
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=13.919667736444158 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=13.627125231808 and read in (seed=42).                                                           
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=13.340318854713725 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=13.059136132072283 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=12.783466796149296 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=12.513202741322841 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=12.248237981689062 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=11.988468609499082 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=11.733792754410866 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=11.484110543540066 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=11.239324062294182 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=10.99933731597469 and read in (seed=42).                                                         
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=10.76405619213205 and read in (seed=42).                                                         
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=10.533388423658874 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=10.30724355260674 and read in (seed=42).                                                         
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=10.085532894712491 and read in (seed=42).                                                        
+00:13:45 INFO     00.430 TB Existing PerturbedField found at z=9.868169504620091 and read in (seed=42).                                                         
+00:14:01 INFO     00.430 TB Existing PerturbedField found at z=9.655068141784405 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=9.446145237043535 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=9.241318859846603 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=9.040508686124122 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=8.843635966788355 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=8.65062349685133 and read in (seed=42).                                                          
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=8.461395585148363 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=8.27587802465526 and read in (seed=42).                                                          
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=8.09399806338751 and read in (seed=42).                                                          
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=7.915684375870109 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=7.740867035166774 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=7.569477485457622 and read in (seed=42).                                                         
+00:14:07 INFO     00.430 TB Existing PerturbedField found at z=7.401448515154533 and read in (seed=42).                                                         
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=7.23671423054366 and read in (seed=42).                                                          
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=7.075210029944765 and read in (seed=42).                                                         
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=6.916872578377222 and read in (seed=42).                                                         
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=6.761639782722767 and read in (seed=42).                                                         
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=6.609450767375263 and read in (seed=42).                                                         
+00:14:08 INFO     00.430 TB Existing PerturbedField found at z=6.460245850367905 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=6.3139665199685355 and read in (seed=42).                                                        
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=6.170555411733859 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=6.029956286013588 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.892114005895675 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.756974515583996 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.6244848191999965 and read in (seed=42).                                                        
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.494592959999998 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.367247999999998 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.242399999999999 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.119999999999999 and read in (seed=42).                                                         
+00:14:09 INFO     00.430 TB Existing PerturbedField found at z=5.0 and read in (seed=42).                                                                       
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.0 and read in (seed=42).                                                                          
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.119999999999999 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.242399999999999 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.367247999999998 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.494592959999998 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.6244848191999965 and read in (seed=42).                                                           
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.756974515583996 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=5.892114005895675 and read in (seed=42).                                                            
+00:14:42 INFO     00.430 TB Existing HaloCatalog found at z=6.029956286013588 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.170555411733859 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.3139665199685355 and read in (seed=42).                                                           
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.460245850367905 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.609450767375263 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.761639782722767 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=6.916872578377222 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.075210029944765 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.23671423054366 and read in (seed=42).                                                             
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.401448515154533 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.569477485457622 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.740867035166774 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=7.915684375870109 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=8.09399806338751 and read in (seed=42).                                                             
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=8.27587802465526 and read in (seed=42).                                                             
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=8.461395585148363 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=8.65062349685133 and read in (seed=42).                                                             
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=8.843635966788355 and read in (seed=42).                                                            
+00:14:43 INFO     00.430 TB Existing HaloCatalog found at z=9.040508686124122 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=9.241318859846603 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=9.446145237043535 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=9.655068141784405 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=9.868169504620091 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=10.085532894712491 and read in (seed=42).                                                           
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=10.30724355260674 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=10.533388423658874 and read in (seed=42).                                                           
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=10.76405619213205 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=10.99933731597469 and read in (seed=42).                                                            
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=11.239324062294182 and read in (seed=42).                                                           
+00:14:44 INFO     00.430 TB Existing HaloCatalog found at z=11.484110543540066 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=11.733792754410866 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=11.988468609499082 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=12.248237981689062 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=12.513202741322841 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=12.783466796149296 and read in (seed=42).                                                           
+00:14:45 INFO     00.430 TB Existing HaloCatalog found at z=13.059136132072283 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=13.340318854713725 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=13.627125231808 and read in (seed=42).                                                              
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=13.919667736444158 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=14.21806109117304 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=14.522422312996499 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=14.832870759256426 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=15.149528174441553 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=15.472518737930383 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=15.80196911268899 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=16.138008494942767 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=16.480768664841623 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=16.83038403813845 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=17.18699171890122 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=17.550731553279242 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=17.921746184344826 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=18.30018110803172 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=18.686184730192352 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=19.079908424796198 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=19.481506593292117 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=19.89113672515796 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=20.308959459661118 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=20.73513864885434 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=21.16984142183142 and read in (seed=42).                                                            
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=21.613238250268047 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=22.065503015273407 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=22.526813075578872 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=22.997349337090448 and read in (seed=42).                                                           
+00:14:46 INFO     00.430 TB Existing HaloCatalog found at z=23.477296323832253 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=23.966842250308897 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=24.466179095315074 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=24.97550267722137 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=25.495012730765797 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=26.02491298538111 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=26.56541124508873 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=27.1167194699905 and read in (seed=42).                                                             
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=27.679053859390308 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=28.25263493657811 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=28.83768763530967 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=29.43444138801586 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=30.043130215776173 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=30.663992820091696 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=31.297272676493527 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=31.943218130023396 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=32.60208249262386 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=33.27412414247633 and read in (seed=42).                                                            
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=33.959606625325854 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=34.658798757832365 and read in (seed=42).                                                           
+00:14:47 INFO     00.430 TB Existing HaloCatalog found at z=35.37197473298901 and read in (seed=42).                                                            
+00:14:49 DEBUG    00.098 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:15:22 DEBUG    00.111 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:16:10 DEBUG    00.123 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+00:16:56 DEBUG    00.135 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+00:17:55 DEBUG    00.148 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+00:17:55 DEBUG    00.148 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+00:17:55 DEBUG    00.148 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+00:17:55 DEBUG    00.148 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+00:17:55 DEBUG    00.148 TB Reading array of shape (0, 3) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+00:17:55 INFO     00.148 TB Existing EmissivityFields found at z=35.37197473298901 and read in (seed=42).                                                       
+00:17:55 INFO     00.148 TB Existing TsBox found at z=35.37197473298901 and read in (seed=42).                                                                  
+00:17:55 INFO     00.148 TB Existing IonizedBox found at z=35.37197473298901 and read in (seed=42).                                                             
+00:17:55 INFO     00.148 TB Existing BrightnessTemp found at z=35.37197473298901 and read in (seed=42).                                                         
+00:17:55 DEBUG    00.148 TB Skipping intermediate coeval at z=35.371975 (required for redshift evolution, not part of this batch)                               
+00:17:55 DEBUG    00.148 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:18:55 DEBUG    00.160 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:19:49 DEBUG    00.172 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+00:21:01 DEBUG    00.184 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+00:21:58 DEBUG    00.197 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+00:21:58 DEBUG    00.197 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+00:21:58 DEBUG    00.197 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+00:21:58 DEBUG    00.197 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+00:21:58 DEBUG    00.197 TB Reading array of shape (0, 3) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+00:21:58 INFO     00.197 TB Existing EmissivityFields found at z=34.658798757832365 and read in (seed=42).                                                      
+00:21:58 INFO     00.197 TB Existing TsBox found at z=34.658798757832365 and read in (seed=42).                                                                 
+00:21:58 INFO     00.197 TB Existing IonizedBox found at z=34.658798757832365 and read in (seed=42).                                                            
+00:21:58 INFO     00.197 TB Existing BrightnessTemp found at z=34.658798757832365 and read in (seed=42).                                                        
+00:21:59 DEBUG    00.197 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+00:22:32 DEBUG    00.209 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+00:23:04 DEBUG    00.221 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/35.3
+                            720/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+00:23:37 DEBUG    00.233 TB Skipping intermediate coeval at z=34.658799 (required for redshift evolution, not part of this batch)                               
+00:23:38 DEBUG    00.184 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:24:08 DEBUG    00.197 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:24:38 DEBUG    00.209 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+00:25:06 DEBUG    00.221 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+00:25:32 DEBUG    00.233 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+00:25:32 DEBUG    00.233 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+00:25:32 DEBUG    00.233 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+00:25:32 DEBUG    00.233 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+00:25:32 DEBUG    00.233 TB Reading array of shape (0, 3) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+00:25:33 INFO     00.233 TB Existing EmissivityFields found at z=33.959606625325854 and read in (seed=42).                                                      
+00:25:34 INFO     00.233 TB Existing TsBox found at z=33.959606625325854 and read in (seed=42).                                                                 
+00:25:34 INFO     00.233 TB Existing IonizedBox found at z=33.959606625325854 and read in (seed=42).                                                            
+00:25:34 INFO     00.233 TB Existing BrightnessTemp found at z=33.959606625325854 and read in (seed=42).                                                        
+00:25:34 DEBUG    00.233 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+00:26:13 DEBUG    00.246 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+00:26:41 DEBUG    00.258 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/34.6
+                            588/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+00:27:10 DEBUG    00.270 TB Skipping intermediate coeval at z=33.959607 (required for redshift evolution, not part of this batch)                               
+00:27:10 DEBUG    00.221 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:27:49 DEBUG    00.233 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:28:22 DEBUG    00.246 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+00:28:55 DEBUG    00.258 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+00:29:27 DEBUG    00.270 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+00:29:28 DEBUG    00.270 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+00:29:28 DEBUG    00.270 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+00:29:28 DEBUG    00.270 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+00:29:28 DEBUG    00.270 TB Reading array of shape (0, 3) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+00:29:28 INFO     00.270 TB Existing EmissivityFields found at z=33.27412414247633 and read in (seed=42).                                                       
+00:29:29 INFO     00.270 TB Existing TsBox found at z=33.27412414247633 and read in (seed=42).                                                                  
+00:29:29 INFO     00.270 TB Existing IonizedBox found at z=33.27412414247633 and read in (seed=42).                                                             
+00:29:30 INFO     00.270 TB Existing BrightnessTemp found at z=33.27412414247633 and read in (seed=42).                                                         
+00:29:30 DEBUG    00.270 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+00:30:13 DEBUG    00.283 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+00:30:50 DEBUG    00.295 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.9
+                            596/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+00:31:33 DEBUG    00.307 TB Skipping intermediate coeval at z=33.274124 (required for redshift evolution, not part of this batch)                               
+00:31:34 DEBUG    00.258 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:32:05 DEBUG    00.270 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:32:41 DEBUG    00.283 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+00:33:30 DEBUG    00.295 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+00:33:59 DEBUG    00.307 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+00:33:59 DEBUG    00.307 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+00:33:59 DEBUG    00.307 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+00:33:59 DEBUG    00.307 TB Reading array of shape (0,) and dtype float32 from disk                                                                             
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+00:33:59 DEBUG    00.307 TB Reading array of shape (0, 3) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/32.6
+                            021/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+00:34:00 INFO     00.307 TB Existing EmissivityFields found at z=32.60208249262386 and read in (seed=42).                                                       
+00:34:00 INFO     00.307 TB Existing TsBox found at z=32.60208249262386 and read in (seed=42).                                                                  
+00:34:00 INFO     00.307 TB Existing IonizedBox found at z=32.60208249262386 and read in (seed=42).                                                             
+00:34:01 INFO     00.307 TB Existing BrightnessTemp found at z=32.60208249262386 and read in (seed=42).                                                         
+00:34:01 DEBUG    00.307 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+00:34:37 DEBUG    00.319 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+00:35:16 DEBUG    00.332 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/33.2
+                            741/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+00:35:56 DEBUG    00.344 TB Skipping intermediate coeval at z=32.602082 (required for redshift evolution, not part of this batch)                               
+00:35:56 DEBUG    00.295 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/31.9
+                            432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+00:36:28 DEBUG    00.307 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/31.9
+                            432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+00:37:10 DEBUG    00.319 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/31.9
+                            432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
