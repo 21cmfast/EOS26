@@ -45,6 +45,9 @@ RUN_THREADS="${EOS26_RUN_THREADS:-24}"
 if [[ -n "${PBS_NCPUS:-}" ]] && (( RUN_THREADS > PBS_NCPUS )); then
   echo "ERROR: EOS26_RUN_THREADS=$RUN_THREADS > ncpus=$PBS_NCPUS (qsub -l ncpus=...)" >&2; exit 1
 fi
+# The C code takes its thread count from N_THREADS, not from OMP_NUM_THREADS, so the
+# run-time override (run_scripts/sim_steps.py) must see EOS26_RUN_THREADS.
+export EOS26_RUN_THREADS="$RUN_THREADS"
 export OMP_NUM_THREADS="$RUN_THREADS"
 export OMP_DYNAMIC=FALSE
 
@@ -54,8 +57,8 @@ unset OMP_PLACES
 N="${N:-4}"
 JID="${PBS_JOBID%%.*}"
 
-# COMPARE=1 (default): compare_EOS checks after every coeval (file sizes, NaN/Inf,
-# global means vs the HII_DIM=200 test reference). A failed check stops the job.
+# COMPARE=1 (default): compare_EOS checks after every coeval (file sizes, NaN/Inf, global
+# means vs the HII_DIM=200 test reference, mean x_HI vs Qin+25). A failed check stops the job.
 COMPARE="${COMPARE:-1}"
 COMPARE_ARG=(); [[ "$COMPARE" == 1 ]] && COMPARE_ARG=(--compare)
 

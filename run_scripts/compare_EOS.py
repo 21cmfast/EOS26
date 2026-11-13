@@ -20,6 +20,7 @@ Check taxonomy (mirrors check_EOS.py numbering)
                                                      mass PDF within Poisson error bars
   5  global_means        — BrightnessTemp / IonizedBox / TsBox global means
                            within 15 % of the test box at the closest redshift
+                           (or within 5 mK for brightness_temp, 0.01 for x_HI)
   6  brightness_pdf      — brightness_temp median and IQR within 20 % of test
   7  qin25_history       — IonizedBox mean x_HI within 0.10 of the Qin+25 history
                            at the same redshift (WARN above 0.05); does not use
@@ -55,6 +56,9 @@ MAX_HIST_SIDE = 200
 # Global-mean tolerance: 15 % relative (or absolute fallback for near-zero)
 MEAN_RTOL    = 0.15
 MEAN_ATOL_BT = 5.0   # mK fallback for brightness_temp
+MEAN_ATOL_XHI = 0.01  # fallback for neutral_fraction: near the end of reionization (x_HI ~ 0.005)
+                      # the 1500^3 run and the 200^3 test differ by more than 15 % without
+                      # anything being wrong; check 7 compares the history with Qin+25.
 
 # PDF tolerances
 PDF_MEDIAN_ATOL_BT = 10.0   # mK
@@ -489,7 +493,7 @@ def _check_global_means(
 
     test_st   = _hdf5_stats(test_path, struct_name, field)
     test_mean = test_st["mean"]
-    atol      = MEAN_ATOL_BT if field == "brightness_temp" else 0.0
+    atol      = {"brightness_temp": MEAN_ATOL_BT, "neutral_fraction": MEAN_ATOL_XHI}.get(field, 0.0)
     denom     = max(abs(test_mean), 1e-10)
     rdiff     = abs(eos_mean - test_mean) / denom
     ok = rdiff <= MEAN_RTOL or abs(eos_mean - test_mean) <= atol
@@ -707,7 +711,7 @@ def compare_coeval(coeval, cache, inputs) -> None:
     ---------------------------------------------------------------------------------
     1  File presence and size
     2  Array shape and NaN/Inf
-    5  Global mean within 15 % of test at closest z
+    5  Global mean within 15 % of test at closest z (or 5 mK / 0.01 in x_HI)
     6  brightness_temp median and IQR within tolerances  (brightness_temp only)
     7  mean x_HI within 0.10 of Qin+25 at the same z    (neutral_fraction only)
     """
