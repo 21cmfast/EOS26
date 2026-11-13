@@ -90,7 +90,12 @@ class Run:
         self.n = int(so.HII_DIM)
         self.n_los = int(round(so.NON_CUBIC_FACTOR * so.HII_DIM))
         self.cell = float(so.BOX_LEN) / so.HII_DIM  # Mpc
-        self.tag = f"test_HIIDIM{self.n}" if test else "EOS26"
+        # Plot names: EOS26 keeps the names it always had; other runs (EOS26_earlyEoR) carry their name.
+        name = settings.RUN_NAME
+        if test:
+            self.tag = f"test_HIIDIM{self.n}" if name == "EOS26" else f"{name}_test_HIIDIM{self.n}"
+        else:
+            self.tag = name
         self.version = p21c.__version__
         self.redshifts = sorted(float(z) for z in self.inputs.node_redshifts)
 

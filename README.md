@@ -3,16 +3,24 @@
 All scripts to run the EOS26 simulation with 21cmFASTv4.2.
 EOS26 is run phase by phase i.e. ICs first, then PFs, then PHFs, and finally coevals.
 
+### EOS26 and EOS26_earlyEoR
+- `EOS26.toml` (since 14 Nov 2026): continuous f_esc fitted to the Qin+25 reionization history with 21cmFAST 4.3 (F_ESC10_ACG = −0.85, ALPHA_ESC = −0.05, F_ESC7_MCG = F_ESC10_ACG − 3·ALPHA_ESC = −0.70). Box (1500³ at 1.5 cMpc), seed, node redshifts and galaxy model are those of EOS26_earlyEoR. `EOS26_minimal.toml` lists only its non-default parameters.
+- Only astrophysical parameters differ, so EOS26 has the same ICs, PFs and halo catalogues as EOS26_earlyEoR (same cache paths). `python run_scripts/link_upstream.py /g/data/qp00/$USER/EOS26_earlyEoR_cache /g/data/qp00/$USER/EOS26_cache` links them into the EOS26 cache instead of recomputing them (with `--test` for the 200³ caches). Keep them in `EOS26_earlyEoR_cache` until the EOS26 coevals are done.
+- `EOS26_earlyEoR.toml` (called `EOS26.toml` until 14 Nov 2026): the first run, 1500³ at 1.5 cMpc, finished 14 Nov 2026. Its f_esc was tuned to Qin+25 with 21cmFAST ≤ 4.2, which applied the photoheating feedback to the ACG turnover mass in almost every cell (fixed in 4.3.0). Run with 4.3.1 it reionizes earlier than Qin+25 (x_HI = 0.5 at z = 8.89, τ_e = 0.075).
+- The scripts use `EOS26` unless `EOS26_TEMPLATE` is set, e.g. `qsub -v EOS26_TEMPLATE=EOS26_earlyEoR pbs_scripts/plots_job.sh`. The template is `<name>.toml`, the caches `<name>_cache/`, `<name>_test_HIIDIM200/` and `<name>_test_HIIDIM200_compare/` below the data root (`run_scripts/settings.py`). Plots of `EOS26_earlyEoR` carry its name (`plots/*_EOS26_earlyEoR*.png`); its logs are in `logs/EOS26_earlyEoR/`.
+- The `EOS26_earlyEoR` cache on Gadi has to be renamed once: `mv /g/data/qp00/$USER/EOS26_cache /g/data/qp00/$USER/EOS26_earlyEoR_cache`. Until then `settings.py` stops every script, so that the new EOS26 cannot write into it.
+- `postprocess/EOS26_smallbox_xHI.ipynb` runs a small EOS26 box (86³ at 1.5 cMpc, about 20 min on one core) and plots its x_HI history with the EOS26_earlyEoR production history (`postprocess/EOS26_earlyEoR_xHI.txt`, from its coeval logs) and the Qin+25 points. `postprocess/plot_all_summaries.ipynb` compares EOS26 with EOS26_earlyEoR (`TEST = True`: the EOS26 HII_DIM=200 test); the earlier notebook is `postprocess/plot_all_summaries_earlyEoR.ipynb`.
+
 ## How to run
 All scripts accept an optional `--test` flag to run a small test box (HII_DIM=200).
 
 ### Where the data go
-All simulation caches (`EOS26_cache/`, `EOS26_test_HIIDIM200/`, `EOS26_test_HIIDIM200_compare/`) and the scaling-test caches (`EOS26_scaling_sims/`) are written below one data root (`run_scripts/settings.py`, `scaling/config.sh`):
+All simulation caches (`<name>_cache/`, `<name>_test_HIIDIM200/`, `<name>_test_HIIDIM200_compare/` for `EOS26` and `EOS26_earlyEoR`) and the scaling-test caches (`EOS26_scaling_sims/`) are written below one data root (`run_scripts/settings.py`, `scaling/config.sh`):
 - on Gadi: `/g/data/qp00/$USER`, because scratch is too small and I/O on gdata is as fast. Every PBS job must request `-l storage=gdata/qp00`.
 - elsewhere: the repository root.
 - `EOS26_DATA=/some/path` overrides both.
 
-Code, logs and the scaling results (`scaling/results/`) stay in the repository. `logs/` holds the production run logs: the 4.3.1 run and the cache copy/migration at the top level, the old 4.2 run (ICs, PFs, halo catalogs, coeval attempts, plots) in `logs/EOS26_v4.2/`, and the HII_DIM=200 test reference in `logs/HII_DIM200_reference/`. Scaling and benchmark logs are in `scaling/`. PBS's own `<jobname>.o<jobid>`/`.e<jobid>` files are git-ignored: before committing, `python pbs_scripts/fold_pbs_output.py` appends what only they contain (PBS resource summary, compare_* results, tracebacks) to the job's log and deletes them.
+Code, logs and the scaling results (`scaling/results/`) stay in the repository. `logs/` holds the production run logs: the EOS26 run at the top level and its HII_DIM=200 test reference in `logs/HII_DIM200_reference/`; the EOS26_earlyEoR 4.3.1 run, its cache copy/migration and its test reference in `logs/EOS26_earlyEoR/`; the old 4.2 run of the same template (ICs, PFs, halo catalogs, coeval attempts, plots) in `logs/EOS26_v4.2/`. Scaling and benchmark logs are in `scaling/`. PBS's own `<jobname>.o<jobid>`/`.e<jobid>` files are git-ignored: before committing, `python pbs_scripts/fold_pbs_output.py` appends what only they contain (PBS resource summary, compare_* results, tracebacks) to the job's log and deletes them.
 
 ### 21cmFAST version
 The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.1 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. 4.3.1 fixes the coeval memory growth of 4.3.0 (#809, fixed by #810; `bug_reports/5_v4.3_sfrd_history_reloaded.md`). Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. `EOS26_VERSION=v4.3_patch` (4.3.0 + `envs/patches/v4.3.0_sfr_allzero.patch`, the same fix) is kept for the scaling record and is not needed with 4.3.1. The scaling jobs use the same venvs (`scaling/config.sh`).
@@ -37,6 +45,12 @@ each output against that reference.
 `--test --compare`. Candidate files then go to
 `EOS26_test_HIIDIM200_compare/`, so the reference is never overwritten. Both
 test modes use the same input parameters and random seed (`42`).
+- `--compare` also checks every coeval's mean neutral fraction against the Qin+25
+reionization history (check 7 in `run_scripts/compare_EOS.py`): WARN above 0.05,
+FAIL (the job stops) above 0.10. This does not need the test reference, so it also
+catches a code change that moves the reference and the run together, such as the
+21cmFAST ≤ 4.2 turnover-mass bug (EOS26_earlyEoR fails it from z = 11.2).
+`EOS26_QIN25_CHECK=0` skips it.
 
 ### End-to-end test
 - `sbatch sbatch_scripts/full_test_job.sh` — runs all three pipeline steps sequentially in test mode.
@@ -65,7 +79,7 @@ superseded; see `scaling_old/ASSESSMENT.md`.
 1. **Initial conditions (ICs):**
    - `sbatch sbatch_scripts/ICs_job.sh [--test]`
   - `qsub pbs_scripts/ICs_job.sh [--test]` on PBS.
-   - Writes `EOS26.toml` (full template with embedded node redshifts and random seed) and `EOS26_minimal.toml`, then runs `run_scripts/run_ICs.py`.
+   - Runs `run_scripts/run_ICs.py` with the template from `settings.py` (`EOS26.toml`, full template with embedded node redshifts and random seed; `EOS26_minimal.toml` has the same parameters without them).
 2. **Perturbed fields (PFs):**
    - `bash sbatch_scripts/submit_PF_jobs.sh [--test]` — submits one job per PF (indices 0–91) (not used for production).
    - `sbatch sbatch_scripts/N_PF_job.sh <z_idx> [N] [--test]` — runs a batch of N PFs (default N=10) starting from redshift index `z_idx`.

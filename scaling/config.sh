@@ -47,12 +47,14 @@ sc_venv() {
     *) return 1 ;;
   esac
 }
-# Parameter template for each version. 21cmFAST 4.3.x also reads EOS26.toml (same
-# inputs, but a DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX); the v4.3 copy uses
-# the new name MIN_XE_FOR_NION_IN_TAUX.
+# Parameter template for each version. The scaling runs use the first EOS26 template,
+# EOS26_earlyEoR.toml since 14 Nov 2026 (EOS26.toml is now the new EOS, with 4.3 names
+# that 4.2 cannot read). 21cmFAST 4.3.x also reads EOS26_earlyEoR.toml (same inputs, but
+# a DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX); the v4.3 copy uses the new name
+# MIN_XE_FOR_NION_IN_TAUX.
 sc_template() {
   case "$1" in
-    v4.2) echo "EOS26.toml" ;;
+    v4.2) echo "EOS26_earlyEoR.toml" ;;
     v4.3|v4.3_patch) echo "scaling/templates/EOS26_v4.3.toml" ;;
     v4.3_fftw) echo "scaling/templates/EOS26_v4.3_fftw.toml" ;;   # USE_FFTW_WISDOM = true
     *) return 1 ;;

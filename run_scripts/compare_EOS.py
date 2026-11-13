@@ -21,6 +21,9 @@ Check taxonomy (mirrors check_EOS.py numbering)
   5  global_means        — BrightnessTemp / IonizedBox / TsBox global means
                            within 15 % of the test box at the closest redshift
   6  brightness_pdf      — brightness_temp median and IQR within 20 % of test
+  7  qin25_history       — IonizedBox mean x_HI within 0.10 of the Qin+25 history
+                           at the same redshift (WARN above 0.05); does not use
+                           the test simulation
 
 Any check that FAILs raises RuntimeError so the calling job exits non-zero and
 SLURM marks it failed.  WARNs are printed but do not abort.
@@ -30,6 +33,7 @@ All file I/O uses slice-by-slice reads so peak RAM is one 2-D slab.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import h5py
@@ -68,6 +72,21 @@ PHYSICAL_RANGES: dict[str, tuple[float, float]] = {
     "brightness_temp":  (-500.0,  50.0),
     "spin_temperature": (1.0,    1e5),
 }
+
+# Check 7: reionization history against Qin+25 (x_HI(z) points as in
+# postprocess/plot_all_summaries.ipynb). Checks 1-6 compare with the test simulation, which is
+# made with the same code and template, so they cannot catch a change that moves both. The
+# 21cmFAST <= 4.2 turnover-mass bug did: EOS26_earlyEoR (f_esc tuned with 4.2), run with 4.3.1,
+# is up to 0.31 below these points (z = 7.2) and first exceeds 0.10 at z = 11.2. The EOS26
+# 129 cMpc test boxes stay within 0.055.
+QIN25_Z = np.array([5.44, 6.35, 6.75, 7.17, 7.7, 8.2, 8.5, 8.85, 9.18, 9.65, 10.01, 10.19,
+                    10.30, 10.87, 11.88, 12.30, 13.144, 14.30])
+QIN25_XHI = np.array([0.01, 0.2, 0.3, 0.4, 0.5, 0.6, 0.65, 0.7, 0.75, 0.8, 0.84, 0.85,
+                      0.86, 0.9, 0.94, 0.952, 0.96947, 0.9822])
+QIN25_XHI_WARN = 0.05  # |mean x_HI - Qin+25| above this: WARN
+QIN25_XHI_FAIL = 0.10  # above this: FAIL
+# EOS26_QIN25_CHECK=0 skips check 7 (EOS26_earlyEoR fails it by design).
+QIN25_CHECK = os.environ.get("EOS26_QIN25_CHECK", "1") != "0"
 
 # Struct name → (struct_name_in_HDF5, field_name_in_HDF5)
 COEVAL_FIELD_MAP: dict[str, tuple[str, str]] = {
@@ -487,6 +506,30 @@ def _check_global_means(
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Check 7 — Reionization history against Qin+25
+# ══════════════════════════════════════════════════════════════════════════════
+
+def _check_qin25(eos_path: Path, target_z: float, label: str) -> None:
+    """Check 7: mean neutral fraction within QIN25_XHI_FAIL of Qin+25 at the same redshift."""
+    if not QIN25_CHECK:
+        _pline("INFO", f"Check 7 [{label}]: skipped (EOS26_QIN25_CHECK=0)")
+        return
+    if not QIN25_Z.min() <= target_z <= QIN25_Z.max():
+        _pline("INFO", f"Check 7 [{label}]: z={target_z:.3f} outside the Qin+25 points "
+                       f"(z = {QIN25_Z.min():.2f}-{QIN25_Z.max():.2f}), skipped")
+        return
+    x_eos = _hdf5_stats(eos_path, "IonizedBox", "neutral_fraction")["mean"]
+    x_qin = float(np.interp(target_z, QIN25_Z, QIN25_XHI))
+    dx = x_eos - x_qin
+    status = "FAIL" if abs(dx) > QIN25_XHI_FAIL else "WARN" if abs(dx) > QIN25_XHI_WARN else "PASS"
+    _pline(status, f"Check 7 [{label}]: mean x_HI={x_eos:.4f}  Qin+25={x_qin:.4f}  diff={dx:+.4f}  "
+                   f"(WARN > {QIN25_XHI_WARN}, FAIL > {QIN25_XHI_FAIL})")
+    if status == "FAIL":
+        _fail(f"Check 7 [{label}]: mean x_HI differs from Qin+25 by {dx:+.3f} (> {QIN25_XHI_FAIL}); "
+              "set EOS26_QIN25_CHECK=0 to skip this check")
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Check 6 — Brightness-temp PDF (median and IQR)
 # ══════════════════════════════════════════════════════════════════════════════
 
@@ -666,10 +709,11 @@ def compare_coeval(coeval, cache, inputs) -> None:
     2  Array shape and NaN/Inf
     5  Global mean within 15 % of test at closest z
     6  brightness_temp median and IQR within tolerances  (brightness_temp only)
+    7  mean x_HI within 0.10 of Qin+25 at the same z    (neutral_fraction only)
     """
     z = float(getattr(coeval, "redshift", 0.0))
     label = f"coeval z={z:.4f}"
-    _section(f"compare_coeval: checks 1-2, 5-6 — {label}")
+    _section(f"compare_coeval: checks 1-2, 5-7 — {label}")
 
     rc = RunCache.from_inputs(inputs, cache=cache)
 
@@ -694,5 +738,7 @@ def compare_coeval(coeval, cache, inputs) -> None:
         _check_global_means(eos_path, struct_attr, h5field, z, field_label)
         if field == "brightness_temp":
             _check_brightness_pdf(eos_path, z, field_label)
+        if field == "neutral_fraction":
+            _check_qin25(eos_path, z, field_label)
 
     _pline("PASS", f"compare_coeval: all checks passed for {label} ✓")

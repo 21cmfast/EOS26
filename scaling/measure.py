@@ -524,7 +524,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap.add_argument("--label", required=True, help="21cmFAST version label, e.g. v4.2 or v4.3 (results subfolder)")
     ap.add_argument("--hii-dim", type=int, required=True)
     ap.add_argument("--n-threads", type=int, required=True)
-    ap.add_argument("--template", type=Path, default=Path("EOS26.toml"),
+    ap.add_argument("--template", type=Path, default=Path("EOS26_earlyEoR.toml"),  # the scaling runs' template (EOS26.toml until 14 Nov 2026)
                     help="parameter template (relative paths are relative to the EOS26 root)")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--phases", default="all", help="e.g. 'all' (default), 'ics,pf', 'coeval'")

@@ -4,6 +4,9 @@
 
 Both caches are for the same inputs (EOS26.toml, with the test overrides if --test),
 so every box has the same relative path in both; DST gets symlinks to SRC's files.
+The upstream boxes do not depend on the astrophysical parameters, so SRC can also be the
+cache of another EOS with the same box, seed and node redshifts, e.g.
+    python run_scripts/link_upstream.py $DATA/EOS26_earlyEoR_cache $DATA/EOS26_cache
 Coeval products are not linked, so coevals in DST are computed afresh (e.g. with other
 run-time settings, see run_scripts/sim_steps.py) while ICs/PFs/halos are only read.
 Exits 1 if any upstream box is missing in SRC.

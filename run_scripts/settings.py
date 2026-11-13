@@ -9,7 +9,17 @@ from pathlib import Path
 
 # ── template ───────────────────────────────────────────────────────────────
 
-TEMPLATE_NAME = "EOS26.toml"
+# The EOS that the scripts run or read, chosen with $EOS26_TEMPLATE (default EOS26):
+#   EOS26           continuous f_esc fitted to the Qin+25 reionization history with
+#                   21cmFAST 4.3 (1500^3 at 1.5 cMpc, the same box as EOS26_earlyEoR);
+#   EOS26_earlyEoR  the first EOS26 run (1500^3 at 1.5 cMpc, finished 14 Nov 2026), whose
+#                   f_esc was tuned with the 21cmFAST <= 4.2 turnover-mass bug, so it
+#                   reionizes earlier than Qin+25.
+# The template is <name>.toml in the repository root, and the caches below DATA_ROOT are
+# <name>_cache, <name>_test_HIIDIM200 and <name>_test_HIIDIM200_compare.
+# Example: qsub -v EOS26_TEMPLATE=EOS26_earlyEoR pbs_scripts/plots_job.sh
+RUN_NAME = Path(os.environ.get("EOS26_TEMPLATE") or "EOS26").name.removesuffix(".toml")
+TEMPLATE_NAME = f"{RUN_NAME}.toml"
 TEST_RANDOM_SEED = 42
 
 # ── data location ──────────────────────────────────────────────────────────
@@ -45,12 +55,22 @@ DATA_ROOT = _data_root()
 
 # ── cache directories ──────────────────────────────────────────────────────
 
-# Main EOS26 cache (used by production runs)
-CACHE_FULL = f"{DATA_ROOT / 'EOS26_cache'}/"
+# Main cache of the run (used by production runs)
+CACHE_FULL = f"{DATA_ROOT / (RUN_NAME + '_cache')}/"
 # Small reference simulation generated with --test and without --compare.
-CACHE_TEST_REFERENCE = f"{DATA_ROOT / 'EOS26_test_HIIDIM200'}/"
+CACHE_TEST_REFERENCE = f"{DATA_ROOT / (RUN_NAME + '_test_HIIDIM200')}/"
 # Separate local candidate cache for --test --compare.
-CACHE_TEST_COMPARE = f"{DATA_ROOT / 'EOS26_test_HIIDIM200_compare'}/"
+CACHE_TEST_COMPARE = f"{DATA_ROOT / (RUN_NAME + '_test_HIIDIM200_compare')}/"
+
+# Until 14 Nov 2026 EOS26_earlyEoR was called EOS26, so its cache is still DATA_ROOT/EOS26_cache
+# until renamed. Stop before the new EOS26 writes into it or EOS26_earlyEoR is looked for elsewhere.
+_OLD_EOS26_CACHE = DATA_ROOT / "EOS26_cache"
+_EARLY_EOR_CACHE = DATA_ROOT / "EOS26_earlyEoR_cache"
+if _OLD_EOS26_CACHE.is_dir() and not _EARLY_EOR_CACHE.exists():
+    raise RuntimeError(
+        f"{_OLD_EOS26_CACHE} holds the EOS26_earlyEoR run (called EOS26 until 14 Nov 2026). "
+        f"Rename it before running anything: mv {_OLD_EOS26_CACHE} {_EARLY_EOR_CACHE}"
+    )
 
 # ── simulation parameters ──────────────────────────────────────────────────
 
@@ -603,7 +623,7 @@ def add_common_args(parser: argparse.ArgumentParser) -> None:
     )
     parser.add_argument(
         "--compare", action="store_true", default=False,
-        help="Compare the results to the EOS26 reference outputs",
+        help="Compare the results to the test reference outputs of the same EOS and to the Qin+25 reionization history",
     )
 
 
