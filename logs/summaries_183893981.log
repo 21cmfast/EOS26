@@ -1,0 +1,38 @@
+===== cell 0 (1/17 code cells, 0 s)
+21cmFAST 4.3.1
+===== cell 3 (2/17 code cells, 2 s)
+===== cell 4 (3/17 code cells, 2 s)
+EOS26      HII_DIM=200 cell=1.50 Mpc BOX_LEN=300 Mpc  F_ESC10_ACG=-0.850 ALPHA_ESC=-0.050 F_ESC7_MCG=-0.700  in cache: 92 halo catalogues, 92 coevals of 92
+===== cell 5 (4/17 code cells, 2 s)
+===== cell 6 (5/17 code cells, 2 s)
+===== cell 7 (6/17 code cells, 2 s)
+===== cell 9 (7/17 code cells, 2 s)
+===== cell 11 (8/17 code cells, 2 s)
+EOS26 57963844 halos
+===== cell 13 (9/17 code cells, 140 s)
+===== cell 15 (10/17 code cells, 140 s)
+===== cell 17 (11/17 code cells, 141 s)
+===== cell 18 (12/17 code cells, 142 s)
+===== cell 20 (13/17 code cells, 144 s)
+Largest |phi/phi_ref - 1| (ref: EOS26, same feedback setting), bins with >= 10 galaxies in both;
+'obs' = M_UV < -17 (observed range), 'faint' = M_UV > -17
+    z model                         no fb obs  no fb faint   fb obs  fb faint
+  6.0 EOS26                             0.000        0.000    0.000     0.000
+  7.0 EOS26                             0.000        0.000    0.000     0.000
+  8.0 EOS26                             0.000        0.000    0.000     0.000
+  9.0 EOS26                             0.000        0.000    0.000     0.000
+ 10.0 EOS26                             0.000        0.000    0.000     0.000
+ 11.0 EOS26                             0.000        0.000    0.000     0.000
+ 12.5 EOS26                             0.000        0.000    0.000     0.000
+ 14.5 EOS26                             0.000        0.000    0.000     0.000
+===== cell 22 (14/17 code cells, 153 s)
+                                       x=0.9  x=0.75   x=0.5  x=0.25   x=0.1  x=0.05  x=0.01
+Qin+25                                 10.87    9.18    7.70    6.55    5.87    5.63    5.44
+EOS26                                  11.43    9.22    7.65    6.71    6.09    5.77    5.13
+EOS26_earlyEoR production (coeval logs)   12.74   10.54    8.89    7.88    7.21    6.83    6.03
+===== cell 24 (15/17 code cells, 156 s)
+tau_e EOS26                                0.0626
+tau_e EOS26_earlyEoR production (coeval logs) 0.0754
+===== cell 26 (16/17 code cells, 156 s)
+===== cell 28 (17/17 code cells, 162 s)
+===== plot_all_summaries.ipynb: done in 166 s
