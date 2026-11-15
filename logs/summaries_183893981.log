@@ -36,3 +36,19 @@ tau_e EOS26_earlyEoR production (coeval logs) 0.0754
 ===== cell 26 (16/17 code cells, 156 s)
 ===== cell 28 (17/17 code cells, 162 s)
 ===== plot_all_summaries.ipynb: done in 166 s
+
+==== PBS output of job 183893981 (EOS26_summaries.o183893981, EOS26_summaries.e183893981), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-14 07:35:59:
+   Job Id:             183893981.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      1.52
+   NCPUs Requested:    16                  CPU Time Used: 00:05:52        
+   Memory Requested:   64.0GB                Memory Used: 14.68GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:02:51        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

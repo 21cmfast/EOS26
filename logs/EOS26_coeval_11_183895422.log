@@ -782,3 +782,77 @@
 03:48:50 DEBUG    00.860 TB                     hires_vz_2LPT:  uninitialized                                                                                   
 03:48:50 DEBUG    00.860 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
 03:48:50 DEBUG    00.860 TB                                                                                                                                     
+04:28:59 DEBUG    00.897 TB Calling ComputeBrightnessTemp with following args:                                                                                  
+04:28:59 DEBUG    00.897 TB     28.25263493657811                                                                                                               
+04:30:09 DEBUG    00.897 TB                                                                                                                                     
+04:30:09 DEBUG    00.897 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+04:30:09 DEBUG    00.897 TB                  spin_temperature:  7.5016e+01,  7.5242e+01,  4.9567e+01,  7.7482e+01,  7.4587e+01                                  
+04:30:09 DEBUG    00.897 TB             xray_ionised_fraction:  1.9494e-04,  1.9521e-04,  1.9047e-04,  1.9813e-04,  1.9455e-04                                  
+04:30:09 DEBUG    00.897 TB              kinetic_temp_neutral:  1.6473e+01,  1.6267e+01,  1.2714e+01,  2.3666e+01,  1.6967e+01                                  
+04:30:09 DEBUG    00.897 TB                           J_21_LW:  8.2791e-04,  8.0890e-04,  2.5790e-04,  3.1173e-01,  9.3697e-04                                  
+04:30:09 DEBUG    00.897 TB                              Q_HI: 0.9999642190796567                                                                               
+04:30:09 DEBUG    00.897 TB                                                                                                                                     
+04:31:15 DEBUG    00.897 TB                                                                                                                                     
+04:31:15 DEBUG    00.897 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+04:31:15 DEBUG    00.897 TB                  neutral_fraction:  9.9980e-01,  9.9980e-01,  9.6902e-01,  9.9980e-01,  9.9977e-01                                  
+04:31:15 DEBUG    00.897 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00                                  
+04:31:15 DEBUG    00.897 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00, -1.0000e+00, -1.0000e+00                                  
+04:31:15 DEBUG    00.897 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00,  0.0000e+00                                  
+04:31:15 DEBUG    00.897 TB            nion_unconditional_acg: 4.077866598732457e-05                                                                            
+04:31:15 DEBUG    00.897 TB            nion_unconditional_mcg: 4.234741234517365e-07                                                                            
+04:31:15 DEBUG    00.897 TB               log10_mturn_ave_acg: 7.289987086790984                                                                                
+04:31:15 DEBUG    00.897 TB               log10_mturn_ave_mcg: 5.823646238078111                                                                                
+04:31:15 DEBUG    00.897 TB                                                                                                                                     
+04:32:21 DEBUG    00.897 TB                                                                                                                                     
+04:32:21 DEBUG    00.897 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+04:32:21 DEBUG    00.897 TB                           density: -5.7823e-02, -9.4566e-02, -4.4023e-01,  9.4500e-01, -2.0833e-11                                  
+04:32:21 DEBUG    00.897 TB                        velocity_z: -5.1717e-20, -7.4786e-18, -3.8695e-16,  3.7455e-16, -1.4795e-28                                  
+04:32:21 DEBUG    00.897 TB                        velocity_x:  1.1701e-16,  1.2815e-16, -3.7458e-16,  3.6797e-16, -1.6448e-25                                  
+04:32:21 DEBUG    00.897 TB                        velocity_y: -2.4773e-18,  6.4322e-19, -3.7225e-16,  3.8550e-16,  7.4529e-27                                  
+04:32:21 DEBUG    00.897 TB                                                                                                                                     
+04:33:05 INFO     00.921 TB coeval 1/11: z=28.252635                                                                                                            
+04:33:05 INFO     00.921 TB coeval 1/11 done in 16384.92s (average CPU cores: 5.73; peak RSS: 01.007 TB)                                                        
+
+==== PBS output of job 183895422 (EOS26_coeval.o183895422, EOS26_coeval.e183895422), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 229 files in /g/data/qp00/db9528/EOS26_cache
+  BrightnessTemp     ok   11   damaged    0
+  EmissivityFields   ok   11   damaged    0
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  IonizedBox         ok   11   damaged    0
+  PerturbedField     ok   92   damaged    0
+  TsBox              ok   11   damaged    0
+no damaged files
+N is: 11, compare: 1
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=28.2526 ──────────────
+[16:30:37] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[16:30:38] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-3.2116  std=0.7866
+           min=-24.0819  max=-0.8492
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-3.2116  test
+           mean=-3.2101 (z=28.253)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-2.7168, -3.506
+           , -3.3241, -3.3373, -3.175 , -3.1412]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-2.1944,
+           -2.1532, -2.3227, -2.5803, -2.4286, -2.4437]
+           [[INFO]] · Check 6 : brightness_temp p25=-4.86  p50=-4.06  p75=-3.28
+           IQR=1.58 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-4.06 test p50=-4.06  EOS IQR=1.58 test
+           IQR=1.56 (z=28.253)
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-15 16:31:11:
+   Job Id:             183895422.gadi-pbs
+   Project:            qp00
+   Exit Status:        271 (Linux Signal 15 SIGTERM Termination)
+   Service Units:      551.93
+   NCPUs Requested:    24                  CPU Time Used: 26:06:30        
+   Memory Requested:   1.27TB                Memory Used: 1.27TB          
+   Walltime Requested: 48:00:00            Walltime Used: 04:35:58        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
