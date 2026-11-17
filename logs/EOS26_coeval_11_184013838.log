@@ -1,0 +1,34 @@
+00:00:00 INFO     00.165 GB Starting N coeval run: N=11                                                                                                         
+00:00:00 INFO     00.166 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.166 GB Already have 23 coevals done, at redshifts: [22.5268, 22.9973, 23.4773, 23.9668, 24.4662, 24.9755, 25.495, 26.0249, 26.5654,        
+                            27.1167, 27.6791, 28.2526, 28.8377, 29.4344, 30.0431, 30.664, 31.2973, 31.9432, 32.6021, 33.2741, 33.9596, 34.6588, 35.372]         
+00:00:00 INFO     00.166 GB Redshifts for this batch: 22.07 to 17.92                                                                                            
+00:00:00 WARNING  00.166 GB coeval run-time overrides (not in the cache hash): {'N_THREADS': 24}                                                                
+00:00:00 INFO     00.168 GB Existing InitialConditions found and read in (seed=42).                                                                             
+00:00:00 DEBUG    00.168 GB Reading array of shape (4500, 4500, 4500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/hires_density'))                                                                           
+00:11:42 DEBUG    00.332 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+00:12:00 DEBUG    00.344 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+00:12:22 DEBUG    00.356 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+00:12:50 DEBUG    00.368 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+00:13:15 DEBUG    00.381 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+00:13:55 DEBUG    00.393 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+00:14:22 DEBUG    00.405 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+00:14:54 DEBUG    00.418 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
