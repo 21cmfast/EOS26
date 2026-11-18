@@ -1,2 +1,9 @@
 00:00:00 INFO     00.261 GB angular_plane: finalised in 51 s                                                                                                    
 00:17:14 INFO     00.228 GB healpix_nside256: finalised in 1034 s                                                                                               
+01:10:00 INFO     00.212 GB patch_nside1024: finalised in 3166 s                                                                                                
+01:11:06 INFO     00.213 GB rect: finalised in 66 s                                                                                                             
+01:11:06 INFO     00.213 GB angular_plane: /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane.h5                                                
+01:11:06 INFO     00.213 GB healpix_nside256: /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256.h5                                          
+01:11:06 INFO     00.213 GB patch_nside1024: /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024.h5                                            
+01:11:06 INFO     00.213 GB rect: /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect.h5                                                                  
+01:11:06 INFO     00.213 GB Completed in 4327.6s                                                                                                                

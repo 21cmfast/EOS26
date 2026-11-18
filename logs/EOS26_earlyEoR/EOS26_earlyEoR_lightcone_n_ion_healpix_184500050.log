@@ -58,3 +58,229 @@
 00:29:35 DEBUG    48.321 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/24.9755/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:31:02 DEBUG    48.831 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:32:31 DEBUG    48.482 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:34:05 DEBUG    48.522 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:35:33 DEBUG    48.831 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:37:04 DEBUG    48.952 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:38:34 DEBUG    49.044 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:40:01 DEBUG    48.919 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:41:26 DEBUG    48.829 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:42:57 DEBUG    48.944 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:44:27 DEBUG    48.987 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:45:57 DEBUG    48.912 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:47:28 DEBUG    49.040 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:49:04 DEBUG    49.330 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:50:45 DEBUG    49.934 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:52:23 DEBUG    48.983 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:54:01 DEBUG    49.624 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:55:38 DEBUG    49.926 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:57:20 DEBUG    49.877 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+00:59:00 DEBUG    49.934 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:00:37 DEBUG    49.486 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:02:18 DEBUG    49.711 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:04:01 DEBUG    49.494 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:05:57 DEBUG    50.251 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:07:40 DEBUG    49.223 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:09:34 DEBUG    49.424 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:11:51 DEBUG    49.358 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:14:13 DEBUG    49.393 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:16:39 DEBUG    49.577 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:18:41 DEBUG    49.361 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:20:54 DEBUG    49.981 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:23:40 DEBUG    49.521 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:25:54 DEBUG    49.445 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:28:18 DEBUG    49.973 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:30:40 DEBUG    49.800 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:32:47 DEBUG    49.446 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:35:05 DEBUG    49.849 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:37:27 DEBUG    49.643 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:39:50 DEBUG    49.703 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:42:05 DEBUG    49.386 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:44:19 DEBUG    49.702 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:46:41 DEBUG    49.653 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:48:58 DEBUG    49.518 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:51:31 DEBUG    50.222 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))               
+01:53:46 DEBUG    50.439 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+01:56:23 DEBUG    50.261 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+01:59:03 DEBUG    50.187 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:01:33 DEBUG    49.662 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:03:51 DEBUG    51.957 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:06:12 DEBUG    51.505 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:09:25 DEBUG    50.066 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:11:48 DEBUG    50.335 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:14:11 DEBUG    50.117 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:17:09 DEBUG    50.188 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:19:38 DEBUG    50.542 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:22:04 DEBUG    50.903 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:24:54 DEBUG    50.474 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:28:35 DEBUG    50.108 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:31:09 DEBUG    50.546 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:33:47 DEBUG    49.863 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:36:34 DEBUG    50.365 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:39:03 DEBUG    50.341 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:41:50 DEBUG    50.275 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:44:32 DEBUG    50.804 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:47:21 DEBUG    51.340 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:50:08 DEBUG    50.547 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:53:15 DEBUG    50.906 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:55:50 DEBUG    50.918 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+02:58:46 DEBUG    51.111 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:01:49 DEBUG    50.480 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:04:33 DEBUG    50.648 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:07:27 DEBUG    50.988 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:10:24 DEBUG    50.880 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:13:44 DEBUG    50.832 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:16:54 DEBUG    50.645 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/n_ion'))                
+03:20:10 INFO     30.629 GB n_ion: filled in 11962 s, 92 boxes read                                                                                             
+03:48:42 INFO     33.648 GB n_ion: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/n_ion.h5                           
+03:48:42 INFO     33.649 GB Completed n_ion (healpix) in 13722.6s -> {'healpix':                                                                                
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/n_ion.h5')}                                       

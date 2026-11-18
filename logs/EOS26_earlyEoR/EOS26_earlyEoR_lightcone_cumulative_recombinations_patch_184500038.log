@@ -94,3 +94,194 @@
 00:30:12 DEBUG    49.672 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/19.4815/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:31:40 DEBUG    50.114 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:32:33 DEBUG    49.995 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:33:28 DEBUG    37.019 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:34:19 DEBUG    49.762 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:35:32 DEBUG    49.465 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:36:26 DEBUG    50.544 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:37:20 DEBUG    50.334 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:38:14 DEBUG    50.426 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:39:21 DEBUG    49.872 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:40:18 DEBUG    49.894 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:41:10 DEBUG    50.492 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:42:12 DEBUG    50.582 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:43:09 DEBUG    50.574 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:44:01 DEBUG    50.455 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:44:58 DEBUG    38.488 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:45:53 DEBUG    50.121 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:46:46 DEBUG    50.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:48:04 DEBUG    51.622 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:49:01 DEBUG    51.201 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:49:55 DEBUG    51.049 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:50:52 DEBUG    51.766 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:51:53 DEBUG    52.106 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:53:04 DEBUG    50.989 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:54:02 DEBUG    51.770 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:55:02 DEBUG    51.474 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:56:00 DEBUG    51.826 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:57:17 DEBUG    53.041 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:58:18 DEBUG    53.319 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+00:59:19 DEBUG    52.993 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+01:00:21 DEBUG    53.003 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+01:01:40 DEBUG    53.015 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))       
+01:02:44 DEBUG    53.091 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:03:58 DEBUG    53.073 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:05:06 DEBUG    52.543 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:06:08 DEBUG    52.792 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:07:27 DEBUG    52.435 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:08:43 DEBUG    53.091 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:09:45 DEBUG    52.357 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:10:56 DEBUG    39.920 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:12:03 DEBUG    52.773 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:13:08 DEBUG    52.847 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:14:56 DEBUG    53.117 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:16:20 DEBUG    52.639 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:17:40 DEBUG    52.531 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:18:53 DEBUG    52.590 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:20:57 DEBUG    52.790 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:22:17 DEBUG    52.761 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:23:53 DEBUG    52.956 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:25:15 DEBUG    52.872 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:27:05 DEBUG    53.049 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:28:36 DEBUG    53.519 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:30:17 DEBUG    53.384 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:31:48 DEBUG    53.613 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:33:02 DEBUG    54.169 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:34:27 DEBUG    53.693 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:36:07 DEBUG    54.025 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:37:36 DEBUG    53.243 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:38:57 DEBUG    53.638 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:40:28 DEBUG    54.183 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:42:08 DEBUG    54.089 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:43:42 DEBUG    54.672 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:45:15 DEBUG    54.485 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))        
+01:47:28 INFO     34.515 GB cumulative_recombinations: filled in 6378 s, 92 boxes read                                                                          
+02:50:06 INFO     37.085 GB cumulative_recombinations: joined 48 parts ->                                                                                       
+                            /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/cumulative_recombinations.h5                                   
+02:50:06 INFO     37.087 GB Completed cumulative_recombinations (patch) in 10206.8s -> {'patch':                                                                
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/cumulative_recombinations.h5')}                     

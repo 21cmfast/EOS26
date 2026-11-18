@@ -19,3 +19,268 @@
 00:28:52 DEBUG    25.578 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/32.6021/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:30:34 DEBUG    25.729 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:32:18 DEBUG    25.578 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:33:59 DEBUG    25.578 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:35:18 DEBUG    25.627 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:37:31 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:39:00 DEBUG    25.677 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:40:25 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:42:07 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:43:45 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:45:49 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:47:46 DEBUG    25.575 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:49:24 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:51:41 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:54:12 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:55:42 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:57:17 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+00:59:22 DEBUG    25.776 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:00:51 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:02:43 DEBUG    25.576 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:05:16 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:07:24 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:09:06 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:10:49 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:13:17 DEBUG    25.777 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:14:51 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:17:35 DEBUG    25.777 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:20:22 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:22:26 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:23:49 DEBUG    25.777 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:25:16 DEBUG    25.727 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:27:38 DEBUG    25.717 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:29:06 DEBUG    25.717 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:30:51 DEBUG    25.817 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:32:47 DEBUG    25.717 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:34:37 DEBUG    25.818 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:35:47 DEBUG    25.717 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:37:53 DEBUG    25.717 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:39:58 DEBUG    25.868 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:42:10 DEBUG    25.797 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:43:31 DEBUG    25.848 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:44:44 DEBUG    25.697 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:47:29 DEBUG    25.697 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:48:50 DEBUG    25.696 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:50:19 DEBUG    25.697 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:52:53 DEBUG    25.848 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:54:06 DEBUG    25.697 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:55:37 DEBUG    25.697 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:58:18 DEBUG    25.847 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+01:59:28 DEBUG    25.696 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:02:52 DEBUG    25.695 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:04:16 DEBUG    25.893 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:05:33 DEBUG    25.692 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:06:50 DEBUG    25.691 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:08:05 DEBUG    25.892 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:08:56 DEBUG    25.741 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:09:49 DEBUG    25.691 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                          
+02:10:57 DEBUG    25.691 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:12:11 DEBUG    25.942 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:13:19 DEBUG    25.942 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:14:36 DEBUG    25.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:15:53 DEBUG    25.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:16:54 DEBUG    25.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:18:08 DEBUG    25.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:19:23 DEBUG    25.941 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:20:31 DEBUG    25.922 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:21:31 DEBUG    25.922 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:22:30 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:23:21 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:24:11 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:25:20 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:26:15 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:27:09 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:28:03 DEBUG    25.967 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:28:48 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:29:32 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:30:22 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:30:57 DEBUG    26.018 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:31:37 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:32:34 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:33:52 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:34:55 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:35:45 DEBUG    26.017 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:36:49 DEBUG    25.967 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:37:58 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:39:01 DEBUG    26.068 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:40:09 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:41:15 DEBUG    25.917 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                           
+02:42:47 INFO     25.665 GB spin_temperature: filled in 9760 s, 92 boxes read                                                                                   
+02:42:47 INFO     25.665 GB Completed spin_temperature (rect angular_plane) in 9767.9s -> {'rect':                                                              
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/rect/spin_temperature.h5'), 'angular_plane':                        
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/angular_plane/spin_temperature.h5')}                                

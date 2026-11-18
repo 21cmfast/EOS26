@@ -70,3 +70,218 @@
 00:29:33 DEBUG    49.123 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/22.9973/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:30:53 DEBUG    48.250 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:32:21 DEBUG    48.277 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:33:47 DEBUG    49.104 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:35:08 DEBUG    48.487 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:36:35 DEBUG    48.767 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:37:58 DEBUG    48.025 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:39:22 DEBUG    48.537 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:40:49 DEBUG    48.449 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:42:15 DEBUG    48.180 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:43:44 DEBUG    48.496 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:45:16 DEBUG    48.268 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:46:47 DEBUG    48.292 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:48:32 DEBUG    47.807 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:50:11 DEBUG    48.431 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:51:56 DEBUG    48.157 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:53:31 DEBUG    48.946 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:55:09 DEBUG    48.915 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:56:44 DEBUG    48.887 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:58:19 DEBUG    48.487 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+00:59:57 DEBUG    48.837 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:01:35 DEBUG    48.506 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:03:16 DEBUG    48.822 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:04:57 DEBUG    48.746 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:06:48 DEBUG    49.316 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:09:25 DEBUG    48.912 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:11:04 DEBUG    48.903 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:12:45 DEBUG    49.300 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:14:23 DEBUG    48.588 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:16:05 DEBUG    48.572 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:17:47 DEBUG    48.414 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:19:26 DEBUG    48.708 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:21:10 DEBUG    48.139 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:23:22 DEBUG    48.598 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:25:06 DEBUG    48.381 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:27:00 DEBUG    48.806 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:29:09 DEBUG    48.908 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:31:11 DEBUG    49.112 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:33:04 DEBUG    49.511 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:35:04 DEBUG    49.418 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                      
+01:37:11 DEBUG    49.398 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:39:21 DEBUG    49.725 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:41:44 DEBUG    50.475 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:43:57 DEBUG    49.764 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:46:15 DEBUG    49.582 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:48:39 DEBUG    50.060 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:51:24 DEBUG    49.902 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:53:46 DEBUG    50.466 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:56:00 DEBUG    50.162 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+01:58:50 DEBUG    49.827 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:01:23 DEBUG    49.853 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:04:02 DEBUG    49.965 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:06:25 DEBUG    38.269 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:09:04 DEBUG    50.179 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:11:24 DEBUG    50.433 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:14:04 DEBUG    50.455 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:16:55 DEBUG    50.655 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:19:31 DEBUG    50.283 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:22:20 DEBUG    50.382 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:24:54 DEBUG    50.865 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:28:03 DEBUG    50.911 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:30:54 DEBUG    50.964 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:33:54 DEBUG    50.294 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:37:00 DEBUG    50.710 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:40:08 DEBUG    50.567 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:42:47 DEBUG    38.339 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:45:43 DEBUG    50.245 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:48:21 DEBUG    50.915 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:51:18 DEBUG    50.783 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:54:00 DEBUG    50.628 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+02:57:12 DEBUG    50.934 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                       
+03:00:34 INFO     31.008 GB kinetic_temp_neutral: filled in 10786 s, 92 boxes read                                                                              
+03:30:04 INFO     34.013 GB kinetic_temp_neutral: joined 48 parts ->                                                                                            
+                            /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/kinetic_temp_neutral.h5                                      
+03:30:05 INFO     34.014 GB Completed kinetic_temp_neutral (healpix) in 12605.1s -> {'healpix':                                                                 
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/kinetic_temp_neutral.h5')}                        

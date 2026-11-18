@@ -70,3 +70,217 @@
 00:29:51 DEBUG    50.050 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/22.9973/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:30:59 DEBUG    50.008 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:32:10 DEBUG    37.534 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:33:21 DEBUG    49.669 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:35:03 DEBUG    49.816 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:36:19 DEBUG    49.744 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:37:42 DEBUG    49.924 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:39:04 DEBUG    49.875 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:40:03 DEBUG    49.864 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:42:08 DEBUG    49.822 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:43:42 DEBUG    49.879 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:45:41 DEBUG    50.027 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:47:59 DEBUG    50.143 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:49:56 DEBUG    49.892 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:51:19 DEBUG    50.296 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:53:51 DEBUG    49.783 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:55:24 DEBUG    50.302 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:56:59 DEBUG    50.814 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:58:42 DEBUG    50.902 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+00:59:56 DEBUG    50.440 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:01:35 DEBUG    48.974 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:03:43 DEBUG    38.428 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:05:13 DEBUG    50.452 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:07:01 DEBUG    37.957 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:08:48 DEBUG    50.973 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:10:06 DEBUG    51.712 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:11:37 DEBUG    49.125 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:13:36 DEBUG    39.376 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:14:51 DEBUG    50.831 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:16:34 DEBUG    51.491 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:18:53 DEBUG    51.596 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:20:11 DEBUG    51.565 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:21:54 DEBUG    39.632 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:23:36 DEBUG    52.302 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:25:08 DEBUG    51.654 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:26:30 DEBUG    52.956 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:27:44 DEBUG    52.807 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:29:10 DEBUG    53.033 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:30:29 DEBUG    52.066 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:31:51 DEBUG    40.289 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))            
+01:33:04 DEBUG    52.646 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:34:43 DEBUG    52.723 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:36:12 DEBUG    52.441 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:37:54 DEBUG    52.628 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:39:11 DEBUG    52.564 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:40:57 DEBUG    53.059 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:43:24 DEBUG    52.895 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:44:48 DEBUG    52.436 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:46:04 DEBUG    52.471 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:48:03 DEBUG    52.654 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:49:48 DEBUG    52.553 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:51:10 DEBUG    52.629 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:53:11 DEBUG    52.802 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:54:58 DEBUG    52.748 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:56:28 DEBUG    40.554 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+01:58:17 DEBUG    52.454 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:00:37 DEBUG    52.953 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:02:11 DEBUG    52.306 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:03:46 DEBUG    53.579 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:05:14 DEBUG    53.140 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:06:51 DEBUG    52.790 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:08:32 DEBUG    53.141 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:10:37 DEBUG    54.249 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:12:07 DEBUG    42.086 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:13:53 DEBUG    54.676 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:15:57 DEBUG    53.792 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:17:26 DEBUG    54.481 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:18:55 DEBUG    54.698 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:20:52 DEBUG    54.611 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:22:46 DEBUG    54.756 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:24:38 DEBUG    55.122 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/7bc826193765d02608ff8d29badcea62/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))             
+02:26:50 INFO     34.635 GB sfrd_acg: filled in 8740 s, 92 boxes read                                                                                           
+03:29:51 INFO     37.214 GB sfrd_acg: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/sfrd_acg.h5                       
+03:29:51 INFO     37.215 GB Completed sfrd_acg (patch) in 12591.2s -> {'patch':                                                                                 
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/sfrd_acg.h5')}                                      

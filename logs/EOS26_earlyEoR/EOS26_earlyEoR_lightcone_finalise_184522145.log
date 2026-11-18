@@ -1,0 +1,11 @@
+00:00:00 INFO     00.252 GB angular_plane: finalised in 62 s                                                                                                    
+00:00:00 INFO     00.252 GB healpix_nside1024: no dv/dr yet; missing or incomplete: ['brightness_temp', 'los_velocity', 'tau_21']                               
+00:00:49 INFO     00.252 GB healpix_nside1024: finalised in 49 s                                                                                                
+00:00:59 INFO     00.252 GB patch_nside4096: no dv/dr yet; missing or incomplete: ['los_velocity']                                                              
+00:02:45 INFO     00.252 GB patch_nside4096: finalised in 117 s                                                                                                 
+01:13:26 INFO     00.245 GB rect: finalised in 4241 s                                                                                                           
+01:13:26 INFO     00.245 GB angular_plane: /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/angular_plane.h5                                                
+01:13:26 INFO     00.245 GB healpix_nside1024: /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024.h5                                        
+01:13:26 INFO     00.245 GB patch_nside4096: /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096.h5                                            
+01:13:26 INFO     00.245 GB rect: /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/rect.h5                                                                  
+01:13:26 INFO     00.245 GB Completed in 4478.9s                                                                                                                

@@ -3552,3 +3552,487 @@
 32:17:03 DEBUG    01.081 TB                     hires_vz_2LPT:  uninitialized                                                                                   
 32:17:03 DEBUG    01.081 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
 32:17:03 DEBUG    01.081 TB                                                                                                                                     
+32:58:32 DEBUG    01.118 TB Calling ComputeBrightnessTemp with following args:                                                                                  
+32:58:32 DEBUG    01.118 TB     19.079908424796198                                                                                                              
+32:59:21 DEBUG    01.118 TB                                                                                                                                     
+32:59:21 DEBUG    01.118 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+32:59:21 DEBUG    01.118 TB                  spin_temperature:  2.9752e+01,  2.9519e+01,  1.0506e+01,  8.9461e+01,  3.0169e+01                                  
+32:59:21 DEBUG    01.118 TB             xray_ionised_fraction:  1.8726e-04,  1.8777e-04,  1.7953e-04,  2.5393e-03,  1.8702e-04                                  
+32:59:21 DEBUG    01.118 TB              kinetic_temp_neutral:  7.8146e+00,  7.6328e+00,  4.9300e+00,  9.7880e+01,  8.2085e+00                                  
+32:59:21 DEBUG    01.118 TB                           J_21_LW:  1.0946e-01,  1.0759e-01,  4.4344e-02,  1.7374e+01,  1.1316e-01                                  
+32:59:21 DEBUG    01.118 TB                              Q_HI: 0.9960590408980567                                                                               
+32:59:21 DEBUG    01.118 TB                                                                                                                                     
+33:00:02 DEBUG    01.118 TB                                                                                                                                     
+33:00:02 DEBUG    01.118 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+33:00:02 DEBUG    01.118 TB                  neutral_fraction:  9.9969e-01,  9.9869e-01,  0.0000e+00,  9.9981e-01,  9.9597e-01                                  
+33:00:02 DEBUG    01.118 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.1587e+00,  1.2382e-08                                  
+33:00:02 DEBUG    01.118 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9891e+01, -1.0000e+00                                  
+33:00:02 DEBUG    01.118 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  4.3430e-01,  4.7684e-09                                  
+33:00:02 DEBUG    01.118 TB            nion_unconditional_acg: 0.004483240452211649                                                                             
+33:00:02 DEBUG    01.118 TB            nion_unconditional_mcg: 1.6723278964101172e-07                                                                           
+33:00:02 DEBUG    01.118 TB               log10_mturn_ave_acg: 7.5353654382333275                                                                               
+33:00:02 DEBUG    01.118 TB               log10_mturn_ave_mcg: 6.226736500241812                                                                                
+33:00:02 DEBUG    01.118 TB                                                                                                                                     
+33:00:47 DEBUG    01.118 TB                                                                                                                                     
+33:00:47 DEBUG    01.118 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+33:00:47 DEBUG    01.118 TB                           density: -8.4068e-02, -1.2203e-01, -5.5871e-01,  1.7331e+00, -2.0833e-11                                  
+33:00:47 DEBUG    01.118 TB                        velocity_z: -3.5455e-19, -6.3553e-18, -3.2343e-16,  3.0778e-16, -2.2700e-28                                  
+33:00:47 DEBUG    01.118 TB                        velocity_x:  9.8535e-17,  1.0588e-16, -3.1561e-16,  3.0869e-16,  1.3158e-25                                  
+33:00:47 DEBUG    01.118 TB                        velocity_y: -1.6503e-18,  1.9462e-18, -3.0700e-16,  3.2107e-16, -9.1234e-27                                  
+33:00:47 DEBUG    01.118 TB                                                                                                                                     
+33:02:07 INFO     01.105 TB coeval 8/11: z=19.079908                                                                                                            
+33:02:07 INFO     01.105 TB coeval 8/11 done in 14347.64s (average CPU cores: 6.90; peak RSS: 01.216 TB)                                                        
+33:02:15 DEBUG    00.786 TB gc.collect() after coeval 8/11 collected 0 objects                                                                                  
+33:02:16 DEBUG    00.700 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+33:02:46 DEBUG    00.712 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+33:03:15 DEBUG    00.725 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+33:03:45 DEBUG    00.737 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+33:04:15 DEBUG    00.749 TB Reading array of shape (5723,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+33:04:15 DEBUG    00.749 TB Reading array of shape (5723,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+33:04:15 DEBUG    00.749 TB Reading array of shape (5723,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+33:04:15 DEBUG    00.749 TB Reading array of shape (5723,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+33:04:15 DEBUG    00.749 TB Reading array of shape (5723, 3) and dtype float32 from disk                                                                        
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+33:04:15 DEBUG    00.749 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+33:04:38 DEBUG    00.761 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+33:05:00 DEBUG    00.774 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+33:05:23 DEBUG    00.786 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+33:05:51 DEBUG    00.798 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+33:06:15 DEBUG    00.811 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+33:06:44 DEBUG    00.823 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+33:07:15 DEBUG    00.835 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+33:07:48 DEBUG    00.847 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                            
+33:08:18 DEBUG    00.860 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))                      
+33:08:34 DEBUG    00.872 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                                  
+33:08:50 DEBUG    00.884 TB Calling ComputeEmissivityFields with following args:                                                                                
+33:08:50 DEBUG    00.884 TB     18.686184730192352                                                                                                              
+33:10:31 DEBUG    00.884 TB                                                                                                                                     
+33:10:31 DEBUG    00.884 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+33:10:31 DEBUG    00.884 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+33:10:31 DEBUG    00.884 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+33:10:31 DEBUG    00.884 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+33:10:31 DEBUG    00.884 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+33:10:31 DEBUG    00.884 TB                     hires_density:  uninitialized                                                                                   
+33:10:31 DEBUG    00.884 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+33:10:31 DEBUG    00.884 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+33:10:31 DEBUG    00.884 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+33:10:31 DEBUG    00.884 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+33:10:31 DEBUG    00.884 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+33:10:31 DEBUG    00.884 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+33:10:31 DEBUG    00.884 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+33:10:31 DEBUG    00.884 TB                                                                                                                                     
+33:11:20 DEBUG    00.884 TB                                                                                                                                     
+33:11:20 DEBUG    00.884 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+33:11:20 DEBUG    00.884 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+33:11:20 DEBUG    00.884 TB                        velocity_z: -3.6727e-19, -6.3354e-18, -3.2011e-16,  3.0479e-16,  3.4452e-28                                  
+33:11:20 DEBUG    00.884 TB                        velocity_x:  9.7622e-17,  1.0485e-16, -3.1145e-16,  3.0500e-16, -2.6316e-25                                  
+33:11:20 DEBUG    00.884 TB                        velocity_y: -1.6033e-18,  2.0126e-18, -3.0426e-16,  3.1770e-16,  2.5057e-27                                  
+33:11:20 DEBUG    00.884 TB                                                                                                                                     
+33:11:20 DEBUG    00.884 TB                                                                                                                                     
+33:11:20 DEBUG    00.884 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+33:11:20 DEBUG    00.884 TB                       halo_masses:  8.2346e+09,  5.1486e+09,  5.0120e+09,  3.8333e+10,  6.3874e+09                                  
+33:11:20 DEBUG    00.884 TB                          star_rng: -1.9593e-01, -3.4056e-01, -3.6383e+00,  3.6202e+00,  3.4253e-02                                  
+33:11:20 DEBUG    00.884 TB                           sfr_rng:  1.0654e+00,  1.9067e-01, -4.0806e+00,  3.6549e+00,  1.9366e-02                                  
+33:11:20 DEBUG    00.884 TB                          xray_rng:  3.9508e-01,  1.3246e+00, -3.5155e+00,  3.5649e+00,  1.3950e-02                                  
+33:11:20 DEBUG    00.884 TB                       halo_coords:  4.5700e-02,  1.5244e+02,  4.5700e-02,  2.2500e+03,  1.1256e+03                                  
+33:11:20 DEBUG    00.884 TB                           n_halos: 5723                                                                                             
+33:11:20 DEBUG    00.884 TB                       buffer_size: 5723                                                                                             
+33:11:20 DEBUG    00.884 TB                                                                                                                                     
+33:11:31 DEBUG    00.884 TB                                                                                                                                     
+33:11:31 DEBUG    00.884 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+33:11:31 DEBUG    00.884 TB                  spin_temperature:  uninitialized                                                                                   
+33:11:31 DEBUG    00.884 TB             xray_ionised_fraction:  uninitialized                                                                                   
+33:11:31 DEBUG    00.884 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+33:11:31 DEBUG    00.884 TB                           J_21_LW:  1.0946e-01,  1.0759e-01,  4.4344e-02,  1.7374e+01,  1.1316e-01                                  
+33:11:31 DEBUG    00.884 TB                              Q_HI: 0.9960590408980567                                                                               
+33:11:31 DEBUG    00.884 TB                                                                                                                                     
+33:11:53 DEBUG    00.884 TB                                                                                                                                     
+33:11:53 DEBUG    00.884 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+33:11:53 DEBUG    00.884 TB                  neutral_fraction:  uninitialized                                                                                   
+33:11:53 DEBUG    00.884 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.1587e+00,  1.2382e-08                                  
+33:11:53 DEBUG    00.884 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9891e+01, -1.0000e+00                                  
+33:11:53 DEBUG    00.884 TB         cumulative_recombinations:  uninitialized                                                                                   
+33:11:53 DEBUG    00.884 TB            nion_unconditional_acg: 0.004483240452211649                                                                             
+33:11:53 DEBUG    00.884 TB            nion_unconditional_mcg: 1.6723278964101172e-07                                                                           
+33:11:53 DEBUG    00.884 TB               log10_mturn_ave_acg: 7.5353654382333275                                                                               
+33:11:53 DEBUG    00.884 TB               log10_mturn_ave_mcg: 6.226736500241812                                                                                
+33:11:53 DEBUG    00.884 TB                                                                                                                                     
+33:15:42 DEBUG    00.946 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/xray_ionised_fraction'))                              
+33:16:17 DEBUG    00.958 TB Calling SetupRadiationFields with following args:                                                                                   
+33:16:17 DEBUG    00.958 TB     18.686184730192352                                                                                                              
+33:16:44 DEBUG    00.958 TB                                                                                                                                     
+33:16:44 DEBUG    00.958 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+33:16:44 DEBUG    00.958 TB                  spin_temperature:  uninitialized                                                                                   
+33:16:44 DEBUG    00.958 TB             xray_ionised_fraction:  1.8726e-04,  1.8777e-04,  1.7953e-04,  2.5393e-03,  1.8702e-04                                  
+33:16:44 DEBUG    00.958 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+33:16:44 DEBUG    00.958 TB                           J_21_LW:  1.0946e-01,  1.0759e-01,  4.4344e-02,  1.7374e+01,  1.1316e-01                                  
+33:16:44 DEBUG    00.958 TB                              Q_HI: 0.9960590408980567                                                                               
+33:16:44 DEBUG    00.958 TB                                                                                                                                     
+33:19:50 DEBUG    00.995 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:24:15 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:28:18 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:32:31 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:36:27 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:40:14 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:44:27 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:48:23 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:52:10 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:56:02 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+33:59:35 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:03:13 DEBUG    01.142 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:04:15 DEBUG    01.105 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+34:05:49 DEBUG    01.130 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+34:07:24 DEBUG    01.154 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+34:08:50 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:13:04 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:17:13 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:21:23 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:25:31 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:29:39 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:33:33 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:37:25 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:41:19 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:45:10 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:49:06 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:52:59 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+34:56:50 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:00:51 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:04:44 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:08:46 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:12:40 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:16:27 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:20:25 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:24:15 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:28:04 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:32:02 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:35:50 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:39:46 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:43:39 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:47:27 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:51:20 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:55:09 DEBUG    01.179 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+35:55:58 DEBUG    01.142 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                               
+35:56:31 DEBUG    01.154 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                                   
+35:57:02 DEBUG    01.167 TB Calling ComputeTsBox with following args:                                                                                           
+35:57:02 DEBUG    01.167 TB     18.686184730192352                                                                                                              
+35:57:02 DEBUG    01.167 TB     19.079908424796198                                                                                                              
+35:57:58 DEBUG    01.167 TB                                                                                                                                     
+35:57:58 DEBUG    01.167 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+35:57:58 DEBUG    01.167 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+35:57:58 DEBUG    01.167 TB                        velocity_z: -3.6727e-19, -6.3354e-18, -3.2011e-16,  3.0479e-16,  3.4452e-28                                  
+35:57:58 DEBUG    01.167 TB                        velocity_x:  9.7622e-17,  1.0485e-16, -3.1145e-16,  3.0500e-16, -2.6316e-25                                  
+35:57:58 DEBUG    01.167 TB                        velocity_y: -1.6033e-18,  2.0126e-18, -3.0426e-16,  3.1770e-16,  2.5057e-27                                  
+35:57:58 DEBUG    01.167 TB                                                                                                                                     
+36:00:59 DEBUG    01.167 TB                                                                                                                                     
+36:00:59 DEBUG    01.167 TB               RadiationFields       1st:         End:         Min:         Max:         Mean:                                       
+36:00:59 DEBUG    01.167 TB                 xray_heating_rate:  3.4175e-16,  3.3727e-16,  1.5763e-16,  1.3257e-13,  3.6831e-16                                  
+36:00:59 DEBUG    01.167 TB              xray_ionization_rate:  9.2569e-21,  9.1299e-21,  4.2711e-21,  3.2051e-18,  9.9746e-21                                  
+36:00:59 DEBUG    01.167 TB                     xray_lya_flux:  1.5227e-13,  1.4398e-13,  3.9020e-14,  8.4768e-11,  1.8368e-13                                  
+36:00:59 DEBUG    01.167 TB                          lyw_flux:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+36:00:59 DEBUG    01.167 TB                lya_flux_continuum:  3.0715e-11,  3.0510e-11,  2.2111e-11,  3.1263e-09,  3.0776e-11                                  
+36:00:59 DEBUG    01.167 TB                 lya_flux_injected:  3.0227e-12,  2.9270e-12,  4.8185e-13,  5.3844e-09,  4.1497e-12                                  
+36:00:59 DEBUG    01.167 TB                              Q_HI: 0.9952958643352597                                                                               
+36:00:59 DEBUG    01.167 TB                                                                                                                                     
+36:01:48 DEBUG    01.167 TB                                                                                                                                     
+36:01:48 DEBUG    01.167 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+36:01:48 DEBUG    01.167 TB                  spin_temperature:  2.9752e+01,  2.9519e+01,  1.0506e+01,  8.9461e+01,  3.0169e+01                                  
+36:01:48 DEBUG    01.167 TB             xray_ionised_fraction:  1.8726e-04,  1.8777e-04,  1.7953e-04,  2.5393e-03,  1.8702e-04                                  
+36:01:48 DEBUG    01.167 TB              kinetic_temp_neutral:  7.8146e+00,  7.6328e+00,  4.9300e+00,  9.7880e+01,  8.2085e+00                                  
+36:01:48 DEBUG    01.167 TB                           J_21_LW:  1.0946e-01,  1.0759e-01,  4.4344e-02,  1.7374e+01,  1.1316e-01                                  
+36:01:48 DEBUG    01.167 TB                              Q_HI: 0.9960590408980567                                                                               
+36:01:48 DEBUG    01.167 TB                                                                                                                                     
+36:03:27 DEBUG    01.167 TB                                                                                                                                     
+36:03:27 DEBUG    01.167 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+36:03:27 DEBUG    01.167 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+36:03:27 DEBUG    01.167 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+36:03:27 DEBUG    01.167 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+36:03:27 DEBUG    01.167 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+36:03:27 DEBUG    01.167 TB                     hires_density:  uninitialized                                                                                   
+36:03:27 DEBUG    01.167 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+36:03:27 DEBUG    01.167 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+36:03:27 DEBUG    01.167 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+36:03:27 DEBUG    01.167 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+36:03:27 DEBUG    01.167 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+36:03:27 DEBUG    01.167 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+36:03:27 DEBUG    01.167 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+36:03:27 DEBUG    01.167 TB                                                                                                                                     
+36:07:09 DEBUG    01.068 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+36:07:40 DEBUG    01.081 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0
+                            799/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))                
+36:08:28 DEBUG    01.093 TB Calling ComputeIonizedBox with following args:                                                                                      
+36:08:28 DEBUG    01.093 TB     18.686184730192352                                                                                                              
+36:08:28 DEBUG    01.093 TB     19.079908424796198                                                                                                              
+36:09:29 DEBUG    01.093 TB                                                                                                                                     
+36:09:29 DEBUG    01.093 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+36:09:29 DEBUG    01.093 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+36:09:29 DEBUG    01.093 TB                        velocity_z: -3.6727e-19, -6.3354e-18, -3.2011e-16,  3.0479e-16,  3.4452e-28                                  
+36:09:29 DEBUG    01.093 TB                        velocity_x:  9.7622e-17,  1.0485e-16, -3.1145e-16,  3.0500e-16, -2.6316e-25                                  
+36:09:29 DEBUG    01.093 TB                        velocity_y: -1.6033e-18,  2.0126e-18, -3.0426e-16,  3.1770e-16,  2.5057e-27                                  
+36:09:29 DEBUG    01.093 TB                                                                                                                                     
+36:09:39 DEBUG    01.093 TB                                                                                                                                     
+36:09:39 DEBUG    01.093 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+36:09:39 DEBUG    01.093 TB                           density: -8.4068e-02, -1.2203e-01, -5.5871e-01,  1.7331e+00, -2.0833e-11                                  
+36:09:39 DEBUG    01.093 TB                        velocity_z:  uninitialized                                                                                   
+36:09:39 DEBUG    01.093 TB                        velocity_x:  uninitialized                                                                                   
+36:09:39 DEBUG    01.093 TB                        velocity_y:  uninitialized                                                                                   
+36:09:39 DEBUG    01.093 TB                                                                                                                                     
+36:10:15 DEBUG    01.093 TB                                                                                                                                     
+36:10:15 DEBUG    01.093 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+36:10:15 DEBUG    01.093 TB                  neutral_fraction:  uninitialized                                                                                   
+36:10:15 DEBUG    01.093 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.1587e+00,  1.2382e-08                                  
+36:10:15 DEBUG    01.093 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9891e+01, -1.0000e+00                                  
+36:10:15 DEBUG    01.093 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  4.3430e-01,  4.7684e-09                                  
+36:10:15 DEBUG    01.093 TB            nion_unconditional_acg: 0.004483240452211649                                                                             
+36:10:15 DEBUG    01.093 TB            nion_unconditional_mcg: 1.6723278964101172e-07                                                                           
+36:10:15 DEBUG    01.093 TB               log10_mturn_ave_acg: 7.5353654382333275                                                                               
+36:10:15 DEBUG    01.093 TB               log10_mturn_ave_mcg: 6.226736500241812                                                                                
+36:10:15 DEBUG    01.093 TB                                                                                                                                     
+36:11:00 DEBUG    01.093 TB                                                                                                                                     
+36:11:00 DEBUG    01.093 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+36:11:00 DEBUG    01.093 TB                  spin_temperature:  2.6514e+01,  2.6269e+01,  9.8230e+00,  8.6790e+01,  2.6979e+01                                  
+36:11:00 DEBUG    01.093 TB             xray_ionised_fraction:  1.8830e-04,  1.8880e-04,  1.7984e-04,  2.5519e-03,  1.8815e-04                                  
+36:11:00 DEBUG    01.093 TB              kinetic_temp_neutral:  7.5632e+00,  7.3834e+00,  4.7077e+00,  9.7603e+01,  7.9549e+00                                  
+36:11:00 DEBUG    01.093 TB                           J_21_LW:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+36:11:00 DEBUG    01.093 TB                              Q_HI: 0.9952958643352597                                                                               
+36:11:00 DEBUG    01.093 TB                                                                                                                                     
+36:12:11 DEBUG    01.093 TB                                                                                                                                     
+36:12:11 DEBUG    01.093 TB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+36:12:11 DEBUG    01.093 TB                          sfrd_acg:  5.3933e-15,  9.8412e-14,  3.0853e-20,  1.5354e-08,  1.1840e-12                                  
+36:12:11 DEBUG    01.093 TB                          sfrd_mcg:  6.1061e-14,  5.1248e-13,  1.1875e-17,  2.1561e-10,  2.0498e-12                                  
+36:12:11 DEBUG    01.093 TB                   xray_emissivity:  1.0780e-03,  9.7934e-03,  1.9883e-07,  5.0658e+02,  5.0592e-02                                  
+36:12:11 DEBUG    01.093 TB                             n_ion:  1.4260e-04,  1.2160e-03,  2.7654e-08,  9.8647e+00,  5.3522e-03                                  
+36:12:11 DEBUG    01.093 TB                fesc_weighted_sfrd:  5.7740e-10,  4.9237e-09,  1.1197e-13,  3.9942e-05,  2.1671e-08                                  
+36:12:11 DEBUG    01.093 TB               log10_mturn_acg_ave: 7.548276424430153                                                                                
+36:12:11 DEBUG    01.093 TB               log10_mturn_mcg_ave: 6.25675615422487                                                                                 
+36:12:11 DEBUG    01.093 TB                                                                                                                                     
+36:13:52 DEBUG    01.093 TB                                                                                                                                     
+36:13:52 DEBUG    01.093 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+36:13:52 DEBUG    01.093 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+36:13:52 DEBUG    01.093 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+36:13:52 DEBUG    01.093 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+36:13:52 DEBUG    01.093 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+36:13:52 DEBUG    01.093 TB                     hires_density:  uninitialized                                                                                   
+36:13:52 DEBUG    01.093 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+36:13:52 DEBUG    01.093 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+36:13:52 DEBUG    01.093 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+36:13:52 DEBUG    01.093 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+36:13:52 DEBUG    01.093 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+36:13:52 DEBUG    01.093 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+36:13:52 DEBUG    01.093 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+36:13:52 DEBUG    01.093 TB                                                                                                                                     
+36:52:40 DEBUG    01.130 TB Calling ComputeBrightnessTemp with following args:                                                                                  
+36:52:40 DEBUG    01.130 TB     18.686184730192352                                                                                                              
+36:53:31 DEBUG    01.130 TB                                                                                                                                     
+36:53:31 DEBUG    01.130 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+36:53:31 DEBUG    01.130 TB                  spin_temperature:  2.6514e+01,  2.6269e+01,  9.8230e+00,  8.6790e+01,  2.6979e+01                                  
+36:53:31 DEBUG    01.130 TB             xray_ionised_fraction:  1.8830e-04,  1.8880e-04,  1.7984e-04,  2.5519e-03,  1.8815e-04                                  
+36:53:31 DEBUG    01.130 TB              kinetic_temp_neutral:  7.5632e+00,  7.3834e+00,  4.7077e+00,  9.7603e+01,  7.9549e+00                                  
+36:53:31 DEBUG    01.130 TB                           J_21_LW:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+36:53:31 DEBUG    01.130 TB                              Q_HI: 0.9952958643352597                                                                               
+36:53:31 DEBUG    01.130 TB                                                                                                                                     
+36:54:11 DEBUG    01.130 TB                                                                                                                                     
+36:54:11 DEBUG    01.130 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+36:54:11 DEBUG    01.130 TB                  neutral_fraction:  9.9966e-01,  9.9842e-01,  0.0000e+00,  9.9981e-01,  9.9523e-01                                  
+36:54:11 DEBUG    01.130 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.6675e+00,  3.4330e-08                                  
+36:54:11 DEBUG    01.130 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9482e+01, -1.0000e+00                                  
+36:54:11 DEBUG    01.130 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  5.6906e-01,  1.0349e-08                                  
+36:54:11 DEBUG    01.130 TB            nion_unconditional_acg: 0.005352224729191761                                                                             
+36:54:11 DEBUG    01.130 TB            nion_unconditional_mcg: 1.5456627040328002e-07                                                                           
+36:54:11 DEBUG    01.130 TB               log10_mturn_ave_acg: 7.548276424430153                                                                                
+36:54:11 DEBUG    01.130 TB               log10_mturn_ave_mcg: 6.25675615422487                                                                                 
+36:54:11 DEBUG    01.130 TB                                                                                                                                     
+36:54:57 DEBUG    01.130 TB                                                                                                                                     
+36:54:57 DEBUG    01.130 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+36:54:57 DEBUG    01.130 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+36:54:57 DEBUG    01.130 TB                        velocity_z: -3.6727e-19, -6.3354e-18, -3.2011e-16,  3.0479e-16,  3.4452e-28                                  
+36:54:57 DEBUG    01.130 TB                        velocity_x:  9.7622e-17,  1.0485e-16, -3.1145e-16,  3.0500e-16, -2.6316e-25                                  
+36:54:57 DEBUG    01.130 TB                        velocity_y: -1.6033e-18,  2.0126e-18, -3.0426e-16,  3.1770e-16,  2.5057e-27                                  
+36:54:57 DEBUG    01.130 TB                                                                                                                                     
+36:55:44 INFO     01.118 TB coeval 9/11: z=18.686185                                                                                                            
+36:55:44 INFO     01.118 TB coeval 9/11 done in 14017.55s (average CPU cores: 7.03; peak RSS: 01.228 TB)                                                        
+36:55:51 DEBUG    00.798 TB gc.collect() after coeval 9/11 collected 0 objects                                                                                  
+36:55:52 DEBUG    00.712 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+36:56:25 DEBUG    00.725 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+36:57:06 DEBUG    00.737 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+36:57:46 DEBUG    00.749 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+36:58:27 DEBUG    00.761 TB Reading array of shape (10001,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+36:58:27 DEBUG    00.761 TB Reading array of shape (10001,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+36:58:27 DEBUG    00.761 TB Reading array of shape (10001,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+36:58:27 DEBUG    00.761 TB Reading array of shape (10001,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+36:58:27 DEBUG    00.761 TB Reading array of shape (10001, 3) and dtype float32 from disk                                                                       
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+36:58:27 DEBUG    00.761 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+36:58:47 DEBUG    00.774 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+36:59:10 DEBUG    00.786 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+36:59:33 DEBUG    00.798 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+36:59:55 DEBUG    00.811 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+37:00:20 DEBUG    00.823 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+37:00:49 DEBUG    00.835 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+37:01:20 DEBUG    00.847 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+37:01:52 DEBUG    00.860 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                            
+37:02:04 DEBUG    00.872 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))                      
+37:02:16 DEBUG    00.884 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                                  
+37:02:29 DEBUG    00.896 TB Calling ComputeEmissivityFields with following args:                                                                                
+37:02:29 DEBUG    00.896 TB     18.30018110803172                                                                                                               
+37:04:02 DEBUG    00.896 TB                                                                                                                                     
+37:04:02 DEBUG    00.896 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+37:04:02 DEBUG    00.896 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+37:04:02 DEBUG    00.896 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+37:04:02 DEBUG    00.896 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+37:04:02 DEBUG    00.896 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+37:04:02 DEBUG    00.896 TB                     hires_density:  uninitialized                                                                                   
+37:04:02 DEBUG    00.896 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+37:04:02 DEBUG    00.896 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+37:04:02 DEBUG    00.896 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+37:04:02 DEBUG    00.896 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+37:04:02 DEBUG    00.896 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+37:04:02 DEBUG    00.896 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+37:04:02 DEBUG    00.896 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+37:04:02 DEBUG    00.896 TB                                                                                                                                     
+37:04:50 DEBUG    00.896 TB                                                                                                                                     
+37:04:50 DEBUG    00.896 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+37:04:50 DEBUG    00.896 TB                           density: -8.6380e-02, -1.2482e-01, -5.7767e-01,  1.8830e+00, -2.3148e-11                                  
+37:04:50 DEBUG    00.896 TB                        velocity_z: -3.5541e-19, -6.2972e-18, -3.1685e-16,  3.0151e-16,  5.1336e-28                                  
+37:04:50 DEBUG    00.896 TB                        velocity_x:  9.6723e-17,  1.0382e-16, -3.0732e-16,  3.0191e-16, -1.6448e-25                                  
+37:04:50 DEBUG    00.896 TB                        velocity_y: -1.5522e-18,  2.1377e-18, -3.0146e-16,  3.1450e-16,  7.9026e-27                                  
+37:04:50 DEBUG    00.896 TB                                                                                                                                     
+37:04:50 DEBUG    00.896 TB                                                                                                                                     
+37:04:50 DEBUG    00.896 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+37:04:50 DEBUG    00.896 TB                       halo_masses:  8.3286e+09,  6.6636e+09,  5.0121e+09,  3.9099e+10,  6.4338e+09                                  
+37:04:50 DEBUG    00.896 TB                          star_rng: -4.7136e-01, -3.7567e-01, -3.3938e+00,  3.5441e+00,  1.0582e-02                                  
+37:04:50 DEBUG    00.896 TB                           sfr_rng:  5.6952e-01,  6.3850e-01, -4.4253e+00,  3.6033e+00,  1.9884e-02                                  
+37:04:50 DEBUG    00.896 TB                          xray_rng: -2.9916e-01,  3.8239e-01, -3.7603e+00,  3.5828e+00, -3.4817e-03                                  
+37:04:50 DEBUG    00.896 TB                       halo_coords:  4.5742e-02,  1.6330e+03,  4.5742e-02,  2.2500e+03,  1.1263e+03                                  
+37:04:50 DEBUG    00.896 TB                           n_halos: 10001                                                                                            
+37:04:50 DEBUG    00.896 TB                       buffer_size: 10001                                                                                            
+37:04:50 DEBUG    00.896 TB                                                                                                                                     
+37:05:01 DEBUG    00.896 TB                                                                                                                                     
+37:05:01 DEBUG    00.896 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+37:05:01 DEBUG    00.896 TB                  spin_temperature:  uninitialized                                                                                   
+37:05:01 DEBUG    00.896 TB             xray_ionised_fraction:  uninitialized                                                                                   
+37:05:01 DEBUG    00.896 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+37:05:01 DEBUG    00.896 TB                           J_21_LW:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+37:05:01 DEBUG    00.896 TB                              Q_HI: 0.9952958643352597                                                                               
+37:05:01 DEBUG    00.896 TB                                                                                                                                     
+37:05:23 DEBUG    00.896 TB                                                                                                                                     
+37:05:23 DEBUG    00.896 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+37:05:23 DEBUG    00.896 TB                  neutral_fraction:  uninitialized                                                                                   
+37:05:23 DEBUG    00.896 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.6675e+00,  3.4330e-08                                  
+37:05:23 DEBUG    00.896 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9482e+01, -1.0000e+00                                  
+37:05:23 DEBUG    00.896 TB         cumulative_recombinations:  uninitialized                                                                                   
+37:05:23 DEBUG    00.896 TB            nion_unconditional_acg: 0.005352224729191761                                                                             
+37:05:23 DEBUG    00.896 TB            nion_unconditional_mcg: 1.5456627040328002e-07                                                                           
+37:05:23 DEBUG    00.896 TB               log10_mturn_ave_acg: 7.548276424430153                                                                                
+37:05:23 DEBUG    00.896 TB               log10_mturn_ave_mcg: 6.25675615422487                                                                                 
+37:05:23 DEBUG    00.896 TB                                                                                                                                     
+37:10:00 DEBUG    00.958 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/xray_ionised_fraction'))                              
+37:10:33 DEBUG    00.970 TB Calling SetupRadiationFields with following args:                                                                                   
+37:10:33 DEBUG    00.970 TB     18.30018110803172                                                                                                               
+37:11:05 DEBUG    00.970 TB                                                                                                                                     
+37:11:05 DEBUG    00.970 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+37:11:05 DEBUG    00.970 TB                  spin_temperature:  uninitialized                                                                                   
+37:11:05 DEBUG    00.970 TB             xray_ionised_fraction:  1.8830e-04,  1.8880e-04,  1.7984e-04,  2.5519e-03,  1.8815e-04                                  
+37:11:05 DEBUG    00.970 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+37:11:05 DEBUG    00.970 TB                           J_21_LW:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+37:11:05 DEBUG    00.970 TB                              Q_HI: 0.9952958643352597                                                                               
+37:11:05 DEBUG    00.970 TB                                                                                                                                     
+37:14:14 DEBUG    01.007 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:18:54 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:22:57 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:26:33 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:30:09 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
