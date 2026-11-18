@@ -285,3 +285,19 @@
                             /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/cumulative_recombinations.h5                                   
 02:50:06 INFO     37.087 GB Completed cumulative_recombinations (patch) in 10206.8s -> {'patch':                                                                
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/cumulative_recombinations.h5')}                     
+
+==== PBS output of job 184500038 (lc_cumulative_r.o184500038, lc_cumulative_r.e184500038), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 22:29:20:
+   Job Id:             184500038.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      272.69
+   NCPUs Requested:    48                  CPU Time Used: 51:56:08        
+   Memory Requested:   190.0GB               Memory Used: 160.64GB        
+   Walltime Requested: 08:00:00            Walltime Used: 02:50:26        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

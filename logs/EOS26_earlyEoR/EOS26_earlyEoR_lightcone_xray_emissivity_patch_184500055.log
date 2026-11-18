@@ -284,3 +284,19 @@
 03:19:41 INFO     36.908 GB xray_emissivity: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/xray_emissivity.h5         
 03:19:41 INFO     36.909 GB Completed xray_emissivity (patch) in 11981.1s -> {'patch':                                                                          
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/xray_emissivity.h5')}                               
+
+==== PBS output of job 184500055 (lc_xray_emissiv.o184500055, lc_xray_emissiv.e184500055), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 22:58:54:
+   Job Id:             184500055.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      319.97
+   NCPUs Requested:    48                  CPU Time Used: 51:57:18        
+   Memory Requested:   190.0GB               Memory Used: 160.77GB        
+   Walltime Requested: 08:00:00            Walltime Used: 03:19:59        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

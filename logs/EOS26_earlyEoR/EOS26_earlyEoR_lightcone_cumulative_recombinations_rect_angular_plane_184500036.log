@@ -284,3 +284,19 @@
 01:23:47 INFO     25.324 GB Completed cumulative_recombinations (rect angular_plane) in 5027.4s -> {'rect':                                                     
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/rect/cumulative_recombinations.h5'), 'angular_plane':               
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/angular_plane/cumulative_recombinations.h5')}                       
+
+==== PBS output of job 184500036 (lc_cumulative_r.o184500036, lc_cumulative_r.e184500036), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 21:02:59:
+   Job Id:             184500036.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      33.61
+   NCPUs Requested:    12                  CPU Time Used: 00:41:58        
+   Memory Requested:   48.0GB                Memory Used: 48.0GB          
+   Walltime Requested: 04:00:00            Walltime Used: 01:24:02        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

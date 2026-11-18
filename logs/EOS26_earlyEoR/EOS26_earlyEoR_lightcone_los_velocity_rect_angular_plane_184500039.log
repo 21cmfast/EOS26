@@ -836,3 +836,19 @@
 03:11:10 INFO     75.897 GB Completed los_velocity (rect angular_plane) in 11470.5s -> {'rect':                                                                 
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/rect/los_velocity.h5'), 'angular_plane':                            
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/angular_plane/los_velocity.h5')}                                    
+
+==== PBS output of job 184500039 (lc_los_velocity.o184500039, lc_los_velocity.e184500039), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 22:50:24:
+   Job Id:             184500039.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      178.69
+   NCPUs Requested:    28                  CPU Time Used: 01:12:48        
+   Memory Requested:   110.0GB               Memory Used: 110.0GB         
+   Walltime Requested: 08:00:00            Walltime Used: 03:11:27        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -284,3 +284,19 @@
 03:14:11 INFO     37.206 GB sfrd_mcg: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/sfrd_mcg.h5                       
 03:14:11 INFO     37.208 GB Completed sfrd_mcg (patch) in 11651.1s -> {'patch':                                                                                 
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/sfrd_mcg.h5')}                                      
+
+==== PBS output of job 184500048 (lc_sfrd_mcg.o184500048, lc_sfrd_mcg.e184500048), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 22:53:23:
+   Job Id:             184500048.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      311.15
+   NCPUs Requested:    48                  CPU Time Used: 52:26:53        
+   Memory Requested:   190.0GB               Memory Used: 160.05GB        
+   Walltime Requested: 08:00:00            Walltime Used: 03:14:28        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

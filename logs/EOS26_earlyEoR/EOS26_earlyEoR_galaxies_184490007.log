@@ -4866,3 +4866,24 @@
 06:39:18 DEBUG    00.157 TB                           J_21_LW:  1.5724e+01,  1.5553e+01,  9.2321e+00,  5.6327e+02,  1.5555e+01                                  
 06:39:18 DEBUG    00.157 TB                              Q_HI: -2.672312540171449                                                                               
 06:39:18 DEBUG    00.157 TB                                                                                                                                     
+06:39:42 DEBUG    00.157 TB                                                                                                                                     
+06:39:42 DEBUG    00.157 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+06:39:42 DEBUG    00.157 TB                  neutral_fraction:  uninitialized                                                                                   
+06:39:42 DEBUG    00.157 TB               ionisation_rate_G12:  1.9545e-01,  5.6492e-01,  0.0000e+00,  1.7301e+00,  5.5807e-01                                  
+06:39:42 DEBUG    00.157 TB                           z_reion:  8.6506e+00,  7.0752e+00, -1.0000e+00,  2.1170e+01,  8.1308e+00                                  
+06:39:42 DEBUG    00.157 TB         cumulative_recombinations:  uninitialized                                                                                   
+06:39:42 DEBUG    00.157 TB            nion_unconditional_acg: 2.94433082510316                                                                                 
+06:39:42 DEBUG    00.157 TB            nion_unconditional_mcg: 0.0                                                                                              
+06:39:42 DEBUG    00.157 TB               log10_mturn_ave_acg: 8.89861658793148                                                                                 
+06:39:42 DEBUG    00.157 TB               log10_mturn_ave_mcg: 8.84676798415391                                                                                 
+06:39:42 DEBUG    00.157 TB                                                                                                                                     
+06:40:15 DEBUG    00.157 TB                                                                                                                                     
+06:40:15 DEBUG    00.157 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+06:40:15 DEBUG    00.157 TB                       halo_masses:  4.3138e+10,  5.9362e+09,  5.0119e+09,  1.8419e+13,  1.5928e+10                                  
+06:40:15 DEBUG    00.157 TB                          star_rng: -1.1701e+00, -2.8560e-01, -5.9878e+00,  6.0699e+00,  7.0333e-06                                  
+06:40:15 DEBUG    00.157 TB                           sfr_rng: -4.4425e-01,  4.2263e-01, -6.1623e+00,  5.8631e+00, -1.8824e-05                                  
+06:40:15 DEBUG    00.157 TB                          xray_rng: -2.3622e-01,  6.0252e-01, -5.8232e+00,  5.9544e+00, -4.2687e-05                                  
+06:40:15 DEBUG    00.157 TB                       halo_coords:  4.2552e-01,  2.2409e+03,  8.3945e-08,  2.2500e+03,  1.1248e+03                                  
+06:40:15 DEBUG    00.157 TB                           n_halos: 1354365278                                                                                       
+06:40:15 DEBUG    00.157 TB                       buffer_size: 1354365278                                                                                       
+06:40:15 DEBUG    00.157 TB                                                                                                                                     

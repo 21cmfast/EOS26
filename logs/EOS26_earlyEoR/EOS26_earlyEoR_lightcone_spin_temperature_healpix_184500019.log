@@ -284,3 +284,19 @@
 03:27:17 INFO     33.863 GB spin_temperature: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/spin_temperature.h5     
 03:27:17 INFO     33.864 GB Completed spin_temperature (healpix) in 12437.7s -> {'healpix':                                                                     
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/spin_temperature.h5')}                            
+
+==== PBS output of job 184500019 (lc_spin_tempera.o184500019, lc_spin_tempera.e184500019), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 23:06:29:
+   Job Id:             184500019.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      332.19
+   NCPUs Requested:    48                  CPU Time Used: 127:05:07       
+   Memory Requested:   190.0GB               Memory Used: 142.8GB         
+   Walltime Requested: 12:00:00            Walltime Used: 03:27:37        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

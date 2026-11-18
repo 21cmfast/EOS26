@@ -284,3 +284,19 @@
 03:40:01 INFO     33.986 GB density: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/density.h5                       
 03:40:01 INFO     33.987 GB Completed density (healpix) in 13201.7s -> {'healpix':                                                                              
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/density.h5')}                                     
+
+==== PBS output of job 184500012 (lc_density.o184500012, lc_density.e184500012), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 23:19:13:
+   Job Id:             184500012.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      352.59
+   NCPUs Requested:    48                  CPU Time Used: 126:37:51       
+   Memory Requested:   190.0GB               Memory Used: 151.46GB        
+   Walltime Requested: 12:00:00            Walltime Used: 03:40:22        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

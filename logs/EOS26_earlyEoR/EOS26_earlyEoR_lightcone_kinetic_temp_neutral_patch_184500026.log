@@ -285,3 +285,19 @@
                             /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/kinetic_temp_neutral.h5                                        
 03:12:19 INFO     36.986 GB Completed kinetic_temp_neutral (patch) in 11539.9s -> {'patch':                                                                     
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/kinetic_temp_neutral.h5')}                          
+
+==== PBS output of job 184500026 (lc_kinetic_temp.o184500026, lc_kinetic_temp.e184500026), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 22:51:32:
+   Job Id:             184500026.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      308.24
+   NCPUs Requested:    48                  CPU Time Used: 51:55:02        
+   Memory Requested:   190.0GB               Memory Used: 155.6GB         
+   Walltime Requested: 08:00:00            Walltime Used: 03:12:39        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

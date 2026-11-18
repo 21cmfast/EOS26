@@ -284,3 +284,19 @@
 03:22:11 INFO     36.841 GB ionisation_rate_G12: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/ionisation_rate_G12.h5 
 03:22:12 INFO     36.842 GB Completed ionisation_rate_G12 (patch) in 12132.0s -> {'patch':                                                                      
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/ionisation_rate_G12.h5')}                           
+
+==== PBS output of job 184500045 (lc_ionisation_r.o184500045, lc_ionisation_r.e184500045), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 23:01:24:
+   Job Id:             184500045.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      324.00
+   NCPUs Requested:    48                  CPU Time Used: 51:07:17        
+   Memory Requested:   190.0GB               Memory Used: 153.09GB        
+   Walltime Requested: 08:00:00            Walltime Used: 03:22:30        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

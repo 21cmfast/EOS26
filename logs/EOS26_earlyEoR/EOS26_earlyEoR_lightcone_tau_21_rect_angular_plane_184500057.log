@@ -284,3 +284,19 @@
 01:17:49 INFO     25.782 GB Completed tau_21 (rect angular_plane) in 4669.1s -> {'rect':                                                                        
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/rect/tau_21.h5'), 'angular_plane':                                  
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/angular_plane/tau_21.h5')}                                          
+
+==== PBS output of job 184500057 (lc_tau_21.o184500057, lc_tau_21.e184500057), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 20:57:03:
+   Job Id:             184500057.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      31.23
+   NCPUs Requested:    12                  CPU Time Used: 00:35:32        
+   Memory Requested:   48.0GB                Memory Used: 48.0GB          
+   Walltime Requested: 04:00:00            Walltime Used: 01:18:04        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

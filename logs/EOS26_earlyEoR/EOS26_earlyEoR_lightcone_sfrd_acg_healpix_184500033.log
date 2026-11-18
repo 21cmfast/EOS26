@@ -284,3 +284,19 @@
 03:32:23 INFO     34.083 GB sfrd_acg: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/sfrd_acg.h5                     
 03:32:23 INFO     34.084 GB Completed sfrd_acg (healpix) in 12743.4s -> {'healpix':                                                                             
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/healpix_nside1024/sfrd_acg.h5')}                                    
+
+==== PBS output of job 184500033 (lc_sfrd_acg.o184500033, lc_sfrd_acg.e184500033), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 23:11:35:
+   Job Id:             184500033.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      340.32
+   NCPUs Requested:    48                  CPU Time Used: 126:06:37       
+   Memory Requested:   190.0GB               Memory Used: 154.58GB        
+   Walltime Requested: 12:00:00            Walltime Used: 03:32:42        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
