@@ -26,6 +26,17 @@
 #   V43_VERSION  PyPI release to install (default: the pin below; "latest" = the
 #                newest 4.3.x patch release, recorded in the freeze file)
 #   V43_VENV     venv to create            (default: .venv-v4.3 / EOS26-v4.3-intel)
+#   V43_UNPIN    extended regex of packages to leave out of the v4.2 constraints
+#                (e.g. 'cosmotile|powerbox|21cmsense|tuesday-eor' for the v4.3_post venv)
+#   V43_EXTRA    one more requirement to install (e.g. tuesday from git, see below)
+#   V43_USE_LABEL  label printed in the final 'source envs/use.sh' hint
+#
+# The lightcone venv (v4.3_post: 21cmFAST 4.3.2 + tuesday + cosmotile 0.3, used by
+# postprocess/lightcone/; production coevals stay on v4.3):
+#   V43_VERSION=4.3.2 V43_VENV=/scratch/qp00/$USER/venvs/EOS26-v4.3_post-intel V43_USE_LABEL=v4.3_post \
+#   V43_UNPIN='cosmotile|powerbox|21cmsense|tuesday-eor' \
+#   V43_EXTRA='tuesday-eor @ git+https://github.com/21cmfast/tuesday@main' \
+#   bash envs/create_venv_v4.3.sh gadi
 # Source build instead of PyPI (e.g. to test an unreleased fix):
 #   V43_GIT_REF  tag, branch or commit of the 21cmFAST git repo to build
 #                (e.g. v4.3.0 or main); setting it switches to a source build
@@ -156,8 +167,10 @@ fi
 
 echo "== 2. constraints = third-party packages of the v4.2 venv"
 CONSTRAINTS="$EOS26_ROOT/envs/constraints-from-v4.2-${TARGET}.txt"
+# with V43_UNPIN, a file of its own, so the v4.3 constraints file stays as it is
+[[ -z "${V43_UNPIN:-}" ]] || CONSTRAINTS="${CONSTRAINTS%.txt}-$(basename "$V43_VENV" | sed 's/^\.//').txt"
 uv pip freeze --python "$V42_VENV/bin/python" \
-  | grep -v -i -E '^(21cmfast|eos26)([ =@]|$)|^-e ' > "$CONSTRAINTS"
+  | grep -v -i -E "^(21cmfast|eos26${V43_UNPIN:+|$V43_UNPIN})([ =@]|\$)|^-e " > "$CONSTRAINTS"
 echo "   $(wc -l < "$CONSTRAINTS") pins -> $CONSTRAINTS"
 
 echo "== 3. venv $V43_VENV"
@@ -173,7 +186,7 @@ echo "   base interpreter: $BASE_PY ($("$BASE_PY" -V 2>&1))"
 # shellcheck disable=SC2086  # EXTRA_PKGS is a word list
 run uv pip install --python "$V43_VENV/bin/python" \
   --refresh-package 21cmfast --reinstall-package 21cmfast \
-  -c "$CONSTRAINTS" "${V43_INSTALL[@]}" $EXTRA_PKGS
+  -c "$CONSTRAINTS" "${V43_INSTALL[@]}" $EXTRA_PKGS ${V43_EXTRA:+"$V43_EXTRA"}
 
 echo "== 4. check"
 INSTALLED=$("$V43_VENV/bin/python" -W ignore -c "import py21cmfast as p; print(p.__version__)" | tail -n 1)

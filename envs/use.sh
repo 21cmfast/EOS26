@@ -4,8 +4,9 @@
 #   source envs/use.sh v4.2
 #   source envs/use.sh v4.3
 #   source envs/use.sh v4.3_patch   # 4.3.0 + envs/patches/v4.3.0_sfr_allzero.patch
+#   source envs/use.sh v4.3_post    # 21cmFAST >= 4.3.2 + tuesday: the lightcone jobs (postprocess/lightcone)
 #
-# Mac: .venv (v4.2, the uv project env), .venv-v4.3 and .venv-v4.3_patch.
+# Mac: .venv (v4.2, the uv project env), .venv-v4.3, .venv-v4.3_patch and .venv-v4.3_post.
 # Gadi: the venvs named in scaling/config.sh (sc_venv), plus the modules they need.
 #
 # With a venv activated, run scripts with `python ...` or
@@ -15,7 +16,7 @@
 _eos26_use() {
   local ver=$1 root venv patch
   root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-  case "$ver" in v4.2|v4.3|v4.3_patch) ;; *) echo "usage: source envs/use.sh v4.2|v4.3|v4.3_patch" >&2; return 1 ;; esac
+  case "$ver" in v4.2|v4.3|v4.3_patch|v4.3_post) ;; *) echo "usage: source envs/use.sh v4.2|v4.3|v4.3_patch|v4.3_post" >&2; return 1 ;; esac
   if [[ -d /scratch/qp00 ]]; then          # Gadi
     # shellcheck source=../scaling/config.sh
     source "$root/scaling/config.sh"

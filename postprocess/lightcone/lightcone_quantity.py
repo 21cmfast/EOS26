@@ -1,23 +1,37 @@
-"""Lightcones of ONE quantity of an EOS26 run: rectilinear, ring and/or full-sky HEALPix.
+"""Lightcones of ONE quantity of an EOS26 run, made with tuesday: rect, angular plane, full sky, patch.
 
-    python postprocess/lightcone/lightcone_quantity.py --quantity density --log-file logs/lc.log
-    python postprocess/lightcone/lightcone_quantity.py --quantity brightness_temp --geometry rect ring --log-file ...
-    python postprocess/lightcone/lightcone_quantity.py --quantity density --geometry healpix --nside 2048 --log-file ...
-    python postprocess/lightcone/lightcone_quantity.py --quantity los_velocity --test --log-file ...
+    python postprocess/lightcone/lightcone_quantity.py --quantity density --geometry rect --log-file logs/lc.log
+    python postprocess/lightcone/lightcone_quantity.py --quantity brightness_temp --geometry rect angular_plane \
+        --log-file ...
+    python postprocess/lightcone/lightcone_quantity.py --quantity density --geometry healpix --threads 48 \
+        --log-file ...
+    python postprocess/lightcone/lightcone_quantity.py --quantity los_velocity --geometry patch --test \
+        --log-file ...
 
-One pass over the node redshifts: the quantity's box is read once per redshift (13.5 GB
-at HII_DIM=1500, ~25 s from gdata) and every requested geometry is filled from it. The
-slices are those of 21cmFAST's run_lightcone; see lc_core.py and README.md for what differs
-(only the cost). The job is resumable: rerun the same command and it continues from the
-last finished node interval. With --partial it fills only the node intervals whose
-boxes are cached, so it can run while the coeval jobs are still going; rerun it later
-(without --clobber) to fill the rest.
+The geometries and their values (decision list of 17 Nov 2026) are in eos_lightcones.py:
+no frame rotation, patch of 45 deg around (0, 0), RSDs on (the lightcones are made on the
+few more slices that RSDs need). The options below override them; all lightcones of one
+run must be made with the same values, and finalised with them.
+
+One pass over the node redshifts (tuesday's make_lightcones_on_disk): each box the
+lightcones need is read once and every requested geometry is filled from it. The
+geometries and their defaults are in eos_lightcones.py. The run is the one of
+$EOS26_TEMPLATE (EOS26 by default; e.g. EOS26_earlyEoR), as for the other run scripts.
+
+Resumable: rerun the same command and it fills only what is missing. With --partial it
+fills the node intervals whose boxes are cached, so it can run while the coeval jobs
+are still going. HEALPix geometries are split into --threads parts filled in parallel;
+their parts are joined into one file per quantity once complete.
 
 Quantities: any coeval field (density, brightness_temp, tau_21, spin_temperature,
-neutral_fraction, z_reion, J_21_LW, sfrd_acg, ...), plus los_velocity (needed with
-brightness_temp and tau_21 for the dv/dr correction made by finalise_lightcones.py).
+neutral_fraction, J_21_LW, sfrd_acg, ionisation_rate_G12, n_ion, ...), plus
+los_velocity; the released ones are eos_lightcones.DEFAULT_QUANTITIES. The dv/dr
+correction and RSDs (finalise_lightcones.py) need brightness_temp, tau_21 and
+los_velocity.
 
-Output: <cache>/lightcones/{rect,ring,healpix_nside<N>}/<quantity>.h5 (or --out-dir).
+Output: <out>/{rect,angular_plane,healpix_nside<N>,patch_nside<N>}/<quantity>.h5, where <out> is
+--out-dir, or $EOS26_LIGHTCONE_DIR/<cache name>, or on Gadi
+/scratch/qp00/$USER/lightcones/<cache name>, or <cache>/lightcones.
 It only reads the cache; without --partial it stops first if a box it needs is missing.
 """
 import gc
@@ -35,63 +49,64 @@ sys.path.insert(1, str(HERE.parents[1] / "run_scripts"))
 sys.path.insert(1, str(HERE))
 import settings  # noqa: E402
 
+import eos_lightcones as el  # noqa: E402
+
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 settings.add_common_args(parser)
 parser.add_argument("--quantity", required=True, help="one coeval field, or los_velocity")
-parser.add_argument("--geometry", nargs="+", choices=("rect", "ring", "healpix"), default=["rect", "ring"],
-                    help="lightcones to fill in this pass (default: rect ring)")
-parser.add_argument("--zmin", type=float, default=5.0, help="lowest redshift (default 5)")
-parser.add_argument("--zmax", type=float, default=35.0, help="highest redshift (default 35)")
-parser.add_argument("--n-lon", type=int, default=2**15,
-                    help="ring: longitudes around the circle (default 2^15, as make_angular_lightcone.py)")
-parser.add_argument("--nside", type=int, default=2048, help="healpix: Nside of the maps (default 2048)")
-parser.add_argument("--oversample", type=int, default=1,
-                    help="healpix: each pixel is the mean of its 4**oversample children (default 1)")
-parser.add_argument("--order", choices=("ring", "nested"), default="ring",
-                    help="healpix: pixel order of the stored maps (default ring)")
-parser.add_argument("--shell-spacing", type=float, default=None,
-                    help="healpix: Mpc between shells (default: the cell size, as the other lightcones)")
+parser.add_argument("--geometry", nargs="+", choices=el.GEOMETRIES, default=["rect", "angular_plane"],
+                    help="lightcones to fill in this pass (default: rect angular_plane)")
 parser.add_argument("--threads", type=int, default=int(os.environ.get("PBS_NCPUS", os.cpu_count() or 1)),
-                    help="threads for the angular sampling (default: $PBS_NCPUS)")
-parser.add_argument("--out-dir", default=None, help="output directory (default <cache>/lightcones)")
-parser.add_argument("--clobber", action="store_true", help="start again instead of resuming")
+                    help="threads, i.e. parts of each HEALPix geometry (default: $PBS_NCPUS)")
+parser.add_argument("--out-dir", default=None, help="output directory (default: see above)")
 parser.add_argument("--partial", action="store_true",
                     help="skip node intervals whose boxes are not cached yet (while the coevals run)")
+parser.add_argument("--clobber", action="store_true", help="start again instead of resuming")
+parser.add_argument("--keep-parts", action="store_true", help="keep the HEALPix part files after joining them")
+parser.add_argument("--rsds", action=argparse.BooleanOptionalAction, default=None,
+                    help=f"make the lightcones on the longer distances that RSDs need (default {el.RSDS}); "
+                         "finalise with the same choice; the lowest node redshift must leave room below "
+                         "--zmin")
+g = parser.add_argument_group("geometry options (defaults in eos_lightcones.py)")
+g.add_argument("--zmin", type=float, default=None, help=f"lowest redshift (default {el.ZMIN})")
+g.add_argument("--zmax", type=float, default=None, help=f"highest redshift (default {el.ZMAX})")
+g.add_argument("--plane-n-lon", type=int, default=None,
+               help=f"longitudes of the angular plane (default {el.PLANE_N_LON})")
+g.add_argument("--healpix-nside", type=int, default=None, help=f"full-sky Nside (default {el.HEALPIX_NSIDE})")
+g.add_argument("--healpix-level", type=int, default=None,
+               help=f"full sky: each pixel the mean of 4**level sub-pixels (default {el.HEALPIX_LEVEL})")
+g.add_argument("--patch-nside", type=int, default=None, help=f"patch Nside (default {el.PATCH_NSIDE})")
+g.add_argument("--patch-level", type=int, default=None, help=f"patch sub-pixel level (default {el.PATCH_LEVEL})")
+g.add_argument("--patch-radius", type=float, default=None, help=f"patch radius, deg (default {el.PATCH_RADIUS_DEG})")
+g.add_argument("--patch-center", type=float, nargs=2, metavar=("LON", "LAT"), default=None,
+               help=f"patch centre in the observer frame, deg (default {el.PATCH_CENTER_DEG})")
+g.add_argument("--rotation", default=None,
+               help="frame rotation 'SEQ:a,b,c' (scipy Euler angles in degrees, observer frame to box "
+                    "axes) or 'none' (default none)")
 args = parser.parse_args()
 
 logger = settings.setup_logging(args.log_file)
 
-import numpy as np  # noqa: E402
 import py21cmfast as p21c  # noqa: E402
-
-import lc_core  # noqa: E402
 
 job_start = time.perf_counter()
 logger.info(f"gc.isenabled() = {gc.isenabled()} (expected: False)")
 cache_dir, overrides = settings.inputs_for_run(args.test, args.compare)
 inputs = p21c.InputParameters.from_template(settings.TEMPLATE_NAME, **overrides)
-paths = lc_core.CachePaths(inputs, cache_dir)
-out_dir = Path(args.out_dir) if args.out_dir else Path(cache_dir) / "lightcones"
-if args.test:
-    logger.info(f"TEST MODE: HII_DIM={settings.TEST_HII_DIM}")
+out_dir = Path(args.out_dir) if args.out_dir else el.default_out_dir(cache_dir)
+opts = el.default_options(
+    zmin=args.zmin, zmax=args.zmax, plane_n_lon=args.plane_n_lon,
+    healpix_nside=args.healpix_nside, healpix_level=args.healpix_level,
+    patch_nside=args.patch_nside, patch_level=args.patch_level,
+    patch_radius_deg=args.patch_radius,
+    patch_center_deg=tuple(args.patch_center) if args.patch_center else None,
+    rotation=args.rotation, rsds=args.rsds,
+)
+logger.info(f"{settings.RUN_NAME}{' TEST' if args.test else ''}: {args.quantity} "
+            f"[{' '.join(args.geometry)}], cache {cache_dir} -> {out_dir}; options {opts}")
 
-geometries = []
-for name in args.geometry:
-    if name == "rect":
-        geometries.append(lc_core.Rect(inputs, args.zmin, args.zmax))
-    elif name == "ring":
-        geometries.append(lc_core.Ring(inputs, args.zmin, args.zmax, n_lon=args.n_lon))
-    else:
-        geometries.append(lc_core.Healpix(inputs, args.zmin, args.zmax, nside=args.nside,
-                                          oversample=args.oversample, order=args.order,
-                                          shell_spacing=args.shell_spacing))
-for g in geometries:
-    shape = g.dataset_shape()
-    size = 4 * int(np.prod(shape)) / 1e9
-    logger.info(f"{g.name}: {shape} float32 = {size:.2f} GB -> "
-                f"{lc_core.output_path(out_dir, g, args.quantity)}")
-
-files = lc_core.make_lightcones(inputs, paths, args.quantity, geometries, out_dir,
-                                threads=args.threads, clobber=args.clobber, partial=args.partial)
+files = el.make_quantity(inputs, cache_dir, args.quantity, args.geometry, out_dir, opts,
+                         threads=args.threads, partial=args.partial, clobber=args.clobber,
+                         keep_parts=args.keep_parts)
 logger.info(f"Completed {args.quantity} ({' '.join(args.geometry)}) in "
-            f"{time.perf_counter() - job_start:.1f}s -> {[str(f) for f in files]}")
+            f"{time.perf_counter() - job_start:.1f}s -> {files}")

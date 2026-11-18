@@ -44,6 +44,7 @@ sc_venv() {
     v4.3) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;
     v4.3_patch) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3_patch-intel" ;;
     v4.3_fftw) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;   # same venv as v4.3
+    v4.3_post) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3_post-intel" ;;   # lightcones: 4.3.2 + tuesday
     *) return 1 ;;
   esac
 }
@@ -74,6 +75,8 @@ sc_expect_version() {
     # A patched source build reports e.g. 4.3.1.dev0+gee535b94.d20261020 (dirty
     # tree); sc_patch is what actually identifies it.
     v4.3_patch) echo '^4\.3\.' ;;
+    # the lightcone jobs: tuesday needs 21cmFAST 4.3.2 or later
+    v4.3_post) echo '^4\.3\.([2-9]|[1-9][0-9]+)$' ;;
     *) return 1 ;;
   esac
 }
