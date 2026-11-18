@@ -1,0 +1,26 @@
+00:00:00 INFO     00.194 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.196 GB EOS26 TEST: density [rect angular_plane], cache /g/data/qp00/db9528/EOS26_test_HIIDIM200/ ->                                        
+                            /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200; options {'zmin': 5.01, 'zmax': 35.0, 'plane_n_lon': 32768, 'healpix_nside':   
+                            256, 'healpix_level': 2, 'patch_nside': 1024, 'patch_level': 1, 'patch_radius_deg': 45.0, 'patch_center_deg': (0.0, 0.0),           
+                            'rotation': None, 'rsds': True}                                                                                                     
+00:00:15 INFO     00.286 GB density: 1 thread(s) for ['rect', 'angular_plane'] (no parts)                                                                       
+00:00:15 INFO     00.288 GB density: filled in 0 s, 0 boxes read                                                                                                
+00:00:15 INFO     00.288 GB Completed density (rect angular_plane) in 15.8s -> {'rect':                                                                         
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect/density.h5'), 'angular_plane':                                 
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane/density.h5')}                                         
+
+==== PBS output of job 184495685 (lc_density.o184495685, lc_density.e184495685), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 19:05:36:
+   Job Id:             184495685.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.11
+   NCPUs Requested:    4                   CPU Time Used: 00:00:16        
+   Memory Requested:   16.0GB                Memory Used: 674.64MB        
+   Walltime Requested: 01:00:00            Walltime Used: 00:00:48        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
