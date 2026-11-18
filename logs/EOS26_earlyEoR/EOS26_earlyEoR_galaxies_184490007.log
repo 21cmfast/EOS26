@@ -632,3 +632,147 @@
 00:45:02 DEBUG    00.111 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/20.7351/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                         
+00:45:41 DEBUG    00.123 TB Calling ComputePerturbedHaloCatalog with following args:                                                                            
+00:45:41 DEBUG    00.123 TB     20.308959459661118                                                                                                              
+00:47:39 DEBUG    00.123 TB                                                                                                                                     
+00:47:39 DEBUG    00.123 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:47:39 DEBUG    00.123 TB                    lowres_density:  uninitialized                                                                                   
+00:47:39 DEBUG    00.123 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+00:47:39 DEBUG    00.123 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+00:47:39 DEBUG    00.123 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+00:47:39 DEBUG    00.123 TB                     hires_density:  uninitialized                                                                                   
+00:47:39 DEBUG    00.123 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+00:47:39 DEBUG    00.123 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+00:47:39 DEBUG    00.123 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+00:47:39 DEBUG    00.123 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:47:39 DEBUG    00.123 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:47:39 DEBUG    00.123 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:47:39 DEBUG    00.123 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+00:47:39 DEBUG    00.123 TB                                                                                                                                     
+00:47:52 DEBUG    00.123 TB                                                                                                                                     
+00:47:52 DEBUG    00.123 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:47:52 DEBUG    00.123 TB                  spin_temperature:  uninitialized                                                                                   
+00:47:52 DEBUG    00.123 TB             xray_ionised_fraction:  uninitialized                                                                                   
+00:47:52 DEBUG    00.123 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:47:52 DEBUG    00.123 TB                           J_21_LW:  4.7770e-02,  4.6918e-02,  1.8534e-02,  3.3798e+01,  4.9953e-02                                  
+00:47:52 DEBUG    00.123 TB                              Q_HI: 0.9971615112518533                                                                               
+00:47:52 DEBUG    00.123 TB                                                                                                                                     
+00:48:18 DEBUG    00.123 TB                                                                                                                                     
+00:48:18 DEBUG    00.123 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+00:48:18 DEBUG    00.123 TB                  neutral_fraction:  uninitialized                                                                                   
+00:48:18 DEBUG    00.123 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  2.2449e+00,  8.0508e-09                                  
+00:48:18 DEBUG    00.123 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  2.2066e+01, -1.0000e+00                                  
+00:48:18 DEBUG    00.123 TB         cumulative_recombinations:  uninitialized                                                                                   
+00:48:18 DEBUG    00.123 TB            nion_unconditional_acg: 0.0032338300058734936                                                                            
+00:48:18 DEBUG    00.123 TB            nion_unconditional_mcg: 3.4098455644337864e-07                                                                           
+00:48:18 DEBUG    00.123 TB               log10_mturn_ave_acg: 7.48371789842664                                                                                 
+00:48:18 DEBUG    00.123 TB               log10_mturn_ave_mcg: 6.116000997027455                                                                                
+00:48:18 DEBUG    00.123 TB                                                                                                                                     
+00:48:18 DEBUG    00.123 TB                                                                                                                                     
+00:48:18 DEBUG    00.123 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+00:48:18 DEBUG    00.123 TB                       halo_masses:  6.9577e+09,  5.7925e+09,  5.0124e+09,  2.3765e+10,  6.1211e+09                                  
+00:48:18 DEBUG    00.123 TB                          star_rng:  3.3411e-01,  4.7382e-01, -3.0205e+00,  2.5715e+00, -5.0777e-02                                  
+00:48:18 DEBUG    00.123 TB                           sfr_rng:  8.7417e-01,  8.2790e-01, -3.1175e+00,  4.1818e+00, -3.4367e-02                                  
+00:48:18 DEBUG    00.123 TB                          xray_rng:  1.1833e+00, -3.2793e-02, -2.7574e+00,  2.7969e+00, -5.3367e-02                                  
+00:48:18 DEBUG    00.123 TB                       halo_coords:  2.2500e+03,  4.4752e+02,  4.7190e-01,  2.2500e+03,  1.1187e+03                                  
+00:48:18 DEBUG    00.123 TB                           n_halos: 486                                                                                              
+00:48:18 DEBUG    00.123 TB                       buffer_size: 486                                                                                              
+00:48:18 DEBUG    00.123 TB                                                                                                                                     
+00:48:40 INFO     88.218 GB [28/92] z=20.3090: 486 halos, sum stellar_masses_acg 4.2498e+09, sum sfr_acg 3.1994e-06; 0.00 GB in 306.2s (peak RSS 00.148 TB)     
+00:48:41 DEBUG    88.218 GB Reading array of shape (922,) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                    
+00:48:41 DEBUG    88.218 GB Reading array of shape (922,) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                       
+00:48:41 DEBUG    88.218 GB Reading array of shape (922,) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                        
+00:48:41 DEBUG    88.218 GB Reading array of shape (922,) and dtype float32 from disk                                                                           
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                       
+00:48:41 DEBUG    88.218 GB Reading array of shape (922, 3) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                    
+00:48:42 DEBUG    88.218 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                   
+00:49:31 DEBUG    00.098 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))             
+00:50:03 DEBUG    00.111 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                         
+00:50:39 DEBUG    00.123 TB Calling ComputePerturbedHaloCatalog with following args:                                                                            
+00:50:39 DEBUG    00.123 TB     19.89113672515796                                                                                                               
+00:52:21 DEBUG    00.123 TB                                                                                                                                     
+00:52:21 DEBUG    00.123 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+00:52:21 DEBUG    00.123 TB                    lowres_density:  uninitialized                                                                                   
+00:52:21 DEBUG    00.123 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+00:52:21 DEBUG    00.123 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+00:52:21 DEBUG    00.123 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+00:52:21 DEBUG    00.123 TB                     hires_density:  uninitialized                                                                                   
+00:52:21 DEBUG    00.123 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+00:52:21 DEBUG    00.123 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+00:52:21 DEBUG    00.123 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+00:52:21 DEBUG    00.123 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+00:52:21 DEBUG    00.123 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+00:52:21 DEBUG    00.123 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+00:52:21 DEBUG    00.123 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+00:52:21 DEBUG    00.123 TB                                                                                                                                     
+00:52:33 DEBUG    00.123 TB                                                                                                                                     
+00:52:33 DEBUG    00.123 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+00:52:33 DEBUG    00.123 TB                  spin_temperature:  uninitialized                                                                                   
+00:52:33 DEBUG    00.123 TB             xray_ionised_fraction:  uninitialized                                                                                   
+00:52:33 DEBUG    00.123 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+00:52:33 DEBUG    00.123 TB                           J_21_LW:  5.9268e-02,  5.8223e-02,  2.3238e-02,  1.3989e+01,  6.1779e-02                                  
+00:52:33 DEBUG    00.123 TB                              Q_HI: 0.9965242215976026                                                                               
+00:52:33 DEBUG    00.123 TB                                                                                                                                     
+00:52:57 DEBUG    00.123 TB                                                                                                                                     
+00:52:57 DEBUG    00.123 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+00:52:57 DEBUG    00.123 TB                  neutral_fraction:  uninitialized                                                                                   
+00:52:57 DEBUG    00.123 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.3885e+00,  1.7302e-08                                  
+00:52:57 DEBUG    00.123 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  2.1170e+01, -1.0000e+00                                  
+00:52:57 DEBUG    00.123 TB         cumulative_recombinations:  uninitialized                                                                                   
+00:52:57 DEBUG    00.123 TB            nion_unconditional_acg: 0.003959066677247455                                                                             
+00:52:57 DEBUG    00.123 TB            nion_unconditional_mcg: 3.1817313533337797e-07                                                                           
+00:52:57 DEBUG    00.123 TB               log10_mturn_ave_acg: 7.496630256370029                                                                                
+00:52:57 DEBUG    00.123 TB               log10_mturn_ave_mcg: 6.142235756790901                                                                                
+00:52:57 DEBUG    00.123 TB                                                                                                                                     
+00:52:57 DEBUG    00.123 TB                                                                                                                                     
+00:52:57 DEBUG    00.123 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+00:52:57 DEBUG    00.123 TB                       halo_masses:  7.1636e+09,  6.0702e+09,  5.0130e+09,  3.1092e+10,  6.1933e+09                                  
+00:52:57 DEBUG    00.123 TB                          star_rng:  4.9708e-01,  4.4681e-01, -4.3533e+00,  2.8896e+00, -3.4686e-02                                  
+00:52:57 DEBUG    00.123 TB                           sfr_rng: -1.8549e-02,  2.9002e-01, -3.8271e+00,  3.2520e+00,  2.9595e-02                                  
+00:52:57 DEBUG    00.123 TB                          xray_rng:  7.1638e-01, -1.0268e+00, -3.0748e+00,  2.9137e+00, -8.8470e-03                                  
+00:52:57 DEBUG    00.123 TB                       halo_coords:  2.2500e+03,  4.4752e+02,  4.7257e-01,  2.2500e+03,  1.1226e+03                                  
+00:52:57 DEBUG    00.123 TB                           n_halos: 922                                                                                              
+00:52:57 DEBUG    00.123 TB                       buffer_size: 922                                                                                              
+00:52:57 DEBUG    00.123 TB                                                                                                                                     
+00:53:23 INFO     88.218 GB [29/92] z=19.8911: 922 halos, sum stellar_masses_acg 8.4425e+09, sum sfr_acg 6.3956e-06; 0.00 GB in 282.1s (peak RSS 00.148 TB)     
+00:53:23 DEBUG    88.218 GB Reading array of shape (1756,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                    
+00:53:23 DEBUG    88.218 GB Reading array of shape (1756,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                       
+00:53:23 DEBUG    88.218 GB Reading array of shape (1756,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                        
+00:53:23 DEBUG    88.218 GB Reading array of shape (1756,) and dtype float32 from disk                                                                          
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                       
+00:53:23 DEBUG    88.218 GB Reading array of shape (1756, 3) and dtype float32 from disk                                                                        
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                    
+00:53:24 DEBUG    88.218 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                   
+00:53:55 DEBUG    00.098 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))             
+00:54:44 DEBUG    00.111 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/7bc826193765d02608ff8d29badcea62/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                         
+00:55:21 DEBUG    00.123 TB Calling ComputePerturbedHaloCatalog with following args:                                                                            
+00:55:21 DEBUG    00.123 TB     19.481506593292117                                                                                                              
