@@ -5,6 +5,7 @@
 #PBS -l mem=48gb
 #PBS -l walltime=04:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
+#PBS -P qp00
 
 # Lightcones of ONE quantity, made with tuesday (postprocess/lightcone/README.md).
 # Normally submitted by submit_lightcones.sh, which picks the resources per geometry:

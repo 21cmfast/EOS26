@@ -5,6 +5,7 @@
 #PBS -l mem=48gb
 #PBS -l walltime=24:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
+#PBS -P qp00
 
 # T_b with dv/dr and RSDs and a linked 21cmFAST lightcone file per geometry; then tau_21
 # and the dv/dr-only T_b set aside in <out>/intermediate (not released)
