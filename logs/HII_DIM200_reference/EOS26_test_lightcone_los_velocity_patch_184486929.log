@@ -1,0 +1,636 @@
+00:00:00 INFO     00.194 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.196 GB EOS26 TEST: los_velocity [patch], cache /g/data/qp00/db9528/EOS26_test_HIIDIM200/ ->                                                
+                            /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200; options {'zmin': 5.01, 'zmax': 35.0, 'plane_n_lon': 32768, 'healpix_nside':   
+                            256, 'healpix_level': 2, 'patch_nside': 1024, 'patch_level': 1, 'patch_radius_deg': 45.0, 'patch_center_deg': (0.0, 0.0),           
+                            'rotation': None, 'rsds': True}                                                                                                     
+00:00:22 INFO     00.429 GB los_velocity: 16 thread(s) for ['patch'] (16 parts of patch)                                                                        
+00:00:23 DEBUG    00.484 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/35.3720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:00:24 DEBUG    00.513 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/35.3720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:00:24 DEBUG    00.543 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/35.3720/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:00:24 DEBUG    00.573 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/34.6588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:00:24 DEBUG    00.603 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/34.6588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:00:24 DEBUG    00.633 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/34.6588/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:00:35 DEBUG    01.591 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.9596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:00:35 DEBUG    01.621 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.9596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:00:35 DEBUG    01.651 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.9596/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:00:53 DEBUG    01.624 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.2741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:00:53 DEBUG    01.566 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.2741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:00:53 DEBUG    01.595 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.2741/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:01:11 DEBUG    01.709 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/32.6021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:01:11 DEBUG    01.619 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/32.6021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:01:11 DEBUG    01.648 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/32.6021/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:01:33 DEBUG    01.731 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:01:33 DEBUG    01.642 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:01:33 DEBUG    01.655 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:02:00 DEBUG    01.707 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:02:00 DEBUG    01.697 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:02:00 DEBUG    01.697 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:02:22 DEBUG    01.724 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:02:22 DEBUG    01.748 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:02:22 DEBUG    01.748 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:02:50 DEBUG    01.749 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:02:50 DEBUG    01.779 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:02:50 DEBUG    01.808 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:03:15 DEBUG    01.849 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:03:15 DEBUG    01.849 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:03:15 DEBUG    01.849 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:03:41 DEBUG    01.850 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:03:41 DEBUG    01.720 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:03:41 DEBUG    01.720 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:04:07 DEBUG    01.752 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:04:07 DEBUG    01.712 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:04:07 DEBUG    01.712 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:04:32 DEBUG    01.772 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:04:32 DEBUG    01.772 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:04:32 DEBUG    01.772 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:04:57 DEBUG    01.782 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:04:57 DEBUG    01.782 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:04:57 DEBUG    01.782 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:05:25 DEBUG    01.822 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:05:25 DEBUG    01.822 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:05:25 DEBUG    01.827 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:05:52 DEBUG    01.832 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:05:52 DEBUG    01.845 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:05:52 DEBUG    01.876 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:06:22 DEBUG    01.835 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:06:22 DEBUG    01.865 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:06:22 DEBUG    01.894 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:06:49 DEBUG    01.985 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:06:50 DEBUG    01.796 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:06:50 DEBUG    01.846 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:07:14 DEBUG    01.856 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:07:14 DEBUG    01.805 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:07:14 DEBUG    01.835 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:07:40 DEBUG    01.880 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:07:40 DEBUG    01.882 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:07:40 DEBUG    01.917 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:08:04 DEBUG    01.953 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:08:04 DEBUG    01.846 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:08:04 DEBUG    01.865 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:08:31 DEBUG    01.937 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:08:31 DEBUG    01.907 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:08:31 DEBUG    01.937 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:08:55 DEBUG    01.977 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:08:55 DEBUG    01.986 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:08:55 DEBUG    01.987 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:09:23 DEBUG    01.998 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:09:23 DEBUG    02.017 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:09:23 DEBUG    02.017 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:09:50 DEBUG    02.037 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:09:50 DEBUG    01.939 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:09:50 DEBUG    01.969 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:10:17 DEBUG    02.000 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:10:17 DEBUG    02.000 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:10:17 DEBUG    02.000 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:10:45 DEBUG    02.011 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:10:45 DEBUG    02.011 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:10:45 DEBUG    02.016 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:11:26 DEBUG    02.022 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:11:26 DEBUG    02.041 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:11:26 DEBUG    02.041 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:11:55 DEBUG    02.052 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:11:55 DEBUG    02.052 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:11:55 DEBUG    02.052 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:12:22 DEBUG    02.072 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:12:22 DEBUG    02.082 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:12:22 DEBUG    02.102 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:12:47 DEBUG    02.146 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:12:47 DEBUG    02.146 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:12:47 DEBUG    02.146 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:13:14 DEBUG    02.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:13:14 DEBUG    02.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:13:14 DEBUG    02.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:13:47 DEBUG    02.186 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:13:47 DEBUG    02.156 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:13:47 DEBUG    02.186 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:14:22 DEBUG    02.228 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:14:22 DEBUG    02.188 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:14:22 DEBUG    02.217 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:14:48 DEBUG    02.245 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:14:48 DEBUG    02.015 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:14:48 DEBUG    02.015 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:15:18 DEBUG    02.064 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:15:18 DEBUG    02.000 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:15:18 DEBUG    02.017 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:15:49 DEBUG    02.050 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:15:49 DEBUG    02.080 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:15:49 DEBUG    02.080 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:16:15 DEBUG    02.103 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:16:16 DEBUG    02.119 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:16:16 DEBUG    02.139 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:16:44 DEBUG    02.139 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:16:44 DEBUG    02.139 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:16:44 DEBUG    02.139 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:17:12 DEBUG    02.167 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:17:12 DEBUG    02.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:17:12 DEBUG    02.133 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:17:45 DEBUG    02.095 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:17:45 DEBUG    02.006 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:17:45 DEBUG    02.035 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:18:22 DEBUG    02.109 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:18:22 DEBUG    02.109 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:18:22 DEBUG    02.137 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:18:53 DEBUG    02.190 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:18:53 DEBUG    02.197 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:18:53 DEBUG    02.198 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:19:31 DEBUG    02.208 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:19:31 DEBUG    02.208 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:19:31 DEBUG    02.208 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:20:03 DEBUG    02.152 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:20:03 DEBUG    02.137 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:20:03 DEBUG    02.137 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:20:37 DEBUG    02.159 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:20:37 DEBUG    02.159 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:20:37 DEBUG    02.169 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:21:10 DEBUG    02.180 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:21:10 DEBUG    02.180 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:21:10 DEBUG    02.160 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:21:44 DEBUG    02.175 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:21:45 DEBUG    02.175 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:21:45 DEBUG    02.181 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:22:20 DEBUG    02.246 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:22:20 DEBUG    02.270 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:22:20 DEBUG    02.270 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:23:05 DEBUG    02.270 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:23:05 DEBUG    02.149 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:23:05 DEBUG    02.149 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:23:34 DEBUG    02.186 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:23:34 DEBUG    02.186 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:23:34 DEBUG    02.166 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:24:07 DEBUG    02.150 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:24:07 DEBUG    02.179 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:24:08 DEBUG    02.189 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:24:47 DEBUG    02.243 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:24:47 DEBUG    02.018 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:24:47 DEBUG    02.018 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:25:26 DEBUG    02.045 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:25:26 DEBUG    02.045 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:25:27 DEBUG    02.070 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:26:06 DEBUG    02.146 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:26:06 DEBUG    02.151 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:26:06 DEBUG    02.181 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:26:43 DEBUG    02.181 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:26:43 DEBUG    02.176 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:26:43 DEBUG    02.176 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:27:21 DEBUG    02.290 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:27:21 DEBUG    02.290 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:27:22 DEBUG    02.268 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:27:58 DEBUG    02.316 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:27:58 DEBUG    02.316 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:27:58 DEBUG    02.315 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:28:35 DEBUG    02.295 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:28:35 DEBUG    02.149 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:28:35 DEBUG    02.161 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:29:12 DEBUG    02.255 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:29:12 DEBUG    02.255 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:29:12 DEBUG    02.255 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:29:49 DEBUG    02.299 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                               
+00:29:49 DEBUG    02.309 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                               
+00:29:49 DEBUG    02.311 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                               
+00:30:28 DEBUG    02.274 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:30:28 DEBUG    02.203 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:30:28 DEBUG    02.223 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:31:08 DEBUG    02.310 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:31:08 DEBUG    02.312 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:31:09 DEBUG    02.315 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:31:59 DEBUG    02.352 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:31:59 DEBUG    02.352 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:31:59 DEBUG    02.382 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:32:35 DEBUG    02.450 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:32:35 DEBUG    02.450 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:32:35 DEBUG    02.448 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:33:15 DEBUG    02.471 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:33:15 DEBUG    02.389 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:33:15 DEBUG    02.389 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:33:52 DEBUG    02.414 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:33:52 DEBUG    02.414 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:33:52 DEBUG    02.386 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:34:34 DEBUG    02.450 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:34:34 DEBUG    02.470 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:34:34 DEBUG    02.448 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:35:18 DEBUG    02.540 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:35:18 DEBUG    02.540 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:35:18 DEBUG    02.511 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+00:36:00 DEBUG    02.538 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+00:36:00 DEBUG    02.463 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+00:36:00 DEBUG    02.463 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                

@@ -1,0 +1,285 @@
+00:00:00 INFO     00.194 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.196 GB EOS26 TEST: tau_21 [patch], cache /g/data/qp00/db9528/EOS26_test_HIIDIM200/ -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200;
+                            options {'zmin': 5.01, 'zmax': 35.0, 'plane_n_lon': 32768, 'healpix_nside': 256, 'healpix_level': 2, 'patch_nside': 1024,           
+                            'patch_level': 1, 'patch_radius_deg': 45.0, 'patch_center_deg': (0.0, 0.0), 'rotation': None, 'rsds': True}                         
+00:00:20 INFO     00.432 GB tau_21: 16 thread(s) for ['patch'] (16 parts of patch)                                                                              
+00:00:22 DEBUG    00.486 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/35.3720/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:22 DEBUG    00.516 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/34.6588/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:25 DEBUG    01.084 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.9596/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:30 DEBUG    01.538 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.2741/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:34 DEBUG    01.527 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/32.6021/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:39 DEBUG    01.539 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:43 DEBUG    01.550 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:47 DEBUG    01.572 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:52 DEBUG    01.572 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:00:56 DEBUG    01.542 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:01 DEBUG    01.553 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:05 DEBUG    01.555 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:10 DEBUG    01.584 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:15 DEBUG    01.625 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:22 DEBUG    01.647 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:26 DEBUG    01.647 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:31 DEBUG    01.641 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:39 DEBUG    01.667 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:44 DEBUG    01.685 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:50 DEBUG    01.684 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:01:55 DEBUG    01.647 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:00 DEBUG    01.604 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:05 DEBUG    01.646 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:11 DEBUG    01.623 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:17 DEBUG    01.575 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:23 DEBUG    01.675 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:29 DEBUG    01.655 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:40 DEBUG    01.658 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:45 DEBUG    01.666 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:50 DEBUG    01.714 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:02:55 DEBUG    01.730 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:00 DEBUG    01.598 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:06 DEBUG    01.569 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:11 DEBUG    01.600 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:17 DEBUG    01.631 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:22 DEBUG    01.641 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:28 DEBUG    01.643 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:33 DEBUG    01.598 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:39 DEBUG    01.611 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:45 DEBUG    01.631 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:51 DEBUG    01.622 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:03:57 DEBUG    01.654 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:03 DEBUG    01.688 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:10 DEBUG    01.706 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:17 DEBUG    01.655 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:23 DEBUG    01.672 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:29 DEBUG    01.729 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:37 DEBUG    01.689 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:45 DEBUG    01.700 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:51 DEBUG    01.718 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:04:58 DEBUG    01.718 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:05 DEBUG    01.676 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:12 DEBUG    01.742 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:19 DEBUG    01.772 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:27 DEBUG    01.825 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:35 DEBUG    01.859 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:43 DEBUG    01.778 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:51 DEBUG    01.812 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:05:59 DEBUG    01.902 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:06:07 DEBUG    01.883 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:06:18 DEBUG    01.879 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                  
+00:06:24 DEBUG    01.757 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:06:32 DEBUG    01.747 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:06:40 DEBUG    01.817 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:06:48 DEBUG    01.843 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:06:57 DEBUG    01.850 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:05 DEBUG    01.881 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:13 DEBUG    01.851 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:28 DEBUG    01.831 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:35 DEBUG    01.821 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:42 DEBUG    01.759 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:49 DEBUG    01.794 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:07:57 DEBUG    01.771 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:05 DEBUG    01.765 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:12 DEBUG    01.790 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:20 DEBUG    01.804 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:29 DEBUG    01.685 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:38 DEBUG    01.753 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:49 DEBUG    01.834 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:08:57 DEBUG    01.856 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:05 DEBUG    01.881 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:13 DEBUG    01.826 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:23 DEBUG    01.797 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:33 DEBUG    01.908 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:43 DEBUG    01.862 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:09:52 DEBUG    01.855 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:03 DEBUG    01.900 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:18 DEBUG    01.926 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:27 DEBUG    01.944 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:36 DEBUG    01.951 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:45 DEBUG    01.902 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:10:55 DEBUG    01.869 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/781eb8161956f86187ceaf284bb6df67/BrightnessTemp.h5'), dataset='/BrightnessTemp/OutputFields/tau_21'))                   
+00:11:14 INFO     01.767 GB tau_21: filled in 653 s, 92 boxes read                                                                                              
+00:11:52 INFO     01.845 GB tau_21: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/tau_21.h5                           
+00:11:52 INFO     01.845 GB Completed tau_21 (patch) in 712.6s -> {'patch':                                                                                     
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/tau_21.h5')}                                        

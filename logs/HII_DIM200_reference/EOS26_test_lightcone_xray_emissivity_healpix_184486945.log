@@ -1,0 +1,286 @@
+00:00:00 INFO     00.194 GB gc.isenabled() = False (expected: False)                                                                                            
+00:00:00 INFO     00.196 GB EOS26 TEST: xray_emissivity [healpix], cache /g/data/qp00/db9528/EOS26_test_HIIDIM200/ ->                                           
+                            /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200; options {'zmin': 5.01, 'zmax': 35.0, 'plane_n_lon': 32768, 'healpix_nside':   
+                            256, 'healpix_level': 2, 'patch_nside': 1024, 'patch_level': 1, 'patch_radius_deg': 45.0, 'patch_center_deg': (0.0, 0.0),           
+                            'rotation': None, 'rsds': True}                                                                                                     
+00:00:20 INFO     00.501 GB xray_emissivity: 16 thread(s) for ['healpix'] (16 parts of healpix)                                                                 
+00:00:23 DEBUG    00.595 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/35.3720/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:24 DEBUG    00.625 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/34.6588/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:28 DEBUG    02.653 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.9596/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:35 DEBUG    02.697 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/33.2741/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:42 DEBUG    02.615 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/32.6021/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:49 DEBUG    02.522 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.9432/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:00:56 DEBUG    02.570 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/31.2973/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:03 DEBUG    02.409 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.6640/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:10 DEBUG    02.557 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/30.0431/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:17 DEBUG    02.433 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/29.4344/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:24 DEBUG    02.777 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.8377/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:31 DEBUG    02.737 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/28.2526/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:38 DEBUG    02.499 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.6791/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:46 DEBUG    02.906 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/27.1167/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:01:53 DEBUG    02.507 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.5654/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:00 DEBUG    02.374 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/26.0249/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:07 DEBUG    02.641 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/25.4950/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:15 DEBUG    02.499 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.9755/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:23 DEBUG    02.368 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/24.4662/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:30 DEBUG    02.600 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.9668/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:38 DEBUG    02.370 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/23.4773/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:46 DEBUG    02.463 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.9973/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:02:54 DEBUG    02.780 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.5268/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:02 DEBUG    02.192 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/22.0655/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:11 DEBUG    02.426 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.6132/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:19 DEBUG    02.248 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/21.1698/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:28 DEBUG    02.925 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.7351/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:37 DEBUG    02.221 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/20.3090/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:45 DEBUG    02.223 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.8911/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:03:54 DEBUG    02.306 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.4815/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:04 DEBUG    02.241 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/19.0799/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:12 DEBUG    02.526 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.6862/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:21 DEBUG    02.494 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/18.3002/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:31 DEBUG    02.296 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.9217/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:40 DEBUG    02.288 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.5507/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:50 DEBUG    02.411 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/17.1870/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:04:59 DEBUG    02.499 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.8304/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:05:09 DEBUG    02.849 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.4808/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:05:19 DEBUG    02.940 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/16.1380/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:05:29 DEBUG    02.462 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.8020/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:05:39 DEBUG    02.618 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.4725/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:05:50 DEBUG    02.390 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/15.1495/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:00 DEBUG    02.587 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.8329/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:10 DEBUG    02.772 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.5224/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:21 DEBUG    02.579 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/14.2181/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:31 DEBUG    02.330 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.9197/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:42 DEBUG    02.477 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.6271/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:06:53 DEBUG    02.652 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.3403/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:07:04 DEBUG    03.409 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/13.0591/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:07:15 DEBUG    02.857 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.7835/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:07:26 DEBUG    03.110 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.5132/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:07:38 DEBUG    02.185 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/12.2482/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:07:49 DEBUG    02.895 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.9885/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:08:00 DEBUG    03.208 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.7338/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:08:12 DEBUG    02.214 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.4841/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:08:24 DEBUG    02.605 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/11.2393/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:08:36 DEBUG    02.888 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.9993/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:08:47 DEBUG    02.427 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.7641/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:09:00 DEBUG    02.470 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.5334/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:09:12 DEBUG    02.663 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.3072/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:09:24 DEBUG    02.311 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/10.0855/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))     
+00:09:36 DEBUG    02.437 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.8682/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:09:48 DEBUG    02.572 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.6551/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:10:01 DEBUG    02.828 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.4461/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:10:13 DEBUG    02.383 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.2413/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:10:26 DEBUG    02.977 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/9.0405/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:10:39 DEBUG    02.542 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.8436/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:10:52 DEBUG    02.339 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.6506/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:11:05 DEBUG    02.560 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.4614/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:11:19 DEBUG    02.479 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.2759/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:11:33 DEBUG    02.767 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/8.0940/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:11:46 DEBUG    02.464 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.9157/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:12:00 DEBUG    02.745 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.7409/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:12:13 DEBUG    02.394 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.5695/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:12:27 DEBUG    02.885 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.4014/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:12:42 DEBUG    02.400 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.2367/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:12:56 DEBUG    02.524 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/7.0752/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:13:10 DEBUG    02.557 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.9169/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:13:25 DEBUG    02.698 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.7616/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:13:39 DEBUG    02.315 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.6095/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:13:54 DEBUG    02.224 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.4602/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:14:09 DEBUG    02.311 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.3140/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:14:24 DEBUG    02.335 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.1706/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:14:39 DEBUG    02.643 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:14:54 DEBUG    02.487 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:15:09 DEBUG    02.565 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:15:25 DEBUG    02.254 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:15:41 DEBUG    02.619 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:15:57 DEBUG    02.469 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:16:12 DEBUG    02.756 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:16:28 DEBUG    02.508 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:16:44 DEBUG    02.344 GB Reading array of shape (200, 200, 200) and dtype float32 from disk                                                                  
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_test_HIIDIM200/92037ac54cc1313c17a5b4a24037f4a7/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))      
+00:17:13 INFO     01.409 GB xray_emissivity: filled in 1013 s, 92 boxes read                                                                                    
+00:17:32 INFO     01.499 GB xray_emissivity: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/xray_emissivity.h5        
+00:17:32 INFO     01.499 GB Completed xray_emissivity (healpix) in 1052.5s -> {'healpix':                                                                       
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/xray_emissivity.h5')}                              

@@ -53,7 +53,7 @@ if [[ -n "${PATCH_CENTER:-}" ]]; then PC="${PATCH_CENTER# }"; PASS+=",PATCH_CENT
 
 submit() {  # submit <resources> <env> -> prints the job id
   local res=$1 env=$2
-  local cmd=(qsub -N "$JOBNAME" -l "$res" ${DEP[@]+"${DEP[@]}"} -v "$env" postprocess/lightcone/lightcone_job.sh)
+  local cmd=(qsub -P qp00 -N "$JOBNAME" -l "$res" ${DEP[@]+"${DEP[@]}"} -v "$env" postprocess/lightcone/lightcone_job.sh)
   if [[ "${DRY_RUN:-0}" == 1 ]]; then echo "${cmd[*]}" >&2; echo "DRYRUN"; else "${cmd[@]}"; fi
 }
 
@@ -102,9 +102,9 @@ for v in RSDS ZMIN ZMAX HEALPIX_NSIDE DEGRADE_NSIDE EOS26_LIGHTCONE_DIR; do
   [[ -n "${!v:-}" ]] && FPASS+=",$v=${!v}"
 done
 if [[ "${DRY_RUN:-0}" == 1 ]]; then
-  echo "qsub -W depend=afterok:<all of the above> -v $FPASS postprocess/lightcone/finalise_job.sh" >&2
+  echo "qsub -P qp00 -W depend=afterok:<all of the above> -v $FPASS postprocess/lightcone/finalise_job.sh" >&2
   exit 0
 fi
 dep=$(IFS=:; echo "${IDS[*]}")
-fid=$(qsub -W "depend=afterok:$dep" -v "$FPASS" postprocess/lightcone/finalise_job.sh)
+fid=$(qsub -P qp00 -W "depend=afterok:$dep" -v "$FPASS" postprocess/lightcone/finalise_job.sh)
 echo "finalise: $fid (after all of them succeed; resubmit it by hand otherwise)"
