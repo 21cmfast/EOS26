@@ -1,2 +1,20 @@
 00:00:00 WARNING  00.195 GB coeval run-time overrides (not in the cache hash): {'N_THREADS': 16}                                                                
 00:00:00 INFO     00.196 GB EOS26: galaxy properties (py21cmfast 4.3.2), cache /g/data/qp00/db9528/EOS26_cache/; run-time {'N_THREADS': 16}                     
+
+==== PBS output of job 184485838 (EOS26_galaxies.o184485838, EOS26_galaxies.e184485838), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- stderr ----
+122 cached boxes missing in /g/data/qp00/db9528/EOS26_cache/, e.g. /g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/19.0799/781eb8161956f86187ceaf284bb6df67/TsBox.h5
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:08:05:
+   Job Id:             184485838.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      0.29
+   NCPUs Requested:    16                  CPU Time Used: 00:00:10        
+   Memory Requested:   400.0GB               Memory Used: 512.81MB        
+   Walltime Requested: 12:00:00            Walltime Used: 00:00:22        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

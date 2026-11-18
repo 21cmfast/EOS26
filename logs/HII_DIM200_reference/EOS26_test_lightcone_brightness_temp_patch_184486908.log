@@ -284,3 +284,19 @@
 00:15:16 INFO     01.659 GB brightness_temp: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/brightness_temp.h5         
 00:15:16 INFO     01.659 GB Completed brightness_temp (patch) in 916.5s -> {'patch':                                                                            
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/brightness_temp.h5')}                               
+
+==== PBS output of job 184486908 (lc_brightness_t.o184486908, lc_brightness_t.e184486908), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:24:16:
+   Job Id:             184486908.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      8.28
+   NCPUs Requested:    16                  CPU Time Used: 02:57:33        
+   Memory Requested:   64.0GB                Memory Used: 42.11GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:15:31        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

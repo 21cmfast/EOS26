@@ -284,3 +284,19 @@
 00:00:47 INFO     00.407 GB Completed ionisation_rate_G12 (rect angular_plane) in 47.7s -> {'rect':                                                             
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect/ionisation_rate_G12.h5'), 'angular_plane':                     
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane/ionisation_rate_G12.h5')}                             
+
+==== PBS output of job 184486930 (lc_ionisation_r.o184486930, lc_ionisation_r.e184486930), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:10:33:
+   Job Id:             184486930.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.13
+   NCPUs Requested:    4                   CPU Time Used: 00:00:48        
+   Memory Requested:   16.0GB                Memory Used: 7.3GB           
+   Walltime Requested: 01:00:00            Walltime Used: 00:00:59        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

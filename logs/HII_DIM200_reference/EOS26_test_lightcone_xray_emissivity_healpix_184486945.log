@@ -284,3 +284,19 @@
 00:17:32 INFO     01.499 GB xray_emissivity: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/xray_emissivity.h5        
 00:17:32 INFO     01.499 GB Completed xray_emissivity (healpix) in 1052.5s -> {'healpix':                                                                       
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/xray_emissivity.h5')}                              
+
+==== PBS output of job 184486945 (lc_xray_emissiv.o184486945, lc_xray_emissiv.e184486945), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:26:31:
+   Job Id:             184486945.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.45
+   NCPUs Requested:    16                  CPU Time Used: 04:11:42        
+   Memory Requested:   64.0GB                Memory Used: 25.87GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:17:43        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

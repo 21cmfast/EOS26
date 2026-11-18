@@ -4875,3 +4875,19 @@
 00:03:30 INFO     00.842 GB [92/92] z=5.0000: 4010798 halos, sum stellar_masses_acg 1.9416e+14, sum sfr_acg 2.1745e-02; 0.18 GB in 2.7s (peak RSS 00.842 GB)    
 00:03:30 INFO     00.484 GB wrote 92 of 92 files (57963844 halos, 2.55 GB)                                                                                      
 00:03:30 INFO     00.276 GB Completed in 210.6s                                                                                                                 
+
+==== PBS output of job 184485648 (EOS26_galaxies.o184485648, EOS26_galaxies.e184485648), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:06:35:
+   Job Id:             184485648.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.59
+   NCPUs Requested:    4                   CPU Time Used: 00:04:56        
+   Memory Requested:   16.0GB                Memory Used: 16.0GB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:04:25        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -285,3 +285,19 @@
                             /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/kinetic_temp_neutral.h5                                       
 00:17:28 INFO     01.553 GB Completed kinetic_temp_neutral (healpix) in 1048.7s -> {'healpix':                                                                  
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/kinetic_temp_neutral.h5')}                         
+
+==== PBS output of job 184486916 (lc_kinetic_temp.o184486916, lc_kinetic_temp.e184486916), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:26:26:
+   Job Id:             184486916.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.41
+   NCPUs Requested:    16                  CPU Time Used: 04:11:32        
+   Memory Requested:   64.0GB                Memory Used: 18.07GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:17:39        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

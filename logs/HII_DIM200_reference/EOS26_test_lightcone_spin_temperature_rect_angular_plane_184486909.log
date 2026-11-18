@@ -284,3 +284,19 @@
 00:00:49 INFO     00.437 GB Completed spin_temperature (rect angular_plane) in 49.9s -> {'rect':                                                                
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect/spin_temperature.h5'), 'angular_plane':                        
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane/spin_temperature.h5')}                                
+
+==== PBS output of job 184486909 (lc_spin_tempera.o184486909, lc_spin_tempera.e184486909), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:10:33:
+   Job Id:             184486909.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.14
+   NCPUs Requested:    4                   CPU Time Used: 00:00:48        
+   Memory Requested:   16.0GB                Memory Used: 7.33GB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:01:02        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

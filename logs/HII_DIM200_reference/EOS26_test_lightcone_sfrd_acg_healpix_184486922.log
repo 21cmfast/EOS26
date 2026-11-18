@@ -284,3 +284,19 @@
 00:18:11 INFO     01.285 GB sfrd_acg: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/sfrd_acg.h5                      
 00:18:11 INFO     01.285 GB Completed sfrd_acg (healpix) in 1091.6s -> {'healpix':                                                                              
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/sfrd_acg.h5')}                                     
+
+==== PBS output of job 184486922 (lc_sfrd_acg.o184486922, lc_sfrd_acg.e184486922), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:27:10:
+   Job Id:             184486922.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.80
+   NCPUs Requested:    16                  CPU Time Used: 04:20:32        
+   Memory Requested:   64.0GB                Memory Used: 17.64GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:18:23        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

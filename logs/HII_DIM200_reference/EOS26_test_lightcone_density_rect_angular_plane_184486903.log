@@ -284,3 +284,19 @@
 00:01:29 INFO     00.436 GB Completed density (rect angular_plane) in 89.2s -> {'rect':                                                                         
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect/density.h5'), 'angular_plane':                                 
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane/density.h5')}                                         
+
+==== PBS output of job 184486903 (lc_density.o184486903, lc_density.e184486903), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:11:13:
+   Job Id:             184486903.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.23
+   NCPUs Requested:    4                   CPU Time Used: 00:01:09        
+   Memory Requested:   16.0GB                Memory Used: 7.29GB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:01:42        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

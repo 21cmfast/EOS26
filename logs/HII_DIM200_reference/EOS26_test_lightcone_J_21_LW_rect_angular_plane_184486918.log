@@ -284,3 +284,19 @@
 00:01:00 INFO     00.437 GB Completed J_21_LW (rect angular_plane) in 61.0s -> {'rect':                                                                         
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/rect/J_21_LW.h5'), 'angular_plane':                                 
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/angular_plane/J_21_LW.h5')}                                         
+
+==== PBS output of job 184486918 (lc_J_21_LW.o184486918, lc_J_21_LW.e184486918), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:10:41:
+   Job Id:             184486918.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.16
+   NCPUs Requested:    4                   CPU Time Used: 00:01:00        
+   Memory Requested:   16.0GB                Memory Used: 9.58GB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:01:10        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

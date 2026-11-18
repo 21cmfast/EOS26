@@ -1,0 +1,16 @@
+
+==== PBS output of job 184479954 (EOS26_galaxies.o184479954, EOS26_galaxies.e184479954), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stderr ----
+no venv at /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel (see envs/create_venv_v4.3.sh)
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 17:34:15:
+   Job Id:             184479954.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      0.00
+   NCPUs Requested:    4                   CPU Time Used: 00:00:01        
+   Memory Requested:   16.0GB                Memory Used: 8.25MB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:00:02        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

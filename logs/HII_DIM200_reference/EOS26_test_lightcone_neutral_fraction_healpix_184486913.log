@@ -284,3 +284,19 @@
 00:18:12 INFO     01.427 GB neutral_fraction: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/neutral_fraction.h5      
 00:18:12 INFO     01.427 GB Completed neutral_fraction (healpix) in 1092.5s -> {'healpix':                                                                      
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/neutral_fraction.h5')}                             
+
+==== PBS output of job 184486913 (lc_neutral_frac.o184486913, lc_neutral_frac.e184486913), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:27:12:
+   Job Id:             184486913.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.79
+   NCPUs Requested:    16                  CPU Time Used: 04:24:57        
+   Memory Requested:   64.0GB                Memory Used: 17.93GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:18:21        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

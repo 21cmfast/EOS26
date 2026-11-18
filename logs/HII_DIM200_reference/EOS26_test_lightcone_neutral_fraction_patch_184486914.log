@@ -284,3 +284,19 @@
 00:17:19 INFO     01.748 GB neutral_fraction: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/neutral_fraction.h5       
 00:17:19 INFO     01.748 GB Completed neutral_fraction (patch) in 1039.8s -> {'patch':                                                                          
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/neutral_fraction.h5')}                              
+
+==== PBS output of job 184486914 (lc_neutral_frac.o184486914, lc_neutral_frac.e184486914), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:26:20:
+   Job Id:             184486914.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.33
+   NCPUs Requested:    16                  CPU Time Used: 03:59:03        
+   Memory Requested:   64.0GB                Memory Used: 44.3GB          
+   Walltime Requested: 02:00:00            Walltime Used: 00:17:30        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -285,3 +285,19 @@
                             /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/cumulative_recombinations.h5                                  
 00:17:57 INFO     01.571 GB Completed cumulative_recombinations (healpix) in 1077.9s -> {'healpix':                                                             
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/healpix_nside256/cumulative_recombinations.h5')}                    
+
+==== PBS output of job 184486925 (lc_cumulative_r.o184486925, lc_cumulative_r.e184486925), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:26:56:
+   Job Id:             184486925.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      9.68
+   NCPUs Requested:    16                  CPU Time Used: 04:19:05        
+   Memory Requested:   64.0GB                Memory Used: 18.09GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:18:09        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

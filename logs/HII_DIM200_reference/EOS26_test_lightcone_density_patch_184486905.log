@@ -284,3 +284,19 @@
 00:14:31 INFO     01.707 GB density: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/density.h5                         
 00:14:31 INFO     01.707 GB Completed density (patch) in 871.8s -> {'patch':                                                                                    
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/density.h5')}                                       
+
+==== PBS output of job 184486905 (lc_density.o184486905, lc_density.e184486905), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:23:30:
+   Job Id:             184486905.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      7.87
+   NCPUs Requested:    16                  CPU Time Used: 02:59:51        
+   Memory Requested:   64.0GB                Memory Used: 41.12GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:14:45        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

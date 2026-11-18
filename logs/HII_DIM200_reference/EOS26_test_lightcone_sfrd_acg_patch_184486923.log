@@ -284,3 +284,19 @@
 00:15:13 INFO     01.734 GB sfrd_acg: joined 16 parts -> /scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/sfrd_acg.h5                       
 00:15:13 INFO     01.734 GB Completed sfrd_acg (patch) in 913.6s -> {'patch':                                                                                   
                             PosixPath('/scratch/qp00/db9528/lightcones/EOS26_test_HIIDIM200/patch_nside1024/sfrd_acg.h5')}                                      
+
+==== PBS output of job 184486923 (lc_sfrd_acg.o184486923, lc_sfrd_acg.e184486923), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-18 18:24:13:
+   Job Id:             184486923.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      8.20
+   NCPUs Requested:    16                  CPU Time Used: 03:24:55        
+   Memory Requested:   64.0GB                Memory Used: 44.48GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:15:23        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
