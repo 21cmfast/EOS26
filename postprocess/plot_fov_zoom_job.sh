@@ -19,8 +19,9 @@
 # Reading (estimate): rect ~19 GB of lightcone per quantity shown (one 43-slice block at a time, 0.4 GB
 # each); healpix: the full-sky store while zoomed out (1.9 GB per 39-shell block) and 1 MiB tiles of the
 # patch store; the galaxies once per node below --galaxies-zmax (coordinates of every halo, tens of GB
-# at low z), then kept in plots/<movie>_galaxies/ for later runs. Rendering ~0.35 s (rect) to ~0.6 s
-# (healpix) per 1080p frame, ~1650 frames. Memory: a few GB (healpix ~8 GB). Needs ffmpeg (module or
+# at low z), then kept in plots/movie/data/<movie>_galaxies/ for later runs. The movie and stills go to
+# plots/movie/outputs/ (plots/movie/ is not in git). Rendering ~0.35 s (rect) to ~0.6 s (healpix) per
+# 1080p frame, ~1650 frames. Memory: a few GB (healpix ~8 GB). Needs ffmpeg (module or
 # `pip install imageio-ffmpeg` in the venv).
 # Env: EOS26_TEMPLATE (EOS26), WHAT (movie | stills | figure), ARGS (more options), EOS26_VERSION
 #      (v4.3_post).

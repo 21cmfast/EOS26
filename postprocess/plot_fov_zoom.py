@@ -71,9 +71,10 @@ is the end). Where sectors meet, the movies show a black disc (--black-centre). 
 tuesday's eor_colormap (as its angular lightcone tutorial) with a colour bar. Frames are piped to ffmpeg
 (H.264).
 
-Output: plots/fov_<run>_z<z>_<quantities>[_mwa].{pdf,png}; plots/fov_evolve_<run>_<quantities>.mp4 or
-plots/fov_sky_<run>_<quantities>.mp4 (and <movie>_galaxies/, the galaxies read); with --fixed-z
-plots/fov_zoom_<run>_z<z>_<quantities>.mp4 (or --out).
+Output: plots/fov_<run>_z<z>_<quantities>[_mwa].{pdf,png}; plots/movie/outputs/fov_evolve_<run>_<quantities>.mp4
+or plots/movie/outputs/fov_sky_<run>_<quantities>.mp4, with the stills next to it, and the galaxies read in
+plots/movie/data/<movie>_galaxies/; with --fixed-z plots/movie/outputs/fov_zoom_<run>_z<z>_<quantities>.mp4
+(or --out). plots/movie/ is not in git.
 """
 from __future__ import annotations
 
@@ -2322,6 +2323,14 @@ def plan_galaxies(lc, frames, sl, a, slab):
     return need
 
 
+MOVIE_DIR = Path(__file__).resolve().parents[1] / "plots" / "movie"  # outputs/ and data/, not in git
+
+
+def galaxy_cache(out):
+    """The galaxies read for the movie `out`, kept for later runs: plots/movie/data/<movie>_galaxies/."""
+    return MOVIE_DIR / "data" / f"{Path(out).stem}_galaxies"
+
+
 def load_galaxies(need, path_of, cache_dir, block=20_000_000):
     """Read, for each node, the galaxies within its intervals along x, y, z from its PerturbedHaloCatalog
     (in blocks of rows), with a cache of the selection per node. Returns {node z: dict x, y, zc, muv}."""
@@ -2434,8 +2443,7 @@ def make_evolve_movie(a, quantities, out=None, stills=False, plots=Path("plots")
         import galaxy_properties as gp
         path_of = (lambda zn: gp.output_path(run.cache_dir, run.inputs, zn)) if a.halos == "auto" else \
             (lambda zn: Path(a.halos.format(z=zn)))
-        cache_dir = Path(out).with_name(Path(out).stem + "_galaxies")
-        gals = load_galaxies(need, path_of, cache_dir)
+        gals = load_galaxies(need, path_of, galaxy_cache(out))
     gnodes = np.array(sorted(gals)) if gals else None
     # intro cube
     k_start = lc.k_of_z(z_start)
@@ -3042,7 +3050,7 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
         import galaxy_properties as gp
         path_of = (lambda zn: gp.output_path(run.cache_dir, run.inputs, zn)) if a.halos == "auto" else \
             (lambda zn: Path(a.halos.format(z=zn)))
-        gals = load_galaxies(need, path_of, Path(out).with_name(Path(out).stem + "_galaxies"))
+        gals = load_galaxies(need, path_of, galaxy_cache(out))
     gnodes = np.array(sorted(gals)) if gals else None
     R = Renderer(sl, a, quantities, (0.0, 0.0), [], colourers=colourers, sampler=sampler,
                  dynamic_galaxies=bool(gals))
@@ -3289,7 +3297,8 @@ def main(argv=None):
     if every:
         quantities = list(ALL_QUANTITIES)
     if a.what != "figure" and not a.fixed_z:
-        plots = Path(__file__).resolve().parents[1] / "plots"
+        plots = MOVIE_DIR / "outputs"
+        plots.mkdir(parents=True, exist_ok=True)
         qtag = quantities[0] if len(quantities) == 1 else f"{len(quantities)}q"
         movie = make_sky_movie if a.geometry == "healpix" else make_evolve_movie
         movie(a, quantities, a.out, stills=(a.what == "stills"), plots=plots, qtag=qtag)
@@ -3309,7 +3318,8 @@ def main(argv=None):
         out = a.out or plots / f"fov_{sl.tag}_z{sl.z:.2f}_{qtag}{'_mwa' if a.show_mwa else ''}"
         make_figure(sl, a, quantities, out)
     else:
-        out = a.out or plots / f"fov_zoom_{sl.tag}_z{sl.z:.2f}_{qtag}.mp4"
+        (MOVIE_DIR / "outputs").mkdir(parents=True, exist_ok=True)
+        out = a.out or MOVIE_DIR / "outputs" / f"fov_zoom_{sl.tag}_z{sl.z:.2f}_{qtag}.mp4"
         make_movie(sl, a, quantities, out, stills=(a.what == "stills"))
 
 
