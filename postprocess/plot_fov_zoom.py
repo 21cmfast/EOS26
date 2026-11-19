@@ -50,7 +50,13 @@ frequency, cosmic time and the epoch (from the mean T_b and x_HI). Galaxies come
 the node nearest each frame, within one cell of the frame's slice plane (read once per node and kept).
 With several quantities (--quantity 4, 6, 8 or a list) the frames show sectors, as in the figure; their
 colour scales follow the redshift (--sector-scale), and without --end the zoom ends on the last field
-of view and keeps it to the end.
+of view and keeps it to the end. After the last 21-cm stop, the footprints of other surveys appear while
+one of their lines is in band (--footprints; FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, COMAP, CONCERTO, TIME,
+TIFUUN). At the end (--outro turn), after the pause on the last frame, the image there shifts into the
+finished simulation under the circles, galaxies and text (--outro-shift: a cross-fade or a front sweeping out
+from the centre, 3 s): the matter density of the last node (z = 5) on the box plane of the last slice. It then
+zooms out to the whole box while the overlays fade, and turns as the intro in reverse (HEALPix: the globe of
+the lowest shell).
 --geometry healpix: the same on the HEALPix maps: each frame shows the shell's sky as a globe
 (orthographic projection), the full-sky map degraded to the frame's sampling while zoomed out, the
 patch where the frame lies in it and is finer than the full-sky pixels. It opens on the turning globe
@@ -157,6 +163,42 @@ EXTRAS = [
     ("THESAN-1 box", "box_cmpc", 95.5, "simulation"),
     ("JADES (JWST)", "square_deg2", 0.0486, "survey"),
 ]
+
+# other surveys (--footprints): a JWST galaxy survey and the line-intensity mapping (LIM) experiments of the paper
+# draft that observe at z >~ 5, drawn at their angular size at the frame's redshift, only while one of their
+# lines is in band. Entries: shape, size [deg] (square: side; rect: (width, height); circle: diameter),
+# members (name, line, z_min, z_max), and for squares the corner of the name (tl, br); members of the same
+# size share one outline.
+FOOTPRINTS = [
+    # SPHEREx deep fields, ~100 deg^2 each at the ecliptic poles (SPHEREx mission paper, arXiv:2511.02985);
+    # H-alpha to z = 6.6, [O III] 5007 to z = 9.0 at 5 um
+    ("circle", 2 * np.sqrt(100.0 / np.pi), [("SPHEREx deep field", "[O III]", 0.0, 9.0)]),
+    # FYST/EoR-Spec Deep Spectroscopic Survey: two 4 deg^2 fields, 210-420 GHz (CCAT-Prime Collaboration 2023;
+    # arXiv:2404.05352);
+    # COMAP: three fields of 3.5-4.2 deg^2, CO(2-1) at z = 6-8 in 26-34 GHz (Cleary et al. 2022)
+    ("square", 2.0, [("FYST EoR-Spec", "[C II]", 3.5, 8.05), ("COMAP", "CO(2-1)", 5.8, 7.9)], "tl"),
+    # CONCERTO: nominal 1.4 deg^2 survey, 130-310 GHz (CONCERTO Collaboration 2020)
+    ("square", np.sqrt(1.4), [("CONCERTO", "[C II]", 5.1, 13.6)], "tl"),
+    # TIME: one-beam-wide 78' x 0.5' line scan, 183-326 GHz (Crites et al. 2014, as in arXiv:1812.08135; the 2017
+    # LIM status report, arXiv:1709.09066, gives 1 deg x 0.3')
+    ("rect", (78.0 / 60, 0.5 / 60), [("TIME", "[C II]", 5.3, 8.5)]),
+    # TIFUUN on ASTE: 195-319 GHz, [C II] at z = 4.9-8.7 (Endo et al. 2026); survey ~1 deg^2 (provisional, LIM25)
+    ("square", 1.0, [("TIFUUN", "[C II]", 4.9, 8.7)], "tl"),
+    # COSMOS-3D (JWST NIRCam grism): 0.33 deg^2, [O III] emitters at z = 6.75-9.05 (Meyer et al. 2026)
+    ("square", np.sqrt(0.33), [("COSMOS-3D", "[O III]", 6.75, 9.05)], "br"),
+]
+FP_COLOUR = "#f0f0f0"
+
+
+def footprint_members(entry, z, dz=0.0):
+    """Members of a FOOTPRINTS entry whose line range contains z (widened by dz)."""
+    return [m for m in entry[2] if m[2] - dz <= z <= m[3] + dz]
+
+
+def footprint_size(entry):
+    """(width, height) [deg] of a FOOTPRINTS entry."""
+    shape, size = entry[0], entry[1]
+    return tuple(size) if shape == "rect" else (size, size)
 
 # the quantities shared with plot_lightcone_square.py: label, colour map, scale
 # (lin: percentiles; log: positive values; log1p: log10(1 + x); unit: 0..1; eor: -150..30 mK)
@@ -278,6 +320,16 @@ def parse(argv=None):
                    help="movie: open on a rotating 3D view of the coeval box at the nearest node redshift, whose "
                         "front face is the slice, then zoom into the slice (default cube; needs the cached coeval)")
     p.add_argument("--intro-seconds", type=float, default=5.0, help="length of the cube intro (default 5 s)")
+    p.add_argument("--outro", choices=("turn", "none"), default="turn",
+                   help="evolving movie: after the end, zoom out to the whole box (globe) and turn the finished "
+                        "simulation, the matter density at the last node (z = 5), as the intro in reverse "
+                        "(default turn; needs that density coeval, or the HEALPix density at the lowest shell)")
+    p.add_argument("--outro-shift", choices=("fade", "sweep"), default="fade",
+                   help="the ending: how the last frame turns into the finished density, with the circles, galaxies "
+                        "and text kept: a cross-fade (default) or a soft front sweeping out from the centre")
+    p.add_argument("--outro-shift-seconds", type=float, default=3.0, help="length of that shift (default 3 s)")
+    p.add_argument("--outro-seconds", type=float, default=5.0,
+                   help="length of the turning box at the end (default 5 s; plus 2.5 s of zoom-out)")
     p.add_argument("--mwa", action="store_true", help="movie: draw the MWA circle too (wider than the box)")
     p.add_argument("--fixed-z", action="store_true",
                    help="movie: stay on the slice at --freq (no evolution); default: move through the lightcone")
@@ -296,9 +348,10 @@ def parse(argv=None):
     p.add_argument("--geometry", choices=("rect", "healpix"), default="rect",
                    help="evolving movie: the rectilinear lightcone (default) or the HEALPix maps (the sky as a globe, "
                         "full sky then the patch)")
-    p.add_argument("--stops", nargs="*", default=["HERA=12.5", "LOFAR=10.5", "SKA-Low=9"],
+    p.add_argument("--stops", nargs="*", default=["HERA=12.5", "LOFAR=10.5", "SKA-Low=9", "surveys=7.8"],
                    help="evolving movie: NAME=z, the redshifts where the zoom halts on each field of view "
-                        "(default HERA=12.5 LOFAR=10.5 SKA-Low=9); circles show only in their bands")
+                        "(default HERA=12.5 LOFAR=10.5 SKA-Low=9 surveys=7.8); circles show only in their bands; "
+                        "'surveys' frames the largest footprint of the other surveys in band (--footprints)")
     p.add_argument("--intro-quantity", default="ics",
                    help="evolving movie: the cube intro shows 'ics' (the initial density, default) or the shown "
                         "quantity's coeval at the first node ('same')")
@@ -317,6 +370,10 @@ def parse(argv=None):
                    help="evolving movie with several quantities: the colour scales of the log-scaled quantities "
                         "(star formation, emissivities, temperatures, J_LW, ...) follow the redshift (default; "
                         "from slices at 6 redshifts) or stay fixed; density, x_HI and T_b always stay fixed")
+    p.add_argument("--footprints", choices=("auto", "on", "none"), default="auto",
+                   help="other surveys (FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, COMAP, CONCERTO, TIME, TIFUUN) while "
+                        "one of their lines is at the frame's (figure: the slice's) redshift; auto: on in the "
+                        "evolving movie (after the last 21-cm stop), off in the figure and --fixed-z")
     p.add_argument("--black-centre", type=float, default=0.07,
                    help="movie with several quantities: a black disc where the sectors meet, of this radius "
                         "(fraction of the frame height; default 0.07; 0: none)")
@@ -895,6 +952,66 @@ def render_rgb(sl, colourers, sampler, quantities, xs, ys, origin, spin=0.0, box
 
 
 # ====================================================================== figure
+def draw_figure_footprints(fig, ax, fps, sl, centre, img, Z, x0f, y0f, wf, hf, lim):
+    """The other surveys of the figure (--footprints on): large ones (circles) on the box; the others in a zoom
+    panel at figure fraction (x0f, y0f, wf, hf), whose region is marked on the box."""
+    from matplotlib.patches import Circle, ConnectionPatch, Rectangle
+    k = sl.cmpc_per_deg()
+
+    def outline(axx, entry, lw=1.0):
+        wd, hd = (v * k for v in footprint_size(entry))
+        for lw_, colr, al in ((lw * 2.6, "black", 0.5), (lw, FP_COLOUR, 1.0)):
+            if entry[0] == "circle":
+                art = Circle(centre, wd / 2, fill=False, ec=colr, lw=lw_, alpha=al, zorder=3)
+            else:
+                art = Rectangle((centre[0] - wd / 2, centre[1] - hd / 2), wd, hd, fill=False, ec=colr, lw=lw_,
+                                alpha=al, zorder=3)
+            axx.add_patch(art)
+        return wd, hd
+
+    def label(axx, text, x, y, ha, va, fs_):
+        axx.text(x, y, text, color="white", fontsize=fs_, ha=ha, va=va, zorder=4,
+                 bbox=dict(boxstyle="round,pad=0.15", fc="black", ec=FP_COLOUR, lw=0.6, alpha=0.75))
+
+    small = [f for f in fps if f[1][0] != "circle"]
+    for i, entry, members in fps:
+        names = " · ".join(m[0] for m in members)
+        if entry[0] == "circle":
+            wd, _ = outline(ax, entry)
+            t = np.radians(125)
+            label(ax, names, centre[0] + wd / 2 * np.cos(t), centre[1] + wd / 2 * np.sin(t), "right", "bottom", 7.5)
+        log.info(f"  {names}: {footprint_size(entry)[0]:.3g} deg = {footprint_size(entry)[0] * k:.0f} cMpc")
+    if not small:
+        return
+    R = 0.62 * max(max(footprint_size(e)) for _, e, _ in small) * k
+    zx, zy = (centre[0] - R, centre[0] + R), (centre[1] - R, centre[1] + R)
+    axz = fig.add_axes([x0f, y0f, wf, hf])
+    axz.set_facecolor("black")
+    L = sl.L
+    axz.imshow(img, extent=(0, L, 0, L), origin="lower", interpolation="nearest", rasterized=True, zorder=0)
+    axz.set_xlim(*zx)
+    axz.set_ylim(*zy)
+    axz.set_aspect("equal")
+    axz.tick_params(direction="out", labelsize=8)
+    axz.yaxis.tick_right()
+    axz.set_xlabel(r"$x$ [cMpc]", fontsize=9)
+    pad = 0.012 * 2 * R
+    for i, entry, members in small:
+        wd, hd = outline(axz, entry, lw=1.2)
+        names = " · ".join(m[0] for m in members)
+        if entry[0] == "rect":
+            label(axz, names, centre[0] - wd / 2, centre[1] + hd / 2 + pad, "left", "bottom", 7.5)
+        elif entry[-1] == "br":
+            label(axz, names, centre[0] + wd / 2 - pad, centre[1] - hd / 2 + pad, "right", "bottom", 7.5)
+        else:
+            label(axz, names, centre[0] - wd / 2 + pad, centre[1] + hd / 2 - pad, "left", "top", 7.5)
+    # the zoom region on the box, joined to the panel
+    ax.add_patch(Rectangle((zx[0], zy[0]), 2 * R, 2 * R, fill=False, ec="white", lw=0.9, zorder=4))
+    for yy in (zy[1], zy[0]):
+        fig.add_artist(ConnectionPatch((zx[1], yy), (zx[0], yy), coordsA="data", coordsB="data", axesA=ax, axesB=axz,
+                                       color="0.55", lw=0.7, zorder=1))
+
+
 def make_figure(sl, a, quantities, out):
     import matplotlib
     matplotlib.use("Agg")
@@ -920,8 +1037,13 @@ def make_figure(sl, a, quantities, out):
     right = (0.95 if cb else 0.15) + (0.45 if a.deg_axis else 0.0)
     S = a.fig_width - left - right
     FW, FH = a.fig_width, S + bottom + top
-    fig = plt.figure(figsize=(FW, FH))
-    ax = fig.add_axes([left / FW, bottom / FH, S / FW, S / FH])
+    # --footprints on: a zoom panel to the right with the other surveys' footprints (they are small on the box)
+    fps = [(i, e, footprint_members(e, sl.z)) for i, e in enumerate(FOOTPRINTS)] if a.footprints == "on" else []
+    fps = [f for f in fps if f[2]]
+    Z = 0.62 * S if any(e[0] != "circle" for _, e, _ in fps) else 0.0
+    FWt = FW + (0.35 + Z + 0.55 if Z else 0.0)
+    fig = plt.figure(figsize=(FWt, FH))
+    ax = fig.add_axes([left / FWt, bottom / FH, S / FWt, S / FH])
     # the image: native cells inside the box (nearest), black outside
     npx = sl.N
     xs = (np.arange(npx) + 0.5) * c
@@ -997,10 +1119,13 @@ def make_figure(sl, a, quantities, out):
         from matplotlib.cm import ScalarMappable
         q = quantities[0]
         cl = colourers[q]
-        cax = fig.add_axes([(left + S + 0.12 + (0.45 if a.deg_axis else 0)) / FW, bottom / FH, 0.16 / FW, S / FH])
+        cax = fig.add_axes([(left + S + 0.12 + (0.45 if a.deg_axis else 0)) / FWt, bottom / FH, 0.16 / FWt, S / FH])
         sm = ScalarMappable(norm=cl.norm, cmap=cl.cmap)
         cbar = fig.colorbar(sm, cax=cax)
         cbar.set_label(cbar_label(q, cl), rotation=90, labelpad=8)
+    if fps:
+        draw_figure_footprints(fig, ax, fps, sl, centre, img, Z, (FW + 0.35) / FWt, (bottom + (S - Z) / 2) / FH,
+                               Z / FWt, Z / FH, lim)
     if sl.watermark:
         fig.text(0.01, 0.005, sl.watermark, color="#d62728", fontsize=7, ha="left", va="bottom")
     base = str(out)
@@ -1242,6 +1367,18 @@ class Renderer:
             ax.add_patch(line)
             self.circ[n] = (casing, line, lab, r)
         self.deg150 = {n: d for n, d, _ in INSTRUMENTS}
+        # other surveys: thin solid outlines (dark casing), shown while a line is in band (draw: circ_alpha["_fp"])
+        self.fp = []
+        for i, entry in enumerate(FOOTPRINTS):
+            mk = (lambda **kw: Circle(C, 1.0, fill=False, **kw)) if entry[0] == "circle" else \
+                (lambda **kw: Rectangle(C, 1.0, 1.0, fill=False, **kw))
+            casing = mk(ec="black", lw=4.2 * fs, alpha=0.45, zorder=3, visible=False)
+            line = mk(ec=FP_COLOUR, lw=1.8 * fs, zorder=3, visible=False)
+            lab = ax.text(0, 0, "", color="white", fontsize=15 * fs, zorder=5, visible=False,
+                          bbox=dict(boxstyle="round,pad=0.22", fc="black", ec=FP_COLOUR, lw=1.0 * fs, alpha=0.7))
+            ax.add_patch(casing)
+            ax.add_patch(line)
+            self.fp.append((entry, casing, line, lab, i))
         self.marks = []
         for s in stops:
             if s.mark is None:
@@ -1353,6 +1490,36 @@ class Renderer:
                                        va="center", color="white", fontsize=17 * fs, bbox=box, zorder=8)
                                for q in quantities]
 
+    def text_alpha(self, t, al):
+        """Fade a text and its box together (1: as drawn)."""
+        bp = t.get_bbox_patch()
+        if not hasattr(self, "_box_alpha"):
+            self._box_alpha = {}
+        if bp is not None and id(t) not in self._box_alpha:
+            self._box_alpha[id(t)] = bp.get_alpha()
+        t.set_alpha(al)
+        if bp is not None:
+            base = self._box_alpha[id(t)]
+            bp.set_alpha((1.0 if base is None else base) * al if al < 1 else base)
+
+    def keys_alpha(self, al, legend=None):
+        """Fade the colour bar (al) and the galaxy legend (legend, default al); 1: as drawn."""
+        if not hasattr(self, "_key_arts"):  # the artists and their own alphas, once
+            cbar = []
+            if getattr(self, "cax", None) is not None:
+                cax = self.cax
+                cbar = [cax.patch, cax.title] + list(cax.get_children()) + cax.get_xticklabels()
+            if getattr(self, "cbar_bg", None) is not None:
+                cbar.append(self.cbar_bg)
+            self._key_arts = [(art, art.get_alpha(), False) for art in cbar] + \
+                [(art, art.get_alpha(), True) for art in self.legend_artists]
+        for art, base, is_legend in self._key_arts:
+            f = (al if legend is None else legend) if is_legend else al
+            try:
+                art.set_alpha((1.0 if base is None else base) * f if f < 1 else base)
+            except Exception:  # noqa: BLE001  (artists without alpha)
+                pass
+
     def show_keys(self, on):
         """Colour bar and galaxy legend (hidden while the cube shows another quantity)."""
         for art in self.legend_artists + [getattr(self, "cbar_bg", None), getattr(self, "cax", None)]:
@@ -1393,9 +1560,74 @@ class Renderer:
         self.fig.canvas.draw()
         return np.asarray(self.fig.canvas.buffer_rgba()).copy()
 
+    def draw_footprints(self, x0, y0, w, h, ov):
+        """The FOOTPRINTS outlines at the frame's redshift, with the gate circ_alpha["_fp"] (0..1)."""
+        if self.a.footprints == "none":
+            gate = 0.0
+        elif self.circ_alpha is None:  # figure-like frames (--fixed-z): only with --footprints on
+            gate = 1.0 if self.a.footprints == "on" else 0.0
+        else:  # the evolving movie: set per frame by plan_evolve
+            gate = self.circ_alpha.get("_fp", 0.0)
+        z = self.zcur if self.zcur is not None else self.sl.z
+        big = max(w, h)
+        if self.angular:
+            to_data = lambda deg: 2 * np.sin(np.radians(deg) / 2)  # noqa: E731
+        else:
+            k = np.radians(1.0) * float(self.sl.cosmo.comoving_distance(z).to_value("Mpc"))
+            to_data = lambda deg: deg * k  # noqa: E731
+        cx, cy = self.C
+        for entry, casing, line, lab, i in self.fp:
+            members = footprint_members(entry, z, 0.15)
+            if not members or gate <= 0 or ov <= 0:
+                for art in (casing, line, lab):
+                    art.set_visible(False)
+                continue
+            zf = max(float(np.clip(min(z - m[2] + 0.15, m[3] + 0.15 - z) / 0.15, 0, 1)) for m in members)
+            wd, hd = (to_data(v) for v in footprint_size(entry))
+            side = max(wd, hd)
+            # in while larger than ~10 % of the frame; out once it no longer fits (its name would be outside)
+            fit = w if entry[0] == "rect" else h
+            fade_in = float(np.clip((side / big - 0.06) / 0.06, 0, 1))
+            fade_out = float(np.clip((1.05 * fit - side) / (0.25 * fit), 0, 1))
+            al = gate * ov * zf * fade_in * fade_out
+            if entry[0] == "circle":
+                for art in (casing, line):
+                    art.set_center((cx, cy))
+                    art.set_radius(wd / 2)
+                t = np.radians(125)
+                lx, ly, ha, va = cx + wd / 2 * np.cos(t), cy + wd / 2 * np.sin(t), "right", "bottom"
+            else:
+                for art in (casing, line):
+                    art.set_xy((cx - wd / 2, cy - hd / 2))
+                    art.set_width(wd)
+                    art.set_height(hd)
+                pad = 0.012 * h
+                if entry[0] == "rect":  # a line scan: name above its left end
+                    lx, ly, ha, va = cx - wd / 2, cy + hd / 2 + pad, "left", "bottom"
+                elif entry[-1] == "br":  # corners chosen so that nested names do not collide
+                    lx, ly, ha, va = cx + wd / 2 - pad, cy - hd / 2 + pad, "right", "bottom"
+                else:
+                    lx, ly, ha, va = cx - wd / 2 + pad, cy + hd / 2 - pad, "left", "top"
+            for art in (casing, line):
+                art.set_visible(al > 0.02)
+                art.set_alpha(al * (0.45 if art is casing else 1.0))
+            lab.set_text(" · ".join(m[0] for m in members))
+            lab.set_position((lx, ly))
+            lab.set_ha(ha)
+            lab.set_va(va)
+            fx, fy = (lx - x0) / w, (ly - y0) / h
+            # not off the frame, nor on the title, the info lines, the colour bar and legend, or the caption
+            blocked = ((fx < 0.13 and fy > 0.88) or (fx < 0.3 and 0.78 < fy < 0.92) or (fx > 0.72 and fy > 0.62)
+                       or (fx < 0.75 and fy < 0.2))
+            inside = 0.01 < fx < 0.99 and 0.04 < fy < 0.98 and not blocked
+            lab.set_visible(al > 0.3 and inside and not self.a.no_text)
+            lab.set_alpha(min(1.0, al))
+
     def _overlays(self):
         arts = [self.box_edge, self.grid]
         for casing, line, lab, r in self.circ.values():
+            arts += [casing, line, lab]
+        for _, casing, line, lab, _ in self.fp:
             arts += [casing, line, lab]
         arts += [art for _, art, _ in self.marks]
         if self.gal is not None:
@@ -1406,8 +1638,10 @@ class Renderer:
             arts += [self.sb_line, self.sb_text]
         return arts
 
-    def draw(self, h, cen, cap=None, alpha=0.0, spin=0.0, ov=1.0):
-        """RGBA buffer (H, W, 4) of one frame: height h [cMpc] centred on cen; ov fades the overlays."""
+    def draw(self, h, cen, cap=None, alpha=0.0, spin=0.0, ov=1.0, mix=None):
+        """RGBA buffer (H, W, 4) of one frame: height h [cMpc] centred on cen; ov fades the overlays. mix = (w, fn,
+        mode): the background shifts to fn(xs, ys, cen) (RGB) by w (0..1), everywhere ('fade') or behind a soft
+        front sweeping out from the centre ('sweep'); the overlays are drawn once on top."""
         sl, a, ax, W, H, fs = self.sl, self.a, self.ax, self.W, self.H, self.fs
         self.cube_edges.set_visible(False)
         w = h * W / H
@@ -1418,6 +1652,17 @@ class Renderer:
                          hole=a.black_centre if len(self.q) > 1 else 0.0)
         if self.angular:
             rgb[~self.sampler.mask] = 0
+        if mix is not None and mix[0] > 0:
+            w_, fn, mode = mix
+            rgb2 = fn(xs, ys, cen).astype(np.float32)
+            if mode == "sweep":
+                e = 0.35  # width of the soft front, in units of the half-diagonal
+                gx, gy = np.meshgrid(np.arange(W) + 0.5 - W / 2, np.arange(H) + 0.5 - H / 2)
+                u = np.hypot(gx, gy) / np.hypot(W / 2, H / 2)
+                wt = np.clip((w_ * (1 + e) - e / 2 - u) / e + 0.5, 0, 1)[..., None]
+            else:
+                wt = w_
+            rgb = np.clip(rgb.astype(np.float32) * (1 - wt) + rgb2 * wt, 0, 255).astype(np.uint8)
         self.im.set_data(rgb)
         self.im.set_extent((x0, x0 + w, y0, y0 + h))
         ax.set_xlim(x0, x0 + w)
@@ -1465,6 +1710,7 @@ class Renderer:
             lab.set_ha("left" if np.cos(t) >= 0 else "right")
             lab.set_va("bottom" if np.sin(t) >= 0 else "top")
             lab.set_visible(al > 0.3 and inside and not a.no_text and r > 40 * pxs)
+        self.draw_footprints(x0, y0, w, h, ov)
         for s, art, size in self.marks:
             on = cap is not None and self.stops[cap] is s
             art.set_visible(s.h * 0.3 < h < s.h * 4 and size > 3 * pxs and ov > 0.01)
@@ -1661,6 +1907,41 @@ def make_movie(sl, a, quantities, out, stills=False):
     log.info(f"wrote {out} ({nfr} frames, {nfr / a.fps:.1f} s) in {time.time() - t0:.0f} s")
 
 
+# ====================================================================== the ending (--outro turn)
+def outro_zoom(last, h1, c1, a):
+    """Frames (as `last`, ["lc", s, h, centre, caption, caption alpha, overlay alpha, circle alphas]) that zoom
+    out from the last frame to height h1 centred on c1 in 2.5 s, about the point that stays put on screen;
+    the overlays fade out over the first 40 %, the caption over the first 0.5 s."""
+    ease = lambda u: u * u * (3 - 2 * u)  # noqa: E731
+    _, s, h0, c0, cap, al0, ov0, ca = last
+    n = int(round(2.5 * a.fps))
+    c0, c1 = np.array(c0, float), np.array(c1, float)
+    P = c1 if np.isclose(h0, h1) else (c0 * h1 - c1 * h0) / (h1 - h0)
+    out = []
+    for i in range(1, n + 1):
+        t = i / n
+        h = float(np.exp(np.log(h0) + ease(t) * (np.log(h1) - np.log(h0))))
+        cen = c0 + ease(t) * (c1 - c0) if np.isclose(h0, h1) else P + (c0 - P) * h / h0
+        al = al0 * max(0.0, 1 - (i / a.fps) / 0.5)
+        out.append(["lc", s, h, tuple(cen), cap if al > 0 else None, al, ov0 * (1 - ease(min(t / 0.4, 1.0))), ca])
+    return out
+
+
+def outro_turn(a, n_hold=None):
+    """(t, azimuth [deg], elevation [deg], shrink 0..1, caption alpha) of the turning finished box: from
+    face-on, turning on the way the intro turned, tilting up and shrinking, then at rest (last 0.8 s)."""
+    ease = lambda u: u * u * (3 - 2 * u)  # noqa: E731
+    n = max(2, int(round(a.outro_seconds * a.fps)))
+    hold = int(round(0.8 * a.fps)) if n_hold is None else n_hold
+    out = []
+    for i in range(n):
+        t = min(i / max(n - 1 - hold, 1), 1.0)
+        tt = i / a.fps
+        out.append((t, 200.0 * ease(t), 28.0 * ease(min(t / 0.7, 1.0)), ease(min(t / 0.6, 1.0)),
+                    float(np.clip((tt - 0.4) / 0.4, 0, 1))))
+    return out
+
+
 # ====================================================================== the evolving movie
 class Lightcone:
     """The rect lightcone stores of a run, read one block of slices (one chunk deep) at a time."""
@@ -1827,7 +2108,7 @@ def choose_target(lc, k_end, h_end, W, H, cell, L, search):
     return float((ix + 0.5) * cell), float((iy + 0.5) * cell)
 
 
-def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre_of=None):
+def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre_of=None, angle_size=None):
     """Frames of the evolution: ["lc", s, h, centre, caption, caption alpha, overlay alpha, circle alphas].
     With several quantities and no --end, the zoom ends at the last stop and keeps its field of view.
 
@@ -1845,6 +2126,19 @@ def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre
     deg = {n: d for n, d, _ in INSTRUMENTS}
     if size_of is None:
         size_of = lambda name, z: sl.fov_at(deg[name], z)  # noqa: E731
+    if angle_size is None:  # an angle [deg] at z in the frame's units (cMpc)
+        angle_size = lambda d, z: np.radians(d) * float(sl.cosmo.comoving_distance(z).to_value("Mpc"))  # noqa: E731
+    fov_size = size_of
+
+    def survey_deg(z):  # the largest footprint in band at z, other than the circles [deg]
+        sides = [max(footprint_size(e)) for e in FOOTPRINTS if e[0] != "circle" and footprint_members(e, z)]
+        return max(sides) if sides else None
+
+    def size_of(name, z):  # noqa: F811  (the stop "surveys" frames the largest footprint in band)
+        if name == "surveys":
+            d = survey_deg(z)
+            return angle_size(d, z) if d else fov_size("SKA-Low", z)
+        return fov_size(name, z)
     if h_start is None:
         h_start = L * 1.06 if aspect >= 1 else L * 1.06 / aspect
     h_end = a.end if h_end is None else h_end
@@ -1852,6 +2146,13 @@ def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre
     for spec in a.stops:
         name, zs_ = spec.split("=")
         zs_ = float(zs_)
+        if name == "surveys":
+            if not (z_end < zs_ < z_start) or a.footprints == "none" or survey_deg(zs_) is None:
+                log.warning(f"stop {spec} skipped (outside z = {z_end:.1f}-{z_start:.1f}, no footprint in band, "
+                            f"or --footprints none)")
+                continue
+            stops_req.append((name, zs_))
+            continue
         lo, hi = BANDS[name]
         if not (z_end < zs_ < z_start) or not (lo <= NU21 / (1 + zs_) <= hi) or (name == "MWA" and not a.mwa):
             log.warning(f"stop {spec} skipped (outside z = {z_end:.1f}-{z_start:.1f}, its band, or MWA off)")
@@ -1905,10 +2206,39 @@ def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre
     caps = [(0, ("The lightcone", f"from z = {z_start:.0f} to {z_end:.1f}, moving towards us through cosmic time"))]
     for name, f0 in stops:
         zz = z_f[f0]
+        if name == "surveys":  # the footprints that fit the frame of this stop, by line
+            hh = 1.12 * size_of(name, zz)
+            by_line = {}
+            for entry in FOOTPRINTS:
+                sz = angle_size(max(footprint_size(entry)), zz)
+                if 0.06 * hh <= sz <= hh * max(aspect, 1.0):
+                    for nm, ln, _, _ in footprint_members(entry, zz):
+                        by_line.setdefault(ln, []).append(nm)
+            caps.append((f0, ("Galaxy surveys and line-intensity mapping",
+                              f"z = {zz:.1f} · " + " · ".join(f"{ln}: {', '.join(nm)}" for ln, nm in by_line.items()))))
+            continue
         D = sl.fov_at(deg[name], zz)
         size = f"{D / 1000:.2f} cGpc" if D >= 1000 else f"{D:.0f} cMpc"
         caps.append((f0, (f"{name} field of view", f"{fmt_angle(deg[name] * 150 * (1 + zz) / NU21)} at "
                                                    f"{NU21 / (1 + zz):.0f} MHz (z = {zz:.1f}) ≈ {size}")))
+    # other surveys: with the stop "surveys" (fading in over the 1.5 s before it); without it, from the end of
+    # the last stop's caption, with a caption of their own
+    f_fp = None
+    if a.footprints != "none" and "surveys" in dict(stops):
+        f_fp = dict(stops)["surveys"]
+    elif a.footprints != "none" and stops:
+        f_fp = stops[-1][1] + cap_len
+        zz = z_f[min(f_fp, ne - 1)]
+        by_line = {}
+        for entry in FOOTPRINTS:
+            for name, line, z0, z1 in footprint_members(entry, zz):
+                by_line.setdefault(line, []).append(name)
+        if f_fp < ne - cap_len and by_line:
+            caps.append((f_fp, ("Galaxy surveys and line-intensity mapping",
+                                " · ".join(f"{ln}: {', '.join(nm)}" for ln, nm in by_line.items()))))
+            caps.sort(key=lambda c: c[0])
+        elif not by_line:
+            f_fp = None
     ramp = 1.5 * fps
     for f in range(ne):
         cen = tuple(centre_of(f)) if centre_of else tuple(c0 + (c1 - c0) * ease(min(f / max(f1, 1), 1.0)))
@@ -1920,6 +2250,7 @@ def plan_evolve(lc, a, sl, C, ep, size_of=None, h_start=None, h_end=None, centre
                 cap, al = text, min(1.0, t / 0.3, (t_end - t) / 0.5)
         ca = {n: (float(np.clip((f - (f0 - ramp)) / ramp, 0, 1)) if not a.all_circles else 1.0)
               for n, f0 in first_stop.items()}
+        ca["_fp"] = float(np.clip((f - f_fp) / ramp + 1.0, 0, 1)) if f_fp is not None else 0.0
         frames.append(["lc", float(s_f[f]), float(h_f[f]), cen, cap, max(al, 0.0), 1.0, ca])
     ne_end = int(round(max(2 * a.hold, cap_s + 1.5) * fps))
     xh = lc.global_mean("neutral_fraction")
@@ -2146,13 +2477,64 @@ def make_evolve_movie(a, quantities, out=None, stills=False, plots=Path("plots")
             allf.append(fr)
     else:
         allf = frames
+    # the ending: zoom out to the box, then the finished box (the density at the last node) turns
+    cubes = {R.cube_q: R.cube_colourer} if sl.cube else {}
+    intro_key = R.cube_q if sl.cube else None
+    z_fin = None
+    if a.outro == "turn":
+        z_fin = float(min(run.redshifts))
+        try:
+            plane_end = rect_plane(lc.dist, int(round(frames[-1][1])), cell, lc.N)
+            faces = read_cube_faces(run, "density", z_fin, plane_end, lc.N, with_front=True)
+            sl.cube["outro"] = faces
+            cubes["outro"] = Colourer("density", faces["front"])
+        except Exception as e:  # noqa: BLE001
+            log.warning(f"no turning box at the end: {e}")
+            z_fin = None
+    n_main, marks = len(allf), []
+    dens_sampler = None
+    if z_fin is not None:
+        # after the pause on the last frame: there the slice shifts into the finished density (the density of the
+        # last node on the plane of the last slice) under the circles, galaxies and text (--outro-shift); then the
+        # density zooms out to the whole box while those fade, becomes the cube's front face (0.3 s) and turns
+        box_h = sl.L * 1.06 if W >= H else sl.L * 1.06 * H / W
+        last = frames[-1]
+        cap_l = last[4]
+        cap_o = (f"EOS26 at z = {z_fin:.1f}", f"the matter density at the end of the simulation · {sl.L / 1000:g} cGpc"
+                 f" · {sl.N}³ cells of {sl.cell:.3g} cMpc")
+        dens_sampler = FieldSampler(cell, 0 if a.interp == "nearest" else 1)
+        dens_sampler.set_fields({"density": np.ascontiguousarray(sl.cube["outro"]["front"].T)})  # [y, x]
+        nsh = max(2, int(round(a.outro_shift_seconds * a.fps)))
+        ease = lambda u: u * u * (3 - 2 * u)  # noqa: E731
+        for i in range(1, nsh + 1):
+            allf.append(("mix", ease(i / nsh), last))
+        marks += [len(allf) - nsh // 2, len(allf) - 1]
+        zo = outro_zoom(list(last[:4]) + [None, 0.0] + list(last[6:]), box_h, (sl.L / 2, sl.L / 2), a)
+        n04, n05 = int(round(0.4 * a.fps)), int(round(0.5 * a.fps))
+        for j, fr in enumerate(zo):  # the end caption fades out (0.4 s), then the new one fades in
+            cap, al = (cap_l, 1 - (j + 1) / n04) if j < n04 else (cap_o, min(1.0, (j - n05) / n05) if j >= n05 else 0.0)
+            allf.append(("dens", fr[2], fr[3], cap, max(al, 0.0), fr[6], fr[7]))
+        marks += [len(allf) - len(zo) // 2, len(allf) - 1]
+        s1, s0_ = H * sl.L / box_h, 0.42 * H
+        face = ("ocube", 0.0, 0.0, s1, (W / 2, H / 2), cap_o, 1.0)
+        nb = int(round(0.3 * a.fps))
+        for i in range(nb):
+            allf.append(("oblend", 1 - (i + 1) / (nb + 1), face,
+                         ("dens", box_h, (sl.L / 2, sl.L / 2), cap_o, 1.0, 0.0, last[7])))
+        turn = outro_turn(a)
+        for _, az, elev, g, _al in turn:
+            allf.append(("ocube", az, elev, s1 + (s0_ - s1) * g, (W / 2, H / 2), cap_o, 1.0))
+        marks.append(len(allf) - len(turn) // 2)
     label = SPEC.get(quantities[0], (quantities[0],))[0] if len(quantities) == 1 else ""
 
     lcs = [f[1] for f in frames]
     step = np.abs(np.gradient(lcs)) if len(lcs) > 1 else np.zeros(1)
     step_of = {id(f): float(st) for f, st in zip(frames, step)}
 
-    def draw_lc(fr, spin):
+    def dens_rgb(xs, ys, cen):  # the finished density (the background the ending shifts to)
+        return render_rgb(sl, {"density": cubes["outro"]}, dens_sampler, ["density"], xs, ys, cen)
+
+    def draw_lc(fr, spin, mix=None):
         _, s, h, cen, cap, al, ov, ca = fr
         R.circ_alpha = ca
         z = lc.z_of_k(s)
@@ -2182,12 +2564,63 @@ def make_evolve_movie(a, quantities, out=None, stills=False, plots=Path("plots")
             xhi = float(np.interp(z, *xh)) if xh is not None and (ep["z_x90"] is None or z <= ep["z_x90"]) else None
             R.epoch.set_text(epoch_label(z, ep, xhi))
             R.epoch.set_visible(True)
-        return R.draw(h, cen, cap, al, spin=spin, ov=ov)
+        if mix is None:
+            return R.draw(h, cen, cap, al, spin=spin, ov=ov)
+        # the shift of the ending: the colour bar fades; the info lines fade out and, from half-way, back in for
+        # the density
+        w = mix[0]
+        R.keys_alpha(1 - w, legend=1.0)
+        if not a.no_text:
+            R.text_alpha(R.info, abs(1 - 2 * w))
+            R.text_alpha(R.epoch, max(0.0, 1 - 2 * w))
+            if w > 0.5:
+                R.info.set_text(f"matter density · z = {z_fin:.2f}")
+        return R.draw(h, cen, cap, al, spin=spin, ov=ov, mix=mix)
 
     cache = {}
 
+    def draw_dens(fr, spin):  # the finished density, zooming out from the end view while the overlays fade
+        _, h, cen, cap, al, ov, ca = fr
+        save = R.colourers, R.q, R.sampler
+        R.colourers, R.q, R.sampler, R.circ_alpha = {"density": cubes["outro"]}, ["density"], dens_sampler, ca
+        R.zcur = z_end  # circles and footprints keep the sizes of the last frame while they fade
+        if not a.no_text:
+            R.epoch.set_visible(False)
+            R.info.set_text(f"matter density · z = {z_fin:.2f}")
+        R.show_keys(ov > 0.01)
+        R.keys_alpha(0.0, legend=ov)  # the colour bar is gone; the galaxy legend fades with the galaxies
+        buf = R.draw(h, cen, cap, al, spin=spin, ov=ov)
+        R.colourers, R.q, R.sampler = save
+        return buf
+
+    def use_cube(key):  # the intro cube or the finished box at the end
+        if key is not None and getattr(R, "cube_q", None) != key:
+            R.cube_q, R.cube_colourer, R.cube_tex = key, cubes[key], None
+            cache.clear()
+
     def frame(fr, fi):
         spin = a.spin * fi / max(len(allf) - 1, 1)
+        if not a.no_text:
+            R.text_alpha(R.info, 1.0)
+            R.text_alpha(R.epoch, 1.0)
+        R.keys_alpha(1.0)
+        if fr[0] == "mix":
+            return draw_lc(fr[2], spin, mix=(fr[1], dens_rgb, a.outro_shift))
+        if fr[0] == "dens":
+            return draw_dens(fr, spin)
+        if fr[0] == "ocube":
+            use_cube("outro")
+            if not a.no_text:
+                R.epoch.set_visible(False)
+                R.info.set_text(f"matter density · z = {z_fin:.2f}")
+                R.show_keys(False)
+            return draw_frame(R, ("cube",) + tuple(fr[1:]), spin, cache)
+        if fr[0] == "oblend":  # (1 - w) * the cube + w * the density
+            b1 = frame(fr[3], fi)
+            b0 = frame(fr[2], fi)
+            return ((1 - fr[1]) * b0.astype(np.float32) + fr[1] * b1.astype(np.float32)).astype(np.uint8)
+        if fr[0] in ("cube", "blend"):
+            use_cube(intro_key)
         if fr[0] == "cube":
             if not a.no_text:
                 R.epoch.set_visible(False)
@@ -2207,9 +2640,10 @@ def make_evolve_movie(a, quantities, out=None, stills=False, plots=Path("plots")
         zl = np.array([lc.z_of_k(allf[i][1]) for i in lcf])
         for zt in [z_start - 0.3] + [v for v in (ep["z_slow"], ep["z_trough"], ep["z_x90"]) if v] + [z_end + 0.05]:
             todo.append(lcf[int(np.argmin(np.abs(zl - zt)))])
-        for i in lcf:  # the middle of each stop caption
-            if allf[i][4] and "field of view" in allf[i][4][0] and (i - 1 not in lcf or allf[i - 1][4] != allf[i][4]):
+        for i in lcf:  # each caption, 0.9 s after it starts
+            if allf[i][4] and (i - 1 not in lcf or allf[i - 1][4] != allf[i][4]):
                 todo.append(min(i + int(0.9 * a.fps), len(allf) - 1))
+        todo += [n_main - 1] + marks  # the ending: half-way shifted, shifted, half-way out, out, turning
         todo.append(len(allf) - 1)
         for fi in sorted(set(todo)):
             buf = frame(allf[fi], fi)
@@ -2557,6 +2991,7 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
     frames, z_start, z_end = plan_evolve(
         shell, a, sl, (0.0, 0.0), ep,
         size_of=lambda name, z: 2 * np.sin(np.radians(deg[name] * 150 * (1 + z) / NU21) / 2),
+        angle_size=lambda d, z: 2 * np.sin(np.radians(d) / 2),
         h_start=2.3, h_end=2 * np.sin(alpha_end), centre_of=lambda f: (0.0, 0.0))
     # spin: the globe turns while it is whole, and stops when the zoom starts in earnest
     nspin = int(round((a.intro_seconds + a.seconds[0] + 0.6 * a.seconds[1]) * a.fps))
@@ -2636,8 +3071,56 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
     for j, fr in enumerate(frames):
         allf.append(("sky", fr, nin + nx + j))
     steps = np.abs(np.gradient([fr[1] for fr in frames]))
+    # the ending: zoom out to the whole globe, then the sky of the lowest shell (z = 5), density, turns
+    n_main, ocol, k_fin, z_fin, turn = len(allf), None, None, None, []
+    if a.outro == "turn" and "density" in full:
+        k_fin = float(np.argmin(shell.z))
+        z_fin = shell.z_of_k(k_fin)
+        st = full["density"]
+        v = st.values(np.sort(rng.choice(st.nrow, min(st.nrow, 200000), replace=False)), k_fin)
+        if np.isfinite(v).mean() > 0.5:
+            ocol = Colourer("density", v[np.isfinite(v)])
+        else:
+            log.warning(f"no HEALPix density at z = {z_fin:.2f}: no turning globe at the end")
+    elif a.outro == "turn":
+        log.warning("no HEALPix density: no turning globe at the end")
+    marks = []
+    if ocol is not None:
+        # after the pause on the last frame: there the shell shifts into the density of the lowest shell under
+        # the circles, galaxies and text (--outro-shift); then the density zooms out to the whole globe while
+        # those fade, and the globe turns
+        ease = lambda u: u * u * (3 - 2 * u)  # noqa: E731
+        last, gl = frames[-1], n_main - 1
+        cap_l = last[4]
+        cap_o = (f"The sky at z = {z_fin:.1f}", f"matter density on a shell "
+                 f"{float(cosmo.comoving_distance(z_fin).to_value('Gpc')):.1f} cGpc away, at the end of the simulation")
+        turn = outro_turn(a)
+        nsh = max(2, int(round(a.outro_shift_seconds * a.fps)))
+        for i in range(1, nsh + 1):
+            allf.append(("smix", ease(i / nsh), ("sky", last, gl)))
+        marks += [len(allf) - nsh // 2, len(allf) - 1]
+        zo = outro_zoom(list(last[:4]) + [None, 0.0] + list(last[6:]), 2.3, (0.0, 0.0), a)
+        n04, n05 = int(round(0.4 * a.fps)), int(round(0.5 * a.fps))
+        for j, fr in enumerate(zo):  # the end caption fades out (0.4 s), then the new one fades in
+            cap, al = (cap_l, 1 - (j + 1) / n04) if j < n04 else (cap_o, min(1.0, (j - n05) / n05) if j >= n05 else 0.0)
+            allf.append(("odens", fr[2], fr[3], cap, max(al, 0.0), fr[6], fr[7]))
+        marks += [len(allf) - len(zo) // 2, len(allf) - 1]
+        for j in range(len(turn)):
+            allf.append(("outro", j, cap_o, 1.0))
+        marks.append(len(allf) - len(turn) // 2)
 
-    def draw_sky(fr, gi, spin=0.0):
+    def cam_out(j):  # the globe keeps turning the way it turned in the intro: 0 -> -140 deg
+        phi = -np.radians(140.0) * turn[j][1] / 200.0
+        c, s_ = np.cos(phi), np.sin(phi)
+        return np.array([[c, -s_, 0], [s_, c, 0], [0, 0, 1]]) @ t_end
+
+    def dens_sky_rgb(xs, ys, cen):  # the density of the lowest shell, seen as the last frame (the ending's shift)
+        sampler.set_view(cam_out(0), k_fin, 0.0)
+        rgb = render_rgb(sl, {"density": ocol}, sampler, ["density"], xs, ys, cen, box_mask=False)
+        rgb[~sampler.mask] = 0
+        return rgb
+
+    def draw_sky(fr, gi, spin=0.0, mix=None):
         _, s_, h, cen, cap, al, ov, ca = fr
         z = shell.z_of_k(s_)
         sampler.set_view(cam(gi), s_, float(steps[min(max(gi - nin - nx, 0), len(steps) - 1)]))
@@ -2672,7 +3155,32 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
             xhi = float(np.interp(z, *xh)) if xh is not None and (ep["z_x90"] is None or z <= ep["z_x90"]) else None
             R.epoch.set_text(epoch_label(z, ep, xhi))
             R.epoch.set_visible(True)
-        return R.draw(h, cen, cap, al, spin=spin, ov=ov)
+        if mix is None:
+            return R.draw(h, cen, cap, al, spin=spin, ov=ov)
+        w = mix[0]  # the shift of the ending, as in the rect movie
+        R.keys_alpha(1 - w, legend=1.0)
+        if not a.no_text:
+            R.text_alpha(R.info, abs(1 - 2 * w))
+            R.text_alpha(R.epoch, max(0.0, 1 - 2 * w))
+            if w > 0.5:
+                R.info.set_text(f"matter density · z = {z_fin:.2f}")
+        return R.draw(h, cen, cap, al, spin=spin, ov=ov, mix=mix)
+
+    def draw_odens(item):  # the density of the lowest shell, zooming out while the overlays fade
+        _, h, cen, cap, al, ov, ca = item
+        sampler.set_view(cam_out(0), k_fin, 0.0)
+        R.zcur, R.circ_alpha = z_end, ca  # circles and footprints keep their last sizes while they fade
+        R.show_keys(ov > 0.01)
+        R.keys_alpha(0.0, legend=ov)
+        limb.set_visible(h > 0.8)
+        save = R.colourers, R.q
+        R.colourers, R.q = {"density": ocol}, ["density"]
+        if not a.no_text:
+            R.info.set_text(f"matter density · z = {z_fin:.2f}")
+            R.epoch.set_visible(False)
+        buf = R.draw(h, cen, cap, al, ov=ov)
+        R.colourers, R.q = save
+        return buf
 
     def draw_intro(i, cap, al):
         sampler.set_view(cam(i), shell.k_of_z(z_start), 0.0)
@@ -2689,9 +3197,34 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
         R.colourers, R.q, R.gal = save
         return buf
 
+    def draw_outro(j, cap, al):
+        sampler.set_view(cam_out(j), k_fin, 0.0)
+        R.zcur, R.circ_alpha = z_fin, {}
+        R.show_keys(False)
+        limb.set_visible(True)
+        save = R.colourers, R.q, R.gal
+        R.colourers, R.q = {"density": ocol}, ["density"]
+        R.gal = {k: np.zeros(0) for k in ("x", "y", "muv", "rv", "w")} if gnodes is not None else R.gal
+        if not a.no_text:
+            R.info.set_text(f"matter density · z = {z_fin:.2f}")
+            R.epoch.set_visible(False)
+        buf = R.draw(2.3, (0.0, 0.0), cap, al, ov=0.0)
+        R.colourers, R.q, R.gal = save
+        return buf
+
     def frame(item):
+        if not a.no_text:
+            R.text_alpha(R.info, 1.0)
+            R.text_alpha(R.epoch, 1.0)
+        R.keys_alpha(1.0)
         if item[0] == "intro":
             return draw_intro(item[1], item[2], item[3])
+        if item[0] == "outro":
+            return draw_outro(item[1], item[2], item[3])
+        if item[0] == "smix":
+            return draw_sky(item[2][1], item[2][2], mix=(item[1], dens_sky_rgb, a.outro_shift))
+        if item[0] == "odens":
+            return draw_odens(item)
         if item[0] == "blend":
             b0 = draw_intro(item[2][1], item[2][2], 0.0)
             fr = list(frames[0])
@@ -2713,8 +3246,9 @@ def make_sky_movie(a, quantities, out=None, stills=False, plots=Path("plots"), q
             idx.append(sky[int(np.argmin(np.abs(zl - zt)))])
         for i in sky:
             c = allf[i][1][4]
-            if c and "field of view" in c[0] and allf[i - 1][1][4] != c:
+            if c and allf[i - 1][0] == "sky" and allf[i - 1][1][4] != c:  # each caption, 0.9 s after it starts
                 idx.append(min(i + int(0.9 * a.fps), len(allf) - 1))
+        idx += [n_main - 1] + marks  # the ending: half-way shifted, shifted, half-way out, out, turning
         idx.append(len(allf) - 1)
         for fi in sorted(set(idx)):
             buf = frame(allf[fi])
