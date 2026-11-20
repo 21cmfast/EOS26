@@ -1,0 +1,92 @@
+# Observational constraints on the volume-averaged IGM neutral fraction x_HI(z), compiled 19 Nov 2026 for the EOS26 paper
+# (postprocess/plot_xHI_history.ipynb). One row per point. Values are those quoted in the papers (abstract or results
+# table, read in Nov 2026); the note says where a value was not checked against the paper itself.
+#
+# Columns
+#   key      bib key (AuthorYY as in paper/refs.bib where the paper is there, e.g. Greig17a; Greig24b because refs.bib
+#            already uses Greig24 and Greig24a for two other 2024 papers)
+#   dataset  label for the reference key (one marker per dataset)
+#   method   dark_pixels | qso_dw (Lya damping wings in QSO spectra / dark-gap stacks) | gal_dw (damping wings in galaxy
+#            spectra) | lya_ew (Lya equivalent widths / emitter fractions of LBGs) | lae (LAE luminosity function / clustering)
+#   in_qin25 1 if the reference is in Qin et al. (2025) Fig. 4, 0 if added here
+#   z, dz_lo, dz_hi       redshift and its lower/upper error (0 = none plotted)
+#   x, dx_lo, dx_hi       x_HI and its lower/upper error
+#   kind     value | upper (x is an upper limit; dx_hi > 0 is the 1-sigma error on the limit) |
+#            lower (x is a lower limit; dx_lo > 0 is the 1-sigma error on the limit) | range (x - dx_lo to x + dx_hi, no formal errors)
+#   ref      journal reference or arXiv id
+#   note     what the number is / caveats
+key,dataset,method,in_qin25,z,dz_lo,dz_hi,x,dx_lo,dx_hi,kind,ref,note
+McGreer15,McGreer+15,dark_pixels,1,5.6,0,0,0.04,0,0.05,upper,"MNRAS 447, 499","x_HI <= 0.04 + 0.05 (1 sigma), abstract"
+McGreer15,McGreer+15,dark_pixels,1,5.9,0,0,0.06,0,0.05,upper,"MNRAS 447, 499","x_HI <= 0.06 + 0.05 (1 sigma), abstract"
+McGreer15,McGreer+15,dark_pixels,1,6.1,0,0,0.38,0,0.20,upper,"MNRAS 447, 499","z ~ 6.1 bin as plotted in Qin25 Fig. 4 (0.38 + 0.20); NOT checked against McGreer15 Table 2"
+Jin23,Jin+23,dark_pixels,1,5.5,0,0,0.09,0.08,0.08,upper,"ApJ 942, 59","Lya+Lyb dark fraction, tau > 4.5 (their Fig. 6 and Table 2)"
+Jin23,Jin+23,dark_pixels,1,5.7,0,0,0.16,0.14,0.14,upper,"ApJ 942, 59","as above"
+Jin23,Jin+23,dark_pixels,1,5.9,0,0,0.28,0.08,0.08,upper,"ApJ 942, 59","as above"
+Jin23,Jin+23,dark_pixels,1,6.1,0,0,0.69,0.06,0.06,upper,"ApJ 942, 59","Lya+Lyb dark fraction, tau > 2.5"
+Jin23,Jin+23,dark_pixels,1,6.3,0,0,0.79,0.04,0.04,upper,"ApJ 942, 59","as above (abstract)"
+Jin23,Jin+23,dark_pixels,1,6.5,0,0,0.87,0.03,0.03,upper,"ApJ 942, 59","as above (abstract)"
+Jin23,Jin+23,dark_pixels,1,6.7,0,0,0.94,0.09,0.06,upper,"ApJ 942, 59","as above (abstract)"
+MesingerHaiman04,Mesinger & Haiman 04,qso_dw,1,6.28,0,0,0.2,0,0,lower,"ApJ 611, L69","SDSS J1030+0524, x_HI >~ 0.2 beyond the Stromgren surface"
+Greig17a,Greig+17,qso_dw,1,7.09,0,0,0.40,0.19,0.21,value,"MNRAS 466, 4239","ULAS J1120+0641; 68%"
+Banados18,Banados+18,qso_dw,1,7.54,0,0,0.56,0.18,0.21,value,"Nature 553, 473","ULAS J1342+0928; central 68%"
+Davies18,Davies+18,qso_dw,1,7.09,0,0,0.48,0.26,0.26,value,"ApJ 864, 142","ULAS J1120+0641; median and 68%"
+Davies18,Davies+18,qso_dw,1,7.54,0,0,0.60,0.23,0.20,value,"ApJ 864, 142","ULAS J1342+0928; median and 68%"
+Greig19,Greig+19,qso_dw,1,7.54,0,0,0.21,0.19,0.17,value,"MNRAS 484, 5094","ULAS J1342+0928; 68%"
+Wang20,Wang+20,qso_dw,1,7.00,0,0,0.70,0.23,0.20,value,"ApJ 896, 23","DES J0252-0503; 68%"
+Greig22,Greig+22,qso_dw,1,7.00,0,0,0.64,0.23,0.19,value,"MNRAS 512, 5390","DES J0252-0503, fiducial EoR morphology"
+Greig22,Greig+22,qso_dw,1,7.51,0,0,0.27,0.17,0.21,value,"MNRAS 512, 5390","J1007+2115. Greig22 also give 0.49 +- 0.11 at z = 7.29 from all four z > 7 QSOs; which Greig22 values Qin25 plot is not stated"
+Spina24,Spina+24,qso_dw,1,5.6,0,0,0.19,0.07,0.07,value,"A&A 688, L26","damping wings of stacked dark gaps; 1 sigma"
+Spina24,Spina+24,qso_dw,1,5.9,0,0,0.44,0,0,upper,"A&A 688, L26","as above"
+Zhu24,Zhu+24,qso_dw,1,5.8,0,0,0.061,0.039,0,lower,"MNRAS 533, L49","x_HI >= 6.1 +- 3.9 per cent (stacked Lyb dark-gap edges)"
+CurtisLake23,Curtis-Lake+23,gal_dw,1,11.48,0,0,0.5,0,0,lower,"Nat. Astron. 7, 622","JADES-GS-z11-0, x_HI > 0.5 (1 sigma), sensitive to the redshift. Qin25 Fig. 4 shows ~0.8 (+0.2/-0.25) here, a value not in the paper text"
+Hsiao24,Hsiao+24,gal_dw,1,10.17,0,0,0.9,0,0,lower,"ApJ 973 (2024); arXiv:2305.03042","MACS0647-JD, X_HI > 0.9 (1 sigma) without a DLA; unconstrained if a DLA is added"
+Umeda24,Umeda+24,gal_dw,1,7.12,0.08,0.06,0.53,0.47,0.18,value,"ApJ 971, 124","composite spectra; mode and 68% HPDI (Table 4 of the arXiv:2306.00487 final version)"
+Umeda24,Umeda+24,gal_dw,1,7.44,0.24,0.34,0.65,0.34,0.27,value,"ApJ 971, 124","as above"
+Umeda24,Umeda+24,gal_dw,1,8.28,0.44,0.41,0.91,0.22,0.09,value,"ApJ 971, 124","as above"
+Umeda24,Umeda+24,gal_dw,1,9.91,1.15,1.49,0.92,0.10,0.08,value,"ApJ 971, 124","as above (arXiv v1 had z = 10.28)"
+Mesinger15,Mesinger+15,lya_ew,1,7.0,0,0,0.4,0,0,lower,"MNRAS 446, 566","Q_HII(z ~ 7) <= 0.6 (68%)"
+Mason19,Mason+19,lya_ew,1,7.9,0.6,0.6,0.76,0,0,lower,"MNRAS 485, 3947","> 0.76 (68%), > 0.46 (95%)"
+Jung20,Jung+20,lya_ew,1,7.6,0,0,0.49,0.19,0.19,value,"arXiv:2009.10092","Texas Spectroscopic Search III"
+Whitler20,Whitler+20,lya_ew,1,7.0,0,0,0.55,0.13,0.11,value,"MNRAS 495, 3602","with M_UV-M_h scatter (0.59 +0.12/-0.14 without)"
+Bolan22,Bolan+22,lya_ew,1,6.7,0.2,0.2,0.25,0,0,upper,"MNRAS 517, 3263","68%"
+Bolan22,Bolan+22,lya_ew,1,7.6,0.6,0.6,0.83,0.11,0.08,value,"MNRAS 517, 3263","68%"
+Bruton23,Bruton+23,lya_ew,1,10.6,0,0,0.88,0,0,upper,"ApJ 949, L40","GN-z11; 95%"
+Jones24,Jones+24,lya_ew,1,7.0,1.0,1.0,0.45,0.25,0.25,range,"A&A 683, A238","approximate X_HI ~ 0.2-0.7 for 6 < z < 8, no formal errors"
+Nakane24,Nakane+24,lya_ew,1,7.0,0,0,0.79,0,0,upper,"ApJ 967, 28","z ~ 7 (bin mean z not checked; arXiv v2 had < 0.37)"
+Nakane24,Nakane+24,lya_ew,1,8.0,0,0,0.62,0.36,0.15,value,"ApJ 967, 28","z ~ 8"
+Nakane24,Nakane+24,lya_ew,1,11.0,2.0,2.0,0.93,0.07,0.04,value,"ApJ 967, 28","z ~ 9-13"
+Tang24,Tang+24,lya_ew,1,7.0,0.5,1.0,0.48,0.22,0.15,value,"ApJ 975, 208","z = 6.5-8.0 bin (median z = 7.0). Their z > 8 inference is NOT included (not checked)"
+SobacchiMesinger15,Sobacchi & Mesinger 15,lae,1,6.6,0,0,0.5,0,0,upper,"MNRAS 453, 1843","LAE angular clustering, <~ 0.5 (1 sigma)"
+Ouchi18,Ouchi+18,lae,1,6.6,0,0,0.15,0.15,0.15,value,"PASJ 70, S13","LAE clustering (published value; arXiv v1 had 0.3 +0.1/-0.2)"
+Inoue18,Inoue+18,lae,1,7.3,0,0,0.5,0.3,0.1,value,"arXiv:1801.00067","LAE LF compared with simulated LAEs"
+Morales21,Morales+21,lae,1,6.6,0,0,0.08,0.05,0.08,value,"ApJ 919, 120","Lya LF"
+Morales21,Morales+21,lae,1,7.0,0,0,0.28,0.05,0.05,value,"ApJ 919, 120","Lya LF"
+Morales21,Morales+21,lae,1,7.3,0,0,0.83,0.07,0.06,value,"ApJ 919, 120","Lya LF"
+Wold22,Wold+22,lae,1,6.9,0,0,0.33,0,0,upper,"ApJ 927, 36","LAGER Lya LF; 1 sigma"
+Greig24b,Greig+24,qso_dw,0,5.8,0,0,0.21,0,0,upper,"MNRAS 530, 3208","XQR-30; 68th percentile upper limit"
+Greig24b,Greig+24,qso_dw,0,5.95,0,0,0.20,0,0,upper,"MNRAS 530, 3208","as above"
+Greig24b,Greig+24,qso_dw,0,6.05,0,0,0.21,0,0,upper,"MNRAS 530, 3208","as above"
+Greig24b,Greig+24,qso_dw,0,6.15,0,0,0.20,0.12,0.14,value,"MNRAS 530, 3208","median and 68%"
+Greig24b,Greig+24,qso_dw,0,6.35,0,0,0.29,0.13,0.14,value,"MNRAS 530, 3208","median and 68%"
+Greig24b,Greig+24,qso_dw,0,6.55,0,0,0.18,0,0,upper,"MNRAS 530, 3208","68th percentile upper limit"
+Durovcikova24,Durovcikova+24,qso_dw,0,6.10,0,0,0.21,0.07,0.17,value,"ApJ 969, 162","stacked QSO spectra, ATON models (CROC: 0.10 +0.73)"
+Durovcikova24,Durovcikova+24,qso_dw,0,6.46,0,0,0.21,0.07,0.33,value,"ApJ 969, 162","ATON (CROC: 0.57 +0.26/-0.47)"
+Durovcikova24,Durovcikova+24,qso_dw,0,6.87,0,0,0.37,0.17,0.17,value,"ApJ 969, 162","ATON (CROC: 0.57 +0.26/-0.21)"
+Umeda25b,Umeda+25b,gal_dw,0,5.0,0,0,0.00,0,0.12,value,"arXiv:2504.04683","581 galaxies, stacked spectra; mode and 68% HPDI; subsample z = 4.51-5.45 (no z error plotted)"
+Umeda25b,Umeda+25b,gal_dw,0,5.8,0,0,0.25,0.20,0.10,value,"arXiv:2504.04683","subsample z = 5.50-6.37"
+Umeda25b,Umeda+25b,gal_dw,0,7.0,0,0,0.65,0.35,0.27,value,"arXiv:2504.04683","subsample z = 6.55-7.48"
+Umeda25b,Umeda+25b,gal_dw,0,8.6,0,0,1.00,0.20,0,value,"arXiv:2504.04683","subsample z = 7.51-9.43"
+Umeda25b,Umeda+25b,gal_dw,0,10.4,0,0,1.00,0.40,0,value,"arXiv:2504.04683","subsample z = 9.57-12.47"
+Mason26,Mason+26,gal_dw,0,6.5,0,0,0.33,0.27,0.18,value,"A&A 705, A114","high-S/N prism subsample"
+Mason26,Mason+26,gal_dw,0,9.3,0,0,0.64,0.23,0.17,value,"A&A 705, A114","> 0.70 excluding GN-z11"
+Kageura25,Kageura+25,lya_ew,0,6.0,0,0,0.17,0.16,0.23,value,"ApJS 278, 33","~600 JWST galaxies; Lya EW / LF evolution"
+Kageura25,Kageura+25,lya_ew,0,7.0,0,0,0.63,0.28,0.18,value,"ApJS 278, 33","as above"
+Kageura25,Kageura+25,lya_ew,0,8.5,0.5,0.5,0.79,0.21,0.13,value,"ApJS 278, 33","z ~ 8-9"
+Kageura25,Kageura+25,lya_ew,0,12.0,2.0,2.0,0.88,0.13,0.11,value,"ApJS 278, 33","z ~ 10-14"
+Jones25,Jones+25,lya_ew,0,7.0,0,0,0.64,0.21,0.13,value,"arXiv:2409.06405","JADES, updated intrinsic REW distribution (their semi-analytic models give ~0.8-0.9)"
+Umeda25a,Umeda+25a LF,lae,0,5.7,0,0,0.05,0,0,upper,"ApJS 277, 37","SILVERRUSH XIV, Lya LF"
+Umeda25a,Umeda+25a LF,lae,0,6.6,0,0,0.15,0.08,0.10,value,"ApJS 277, 37","Lya LF"
+Umeda25a,Umeda+25a LF,lae,0,7.0,0,0,0.18,0.12,0.14,value,"ApJS 277, 37","Lya LF"
+Umeda25a,Umeda+25a LF,lae,0,7.3,0,0,0.75,0.13,0.09,value,"ApJS 277, 37","Lya LF"
+Umeda25a,Umeda+25a ACF,lae,0,5.7,0,0,0.06,0.03,0.12,value,"ApJS 277, 37","LAE angular correlation function"
+Umeda25a,Umeda+25a ACF,lae,0,6.6,0,0,0.21,0.14,0.19,value,"ApJS 277, 37","LAE angular correlation function"

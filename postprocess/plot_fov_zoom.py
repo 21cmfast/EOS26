@@ -22,7 +22,8 @@ HII_DIM/4 chunks of 1 MiB per quantity (~0.4 GB at HII_DIM = 1500). --quantity t
 quantity, or several (sectors; one figure each with --each; 'all': every released quantity that exists);
 brightness_temp_with_rsds is the finalised T_b with dv/dr and RSDs. Each quantity has its label, colour
 map and scale (SPEC, as plot_lightcone_square.py; others: viridis, linear), its colour-bar label (log10
-when log-scaled), and circle colours that show on its colour map (--circle-colours to set them).
+when log-scaled), and circle colours (figure: CIRCLE_COLOUR, the 21-cm line's; movie: colours that show on its
+colour map; --circle-colours to set them).
 
 Fields of view: the angular sizes at 150 MHz of Greig et al. (2022, Table 1), scaled as 1/nu to the
 frequency of the slice and converted to comoving size with the run's cosmology. Circles show the FoV
@@ -30,9 +31,18 @@ as a diameter, as in Greig et al. At 150 MHz in the EOS26 cosmology: SKA-Low 3.0
 LOFAR 3.7 deg = 0.60 cGpc, HERA 8.2 deg = 1.33 cGpc, MWA 24.7 deg = 4.0 cGpc (larger than the 2.25 cGpc
 box: drawn only with --show-mwa or --start mwa).
 
+Figure: the slice with the circles of the 21-cm instruments and, next to it, a zoom panel on the centre
+with the footprints of the other surveys (--footprints; the largest, SPHEREx, as a circle on the box),
+coloured by the line-intensity maps of EOS26 they go with ([C II], [O III], Halpha/Hbeta), with
+their redshift range in the name where none of their lines is at the slice's redshift; the colour bar
+is then under the panel. The panel shows vertical bands: the figure's quantity, then by default two of
+x_HI, T_b and density (INSET_BANDS), or the quantities of --inset-bands (e.g. the line-intensity maps once
+they exist; none: one band), each with its colour bar under it.
+
 Galaxies (--halos FILE or auto): the PerturbedHaloCatalog of postprocess/galaxies at the node nearest
 the slice, within --halo-slab of the slice's box plane, drawn as open red rings sized by M_UV (as
-Davies et al. 2025), M_UV = 51.63 - 2.5 log10(SFR / 1.15e-28) as in tuesday.
+Davies et al. 2025), M_UV = 51.63 - 2.5 log10(SFR / 1.15e-28) as in tuesday: in the movie the brightest
+--max-galaxies (100) in a frame, in the figure's zoom panel the --band-galaxies (5) brightest of each band.
 
 Movie (default): it opens on a turning 3D view of the box (--intro cube; the initial density, or the
 shown quantity's coeval at the first node with --intro-quantity same), whose front face is the box plane
@@ -51,8 +61,7 @@ the node nearest each frame, within one cell of the frame's slice plane (read on
 With several quantities (--quantity 4, 6, 8 or a list) the frames show sectors, as in the figure; their
 colour scales follow the redshift (--sector-scale), and without --end the zoom ends on the last field
 of view and keeps it to the end. After the last 21-cm stop, the footprints of other surveys appear while
-one of their lines is in band (--footprints; FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, COMAP, CONCERTO, TIME,
-TIFUUN). At the end (--outro turn), after the pause on the last frame, the image there shifts into the
+one of their lines is in band (--footprints; FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, CONCERTO, TIME, TIFUUN). At the end (--outro turn), after the pause on the last frame, the image there shifts into the
 finished simulation under the circles, galaxies and text (--outro-shift: a cross-fade or a front sweeping out
 from the centre, 3 s): the matter density of the last node (z = 5) on the box plane of the last slice. It then
 zooms out to the whole box while the overlays fade, and turns as the intro in reverse (HEALPix: the globe of
@@ -172,23 +181,39 @@ EXTRAS = [
 # size share one outline.
 FOOTPRINTS = [
     # SPHEREx deep fields, ~100 deg^2 each at the ecliptic poles (SPHEREx mission paper, arXiv:2511.02985);
-    # H-alpha to z = 6.6, [O III] 5007 to z = 9.0 at 5 um
-    ("circle", 2 * np.sqrt(100.0 / np.pi), [("SPHEREx deep field", "[O III]", 0.0, 9.0)]),
+    # H-alpha to z = 6.6, [O III] 5007 to z = 9.0 and H-beta to z = 9.3 at 5 um
+    ("circle", 2 * np.sqrt(100.0 / np.pi), [("SPHEREx deep field", "[O III]", 0.0, 9.0),
+                                            ("SPHEREx deep field", "Hα/Hβ", 0.0, 9.3)]),
     # FYST/EoR-Spec Deep Spectroscopic Survey: two 4 deg^2 fields, 210-420 GHz (CCAT-Prime Collaboration 2023;
-    # arXiv:2404.05352);
-    # COMAP: three fields of 3.5-4.2 deg^2, CO(2-1) at z = 6-8 in 26-34 GHz (Cleary et al. 2022)
-    ("square", 2.0, [("FYST EoR-Spec", "[C II]", 3.5, 8.05), ("COMAP", "CO(2-1)", 5.8, 7.9)], "tl"),
+    # arXiv:2404.05352)
+    ("square", 2.0, [("FYST EoR-Spec", "[C II]", 3.5, 8.05)], "tl"),
     # CONCERTO: nominal 1.4 deg^2 survey, 130-310 GHz (CONCERTO Collaboration 2020)
     ("square", np.sqrt(1.4), [("CONCERTO", "[C II]", 5.1, 13.6)], "tl"),
-    # TIME: one-beam-wide 78' x 0.5' line scan, 183-326 GHz (Crites et al. 2014, as in arXiv:1812.08135; the 2017
-    # LIM status report, arXiv:1709.09066, gives 1 deg x 0.3')
-    ("rect", (78.0 / 60, 0.5 / 60), [("TIME", "[C II]", 5.3, 8.5)]),
+    # TIME: one-beam-wide 78' x 0.5' line scan, 183-326 GHz, [C II] at z = 4.8-9.4 (Crites et al. 2014, as in
+    # arXiv:1812.08135; the 2017 LIM status report, arXiv:1709.09066, gives 1 deg x 0.3')
+    ("rect", (78.0 / 60, 0.5 / 60), [("TIME", "[C II]", 4.8, 9.4)]),
     # TIFUUN on ASTE: 195-319 GHz, [C II] at z = 4.9-8.7 (Endo et al. 2026); survey ~1 deg^2 (provisional, LIM25)
-    ("square", 1.0, [("TIFUUN", "[C II]", 4.9, 8.7)], "tl"),
+    ("square", 1.0, [("TIFUUN", "[C II]", 4.9, 8.7)], "br"),
     # COSMOS-3D (JWST NIRCam grism): 0.33 deg^2, [O III] emitters at z = 6.75-9.05 (Meyer et al. 2026)
     ("square", np.sqrt(0.33), [("COSMOS-3D", "[O III]", 6.75, 9.05)], "br"),
 ]
-FP_COLOUR = "#f0f0f0"
+# outlines of the other surveys, by the line-intensity maps of EOS26 they go with: [C II] teal, [O III] dark red,
+# Halpha/Hbeta green. Apart in colour from the FoV circles and the red galaxy rings, and
+# visible on the grey x_HI and the 21-cm colour maps. An outline with two lines has both colours (the second dashed).
+LINE_COLOUR = {"[C II]": "#2a9d8f", "[O III]": "#9a031e", "Hα/Hβ": "#8CBD19"}
+ZOOM_COLOUR = "#ff2020"  # the figure's zoom region on the box
+CIRCLE_COLOUR = "#FFB703"  # the figure's 21-cm fields of view: one line, one colour (the names say which instrument)
+INSET_BANDS = ("neutral_fraction", "brightness_temp", "density")  # the zoom panel's bands by default
+# simulation boxes drawn centred in the figure as a guide to scale [cMpc]: Lumina 500 (Zier et al. 2026),
+# THESAN-1 95.5 and CoDa II 94 (Kannan et al. 2022; Ocvirk et al. 2020), SPHINX and similar boxes ~20 (Rosdahl et al. 2018)
+SIM_BOXES = (500.0, 100.0, 20.0)
+SIM_COLOUR = "#b3ffb3"  # the simulation reference: pale, on a black casing
+NAME_COLOUR = "#D1EDE7"  # the box behind the simulation's name (EOS26), paler than SIM_COLOUR
+
+
+def footprint_colours(members):
+    """The line colours of these FOOTPRINTS members, without repeats."""
+    return list(dict.fromkeys(LINE_COLOUR[m[1]] for m in members))
 
 
 def footprint_members(entry, z, dz=0.0):
@@ -293,7 +318,8 @@ def parse(argv=None):
     p.add_argument("--each", action="store_true",
                    help="figure with several quantities: one figure per quantity instead of sectors")
     p.add_argument("--circle-colours", nargs="+", default=None, metavar="NAME=COLOUR",
-                   help="circle colours, e.g. HERA=white LOFAR=#f5c400 (default: chosen to show on the colour map)")
+                   help="circle colours, e.g. HERA=white LOFAR=#f5c400 (default: figure CIRCLE_COLOUR; movie chosen to "
+                        "show on the colour map)")
     p.add_argument("--vmin", type=float, default=None, help="lower end of the colour scale (one quantity)")
     p.add_argument("--vmax", type=float, default=None, help="upper end of the colour scale (one quantity)")
     p.add_argument("--halos", default=None,
@@ -372,9 +398,14 @@ def parse(argv=None):
                         "(star formation, emissivities, temperatures, J_LW, ...) follow the redshift (default; "
                         "from slices at 6 redshifts) or stay fixed; density, x_HI and T_b always stay fixed")
     p.add_argument("--footprints", choices=("auto", "on", "none"), default="auto",
-                   help="other surveys (FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, COMAP, CONCERTO, TIME, TIFUUN) while "
+                   help="other surveys (FOOTPRINTS: COSMOS-3D, SPHEREx, FYST, CONCERTO, TIME, TIFUUN) while "
                         "one of their lines is at the frame's (figure: the slice's) redshift; auto: on in the "
-                        "evolving movie (after the last 21-cm stop), off in the figure and --fixed-z")
+                        "evolving movie (after the last 21-cm stop), off in --fixed-z, and in the figure (zoom panel) "
+                        "every survey, with its redshift range where none of its lines is at the slice's redshift")
+    p.add_argument("--inset-bands", nargs="*", default=None, metavar="QUANTITY",
+                   help="figure: the quantities of the zoom panel after the figure's quantity, as vertical bands "
+                        "(e.g. a [C II] map), each with its colour bar under the panel (default: two of "
+                        "INSET_BANDS, x_HI, T_b and density; without a quantity: one band)")
     p.add_argument("--black-centre", type=float, default=0.07,
                    help="movie with several quantities: a black disc where the sectors meet, of this radius "
                         "(fraction of the frame height; default 0.07; 0: none)")
@@ -393,9 +424,11 @@ def parse(argv=None):
     p.add_argument("--galaxies", choices=("rings", "virial", "none"), default="rings",
                    help="galaxies of --halos: open red rings sized by UV magnitude (default; as Davies et al. "
                         "2025), discs at the halo's comoving virial size, or none")
-    p.add_argument("--max-galaxies", type=int, default=500,
+    p.add_argument("--max-galaxies", type=int, default=100,
                    help="movie: about this many rings in a 1920x1080 frame; the brightest are kept, so fainter "
-                        "galaxies appear while zooming in (default 500)")
+                        "galaxies appear while zooming in (default 100)")
+    p.add_argument("--band-galaxies", type=int, default=5,
+                   help="figure: rings in each band of the zoom panel for its brightest galaxies (default 5)")
     p.add_argument("--out", default=None, help="output file (default: see above)")
     p.add_argument("--log-file", default=None)
     a = p.parse_args(argv)
@@ -447,7 +480,8 @@ class Slice:
         return np.radians(1.0) * self.Dc
 
 
-def load_slice_file(path, quantities, slab, drop_missing=False):
+def load_slice_file(path, quantities, slab, drop_missing=False, extra=()):
+    """The slice of an npz (--save-slice or test arrays); `extra`: more fields to read (the figure's bands)."""
     d = np.load(path)
     for i, q in enumerate(quantities):
         if q not in d and q in FALLBACK and FALLBACK[q] in d:
@@ -460,7 +494,9 @@ def load_slice_file(path, quantities, slab, drop_missing=False):
         quantities[:] = [q for q in quantities if q in d]
     elif missing:
         sys.exit(f"{missing} not in {path}")
-    fields = {q: np.asarray(d[q], dtype=np.float32) for q in quantities}
+    if [q for q in extra if q not in d]:
+        sys.exit(f"{[q for q in extra if q not in d]} not in {path}")
+    fields = {q: np.asarray(d[q], dtype=np.float32) for q in list(quantities) + list(extra)}
     for q in ("neutral_fraction", "sfrd_acg", "density"):  # for the bubble, the galaxy and the halo check
         if q not in fields and q in d:
             fields[q] = np.asarray(d[q], np.float32)
@@ -507,7 +543,8 @@ def load_rect_slice(a, quantities, drop_missing=False):
     if lc_dir.suffix == ".h5" and lc_dir.with_suffix("").is_dir():
         lc_dir = lc_dir.with_suffix("")
     store = {"brightness_temp_with_rsds": "brightness_temp_dvdr_with_rsds"}
-    need = list(dict.fromkeys(quantities + ["neutral_fraction", "sfrd_acg", "density"]))
+    bands = list(INSET_BANDS if a.inset_bands is None else a.inset_bands) if a.what == "figure" else []
+    need = list(dict.fromkeys(quantities + bands + ["neutral_fraction", "sfrd_acg", "density"]))
     z_want = NU21 / a.freq - 1
     fields, k, z, dist = {}, None, None, None
     for q in need:
@@ -521,7 +558,7 @@ def load_rect_slice(a, quantities, drop_missing=False):
             if q in quantities and drop_missing:
                 log.warning(f"no {path}: skipped")
                 quantities.remove(q)
-            elif q in quantities:
+            elif q in quantities or q in bands:
                 sys.exit(f"no {path}")
             continue
         with h5py.File(path, "r") as h:
@@ -900,9 +937,38 @@ def ring_px(muv, fs=1.0):
     return fs * np.clip(3 + 2.6 * (-15 - np.asarray(muv, float)), 3, 26)
 
 
+def casing(colour):
+    """Casing colour for a line: black under light lines, white under dark ones (so both show on x_HI's black and
+    white)."""
+    from matplotlib.colors import to_rgb
+    r, g, b = to_rgb(colour)
+    return "black" if 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.35 else "white"
+
+
 def outlined(lw=2.0, fg="black", alpha=0.85):
     from matplotlib import patheffects as pe
     return [pe.withStroke(linewidth=lw, foreground=fg, alpha=alpha)]
+
+
+def boxed(ax, text, x, y, ha, va, fs, ec, fc="black", color="white", lw=1.0, alpha=0.75, weight="normal",
+          transform=None, zorder=4):
+    """A name in a round box drawn around its letters' ink, with the same margin (0.2 fs) on all sides (a text's own
+    box also holds the font's descent below the line). (x, y): the box's ha/va side, in transform (default: data)."""
+    from matplotlib.font_manager import FontProperties
+    from matplotlib.patches import FancyBboxPatch
+    from matplotlib.textpath import TextPath
+    from matplotlib.transforms import Affine2D, ScaledTranslation
+    prop = FontProperties(size=fs, weight=weight)
+    ink = TextPath((0, 0), text, prop=prop).get_extents()  # [pt] from the baseline origin
+    m = 0.2 * fs
+    w, h = ink.width + 2 * m, ink.height + 2 * m
+    bx, by = {"left": 0, "center": -w / 2, "right": -w}[ha], {"bottom": 0, "center": -h / 2, "top": -h}[va]
+    # points from (x, y)
+    tr = Affine2D().scale(1 / 72) + ax.figure.dpi_scale_trans + ScaledTranslation(x, y, transform or ax.transData)
+    ax.add_patch(FancyBboxPatch((bx, by), w, h, boxstyle=f"round,pad=0,rounding_size={m}", transform=tr, fc=fc, ec=ec,
+                                lw=lw, alpha=alpha, zorder=zorder, clip_on=False))
+    ax.text(bx + m - ink.x0, by + m - ink.y0, text, transform=tr, color=color, fontproperties=prop, ha="left",
+            va="baseline", zorder=zorder + 0.1)
 
 
 def nice_length(target):
@@ -953,64 +1019,144 @@ def render_rgb(sl, colourers, sampler, quantities, xs, ys, origin, spin=0.0, box
 
 
 # ====================================================================== figure
-def draw_figure_footprints(fig, ax, fps, sl, centre, img, Z, x0f, y0f, wf, hf, lim):
-    """The other surveys of the figure (--footprints on): large ones (circles) on the box; the others in a zoom
-    panel at figure fraction (x0f, y0f, wf, hf), whose region is marked on the box."""
+def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, gals=None, per_band=5):
+    """The other surveys of the figure (--footprints): large ones (circles) on the box; the others in a zoom
+    panel, whose region is marked on the box. bands: (quantity, RGB image, Colourer) of the figure's quantity
+    and of --inset-bands, shown side by side in the panel, each with its colour bar under it (the first one is
+    also the box's); box_in: the panel (x0, y0, size) in inches, and the figure size (W, H); gals: (x, y, M_UV)
+    of the galaxies, of which the per_band brightest of each band are ringed."""
+    from matplotlib.cm import ScalarMappable
     from matplotlib.patches import Circle, ConnectionPatch, Rectangle
+    from matplotlib.ticker import MaxNLocator
     k = sl.cmpc_per_deg()
 
-    def outline(axx, entry, lw=1.0):
+    def outline(axx, entry, cols, lw=1.8):
         wd, hd = (v * k for v in footprint_size(entry))
-        for lw_, colr, al in ((lw * 2.6, "black", 0.5), (lw, FP_COLOUR, 1.0)):
-            if entry[0] == "circle":
-                art = Circle(centre, wd / 2, fill=False, ec=colr, lw=lw_, alpha=al, zorder=3)
-            else:
-                art = Rectangle((centre[0] - wd / 2, centre[1] - hd / 2), wd, hd, fill=False, ec=colr, lw=lw_,
-                                alpha=al, zorder=3)
-            axx.add_patch(art)
+        if entry[0] == "circle":
+            mk = lambda **kw: Circle(centre, wd / 2, fill=False, zorder=3, **kw)  # noqa: E731
+        else:
+            mk = lambda **kw: Rectangle((centre[0] - wd / 2, centre[1] - hd / 2), wd, hd, fill=False,  # noqa: E731
+                                        zorder=3, **kw)
+        axx.add_patch(mk(ec=casing(cols[0]), lw=lw * 2.2, alpha=0.5))
+        axx.add_patch(mk(ec=cols[0], lw=lw))
+        if len(cols) > 1:  # two lines on one outline: the second colour dashed on top
+            axx.add_patch(mk(ec=cols[1], lw=lw, ls=(0, (3, 3))))
         return wd, hd
 
-    def label(axx, text, x, y, ha, va, fs_):
-        axx.text(x, y, text, color="white", fontsize=fs_, ha=ha, va=va, zorder=4,
-                 bbox=dict(boxstyle="round,pad=0.15", fc="black", ec=FP_COLOUR, lw=0.6, alpha=0.75))
+    def names_of(members, out):  # out of band: with the redshifts where the line is in band
+        return " · ".join(dict.fromkeys(m[0] + (f" (z ≤ {m[3]:.1f})" if sl.z > m[3] else f" (z ≥ {m[2]:.1f})") * out
+                                        for m in members))
 
     small = [f for f in fps if f[1][0] != "circle"]
-    for i, entry, members in fps:
-        names = " · ".join(m[0] for m in members)
+    for i, entry, members, out in fps:
+        names = names_of(members, out)
         if entry[0] == "circle":
-            wd, _ = outline(ax, entry)
-            t = np.radians(125)
-            label(ax, names, centre[0] + wd / 2 * np.cos(t), centre[1] + wd / 2 * np.sin(t), "right", "bottom", 7.5)
+            wd, _ = outline(ax, entry, footprint_colours(members))
+            t = np.radians(105)  # inside the box, clear of HERA's name
+            boxed(ax, names, centre[0] + wd / 2 * np.cos(t), centre[1] + wd / 2 * np.sin(t), "right", "bottom", 15,
+                  footprint_colours(members)[0])
         log.info(f"  {names}: {footprint_size(entry)[0]:.3g} deg = {footprint_size(entry)[0] * k:.0f} cMpc")
     if not small:
         return
-    R = 0.62 * max(max(footprint_size(e)) for _, e, _ in small) * k
-    zx, zy = (centre[0] - R, centre[0] + R), (centre[1] - R, centre[1] + R)
-    axz = fig.add_axes([x0f, y0f, wf, hf])
+    (x0, y0, Z, Zh), (W, H) = box_in
+    R = 0.55 * max(max(footprint_size(e)) for _, e, _, _ in small) * k  # half its width; half its height: Ry
+    Ry = R  # a square region on the box, stretched to the panel's height
+    zx, zy = (centre[0] - R, centre[0] + R), (centre[1] - Ry, centre[1] + Ry)
+    axz = fig.add_axes([x0 / W, y0 / H, Z / W, Zh / H])
     axz.set_facecolor("black")
-    L = sl.L
+    L, c, n = sl.L, sl.cell, len(bands)
+    # the bands: equal widths of the panel, at cell edges
+    edges = [int(round((zx[0] + 2 * R * i / n) / c)) for i in range(n + 1)]
+    img = bands[0][1].copy()
+    for i in range(1, n):
+        img[:, edges[i]:edges[i + 1]] = bands[i][1][:, edges[i]:edges[i + 1]]
     axz.imshow(img, extent=(0, L, 0, L), origin="lower", interpolation="nearest", rasterized=True, zorder=0)
+    for i in range(1, n):
+        axz.axvline(edges[i] * c, color="black", lw=1.6, zorder=2)
+    for i, (q, _, cl) in enumerate(bands if cbars else []):  # a horizontal colour bar above each band
+        bw, gap = Z / n, (0.08 if n > 1 else 0.0)
+        cax = fig.add_axes([(x0 + i * bw + gap) / W, (y0 + Zh + 0.08) / H, (bw - 2 * gap) / W, 0.12 / H])
+        cbar = fig.colorbar(ScalarMappable(norm=cl.norm, cmap=cl.cmap), cax=cax, location="top")
+        cbar.set_label(cbar_label(q, cl), fontsize=None if n == 1 else 13)
+        if n > 1:
+            cax.tick_params(labelsize=11)
+            cax.xaxis.set_major_locator(MaxNLocator(3, steps=[1, 2, 5, 10]))
+    if gals is not None:  # the per_band brightest of each band, ringed and sized by M_UV as on the box
+        gx, gy, gm = gals
+        on = []
+        for i in range(n):
+            b = np.flatnonzero((gx >= edges[i] * c) & (gx < edges[i + 1] * c) & (gy > zy[0]) & (gy < zy[1]))
+            on.extend(b[np.argsort(gm[b])[:per_band]])
+        axz.scatter(gx[on], gy[on], s=(2 * ring_px(gm[on], 0.2)) ** 2, facecolors="none", edgecolors=RING,
+                    linewidths=1.1, zorder=3.5)
+        log.info(f"panel: {len(on)} galaxy rings")
     axz.set_xlim(*zx)
     axz.set_ylim(*zy)
-    axz.set_aspect("equal")
-    axz.tick_params(direction="out", labelsize=8)
-    axz.yaxis.tick_right()
-    axz.set_xlabel(r"$x$ [cMpc]", fontsize=9)
+    axz.set_aspect("auto")  # y stretched by Zh / Z
+    axz.tick_params(direction="out", labelsize=15)
+    # ticks from the panel's corner: the panel shows the size of its region, not where it is on the box
+    for axis, lo, span in ((axz.xaxis, zx[0], 2 * R), (axz.yaxis, zy[0], 2 * Ry)):
+        t = MaxNLocator(4, steps=[1, 2, 5, 10]).tick_values(0, span)
+        t = t[(t >= 0) & (t <= span)]
+        axis.set_ticks(lo + t, [f"{v:g}" for v in t])
+    axz.set_xlabel(r"$x$ [cMpc]")  # ticks left and below, as on the box; the colour bars above
+    for sp in axz.spines.values():  # the panel's border red, as its region on the box
+        sp.set_edgecolor(ZOOM_COLOUR)
+        sp.set_linewidth(2.2)
     pad = 0.012 * 2 * R
-    for i, entry, members in small:
-        wd, hd = outline(axz, entry, lw=1.2)
-        names = " · ".join(m[0] for m in members)
+    for i, entry, members, out in small:
+        cols = footprint_colours(members)
+        wd, hd = outline(axz, entry, cols, lw=2.0)
+        names = names_of(members, out)
         if entry[0] == "rect":
-            label(axz, names, centre[0] - wd / 2, centre[1] + hd / 2 + pad, "left", "bottom", 7.5)
+            boxed(axz, names, centre[0] - wd / 2, centre[1] + hd / 2 + pad, "left", "bottom", 13, cols[0])
         elif entry[-1] == "br":
-            label(axz, names, centre[0] + wd / 2 - pad, centre[1] - hd / 2 + pad, "right", "bottom", 7.5)
+            boxed(axz, names, centre[0] + wd / 2 - pad, centre[1] - hd / 2 + pad, "right", "bottom", 13, cols[0])
         else:
-            label(axz, names, centre[0] - wd / 2 + pad, centre[1] + hd / 2 - pad, "left", "top", 7.5)
-    # the zoom region on the box, joined to the panel
-    ax.add_patch(Rectangle((zx[0], zy[0]), 2 * R, 2 * R, fill=False, ec="white", lw=0.9, zorder=4))
+            boxed(axz, names, centre[0] - wd / 2 + pad, centre[1] + hd / 2 - pad, "left", "top", 13, cols[0])
+    # simulation boxes (SIM_BOXES), centred as the surveys and the circles: on the box, and in the panel with their
+    # side above the top right corner if they fit, else on the box above its top left corner; solid SIM_COLOUR on a
+    # casing, to show on dark and light regions
+    for side in SIM_BOXES:
+        x, y = centre[0] - side / 2, centre[1] - side / 2
+        for axx in (ax, axz) if side < 2 * R else (ax,):
+            for lw_, colr, al in ((3.6, casing(SIM_COLOUR), 0.5), (1.6, SIM_COLOUR, 1.0)):
+                axx.add_patch(Rectangle((x, y), side, side, fill=False, ec=colr, lw=lw_, alpha=al, zorder=3.4))
+        if side < 2 * R:
+            boxed(axz, f"{side:.0f}", x + side, y + side + pad, "right", "bottom", 13, SIM_COLOUR)
+        else:
+            boxed(ax, f"{side:.0f}", x, y + side + 0.01 * L, "left", "bottom", 15, SIM_COLOUR)
+    # the lines (colours), under the colour bars
+    from matplotlib.lines import Line2D
+    lines = [ln for ln in LINE_COLOUR if any(m[1] == ln for _, _, ms, _ in fps for m in ms)]
+    # two rows (filled by column): the lines and the simulation reference, all solid on their casing; then 21-cm on the
+    # first row, right after the entry above the simulation reference (not in a third column)
+    def handle(c, lw=3.0):
+        return Line2D([], [], color=c, lw=lw, path_effects=outlined(lw + 2.0, fg=casing(c), alpha=0.5))
+    cells = [(handle(LINE_COLOUR[ln]), ln) for ln in lines] + [(handle(SIM_COLOUR), "Simulation reference")]
+    cells += [(Line2D([], [], ls="none"), "")] * (len(cells) % 2)
+    style = dict(frameon=False, fontsize=14, handlelength=1.4, columnspacing=0.6, handletextpad=0.4, labelspacing=0.3)
+    yl = (y0 - 0.54) / H  # the legend's top, just under the panel's x labels
+    leg = fig.legend(*zip(*cells), loc="upper left", bbox_to_anchor=(x0 / W, yl), ncol=len(cells) // 2, **style)
+    fig.canvas.draw()  # the legend's layout, for the place of 21-cm
+    inv = fig.transFigure.inverted()
+    top = leg.get_texts()[len(cells) - 2].get_window_extent()  # the first row's last entry
+    (_, y_), (x_, _) = inv.transform([(0, (top.y0 + top.y1) / 2), (top.x1, 0)])
+    x_ += 0.6 * 14 / 72 / W
+    leg21 = fig.legend([handle(CIRCLE_COLOUR)], ["21-cm"], loc="center left", borderpad=0, borderaxespad=0,
+                       bbox_to_anchor=(x_, y_), **style)
+    fig.canvas.draw()  # both legends together, centred under the panel
+    lo = inv.transform((leg.get_window_extent().x0, 0))[0]
+    hi = inv.transform((leg21.get_window_extent().x1, 0))[0]
+    dx = (x0 + Z / 2) / W - (lo + hi) / 2
+    leg.set_bbox_to_anchor((x0 / W + dx, yl), transform=fig.transFigure)
+    leg21.set_bbox_to_anchor((x_ + dx, y_), transform=fig.transFigure)
+    # the zoom region on the box (red, unlike the surveys), joined to the panel
+    for lw_, colr, al in ((4.0, "black", 0.6), (2.2, ZOOM_COLOUR, 1.0)):
+        ax.add_patch(Rectangle((zx[0], zy[0]), 2 * R, 2 * Ry, fill=False, ec=colr, lw=lw_, alpha=al, zorder=3.6))
     for yy in (zy[1], zy[0]):
         fig.add_artist(ConnectionPatch((zx[1], yy), (zx[0], yy), coordsA="data", coordsB="data", axesA=ax, axesB=axz,
-                                       color="0.55", lw=0.7, zorder=1))
+                                       color="0.55", lw=1.0, zorder=1))
 
 
 def make_figure(sl, a, quantities, out):
@@ -1020,11 +1166,11 @@ def make_figure(sl, a, quantities, out):
     from matplotlib.patches import Circle, Rectangle
 
     # STIX: the Times-like font of A&A's text, with the glyphs the labels need (en dash, degree sign)
-    plt.rcParams.update({"font.family": "STIXGeneral", "mathtext.fontset": "stix", "font.size": 11})
+    plt.rcParams.update({"font.family": "STIXGeneral", "mathtext.fontset": "stix", "font.size": 16})
     L, c = sl.L, sl.cell
     centre = a.centre if a.centre else (L / 2, L / 2)
     colourers = {q: Colourer(q, sl.fields[q], a.vmin, a.vmax) for q in quantities}
-    insts = [(n, d, col, sl.fov_cmpc(d)) for n, d, col in instruments(quantities, colourers, a.circle_colours)]
+    insts = [(n, d, (a.circle_colours or {}).get(n, CIRCLE_COLOUR), sl.fov_cmpc(d)) for n, d, _ in INSTRUMENTS]
     if a.show_mwa:
         half = max(L / 2, max(D for *_, D in insts) / 2 * 1.04)
         lim = (centre[0] - half, centre[0] + half), (centre[1] - half, centre[1] + half)
@@ -1034,15 +1180,28 @@ def make_figure(sl, a, quantities, out):
     one = len(quantities) == 1
     cb = one and not a.no_cbar
     # a square axes S x S inches; margins in inches
-    left, bottom, top = 0.75, 0.55, (0.55 if a.deg_axis else 0.15)
-    right = (0.95 if cb else 0.15) + (0.45 if a.deg_axis else 0.0)
+    left, bottom, top = 1.0, 0.8, (0.8 if a.deg_axis else 0.15)
+    dax = 0.65 if a.deg_axis else 0.0  # the secondary (degree) axis on the right
+    right = (1.15 if cb else 0.15) + dax
     S = a.fig_width - left - right
     FW, FH = a.fig_width, S + bottom + top
-    # --footprints on: a zoom panel to the right with the other surveys' footprints (they are small on the box)
-    fps = [(i, e, footprint_members(e, sl.z)) for i, e in enumerate(FOOTPRINTS)] if a.footprints == "on" else []
-    fps = [f for f in fps if f[2]]
-    Z = 0.62 * S if any(e[0] != "circle" for _, e, _ in fps) else 0.0
-    FWt = FW + (0.35 + Z + 0.55 if Z else 0.0)
+    # a zoom panel with the other surveys' footprints (they are small on the box) right of the box: a gap, the
+    # panel (Z wide, Zh high) and its tick labels; the colour bar is then under the panel instead of right of the box
+    fps = []  # (index, entry, members shown, none of them at the slice's redshift)
+    for i, e in enumerate(FOOTPRINTS if a.footprints != "none" else []):
+        here = footprint_members(e, sl.z)
+        if here or a.footprints == "auto":  # auto: every survey, with its redshift range where none is at z
+            fps.append((i, e, here or list(e[2]), not here))
+    fps = [f for f in fps if one or f[1][0] == "circle"]  # sectors: no panel (they meet there)
+    Z = 0.62 * S if any(e[0] != "circle" for _, e, _, _ in fps) else 0.0
+    Zh = S - 0.5  # the panel's height, from pb to 0.75 in under the figure's top (room for its colour bars)
+    pb = bottom + 0.5  # the panel's bottom [in], with its x labels and the legend under it
+    if Z:  # beside the panel, the box as high as the figure allows: from 0.65 in above its bottom to its top margin
+        FH += 0.6
+        bottom = 0.65
+        S = FH - bottom - top
+    zx0 = left + S + dax + 0.55  # the panel's left [in]: its y tick labels between it and the box
+    FWt = zx0 + Z + 0.2 if Z else FW
     fig = plt.figure(figsize=(FWt, FH))
     ax = fig.add_axes([left / FWt, bottom / FH, S / FWt, S / FH])
     # the image: native cells inside the box (nearest), black outside
@@ -1069,7 +1228,7 @@ def make_figure(sl, a, quantities, out):
                     ax.imshow(dim, extent=(i * L, (i + 1) * L, j * L, (j + 1) * L), origin="lower",
                               interpolation="nearest", rasterized=True, zorder=0)
     if a.show_mwa:
-        ax.add_patch(Rectangle((0, 0), L, L, fill=False, ec="0.85", lw=0.8, zorder=2))
+        ax.add_patch(Rectangle((0, 0), L, L, fill=False, ec="0.85", lw=1.2, zorder=2))
     ax.set_xlim(*lim[0])
     ax.set_ylim(*lim[1])
     ax.set_aspect("equal")
@@ -1077,28 +1236,32 @@ def make_figure(sl, a, quantities, out):
     ax.set_ylabel(r"$y$ [cMpc]")
     ax.tick_params(direction="out")
     # circles: dashed, coloured, with a dark casing; names inline on the circle, in a dark box
-    angles = {"MWA": 225, "HERA": 90, "LOFAR": 50, "SKA-Low": 230}
+    angles = {"MWA": 225, "HERA": 90, "LOFAR": 80, "SKA-Low": 270}  # SKA-Low: below the zoom square
+    above = ("LOFAR",)  # on its circle: the box's lower left corner at the angle, right of the 500 box's name and up
+    # to the line to the panel
     step = 500 if (lim[0][1] - lim[0][0]) < 3000 else 1000
     ax.xaxis.set_major_locator(plt.MultipleLocator(step))
     ax.yaxis.set_major_locator(plt.MultipleLocator(step))
     for name, deg, col, D in insts:
         r = D / 2
-        for lw, colr, ls in ((3.2, "black", "-"), (1.8, col, (0, (3.0, 1.8)))):
-            ax.add_patch(Circle(centre, r, fill=False, ec=colr, lw=lw, ls=ls, alpha=0.5 if colr == "black" else 1,
-                                zorder=3))
+        for lw, colr, al in ((4.6, casing(col), 0.5), (2.6, col, 1.0)):  # solid, as the other lines
+            ax.add_patch(Circle(centre, r, fill=False, ec=colr, lw=lw, alpha=al, zorder=3))
         t = np.radians(angles.get(name, 45))
         lx, ly = centre[0] + r * np.cos(t), centre[1] + r * np.sin(t)
         if not (lim[0][0] < lx < lim[0][1] and lim[1][0] < ly < lim[1][1]):
             continue
-        ax.text(lx, ly, name, color="white", fontsize=9, ha="center", va="center", zorder=4,
-                bbox=dict(boxstyle="round,pad=0.18", fc="black", ec=col, lw=0.9, alpha=0.8))
+        boxed(ax, name, lx, ly, "left" if name in above else "center", "bottom" if name in above else "center", 15, col,
+              lw=1.2, alpha=0.8)
+    # the simulation's name, larger than the other names, on NAME_COLOUR
+    boxed(ax, "EOS26", 0.985, 0.985, "right", "top", 24, "black", fc=NAME_COLOUR, color=casing(NAME_COLOUR), lw=1.2,
+          alpha=0.8, weight="bold", transform=ax.transAxes, zorder=5)
     if a.figure_galaxies and sl.halos is not None and len(sl.halos[0]):
         muv = uv_magnitude(sl)
         j = np.argsort(muv)[: a.figure_galaxies]
         # ring radius in points: the movie's mapping at 1080p, scaled to the figure
         r_pt = ring_px(muv[j], 0.2)
         ax.scatter(sl.halos[0][j], sl.halos[1][j], s=(2 * r_pt) ** 2, facecolors="none", edgecolors=RING,
-                   linewidths=0.7, zorder=3.5)
+                   linewidths=1.1, zorder=3.5)
         log.info(f"figure: {len(j)} brightest galaxies, M_UV {muv[j].min():.1f} to {muv[j].max():.1f}")
     if not one:
         # sector names along the edge of the frame
@@ -1109,26 +1272,37 @@ def make_figure(sl, a, quantities, out):
             dx, dy = np.sin(mid), np.cos(mid)
             k = 0.47 * (lim[0][1] - lim[0][0]) / max(abs(dx), abs(dy))
             ax.text(centre[0] + dx * k * 0.93, centre[1] + dy * k * 0.93, SPEC.get(q, (q,))[0],
-                    color="white", fontsize=9, ha="center", va="center", path_effects=outlined(2.2), zorder=4)
+                    color="white", fontsize=15, ha="center", va="center", path_effects=outlined(3.0), zorder=4)
     if a.deg_axis:
         dpd = sl.cmpc_per_deg()
         for which, cc in (("top", centre[0]), ("right", centre[1])):
             f = (lambda x, cc=cc: (x - cc) / dpd), (lambda t, cc=cc: t * dpd + cc)
             sec = ax.secondary_xaxis("top", functions=f) if which == "top" else ax.secondary_yaxis("right", functions=f)
             sec.set_xlabel(r"$\theta$ [deg]") if which == "top" else sec.set_ylabel(r"$\theta$ [deg]")
-    if cb:
+    if cb and not Z:
         from matplotlib.cm import ScalarMappable
         q = quantities[0]
         cl = colourers[q]
-        cax = fig.add_axes([(left + S + 0.12 + (0.45 if a.deg_axis else 0)) / FWt, bottom / FH, 0.16 / FWt, S / FH])
+        cax = fig.add_axes([(left + S + dax + 0.12) / FWt, bottom / FH, 0.16 / FWt, S / FH])
         sm = ScalarMappable(norm=cl.norm, cmap=cl.cmap)
         cbar = fig.colorbar(sm, cax=cax)
         cbar.set_label(cbar_label(q, cl), rotation=90, labelpad=8)
     if fps:
-        draw_figure_footprints(fig, ax, fps, sl, centre, img, Z, (FW + 0.35) / FWt, (bottom + (S - Z) / 2) / FH,
-                               Z / FWt, Z / FH, lim)
+        # the bands of the panel: the figure's quantity, then --inset-bands (default: two of INSET_BANDS)
+        bands = [(quantities[0], img, colourers[quantities[0]])] if one else [(None, img, None)]
+        more = a.inset_bands if a.inset_bands is not None else [q for q in INSET_BANDS if q != quantities[0]][:2]
+        for q in more:
+            cl = Colourer(q, sl.fields[q])
+            bands.append((q, cl(sl.fields[q]), cl))
+        # the panel, with its x labels above and the colour bars under it (~1.1 in), centred on the box
+        gals = None  # the panel's galaxies (the brightest of each band are ringed)
+        if a.galaxies != "none" and sl.halos is not None and len(sl.halos[0]):
+            gals = (sl.halos[0], sl.halos[1], uv_magnitude(sl))
+        draw_figure_footprints(fig, ax, fps, sl, centre, bands,
+                               ((zx0, pb, Z, Zh), (FWt, FH)), cbars=cb, gals=gals,
+                               per_band=a.band_galaxies)
     if sl.watermark:
-        fig.text(0.01, 0.005, sl.watermark, color="#d62728", fontsize=7, ha="left", va="bottom")
+        fig.text(0.01, 0.005, sl.watermark, color="#d62728", fontsize=11, ha="left", va="bottom")
     base = str(out)
     base = base[:-4] if base.endswith((".pdf", ".png")) else base  # z8.47 must not read as a suffix
     fig.savefig(base + ".pdf", dpi=300)
@@ -1369,17 +1543,18 @@ class Renderer:
             self.circ[n] = (casing, line, lab, r)
         self.deg150 = {n: d for n, d, _ in INSTRUMENTS}
         # other surveys: thin solid outlines (dark casing), shown while a line is in band (draw: circ_alpha["_fp"])
-        self.fp = []
+        self.fp = []  # coloured by line (set per frame: draw_footprints); line2: a second line, dashed
         for i, entry in enumerate(FOOTPRINTS):
             mk = (lambda **kw: Circle(C, 1.0, fill=False, **kw)) if entry[0] == "circle" else \
                 (lambda **kw: Rectangle(C, 1.0, 1.0, fill=False, **kw))
             casing = mk(ec="black", lw=4.2 * fs, alpha=0.45, zorder=3, visible=False)
-            line = mk(ec=FP_COLOUR, lw=1.8 * fs, zorder=3, visible=False)
+            line = mk(ec="white", lw=1.8 * fs, zorder=3, visible=False)
+            line2 = mk(ec="white", lw=1.8 * fs, ls=(0, (4, 4)), zorder=3, visible=False)
             lab = ax.text(0, 0, "", color="white", fontsize=15 * fs, zorder=5, visible=False,
-                          bbox=dict(boxstyle="round,pad=0.22", fc="black", ec=FP_COLOUR, lw=1.0 * fs, alpha=0.7))
-            ax.add_patch(casing)
-            ax.add_patch(line)
-            self.fp.append((entry, casing, line, lab, i))
+                          bbox=dict(boxstyle="round,pad=0.22", fc="black", ec="white", lw=1.0 * fs, alpha=0.7))
+            for art in (casing, line, line2):
+                ax.add_patch(art)
+            self.fp.append((entry, casing, line, line2, lab, i))
         self.marks = []
         for s in stops:
             if s.mark is None:
@@ -1577,12 +1752,16 @@ class Renderer:
             k = np.radians(1.0) * float(self.sl.cosmo.comoving_distance(z).to_value("Mpc"))
             to_data = lambda deg: deg * k  # noqa: E731
         cx, cy = self.C
-        for entry, casing, line, lab, i in self.fp:
+        for entry, casing, line, line2, lab, i in self.fp:
             members = footprint_members(entry, z, 0.15)
             if not members or gate <= 0 or ov <= 0:
-                for art in (casing, line, lab):
+                for art in (casing, line, line2, lab):
                     art.set_visible(False)
                 continue
+            cols = footprint_colours(members)
+            line.set_edgecolor(cols[0])
+            line2.set_edgecolor(cols[-1])
+            lab.get_bbox_patch().set_edgecolor(cols[0])
             zf = max(float(np.clip(min(z - m[2] + 0.15, m[3] + 0.15 - z) / 0.15, 0, 1)) for m in members)
             wd, hd = (to_data(v) for v in footprint_size(entry))
             side = max(wd, hd)
@@ -1592,13 +1771,13 @@ class Renderer:
             fade_out = float(np.clip((1.05 * fit - side) / (0.25 * fit), 0, 1))
             al = gate * ov * zf * fade_in * fade_out
             if entry[0] == "circle":
-                for art in (casing, line):
+                for art in (casing, line, line2):
                     art.set_center((cx, cy))
                     art.set_radius(wd / 2)
                 t = np.radians(125)
                 lx, ly, ha, va = cx + wd / 2 * np.cos(t), cy + wd / 2 * np.sin(t), "right", "bottom"
             else:
-                for art in (casing, line):
+                for art in (casing, line, line2):
                     art.set_xy((cx - wd / 2, cy - hd / 2))
                     art.set_width(wd)
                     art.set_height(hd)
@@ -1612,7 +1791,9 @@ class Renderer:
             for art in (casing, line):
                 art.set_visible(al > 0.02)
                 art.set_alpha(al * (0.45 if art is casing else 1.0))
-            lab.set_text(" · ".join(m[0] for m in members))
+            line2.set_visible(al > 0.02 and len(cols) > 1)
+            line2.set_alpha(al)
+            lab.set_text(" · ".join(dict.fromkeys(m[0] for m in members)))
             lab.set_position((lx, ly))
             lab.set_ha(ha)
             lab.set_va(va)
@@ -1628,8 +1809,8 @@ class Renderer:
         arts = [self.box_edge, self.grid]
         for casing, line, lab, r in self.circ.values():
             arts += [casing, line, lab]
-        for _, casing, line, lab, _ in self.fp:
-            arts += [casing, line, lab]
+        for _, casing, line, line2, lab, _ in self.fp:
+            arts += [casing, line, line2, lab]
         arts += [art for _, art, _ in self.marks]
         if self.gal is not None:
             arts.append(self.g_art)
@@ -3303,7 +3484,9 @@ def main(argv=None):
         movie = make_sky_movie if a.geometry == "healpix" else make_evolve_movie
         movie(a, quantities, a.out, stills=(a.what == "stills"), plots=plots, qtag=qtag)
         return
-    sl = (load_slice_file(a.slice_file, quantities, a.halo_slab, drop_missing=every) if a.slice_file
+    sl = (load_slice_file(a.slice_file, quantities, a.halo_slab, drop_missing=every,
+                          extra=INSET_BANDS if a.inset_bands is None else a.inset_bands)
+          if a.slice_file
           else load_rect_slice(a, quantities, drop_missing=every))
     log.info(f"slice: {sl.tag}, z = {sl.z:.4f} ({sl.nu:.1f} MHz), {sl.N}² cells of {sl.cell} cMpc, "
              f"D_c = {sl.Dc:.0f} cMpc, 1 deg = {sl.cmpc_per_deg():.1f} cMpc")

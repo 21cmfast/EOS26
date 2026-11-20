@@ -229,6 +229,7 @@ Claude*
 bug_reports*
 paper/
 plots/EOS21*
+plots/EOS16*
 plots/movie/
 
 # PBS job stdout/stderr (<jobname>.o<jobid>, <jobname>.e<jobid>). Fold them into the
