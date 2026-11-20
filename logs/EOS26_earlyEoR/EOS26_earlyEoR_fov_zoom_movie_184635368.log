@@ -1,0 +1,44 @@
+2026-11-19 19:30:20,172 patch: 29483660 pixels of Nside 4096 within 45.0 deg (31 s)
+2026-11-19 19:31:53,282 end direction (lon, lat) = (-6.25, -3.73) deg at z = 7.20; epochs {'z_slow': 20.561934540608775, 'z_trough': 14.835385666221747, 'z_x90': 12.739195362069466, 'z_end': 7.202518797841163}
+2026-11-19 19:31:53,318 evolution z = 35.00 -> 20.56 -> 12.50 -> 7.20 in 3 + 6 + 36 s; stops HERA at z = 12.50, LOFAR at z = 10.50, SKA-Low at z = 8.99, surveys at z = 7.80
+2026-11-19 19:34:22,903 galaxies of z = 7.2367: 4524261 of 636526096 in 14 s
+2026-11-19 19:34:38,219 galaxies of z = 7.4014: 13612846 of 581636340 in 15 s
+2026-11-19 19:35:18,704 galaxies of z = 7.5695: 18166384 of 529249172 in 40 s
+2026-11-19 19:36:19,533 galaxies of z = 7.7409: 17674421 of 479473523 in 61 s
+2026-11-19 19:39:03,254 galaxies of z = 7.9157: 19752911 of 432383224 in 164 s
+2026-11-19 19:39:54,571 galaxies of z = 8.0940: 25814458 of 388058156 in 51 s
+2026-11-19 19:40:33,594 galaxies of z = 8.2759: 33389255 of 346553884 in 39 s
+2026-11-19 19:41:09,782 galaxies of z = 8.4614: 38261321 of 307911988 in 36 s
+2026-11-19 19:41:53,986 galaxies of z = 8.6506: 33926280 of 272109818 in 44 s
+2026-11-19 19:43:45,495 frame 0/1983  10 s
+2026-11-19 20:03:01,472 frame 150/1983  1166 s
+2026-11-19 20:39:10,718 frame 300/1983  3335 s
+2026-11-19 22:23:01,051 frame 450/1983  9565 s
+2026-11-19 23:02:33,983 frame 600/1983  11938 s
+
+==== PBS output of job 184635368 (EOS26_fov_zoom.o184635368, EOS26_fov_zoom.e184635368), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- stderr ----
+------------------------------------------------------------------------
+Job 184635368 has exceeded memory allocation on node gadi-cpu-clx-1491.gadi.nci.org.au
+Process "bash", pid 26528, rss 3022848, vmem 23945216
+Process "184635368.gadi-", pid 26665, rss 2551808, vmem 10522624
+Process "uv", pid 27472, rss 1257472, vmem 246808576
+Process "python3", pid 27476, rss 47354974208, vmem 51618160640
+Process "ffmpeg", pid 103143, rss 614916096, vmem 1125400576
+------------------------------------------------------------------------
+For more information visit https://opus.nci.org.au/x/SwGRAQ
+------------------------------------------------------------------------
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-19 23:12:20:
+   Job Id:             184635368.gadi-pbs
+   Project:            qp00
+   Exit Status:        137 (Linux Signal 9 SIGKILL Kill, unblockable)
+   Service Units:      89.30
+   NCPUs Requested:    4                   CPU Time Used: 03:18:26        
+   Memory Requested:   48.0GB                Memory Used: 45.01GB         
+   Walltime Requested: 04:00:00            Walltime Used: 03:43:15        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

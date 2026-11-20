@@ -1,0 +1,71 @@
+2026-11-19 14:15:38,761 end point (1294, 1024) cMpc at z = 7.20; epochs {'z_slow': 20.561934540608775, 'z_trough': 14.835385666221747, 'z_x90': 12.739195362069466, 'z_end': 7.202518797841163}
+2026-11-19 14:15:38,796 evolution z = 35.00 -> 20.56 -> 12.50 -> 7.20 in 3 + 6 + 36 s; stops HERA at z = 12.50, LOFAR at z = 10.50, SKA-Low at z = 8.99
+2026-11-19 14:16:33,476 galaxies of z = 7.2367: 84276 of 636526096 in 26 s
+2026-11-19 14:16:59,461 galaxies of z = 7.4014: 230894 of 581636340 in 26 s
+2026-11-19 14:17:24,797 galaxies of z = 7.5695: 325137 of 529249172 in 25 s
+2026-11-19 14:17:52,940 galaxies of z = 7.7409: 530666 of 479473523 in 28 s
+2026-11-19 14:18:09,803 galaxies of z = 7.9157: 672969 of 432383224 in 17 s
+2026-11-19 14:18:36,914 galaxies of z = 8.0940: 761045 of 388058156 in 27 s
+2026-11-19 14:18:52,137 galaxies of z = 8.2759: 835517 of 346553884 in 15 s
+2026-11-19 14:19:16,912 galaxies of z = 8.4614: 764330 of 307911988 in 25 s
+2026-11-19 14:19:30,123 galaxies of z = 8.6506: 701386 of 272109818 in 13 s
+2026-11-19 14:19:43,875 galaxies of z = 8.8436: 650005 of 239126529 in 14 s
+2026-11-19 14:19:57,607 galaxies of z = 9.0405: 588006 of 208924755 in 14 s
+2026-11-19 14:20:12,553 galaxies of z = 9.2413: 595146 of 181425235 in 15 s
+2026-11-19 14:20:25,229 galaxies of z = 9.4461: 592173 of 156550738 in 13 s
+2026-11-19 14:20:34,436 galaxies of z = 9.6551: 589066 of 134191818 in 9 s
+2026-11-19 14:20:43,021 galaxies of z = 9.8682: 592421 of 114238291 in 9 s
+2026-11-19 14:20:49,722 galaxies of z = 10.0855: 486514 of 96558131 in 7 s
+2026-11-19 14:20:58,137 galaxies of z = 10.3072: 421188 of 80992745 in 8 s
+2026-11-19 14:21:02,628 galaxies of z = 10.5334: 387672 of 67409993 in 4 s
+2026-11-19 14:21:06,432 galaxies of z = 10.7641: 455451 of 55651876 in 4 s
+2026-11-19 14:21:20,278 galaxies of z = 10.9993: 550897 of 45557836 in 14 s
+2026-11-19 14:21:25,392 galaxies of z = 11.2393: 591474 of 36959746 in 5 s
+2026-11-19 14:21:27,297 galaxies of z = 11.4841: 552165 of 29712218 in 2 s
+2026-11-19 14:21:28,938 galaxies of z = 11.7338: 434501 of 23651112 in 2 s
+2026-11-19 14:21:30,664 galaxies of z = 11.9885: 359500 of 18646331 in 2 s
+2026-11-19 14:21:35,322 galaxies of z = 12.2482: 268046 of 14542891 in 5 s
+2026-11-19 14:21:36,398 galaxies of z = 12.5132: 213818 of 11224637 in 1 s
+2026-11-19 14:21:37,316 galaxies of z = 12.7835: 150141 of 8564861 in 1 s
+2026-11-19 14:21:38,593 galaxies of z = 13.0591: 100096 of 6459806 in 1 s
+2026-11-19 14:21:39,248 galaxies of z = 13.3403: 66420 of 4814546 in 1 s
+2026-11-19 14:21:40,748 galaxies of z = 13.6271: 40317 of 3543201 in 1 s
+2026-11-19 14:21:41,272 galaxies of z = 13.9197: 30204 of 2573149 in 1 s
+2026-11-19 14:21:41,759 galaxies of z = 14.2181: 22245 of 1845498 in 0 s
+2026-11-19 14:21:42,051 galaxies of z = 14.5224: 13836 of 1303225 in 0 s
+2026-11-19 14:21:42,307 galaxies of z = 14.8329: 8563 of 907611 in 0 s
+2026-11-19 14:21:42,417 galaxies of z = 15.1495: 5860 of 623402 in 0 s
+2026-11-19 14:21:42,622 galaxies of z = 15.4725: 3879 of 420840 in 0 s
+2026-11-19 14:21:42,717 galaxies of z = 15.8020: 2666 of 280155 in 0 s
+2026-11-19 14:21:42,801 galaxies of z = 16.1380: 1656 of 183103 in 0 s
+2026-11-19 14:21:42,912 galaxies of z = 16.4808: 476 of 117538 in 0 s
+2026-11-19 14:22:31,856 cube faces of InitialConditions.lowres_density at z = 34.6588 read in 49 s
+2026-11-19 14:22:34,362 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0000.png (cube)
+2026-11-19 14:22:35,354 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0050.png (cube)
+2026-11-19 14:22:36,436 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0100.png (cube)
+2026-11-19 14:22:37,277 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0149.png (cube)
+2026-11-19 14:22:41,008 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0166.png (lc)
+2026-11-19 14:22:44,351 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0255.png (lc)
+2026-11-19 14:22:47,520 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0349.png (lc)
+2026-11-19 14:22:53,692 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0420.png (lc)
+2026-11-19 14:23:03,893 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0462.png (lc)
+2026-11-19 14:23:12,662 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0641.png (lc)
+2026-11-19 14:23:18,841 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f0846.png (lc)
+2026-11-19 14:23:21,387 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f1391.png (lc)
+2026-11-19 14:23:22,117 wrote fov_evolve_EOS26_earlyEoR_brightness_temp_with_rsds_f1664.png (lc)
+
+==== PBS output of job 184608287 (EOS26_fov_zoom.o184608287, EOS26_fov_zoom.e184608287), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-19 14:23:29:
+   Job Id:             184608287.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      3.67
+   NCPUs Requested:    4                   CPU Time Used: 00:03:22        
+   Memory Requested:   48.0GB                Memory Used: 43.13GB         
+   Walltime Requested: 04:00:00            Walltime Used: 00:09:11        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

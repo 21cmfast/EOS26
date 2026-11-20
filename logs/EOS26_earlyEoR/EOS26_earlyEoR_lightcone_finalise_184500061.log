@@ -1,0 +1,20 @@
+00:00:00 INFO     00.241 GB angular_plane: finalised in 1 s                                                                                                     
+08:18:51 INFO     00.221 GB healpix_nside1024: finalised in 29931 s                                                                                             
+
+==== PBS output of job 184500061 (EOS26_lightcone_finalise.o184500061, EOS26_lightcone_finalise.e184500061), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- stderr ----
+=>> PBS: job killed: walltime 86445 exceeded limit 86400
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-20 07:33:27:
+   Job Id:             184500061.gadi-pbs
+   Project:            qp00
+   Exit Status:        -29 (Job failed due to exceeding walltime)
+   Service Units:      576.37
+   NCPUs Requested:    12                  CPU Time Used: 22:35:39        
+   Memory Requested:   48.0GB                Memory Used: 43.18GB         
+   Walltime Requested: 24:00:00            Walltime Used: 24:00:56        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

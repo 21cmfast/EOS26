@@ -751,3 +751,104 @@
 05:28:47 DEBUG    00.114 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
                             (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
                             a95a/6.1706/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:31:39 DEBUG    93.883 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:32:28 DEBUG    00.103 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:32:59 DEBUG    80.407 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/6.0300/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:35:56 DEBUG    94.978 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:36:48 DEBUG    00.103 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:37:23 DEBUG    80.665 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.8921/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:40:16 DEBUG    94.477 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:41:05 DEBUG    00.103 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:41:47 DEBUG    80.668 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.7570/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:44:53 DEBUG    95.050 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:45:43 DEBUG    00.103 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:46:14 DEBUG    80.652 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.6245/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:49:05 DEBUG    94.240 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:50:02 DEBUG    00.103 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:50:35 DEBUG    80.711 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.4946/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:53:37 DEBUG    94.923 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:54:18 DEBUG    00.104 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:54:49 DEBUG    00.116 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.3672/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+05:58:35 DEBUG    95.558 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+05:59:18 DEBUG    00.104 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+05:59:53 DEBUG    00.116 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.2424/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+06:03:07 DEBUG    95.179 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+06:03:56 DEBUG    00.104 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+06:04:24 DEBUG    80.918 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.1200/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+06:07:23 DEBUG    95.119 GB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                
+06:08:10 DEBUG    00.104 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                
+06:08:39 DEBUG    00.116 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2
+                            a95a/5.0000/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                
+06:12:17 INFO     87.242 GB los_velocity: filled in 22266 s, 276 boxes read                                                                                     
+07:15:37 INFO     89.750 GB los_velocity: joined 48 parts -> /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/los_velocity.h5               
+07:15:37 INFO     89.751 GB Completed los_velocity (patch) in 26137.3s -> {'patch':                                                                             
+                            PosixPath('/scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/patch_nside4096/los_velocity.h5')}                                  
+
+==== PBS output of job 184500041 (lc_los_velocity.o184500041, lc_los_velocity.e184500041), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-19 02:54:58:
+   Job Id:             184500041.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      697.71
+   NCPUs Requested:    48                  CPU Time Used: 166:44:28       
+   Memory Requested:   190.0GB               Memory Used: 161.99GB        
+   Walltime Requested: 24:00:00            Walltime Used: 07:16:04        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

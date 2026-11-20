@@ -1,0 +1,44 @@
+2026-11-19 14:17:32,621 patch: 29483660 pixels of Nside 4096 within 45.0 deg (31 s)
+2026-11-19 14:19:02,872 end direction (lon, lat) = (-6.25, -3.73) deg at z = 7.20; epochs {'z_slow': 20.561934540608775, 'z_trough': 14.835385666221747, 'z_x90': 12.739195362069466, 'z_end': 7.202518797841163}
+2026-11-19 14:19:02,971 evolution z = 35.00 -> 20.56 -> 12.50 -> 7.20 in 3 + 6 + 36 s; stops HERA at z = 12.50, LOFAR at z = 10.50, SKA-Low at z = 8.99
+2026-11-19 14:40:28,957 sfrd_acg: colour range follows z, z=7.2: -10.63..-8.37, z=10.0: -11.08..-8.90, z=13.8: -11.85..-9.74, z=18.9: -13.15..-10.96, z=25.8: -15.20..-12.79, z=35.0: -18.45..-15.67
+2026-11-19 14:44:35,254 J_21_LW: colour range follows z, z=7.2: 0.98..1.36, z=10.0: 0.62..1.05, z=13.8: -0.07..0.43, z=18.9: -1.11..-0.54, z=25.8: -2.68..-2.01, z=35.0: -5.95..-4.53
+2026-11-19 14:48:10,708 spin_temperature: colour range follows z, z=7.2: 2.45..2.64, z=10.0: 1.53..1.84, z=13.8: 0.95..1.17, z=18.9: 1.42..1.50, z=25.8: 1.83..1.85, z=35.0: 1.92..1.93
+2026-11-19 14:48:53,286 galaxies of z = 7.2367: 48041939 of 636526096 in 42 s
+2026-11-19 14:49:42,328 galaxies of z = 7.4014: 47969408 of 581636340 in 49 s
+2026-11-19 14:50:17,189 galaxies of z = 7.5695: 47187653 of 529249172 in 35 s
+2026-11-19 14:50:57,734 galaxies of z = 7.7409: 46093761 of 479473523 in 41 s
+2026-11-19 14:51:27,354 galaxies of z = 7.9157: 44778368 of 432383224 in 30 s
+2026-11-19 14:52:04,891 galaxies of z = 8.0940: 43259586 of 388058156 in 38 s
+2026-11-19 14:52:33,427 galaxies of z = 8.2759: 41690321 of 346553884 in 29 s
+2026-11-19 14:52:57,389 galaxies of z = 8.4614: 39527638 of 307911988 in 24 s
+2026-11-19 14:53:43,794 frame 0/1668  44 s
+2026-11-19 14:59:14,864 frame 150/1668  375 s
+2026-11-19 17:51:58,198 frame 300/1668  10739 s
+
+==== PBS output of job 184608392 (EOS26_fov_zoom.o184608392, EOS26_fov_zoom.e184608392), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- stderr ----
+------------------------------------------------------------------------
+Job 184608392 has exceeded memory allocation on node gadi-cpu-clx-2047.gadi.nci.org.au
+Process "bash", pid 2070614, rss 3457024, vmem 23945216
+Process "184608392.gadi-", pid 2071065, rss 3215360, vmem 10522624
+Process "uv", pid 2072223, rss 4857856, vmem 246808576
+Process "python3", pid 2072397, rss 49888591872, vmem 51960139776
+Process "ffmpeg", pid 2127501, rss 604602368, vmem 1125027840
+------------------------------------------------------------------------
+For more information visit https://opus.nci.org.au/x/SwGRAQ
+------------------------------------------------------------------------
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-19 18:15:27:
+   Job Id:             184608392.gadi-pbs
+   Project:            qp00
+   Exit Status:        137 (Linux Signal 9 SIGKILL Kill, unblockable)
+   Service Units:      95.43
+   NCPUs Requested:    4                   CPU Time Used: 01:20:37        
+   Memory Requested:   48.0GB                Memory Used: 47.32GB         
+   Walltime Requested: 04:00:00            Walltime Used: 03:58:35        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

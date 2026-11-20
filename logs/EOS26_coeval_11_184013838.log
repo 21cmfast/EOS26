@@ -4036,3 +4036,1030 @@
 37:22:57 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
 37:26:33 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
 37:30:09 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:33:45 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:37:38 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:41:16 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:44:48 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:48:38 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:52:09 DEBUG    01.154 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+37:53:07 DEBUG    01.117 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+37:54:31 DEBUG    01.142 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+37:55:52 DEBUG    01.167 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+37:57:13 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:01:13 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:04:43 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:08:14 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:11:50 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:15:26 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:19:07 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:22:48 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:26:24 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:30:08 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:33:38 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:37:23 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:40:53 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:44:25 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:48:02 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:51:37 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:55:14 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+38:58:45 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:02:16 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:05:57 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:09:33 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:13:11 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:16:44 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:20:19 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:23:57 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:27:26 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:31:04 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:34:33 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:38:07 DEBUG    01.191 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+39:38:58 DEBUG    01.154 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                               
+39:39:29 DEBUG    01.167 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                                   
+39:40:11 DEBUG    01.179 TB Calling ComputeTsBox with following args:                                                                                           
+39:40:11 DEBUG    01.179 TB     18.30018110803172                                                                                                               
+39:40:11 DEBUG    01.179 TB     18.686184730192352                                                                                                              
+39:41:03 DEBUG    01.179 TB                                                                                                                                     
+39:41:03 DEBUG    01.179 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+39:41:03 DEBUG    01.179 TB                           density: -8.6380e-02, -1.2482e-01, -5.7767e-01,  1.8830e+00, -2.3148e-11                                  
+39:41:03 DEBUG    01.179 TB                        velocity_z: -3.5541e-19, -6.2972e-18, -3.1685e-16,  3.0151e-16,  5.1336e-28                                  
+39:41:03 DEBUG    01.179 TB                        velocity_x:  9.6723e-17,  1.0382e-16, -3.0732e-16,  3.0191e-16, -1.6448e-25                                  
+39:41:03 DEBUG    01.179 TB                        velocity_y: -1.5522e-18,  2.1377e-18, -3.0146e-16,  3.1450e-16,  7.9026e-27                                  
+39:41:03 DEBUG    01.179 TB                                                                                                                                     
+39:43:36 DEBUG    01.179 TB                                                                                                                                     
+39:43:36 DEBUG    01.179 TB               RadiationFields       1st:         End:         Min:         Max:         Mean:                                       
+39:43:36 DEBUG    01.179 TB                 xray_heating_rate:  4.0225e-16,  3.9714e-16,  1.8831e-16,  1.8336e-13,  4.3087e-16                                  
+39:43:36 DEBUG    01.179 TB              xray_ionization_rate:  1.0882e-20,  1.0737e-20,  5.1022e-21,  4.6999e-18,  1.1652e-20                                  
+39:43:36 DEBUG    01.179 TB                     xray_lya_flux:  1.7353e-13,  1.6403e-13,  4.4264e-14,  1.1887e-10,  2.0819e-13                                  
+39:43:36 DEBUG    01.179 TB                          lyw_flux:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+39:43:36 DEBUG    01.179 TB                lya_flux_continuum:  3.7547e-11,  3.7302e-11,  2.7209e-11,  3.2435e-09,  3.7585e-11                                  
+39:43:36 DEBUG    01.179 TB                 lya_flux_injected:  3.5779e-12,  3.4642e-12,  5.7013e-13,  5.6152e-09,  4.8961e-12                                  
+39:43:36 DEBUG    01.179 TB                              Q_HI: 0.9944144752268701                                                                               
+39:43:36 DEBUG    01.179 TB                                                                                                                                     
+39:44:22 DEBUG    01.179 TB                                                                                                                                     
+39:44:22 DEBUG    01.179 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+39:44:22 DEBUG    01.179 TB                  spin_temperature:  2.6514e+01,  2.6269e+01,  9.8230e+00,  8.6790e+01,  2.6979e+01                                  
+39:44:22 DEBUG    01.179 TB             xray_ionised_fraction:  1.8830e-04,  1.8880e-04,  1.7984e-04,  2.5519e-03,  1.8815e-04                                  
+39:44:22 DEBUG    01.179 TB              kinetic_temp_neutral:  7.5632e+00,  7.3834e+00,  4.7077e+00,  9.7603e+01,  7.9549e+00                                  
+39:44:22 DEBUG    01.179 TB                           J_21_LW:  1.3280e-01,  1.3056e-01,  5.4359e-02,  4.5193e+01,  1.3699e-01                                  
+39:44:22 DEBUG    01.179 TB                              Q_HI: 0.9952958643352597                                                                               
+39:44:22 DEBUG    01.179 TB                                                                                                                                     
+39:45:58 DEBUG    01.179 TB                                                                                                                                     
+39:45:58 DEBUG    01.179 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+39:45:58 DEBUG    01.179 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+39:45:58 DEBUG    01.179 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+39:45:58 DEBUG    01.179 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+39:45:58 DEBUG    01.179 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+39:45:58 DEBUG    01.179 TB                     hires_density:  uninitialized                                                                                   
+39:45:58 DEBUG    01.179 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+39:45:58 DEBUG    01.179 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+39:45:58 DEBUG    01.179 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+39:45:58 DEBUG    01.179 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+39:45:58 DEBUG    01.179 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+39:45:58 DEBUG    01.179 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+39:45:58 DEBUG    01.179 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+39:45:58 DEBUG    01.179 TB                                                                                                                                     
+39:50:57 DEBUG    01.081 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+39:51:26 DEBUG    01.093 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.6
+                            862/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))                
+39:52:07 DEBUG    01.105 TB Calling ComputeIonizedBox with following args:                                                                                      
+39:52:07 DEBUG    01.105 TB     18.30018110803172                                                                                                               
+39:52:07 DEBUG    01.105 TB     18.686184730192352                                                                                                              
+39:53:03 DEBUG    01.105 TB                                                                                                                                     
+39:53:03 DEBUG    01.105 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+39:53:03 DEBUG    01.105 TB                           density: -8.6380e-02, -1.2482e-01, -5.7767e-01,  1.8830e+00, -2.3148e-11                                  
+39:53:03 DEBUG    01.105 TB                        velocity_z: -3.5541e-19, -6.2972e-18, -3.1685e-16,  3.0151e-16,  5.1336e-28                                  
+39:53:03 DEBUG    01.105 TB                        velocity_x:  9.6723e-17,  1.0382e-16, -3.0732e-16,  3.0191e-16, -1.6448e-25                                  
+39:53:03 DEBUG    01.105 TB                        velocity_y: -1.5522e-18,  2.1377e-18, -3.0146e-16,  3.1450e-16,  7.9026e-27                                  
+39:53:03 DEBUG    01.105 TB                                                                                                                                     
+39:53:14 DEBUG    01.105 TB                                                                                                                                     
+39:53:14 DEBUG    01.105 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+39:53:14 DEBUG    01.105 TB                           density: -8.5415e-02, -1.2322e-01, -5.6819e-01,  1.8058e+00, -2.3148e-11                                  
+39:53:14 DEBUG    01.105 TB                        velocity_z:  uninitialized                                                                                   
+39:53:14 DEBUG    01.105 TB                        velocity_x:  uninitialized                                                                                   
+39:53:14 DEBUG    01.105 TB                        velocity_y:  uninitialized                                                                                   
+39:53:14 DEBUG    01.105 TB                                                                                                                                     
+39:53:52 DEBUG    01.105 TB                                                                                                                                     
+39:53:52 DEBUG    01.105 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+39:53:52 DEBUG    01.105 TB                  neutral_fraction:  uninitialized                                                                                   
+39:53:52 DEBUG    01.105 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.6675e+00,  3.4330e-08                                  
+39:53:52 DEBUG    01.105 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9482e+01, -1.0000e+00                                  
+39:53:52 DEBUG    01.105 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  5.6906e-01,  1.0349e-08                                  
+39:53:52 DEBUG    01.105 TB            nion_unconditional_acg: 0.005352224729191761                                                                             
+39:53:52 DEBUG    01.105 TB            nion_unconditional_mcg: 1.5456627040328002e-07                                                                           
+39:53:52 DEBUG    01.105 TB               log10_mturn_ave_acg: 7.548276424430153                                                                                
+39:53:52 DEBUG    01.105 TB               log10_mturn_ave_mcg: 6.25675615422487                                                                                 
+39:53:52 DEBUG    01.105 TB                                                                                                                                     
+39:54:34 DEBUG    01.105 TB                                                                                                                                     
+39:54:34 DEBUG    01.105 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+39:54:34 DEBUG    01.105 TB                  spin_temperature:  2.3567e+01,  2.3316e+01,  9.4355e+00,  8.2368e+01,  2.4069e+01                                  
+39:54:34 DEBUG    01.105 TB             xray_ionised_fraction:  1.8970e-04,  1.9019e-04,  1.8041e-04,  2.5197e-03,  1.8966e-04                                  
+39:54:34 DEBUG    01.105 TB              kinetic_temp_neutral:  7.3356e+00,  7.1575e+00,  4.5041e+00,  9.4363e+01,  7.7256e+00                                  
+39:54:34 DEBUG    01.105 TB                           J_21_LW:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+39:54:34 DEBUG    01.105 TB                              Q_HI: 0.9944144752268701                                                                               
+39:54:34 DEBUG    01.105 TB                                                                                                                                     
+39:55:36 DEBUG    01.105 TB                                                                                                                                     
+39:55:36 DEBUG    01.105 TB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+39:55:36 DEBUG    01.105 TB                          sfrd_acg:  7.1311e-15,  1.2900e-13,  4.2604e-20,  1.6659e-08,  1.4877e-12                                  
+39:55:36 DEBUG    01.105 TB                          sfrd_mcg:  7.2353e-14,  6.0526e-13,  1.5525e-17,  2.2244e-10,  2.3349e-12                                  
+39:55:36 DEBUG    01.105 TB                   xray_emissivity:  1.2793e-03,  1.1671e-02,  2.5922e-07,  7.0296e+02,  5.9174e-02                                  
+39:55:36 DEBUG    01.105 TB                             n_ion:  1.7395e-04,  1.4834e-03,  3.7105e-08,  8.7652e+00,  6.3569e-03                                  
+39:55:36 DEBUG    01.105 TB                fesc_weighted_sfrd:  6.8368e-10,  5.8300e-09,  1.4583e-13,  3.4450e-05,  2.4985e-08                                  
+39:55:36 DEBUG    01.105 TB               log10_mturn_acg_ave: 7.561187030655625                                                                                
+39:55:36 DEBUG    01.105 TB               log10_mturn_mcg_ave: 6.28762813146254                                                                                 
+39:55:36 DEBUG    01.105 TB                                                                                                                                     
+39:57:09 DEBUG    01.105 TB                                                                                                                                     
+39:57:09 DEBUG    01.105 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+39:57:09 DEBUG    01.105 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+39:57:09 DEBUG    01.105 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+39:57:09 DEBUG    01.105 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+39:57:09 DEBUG    01.105 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+39:57:09 DEBUG    01.105 TB                     hires_density:  uninitialized                                                                                   
+39:57:09 DEBUG    01.105 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+39:57:09 DEBUG    01.105 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+39:57:09 DEBUG    01.105 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+39:57:09 DEBUG    01.105 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+39:57:09 DEBUG    01.105 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+39:57:09 DEBUG    01.105 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+39:57:09 DEBUG    01.105 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+39:57:09 DEBUG    01.105 TB                                                                                                                                     
+40:38:47 DEBUG    01.143 TB Calling ComputeBrightnessTemp with following args:                                                                                  
+40:38:47 DEBUG    01.143 TB     18.30018110803172                                                                                                               
+40:39:40 DEBUG    01.143 TB                                                                                                                                     
+40:39:40 DEBUG    01.143 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+40:39:40 DEBUG    01.143 TB                  spin_temperature:  2.3567e+01,  2.3316e+01,  9.4355e+00,  8.2368e+01,  2.4069e+01                                  
+40:39:40 DEBUG    01.143 TB             xray_ionised_fraction:  1.8970e-04,  1.9019e-04,  1.8041e-04,  2.5197e-03,  1.8966e-04                                  
+40:39:40 DEBUG    01.143 TB              kinetic_temp_neutral:  7.3356e+00,  7.1575e+00,  4.5041e+00,  9.4363e+01,  7.7256e+00                                  
+40:39:40 DEBUG    01.143 TB                           J_21_LW:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+40:39:40 DEBUG    01.143 TB                              Q_HI: 0.9944144752268701                                                                               
+40:39:40 DEBUG    01.143 TB                                                                                                                                     
+40:40:22 DEBUG    01.143 TB                                                                                                                                     
+40:40:22 DEBUG    01.143 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+40:40:22 DEBUG    01.143 TB                  neutral_fraction:  9.9962e-01,  9.9811e-01,  0.0000e+00,  9.9981e-01,  9.9438e-01                                  
+40:40:22 DEBUG    01.143 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.5430e+00,  6.7401e-08                                  
+40:40:22 DEBUG    01.143 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -1.0000e+00                                  
+40:40:22 DEBUG    01.143 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  5.6906e-01,  2.2267e-08                                  
+40:40:22 DEBUG    01.143 TB            nion_unconditional_acg: 0.006356935608831462                                                                             
+40:40:22 DEBUG    01.143 TB            nion_unconditional_mcg: 1.4234120274315561e-07                                                                           
+40:40:22 DEBUG    01.143 TB               log10_mturn_ave_acg: 7.561187030655625                                                                                
+40:40:22 DEBUG    01.143 TB               log10_mturn_ave_mcg: 6.28762813146254                                                                                 
+40:40:22 DEBUG    01.143 TB                                                                                                                                     
+40:41:08 DEBUG    01.143 TB                                                                                                                                     
+40:41:08 DEBUG    01.143 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+40:41:08 DEBUG    01.143 TB                           density: -8.6380e-02, -1.2482e-01, -5.7767e-01,  1.8830e+00, -2.3148e-11                                  
+40:41:08 DEBUG    01.143 TB                        velocity_z: -3.5541e-19, -6.2972e-18, -3.1685e-16,  3.0151e-16,  5.1336e-28                                  
+40:41:08 DEBUG    01.143 TB                        velocity_x:  9.6723e-17,  1.0382e-16, -3.0732e-16,  3.0191e-16, -1.6448e-25                                  
+40:41:08 DEBUG    01.143 TB                        velocity_y: -1.5522e-18,  2.1377e-18, -3.0146e-16,  3.1450e-16,  7.9026e-27                                  
+40:41:08 DEBUG    01.143 TB                                                                                                                                     
+40:42:11 INFO     01.093 TB coeval 10/11: z=18.300181                                                                                                           
+40:42:11 INFO     01.093 TB coeval 10/11 done in 13586.42s (average CPU cores: 7.13; peak RSS: 01.241 TB)                                                       
+40:42:17 DEBUG    00.773 TB gc.collect() after coeval 10/11 collected 0 objects                                                                                 
+40:42:18 DEBUG    00.687 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+40:42:47 DEBUG    00.700 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_z'))                                                        
+40:43:15 DEBUG    00.712 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_x'))                                                        
+40:43:48 DEBUG    00.724 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/velocity_y'))                                                        
+40:44:21 DEBUG    00.736 TB Reading array of shape (17004,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_masses'))                                                             
+40:44:21 DEBUG    00.736 TB Reading array of shape (17004,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/star_rng'))                                                                
+40:44:21 DEBUG    00.736 TB Reading array of shape (17004,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/sfr_rng'))                                                                 
+40:44:21 DEBUG    00.736 TB Reading array of shape (17004,) and dtype float32 from disk                                                                         
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/xray_rng'))                                                                
+40:44:21 DEBUG    00.736 TB Reading array of shape (17004, 3) and dtype float32 from disk                                                                       
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/17.9
+                            217/HaloCatalog.h5'), dataset='/HaloCatalog/OutputFields/halo_coords'))                                                             
+40:44:21 DEBUG    00.736 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_density'))                                                                          
+40:44:45 DEBUG    00.749 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx'))                                                                               
+40:45:07 DEBUG    00.761 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy'))                                                                               
+40:45:31 DEBUG    00.773 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz'))                                                                               
+40:45:54 DEBUG    00.786 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vx_2LPT'))                                                                          
+40:46:20 DEBUG    00.798 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vy_2LPT'))                                                                          
+40:46:48 DEBUG    00.810 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vz_2LPT'))                                                                          
+40:47:19 DEBUG    00.822 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/InitialConditions.h5'),              
+                            dataset='/InitialConditions/OutputFields/lowres_vcb'))                                                                              
+40:47:52 DEBUG    00.834 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/J_21_LW'))                                            
+40:48:06 DEBUG    00.846 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/ionisation_rate_G12'))                      
+40:48:27 DEBUG    00.859 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/z_reion'))                                  
+40:48:45 DEBUG    00.871 TB Calling ComputeEmissivityFields with following args:                                                                                
+40:48:45 DEBUG    00.871 TB     17.921746184344826                                                                                                              
+40:50:17 DEBUG    00.871 TB                                                                                                                                     
+40:50:17 DEBUG    00.871 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+40:50:17 DEBUG    00.871 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+40:50:17 DEBUG    00.871 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+40:50:17 DEBUG    00.871 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+40:50:17 DEBUG    00.871 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+40:50:17 DEBUG    00.871 TB                     hires_density:  uninitialized                                                                                   
+40:50:17 DEBUG    00.871 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+40:50:17 DEBUG    00.871 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+40:50:17 DEBUG    00.871 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+40:50:17 DEBUG    00.871 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+40:50:17 DEBUG    00.871 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+40:50:17 DEBUG    00.871 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+40:50:17 DEBUG    00.871 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+40:50:17 DEBUG    00.871 TB                                                                                                                                     
+40:51:02 DEBUG    00.871 TB                                                                                                                                     
+40:51:02 DEBUG    00.871 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+40:51:02 DEBUG    00.871 TB                           density: -8.7155e-02, -1.2620e-01, -5.8713e-01,  1.9635e+00, -2.7778e-11                                  
+40:51:02 DEBUG    00.871 TB                        velocity_z: -3.2595e-19, -6.2343e-18, -3.1381e-16,  2.9827e-16,  3.9723e-28                                  
+40:51:02 DEBUG    00.871 TB                        velocity_x:  9.5824e-17,  1.0281e-16, -3.0339e-16,  2.9905e-16,  3.2895e-26                                  
+40:51:02 DEBUG    00.871 TB                        velocity_y: -1.5023e-18,  2.2595e-18, -2.9843e-16,  3.1134e-16,  1.0280e-27                                  
+40:51:02 DEBUG    00.871 TB                                                                                                                                     
+40:51:02 DEBUG    00.871 TB                                                                                                                                     
+40:51:02 DEBUG    00.871 TB                   HaloCatalog       1st:         End:         Min:         Max:         Mean:                                       
+40:51:02 DEBUG    00.871 TB                       halo_masses:  1.0061e+10,  5.6102e+09,  5.0119e+09,  5.1678e+10,  6.4982e+09                                  
+40:51:02 DEBUG    00.871 TB                          star_rng: -5.0524e-01,  5.7353e-01, -3.8356e+00,  4.1293e+00,  1.1790e-02                                  
+40:51:02 DEBUG    00.871 TB                           sfr_rng:  4.7852e-01,  3.0027e+00, -3.8221e+00,  3.9907e+00, -1.1418e-03                                  
+40:51:03 DEBUG    00.871 TB                          xray_rng: -1.8558e-01,  6.5137e-01, -4.3220e+00,  4.0543e+00,  9.9650e-03                                  
+40:51:03 DEBUG    00.871 TB                       halo_coords:  4.0802e-02,  4.2293e+02,  4.0802e-02,  2.2500e+03,  1.1268e+03                                  
+40:51:03 DEBUG    00.871 TB                           n_halos: 17004                                                                                            
+40:51:03 DEBUG    00.871 TB                       buffer_size: 17004                                                                                            
+40:51:03 DEBUG    00.871 TB                                                                                                                                     
+40:51:13 DEBUG    00.871 TB                                                                                                                                     
+40:51:13 DEBUG    00.871 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+40:51:13 DEBUG    00.871 TB                  spin_temperature:  uninitialized                                                                                   
+40:51:13 DEBUG    00.871 TB             xray_ionised_fraction:  uninitialized                                                                                   
+40:51:13 DEBUG    00.871 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+40:51:13 DEBUG    00.871 TB                           J_21_LW:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+40:51:13 DEBUG    00.871 TB                              Q_HI: 0.9944144752268701                                                                               
+40:51:13 DEBUG    00.871 TB                                                                                                                                     
+40:51:34 DEBUG    00.871 TB                                                                                                                                     
+40:51:34 DEBUG    00.871 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+40:51:34 DEBUG    00.871 TB                  neutral_fraction:  uninitialized                                                                                   
+40:51:34 DEBUG    00.871 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.5430e+00,  6.7401e-08                                  
+40:51:34 DEBUG    00.871 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -1.0000e+00                                  
+40:51:34 DEBUG    00.871 TB         cumulative_recombinations:  uninitialized                                                                                   
+40:51:34 DEBUG    00.871 TB            nion_unconditional_acg: 0.006356935608831462                                                                             
+40:51:34 DEBUG    00.871 TB            nion_unconditional_mcg: 1.4234120274315561e-07                                                                           
+40:51:34 DEBUG    00.871 TB               log10_mturn_ave_acg: 7.561187030655625                                                                                
+40:51:34 DEBUG    00.871 TB               log10_mturn_ave_mcg: 6.28762813146254                                                                                 
+40:51:34 DEBUG    00.871 TB                                                                                                                                     
+40:56:06 DEBUG    00.932 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/xray_ionised_fraction'))                              
+40:56:22 DEBUG    00.945 TB Calling SetupRadiationFields with following args:                                                                                   
+40:56:22 DEBUG    00.945 TB     17.921746184344826                                                                                                              
+40:56:55 DEBUG    00.945 TB                                                                                                                                     
+40:56:55 DEBUG    00.945 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+40:56:55 DEBUG    00.945 TB                  spin_temperature:  uninitialized                                                                                   
+40:56:55 DEBUG    00.945 TB             xray_ionised_fraction:  1.8970e-04,  1.9019e-04,  1.8041e-04,  2.5197e-03,  1.8966e-04                                  
+40:56:55 DEBUG    00.945 TB              kinetic_temp_neutral:  uninitialized                                                                                   
+40:56:55 DEBUG    00.945 TB                           J_21_LW:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+40:56:55 DEBUG    00.945 TB                              Q_HI: 0.9944144752268701                                                                               
+40:56:55 DEBUG    00.945 TB                                                                                                                                     
+41:00:33 DEBUG    00.982 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:05:09 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:09:04 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:12:46 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:16:25 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:20:06 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:23:40 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:27:22 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:30:49 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:34:22 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:37:59 DEBUG    01.129 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:39:01 DEBUG    01.092 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_acg'))                     
+41:40:28 DEBUG    01.117 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/xray_emissivity'))              
+41:41:54 DEBUG    01.141 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/EmissivityFields.h5'), dataset='/EmissivityFields/OutputFields/sfrd_mcg'))                     
+41:43:26 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:47:14 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:51:04 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:54:44 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+41:58:40 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:03:04 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:07:00 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:10:38 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:14:11 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:17:56 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:21:28 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:25:14 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:28:47 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:32:26 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:36:05 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:39:37 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:43:18 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:46:53 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:50:48 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:54:30 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+42:57:59 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:01:34 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:05:05 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:08:38 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:12:10 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:15:44 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:19:36 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:23:27 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:27:12 DEBUG    01.166 TB Calling UpdateRadiationFields (argument summary skipped by sim_steps)                                                               
+43:27:57 DEBUG    01.129 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/kinetic_temp_neutral'))                               
+43:29:31 DEBUG    01.141 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/TsBox.h5'), dataset='/TsBox/OutputFields/spin_temperature'))                                   
+43:31:10 DEBUG    01.153 TB Calling ComputeTsBox with following args:                                                                                           
+43:31:10 DEBUG    01.153 TB     17.921746184344826                                                                                                              
+43:31:10 DEBUG    01.153 TB     18.30018110803172                                                                                                               
+43:32:06 DEBUG    01.153 TB                                                                                                                                     
+43:32:06 DEBUG    01.153 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+43:32:06 DEBUG    01.153 TB                           density: -8.7155e-02, -1.2620e-01, -5.8713e-01,  1.9635e+00, -2.7778e-11                                  
+43:32:06 DEBUG    01.153 TB                        velocity_z: -3.2595e-19, -6.2343e-18, -3.1381e-16,  2.9827e-16,  3.9723e-28                                  
+43:32:06 DEBUG    01.153 TB                        velocity_x:  9.5824e-17,  1.0281e-16, -3.0339e-16,  2.9905e-16,  3.2895e-26                                  
+43:32:06 DEBUG    01.153 TB                        velocity_y: -1.5023e-18,  2.2595e-18, -2.9843e-16,  3.1134e-16,  1.0280e-27                                  
+43:32:06 DEBUG    01.153 TB                                                                                                                                     
+43:34:40 DEBUG    01.153 TB                                                                                                                                     
+43:34:40 DEBUG    01.153 TB               RadiationFields       1st:         End:         Min:         Max:         Mean:                                       
+43:34:40 DEBUG    01.153 TB                 xray_heating_rate:  4.7022e-16,  4.6438e-16,  2.2370e-16,  1.7013e-13,  5.0099e-16                                  
+43:34:40 DEBUG    01.153 TB              xray_ionization_rate:  1.2701e-20,  1.2536e-20,  6.0590e-21,  4.0818e-18,  1.3523e-20                                  
+43:34:40 DEBUG    01.153 TB                     xray_lya_flux:  1.9635e-13,  1.8552e-13,  4.9917e-14,  1.0494e-10,  2.3441e-13                                  
+43:34:40 DEBUG    01.153 TB                          lyw_flux:  1.9232e-01,  1.8920e-01,  8.0386e-02,  5.1305e+01,  1.9760e-01                                  
+43:34:40 DEBUG    01.153 TB                lya_flux_continuum:  4.5627e-11,  4.5338e-11,  3.3298e-11,  3.5577e-09,  4.5652e-11                                  
+43:34:40 DEBUG    01.153 TB                 lya_flux_injected:  4.2117e-12,  4.0791e-12,  6.7092e-13,  6.1125e-09,  5.7416e-12                                  
+43:34:40 DEBUG    01.153 TB                              Q_HI: 0.9934005314263868                                                                               
+43:34:40 DEBUG    01.153 TB                                                                                                                                     
+43:35:25 DEBUG    01.153 TB                                                                                                                                     
+43:35:25 DEBUG    01.153 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+43:35:25 DEBUG    01.153 TB                  spin_temperature:  2.3567e+01,  2.3316e+01,  9.4355e+00,  8.2368e+01,  2.4069e+01                                  
+43:35:25 DEBUG    01.153 TB             xray_ionised_fraction:  1.8970e-04,  1.9019e-04,  1.8041e-04,  2.5197e-03,  1.8966e-04                                  
+43:35:25 DEBUG    01.153 TB              kinetic_temp_neutral:  7.3356e+00,  7.1575e+00,  4.5041e+00,  9.4363e+01,  7.7256e+00                                  
+43:35:25 DEBUG    01.153 TB                           J_21_LW:  1.6023e-01,  1.5757e-01,  6.6243e-02,  4.6837e+01,  1.6496e-01                                  
+43:35:25 DEBUG    01.153 TB                              Q_HI: 0.9944144752268701                                                                               
+43:35:25 DEBUG    01.153 TB                                                                                                                                     
+43:37:10 DEBUG    01.153 TB                                                                                                                                     
+43:37:10 DEBUG    01.153 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+43:37:10 DEBUG    01.153 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+43:37:10 DEBUG    01.153 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+43:37:10 DEBUG    01.153 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+43:37:10 DEBUG    01.153 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+43:37:10 DEBUG    01.153 TB                     hires_density:  uninitialized                                                                                   
+43:37:10 DEBUG    01.153 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+43:37:10 DEBUG    01.153 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+43:37:10 DEBUG    01.153 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+43:37:10 DEBUG    01.153 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+43:37:10 DEBUG    01.153 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+43:37:10 DEBUG    01.153 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+43:37:10 DEBUG    01.153 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+43:37:10 DEBUG    01.153 TB                                                                                                                                     
+43:40:53 DEBUG    01.055 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/PerturbedField.h5'), dataset='/PerturbedField/OutputFields/density'))                                                           
+43:41:25 DEBUG    01.067 TB Reading array of shape (1500, 1500, 1500) and dtype float32 from disk                                                               
+                            (H5Backend(path=PosixPath('/g/data/qp00/db9528/EOS26_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/18.3
+                            002/781eb8161956f86187ceaf284bb6df67/IonizedBox.h5'), dataset='/IonizedBox/OutputFields/cumulative_recombinations'))                
+43:41:53 DEBUG    01.080 TB Calling ComputeIonizedBox with following args:                                                                                      
+43:41:53 DEBUG    01.080 TB     17.921746184344826                                                                                                              
+43:41:53 DEBUG    01.080 TB     18.30018110803172                                                                                                               
+43:42:46 DEBUG    01.080 TB                                                                                                                                     
+43:42:46 DEBUG    01.080 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+43:42:46 DEBUG    01.080 TB                           density: -8.7155e-02, -1.2620e-01, -5.8713e-01,  1.9635e+00, -2.7778e-11                                  
+43:42:46 DEBUG    01.080 TB                        velocity_z: -3.2595e-19, -6.2343e-18, -3.1381e-16,  2.9827e-16,  3.9723e-28                                  
+43:42:46 DEBUG    01.080 TB                        velocity_x:  9.5824e-17,  1.0281e-16, -3.0339e-16,  2.9905e-16,  3.2895e-26                                  
+43:42:46 DEBUG    01.080 TB                        velocity_y: -1.5023e-18,  2.2595e-18, -2.9843e-16,  3.1134e-16,  1.0280e-27                                  
+43:42:46 DEBUG    01.080 TB                                                                                                                                     
+43:42:57 DEBUG    01.080 TB                                                                                                                                     
+43:42:57 DEBUG    01.080 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+43:42:57 DEBUG    01.080 TB                           density: -8.6380e-02, -1.2482e-01, -5.7767e-01,  1.8830e+00, -2.3148e-11                                  
+43:42:57 DEBUG    01.080 TB                        velocity_z:  uninitialized                                                                                   
+43:42:57 DEBUG    01.080 TB                        velocity_x:  uninitialized                                                                                   
+43:42:57 DEBUG    01.080 TB                        velocity_y:  uninitialized                                                                                   
+43:42:57 DEBUG    01.080 TB                                                                                                                                     
+43:43:33 DEBUG    01.080 TB                                                                                                                                     
+43:43:33 DEBUG    01.080 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+43:43:33 DEBUG    01.080 TB                  neutral_fraction:  uninitialized                                                                                   
+43:43:33 DEBUG    01.080 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.5430e+00,  6.7401e-08                                  
+43:43:33 DEBUG    01.080 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -1.0000e+00                                  
+43:43:33 DEBUG    01.080 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  5.6906e-01,  2.2267e-08                                  
+43:43:33 DEBUG    01.080 TB            nion_unconditional_acg: 0.006356935608831462                                                                             
+43:43:33 DEBUG    01.080 TB            nion_unconditional_mcg: 1.4234120274315561e-07                                                                           
+43:43:33 DEBUG    01.080 TB               log10_mturn_ave_acg: 7.561187030655625                                                                                
+43:43:33 DEBUG    01.080 TB               log10_mturn_ave_mcg: 6.28762813146254                                                                                 
+43:43:33 DEBUG    01.080 TB                                                                                                                                     
+43:44:19 DEBUG    01.080 TB                                                                                                                                     
+43:44:19 DEBUG    01.080 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+43:44:19 DEBUG    01.080 TB                  spin_temperature:  2.0942e+01,  2.0688e+01,  9.3040e+00,  8.1878e+01,  2.1463e+01                                  
+43:44:19 DEBUG    01.080 TB             xray_ionised_fraction:  1.9153e-04,  1.9200e-04,  1.8128e-04,  2.4935e-03,  1.9161e-04                                  
+43:44:19 DEBUG    01.080 TB              kinetic_temp_neutral:  7.1331e+00,  6.9566e+00,  4.3204e+00,  9.1585e+01,  7.5218e+00                                  
+43:44:19 DEBUG    01.080 TB                           J_21_LW:  1.9232e-01,  1.8920e-01,  8.0386e-02,  5.1305e+01,  1.9760e-01                                  
+43:44:19 DEBUG    01.080 TB                              Q_HI: 0.9934005314263868                                                                               
+43:44:19 DEBUG    01.080 TB                                                                                                                                     
+43:45:21 DEBUG    01.080 TB                                                                                                                                     
+43:45:21 DEBUG    01.080 TB              EmissivityFields       1st:         End:         Min:         Max:         Mean:                                       
+43:45:21 DEBUG    01.080 TB                          sfrd_acg:  9.3553e-15,  1.6781e-13,  5.8260e-20,  1.8448e-08,  1.8573e-12                                  
+43:45:21 DEBUG    01.080 TB                          sfrd_mcg:  8.4995e-14,  7.1007e-13,  2.0173e-17,  2.2853e-10,  2.6437e-12                                  
+43:45:21 DEBUG    01.080 TB                   xray_emissivity:  1.5064e-03,  1.3832e-02,  3.3610e-07,  7.1632e+02,  6.8918e-02                                  
+43:45:21 DEBUG    01.080 TB                             n_ion:  2.1044e-04,  1.7984e-03,  4.9496e-08,  1.1445e+01,  7.5145e-03                                  
+43:45:21 DEBUG    01.080 TB                fesc_weighted_sfrd:  8.0285e-10,  6.8611e-09,  1.8883e-13,  4.3662e-05,  2.8669e-08                                  
+43:45:21 DEBUG    01.080 TB               log10_mturn_acg_ave: 7.574097303923932                                                                                
+43:45:21 DEBUG    01.080 TB               log10_mturn_mcg_ave: 6.319283169059602                                                                                
+43:45:21 DEBUG    01.080 TB                                                                                                                                     
+43:46:59 DEBUG    01.080 TB                                                                                                                                     
+43:46:59 DEBUG    01.080 TB             InitialConditions       1st:         End:         Min:         Max:         Mean:                                       
+43:46:59 DEBUG    01.080 TB                    lowres_density: -4.8593e+00, -3.2803e+00, -1.7979e+01,  1.7834e+01,  7.3063e-07                                  
+43:46:59 DEBUG    01.080 TB                         lowres_vx:  1.3299e+01,  1.5238e+01, -4.6975e+01,  4.4279e+01, -3.0104e-07                                  
+43:46:59 DEBUG    01.080 TB                         lowres_vy: -2.6850e-01, -3.2608e-01, -4.4845e+01,  4.6838e+01,  7.7861e-08                                  
+43:46:59 DEBUG    01.080 TB                         lowres_vz:  5.6485e-01, -1.1940e+00, -4.6227e+01,  4.6413e+01,  3.9816e-07                                  
+43:46:59 DEBUG    01.080 TB                     hires_density:  uninitialized                                                                                   
+43:46:59 DEBUG    01.080 TB                    lowres_vx_2LPT:  2.2541e+00,  8.3663e-01, -4.9090e+01,  4.9992e+01, -1.9261e-06                                  
+43:46:59 DEBUG    01.080 TB                    lowres_vy_2LPT: -3.6052e+00, -1.0367e+00, -6.0607e+01,  5.3904e+01, -4.4344e-08                                  
+43:46:59 DEBUG    01.080 TB                    lowres_vz_2LPT: -7.1012e-01,  7.0897e-01, -4.8438e+01,  5.1543e+01, -2.1833e-06                                  
+43:46:59 DEBUG    01.080 TB                     hires_vx_2LPT:  uninitialized                                                                                   
+43:46:59 DEBUG    01.080 TB                     hires_vy_2LPT:  uninitialized                                                                                   
+43:46:59 DEBUG    01.080 TB                     hires_vz_2LPT:  uninitialized                                                                                   
+43:46:59 DEBUG    01.080 TB                        lowres_vcb:  2.8562e+01,  3.2078e+01,  2.1102e-02,  1.0719e+02,  2.6835e+01                                  
+43:46:59 DEBUG    01.080 TB                                                                                                                                     
+44:26:03 DEBUG    01.118 TB Calling ComputeBrightnessTemp with following args:                                                                                  
+44:26:03 DEBUG    01.118 TB     17.921746184344826                                                                                                              
+44:26:59 DEBUG    01.118 TB                                                                                                                                     
+44:26:59 DEBUG    01.118 TB                         TsBox       1st:         End:         Min:         Max:         Mean:                                       
+44:26:59 DEBUG    01.118 TB                  spin_temperature:  2.0942e+01,  2.0688e+01,  9.3040e+00,  8.1878e+01,  2.1463e+01                                  
+44:26:59 DEBUG    01.118 TB             xray_ionised_fraction:  1.9153e-04,  1.9200e-04,  1.8128e-04,  2.4935e-03,  1.9161e-04                                  
+44:26:59 DEBUG    01.118 TB              kinetic_temp_neutral:  7.1331e+00,  6.9566e+00,  4.3204e+00,  9.1585e+01,  7.5218e+00                                  
+44:26:59 DEBUG    01.118 TB                           J_21_LW:  1.9232e-01,  1.8920e-01,  8.0386e-02,  5.1305e+01,  1.9760e-01                                  
+44:26:59 DEBUG    01.118 TB                              Q_HI: 0.9934005314263868                                                                               
+44:26:59 DEBUG    01.118 TB                                                                                                                                     
+44:27:44 DEBUG    01.118 TB                                                                                                                                     
+44:27:44 DEBUG    01.118 TB                    IonizedBox       1st:         End:         Min:         Max:         Mean:                                       
+44:27:44 DEBUG    01.118 TB                  neutral_fraction:  9.9958e-01,  9.9775e-01,  0.0000e+00,  9.9981e-01,  9.9341e-01                                  
+44:27:44 DEBUG    01.118 TB               ionisation_rate_G12:  0.0000e+00,  0.0000e+00,  0.0000e+00,  1.9694e+00,  1.2224e-07                                  
+44:27:44 DEBUG    01.118 TB                           z_reion: -1.0000e+00, -1.0000e+00, -1.0000e+00,  1.9080e+01, -1.0000e+00                                  
+44:27:44 DEBUG    01.118 TB         cumulative_recombinations:  0.0000e+00,  0.0000e+00,  0.0000e+00,  6.9880e-01,  4.4987e-08                                  
+44:27:44 DEBUG    01.118 TB            nion_unconditional_acg: 0.007514494140841215                                                                             
+44:27:44 DEBUG    01.118 TB            nion_unconditional_mcg: 1.3061603689915838e-07                                                                           
+44:27:44 DEBUG    01.118 TB               log10_mturn_ave_acg: 7.574097303923932                                                                                
+44:27:44 DEBUG    01.118 TB               log10_mturn_ave_mcg: 6.319283169059602                                                                                
+44:27:44 DEBUG    01.118 TB                                                                                                                                     
+44:28:33 DEBUG    01.118 TB                                                                                                                                     
+44:28:33 DEBUG    01.118 TB                PerturbedField       1st:         End:         Min:         Max:         Mean:                                       
+44:28:33 DEBUG    01.118 TB                           density: -8.7155e-02, -1.2620e-01, -5.8713e-01,  1.9635e+00, -2.7778e-11                                  
+44:28:33 DEBUG    01.118 TB                        velocity_z: -3.2595e-19, -6.2343e-18, -3.1381e-16,  2.9827e-16,  3.9723e-28                                  
+44:28:33 DEBUG    01.118 TB                        velocity_x:  9.5824e-17,  1.0281e-16, -3.0339e-16,  2.9905e-16,  3.2895e-26                                  
+44:28:33 DEBUG    01.118 TB                        velocity_y: -1.5023e-18,  2.2595e-18, -2.9843e-16,  3.1134e-16,  1.0280e-27                                  
+44:28:33 DEBUG    01.118 TB                                                                                                                                     
+44:29:23 INFO     01.142 TB coeval 11/11: z=17.921746                                                                                                           
+44:29:23 INFO     01.142 TB coeval 11/11 done in 13632.22s (average CPU cores: 7.13; peak RSS: 01.216 TB)                                                       
+44:29:31 DEBUG    00.822 TB gc.collect() after coeval 11/11 collected 0 objects                                                                                 
+44:29:38 INFO     00.134 GB Completed N coeval run in 160178.14s                                                                                                
+
+==== PBS output of job 184013838 (EOS26_coeval.o184013838, EOS26_coeval.e184013838), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+/scratch/qp00/db9528/EOS26
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+py21cmfast 4.3.1: checking 277 files in /g/data/qp00/db9528/EOS26_cache
+  BrightnessTemp     ok   23   damaged    0
+  EmissivityFields   ok   23   damaged    0
+  HaloCatalog        ok   92   damaged    0
+  InitialConditions  ok    1   damaged    0
+  IonizedBox         ok   23   damaged    0
+  PerturbedField     ok   92   damaged    0
+  TsBox              ok   23   damaged    0
+no damaged files
+N is: 11, compare: 1
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=22.0655 ──────────────
+[17:16:29] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+[17:16:30] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-6.8414  std=1.8060
+           min=-126.1634  max=-3.3200
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-6.8414  test
+           mean=-6.8515 (z=22.066)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-6.1784,
+           -7.0613, -6.7548, -6.7371, -6.6279, -6.6463]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-5.4604, -5.446
+           , -5.6286, -5.8772, -5.745 , -5.8134]
+[17:16:31] [[INFO]] · Check 6 : brightness_temp p25=-8.98  p50=-7.88  p75=-6.55
+           IQR=2.43 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-7.88 test p50=-7.90  EOS IQR=2.43 test
+           IQR=2.38 (z=22.066)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[17:16:32] [[INFO]] · Check 5  neutral_fraction: mean=0.9989  std=0.0016
+           min=0.7664  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9989  test
+           mean=0.9989 (z=22.066)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998, 0.998
+           , 0.9995, 0.9994, 0.9994, 0.9994]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9997,
+           0.9998, 0.9997, 0.9994, 0.9997, 0.9996]
+           [[INFO]] · Check 7 : z=22.066 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[17:16:33] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=53.9145  std=1.1055
+           min=18.4780  max=56.6675
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=53.9145  test
+           mean=53.8960 (z=22.066)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [54.0171,
+           53.9261, 54.0604, 54.1064, 54.0697, 54.0073]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [54.0841,
+           54.022 , 54.06  , 54.1656, 54.097 , 54.0384]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=22.0655 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=21.6132 ──────────────
+[21:12:49] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+[21:12:50] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-8.5894  std=2.1764
+           min=-128.5943  max=-4.2929
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-8.5894  test
+           mean=-8.6020 (z=21.613)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-7.8302,
+           -8.8639, -8.4964, -8.4715, -8.3495, -8.374 ]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-6.9411,
+           -6.9133, -7.1294, -7.4255, -7.2732, -7.3732]
+[21:12:51] [[INFO]] · Check 6 : brightness_temp p25=-10.88  p50=-9.27  p75=-8.18
+           IQR=2.70 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-9.27 test p50=-9.27  EOS IQR=2.70 test
+           IQR=2.67 (z=21.613)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[21:12:52] [[INFO]] · Check 5  neutral_fraction: mean=0.9986  std=0.0019
+           min=0.8200  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9986  test
+           mean=0.9986 (z=21.613)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,
+           0.9976, 0.9994, 0.9993, 0.9993, 0.9993]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9997,
+           0.9998, 0.9997, 0.9993, 0.9996, 0.9996]
+           [[INFO]] · Check 7 : z=21.613 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[21:12:53] [[INFO]] · Check 5  spin_temperature: mean=50.9014  std=1.2115
+           min=20.8226  max=54.0686
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=50.9014  test
+           mean=50.8806 (z=21.613)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [50.9366,
+           50.9336, 51.0645, 51.1187, 51.0598, 50.9854]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [50.9777,
+           50.8991, 50.9677, 51.1254, 51.0215, 50.9546]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=21.6132 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=21.1698 ──────────────
+[00:59:44] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[00:59:45] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-10.7749  std=2.6162
+           min=-132.5505  max=-5.5313
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-10.7749  test
+           mean=-10.7897 (z=21.170)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [ -9.8977,
+           -11.1207, -10.6843, -10.6496, -10.5103, -10.5433]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-8.8018,
+           -8.7451, -9.0137, -9.3719, -9.1903, -9.3355]
+[00:59:46] [[INFO]] · Check 6 : brightness_temp p25=-13.16  p50=-11.41
+           p75=-10.26  IQR=2.91 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-11.41 test p50=-11.42  EOS IQR=2.91
+           test IQR=2.83 (z=21.170)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[00:59:47] [[INFO]] · Check 5  neutral_fraction: mean=0.9983  std=0.0024
+           min=0.7332  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9983  test
+           mean=0.9983 (z=21.170)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,
+           0.9971, 0.9993, 0.9991, 0.9992, 0.9992]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9997,
+           0.9997, 0.9996, 0.9992, 0.9996, 0.9996]
+           [[INFO]] · Check 7 : z=21.170 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[00:59:48] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=47.6714  std=1.2998
+           min=16.9694  max=51.2793
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=47.6714  test
+           mean=47.6488 (z=21.170)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [47.6335,
+           47.7254, 47.8442, 47.9068, 47.8263, 47.7387]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [47.6337,
+           47.536 , 47.6381, 47.8513, 47.7137, 47.6446]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=21.1698 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=20.7351 ──────────────
+[04:59:08] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[04:59:09] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-13.4813  std=3.1256
+           min=-141.1661  max=-7.0969
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-13.4813  test
+           mean=-13.5005 (z=20.735)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-12.4678,
+           -13.922 , -13.4017, -13.3565, -13.1964, -13.2378]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-11.1226,
+           -11.0049, -11.3498, -11.7902, -11.5708, -11.7777]
+           [[INFO]] · Check 6 : brightness_temp p25=-15.96  p50=-14.00
+           p75=-12.64  IQR=3.32 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-14.00 test p50=-14.00  EOS IQR=3.32
+           test IQR=3.22 (z=20.735)
+[04:59:10] [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9980  std=0.0028
+           min=0.1706  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9980  test
+           mean=0.9980 (z=20.735)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9998,
+           0.9965, 0.9992, 0.999 , 0.999 , 0.9991]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9997,
+           0.9997, 0.9996, 0.999 , 0.9995, 0.9995]
+           [[INFO]] · Check 7 : z=20.735 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[04:59:11] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[04:59:13] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=44.2536  std=1.3613
+           min=13.6431  max=48.2721
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=44.2536  test
+           mean=44.2286 (z=20.735)  rdiff=0.1%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [44.1351,
+           44.3286, 44.4319, 44.5006, 44.3984, 44.2996]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [44.0913,
+           43.9723, 44.1099, 44.3777, 44.2071, 44.1392]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=20.7351 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=20.3090 ──────────────
+[08:54:39] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[08:54:40] [[INFO]] · Check 5  brightness_temp: mean=-16.7952  std=3.6989
+           min=-146.4414  max=-9.0546
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-16.7952  test
+           mean=-16.8140 (z=20.309)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-15.6245,
+           -17.3518, -16.7369, -16.6828, -16.5077, -16.5575]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-13.9493,
+           -13.7506, -14.202 , -14.7541, -14.4898, -14.7799]
+           [[INFO]] · Check 6 : brightness_temp p25=-19.45  p50=-17.31
+           p75=-15.51  IQR=3.94 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-17.31 test p50=-17.32  EOS IQR=3.94
+           test IQR=3.80 (z=20.309)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[08:54:41] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9976  std=0.0034
+           min=0.5909  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9976  test
+           mean=0.9976 (z=20.309)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9997,
+           0.9957, 0.999 , 0.9987, 0.9989, 0.9989]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9996,
+           0.9997, 0.9996, 0.9988, 0.9994, 0.9994]
+           [[INFO]] · Check 7 : z=20.309 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[08:54:42] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[08:54:43] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[08:54:44] [[INFO]] · Check 5  spin_temperature: mean=40.7010  std=1.3893
+           min=14.5197  max=45.0692
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=40.7010  test
+           mean=40.6761 (z=20.309)  rdiff=0.1%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [40.5012,
+           40.8018, 40.8829, 40.9527, 40.8284, 40.7161]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [40.4068,
+           40.2671, 40.4434, 40.7647, 40.5621, 40.499 ]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=20.3090 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=19.8911 ──────────────
+[12:48:39] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[12:48:40] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-20.7702  std=4.3517
+           min=-157.6595  max=-11.3644
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-20.7702  test
+           mean=-20.7860 (z=19.891)  rdiff=0.1%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-19.4163,
+           -21.4893, -20.7484, -20.7107, -20.5339, -20.5411]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-17.343 ,
+           -17.0152, -17.593 , -18.3204, -18.0055, -18.3986]
+[12:48:41] [[INFO]] · Check 6 : brightness_temp p25=-23.55  p50=-21.05
+           p75=-19.19  IQR=4.37 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-21.05 test p50=-21.05  EOS IQR=4.37
+           test IQR=4.20 (z=19.891)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[12:48:42] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9971  std=0.0041
+           min=0.6230  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9971  test
+           mean=0.9971 (z=19.891)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9997,
+           0.9949, 0.9988, 0.9985, 0.9986, 0.9987]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9996,
+           0.9997, 0.9995, 0.9986, 0.9993, 0.9993]
+           [[INFO]] · Check 7 : z=19.891 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[12:48:43] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[12:48:44] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[12:48:45] [[INFO]] · Check 5  spin_temperature: mean=37.1078  std=1.3813
+           min=14.1792  max=41.7036
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=37.1078  test
+           mean=37.0851 (z=19.891)  rdiff=0.1%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [36.8348,
+           37.2225, 37.2936, 37.3647, 37.2254, 37.1041]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [36.6792,
+           36.5186, 36.7308, 37.0996, 36.8723, 36.8181]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=19.8911 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=19.4815 ──────────────
+[16:40:14] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[16:40:15] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-25.4434  std=5.0225
+           min=-150.9348  max=-14.1330
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-25.4434  test
+           mean=-25.4538 (z=19.482)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-23.9099,
+           -26.3635, -25.5592, -25.5057, -25.3057, -25.255 ]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-21.3776,
+           -20.882 , -21.6081, -22.5422, -22.1702, -22.6921]
+[16:40:16] [[INFO]] · Check 6 : brightness_temp p25=-28.61  p50=-25.61
+           p75=-23.39  IQR=5.23 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-25.61 test p50=-25.60  EOS IQR=5.23
+           test IQR=4.98 (z=19.482)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[16:40:17] [[INFO]] · Check 5  neutral_fraction: mean=0.9966  std=0.0048
+           min=0.5725  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9966  test
+           mean=0.9966 (z=19.482)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9997, 0.994
+           , 0.9986, 0.9982, 0.9984, 0.9984]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9996,
+           0.9996, 0.9994, 0.9983, 0.9992, 0.9992]
+           [[INFO]] · Check 7 : z=19.482 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[16:40:19] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=33.5678  std=1.3324
+           min=12.4565  max=38.2521
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=33.5678  test
+           mean=33.5483 (z=19.482)  rdiff=0.1%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [33.2215,
+           33.7063, 33.7512, 33.8219, 33.6717, 33.5439]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [33.0032,
+           32.8237, 33.0688, 33.4802, 33.2322, 33.1915]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=19.4815 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=19.0799 ──────────────
+[20:39:22] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[20:39:23] [[INFO]] · Check 5  brightness_temp: mean=-30.8534  std=5.7088
+           min=-153.0217  max=-4.5704
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-30.8534  test
+           mean=-30.8543 (z=19.080)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-29.1426,
+           -32.0152, -31.1415, -30.985 , -30.8504, -30.7359]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-26.1086,
+           -25.3878, -26.2208, -27.4477, -27.0233, -27.6971]
+           [[INFO]] · Check 6 : brightness_temp p25=-34.41  p50=-30.93
+           p75=-28.33  IQR=6.08 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-30.93 test p50=-30.91  EOS IQR=6.08
+           test IQR=5.86 (z=19.080)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[20:39:24] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9960  std=0.0057
+           min=0.0250  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9960  test
+           mean=0.9959 (z=19.080)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9997,
+           0.9929, 0.9984, 0.9979, 0.9981, 0.9981]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9995,
+           0.9996, 0.9993, 0.998 , 0.9991, 0.9991]
+           [[INFO]] · Check 7 : z=19.080 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[20:39:25] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[20:39:27] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=30.1622  std=1.2534
+           min=11.9388  max=34.7903
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=30.1622  test
+           mean=30.1475 (z=19.080)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [29.752 ,
+           30.3248, 30.3427, 30.405 , 30.2515, 30.1234]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [29.4735, 29.28
+           , 29.548 , 29.9946, 29.7334, 29.7071]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=19.0799 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=18.6862 ──────────────
+[00:32:59] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[00:33:01] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-36.9738  std=6.3663
+           min=-162.3074  max=-0.0000
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-36.9738  test
+           mean=-36.9677 (z=18.686)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-35.0978,
+           -38.425 , -37.4756, -37.1475, -37.1752, -37.0397]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-31.5238,
+           -30.5359, -31.4435, -33.0437, -32.5796, -33.3952]
+           [[INFO]] · Check 6 : brightness_temp p25=-40.89  p50=-36.94
+           p75=-33.92  IQR=6.97 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-36.94 test p50=-36.92  EOS IQR=6.97
+           test IQR=6.70 (z=18.686)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[00:33:02] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9952  std=0.0067
+           min=0.0000  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9952  test
+           mean=0.9952 (z=18.686)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9997,
+           0.9916, 0.9981, 0.9974, 0.9978, 0.9977]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9994,
+           0.9995, 0.9992, 0.9977, 0.999 , 0.9989]
+           [[INFO]] · Check 7 : z=18.686 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[00:33:03] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=26.9732  std=1.1516
+           min=9.9857  max=31.4124
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=26.9732  test
+           mean=26.9619 (z=18.686)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [26.5137, 27.16
+           , 27.1502, 27.2011, 27.0502, 26.9265]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [26.1749,
+           25.9714, 26.2521, 26.7241, 26.4576, 26.4452]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=18.6862 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=18.3002 ──────────────
+[04:19:26] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[04:19:27] [[INFO]] · Check 5  brightness_temp: mean=-43.7248  std=6.9714
+           min=-149.7219  max=-0.0000
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-43.7248  test
+           mean=-43.7139 (z=18.300)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-41.7313,
+           -45.5929, -44.5264, -43.9701, -44.2249, -44.0407]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-37.4646,
+           -36.2085, -37.1618, -39.2319, -38.7453, -39.7125]
+           [[INFO]] · Check 6 : brightness_temp p25=-48.01  p50=-43.62
+           p75=-40.25  IQR=7.75 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-43.62 test p50=-43.59  EOS IQR=7.75
+           test IQR=7.46 (z=18.300)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[04:19:28] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9944  std=0.0079
+           min=0.0000  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9944  test
+           mean=0.9943 (z=18.300)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9996,
+           0.9902, 0.9977, 0.9969, 0.9974, 0.9973]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9994,
+           0.9995, 0.9991, 0.9972, 0.9988, 0.9987]
+           [[INFO]] · Check 7 : z=18.300 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[04:19:29] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  spin_temperature: mean=24.0642  std=1.0417
+           min=10.7366  max=28.2295
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=24.0642  test
+           mean=24.0549 (z=18.300)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [23.5672,
+           24.2711, 24.2343, 24.2729, 24.1287, 24.0119]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [23.1806,
+           22.974 , 23.2591, 23.7471, 23.4828, 23.4843]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=18.3002 ✓
+────────────── compare_coeval: checks 1-2, 5-7 — coeval z=17.9217 ──────────────
+[08:06:38] [[PASS]] ✓ Check 1 : file present, size=27.000 GB
+           [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[08:06:39] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  brightness_temp: mean=-51.0168  std=7.4728
+           min=-167.3807  max=-0.0000
+           [[PASS]] ✓ Check 5  brightness_temp: EOS mean=-51.0168  test
+           mean=-50.9973 (z=17.922)  rdiff=0.0%
+           [[INFO]] · Check 5  brightness_temp: EOS [0,0,:6]  = [-48.947 ,
+           -53.3638, -52.0604, -51.2808, -51.6535, -51.6081]
+           [[INFO]] · Check 5  brightness_temp: test[0,0,:6]  = [-44.0071,
+           -42.4436, -43.3932, -45.955 , -45.582 , -46.7003]
+           [[INFO]] · Check 6 : brightness_temp p25=-55.63  p50=-50.86
+           p75=-47.15  IQR=8.48 mK
+           [[PASS]] ✓ Check 6 : EOS p50=-50.86 test p50=-50.82  EOS IQR=8.48
+           test IQR=8.18 (z=17.922)
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[08:06:40] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+           [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+           [[INFO]] · Check 5  neutral_fraction: mean=0.9934  std=0.0093
+           min=0.0000  max=0.9998
+           [[PASS]] ✓ Check 5  neutral_fraction: EOS mean=0.9934  test
+           mean=0.9934 (z=17.922)  rdiff=0.0%
+           [[INFO]] · Check 5  neutral_fraction: EOS [0,0,:6]  = [0.9996,
+           0.9887, 0.9973, 0.9964, 0.9969, 0.9968]
+           [[INFO]] · Check 5  neutral_fraction: test[0,0,:6]  = [0.9993,
+           0.9994, 0.999 , 0.9967, 0.9986, 0.9985]
+           [[INFO]] · Check 7 : z=17.922 outside the Qin+25 points (z =
+           5.44-14.30), skipped
+           [[PASS]] ✓ Check 1 : file present, size=54.000 GB
+[08:06:41] [[PASS]] ✓ Check 1 : size ratio=422 (expected≈422) OK
+           [[PASS]] ✓ Check 2 : cubic shape (1500, 1500, 1500) OK
+[08:06:42] [[PASS]] ✓ Check 2 : no NaN/Inf in sampled slabs
+[08:06:43] [[INFO]] · Check 5  spin_temperature: mean=21.4593  std=0.9346
+           min=10.8778  max=25.2776
+           [[PASS]] ✓ Check 5  spin_temperature: EOS mean=21.4593  test
+           mean=21.4529 (z=17.922)  rdiff=0.0%
+           [[INFO]] · Check 5  spin_temperature: EOS [0,0,:6]  = [20.9418,
+           21.6885, 21.6241, 21.6517, 21.5119, 21.4092]
+           [[INFO]] · Check 5  spin_temperature: test[0,0,:6]  = [20.4848,
+           20.2779, 20.5631, 21.0575, 20.8037, 20.8164]
+           [[PASS]] ✓ compare_coeval: all checks passed for coeval z=17.9217 ✓
+                                                        day,
+                                                        20:1…
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-19 08:07:02:
+   Job Id:             184013838.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      5344.30
+   NCPUs Requested:    24                  CPU Time Used: 301:53:14       
+   Memory Requested:   1.42TB                Memory Used: 1.42TB          
+   Walltime Requested: 48:00:00            Walltime Used: 44:32:09        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================
