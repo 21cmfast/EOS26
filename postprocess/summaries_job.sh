@@ -5,6 +5,7 @@
 #PBS -l mem=64gb
 #PBS -l walltime=2:00:00
 #PBS -l storage=scratch/qp00+gdata/qp00
+#PBS -P qp00
 
 # Run postprocess/plot_all_summaries.ipynb without Jupyter (postprocess/run_notebook.py).
 # Plots go to plots/summaries/; the printed tables (x_HI levels, tau_e, UV LF deviations)

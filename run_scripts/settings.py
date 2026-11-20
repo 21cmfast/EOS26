@@ -18,8 +18,9 @@ from pathlib import Path
 # The template is <name>.toml in the repository root, and the caches below DATA_ROOT are
 # <name>_cache, <name>_test_HIIDIM200 and <name>_test_HIIDIM200_compare.
 # Example: qsub -v EOS26_TEMPLATE=EOS26_earlyEoR pbs_scripts/plots_job.sh
+REPO_ROOT = Path(__file__).resolve().parents[1]
 RUN_NAME = Path(os.environ.get("EOS26_TEMPLATE") or "EOS26").name.removesuffix(".toml")
-TEMPLATE_NAME = f"{RUN_NAME}.toml"
+TEMPLATE_NAME = str(REPO_ROOT / f"{RUN_NAME}.toml")  # absolute: notebooks run in postprocess/, not in the root
 TEST_RANDOM_SEED = 42
 
 # ── data location ──────────────────────────────────────────────────────────
@@ -30,7 +31,6 @@ TEST_RANDOM_SEED = 42
 #     gdata was measured to be as fast). PBS jobs must request
 #     "-l storage=gdata/qp00" (the Gadi scripts in pbs_scripts/ and scaling/ do);
 #   * elsewhere: the repository root, as before.
-REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def _on_gadi() -> bool:
