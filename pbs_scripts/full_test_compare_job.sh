@@ -19,7 +19,7 @@ pwd
 
 #ROOT="/scratch/qp00/$USER/EOS26"
 # 21cmFAST environment: venv + modules (envs/use.sh; venv paths in scaling/config.sh).
-# Default v4.3; submit with  qsub -v EOS26_VERSION=v4.2 ...  to use the old one.
+# Default v4.3 (EOS26_VERSION: a label of envs/use.sh).
 EOS26_VERSION="${EOS26_VERSION:-v4.3}"
 source "$ROOT/envs/use.sh" "$EOS26_VERSION"
 set -euo pipefail

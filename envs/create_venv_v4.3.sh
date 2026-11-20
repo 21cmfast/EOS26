@@ -1,22 +1,20 @@
 #!/bin/bash
-# Create a second uv virtual environment with 21cmFAST v4.3, next to the
-# existing v4.2 one, so the two versions can be switched between.
+# Create (or update) a uv virtual environment with 21cmFAST v4.3.
 #
 #   bash envs/create_venv_v4.3.sh mac     # on your Mac, from the EOS26 folder
 #   bash envs/create_venv_v4.3.sh gadi    # on a Gadi login node, from /scratch/qp00/$USER/EOS26
 #
 # What it does (each step is echoed):
 #   1. pick the 21cmFAST release: by default the PINNED PyPI release below
-#      (21cmfast==4.3.1), always compiled here from its source distribution with
-#      the same compiler/libraries as the v4.2 venv (never a pre-built wheel),
-#   2. freeze the existing v4.2 venv's third-party packages into a constraints
-#      file, so v4.3 gets *identical* numpy/scipy/h5py/classy/hmf/... and the
-#      21cmFAST version is the only difference between the two environments,
-#   3. create the new venv with uv and install 21cmFAST into it,
+#      (21cmfast==4.3.1), always compiled here from its source distribution
+#      (never a pre-built wheel),
+#   2. take the third-party packages from envs/constraints-<mac|gadi>.txt, so
+#      every venv gets *identical* numpy/scipy/h5py/classy/hmf/... and only the
+#      21cmFAST version (and V43_EXTRA) differs between them,
+#   3. create the venv with uv and install 21cmFAST into it,
 #   4. check the installed version and write a full freeze for provenance.
 #
-# Switching between versions afterwards: see envs/use.sh
-#   source envs/use.sh v4.2   |   source envs/use.sh v4.3
+# Switching between venvs afterwards: see envs/use.sh
 #
 # Re-running is safe: an existing venv is upgraded in place to the pinned
 # release (21cmFAST is rebuilt, the other packages stay as they are); add
@@ -26,7 +24,7 @@
 #   V43_VERSION  PyPI release to install (default: the pin below; "latest" = the
 #                newest 4.3.x patch release, recorded in the freeze file)
 #   V43_VENV     venv to create            (default: .venv-v4.3 / EOS26-v4.3-intel)
-#   V43_UNPIN    extended regex of packages to leave out of the v4.2 constraints
+#   V43_UNPIN    extended regex of packages to leave out of the constraints
 #                (e.g. 'cosmotile|powerbox|21cmsense|tuesday-eor' for the v4.3_post venv)
 #   V43_EXTRA    one more requirement to install (e.g. tuesday from git, see below)
 #   V43_USE_LABEL  label printed in the final 'source envs/use.sh' hint
@@ -75,10 +73,9 @@ V43_PATCH="${V43_PATCH:-}"
 
 case "$TARGET" in
   mac)
-    V42_VENV="${V42_VENV:-$EOS26_ROOT/.venv}"            # uv project venv (21cmfast==4.2 from uv.lock)
     V43_VENV="${V43_VENV:-$EOS26_ROOT/.venv-v4.3}"
     EXTRA_PKGS="psutil matplotlib ipykernel"
-    # Same toolchain as for the v4.2 build. build_cffi.py adds every environment
+    # Homebrew toolchain. build_cffi.py adds every environment
     # variable whose NAME contains "inc"/"lib" as an include/library directory.
     if command -v brew >/dev/null 2>&1; then
       BREW=$(brew --prefix)
@@ -90,7 +87,6 @@ case "$TARGET" in
     fi
     ;;
   gadi)
-    V42_VENV="${V42_VENV:-/scratch/qp00/${USER}/venvs/EOS26-intel}"     # production v4.2 venv
     V43_VENV="${V43_VENV:-/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel}"   # = sc_venv v4.3 in scaling/config.sh
     EXTRA_PKGS="psutil matplotlib"
     export PATH="$HOME/.local/bin:$PATH"                    # uv
@@ -98,10 +94,7 @@ case "$TARGET" in
       module purge
       module load intel-compiler/2021.8.0 gsl/2.7.1 fftw3/3.3.10
     fi
-    # Use the SAME C compiler that built the v4.2 venv, so v4.2 vs v4.3 compares
-    # 21cmFAST versions and not compilers. Step 0 below prints what built v4.2;
-    # set CC accordingly before running this script if the default is wrong,
-    # e.g.   CC=icx bash envs/create_venv_v4.3.sh gadi
+    # Intel compiler for the C extension (the -intel venvs); override with CC=...
     export CC="${CC:-icx}"
     ;;
   *)
@@ -113,35 +106,18 @@ esac
 run() { echo "+ $*"; "$@"; }
 
 command -v uv >/dev/null || { echo "uv not found (https://docs.astral.sh/uv/)" >&2; exit 1; }
-[[ -x "$V42_VENV/bin/python" ]] || { echo "v4.2 venv not found: $V42_VENV" >&2; exit 1; }
+CONSTRAINTS="$EOS26_ROOT/envs/constraints-${TARGET}.txt"
+[[ -f "$CONSTRAINTS" ]] || { echo "constraints not found: $CONSTRAINTS" >&2; exit 1; }
 mkdir -p "$EOS26_ROOT/envs"
 HOST_TAG=$(hostname -s 2>/dev/null || hostname)
 
-echo "== 0. what built the v4.2 venv (compiler of its C extension)"
-"$V42_VENV/bin/python" - <<'PY' || true
-import pathlib, subprocess, py21cmfast as p
-so = next(pathlib.Path(p.__file__).parent.glob("c_21cmfast*"), None)
-print("v4.2 py21cmfast", p.__version__, "|", so)
-if so:
-    for tool in (["readelf", "-p", ".comment", str(so)], ["strings", str(so)]):
-        try:
-            out = subprocess.run(tool, capture_output=True, text=True, check=False).stdout
-        except FileNotFoundError:
-            continue
-        hits = sorted({l.strip() for l in out.splitlines() if any(k in l for k in ("GCC:", "Intel(R)", "clang version"))})
-        if hits:
-            print("  built with:", *hits[:3], sep="\n    ")
-            break
-PY
-echo "   building v4.3 with CC=${CC:-<default>}"
-
 if [[ -z "$V43_GIT_REF" ]]; then
-  # PyPI release, built from its sdist (--no-binary): same compiler as v4.2.
+  # PyPI release, built from its sdist (--no-binary).
   if [[ "$V43_VERSION" == latest ]]; then V43_REQ="21cmfast>=4.3,<4.4"; else V43_REQ="21cmfast==$V43_VERSION"; fi
-  echo "== 1. 21cmFAST from PyPI: $V43_REQ (compiled from the source distribution)"
+  echo "== 1. 21cmFAST from PyPI: $V43_REQ (compiled from the source distribution, CC=${CC:-<default>})"
   V43_INSTALL=("$V43_REQ" --no-binary 21cmfast)
 else
-  echo "== 1. 21cmFAST source build at $V43_GIT_REF"
+  echo "== 1. 21cmFAST source build at $V43_GIT_REF (CC=${CC:-<default>})"
   if [[ ! -d "$V43_SRC/.git" ]]; then
     run git clone "$V43_REPO" "$V43_SRC"
   fi
@@ -165,22 +141,20 @@ else
   V43_INSTALL=("$V43_SRC")
 fi
 
-echo "== 2. constraints = third-party packages of the v4.2 venv"
-CONSTRAINTS="$EOS26_ROOT/envs/constraints-from-v4.2-${TARGET}.txt"
-# with V43_UNPIN, a file of its own, so the v4.3 constraints file stays as it is
-[[ -z "${V43_UNPIN:-}" ]] || CONSTRAINTS="${CONSTRAINTS%.txt}-$(basename "$V43_VENV" | sed 's/^\.//').txt"
-uv pip freeze --python "$V42_VENV/bin/python" \
-  | grep -v -i -E "^(21cmfast|eos26${V43_UNPIN:+|$V43_UNPIN})([ =@]|\$)|^-e " > "$CONSTRAINTS"
-echo "   $(wc -l < "$CONSTRAINTS") pins -> $CONSTRAINTS"
+echo "== 2. constraints: $CONSTRAINTS"
+if [[ -n "${V43_UNPIN:-}" ]]; then
+  # a temporary copy without the V43_UNPIN packages
+  UNPINNED=$(mktemp); trap 'rm -f "$UNPINNED"' EXIT
+  grep -v -i -E "^(${V43_UNPIN})([ =@]|\$)" "$CONSTRAINTS" > "$UNPINNED"
+  CONSTRAINTS=$UNPINNED
+fi
+echo "   $(wc -l < "$CONSTRAINTS") pins"
 
 echo "== 3. venv $V43_VENV"
 if [[ -d "$V43_VENV" ]]; then
   if (( FORCE )); then run rm -rf "$V43_VENV"; else echo "   exists (use --force to rebuild); installing into it"; fi
 fi
-# Same base interpreter (exact Python version) as the v4.2 venv.
-BASE_PY=$("$V42_VENV/bin/python" -c 'import sys; print(sys._base_executable)')
-echo "   base interpreter: $BASE_PY ($("$BASE_PY" -V 2>&1))"
-[[ -d "$V43_VENV" ]] || run uv venv "$V43_VENV" --python "$BASE_PY" --prompt "EOS26-v4.3"
+[[ -d "$V43_VENV" ]] || run uv venv "$V43_VENV" --python 3.13 --prompt "EOS26-v4.3"
 # --refresh/--reinstall: never reuse a 21cmFAST wheel uv built earlier (possibly
 # with another compiler or from another checkout).
 # shellcheck disable=SC2086  # EXTRA_PKGS is a word list

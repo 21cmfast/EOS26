@@ -1,6 +1,6 @@
 # EOS26
 ## Description
-All scripts to run the EOS26 simulation with 21cmFASTv4.2.
+All scripts to run the EOS26 simulation with 21cmFAST v4.3.
 EOS26 is run phase by phase i.e. ICs first, then PFs, then PHFs, and finally coevals.
 
 ### EOS26 and EOS26_earlyEoR
@@ -23,7 +23,7 @@ All simulation caches (`<name>_cache/`, `<name>_test_HIIDIM200/`, `<name>_test_H
 Code, logs and the scaling results (`scaling/results/`) stay in the repository. `logs/` holds the production run logs: the EOS26 run at the top level and its HII_DIM=200 test reference in `logs/HII_DIM200_reference/`; the EOS26_earlyEoR 4.3.1 run, its cache copy/migration and its test reference in `logs/EOS26_earlyEoR/`; the old 4.2 run of the same template (ICs, PFs, halo catalogs, coeval attempts, plots) in `logs/EOS26_v4.2/`. Scaling and benchmark logs are in `scaling/`. PBS's own `<jobname>.o<jobid>`/`.e<jobid>` files are git-ignored: before committing, `python pbs_scripts/fold_pbs_output.py` appends what only they contain (PBS resource summary, compare_* results, tracebacks) to the job's log and deletes them.
 
 ### 21cmFAST version
-The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.1 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. 4.3.1 fixes the coeval memory growth of 4.3.0 (#809, fixed by #810; `bug_reports/5_v4.3_sfrd_history_reloaded.md`). Submit with `qsub -v EOS26_VERSION=v4.2 …` to use the old v4.2 environment. `EOS26_VERSION=v4.3_patch` (4.3.0 + `envs/patches/v4.3.0_sfr_allzero.patch`, the same fix) is kept for the scaling record and is not needed with 4.3.1. The scaling jobs use the same venvs (`scaling/config.sh`).
+The PBS scripts in `pbs_scripts/` (and `postprocess/plots_job.sh`) activate the environment with `source envs/use.sh v4.3`: 21cmFAST 4.3.1 (built by `envs/create_venv_v4.3.sh gadi`) and the modules it needs. 4.3.1 fixes the coeval memory growth of 4.3.0 (#809, fixed by #810; `bug_reports/5_v4.3_sfrd_history_reloaded.md`). `EOS26_VERSION=v4.3_patch` (4.3.0 + `envs/patches/v4.3.0_sfr_allzero.patch`, the same fix) is kept for the scaling record and is not needed with 4.3.1. The scaling jobs use the same venvs (`scaling/config.sh`).
 
 21cmFAST 4.3 cannot *find* boxes in a cache written by 4.2, because the cache hashes changed. Its ICs, PFs and halo catalogs can be converted, and are then the same as what 4.3.0 computes (ICs and PFs bit-identical, halo masses to ~1e-5). 4.3.1 finds and reads a 4.3.0 cache (same hashes), and for the EOS26 template its CLASS tables, sigma(M) and ICs are bit-identical to 4.3.0's (#808 only changes the transfer function beyond CLASS's k range, k > 1119/Mpc here). Coevals depend on physics that changed in 4.3, so they have to be recomputed:
 
@@ -53,22 +53,21 @@ catches a code change that moves the reference and the run together, such as the
 `EOS26_QIN25_CHECK=0` skips it.
 
 ### End-to-end test
-- `sbatch sbatch_scripts/full_test_job.sh` — runs all three pipeline steps sequentially in test mode.
-- `qsub pbs_scripts/full_test_job.sh` — PBS equivalent of the end-to-end test.
+- `qsub pbs_scripts/full_test_job.sh` — runs all three pipeline steps sequentially in test mode.
 
 ### Scaling Measurements
 
 Peak memory (and time) of every phase as a function of `HII_DIM` and
-`N_THREADS`, for 21cmFAST v4.2 and v4.3, to find the largest `HII_DIM` that
+`N_THREADS`, for 21cmFAST v4.3, to find the largest `HII_DIM` that
 fits safely on a 3 TB megamem node. Full description: [`scaling/README.md`](scaling/README.md).
 
-- `bash scaling/campaign_v4.2.sh` / `bash scaling/campaign_v4.3.sh` / `bash scaling/campaign_v4.3_patch.sh` submit one
+- `bash scaling/campaign_v4.3.sh` / `bash scaling/campaign_v4.3_patch.sh` submit one
 PBS job per (`HII_DIM`, `N_THREADS`). Re-running a campaign script resumes
 unfinished configurations from the beginning of their unfinished phase.
 - `python3 scaling/summarize.py` prints the status/results table and writes
 `scaling/results/<version>/summary_*.csv`.
 - The v4.3 environment is created with `envs/create_venv_v4.3.sh` (Mac or Gadi).
-Switch versions with `source envs/use.sh v4.2|v4.3|v4.3_patch`. `v4.3` is 21cmFAST 4.3.1;
+Switch versions with `source envs/use.sh v4.3|v4.3_patch|v4.3_post`. `v4.3` is 21cmFAST 4.3.1;
 `scaling/results/v4.3/` was measured with 4.3.0. `v4.3_patch` (4.3.0 +
 `envs/patches/v4.3.0_sfr_allzero.patch`, `envs/create_venv_v4.3_patch.sh`) writes its
 scaling results to `scaling/results/v4.3_patch/`; it has the same fix as 4.3.1.
@@ -77,19 +76,15 @@ superseded; see `scaling_old/ASSESSMENT.md`.
 
 ### Production run (in order)
 1. **Initial conditions (ICs):**
-   - `sbatch sbatch_scripts/ICs_job.sh [--test]`
-  - `qsub pbs_scripts/ICs_job.sh [--test]` on PBS.
+   - `qsub pbs_scripts/ICs_job.sh [--test]`
    - Runs `run_scripts/run_ICs.py` with the template from `settings.py` (`EOS26.toml`, full template with embedded node redshifts and random seed; `EOS26_minimal.toml` has the same parameters without them).
 2. **Perturbed fields (PFs):**
-   - `bash sbatch_scripts/submit_PF_jobs.sh [--test]` — submits one job per PF (indices 0–91) (not used for production).
-   - `sbatch sbatch_scripts/N_PF_job.sh <z_idx> [N] [--test]` — runs a batch of N PFs (default N=10) starting from redshift index `z_idx`.
-  - `bash pbs_scripts/submit_PF_jobs.sh [--test]` and `qsub pbs_scripts/N_PF_job.sh <z_idx> [N] [--test]` are the PBS equivalents.
+   - `bash pbs_scripts/submit_PF_jobs.sh [--test]` — submits one job per PF (indices 0–91) (not used for production).
+   - `qsub pbs_scripts/N_PF_job.sh <z_idx> [N] [--test]` — runs a batch of N PFs (default N=10) starting from redshift index `z_idx`.
 3. **Perturbed halo fields (PHFs):**
-   - `sbatch sbatch_scripts/PHFs_job.sh [--test]` — runs `run_scripts/run_PHFs.py`.
-  - `qsub pbs_scripts/PHFs_job.sh [--test]` on PBS.
+   - `qsub pbs_scripts/PHFs_job.sh [--test]` — runs `run_scripts/run_PHFs.py`.
 4. **Coevals:**
-   - `sbatch sbatch_scripts/N_coeval_job.sh [N] [--test]` — runs a batch of N coevals (default N=10) with `run_scripts/run_N_coevals.py`.
-  - `qsub pbs_scripts/N_coeval_job.sh [N] [--test]` on PBS.
+   - `qsub pbs_scripts/N_coeval_job.sh [N] [--test]` — runs a batch of N coevals (default N=10) with `run_scripts/run_N_coevals.py`.
 5. **Plots (any time):**
   - `qsub postprocess/plots_job.sh` — slices of the ICs and PFs, and the lightcones of what is cached so far (`postprocess/plot_lightcone.py --quantities …`; `--list` shows which quantities and redshifts are there). Resubmit it after coeval jobs to extend the lightcones; only new boxes are read (`<cache>/lightcone_planes/`).
 ## Table

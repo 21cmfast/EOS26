@@ -4,7 +4,7 @@
 # Do not qsub this by hand: scaling/launch.sh sets the resources (-l ...) and
 # passes these variables with -v:
 #   SC_ROOT        EOS26 repository root (absolute)
-#   SC_LABEL       21cmFAST version label: v4.2 | v4.3 | v4.3_patch
+#   SC_LABEL       21cmFAST version label: v4.3 | v4.3_patch | v4.3_fftw
 #   SC_HII_DIM     HII_DIM
 #   SC_N_THREADS   N_THREADS (also OMP_NUM_THREADS)
 #   SC_PHASES      phases joined by '+', or 'all'

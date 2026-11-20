@@ -27,7 +27,7 @@ Check taxonomy (mirrors check_EOS.py numbering)
                            the test simulation
 
 Any check that FAILs raises RuntimeError so the calling job exits non-zero and
-SLURM marks it failed.  WARNs are printed but do not abort.
+PBS marks it failed.  WARNs are printed but do not abort.
 
 All file I/O uses slice-by-slice reads so peak RAM is one 2-D slab.
 """

@@ -2,7 +2,7 @@
 """Measure peak memory (and time) of every EOS26 simulation phase for ONE
 configuration: a 21cmFAST version label, HII_DIM and N_THREADS.
 
-    python scaling/measure.py --label v4.2 --hii-dim 200 --n-threads 16
+    python scaling/measure.py --label v4.3 --hii-dim 200 --n-threads 16
 
 Phases (ics -> pf -> phf -> coeval) are measured in order, each in a fresh
 subprocess (``_worker.py``), mirroring production where each phase is its own
@@ -521,7 +521,7 @@ def setup_driver_logging(logfile: Path, level: str) -> None:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--label", required=True, help="21cmFAST version label, e.g. v4.2 or v4.3 (results subfolder)")
+    ap.add_argument("--label", required=True, help="21cmFAST version label, e.g. v4.3 or v4.3_patch (results subfolder)")
     ap.add_argument("--hii-dim", type=int, required=True)
     ap.add_argument("--n-threads", type=int, required=True)
     ap.add_argument("--template", type=Path, default=Path("EOS26_earlyEoR.toml"),  # the scaling runs' template (EOS26.toml until 14 Nov 2026)

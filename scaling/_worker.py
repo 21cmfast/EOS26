@@ -71,7 +71,7 @@ log = logging.getLogger("scaling.worker")
 
 # Coeval-phase structs that production never writes (CacheConfig(...=False)):
 # they are wiped if present but not required for completeness.
-_UNCACHED_COEVAL_KINDS = {"XraySourceBox", "RadiationFields"}
+_UNCACHED_COEVAL_KINDS = {"RadiationFields"}
 
 
 # --------------------------------------------------------------------------
@@ -155,8 +155,7 @@ class PhaseMeter:
 def product_map(runcache: Any) -> tuple[dict[str, list[Path]], dict[str, list[Path]], dict[str, str], dict[str, float]]:
     """Map each phase to its cache files, derived from RunCache.
 
-    Derived dynamically so it works for v4.2 (HaloBox/XraySourceBox) and v4.3
-    (EmissivityFields/RadiationFields) without hard-coding struct names.
+    Derived from the RunCache fields, without hard-coding struct names.
 
     Returns (all_files, required_files, kind_of_each_file, redshift_of_each_file).
     """

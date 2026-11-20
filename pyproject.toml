@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
 	"psutil",
 	"matplotlib",
-	"21cmfast==4.2",
+	"21cmfast==4.3.1",
 ]
 
 [dependency-groups]

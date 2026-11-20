@@ -30,7 +30,7 @@ fi
 SC_SEED=42
 
 # --------------------------------------------------------- per 21cmFAST version
-# Labels: v4.2, v4.3 (a 4.3.x release; 4.3.1 since 2026-10-21, while results/v4.3/
+# Labels: v4.3 (a 4.3.x release; 4.3.1 since 2026-10-21, while results/v4.3/
 # was measured with 4.3.0), v4.3_patch (4.3.0 + the patch named in sc_patch
 # below, built by envs/create_venv_v4.3_patch.sh; 4.3.1 contains the same fix) and
 # v4.3_fftw (the v4.3 venv with USE_FFTW_WISDOM = true; FFTW wisdom files go to
@@ -40,7 +40,6 @@ SC_SEED=42
 sc_venv() {
   if [[ -n "${SC_VENV_OVERRIDE:-}" ]]; then echo "$SC_VENV_OVERRIDE"; return; fi  # local testing only
   case "$1" in
-    v4.2) echo "/scratch/qp00/${USER}/venvs/EOS26-intel" ;;       # production v4.2 venv
     v4.3) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;
     v4.3_patch) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3_patch-intel" ;;
     v4.3_fftw) echo "/scratch/qp00/${USER}/venvs/EOS26-v4.3-intel" ;;   # same venv as v4.3
@@ -48,29 +47,24 @@ sc_venv() {
     *) return 1 ;;
   esac
 }
-# Parameter template for each version. The scaling runs use the first EOS26 template,
-# EOS26_earlyEoR.toml since 14 Nov 2026 (EOS26.toml is now the new EOS, with 4.3 names
-# that 4.2 cannot read). 21cmFAST 4.3.x also reads EOS26_earlyEoR.toml (same inputs, but
-# a DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX); the v4.3 copy uses the new name
-# MIN_XE_FOR_NION_IN_TAUX.
+# Parameter template for each version. The scaling runs use the first EOS26 template
+# (EOS26_earlyEoR.toml) as the v4.3 copy in scaling/templates/, which uses the new name
+# MIN_XE_FOR_NION_IN_TAUX (21cmFAST 4.3.x also reads EOS26_earlyEoR.toml, with a
+# DeprecatedWarning for MIN_XE_FOR_FCOLL_IN_TAUX).
 sc_template() {
   case "$1" in
-    v4.2) echo "EOS26_earlyEoR.toml" ;;
     v4.3|v4.3_patch) echo "scaling/templates/EOS26_v4.3.toml" ;;
     v4.3_fftw) echo "scaling/templates/EOS26_v4.3_fftw.toml" ;;   # USE_FFTW_WISDOM = true
     *) return 1 ;;
   esac
 }
 # Regex the installed py21cmfast.__version__ must match (catches a wrong venv
-# before any compute is spent). If your v4.2 venv was built from a git checkout
-# (setuptools-scm version such as 4.2.1.dev84+g603e4efe), the v4.2 pattern still
-# matches. v4.3 must be a 4.3.x release (PyPI, see envs/create_venv_v4.3.sh):
+# before any compute is spent). v4.3 must be a 4.3.x release (PyPI, see envs/create_venv_v4.3.sh):
 # pre-release builds of the release-v4.3 branch (4.3.devNNN) crash when a batched
 # (resumed) coeval run continues (#791, #794) or differ from the release (FFTW
 # threading #789, LW fix #799, FFTW clean-up, z > Z_HEAT_MAX changes).
 sc_expect_version() {
   case "$1" in
-    v4.2) echo '^4\.2' ;;
     v4.3|v4.3_fftw) echo '^4\.3\.[0-9]+$' ;;
     # A patched source build reports e.g. 4.3.1.dev0+gee535b94.d20261020 (dirty
     # tree); sc_patch is what actually identifies it.

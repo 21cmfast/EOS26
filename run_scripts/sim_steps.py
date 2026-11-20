@@ -20,7 +20,6 @@ import os
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
-import attrs
 import py21cmfast as p21c
 from py21cmfast.io.caching import CacheConfig
 
@@ -353,13 +352,5 @@ def generate_coevals(
 
 
 def coeval_write_config() -> CacheConfig:
-    """Cache every coeval product except the huge, transient X-ray box.
-
-    21cmFAST v4.3 renamed XraySourceBox -> RadiationFields (CacheConfig field
-    ``xray_source_box`` -> ``radiation_fields``). Pick whichever this version
-    has, so the production call is identical for v4.2 and v4.3.
-    """
-    fields = {f.name for f in attrs.fields(CacheConfig)}
-    if "radiation_fields" in fields:  # v4.3+
-        return CacheConfig(radiation_fields=False)
-    return CacheConfig(xray_source_box=False)  # v4.2
+    """Cache every coeval product except the huge, transient X-ray box (RadiationFields)."""
+    return CacheConfig(radiation_fields=False)

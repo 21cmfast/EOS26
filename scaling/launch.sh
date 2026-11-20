@@ -1,7 +1,7 @@
 #!/bin/bash
 # Submit one PBS job per scaling configuration (HII_DIM x N_THREADS).
 #
-#   bash scaling/launch.sh --version v4.2 --dims "100 200 300" --threads "16 48"
+#   bash scaling/launch.sh --version v4.3 --dims "100 200 300" --threads "16 48"
 #   bash scaling/launch.sh --version v4.3 --pairs "200:1 200:4 400:32"
 #
 # Jobs are independent and run in parallel; each writes its own results
@@ -14,7 +14,7 @@
 #     first unfinished phase (completed phases are not re-measured).
 #
 # Options
-#   --version V         21cmFAST version label (v4.2 | v4.3 | v4.3_patch) [required]
+#   --version V         21cmFAST version label (v4.3 | v4.3_patch | v4.3_fftw) [required]
 #   --dims "D ..."      HII_DIM values        } cross product,
 #   --threads "N ..."   N_THREADS values      } and/or
 #   --pairs "D:N ..."   explicit HII_DIM:N_THREADS pairs

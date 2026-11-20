@@ -1,6 +1,6 @@
 # EOS26 scaling measurements
 
-This folder measures the **peak memory of each simulation phase** (ICs, PFs, PHFs, coevals) as a function of `HII_DIM` and `N_THREADS`, for 21cmFAST v4.2 and v4.3. The goal is to find the largest `HII_DIM` that fits **safely** on a 3 TB Gadi `megamem` node (2990 GB), and the most efficient `N_THREADS`. Wall time and CPU use are recorded too.
+This folder measures the **peak memory of each simulation phase** (ICs, PFs, PHFs, coevals) as a function of `HII_DIM` and `N_THREADS`, for 21cmFAST v4.3. The goal is to find the largest `HII_DIM` that fits **safely** on a 3 TB Gadi `megamem` node (2990 GB), and the most efficient `N_THREADS`. Wall time and CPU use are recorded too.
 
 The previous harness lives in `../scaling_old/`. See `../scaling_old/ASSESSMENT.md` for why its v4.2 numbers can't be used for the extrapolation.
 
@@ -26,7 +26,7 @@ Each configuration `(version, HII_DIM, N_THREADS)` runs the four phases in produ
 
 ```
 scaling/
-  campaign_v4.2.sh, campaign_v4.3.sh   the grid of (HII_DIM, N_THREADS) to measure -> launch.sh
+  campaign_v4.3.sh                     the grid of (HII_DIM, N_THREADS) to measure -> launch.sh
   campaign_v4.3_patch.sh               the v4.3 grid with the patched 4.3.0 build (label v4.3_patch)
   check_patch.py                       checks that a venv's py21cmfast contains a patch (patched labels)
   launch.sh                            submits one PBS job per configuration (idempotent)
@@ -37,7 +37,7 @@ scaling/
   _memory.py, _common.py, _lib.sh      helpers
   summarize.py                         status table + CSV summaries
   templates/EOS26_v4.3.toml            EOS26.toml with the one parameter v4.3 renamed
-  results/v4.2/, results/v4.3/,        one folder per configuration (below), per version label
+  results/v4.3/,                       one folder per configuration (below), per version label
   results/v4.3_patch/
   sims/                                simulation caches while a configuration runs, when not on Gadi (git-ignored);
                                        on Gadi they go to /g/data/qp00/$USER/EOS26_scaling_sims/ (SC_SIM_ROOT in config.sh)
@@ -47,21 +47,19 @@ scaling/
 
 ```bash
 cd /scratch/qp00/$USER/EOS26
-# 0. venvs: v4.2 = the production venv; v4.3 once with
+# 0. the v4.3 venv, once:
 bash envs/create_venv_v4.3.sh gadi               # check sc_venv in scaling/config.sh
 
 # 1. smoke test (a few minutes each)
-bash scaling/launch.sh --version v4.2 --pairs 64:4
 bash scaling/launch.sh --version v4.3 --pairs 64:4
 python3 scaling/summarize.py
 
 # 2. campaigns (--follow: resume/retry automatically, see below)
 bash scaling/campaign_v4.3.sh --dry-run          # see queue/mem/walltime/disk per job
 bash scaling/campaign_v4.3.sh --follow
-bash scaling/campaign_v4.2.sh --follow           # optional: the v4.2 comparison
 
 # 3. progress, any time
-python3 scaling/summarize.py --label v4.2
+python3 scaling/summarize.py --label v4.3
 ```
 
 ### Patched 21cmFAST build (`v4.3_patch`)
@@ -103,7 +101,7 @@ When all four phases of a configuration are complete, its simulation cache (`<SC
 
 | option | meaning |
 |---|---|
-| `--version v4.2\|v4.3\|v4.3_patch` | selects venv, template and results folder (from `config.sh`) |
+| `--version v4.3\|v4.3_patch\|v4.3_fftw` | selects venv, template and results folder (from `config.sh`) |
 | `--dims "…" --threads "…"` / `--pairs "D:N …"` | configurations (cross product and/or explicit pairs) |
 | `--phases ics,pf` | measure only these phases (upstream phases are added if needed) |
 | `--coeval-batch N` | coevals in production-like batches of N redshifts per process (separate results folder `…_CBNN`) |

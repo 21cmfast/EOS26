@@ -2,7 +2,7 @@
 """Status table and machine-readable summary of scaling measurements.
 
     python3 scaling/summarize.py                  # all labels
-    python3 scaling/summarize.py --label v4.2     # one version
+    python3 scaling/summarize.py --label v4.3     # one version
 
 Prints one line per configuration (phase status, peak RSS per phase, where
 the coeval peak happens) and writes, per label:

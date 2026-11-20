@@ -1,10 +1,10 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.13"
 
 [[package]]
 name = "21cmfast"
-version = "4.2"
+version = "4.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "astropy" },
@@ -20,12 +20,13 @@ dependencies = [
     { name = "hmf" },
     { name = "matplotlib" },
     { name = "numpy" },
+    { name = "packaging" },
     { name = "pyyaml" },
     { name = "scipy" },
     { name = "tomlkit" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/9d/81d3fb6edb78e22d833acc968d5b481ee4991cb7f5b509873e43cc6f858a/21cmfast-4.2.tar.gz", hash = "sha256:1ba8d796fc3071196ff02ded2c8436c279d6abf944896829c09dea610f7f16b0", size = 49654997, upload-time = "2026-06-13T09:12:58.613Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/06/67c1618a333a584535b4bf126186d010361ffeaba6821b2fc597713bcef7/21cmfast-4.3.1.tar.gz", hash = "sha256:eaab3c54492ef4985bb6a5d3eb6dfbf64c6702825a527fe7c08b3ee6211cbed4", size = 50257133, upload-time = "2026-10-21T11:17:44.847Z" }
 
 [[package]]
 name = "appnope"
@@ -411,7 +412,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "21cmfast", specifier = "==4.2" },
+    { name = "21cmfast", specifier = "==4.3.1" },
     { name = "matplotlib" },
     { name = "psutil" },
 ]
