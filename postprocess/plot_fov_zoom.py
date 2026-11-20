@@ -341,6 +341,8 @@ def parse(argv=None):
                    help="figure with --show-mwa: show the periodic copies of the box, dimmed, around it")
     p.add_argument("--deg-axis", action="store_true", help="figure: angle axes (degrees from the centre) on top and right")
     p.add_argument("--no-cbar", action="store_true", help="figure: no colour bar")
+    p.add_argument("--no-sim-boxes", action="store_true",
+                   help="figure: without the simulation boxes (SIM_BOXES): no squares, sizes or legend entry")
     p.add_argument("--figure-galaxies", type=int, default=0,
                    help="figure: draw the N brightest galaxies of the slice as small spirals sized by M_UV "
                         "(needs --halos)")
@@ -1056,12 +1058,14 @@ def render_rgb(sl, colourers, sampler, quantities, xs, ys, origin, spin=0.0, box
 
 
 # ====================================================================== figure
-def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, gals=None, per_band=5):
+def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, gals=None, per_band=5,
+                           sim_boxes=SIM_BOXES):
     """The other surveys of the figure (--footprints): large ones (circles) on the box; the others in a zoom
     panel, whose region is marked on the box. bands: (quantity, RGB image, Colourer) of the figure's quantity
     and of --inset-bands, shown side by side in the panel, each with its colour bar above it (the first one is
     also the box's); box_in: the panel (x0, y0, size) in inches, and the figure size (W, H); gals: (x, y, M_UV)
-    of the galaxies, of which the per_band brightest of each band are drawn."""
+    of the galaxies, of which the per_band brightest of each band are drawn; sim_boxes: the sides of the
+    simulation boxes drawn (none: no squares and no legend entry)."""
     from matplotlib.cm import ScalarMappable
     from matplotlib.patches import Circle, ConnectionPatch, Rectangle
     from matplotlib.ticker import MaxNLocator
@@ -1153,7 +1157,7 @@ def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, 
     # simulation boxes (SIM_BOXES), centred as the surveys and the circles: on the box, and in the panel with their
     # side above the top right corner if they fit, else on the box above its top left corner; solid SIM_COLOUR on a
     # casing, to show on dark and light regions
-    for side in SIM_BOXES:
+    for side in sim_boxes:
         x, y = centre[0] - side / 2, centre[1] - side / 2
         for axx in (ax, axz) if side < 2 * R else (ax,):
             for lw_, colr, al in ((3.6, casing(SIM_COLOUR), 0.5), (1.6, SIM_COLOUR, 1.0)):
@@ -1166,27 +1170,32 @@ def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, 
     from matplotlib.lines import Line2D
     lines = [ln for ln in LINE_COLOUR if any(m[1] == ln for _, _, ms, _ in fps for m in ms)]
     # two rows (filled by column): the lines and the simulation reference, all solid on their casing; then 21-cm on the
-    # first row, right after the entry above the simulation reference (not in a third column)
+    # first row, right after the entry above the simulation reference (not in a third column). Without the simulation
+    # boxes, 21-cm takes the simulation reference's place.
     def handle(c, lw=3.0):
         return Line2D([], [], color=c, lw=lw, path_effects=outlined(lw + 2.0, fg=casing(c), alpha=0.5))
-    cells = [(handle(LINE_COLOUR[ln]), ln) for ln in lines] + [(handle(SIM_COLOUR), "Simulation reference")]
+    cells = [(handle(LINE_COLOUR[ln]), ln) for ln in lines]
+    cells += [(handle(SIM_COLOUR), "Simulation reference") if len(sim_boxes) else (handle(CIRCLE_COLOUR), "21-cm")]
     cells += [(Line2D([], [], ls="none"), "")] * (len(cells) % 2)
     style = dict(frameon=False, fontsize=14, handlelength=1.4, columnspacing=0.6, handletextpad=0.4, labelspacing=0.3)
     yl = (y0 - 0.54) / H  # the legend's top, just under the panel's x labels
     leg = fig.legend(*zip(*cells), loc="upper left", bbox_to_anchor=(x0 / W, yl), ncol=len(cells) // 2, **style)
     fig.canvas.draw()  # the legend's layout, for the place of 21-cm
     inv = fig.transFigure.inverted()
-    top = leg.get_texts()[len(cells) - 2].get_window_extent()  # the first row's last entry
-    (_, y_), (x_, _) = inv.transform([(0, (top.y0 + top.y1) / 2), (top.x1, 0)])
-    x_ += 0.6 * 14 / 72 / W
-    leg21 = fig.legend([handle(CIRCLE_COLOUR)], ["21-cm"], loc="center left", borderpad=0, borderaxespad=0,
-                       bbox_to_anchor=(x_, y_), **style)
-    fig.canvas.draw()  # both legends together, centred under the panel
+    last = leg
+    if len(sim_boxes):
+        top = leg.get_texts()[len(cells) - 2].get_window_extent()  # the first row's last entry
+        (_, y_), (x_, _) = inv.transform([(0, (top.y0 + top.y1) / 2), (top.x1, 0)])
+        x_ += 0.6 * 14 / 72 / W
+        last = leg21 = fig.legend([handle(CIRCLE_COLOUR)], ["21-cm"], loc="center left", borderpad=0,
+                                  borderaxespad=0, bbox_to_anchor=(x_, y_), **style)
+        fig.canvas.draw()  # both legends together, centred under the panel
     lo = inv.transform((leg.get_window_extent().x0, 0))[0]
-    hi = inv.transform((leg21.get_window_extent().x1, 0))[0]
+    hi = inv.transform((last.get_window_extent().x1, 0))[0]
     dx = (x0 + Z / 2) / W - (lo + hi) / 2
     leg.set_bbox_to_anchor((x0 / W + dx, yl), transform=fig.transFigure)
-    leg21.set_bbox_to_anchor((x_ + dx, y_), transform=fig.transFigure)
+    if len(sim_boxes):
+        leg21.set_bbox_to_anchor((x_ + dx, y_), transform=fig.transFigure)
     # the zoom region on the box (red, unlike the surveys), joined to the panel
     for lw_, colr, al in ((4.0, "black", 0.6), (2.2, ZOOM_COLOUR, 1.0)):
         ax.add_patch(Rectangle((zx[0], zy[0]), 2 * R, 2 * Ry, fill=False, ec=colr, lw=lw_, alpha=al, zorder=3.6))
@@ -1334,7 +1343,7 @@ def make_figure(sl, a, quantities, out):
             gals = (sl.halos[0], sl.halos[1], uv_magnitude(sl))
         draw_figure_footprints(fig, ax, fps, ov, centre, bands,
                                ((zx0, pb, Z, Zh), (FWt, FH)), cbars=cb, gals=gals,
-                               per_band=a.band_galaxies)
+                               per_band=a.band_galaxies, sim_boxes=() if a.no_sim_boxes else SIM_BOXES)
     if sl.watermark:
         fig.text(0.01, 0.005, sl.watermark, color="#d62728", fontsize=11, ha="left", va="bottom")
     base = str(out)
