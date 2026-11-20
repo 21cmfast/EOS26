@@ -34,15 +34,16 @@ box: drawn only with --show-mwa or --start mwa).
 Figure: the slice with the circles of the 21-cm instruments and, next to it, a zoom panel on the centre
 with the footprints of the other surveys (--footprints; the largest, SPHEREx, as a circle on the box),
 coloured by the line-intensity maps of EOS26 they go with ([C II], [O III], Halpha/Hbeta), with
-their redshift range in the name where none of their lines is at the slice's redshift; the colour bar
-is then under the panel. The panel shows vertical bands: the figure's quantity, then by default two of
+their redshift range in the name where none of their lines is at the redshift of --overlay-freq; the colour
+bars are then above the panel. The panel shows vertical bands: the figure's quantity, then by default two of
 x_HI, T_b and density (INSET_BANDS), or the quantities of --inset-bands (e.g. the line-intensity maps once
-they exist; none: one band), each with its colour bar under it.
+they exist; none: one band), each with its colour bar above it.
 
 Galaxies (--halos FILE or auto): the PerturbedHaloCatalog of postprocess/galaxies at the node nearest
-the slice, within --halo-slab of the slice's box plane, drawn as open red rings sized by M_UV (as
-Davies et al. 2025), M_UV = 51.63 - 2.5 log10(SFR / 1.15e-28) as in tuesday: in the movie the brightest
---max-galaxies (100) in a frame, in the figure's zoom panel the --band-galaxies (5) brightest of each band.
+the slice, within --halo-slab of the slice's box plane, sized by M_UV (as Davies et al. 2025): open red rings
+in the movie, small red spirals in the figure. M_UV = 51.63 - 2.5 log10(SFR / 1.15e-28) as in tuesday. In the
+movie the brightest --max-galaxies (100) in a frame, in the figure's zoom panel the --band-galaxies (15)
+brightest of each band.
 
 Movie (default): it opens on a turning 3D view of the box (--intro cube; the initial density, or the
 shown quantity's coeval at the first node with --intro-quantity same), whose front face is the box plane
@@ -198,7 +199,7 @@ FOOTPRINTS = [
     ("square", np.sqrt(0.33), [("COSMOS-3D", "[O III]", 6.75, 9.05)], "br"),
 ]
 # outlines of the other surveys, by the line-intensity maps of EOS26 they go with: [C II] teal, [O III] dark red,
-# Halpha/Hbeta green. Apart in colour from the FoV circles and the red galaxy rings, and
+# Halpha/Hbeta green. Apart in colour from the FoV circles and the red galaxies, and
 # visible on the grey x_HI and the 21-cm colour maps. An outline with two lines has both colours (the second dashed).
 LINE_COLOUR = {"[C II]": "#2a9d8f", "[O III]": "#9a031e", "Hα/Hβ": "#8CBD19"}
 ZOOM_COLOUR = "#ff2020"  # the figure's zoom region on the box
@@ -310,6 +311,9 @@ def parse(argv=None):
     p.add_argument("--save-slice", default=None,
                    help="also write the slice (fields, z, cell, halos) to this npz, e.g. on Gadi, to render elsewhere")
     p.add_argument("--freq", type=float, default=150.0, help="frequency of the slice [MHz] (default 150)")
+    p.add_argument("--overlay-freq", type=float, default=None,
+                   help="figure: frequency [MHz] of the fields of view, survey footprints and names (default: --freq), "
+                        "e.g. 150 to keep those of z = 8.47 on a slice at another redshift")
     p.add_argument("--quantity", "--quantities", dest="quantities", nargs="+", default=None,
                    help="lightcone quantity, or several (sectors, clockwise from straight up), or a preset 4, 6, 8 "
                         "(default: neutral_fraction for the figure, brightness_temp_with_rsds for the movie; "
@@ -338,7 +342,8 @@ def parse(argv=None):
     p.add_argument("--deg-axis", action="store_true", help="figure: angle axes (degrees from the centre) on top and right")
     p.add_argument("--no-cbar", action="store_true", help="figure: no colour bar")
     p.add_argument("--figure-galaxies", type=int, default=0,
-                   help="figure: draw the N brightest galaxies of the slice as rings sized by M_UV (needs --halos)")
+                   help="figure: draw the N brightest galaxies of the slice as small spirals sized by M_UV "
+                        "(needs --halos)")
     p.add_argument("--fig-width", type=float, default=7.0, help="figure width [in] (default 7)")
     # movie
     p.add_argument("--size", default="1920x1080", help="movie frame WxH (default 1920x1080)")
@@ -404,7 +409,7 @@ def parse(argv=None):
                         "every survey, with its redshift range where none of its lines is at the slice's redshift")
     p.add_argument("--inset-bands", nargs="*", default=None, metavar="QUANTITY",
                    help="figure: the quantities of the zoom panel after the figure's quantity, as vertical bands "
-                        "(e.g. a [C II] map), each with its colour bar under the panel (default: two of "
+                        "(e.g. a [C II] map), each with its colour bar above the panel (default: two of "
                         "INSET_BANDS, x_HI, T_b and density; without a quantity: one band)")
     p.add_argument("--black-centre", type=float, default=0.07,
                    help="movie with several quantities: a black disc where the sectors meet, of this radius "
@@ -427,8 +432,8 @@ def parse(argv=None):
     p.add_argument("--max-galaxies", type=int, default=100,
                    help="movie: about this many rings in a 1920x1080 frame; the brightest are kept, so fainter "
                         "galaxies appear while zooming in (default 100)")
-    p.add_argument("--band-galaxies", type=int, default=5,
-                   help="figure: rings in each band of the zoom panel for its brightest galaxies (default 5)")
+    p.add_argument("--band-galaxies", type=int, default=15,
+                   help="figure: the brightest galaxies drawn in each band of the zoom panel (default 15)")
     p.add_argument("--out", default=None, help="output file (default: see above)")
     p.add_argument("--log-file", default=None)
     a = p.parse_args(argv)
@@ -478,6 +483,15 @@ class Slice:
 
     def cmpc_per_deg(self):
         return np.radians(1.0) * self.Dc
+
+    def at(self, nu):
+        """This slice with the redshift, distance and frequency of nu [MHz] and the same fields: for drawing the
+        fields of view and footprints of another redshift on it."""
+        import copy
+        s = copy.copy(self)
+        s.z, s.nu = NU21 / nu - 1, nu
+        s.Dc = float(self.cosmo.comoving_distance(s.z).to_value("Mpc"))
+        return s
 
 
 def load_slice_file(path, quantities, slab, drop_missing=False, extra=()):
@@ -928,13 +942,36 @@ class Sampler:
 
 
 # ====================================================================== drawing helpers
-RING = "#ff3b30"  # galaxy rings (red, as Davies et al. 2025)
+RING = "#ff3b30"  # galaxies: the movie's rings, the figure's spirals (red, as Davies et al. 2025)
 RING_RGB = (1.0, 0.231, 0.188)
 
 
 def ring_px(muv, fs=1.0):
     """Ring radius [pixels at 1080p x fs] for a UV magnitude: 3 px at M_UV = -15, +2.6 px per magnitude."""
     return fs * np.clip(3 + 2.6 * (-15 - np.asarray(muv, float)), 3, 26)
+
+
+def spiral(arms=4, axis=0.5, tilt=30):
+    """A small spiral galaxy as a scatter marker: arms curving out from near the centre, on a disc seen inclined
+    (its minor axis axis times the major one, which is tilt degrees from the horizontal). Scatter scales it to its
+    size; the dot at the centre is drawn separately."""
+    from matplotlib.path import Path
+    t = np.linspace(0, 1, 16)
+    r, turn = 0.25 + 0.75 * t, 2.4 * t  # each arm turns by 2.4 rad on its way out
+    a = [2 * np.pi * k / arms + turn for k in range(arms)]
+    verts = np.concatenate([np.c_[r * np.cos(ak), axis * r * np.sin(ak)] for ak in a])
+    c, s = np.cos(np.radians(tilt)), np.sin(np.radians(tilt))
+    verts = verts @ [[c, s], [-s, c]]  # rotated by tilt
+    return Path(verts, np.tile([Path.MOVETO] + [Path.LINETO] * (t.size - 1), arms))
+
+
+def draw_galaxies(axx, x, y, muv):
+    """The figure's galaxies as small red spirals, sized by M_UV as the movie's rings (ring_px at 1080p) and three
+    times their size in the figure: the arms and a dot at the centre."""
+    r_pt = ring_px(muv, 0.6)  # [pt]
+    axx.scatter(x, y, s=(2 * r_pt) ** 2, marker=spiral(), facecolors="none", edgecolors=RING, linewidths=0.6,
+                zorder=3.5)
+    axx.scatter(x, y, s=(0.4 * r_pt) ** 2, c=RING, linewidths=0, zorder=3.5)
 
 
 def casing(colour):
@@ -1022,9 +1059,9 @@ def render_rgb(sl, colourers, sampler, quantities, xs, ys, origin, spin=0.0, box
 def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, gals=None, per_band=5):
     """The other surveys of the figure (--footprints): large ones (circles) on the box; the others in a zoom
     panel, whose region is marked on the box. bands: (quantity, RGB image, Colourer) of the figure's quantity
-    and of --inset-bands, shown side by side in the panel, each with its colour bar under it (the first one is
+    and of --inset-bands, shown side by side in the panel, each with its colour bar above it (the first one is
     also the box's); box_in: the panel (x0, y0, size) in inches, and the figure size (W, H); gals: (x, y, M_UV)
-    of the galaxies, of which the per_band brightest of each band are ringed."""
+    of the galaxies, of which the per_band brightest of each band are drawn."""
     from matplotlib.cm import ScalarMappable
     from matplotlib.patches import Circle, ConnectionPatch, Rectangle
     from matplotlib.ticker import MaxNLocator
@@ -1081,15 +1118,14 @@ def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, 
         if n > 1:
             cax.tick_params(labelsize=11)
             cax.xaxis.set_major_locator(MaxNLocator(3, steps=[1, 2, 5, 10]))
-    if gals is not None:  # the per_band brightest of each band, ringed and sized by M_UV as on the box
+    if gals is not None:  # the per_band brightest of each band, sized by M_UV as on the box
         gx, gy, gm = gals
         on = []
         for i in range(n):
             b = np.flatnonzero((gx >= edges[i] * c) & (gx < edges[i + 1] * c) & (gy > zy[0]) & (gy < zy[1]))
             on.extend(b[np.argsort(gm[b])[:per_band]])
-        axz.scatter(gx[on], gy[on], s=(2 * ring_px(gm[on], 0.2)) ** 2, facecolors="none", edgecolors=RING,
-                    linewidths=1.1, zorder=3.5)
-        log.info(f"panel: {len(on)} galaxy rings")
+        draw_galaxies(axz, gx[on], gy[on], gm[on])
+        log.info(f"panel: {len(on)} galaxies")
     axz.set_xlim(*zx)
     axz.set_ylim(*zy)
     axz.set_aspect("auto")  # y stretched by Zh / Z
@@ -1170,7 +1206,8 @@ def make_figure(sl, a, quantities, out):
     L, c = sl.L, sl.cell
     centre = a.centre if a.centre else (L / 2, L / 2)
     colourers = {q: Colourer(q, sl.fields[q], a.vmin, a.vmax) for q in quantities}
-    insts = [(n, d, (a.circle_colours or {}).get(n, CIRCLE_COLOUR), sl.fov_cmpc(d)) for n, d, _ in INSTRUMENTS]
+    ov = sl.at(a.overlay_freq) if a.overlay_freq else sl  # the redshift of the fields of view, footprints and names
+    insts = [(n, d, (a.circle_colours or {}).get(n, CIRCLE_COLOUR), ov.fov_cmpc(d)) for n, d, _ in INSTRUMENTS]
     if a.show_mwa:
         half = max(L / 2, max(D for *_, D in insts) / 2 * 1.04)
         lim = (centre[0] - half, centre[0] + half), (centre[1] - half, centre[1] + half)
@@ -1186,10 +1223,10 @@ def make_figure(sl, a, quantities, out):
     S = a.fig_width - left - right
     FW, FH = a.fig_width, S + bottom + top
     # a zoom panel with the other surveys' footprints (they are small on the box) right of the box: a gap, the
-    # panel (Z wide, Zh high) and its tick labels; the colour bar is then under the panel instead of right of the box
+    # panel (Z wide, Zh high) and its tick labels; the colour bars are then above the panel instead of right of the box
     fps = []  # (index, entry, members shown, none of them at the slice's redshift)
     for i, e in enumerate(FOOTPRINTS if a.footprints != "none" else []):
-        here = footprint_members(e, sl.z)
+        here = footprint_members(e, ov.z)
         if here or a.footprints == "auto":  # auto: every survey, with its redshift range where none is at z
             fps.append((i, e, here or list(e[2]), not here))
     fps = [f for f in fps if one or f[1][0] == "circle"]  # sectors: no panel (they meet there)
@@ -1258,10 +1295,7 @@ def make_figure(sl, a, quantities, out):
     if a.figure_galaxies and sl.halos is not None and len(sl.halos[0]):
         muv = uv_magnitude(sl)
         j = np.argsort(muv)[: a.figure_galaxies]
-        # ring radius in points: the movie's mapping at 1080p, scaled to the figure
-        r_pt = ring_px(muv[j], 0.2)
-        ax.scatter(sl.halos[0][j], sl.halos[1][j], s=(2 * r_pt) ** 2, facecolors="none", edgecolors=RING,
-                   linewidths=1.1, zorder=3.5)
+        draw_galaxies(ax, sl.halos[0][j], sl.halos[1][j], muv[j])
         log.info(f"figure: {len(j)} brightest galaxies, M_UV {muv[j].min():.1f} to {muv[j].max():.1f}")
     if not one:
         # sector names along the edge of the frame
@@ -1294,11 +1328,11 @@ def make_figure(sl, a, quantities, out):
         for q in more:
             cl = Colourer(q, sl.fields[q])
             bands.append((q, cl(sl.fields[q]), cl))
-        # the panel, with its x labels above and the colour bars under it (~1.1 in), centred on the box
-        gals = None  # the panel's galaxies (the brightest of each band are ringed)
+        # the panel right of the box, with its colour bars above it and its x labels and the legend under it
+        gals = None  # the panel's galaxies (the brightest of each band are drawn)
         if a.galaxies != "none" and sl.halos is not None and len(sl.halos[0]):
             gals = (sl.halos[0], sl.halos[1], uv_magnitude(sl))
-        draw_figure_footprints(fig, ax, fps, sl, centre, bands,
+        draw_figure_footprints(fig, ax, fps, ov, centre, bands,
                                ((zx0, pb, Z, Zh), (FWt, FH)), cbars=cb, gals=gals,
                                per_band=a.band_galaxies)
     if sl.watermark:
@@ -1309,7 +1343,7 @@ def make_figure(sl, a, quantities, out):
     fig.savefig(base + ".png", dpi=200)
     log.info(f"wrote {base}.pdf and .png")
     for name, deg, col, D in insts:
-        log.info(f"  {name}: {deg * 150 / sl.nu:.2f} deg at {sl.nu:.1f} MHz = {D:.0f} cMpc ({D / L:.2f} box)")
+        log.info(f"  {name}: {deg * 150 / ov.nu:.2f} deg at {ov.nu:.1f} MHz = {D:.0f} cMpc ({D / L:.2f} box)")
 
 
 # ====================================================================== movie
