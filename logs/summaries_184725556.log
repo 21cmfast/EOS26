@@ -70,3 +70,19 @@ size-gpc: ['size-gpc', 'gpc', 'large']
 
 
 stopped: error in cell 7 of plot_fov_zoom_figure.ipynb
+
+==== PBS output of job 184725556 (EOS26_summaries.o184725556, EOS26_summaries.e184725556), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-20 18:30:35:
+   Job Id:             184725556.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      0.80
+   NCPUs Requested:    16                  CPU Time Used: 00:00:09        
+   Memory Requested:   64.0GB                Memory Used: 503.97MB        
+   Walltime Requested: 02:00:00            Walltime Used: 00:01:30        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

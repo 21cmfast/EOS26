@@ -23,3 +23,19 @@
 2026-11-20 18:42:26,940   LOFAR: 3.70 deg at 150.0 MHz = 598 cMpc (0.27 box)
 2026-11-20 18:42:26,940   SKA-Low: 3.00 deg at 150.0 MHz = 485 cMpc (0.22 box)
 ===== plot_fov_zoom_figure.ipynb: done in 96 s
+
+==== PBS output of job 184726626 (EOS26_summaries.o184726626, EOS26_summaries.e184726626), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-20 18:42:31:
+   Job Id:             184726626.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      1.31
+   NCPUs Requested:    16                  CPU Time Used: 00:00:31        
+   Memory Requested:   64.0GB                Memory Used: 19.49GB         
+   Walltime Requested: 02:00:00            Walltime Used: 00:02:27        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
