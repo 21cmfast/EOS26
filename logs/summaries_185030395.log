@@ -1,0 +1,39 @@
+===== cell 1 (1/4 code cells, 0 s)
+===== cell 3 (2/4 code cells, 0 s)
+===== cell 5 (3/4 code cells, 0 s)
+===== cell 7 (4/4 code cells, 0 s)
+2026-11-24 12:21:53,757 neutral_fraction: slice 1231 (z = 10.7692) read in 8.6 s
+2026-11-24 12:21:58,752 brightness_temp: slice 1231 (z = 10.7692) read in 4.9 s
+2026-11-24 12:22:06,462 sfrd_acg: slice 1231 (z = 10.7692) read in 7.6 s
+2026-11-24 12:22:11,955 density: slice 1231 (z = 10.7692) read in 5.4 s
+2026-11-24 12:22:11,974 galaxies of node z = 10.7641: /g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/10.7641/PerturbedHaloCatalog.h5
+2026-11-24 12:22:19,342 galaxies: 36372 of 55651876 within 0.75 cMpc of plane 1231
+2026-11-24 12:22:19,569 halo check: mean 1+delta at the halos 1.13 (a shifted plane: 1.00)
+2026-11-24 12:22:19,606 slice: EOS26_earlyEoR, z = 10.7692 (120.7 MHz), 1500² cells of 1.5 cMpc, D_c = 9795 cMpc, 1 deg = 171.0 cMpc
+2026-11-24 12:22:32,979   SPHEREx deep field: 11.3 deg = 1825 cMpc
+2026-11-24 12:22:32,979   CCAT/FYST EoR-Spec (z ≤ 8.1): 2 deg = 323 cMpc
+2026-11-24 12:22:32,979   JWST COSMOS-3D: 0.574 deg = 93 cMpc
+2026-11-24 12:22:32,979   Roman UDF: 1 deg = 162 cMpc
+2026-11-24 12:22:33,186 panel: 45 galaxies
+2026-11-24 12:22:40,126 wrote /scratch/qp00/db9528/EOS26/plots/fov_EOS26_earlyEoR_z10.77_neutral_fraction_nosim.pdf and .png
+2026-11-24 12:22:40,126   MWA: 24.70 deg at 150.0 MHz = 3994 cMpc (1.78 box)
+2026-11-24 12:22:40,126   HERA: 8.20 deg at 150.0 MHz = 1326 cMpc (0.59 box)
+2026-11-24 12:22:40,126   LOFAR: 3.70 deg at 150.0 MHz = 598 cMpc (0.27 box)
+2026-11-24 12:22:40,126   SKA-Low: 3.00 deg at 150.0 MHz = 485 cMpc (0.22 box)
+===== plot_fov_zoom_figure.ipynb: done in 59 s
+
+==== PBS output of job 185030395 (EOS26_summaries.o185030395, EOS26_summaries.e185030395), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-24 12:22:44:
+   Job Id:             185030395.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      1.12
+   NCPUs Requested:    16                  CPU Time Used: 00:00:19        
+   Memory Requested:   64.0GB                Memory Used: 5.36GB          
+   Walltime Requested: 02:00:00            Walltime Used: 00:02:06        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
