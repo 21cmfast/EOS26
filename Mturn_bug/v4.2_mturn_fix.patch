@@ -1,0 +1,13 @@
+diff --git a/src/py21cmfast/src/HaloBox.c b/src/py21cmfast/src/HaloBox.c
+index 3539fce1..0b869c53 100644
+--- a/src/py21cmfast/src/HaloBox.c
++++ b/src/py21cmfast/src/HaloBox.c
+@@ -495,7 +495,7 @@ void get_log10_turnovers(InitialConditions *ini_boxes, TsBox *previous_spin_temp
+             }
+             M_turn_m = lyman_werner_threshold(consts->redshift, J21_val, curr_vcb);
+             M_turn_r = reionization_feedback(consts->redshift, Gamma12_val, zre_val);
+-            M_turn_a = fmax(M_turn_a, fmax(M_turn_r, astro_params_global->M_TURN));
++            M_turn_a = fmax(consts->mturn_a_nofb, fmax(M_turn_r, astro_params_global->M_TURN));
+             M_turn_m = fmax(M_turn_m, fmax(M_turn_r, astro_params_global->M_TURN));
+ 
+             mturn_a_grid[i] = log10(M_turn_a);
