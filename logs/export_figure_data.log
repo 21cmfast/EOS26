@@ -1,0 +1,39 @@
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+[    1.7 s] rect/density
+[    3.0 s] rect/brightness_temp
+[    4.3 s] rect/spin_temperature
+[    5.9 s] rect/neutral_fraction
+[    7.1 s] rect/kinetic_temp_neutral
+[    8.5 s] rect/J_21_LW
+[    9.8 s] rect/sfrd_acg
+[   10.9 s] rect/cumulative_recombinations
+[   12.4 s] rect/los_velocity
+[   13.7 s] rect/ionisation_rate_G12
+[   15.1 s] rect/sfrd_mcg
+[   16.9 s] rect/n_ion
+[   18.8 s] rect/xray_emissivity
+[   18.9 s] rect/brightness_temp_dvdr_with_rsds
+[  231.6 s] patch: 1529316 of 29483660 pixels within 10.0 deg
+Traceback (most recent call last):
+  File "/scratch/qp00/db9528/EOS26/postprocess/export_figure_data.py", line 120, in <module>
+    if not np.allclose(h["lightcone_distances"][:], dist):
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/numpy/_core/numeric.py", line 2311, in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/numpy/_core/numeric.py", line 2442, in isclose
+    result = (less_equal(abs(x - y), atol + rtol * abs(y))
+                             ~~^~~
+ValueError: operands could not be broadcast together with shapes (2553,) (2552,) 
+
+======================================================================================
+                  Resource Usage on 2026-11-25 17:21:16:
+   Job Id:             185173150.gadi-pbs
+   Project:            qp00
+   Exit Status:        1
+   Service Units:      0.27
+   NCPUs Requested:    1                   CPU Time Used: 00:03:35        
+   Memory Requested:   8.0GB                 Memory Used: 4.33GB          
+   Walltime Requested: 01:00:00            Walltime Used: 00:04:00        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

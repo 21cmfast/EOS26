@@ -1,0 +1,34 @@
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+/scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/powerbox/tools.py:929: UserWarning: One or more radial bins had no cells within it.
+  return angular_average(
+brightness_temp_dvdr_with_rsds: chunk z = 5.00-5.78 (149 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.38-6.23 (270 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.79-6.73 (391 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.24-7.28 (515 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.74-7.88 (646 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.28-8.56 (774 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.89-9.32 (901 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.57-10.17 (1030 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.33-11.14 (1155 s)
+brightness_temp_dvdr_with_rsds: chunk z = 10.19-12.23 (1280 s)
+brightness_temp_dvdr_with_rsds: chunk z = 11.15-13.48 (1406 s)
+brightness_temp_dvdr_with_rsds: chunk z = 12.25-14.91 (1532 s)
+brightness_temp_dvdr_with_rsds: chunk z = 13.50-16.57 (1662 s)
+brightness_temp_dvdr_with_rsds: chunk z = 14.93-18.50 (1791 s)
+brightness_temp_dvdr_with_rsds: chunk z = 16.59-20.76 (1915 s)
+brightness_temp_dvdr_with_rsds: chunk z = 18.53-23.45 (2042 s)
+brightness_temp_dvdr_with_rsds: chunk z = 20.80-26.67 (2168 s)
+brightness_temp_dvdr_with_rsds: chunk z = 23.49-30.56 (2294 s)
+wrote /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/power_spectra/brightness_temp_dvdr_with_rsds.npz: 18 chunks, z = 5.38-26.69
+
+======================================================================================
+                  Resource Usage on 2026-11-25 17:55:56:
+   Job Id:             185173151.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      20.68
+   NCPUs Requested:    16                  CPU Time Used: 00:36:07        
+   Memory Requested:   64.0GB                Memory Used: 62.47GB         
+   Walltime Requested: 03:00:00            Walltime Used: 00:38:46        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -1,0 +1,12 @@
+--set: TEST = False (cell 3)
+===== cell 0 (1/17 code cells, 0 s)
+21cmFAST 4.3.1
+===== cell 3 (2/17 code cells, 2 s)
+===== cell 4 (3/17 code cells, 2 s)
+EOS26      HII_DIM=1500 cell=1.50 Mpc BOX_LEN=2250 Mpc  F_ESC10_ACG=-0.850 ALPHA_ESC=-0.050 F_ESC7_MCG=-0.700  in cache: 92 halo catalogues, 70 coevals of 92
+EOS26_earlyEoR HII_DIM=1500 cell=1.50 Mpc BOX_LEN=2250 Mpc  F_ESC10_ACG=-0.600 ALPHA_ESC=-0.160 F_ESC7_MCG=-0.600  in cache: 92 halo catalogues, 92 coevals of 92
+===== cell 5 (4/17 code cells, 34 s)
+===== cell 6 (5/17 code cells, 34 s)
+===== cell 7 (6/17 code cells, 34 s)
+===== cell 9 (7/17 code cells, 34 s)
+===== cell 11 (8/17 code cells, 35 s)
