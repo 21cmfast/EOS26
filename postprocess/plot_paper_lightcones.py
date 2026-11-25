@@ -14,9 +14,10 @@ bands  One plane of the rectilinear lightcone of each quantity (box cells x = 0,
        --band-width cMpc in y), z = 5-35 from left to right. Input: rect/<quantity> of
        <lightcone dir>/figure_data.h5 (postprocess/export_figure_data.py).
        Output: plots/bands_<run>.{png,pdf}.
-global One column: the 21-cm power at k = 0.1/cMpc (power_spectra/ of postprocess/power_spectra.py),
-       the mean 21-cm brightness temperature, the neutral fraction, and the kinetic and spin
-       temperatures, vs z, of both EOS26 runs (fiducial and early EoR; see eos26_runs for where the
+global Full width, 2 x 2: the neutral fraction with the observations and the Qin et al. (2025) band
+       (postprocess/xhi_data.py, as plot_xHI_history.ipynb), the 21-cm power at k = 0.1/cMpc
+       (power_spectra/ of postprocess/power_spectra.py), the mean 21-cm brightness temperature, and the
+       kinetic and spin temperatures, vs z, of both EOS26 runs (fiducial and early EoR; see eos26_runs for where the
        fiducial curves come from until its lightcones exist), EOS21 (plots/EOS21) and EOS16
        (plots/EOS16, 1024^3 runs). Means are box means at the node redshifts (global_mean of the
        angular-plane stores); bands the 16-84 and 2.5-97.5 percentiles of the angular-plane cells.
@@ -74,7 +75,8 @@ SPEC = {
     "brightness_temp": ("21-cm signal, no velocity terms", r"$\delta T_{\rm b}$ [mK]", "EoR", "lin", (-150, 30), 1),
     RSD: ("21-cm signal", r"$\delta T_{\rm b}$ [mK]", "EoR", "lin", (-150, 30), 1),
 }
-# names under the arc's sectors, with the units of the tick labels of the colour bars above them (log quantities are labelled
+# arc labels: the quantity name (on one side of its sector, NAME_POS) and, after a newline, the units of the
+# colour bar's tick labels (with the colour bar, on the other side) (log quantities are labelled
 # with their values, not their logarithms)
 ARC_NAME = {"density": "Density\n" r"$1+\delta$", "sfrd_acg": "Star formation\n" r"[$M_\odot$ yr$^{-1}$ cMpc$^{-3}$]",
             "J_21_LW": "Lyman–Werner\n" r"$J_{\rm LW,21}$", "kinetic_temp_neutral": "Gas temperature\n[K]",
@@ -179,9 +181,31 @@ def arc(args):
 
     # page: x to the right, y up, observer at (0, 0), longitude 0 straight up, cGpc
     half = np.radians(args.width / 2)
-    rb0, rb1 = r_out + 0.12, r_out + 0.32  # the curved colour bars, just above the sectors
-    x_max = (rb1 + 0.4) * np.sin(half) + 0.5  # room for the tick labels
-    y_lo, y_hi = r_in * np.cos(half) - 0.8, rb1 + 0.5
+    W = args.fig_width
+
+    def rings(pt):
+        """Radii of the labels for a page scale pt (one point in cGpc): the name baseline, the colour bar, the
+        units baseline, and the outermost radius used. NAME_POS "sector": colour bar, tick labels and units
+        above the sector, name under it; "above": name above the sector, colour bar, tick labels and units
+        under it."""
+        if NAME_POS == "above":
+            rn = r_out + 0.08 + 0.3 * FS["name"] * pt
+            rb1 = r_in - 0.12
+            rb0 = rb1 - 0.2
+            r_u = rb0 - 0.1 - (1.35 * FS["cbar"] + 0.8 * FS["unit"]) * pt
+            return rn, rb0, rb1, r_u, rn + 1.0 * FS["name"] * pt + 0.15
+        rb0 = r_out + 0.12
+        rb1 = rb0 + 0.2
+        r_u = rb1 + 0.1 + (1.35 * FS["cbar"] + 0.3 * FS["unit"]) * pt
+        return None, rb0, rb1, r_u, r_u + 1.0 * FS["unit"] * pt + 0.15
+
+    # the labels are sized in points, so the page scale is found by iteration
+    x_max = r_out * np.sin(half) + 0.5
+    for _ in range(6):
+        pt = 2 * x_max / (W * 72)
+        x_max = rings(pt)[-1] * np.sin(half) + 0.5
+    rn, rb0, rb1, r_u, r_top = rings(pt)
+    y_lo, y_hi = r_in * np.cos(half) - 0.3 - 3.2 * FS["title"] * pt, r_top
     nx = args.pixels
     px = 2 * x_max / nx
     ny = int(np.ceil((y_hi - y_lo) / px))
@@ -226,7 +250,6 @@ def arc(args):
     del R, TH, inside
 
     # ------------------------------------------------------------------ figure
-    W = args.fig_width
     ax_h = W * (y_hi - y_lo) / (2 * x_max)
     # the full sky and the patch below, if export_figure_data.py's file is there
     fd = lightcone_dir(args) / "figure_data.h5"
@@ -267,29 +290,39 @@ def arc(args):
         nrm = side * np.array([np.cos(a), -np.sin(a)])  # outward normal
         for r, lab in ticks:
             p = np.array([r * np.sin(a), r * np.cos(a)])
-            ax.plot(*np.c_[p, p + 0.12 * nrm], color="k", lw=0.6)
-            ax.text(*(p + 0.2 * nrm), lab, ha="right" if side < 0 else "left", va="center", fontsize=FS["tick"])
+            ax.plot(*np.c_[p, p + 3 * pt * nrm], color="k", lw=0.6)
+            ax.text(*(p + 5 * pt * nrm), lab, ha="right" if side < 0 else "left", va="center", fontsize=FS["tick"])
         rm = 0.5 * (r_in + r_out)
-        p = np.array([rm * np.sin(a), rm * np.cos(a)]) + 0.75 * nrm
+        p = np.array([rm * np.sin(a), rm * np.cos(a)]) + (8 + 2.2 * FS["tick"]) * pt * nrm
         ax.text(*p, title, ha="center", va="center", rotation=90 - a_deg - (180 if side < 0 else 0), fontsize=FS["title"])
 
-    edge_ticks(edges[0], -1, [(r_of_z(z), f"{z:g}") for z in (5, 6, 8, 10, 15, 20, 35)], "Redshift")
+    edge_ticks(edges[0], -1, [(r_of_z(z), f"{z:g}") for z in (5, 6, 8, 10, 15, 35)], "Redshift")
     edge_ticks(edges[-1], 1, [(r_of_z(NU21 / nu - 1), f"{nu}") for nu in (50, 100, 150, 200)],
                "Frequency [MHz]")
-    # each sector: a curved colour bar above it (tick labels on top) and its name under it
-    pt = (2 * x_max) / (W * 72)  # one point in page units (cGpc)
-    # the largest name size (at most FS["name"]) at which every name fits under its sector, 1 deg to spare
-    names = [ARC_NAME.get(q, SPEC[q][0]).split("\n") for q in qs]
-    room = np.radians(edges[1] - edges[0] - 1) * (r_in - 0.1 - 1.25 * pt * FS["name"])
-    size = FS["name"]
-    while size > 6 and max(token_widths(ax, nm[0], size)[1].sum() for nm in names) > room:
-        size -= 0.25
-    print(f"names at {size:g} pt")
+    # each sector: a curved colour bar with its tick labels and units on one side, the name on the other
+    # (NAME_POS); names and units at the largest size (at most FS["name"], FS["unit"]) at which they fit across
+    # their sector, 1 deg to spare
+    names = [ARC_NAME.get(q, SPEC[q][0]).split("\n") + [""] for q in qs]
+    span = np.radians(edges[1] - edges[0] - 1)
+
+    def fit(lines, cap, r_of_size):
+        size = cap
+        while size > 6 and max(token_widths(ax, ln, size)[1].sum() for ln in lines) > span * r_of_size(size):
+            size -= 0.25
+        return size
+
+    r_name = (lambda sz: rn) if NAME_POS == "above" else (lambda sz: r_in - 0.1 - sz * pt)  # noqa: E731
+    size_n = fit([nm[0] for nm in names], FS["name"], r_name)
+    size_u = [fit([nm[1]], FS["unit"], lambda sz: r_u) for nm in names]  # each units line on its own
+    print(f"names at {size_n:g} pt, units at {size_u} pt")
     for i, (q, (cm, norm, _)) in enumerate(zip(qs, scales)):
-        m = np.radians(0.5 * (edges[i] + edges[i + 1]))
-        for k, line in enumerate(names[i]):  # name, then units, along the inner edge
-            curved_text(ax, line, r_in - 0.1 - (k + 0.8) * 1.25 * pt * size, np.degrees(m), size - (1 if k else 0))
-        curved_colour_bar(ax, q, cm, norm, edges[i] + 2, edges[i + 1] - 2, rb0, rb1)
+        m = np.degrees(np.radians(0.5 * (edges[i] + edges[i + 1])))
+        inside = NAME_POS == "above"  # the bar under the sector: a shorter arc, so wider margins and fewer ticks
+        curved_colour_bar(ax, q, cm, norm, edges[i] + (3 if inside else 2), edges[i + 1] - (3 if inside else 2),
+                          rb0, rb1, inside=inside)
+        curved_text(ax, names[i][0], r_name(size_n), m, size_n)
+        if names[i][1]:
+            curved_text(ax, names[i][1], r_u, m, size_u[i])
     # inside: the box size, and the way to the observer
     yc = r_in * np.cos(half) + 0.45
     L = args.box / 1e3
@@ -306,17 +339,17 @@ def arc(args):
     print(f"wrote {out}.png/.pdf ({time.time() - t0:.0f} s)")
 
 
-LIN_TICKS = {"neutral_fraction": [0, 0.5, 1], RSD: [-150, -100, -50, 0], "brightness_temp": [-150, -100, -50, 0],
+LIN_TICKS = {"neutral_fraction": [0, 0.5, 1], RSD: [-100, -50, 0], "brightness_temp": [-100, -50, 0],
              "cumulative_recombinations": [0, 1, 2, 3], "los_velocity": [-400, 0, 400]}
 
 
-def ticks(q, norm):
-    """Tick positions (in the units of the colour scale) and labels: values, also for log scales."""
+def ticks(q, norm, nmax=4):
+    """Tick positions (in the units of the colour scale) and labels: values, also for log scales; at most nmax."""
     lo, hi = norm.vmin, norm.vmax
     scale = SPEC[q][3]
     if scale == "log":  # whole powers of ten, at most four
         e = np.arange(np.ceil(lo - 1e-9), np.floor(hi + 1e-9) + 1)
-        e = e[:: int(np.ceil(e.size / 4))]
+        e = e[:: int(np.ceil(e.size / nmax))]
         lab = {0: "1", 1: "10"}
         return e, [lab.get(int(k), f"$10^{{{int(k)}}}$") for k in e]
     if scale == "log1p":
@@ -324,12 +357,13 @@ def ticks(q, norm):
         return np.log10(v), [f"{x:g}" for x in v]
     from matplotlib.ticker import MaxNLocator
 
-    t = LIN_TICKS.get(q) or MaxNLocator(4).tick_values(lo, hi)
+    t = LIN_TICKS.get(q) or MaxNLocator(nmax).tick_values(lo, hi)
     t = [x for x in t if lo - 1e-9 <= x <= hi + 1e-9]
     return np.array(t), [f"{x:g}".replace("-", "−") for x in t]
 
 
-FS = {"tick": 9.5, "title": 11, "name": 10, "note": 10, "cbar": 9}  # arc font sizes [pt]; names: at most
+FS = {"tick": 9.5, "title": 11, "name": 11, "unit": 10, "note": 10, "cbar": 9}  # arc font sizes [pt]; names, units: at most
+NAME_POS = "above"  # "above": name above the sector, colour bar under it; "sector": name under, colour bar above
 
 
 def token_widths(ax, s, size):
@@ -357,9 +391,9 @@ def curved_text(ax, s, r, a_mid, size):
                 rotation_mode="anchor", fontsize=size)
 
 
-def curved_colour_bar(ax, q, cm, norm, a0, a1, r0, r1, n=256):
+def curved_colour_bar(ax, q, cm, norm, a0, a1, r0, r1, n=256, inside=False):
     """A colour bar along an arc of the page (angles a0 < a1 in degrees, clockwise from up; radii r0 < r1),
-    values increasing clockwise, with ticks and labels on its outer side."""
+    values increasing clockwise, with ticks and labels on its outer side (inside: on its inner side)."""
     a = np.radians(np.linspace(a0, a1, n + 1))
     r = np.array([r0, r1])
     X, Y = r[:, None] * np.sin(a)[None, :], r[:, None] * np.cos(a)[None, :]
@@ -369,13 +403,20 @@ def curved_colour_bar(ax, q, cm, norm, a0, a1, r0, r1, n=256):
         ax.plot(rr * np.sin(a), rr * np.cos(a), color="k", lw=0.4)
     for aa in a[[0, -1]]:
         ax.plot(r * np.sin(aa), r * np.cos(aa), color="k", lw=0.4)
-    for t, lab in zip(*ticks(q, norm)):
+    size = FS["cbar"] - (1 if inside else 0)
+    last = None  # arc position and half width of the last label drawn: labels that would touch it are left out
+    for t, lab in zip(*ticks(q, norm, 3 if inside else 4)):
         aa = np.radians(a0 + (t - norm.vmin) / (norm.vmax - norm.vmin) * (a1 - a0))
-        ax.plot([r1 * np.sin(aa), (r1 + 0.07) * np.sin(aa)], [r1 * np.cos(aa), (r1 + 0.07) * np.cos(aa)],
+        rl = (r0 - 0.1) if inside else (r1 + 0.1)
+        half = 0.5 * token_widths(ax, lab, size)[1].sum()
+        if last is not None and aa * rl - last[0] < last[1] + half + 0.1:
+            continue
+        last = (aa * rl, half)
+        re, sgn = (r0, -1) if inside else (r1, 1)
+        ax.plot([re * np.sin(aa), (re + sgn * 0.07) * np.sin(aa)], [re * np.cos(aa), (re + sgn * 0.07) * np.cos(aa)],
                 color="k", lw=0.4)
-        rl = r1 + 0.1
-        ax.text(rl * np.sin(aa), rl * np.cos(aa), lab, ha="center", va="bottom", rotation=-np.degrees(aa),
-                rotation_mode="anchor", fontsize=FS["cbar"])
+        ax.text(rl * np.sin(aa), rl * np.cos(aa), lab, ha="center", va="top" if inside else "bottom",
+                rotation=-np.degrees(aa), rotation_mode="anchor", fontsize=size)
 
 
 def sky_row(fig, plt, f, args, y_top, height):
@@ -511,17 +552,17 @@ def bands(args):
 
 
 # ====================================================================== global histories
-# One colour per release (EOS26 black, EOS21 blue, EOS16 purple; as proposed for plot_xHI_history.ipynb, round 2,
-# item C2); within a release the fiducial run is solid and the variant dashed; EOS26 lines thicker.
+# One colour per release (Dani, 25 Nov: EOS26 black, EOS21 #F1CD00, EOS16 #006C9A or #3DF0AE); within a release
+# the fiducial run is solid and the variant dashed; EOS26 lines thicker.
 EOS_STYLE = {"EOS26 fiducial": dict(color="k", lw=1.8, ls="-", zorder=6),
              "EOS26 early EoR": dict(color="k", lw=1.8, ls="--", zorder=5),
-             "EOS21": dict(color="#2C7BB6", lw=1.2, ls="-", zorder=4),
-             "EOS16 faint galaxies": dict(color="#7B3294", lw=1.2, ls="-", zorder=4),
-             "EOS16 bright galaxies": dict(color="#7B3294", lw=1.2, ls="--", zorder=4)}
+             "EOS21": dict(color="#F1CD00", lw=1.4, ls="-", zorder=4),
+             "EOS16 faint galaxies": dict(color="#006C9A", lw=1.2, ls="-", zorder=4),
+             "EOS16 bright galaxies": dict(color="#006C9A", lw=1.2, ls="--", zorder=4)}
 EOS16_RUNS = {"EOS16 faint galaxies": "SmallHII_1024", "EOS16 bright galaxies": "LargeHII_1024"}
 K_PS = 0.1  # 1/cMpc, the scale of the power-spectrum panel
 LOG_FIELDS = ("neutral_fraction", "kinetic_temp_neutral", "spin_temperature")
-GFS = {"label": 10, "tick": 9, "legend": 8}  # font sizes of the global figure [pt]
+GFS = {"label": 12, "tick": 10.5, "legend": 9.5}  # font sizes of the global figure [pt]
 
 
 def delta2_at(k, d2, k0=K_PS):
@@ -659,18 +700,24 @@ def other_releases():
 
 
 def global_histories(args):
-    """Delta^2_21 at k = 0.1/cMpc, the mean T_b, the neutral fraction and the temperatures vs z, in one column."""
+    """Full width, 2 x 2: the neutral fraction with the observations and the Qin et al. (2025) band (as
+    plot_xHI_history.ipynb), Delta^2_21 at k = 0.1/cMpc, the mean T_b, and the temperatures, vs z."""
     plt = style()
+    from matplotlib.patches import Patch
+
+    sys.path.insert(1, str(REPO / "postprocess"))
+    import xhi_data
+
     runs, notes, early_lc = eos26_runs()
     models = {**runs, **other_releases()}
-    fig, axes = plt.subplots(4, 1, figsize=(args.col_width, 6.8), sharex=True)
-    ax_ps, ax_tb, ax_x, ax_t = axes
+    fig, axs = plt.subplots(2, 2, figsize=(args.fig_width, 4.9))  # panels wider than tall
+    (ax_x, ax_ps), (ax_tb, ax_t) = axs
 
     # the spread of the cells: the 16-84 and 2.5-97.5 percentiles of the angular plane of the run whose
     # production lightcones exist (the fiducial run's once they do)
     band_lc = run_lc_dir("EOS26_cache") if (run_lc_dir("EOS26_cache") / "angular_plane").exists() else early_lc
 
-    def bands(ax, q, alpha=1.0):
+    def bands(ax, q):
         p = band_lc / "angular_plane" / f"{q}.h5"
         if not p.exists():
             return
@@ -678,37 +725,43 @@ def global_histories(args):
             zl = h["lightcone_redshifts"][::args.every]
             cells = h["lightcone"][:, ::args.every].astype(np.float64)
         lo2, lo1, hi1, hi2 = np.nanpercentile(cells, [2.5, 16, 84, 97.5], axis=0)
-        ax.fill_between(zl, lo2, hi2, color="k", alpha=0.08 * alpha, lw=0, zorder=1)
-        ax.fill_between(zl, lo1, hi1, color="k", alpha=0.16 * alpha, lw=0, zorder=1)
+        ax.fill_between(zl, lo2, hi2, color="k", alpha=0.08, lw=0, zorder=1)
+        ax.fill_between(zl, lo1, hi1, color="k", alpha=0.16, lw=0, zorder=1)
 
     def lines(ax, key, **kw):
         for name, d in models.items():
             if key in d:
                 ax.plot(*d[key], **{**EOS_STYLE[name], **kw})
 
+    # neutral fraction, with the constraints (no cell bands, as in the x_HI plot)
+    methods = xhi_data.draw_constraints(ax_x, ms=3.5, lw=0.7)
+    lines(ax_x, "neutral_fraction")
+    ax_x.set_xlim(5, 15)
+    ax_x.set_ylim(-0.04, 1.04)
+    ax_x.set_yticks(np.arange(0, 1.01, 0.2))
+    ax_x.set_ylabel(r"$\overline{x}_{\rm HI}$")
+    ax_x.legend(handles=methods, loc="lower right", fontsize=GFS["legend"] - 0.5, frameon=False, handletextpad=0.2,
+                borderaxespad=0.3, labelspacing=0.25)
+    # Delta^2_21
     lines(ax_ps, "delta2")
     ax_ps.set_yscale("log")
-    ax_ps.set_ylim(top=ax_ps.get_ylim()[1] * 10)  # room for the k label
+    ax_ps.set_ylim(top=1e3)
     ax_ps.set_ylabel(r"$\Delta^2_{21}$ [mK$^2$]")
-    ax_ps.text(0.03, 0.94, rf"$k = {K_PS:g}$ cMpc$^{{-1}}$", transform=ax_ps.transAxes, ha="left", va="top",
+    ax_ps.text(0.97, 0.95, rf"$k = {K_PS:g}$ cMpc$^{{-1}}$", transform=ax_ps.transAxes, ha="right", va="top",
                fontsize=GFS["legend"] + 1)
     missing = [n for n in runs if "delta2" not in runs[n]]
     if missing:
-        ax_ps.text(0.97, 0.06, f"to come: {', '.join(missing)}", transform=ax_ps.transAxes, ha="right", va="bottom",
+        ax_ps.text(0.97, 0.05, f"to come: {', '.join(missing)}", transform=ax_ps.transAxes, ha="right", va="bottom",
                    fontsize=GFS["legend"] - 1, color="#c62828")
+    # mean T_b
     bands(ax_tb, "brightness_temp")
     lines(ax_tb, "brightness_temp")
     ax_tb.axhline(0, color="0.6", lw=0.5, zorder=0)
-    ax_tb.set_ylabel(r"$\delta T_{\rm b}$ [mK]")
-    bands(ax_x, "neutral_fraction")
-    lines(ax_x, "neutral_fraction")
-    ax_x.set_ylabel(r"$x_{\rm HI}$")
-    ax_x.set_ylim(-0.02, 1.02)
-    ax_x.legend([plt.Line2D([], [], **{k: v for k, v in EOS_STYLE[n].items() if k != "zorder"}) for n in models],
-                list(models), fontsize=GFS["legend"], frameon=False, loc="lower right", handlelength=2.2)
+    ax_tb.set_ylabel(r"$\overline{\delta T}_{\rm b}$ [mK]")
+    # temperatures: T_K full, T_S the same line lighter
     bands(ax_t, "kinetic_temp_neutral")
     lines(ax_t, "kinetic_temp_neutral")
-    lines(ax_t, "spin_temperature", alpha=0.45)  # T_S: the same line, lighter
+    lines(ax_t, "spin_temperature", alpha=0.45)
     zz = np.linspace(args.zmin, args.zmax, 100)
     ax_t.plot(zz, 2.7255 * (1 + zz), color="0.35", lw=0.9, ls=":")
     ax_t.set_yscale("log")
@@ -717,12 +770,18 @@ def global_histories(args):
                  plt.Line2D([], [], color="0.35", lw=0.9, ls=":")],
                 [r"$T_{\rm K}$", r"$T_{\rm S}$", r"$T_{\rm CMB}$"], fontsize=GFS["legend"], frameon=False,
                 loc="upper right")
-    for ax in axes:
+    for ax in (ax_ps, ax_tb, ax_t):
+        ax.set_xlim(args.zmin, args.zmax)
+    for ax in axs.flat:
         ax.tick_params(labelsize=GFS["tick"], length=2.5)
         ax.yaxis.label.set_size(GFS["label"])
-    ax_t.set_xlabel("Redshift", fontsize=GFS["label"])
-    ax_t.set_xlim(args.zmin, args.zmax)
-    fig.tight_layout(pad=0.3, h_pad=0.25)
+        ax.set_xlabel("Redshift", fontsize=GFS["label"])
+    # the models, above the panels
+    handles = [plt.Line2D([], [], **{k: v for k, v in EOS_STYLE[n].items() if k != "zorder"}) for n in models]
+    handles.append((Patch(color=xhi_data.QIN25_COLOR, alpha=0.25, lw=0), Patch(color=xhi_data.QIN25_COLOR, alpha=0.6, lw=0)))
+    fig.legend(handles, [*models, "Qin et al. (2025)"], loc="upper center", ncol=3, fontsize=GFS["legend"] + 0.5,
+               frameon=False, handlelength=2.4, columnspacing=1.5)
+    fig.tight_layout(pad=0.3, h_pad=0.6, w_pad=1.0, rect=(0, 0, 1, 0.875))
     out = Path(args.out) if args.out else REPO / "plots" / f"global_{args.run}"
     for ext in ("png", "pdf"):
         fig.savefig(out.with_suffix(f".{ext}"), dpi=args.dpi)

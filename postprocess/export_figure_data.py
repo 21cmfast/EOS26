@@ -93,7 +93,7 @@ with h5py.File(tmp, "w") as f:
                                  ("node_redshifts", h["node_redshifts"][:]),
                                  ("slice_index", k), ("slice_redshift", z[k])):
                     f[key] = val
-            elif not np.allclose(h["lightcone_distances"][:], dist):
+            elif h["lightcone_distances"].shape != dist.shape or not np.allclose(h["lightcone_distances"][:], dist):
                 sys.exit(f"rect/{name} has other slices than rect/{args.rect[0]}")
             f[f"rect/{name}"] = h["lightcone"][args.plane]
             f[f"global_mean/{name}"] = h["global_mean"][:]
@@ -117,12 +117,15 @@ with h5py.File(tmp, "w") as f:
                 if f"{geometry}/{name}" in f:
                     continue
                 ds = h["lightcone"]
-                if not np.allclose(h["lightcone_distances"][:], dist):
-                    sys.exit(f"{geometry}/{name} has other slices than the rect lightcones")
+                # the angular stores can have one slice more than the rect ones (at the far end)
+                d = h["lightcone_distances"][:]
+                kk = [int(np.argmin(np.abs(d - dist[i]))) for i in k]
+                if not np.allclose(d[kk], dist[k]):
+                    sys.exit(f"{geometry}/{name} has no slices at the distances of the rect slices {k}")
                 if geometry == "patch" and ds.shape[0] != pix.size:
                     sys.exit(f"patch/{name} has {ds.shape[0]} pixels, expected {pix.size}")
-                f[f"{geometry}/{name}"] = np.stack([ds[:, kk] if geometry == "healpix" else ds[:, kk][keep]
-                                                    for kk in k])
+                f[f"{geometry}/{name}"] = np.stack([ds[:, j] if geometry == "healpix" else ds[:, j][keep]
+                                                    for j in kk])
             say(f"{geometry}/{name} at z = {np.round(z[k], 3).tolist()}")
 tmp.rename(out)
 say(f"wrote {out} ({out.stat().st_size / 1e6:.0f} MB)")
