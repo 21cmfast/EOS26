@@ -231,6 +231,7 @@ paper/
 plots/EOS21*
 plots/EOS16*
 plots/movie/
+visio*
 
 # PBS job stdout/stderr (<jobname>.o<jobid>, <jobname>.e<jobid>). Fold them into the
 # job's log before committing: python pbs_scripts/fold_pbs_output.py

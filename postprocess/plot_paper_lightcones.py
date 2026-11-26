@@ -14,14 +14,15 @@ bands  One plane of the rectilinear lightcone of each quantity (box cells x = 0,
        --band-width cMpc in y), z = 5-35 from left to right. Input: rect/<quantity> of
        <lightcone dir>/figure_data.h5 (postprocess/export_figure_data.py).
        Output: plots/bands_<run>.{png,pdf}.
-global Full width, 2 x 2: the neutral fraction with the observations and the Qin et al. (2025) band
-       (postprocess/xhi_data.py, as plot_xHI_history.ipynb), the 21-cm power at k = 0.1/cMpc
-       (power_spectra/ of postprocess/power_spectra.py), the mean 21-cm brightness temperature, and the
-       kinetic and spin temperatures, vs z, of both EOS26 runs (fiducial and early EoR; see eos26_runs for where the
-       fiducial curves come from until its lightcones exist), EOS21 (plots/EOS21) and EOS16
-       (plots/EOS16, 1024^3 runs). Means are box means at the node redshifts (global_mean of the
-       angular-plane stores); bands the 16-84 and 2.5-97.5 percentiles of the angular-plane cells.
-       Reads the runs' lightcone directories (not --dir). Output: plots/global_<run>.{png,pdf}.
+eor    Full width: the neutral fraction with the observations and the Qin et al. (2025) band
+       (postprocess/xhi_data.py, as plot_xHI_history.ipynb). Output: plots/eor_history_<run>.{png,pdf}.
+global21  Full width, 1 x 2: the mean 21-cm brightness temperature, with the 16-84 and 2.5-97.5 percentiles
+       of the angular-plane cells, and the 21-cm power at k = 0.1/cMpc (power_spectra/ of
+       postprocess/power_spectra.py). Output: plots/global21_<run>.{png,pdf}.
+       Both vs z, for both EOS26 runs (fiducial and early EoR; see eos26_runs for where the fiducial curves
+       come from until its lightcones exist), EOS21 (plots/EOS21) and EOS16 (plots/EOS16, 1024^3 runs). Means
+       are box means at the node redshifts (global_mean of the angular-plane stores). They read the runs'
+       lightcone directories (not --dir).
 
 <lightcone dir> is --dir, else that of the run of $EOS26_TEMPLATE (postprocess/lightcone): on the
 laptop <cache>/lightcones, e.g. EOS26_earlyEoR_cache/lightcones. Each image pixel is the mean of
@@ -205,7 +206,7 @@ def arc(args):
         pt = 2 * x_max / (W * 72)
         x_max = rings(pt)[-1] * np.sin(half) + 0.5
     rn, rb0, rb1, r_u, r_top = rings(pt)
-    y_lo, y_hi = r_in * np.cos(half) - 0.3 - 3.2 * FS["title"] * pt, r_top
+    y_lo, y_hi = -0.15 - 2.2 * FS["note"] * pt, r_top  # down to the observer at (0, 0) and its label
     nx = args.pixels
     px = 2 * x_max / nx
     ny = int(np.ceil((y_hi - y_lo) / px))
@@ -267,7 +268,8 @@ def arc(args):
     H = ax_h + sky_h
     fig = plt.figure(figsize=(W, H))
     ax = fig.add_axes([0, 1 - ax_h / H, 1, ax_h / H])
-    ax.imshow(img, extent=[-x_max, x_max, y_lo, y_hi], interpolation="nearest", origin="upper",
+    # square pixels: the image is ny whole pixels tall, so it may reach below y_lo by less than one
+    ax.imshow(img, extent=[-x_max, x_max, y_hi - ny * px, y_hi], interpolation="nearest", origin="upper",
               rasterized=True)
     ax.set_xlim(-x_max, x_max)
     ax.set_ylim(y_lo, y_hi)
@@ -283,6 +285,8 @@ def arc(args):
         ax.plot(r * np.sin(t), r * np.cos(t), color="w", lw=0.4, alpha=0.6, ls=(0, (4, 3)))
     for e in np.radians(edges[[0, -1]]):
         ax.plot([r_in * np.sin(e), r_out * np.sin(e)], [r_in * np.cos(e), r_out * np.cos(e)], color="k", lw=0.6)
+    for e in np.radians(edges):  # the lightcones meet at the observer (z < 5 is not simulated)
+        ax.plot([0, r_in * np.sin(e)], [0, r_in * np.cos(e)], color="0.6", lw=0.5, zorder=0)
 
     def edge_ticks(a_deg, side, ticks, title):
         """Ticks on the left (side -1) or right (+1) edge: (radius, label) pairs; title along the edge."""
@@ -297,6 +301,16 @@ def arc(args):
         ax.text(*p, title, ha="center", va="center", rotation=90 - a_deg - (180 if side < 0 else 0), fontsize=FS["title"])
 
     edge_ticks(edges[0], -1, [(r_of_z(z), f"{z:g}") for z in (5, 6, 8, 10, 15, 35)], "Redshift")
+    # graduations of the comoving distance on the two outer lines below z = 5: every 1 cGpc, labelled every 2
+    for a_deg, side in ((edges[0], -1), (edges[-1], 1)):
+        a = np.radians(a_deg)
+        nrm = side * np.array([np.cos(a), -np.sin(a)])
+        for r in np.arange(1, r_in - 0.2):
+            q = np.array([r * np.sin(a), r * np.cos(a)])
+            ax.plot(*np.c_[q, q + (3 if r % 2 == 0 else 2) * pt * nrm], color="0.35", lw=0.6)
+            if r % 2 == 0:
+                ax.text(*(q + 5 * pt * nrm), f"{r:g}" + (" cGpc" if r + 2 > r_in - 0.2 else ""),
+                        ha="right" if side < 0 else "left", va="center", fontsize=FS["tick"], color="0.35")
     edge_ticks(edges[-1], 1, [(r_of_z(NU21 / nu - 1), f"{nu}") for nu in (50, 100, 150, 200)],
                "Frequency [MHz]")
     # each sector: a curved colour bar with its tick labels and units on one side, the name on the other
@@ -323,13 +337,14 @@ def arc(args):
         curved_text(ax, names[i][0], r_name(size_n), m, size_n)
         if names[i][1]:
             curved_text(ax, names[i][1], r_u, m, size_u[i])
-    # inside: the box size, and the way to the observer
-    yc = r_in * np.cos(half) + 0.45
+    # inside: the box size, and the observer
+    yc = 0.45 * r_in
     L = args.box / 1e3
     ax.plot([-L / 2, L / 2], [yc, yc], color="k", lw=1.2, solid_capstyle="butt")
-    ax.text(0, yc + 0.15, f"Box size, {L:g} cGpc", ha="center", va="bottom", fontsize=FS["note"])
-    ax.annotate("", xy=(0, y_lo + 0.02), xytext=(0, yc - 0.12), arrowprops=dict(arrowstyle="->", lw=0.6))
-    ax.text(0.1, 0.5 * (y_lo + yc - 0.12), f"Observer at {r_in:.2f} cGpc", fontsize=FS["note"], ha="left", va="center")
+    ax.text(0, yc + 0.15, f"Box size, {L:g} cGpc", ha="center", va="bottom", fontsize=FS["note"],
+            bbox=dict(facecolor="w", edgecolor="none", pad=0.6))
+    ax.plot(0, 0, "o", color="k", ms=3)
+    ax.text(0, -0.15, "Observer", ha="center", va="top", fontsize=FS["note"])
 
     if sky is not None:
         sky_row(fig, plt, sky, args, y_top=(H - ax_h) / H, height=sky_h / H)
@@ -699,51 +714,80 @@ def other_releases():
     return rel
 
 
-def global_histories(args):
-    """Full width, 2 x 2: the neutral fraction with the observations and the Qin et al. (2025) band (as
-    plot_xHI_history.ipynb), Delta^2_21 at k = 0.1/cMpc, the mean T_b, and the temperatures, vs z."""
+def lines(ax, models, key, **kw):
+    """Plot quantity key of every model that has it."""
+    for name, d in models.items():
+        if key in d:
+            ax.plot(*d[key], **{**EOS_STYLE[name], **kw})
+
+
+def finish(fig, plt, axs, models, args, name, top, extra=()):
+    """The models (and extra (handle, label) pairs) above the panels, font sizes, and the files
+    plots/<name>_<run>.{png,pdf}."""
+    handles = [plt.Line2D([], [], **{k: v for k, v in EOS_STYLE[n].items() if k != "zorder"}) for n in models]
+    fig.legend(handles + [h for h, _ in extra], list(models) + [lab for _, lab in extra], loc="upper center", ncol=3, fontsize=GFS["legend"] + 0.5, frameon=False,
+               handlelength=2.4, columnspacing=1.5)
+    for ax in axs:
+        ax.tick_params(labelsize=GFS["tick"], length=2.5)
+        ax.yaxis.label.set_size(GFS["label"])
+        ax.set_xlabel("Redshift", fontsize=GFS["label"])
+    fig.tight_layout(pad=0.3, w_pad=1.0, rect=(0, 0, 1, top))
+    out = Path(args.out) if args.out else REPO / "plots" / f"{name}_{args.run}"
+    for ext in ("png", "pdf"):
+        fig.savefig(out.with_suffix(f".{ext}"), dpi=args.dpi)
+    print(f"wrote {out}.png/.pdf")
+
+
+def eor_history(args):
+    """Full width: the neutral fraction of both EOS26 runs, EOS21 and EOS16, with the observations and the
+    Qin et al. (2025) band (postprocess/xhi_data.py, as plot_xHI_history.ipynb)."""
     plt = style()
     from matplotlib.patches import Patch
 
     sys.path.insert(1, str(REPO / "postprocess"))
     import xhi_data
 
+    runs, notes, _ = eos26_runs()
+    models = {**runs, **other_releases()}
+    fig, ax = plt.subplots(figsize=(args.fig_width, 3.4))
+    methods = xhi_data.draw_constraints(ax, ms=4, lw=0.8)
+    lines(ax, models, "neutral_fraction")
+    ax.set_xlim(5, 15)
+    ax.set_ylim(-0.04, 1.04)
+    ax.set_yticks(np.arange(0, 1.01, 0.2))
+    ax.set_ylabel(r"$\overline{x}_{\rm HI}$")
+    ax.legend(handles=methods, loc="lower right", fontsize=GFS["legend"], frameon=False, handlelength=1.0,
+              handletextpad=0.4, borderaxespad=0.4, labelspacing=0.25)
+    qin = (Patch(color=xhi_data.QIN25_COLOR, alpha=0.25, lw=0), Patch(color=xhi_data.QIN25_COLOR, alpha=0.6, lw=0))
+    finish(fig, plt, [ax], models, args, "eor_history", top=0.86, extra=[(qin, "Qin et al. (2025)")])
+    for n in notes:
+        if "x_HI" in n:
+            print("For the caption:", n)
+
+
+def global_21cm(args):
+    """Full width, 1 x 2: the mean 21-cm brightness temperature, with the spread of the cells, and the 21-cm
+    power at k = 0.1/cMpc (power_spectra/ of postprocess/power_spectra.py), vs z."""
+    plt = style()
     runs, notes, early_lc = eos26_runs()
     models = {**runs, **other_releases()}
-    fig, axs = plt.subplots(2, 2, figsize=(args.fig_width, 4.9))  # panels wider than tall
-    (ax_x, ax_ps), (ax_tb, ax_t) = axs
+    fig, (ax_tb, ax_ps) = plt.subplots(1, 2, figsize=(args.fig_width, 2.9))  # panels wider than tall
 
     # the spread of the cells: the 16-84 and 2.5-97.5 percentiles of the angular plane of the run whose
     # production lightcones exist (the fiducial run's once they do)
     band_lc = run_lc_dir("EOS26_cache") if (run_lc_dir("EOS26_cache") / "angular_plane").exists() else early_lc
-
-    def bands(ax, q):
-        p = band_lc / "angular_plane" / f"{q}.h5"
-        if not p.exists():
-            return
+    p = band_lc / "angular_plane" / "brightness_temp.h5"
+    if p.exists():
         with h5py.File(p, "r") as h:
             zl = h["lightcone_redshifts"][::args.every]
             cells = h["lightcone"][:, ::args.every].astype(np.float64)
         lo2, lo1, hi1, hi2 = np.nanpercentile(cells, [2.5, 16, 84, 97.5], axis=0)
-        ax.fill_between(zl, lo2, hi2, color="k", alpha=0.08, lw=0, zorder=1)
-        ax.fill_between(zl, lo1, hi1, color="k", alpha=0.16, lw=0, zorder=1)
-
-    def lines(ax, key, **kw):
-        for name, d in models.items():
-            if key in d:
-                ax.plot(*d[key], **{**EOS_STYLE[name], **kw})
-
-    # neutral fraction, with the constraints (no cell bands, as in the x_HI plot)
-    methods = xhi_data.draw_constraints(ax_x, ms=3.5, lw=0.7)
-    lines(ax_x, "neutral_fraction")
-    ax_x.set_xlim(5, 15)
-    ax_x.set_ylim(-0.04, 1.04)
-    ax_x.set_yticks(np.arange(0, 1.01, 0.2))
-    ax_x.set_ylabel(r"$\overline{x}_{\rm HI}$")
-    ax_x.legend(handles=methods, loc="lower right", fontsize=GFS["legend"] - 0.5, frameon=False, handletextpad=0.2,
-                borderaxespad=0.3, labelspacing=0.25)
-    # Delta^2_21
-    lines(ax_ps, "delta2")
+        ax_tb.fill_between(zl, lo2, hi2, color="k", alpha=0.08, lw=0, zorder=1)
+        ax_tb.fill_between(zl, lo1, hi1, color="k", alpha=0.16, lw=0, zorder=1)
+    lines(ax_tb, models, "brightness_temp")
+    ax_tb.axhline(0, color="0.6", lw=0.5, zorder=0)
+    ax_tb.set_ylabel(r"$\overline{\delta T}_{\rm b}$ [mK]")
+    lines(ax_ps, models, "delta2")
     ax_ps.set_yscale("log")
     ax_ps.set_ylim(top=1e3)
     ax_ps.set_ylabel(r"$\Delta^2_{21}$ [mK$^2$]")
@@ -753,46 +797,18 @@ def global_histories(args):
     if missing:
         ax_ps.text(0.97, 0.05, f"to come: {', '.join(missing)}", transform=ax_ps.transAxes, ha="right", va="bottom",
                    fontsize=GFS["legend"] - 1, color="#c62828")
-    # mean T_b
-    bands(ax_tb, "brightness_temp")
-    lines(ax_tb, "brightness_temp")
-    ax_tb.axhline(0, color="0.6", lw=0.5, zorder=0)
-    ax_tb.set_ylabel(r"$\overline{\delta T}_{\rm b}$ [mK]")
-    # temperatures: T_K full, T_S the same line lighter
-    bands(ax_t, "kinetic_temp_neutral")
-    lines(ax_t, "kinetic_temp_neutral")
-    lines(ax_t, "spin_temperature", alpha=0.45)
-    zz = np.linspace(args.zmin, args.zmax, 100)
-    ax_t.plot(zz, 2.7255 * (1 + zz), color="0.35", lw=0.9, ls=":")
-    ax_t.set_yscale("log")
-    ax_t.set_ylabel(r"$T$ [K]")
-    ax_t.legend([plt.Line2D([], [], color="k", lw=1.6), plt.Line2D([], [], color="k", lw=1.6, alpha=0.45),
-                 plt.Line2D([], [], color="0.35", lw=0.9, ls=":")],
-                [r"$T_{\rm K}$", r"$T_{\rm S}$", r"$T_{\rm CMB}$"], fontsize=GFS["legend"], frameon=False,
-                loc="upper right")
-    for ax in (ax_ps, ax_tb, ax_t):
+    for ax in (ax_tb, ax_ps):
         ax.set_xlim(args.zmin, args.zmax)
-    for ax in axs.flat:
-        ax.tick_params(labelsize=GFS["tick"], length=2.5)
-        ax.yaxis.label.set_size(GFS["label"])
-        ax.set_xlabel("Redshift", fontsize=GFS["label"])
-    # the models, above the panels
-    handles = [plt.Line2D([], [], **{k: v for k, v in EOS_STYLE[n].items() if k != "zorder"}) for n in models]
-    handles.append((Patch(color=xhi_data.QIN25_COLOR, alpha=0.25, lw=0), Patch(color=xhi_data.QIN25_COLOR, alpha=0.6, lw=0)))
-    fig.legend(handles, [*models, "Qin et al. (2025)"], loc="upper center", ncol=3, fontsize=GFS["legend"] + 0.5,
-               frameon=False, handlelength=2.4, columnspacing=1.5)
-    fig.tight_layout(pad=0.3, h_pad=0.6, w_pad=1.0, rect=(0, 0, 1, 0.875))
-    out = Path(args.out) if args.out else REPO / "plots" / f"global_{args.run}"
-    for ext in ("png", "pdf"):
-        fig.savefig(out.with_suffix(f".{ext}"), dpi=args.dpi)
-    print(f"wrote {out}.png/.pdf; bands from {band_lc}")
+    finish(fig, plt, [ax_tb, ax_ps], models, args, "global21", top=0.83)
+    print(f"bands from {band_lc}")
     for n in notes:
-        print("For the caption:", n)
+        if "x_HI" not in n:
+            print("For the caption:", n)
 
 
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("what", choices=("arc", "bands", "global"))
+    p.add_argument("what", choices=("arc", "bands", "eor", "global21"))
     p.add_argument("--dir", default=None, help="lightcone directory (default: that of the run)")
     p.add_argument("--quantities", nargs="+", default=None)
     p.add_argument("--width", type=float, default=133, help="arc: longitudes shown, deg (default 133: 19 deg per sector)")
@@ -800,7 +816,6 @@ def main(argv=None):
     p.add_argument("--zmax", type=float, default=35.0)
     p.add_argument("--pixels", type=int, default=5000, help="arc: image width in pixels (default 5000)")
     p.add_argument("--fig-width", type=float, default=7.0, help="figure width, inches (default 7)")
-    p.add_argument("--col-width", type=float, default=3.46, help="global: figure width, inches (one A&A column)")
     p.add_argument("--dpi", type=int, default=600)
     p.add_argument("--box", type=float, default=2250, help="box size, cMpc")
     p.add_argument("--z-arcs", nargs="*", type=float, default=[6, 8, 10, 15, 20],
@@ -812,14 +827,14 @@ def main(argv=None):
     p.add_argument("--sky-zoom", type=float, default=8, help="arc: side of the patch zoom, deg (default 8)")
     p.add_argument("--band-width", type=float, default=300, help="bands: transverse width, cMpc (default 300)")
     p.add_argument("--cell", type=float, default=1.5, help="cell size, cMpc")
-    p.add_argument("--every", type=int, default=4, help="global: every n-th slice for the spread (default 4)")
+    p.add_argument("--every", type=int, default=4, help="global21: every n-th slice for the spread (default 4)")
     p.add_argument("--run", default=None, help="name in the output file (default $EOS26_TEMPLATE or EOS26)")
     p.add_argument("--out", default=None, help="output file without suffix")
     args = p.parse_args(argv)
     import os
 
     args.run = args.run or os.environ.get("EOS26_TEMPLATE", "EOS26")
-    {"arc": arc, "bands": bands, "global": global_histories}[args.what](args)
+    {"arc": arc, "bands": bands, "eor": eor_history, "global21": global_21cm}[args.what](args)
 
 
 if __name__ == "__main__":
