@@ -185,10 +185,13 @@ FOOTPRINTS = [
     ("circle", 2 * np.sqrt(100.0 / np.pi), [("SPHEREx deep field", "[O III]", 0.0, 9.0),
                                             ("SPHEREx deep field", "Hα/Hβ", 0.0, 9.3)]),
     # FYST/EoR-Spec Deep Spectroscopic Survey: two 4 deg^2 fields, 210-420 GHz (CCAT-Prime Collaboration 2023;
-    # arXiv:2404.05352)
-    ("square", 2.0, [("CCAT/FYST EoR-Spec", "[C II]", 3.5, 8.05)], "tl"),
-    # COSMOS-3D (JWST NIRCam grism): 0.33 deg^2, [O III] emitters at z = 6.75-9.05 (Meyer et al. 2026)
-    ("square", np.sqrt(0.33), [("JWST COSMOS-3D", "[O III]", 6.75, 9.05)], "br"),
+    # arXiv:2404.05352): [C II] 158 um at z = 3.5-8.05 and [O III] 88 um (3393 GHz) at z = 7.08-15.16
+    ("square", 2.0, [("CCAT/FYST EoR-Spec", "[C II]", 3.5, 8.05),
+                     ("CCAT/FYST EoR-Spec", "[O III]", 7.08, 15.16)], "tl"),
+    # COSMOS-3D (JWST NIRCam grism): 0.33 deg^2, [O III] 5007 emitters at z = 6.75-9.05 (Meyer et al. 2026), i.e.
+    # 3.88-5.03 um, where H-beta is at z = 6.98-9.35 and H-alpha at z = 4.91-6.67 (one H-alpha/H-beta range)
+    ("square", np.sqrt(0.33), [("JWST COSMOS-3D", "[O III]", 6.75, 9.05),
+                               ("JWST COSMOS-3D", "Hα/Hβ", 4.91, 9.35)], "br"),
     # Roman ultra-deep field: ~1 deg^2 (Koekemoer et al. 2019; Drakos et al. 2022), with Lyman-alpha in the grism
     # (1.0-1.93 um) at z = 7.2-14.9 (Gagnon-Hartman et al. 2025)
     ("square", 1.0, [("Roman UDF", "Lyα", 7.2, 14.9)], "br"),
@@ -324,6 +327,9 @@ def parse(argv=None):
                    help="PerturbedHaloCatalog.h5 for the galaxies (postprocess/galaxies job), or 'auto': the run's "
                         "file at the node redshift nearest the slice")
     p.add_argument("--halo-slab", type=float, default=1.5, help="thickness of the halo slab [cMpc] (default 1.5)")
+    p.add_argument("--slab", type=int, default=1,
+                   help="mean over this many rect slices around the one nearest --freq (default 1); the galaxies "
+                        "then come from the same slab")
     p.add_argument("--centre", type=float, nargs=2, default=None,
                    help="centre of the circles [cMpc] (default: the chosen bubble for the movie, the box centre for the figure)")
     p.add_argument("--bubble-size", type=float, default=15.0, help="wanted bubble diameter [cMpc] (default 15)")
@@ -432,6 +438,11 @@ def parse(argv=None):
                         "galaxies appear while zooming in (default 100)")
     p.add_argument("--band-galaxies", type=int, default=15,
                    help="figure: the brightest galaxies drawn in each band of the zoom panel (default 15)")
+    p.add_argument("--muv-limit", type=float, default=None,
+                   help="figure: draw every galaxy brighter than this M_UV in the zoom panel (instead of "
+                        "--band-galaxies), with a legend entry")
+    p.add_argument("--galaxy-marker", choices=("spiral", "star", "cartoon"), default="star",
+                   help="figure: the galaxies as thin red spirals, filled green stars or thick green spiral cartoons")
     p.add_argument("--out", default=None, help="output file (default: see above)")
     p.add_argument("--log-file", default=None)
     a = p.parse_args(argv)
@@ -584,8 +595,11 @@ def load_rect_slice(a, quantities, drop_missing=False):
             if not h.attrs.get("complete", False):
                 log.warning(f"{q}: store not complete")
             t = time.time()
-            fields[q] = np.ascontiguousarray(h["lightcone"][:, :, k].T, dtype=np.float32)  # [y, x]
-            log.info(f"{q}: slice {k} (z = {z:.4f}) read in {time.time() - t:.1f} s")
+            k0 = k - (a.slab - 1) // 2  # the slab: a.slab slices around slice k
+            fields[q] = np.ascontiguousarray(h["lightcone"][:, :, k0:k0 + a.slab].mean(axis=2, dtype=np.float64).T,
+                                             dtype=np.float32)  # [y, x]
+            log.info(f"{q}: slice {k} (z = {z:.4f})" + (f", mean of slices {k0}-{k0 + a.slab - 1}" if a.slab > 1 else "")
+                     + f" read in {time.time() - t:.1f} s")
             if np.isnan(fields[q]).any():
                 log.warning(f"{q}: slice {k} has NaN (not filled yet)")
     cell = float(run.inputs.simulation_options.cell_size.to_value("Mpc"))
@@ -599,7 +613,7 @@ def load_rect_slice(a, quantities, drop_missing=False):
         if not Path(a.halos).exists():
             sys.exit(f"no {a.halos}: run postprocess/galaxies/galaxy_properties_job.sh for this node first")
     if a.halos:
-        halos = read_halos(a.halos, dist, k, cell, next(iter(fields.values())).shape[0], a.halo_slab)
+        halos = read_halos(a.halos, dist, k, cell, next(iter(fields.values())).shape[0], max(a.halo_slab, a.slab * cell))
         if "density" in fields and len(halos[0]):
             # check of the plane: halos sit in overdense cells of this slice, not of a random plane
             d = fields["density"]
@@ -616,7 +630,7 @@ def load_rect_slice(a, quantities, drop_missing=False):
         except Exception as e:  # noqa: BLE001
             log.warning(f"no cube intro: {e}")
     if a.save_slice:
-        save_slice(sl, a.save_slice, f"{lc_dir} slice {k}")
+        save_slice(sl, a.save_slice, f"{lc_dir} slice {k}" + (f" slab {a.slab}" if a.slab > 1 else ""))
     return sl
 
 
@@ -963,13 +977,43 @@ def spiral(arms=4, axis=0.5, tilt=30):
     return Path(verts, np.tile([Path.MOVETO] + [Path.LINETO] * (t.size - 1), arms))
 
 
-def draw_galaxies(axx, x, y, muv):
-    """The figure's galaxies as small red spirals, sized by M_UV as the movie's rings (ring_px at 1080p) and three
-    times their size in the figure: the arms and a dot at the centre."""
+GALAXY_GREEN = "#00e676"  # the figure's stars and cartoons: brighter than the H-alpha/H-beta outline (#8CBD19)
+
+
+def spiral_cartoon(arms=2, axis=0.6, tilt=30, width=0.42):
+    """A thick spiral galaxy as a filled scatter marker: a bulge and arms that taper as they curve out, on a disc
+    seen inclined (as spiral())."""
+    from matplotlib.path import Path
+    t = np.linspace(0, 1, 24)
+    r, turn, w = 0.3 + 0.7 * t, 3.0 * t, width * (1 - 0.85 * t)
+    polys = []
+    for k in range(arms):
+        a = 2 * np.pi * k / arms + turn
+        out = np.c_[(r + w / 2) * np.cos(a), (r + w / 2) * np.sin(a)]
+        inn = np.c_[(r - w / 2) * np.cos(a), (r - w / 2) * np.sin(a)][::-1]
+        polys.append(np.r_[out, inn, out[:1]])
+    th = np.linspace(0, 2 * np.pi, 25)
+    polys.append(np.c_[0.38 * np.cos(th), 0.38 * np.sin(th)])  # the bulge
+    c, s_ = np.cos(np.radians(tilt)), np.sin(np.radians(tilt))
+    verts = np.concatenate([p_ * [1, axis] for p_ in polys]) @ [[c, s_], [-s_, c]]
+    codes = np.concatenate([[Path.MOVETO] + [Path.LINETO] * (len(p_) - 2) + [Path.CLOSEPOLY] for p_ in polys])
+    return Path(verts, codes)
+
+
+def draw_galaxies(axx, x, y, muv, marker="spiral"):
+    """The figure's galaxies, sized by M_UV as the movie's rings (ring_px at 1080p): small red spirals (the arms
+    and a dot at the centre), filled green stars or thick green spiral cartoons with a dark edge."""
     r_pt = ring_px(muv, 0.6)  # [pt]
-    axx.scatter(x, y, s=(2 * r_pt) ** 2, marker=spiral(), facecolors="none", edgecolors=RING, linewidths=0.6,
-                zorder=3.5)
-    axx.scatter(x, y, s=(0.4 * r_pt) ** 2, c=RING, linewidths=0, zorder=3.5)
+    if marker == "star":
+        axx.scatter(x, y, s=(1.5 * r_pt) ** 2, marker="*", c=GALAXY_GREEN, edgecolors="black", linewidths=0.5,
+                    zorder=3.5)
+    elif marker == "cartoon":
+        axx.scatter(x, y, s=(2.6 * r_pt) ** 2, marker=spiral_cartoon(), c=GALAXY_GREEN, edgecolors="black",
+                    linewidths=0.4, zorder=3.5)
+    else:
+        axx.scatter(x, y, s=(2 * r_pt) ** 2, marker=spiral(), facecolors="none", edgecolors=RING, linewidths=0.6,
+                    zorder=3.5)
+        axx.scatter(x, y, s=(0.4 * r_pt) ** 2, c=RING, linewidths=0, zorder=3.5)
 
 
 def casing(colour):
@@ -1055,12 +1099,13 @@ def render_rgb(sl, colourers, sampler, quantities, xs, ys, origin, spin=0.0, box
 
 # ====================================================================== figure
 def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, gals=None, per_band=5,
-                           sim_boxes=SIM_BOXES, deg_axes=False):
+                           sim_boxes=SIM_BOXES, deg_axes=False, muv_limit=None, marker="spiral"):
     """The other surveys of the figure (--footprints): large ones (circles) on the box; the others in a zoom
     panel, whose region is marked on the box. bands: (quantity, RGB image, Colourer) of the figure's quantity
     and of --inset-bands, shown side by side in the panel, each with its colour bar above it (the first one is
     also the box's); box_in: the panel (x0, y0, size) in inches, and the figure size (W, H); gals: (x, y, M_UV)
-    of the galaxies, of which the per_band brightest of each band are drawn; sim_boxes: the sides of the
+    of the galaxies, of which the per_band brightest of each band are drawn, or with muv_limit all brighter than
+    it (with a legend entry); marker: see draw_galaxies; sim_boxes: the sides of the
     simulation boxes drawn (none: no squares and no legend entry); deg_axes: RA and Dec offsets on the panel's top
     and right, as on the box."""
     from matplotlib.cm import ScalarMappable
@@ -1120,13 +1165,13 @@ def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, 
         if n > 1:
             cax.tick_params(labelsize=11)
             cax.xaxis.set_major_locator(MaxNLocator(3, steps=[1, 2, 5, 10]))
-    if gals is not None:  # the per_band brightest of each band, sized by M_UV as on the box
+    if gals is not None:  # the per_band brightest of each band, or all above muv_limit; sized by M_UV as on the box
         gx, gy, gm = gals
         on = []
         for i in range(n):
             b = np.flatnonzero((gx >= edges[i] * c) & (gx < edges[i + 1] * c) & (gy > zy[0]) & (gy < zy[1]))
-            on.extend(b[np.argsort(gm[b])[:per_band]])
-        draw_galaxies(axz, gx[on], gy[on], gm[on])
+            on.extend(b[gm[b] < muv_limit] if muv_limit is not None else b[np.argsort(gm[b])[:per_band]])
+        draw_galaxies(axz, gx[on], gy[on], gm[on], marker)
         log.info(f"panel: {len(on)} galaxies")
     axz.set_xlim(*zx)
     axz.set_ylim(*zy)
@@ -1178,6 +1223,11 @@ def draw_figure_footprints(fig, ax, fps, sl, centre, bands, box_in, cbars=True, 
         return Line2D([], [], color=c, lw=lw, path_effects=outlined(lw + 2.0, fg=casing(c), alpha=0.5))
     cells = [(handle(LINE_COLOUR[ln]), ln) for ln in lines] + [(handle(CIRCLE_COLOUR), "21-cm")]
     cells += [(handle(SIM_COLOUR), "Simulation reference")] if len(sim_boxes) else []
+    if gals is not None and muv_limit is not None:  # the galaxies, with the marker of the panel
+        mk = {"star": dict(marker="*", ms=14), "cartoon": dict(marker=spiral_cartoon(), ms=16)}.get(marker)
+        if mk:
+            cells.append((Line2D([], [], ls="none", mfc=GALAXY_GREEN, mec="black", mew=0.5, **mk),
+                          rf"$M_{{\rm UV}}<{muv_limit:g}$"))
     style = dict(frameon=False, fontsize=14, handlelength=1.4, columnspacing=0.6, handletextpad=0.4, labelspacing=0.3)
     xl, yl = (x0 + Z / 2) / W, (y0 - 0.54) / H  # the legend's top, just under the panel's x labels
     leg = fig.legend(*zip(*cells), loc="upper center", bbox_to_anchor=(xl, yl), ncol=len(cells), **style)
@@ -1337,7 +1387,7 @@ def make_figure(sl, a, quantities, out):
         draw_figure_footprints(fig, ax, fps, ov, centre, bands,
                                ((zx0, pb, Z, Zh), (FWt, FH)), cbars=cb, gals=gals,
                                per_band=a.band_galaxies, sim_boxes=() if a.no_sim_boxes else SIM_BOXES,
-                               deg_axes=a.deg_axis)
+                               deg_axes=a.deg_axis, muv_limit=a.muv_limit, marker=a.galaxy_marker)
     if sl.watermark:
         fig.text(0.01, 0.005, sl.watermark, color="#d62728", fontsize=11, ha="left", va="bottom")
     base = str(out)
