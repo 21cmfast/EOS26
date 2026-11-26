@@ -10,3 +10,57 @@ EOS26_earlyEoR HII_DIM=1500 cell=1.50 Mpc BOX_LEN=2250 Mpc  F_ESC10_ACG=-0.600 A
 ===== cell 7 (6/17 code cells, 34 s)
 ===== cell 9 (7/17 code cells, 34 s)
 ===== cell 11 (8/17 code cells, 35 s)
+EOS26 6499138780 halos
+EOS26_earlyEoR 6499138780 halos
+===== cell 13 (9/17 code cells, 15539 s)
+===== cell 15 (10/17 code cells, 15732 s)
+===== cell 17 (11/17 code cells, 15835 s)
+===== cell 18 (12/17 code cells, 15840 s)
+===== cell 20 (13/17 code cells, 15860 s)
+Largest |phi/phi_ref - 1| (ref: EOS26, same feedback setting), bins with >= 10 galaxies in both;
+'obs' = M_UV < -17 (observed range), 'faint' = M_UV > -17
+    z model                         no fb obs  no fb faint   fb obs  fb faint
+  6.0 EOS26                             0.000        0.000    0.000     0.000
+  6.0 EOS26_earlyEoR                    0.000        0.000    0.060     1.154
+  7.0 EOS26                             0.000        0.000    0.000     0.000
+  7.0 EOS26_earlyEoR                    0.000        0.000    0.033     0.516
+  8.0 EOS26                             0.000        0.000    0.000     0.000
+  8.0 EOS26_earlyEoR                    0.000        0.000    0.017     0.212
+  9.0 EOS26                             0.000        0.000    0.000     0.000
+  9.0 EOS26_earlyEoR                    0.000        0.000    0.006     0.052
+ 10.0 EOS26                             0.000        0.000    0.000     0.000
+ 10.0 EOS26_earlyEoR                    0.000        0.000    0.004     0.013
+ 11.0 EOS26                             0.000        0.000    0.000     0.000
+ 11.0 EOS26_earlyEoR                    0.000        0.000    0.015     0.003
+ 12.5 EOS26                             0.000        0.000    0.000     0.000
+ 12.5 EOS26_earlyEoR                    0.000        0.000    0.000     0.000
+ 14.5 EOS26                             0.000        0.000    0.000     0.000
+ 14.5 EOS26_earlyEoR                    0.000        0.000    0.000     0.000
+===== cell 22 (14/17 code cells, 21417 s)
+                                       x=0.9  x=0.75   x=0.5  x=0.25   x=0.1  x=0.05  x=0.01
+Qin+25                                 10.87    9.18    7.70    6.55    5.87    5.63    5.44
+EOS26                                  11.41    9.21     nan     nan     nan     nan     nan
+EOS26_earlyEoR                         12.74   10.54    8.89    7.88    7.21    6.83    6.03
+===== cell 24 (15/17 code cells, 21419 s)
+tau_e EOS26                                0.0528
+tau_e EOS26_earlyEoR                       0.0754
+===== cell 26 (16/17 code cells, 21419 s)
+===== cell 28 (17/17 code cells, 21419 s)
+plot_all_summaries.ipynb, cell 28:26: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+===== plot_all_summaries.ipynb: done in 21420 s
+
+==== PBS output of job 185170804 (EOS26_summaries.o185170804, EOS26_summaries.e185170804), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.1 -> /scratch/qp00/db9528/venvs/EOS26-v4.3-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-25 22:36:20:
+   Job Id:             185170804.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      286.40
+   NCPUs Requested:    16                  CPU Time Used: 08:36:52        
+   Memory Requested:   400.0GB               Memory Used: 400.0GB         
+   Walltime Requested: 08:00:00            Walltime Used: 05:58:00        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

@@ -1,0 +1,20 @@
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+[  486.3 s] z = 6.030: 1145502017 galaxies, 1145502017 in the M_UV bins, 165470833 of them in haloes below 5.62e+09 solMass
+[  660.1 s] z = 7.916: 432383224 galaxies, 432383224 in the M_UV bins, 75299081 of them in haloes below 5.62e+09 solMass
+[  695.2 s] z = 10.086: 96558131 galaxies, 96558131 in the M_UV bins, 20745760 of them in haloes below 5.62e+09 solMass
+[  713.6 s] z = 10.999: 45557836 galaxies, 45557836 in the M_UV bins, 10707134 of them in haloes below 5.62e+09 solMass
+[  720.8 s] z = 11.988: 18646331 galaxies, 18646331 in the M_UV bins, 4812165 of them in haloes below 5.62e+09 solMass
+[  722.2 s] z = 13.920: 2573149 galaxies, 2573149 in the M_UV bins, 784611 of them in haloes below 5.62e+09 solMass
+[  722.2 s] wrote /g/data/qp00/db9528/EOS26_earlyEoR_cache/uv_luminosity_functions.npz
+
+======================================================================================
+                  Resource Usage on 2026-11-26 16:26:35:
+   Job Id:             185290539.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      8.27
+   NCPUs Requested:    12                  CPU Time Used: 00:11:10        
+   Memory Requested:   300.0GB               Memory Used: 164.15GB        
+   Walltime Requested: 02:00:00            Walltime Used: 00:13:47        
+   JobFS Requested:    500.0MB                JobFS Used: 0B              
+======================================================================================

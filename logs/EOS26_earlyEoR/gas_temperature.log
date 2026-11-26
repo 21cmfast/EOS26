@@ -1,0 +1,14 @@
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+python: can't open file '/scratch/qp00/db9528/EOS26/postprocess/gas_temperature.py': [Errno 2] No such file or directory
+
+======================================================================================
+                  Resource Usage on 2026-11-26 16:14:10:
+   Job Id:             185290213.gadi-pbs
+   Project:            qp00
+   Exit Status:        2
+   Service Units:      0.12
+   NCPUs Requested:    1                   CPU Time Used: 00:00:05        
+   Memory Requested:   16.0GB                Memory Used: 436.49MB        
+   Walltime Requested: 02:00:00            Walltime Used: 00:00:53        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
