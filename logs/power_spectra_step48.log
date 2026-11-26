@@ -1,0 +1,88 @@
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+/scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/powerbox/tools.py:929: UserWarning: One or more radial bins had no cells within it.
+  return angular_average(
+brightness_temp_dvdr_with_rsds: chunk z = 5.00-5.78 (444 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.09-5.89 (573 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.19-6.00 (694 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.28-6.12 (815 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.38-6.23 (933 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.48-6.35 (1056 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.58-6.47 (1178 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.68-6.60 (1300 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.79-6.73 (1418 s)
+brightness_temp_dvdr_with_rsds: chunk z = 5.90-6.86 (1541 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.01-6.99 (1666 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.12-7.13 (1792 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.24-7.28 (1909 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.36-7.42 (2037 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.48-7.57 (2160 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.61-7.73 (2284 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.74-7.88 (2401 s)
+brightness_temp_dvdr_with_rsds: chunk z = 6.87-8.05 (2524 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.00-8.21 (2649 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.14-8.39 (2775 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.28-8.56 (2892 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.43-8.74 (3016 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.58-8.93 (3139 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.74-9.12 (3263 s)
+brightness_temp_dvdr_with_rsds: chunk z = 7.89-9.32 (3380 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.06-9.53 (3504 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.23-9.74 (3628 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.40-9.95 (3751 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.57-10.17 (3868 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.76-10.40 (3993 s)
+brightness_temp_dvdr_with_rsds: chunk z = 8.94-10.64 (4116 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.14-10.89 (4233 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.33-11.14 (4356 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.54-11.40 (4479 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.75-11.67 (4619 s)
+brightness_temp_dvdr_with_rsds: chunk z = 9.96-11.94 (4736 s)
+brightness_temp_dvdr_with_rsds: chunk z = 10.19-12.23 (4856 s)
+brightness_temp_dvdr_with_rsds: chunk z = 10.42-12.53 (4977 s)
+brightness_temp_dvdr_with_rsds: chunk z = 10.66-12.83 (5099 s)
+brightness_temp_dvdr_with_rsds: chunk z = 10.90-13.15 (5216 s)
+brightness_temp_dvdr_with_rsds: chunk z = 11.15-13.48 (5336 s)
+brightness_temp_dvdr_with_rsds: chunk z = 11.41-13.82 (5457 s)
+brightness_temp_dvdr_with_rsds: chunk z = 11.68-14.17 (5580 s)
+brightness_temp_dvdr_with_rsds: chunk z = 11.96-14.53 (5697 s)
+brightness_temp_dvdr_with_rsds: chunk z = 12.25-14.91 (5823 s)
+brightness_temp_dvdr_with_rsds: chunk z = 12.54-15.30 (5950 s)
+brightness_temp_dvdr_with_rsds: chunk z = 12.85-15.71 (6076 s)
+brightness_temp_dvdr_with_rsds: chunk z = 13.17-16.13 (6193 s)
+brightness_temp_dvdr_with_rsds: chunk z = 13.50-16.57 (6317 s)
+brightness_temp_dvdr_with_rsds: chunk z = 13.84-17.02 (6440 s)
+brightness_temp_dvdr_with_rsds: chunk z = 14.19-17.49 (6563 s)
+brightness_temp_dvdr_with_rsds: chunk z = 14.56-17.98 (6681 s)
+brightness_temp_dvdr_with_rsds: chunk z = 14.93-18.50 (6806 s)
+brightness_temp_dvdr_with_rsds: chunk z = 15.33-19.03 (6929 s)
+brightness_temp_dvdr_with_rsds: chunk z = 15.73-19.58 (7053 s)
+brightness_temp_dvdr_with_rsds: chunk z = 16.16-20.16 (7171 s)
+brightness_temp_dvdr_with_rsds: chunk z = 16.59-20.76 (7295 s)
+brightness_temp_dvdr_with_rsds: chunk z = 17.05-21.39 (7420 s)
+brightness_temp_dvdr_with_rsds: chunk z = 17.52-22.05 (7543 s)
+brightness_temp_dvdr_with_rsds: chunk z = 18.02-22.73 (7661 s)
+brightness_temp_dvdr_with_rsds: chunk z = 18.53-23.45 (7789 s)
+brightness_temp_dvdr_with_rsds: chunk z = 19.06-24.20 (7911 s)
+brightness_temp_dvdr_with_rsds: chunk z = 19.62-24.98 (8034 s)
+brightness_temp_dvdr_with_rsds: chunk z = 20.20-25.80 (8152 s)
+brightness_temp_dvdr_with_rsds: chunk z = 20.80-26.67 (8275 s)
+brightness_temp_dvdr_with_rsds: chunk z = 21.43-27.57 (8397 s)
+brightness_temp_dvdr_with_rsds: chunk z = 22.09-28.52 (8523 s)
+brightness_temp_dvdr_with_rsds: chunk z = 22.77-29.52 (8640 s)
+brightness_temp_dvdr_with_rsds: chunk z = 23.49-30.56 (8763 s)
+brightness_temp_dvdr_with_rsds: chunk z = 24.25-31.67 (8886 s)
+brightness_temp_dvdr_with_rsds: chunk z = 25.03-32.83 (9011 s)
+brightness_temp_dvdr_with_rsds: chunk z = 25.86-34.06 (9129 s)
+wrote /scratch/qp00/db9528/lightcones/EOS26_earlyEoR_cache/power_spectra/brightness_temp_dvdr_with_rsds.npz: 72 chunks, z = 5.38-29.55
+
+======================================================================================
+                  Resource Usage on 2026-11-26 19:16:02:
+   Job Id:             185295640.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      122.48
+   NCPUs Requested:    24                  CPU Time Used: 02:26:40        
+   Memory Requested:   96.0GB                Memory Used: 66.53GB         
+   Walltime Requested: 05:00:00            Walltime Used: 02:33:06        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================

@@ -1,0 +1,35 @@
+2026-11-26 18:36:14,674 neutral_fraction: slice 1231 (z = 10.7692), mean of slices 1228-1235 read in 6.2 s
+2026-11-26 18:36:22,224 brightness_temp: slice 1231 (z = 10.7692), mean of slices 1228-1235 read in 7.4 s
+2026-11-26 18:36:31,156 sfrd_acg: slice 1231 (z = 10.7692), mean of slices 1228-1235 read in 8.7 s
+2026-11-26 18:36:36,674 density: slice 1231 (z = 10.7692), mean of slices 1228-1235 read in 5.3 s
+2026-11-26 18:36:36,682 galaxies of node z = 10.7641: /g/data/qp00/db9528/EOS26_earlyEoR_cache/2427d646137e82fd72cd708d5a10536f/42/58a2100ec79ad4c4916694ff4cf2a95a/10.7641/PerturbedHaloCatalog.h5
+2026-11-26 18:36:41,384 galaxies: 292386 of 55651876 within 6.0 cMpc of plane 1231
+2026-11-26 18:36:41,667 halo check: mean 1+delta at the halos 1.21 (a shifted plane: 1.00)
+2026-11-26 18:36:41,915 wrote plots/fov_slab8_120.7MHz.npz
+2026-11-26 18:36:41,915 slice: EOS26_earlyEoR, z = 10.7692 (120.7 MHz), 1500² cells of 1.5 cMpc, D_c = 9795 cMpc, 1 deg = 171.0 cMpc
+2026-11-26 18:36:55,005   SPHEREx deep field: 11.3 deg = 1825 cMpc
+2026-11-26 18:36:55,005   CCAT/FYST EoR-Spec: 2 deg = 323 cMpc
+2026-11-26 18:36:55,005   JWST COSMOS-3D: 0.574 deg = 93 cMpc
+2026-11-26 18:36:55,005   Roman UDF: 1 deg = 162 cMpc
+2026-11-26 18:36:55,130 panel: 16 galaxies
+2026-11-26 18:37:04,411 wrote plots/fov_check_120.7MHz.pdf and .png
+2026-11-26 18:37:04,411   MWA: 24.70 deg at 150.0 MHz = 3994 cMpc (1.78 box)
+2026-11-26 18:37:04,411   HERA: 8.20 deg at 150.0 MHz = 1326 cMpc (0.59 box)
+2026-11-26 18:37:04,411   LOFAR: 3.70 deg at 150.0 MHz = 598 cMpc (0.27 box)
+2026-11-26 18:37:04,411   SKA-Low: 3.00 deg at 150.0 MHz = 485 cMpc (0.22 box)
+
+==== PBS output of job 185310098 (EOS26_fov_zoom.o185310098, EOS26_fov_zoom.e185310098), folded in by pbs_scripts/fold_pbs_output.py ====
+---- stdout not already in this log ----
+21cmFAST 4.3.2 -> /scratch/qp00/db9528/venvs/EOS26-v4.3_post-intel/lib/python3.13/site-packages/py21cmfast/__init__.py
+---- PBS resource summary ----
+======================================================================================
+                  Resource Usage on 2026-11-26 18:37:08:
+   Job Id:             185310098.gadi-pbs
+   Project:            qp00
+   Exit Status:        0
+   Service Units:      0.78
+   NCPUs Requested:    4                   CPU Time Used: 00:00:18        
+   Memory Requested:   48.0GB                Memory Used: 5.38GB          
+   Walltime Requested: 04:00:00            Walltime Used: 00:01:57        
+   JobFS Requested:    100.0MB                JobFS Used: 0B              
+======================================================================================
