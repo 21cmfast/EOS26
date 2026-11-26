@@ -441,8 +441,9 @@ def parse(argv=None):
     p.add_argument("--muv-limit", type=float, default=None,
                    help="figure: draw every galaxy brighter than this M_UV in the zoom panel (instead of "
                         "--band-galaxies), with a legend entry")
-    p.add_argument("--galaxy-marker", choices=("spiral", "star", "cartoon"), default="star",
-                   help="figure: the galaxies as thin red spirals, filled green stars or thick green spiral cartoons")
+    p.add_argument("--galaxy-marker", choices=("spiral", "star", "cartoon"), default="cartoon",
+                   help="figure: the galaxies as thick green spiral cartoons (default), filled green stars or thin "
+                        "red spirals")
     p.add_argument("--out", default=None, help="output file (default: see above)")
     p.add_argument("--log-file", default=None)
     a = p.parse_args(argv)
